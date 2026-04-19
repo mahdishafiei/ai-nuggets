@@ -12,6 +12,16 @@
     <atom:link href="https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>HARVEST: Unlocking Dark Bioactivity Data from Pharmaceutical Patents with Agentic AI</title>
+      <description>HARVEST is a multi-agent LLM pipeline that autonomously extracts structured bioactivity records from pharmaceutical patents at scale. Applied to 164,877 USPTO patents, it produced 3.15 million activity records — recovering 326,342 unique scaffolds and 967 protein targets absent from BindingDB — at just $0.11 per document. The team also introduces H-Bench, a benchmark from this recovered data that exposes generalization gaps in leading structure prediction models like Boltz-2. Open source under CC-BY 4.0, this demonstrates how agentic AI can unlock entire categories of public-but-computationally-dark biomedical data.</description>
+      <enclosure url="https://github.com/andrewsu/ai-nuggets/raw/main/episodes/2026-04-19-harvest-dark-bioactivity-patents.mp3" length="1262642" type="audio/mpeg"/>
+      <guid>2026-04-19-harvest-dark-bioactivity-patents</guid>
+      <pubDate>Sun, 19 Apr 2026 13:35:00 +0000</pubDate>
+      <itunes:duration>192</itunes:duration>
+      <itunes:summary>Deep dive on HARVEST — a multi-agent LLM pipeline that extracted 3.15M bioactivity records from 164,877 pharmaceutical patents, recovering 326K novel scaffolds and 967 protein targets missing from BindingDB. Open source, $0.11/doc, and it exposes blind spots in current molecular models.</itunes:summary>
+    </item>
+
+    <item>
       <title>GPT-Rosalind: OpenAI's First Purpose-Built Life Sciences Model</title>
       <description>OpenAI launched GPT-Rosalind, a frontier reasoning model built specifically for biology, drug discovery, and translational medicine. Unlike general-purpose models, it features native tool orchestration across 50+ scientific databases and bioinformatics pipelines, with a free Codex plugin for multi-step research workflows. On RNA sequence-to-function prediction with Dyno Therapeutics, it ranked above the 95th percentile of human experts. Launch partners include Amgen, Moderna, the Allen Institute, and Thermo Fisher. This is OpenAI signaling that biomedical AI is a product category worth dedicated frontier infrastructure — not just a side application of general models.</description>
       <enclosure url="https://github.com/andrewsu/ai-nuggets/raw/main/episodes/2026-04-18-gpt-rosalind-life-sciences.mp3" length="1535203" type="audio/mpeg"/>
