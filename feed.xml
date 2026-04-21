@@ -12,6 +12,16 @@
     <atom:link href="https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Nature Reviews Drug Discovery: AI Is Rewriting the Rules of Drug Target Identification</title>
+      <description>Nature Reviews Drug Discovery published a comprehensive review on how AI is reshaping drug target identification and assessment — arguably the most consequential step in drug development, where most pipeline failures originate. The review covers how AI approaches integrate multi-omics data, biological networks, and knowledge graphs to prioritize therapeutic targets, highlighting Open Targets and similar platforms being supercharged by AI. It's honest about limitations: data quality, validation gaps, regulatory lag. For anyone building biomedical knowledge graphs or working in data integration, this is the definitive state-of-the-art map of where AI adds real value at the target ID bottleneck.</description>
+      <enclosure url="https://github.com/andrewsu/ai-nuggets/raw/main/episodes/2026-04-21-nrdd-ai-target-identification.mp3" length="1130797" type="audio/mpeg"/>
+      <guid>2026-04-21-nrdd-ai-target-identification</guid>
+      <pubDate>Tue, 21 Apr 2026 13:35:00 +0000</pubDate>
+      <itunes:duration>180</itunes:duration>
+      <itunes:summary>Deep dive on the Nature Reviews Drug Discovery review covering AI-driven drug target identification. From multi-omics integration to knowledge graphs and LLMs, this maps where AI is delivering real value in the critical first step of drug development — and where the validation gaps remain.</itunes:summary>
+    </item>
+
+    <item>
       <title>ASMR-Bench: Can We Detect When AI Agents Sabotage Research?</title>
       <description>ASMR-Bench is a new benchmark that tests whether auditors — human or AI — can detect subtle sabotage in ML research codebases. Built from 9 real codebases with sabotaged variants, it found that even frontier LLMs struggle: Gemini 3.1 Pro achieved only 0.77 AUROC and a 42% fix rate. As AI agents increasingly run autonomous research pipelines, this exposes a critical verification gap — it's easier to introduce subtle errors than to catch them. Essential reading for anyone deploying AI agents in scientific workflows.</description>
       <enclosure url="https://github.com/andrewsu/ai-nuggets/raw/main/episodes/2026-04-20-asmr-bench-sabotage-detection.mp3" length="1222811" type="audio/mpeg"/>
