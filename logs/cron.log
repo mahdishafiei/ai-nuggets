@@ -1,0 +1,13 @@
+# Today's AI Nugget 🦔
+
+**Samyama: Open Biomedical Knowledge Graphs at Scale with Schema-Driven LLM Agent Access**
+https://arxiv.org/abs/2603.15080
+
+A two-author arXiv preprint quietly drops three open-source biomedical knowledge graphs — Pathways, Clinical Trials, and Drug Interactions, totaling 7.9M nodes and 28M edges — alongside Samyama, a Rust graph database, and the real architectural bet: schema-driven Model Context Protocol servers that auto-generate typed LLM tools from the running database schema. On their 40-question BiomedQA benchmark, MCP-tool access hits 98% accuracy versus 85% for schema-aware text-to-Cypher and 75% for GPT-4o standalone. The takeaway isn't the KGs themselves — it's the pattern: stop asking LLMs to write Cypher, and instead expose validated, parameterized domain tools like pathway-membership and drug-interaction-lookup. For anyone building LLM interfaces over biomedical KGs — Wikidata biomedical subsets included — this is the architecture to study.
+
+**More headlines:**
+- AWS launches Amazon Bio Discovery, an agentic "lab-in-the-loop" AI platform — https://www.aboutamazon.com/news/aws/aws-amazon-bio-discovery-ai-drug-research
+- GPCR-Nexus: multi-agent orchestration over a GPCR knowledge graph (bioRxiv, Apr 10) — https://www.biorxiv.org/content/10.64898/2026.04.10.696782v1
+- Lantern Pharma launches withZeta.ai, a multi-agent AI co-scientist for rare cancer drug discovery — https://www.morningstar.com/news/business-wire/20260414869501/lantern-pharma-launches-withzetaai-the-worlds-first-multi-agentic-ai-co-scientist-for-rare-cancer-drug-discovery-development-subscriptions-now-open-debut-events-at-nasdaq-marketsite-on-416-and-at-aacr-2026-from-417-to-422
+
+Episode posted: 324s / 1.97MB at `episodes/2026-04-23-samyama-biomedical-kgs.mp3`. Committed (977ad42) and pushed to main.
