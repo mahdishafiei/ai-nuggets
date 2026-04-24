@@ -72,10 +72,19 @@ Then perform ALL of the following searches (do not skip any):
 
 3. GENERAL WEB: Search for recent news (last 1-2 days) about agentic AI applied to biomedical research, drug discovery, genomics, clinical trials, or related areas. Also check for notable developments in AI agents more broadly that a computational biologist would care about (new frameworks, benchmarks, tools, policy, major company announcements).\n\n
 
-After gathering candidates from ALL three sources, follow the preferences above to pick ONE best item and write a short, punchy summary (3-5 sentences) — why it matters, what's novel. Include a link. Don't be generic. Be opinionated about why it's worth knowing. Then, after the main summary, add a section titled 'More headlines:' with up to 3 additional relevant articles/stories from your searches — just the headline and link for each, one per line. Only include extras that are genuinely interesting and relevant; if there's nothing good beyond the main pick, skip the extras. After writing the text, generate an audio version of the MAIN article only (3-5 minute deeper exploration) using Mistral TTS. Use this approach: read the API key from .env, use the endpoint POST https://api.mistral.ai/v1/audio/speech with body {\"model\":\"voxtral-mini-tts-2603\",\"input\":\"<text>\",\"voice_id\":\"en_paul_neutral\",\"response_format\":\"mp3\"} and header Authorization: Bearer <key>. The response is JSON with an 'audio_data' field containing base64-encoded audio — decode it to get the mp3 file. Mistral handles longer text well (tested up to ~12,600 chars), but split into chunks under 10,000 chars if needed and stitch with ffmpeg. If the Mistral API returns ANY error, fall back to ElevenLabs (voice ID hpp4J3VqNfWAUOO0d1Us, model eleven_flash_v2_5, speed 1.1, stability 0.5, similarity_boost 0.75, API key from .env, endpoint POST https://api.elevenlabs.io/v1/text-to-speech/{voice_id} with header xi-api-key, split under 4000 chars). 
+After gathering candidates from ALL three sources, follow the preferences above to pick ONE best item and write a short, punchy summary (3-5 sentences) — why it matters, what's novel. Include a link. Don't be generic. Be opinionated about why it's worth knowing. Then, after the main summary, add a section titled 'More headlines:' with up to 3 additional relevant articles/stories from your searches — just the headline and link for each, one per line. Only include extras that are genuinely interesting and relevant; if there's nothing good beyond the main pick, skip the extras.
 
-Save the audio file to episodes/ with filename format YYYY-MM-DD-slug.mp3, update feed.xml by adding a new <item> entry (insert it right after the opening channel metadata, before existing items), and then run: 
+Then produce a 3-5 minute spoken episode of the MAIN article. Steps:
 
-git add -A && git commit -m 'Episode: <title>' && git push. 
+1. Write the script to `scripts/YYYY-MM-DD-slug.md`. The file must contain a `## Script` heading; everything after that heading (minus any `Paper link:` lines) is what gets spoken.
+2. Generate the audio by running the canonical TTS pipeline:
 
-The podcast is called AI Nuggets. Keep the RSS feed valid XML.
+       python3 gen_tts.py scripts/YYYY-MM-DD-slug.md episodes/YYYY-MM-DD-slug.mp3
+
+   Do NOT write your own TTS code. `gen_tts.py` already handles Mistral as primary, ElevenLabs as fallback, chunking, ffmpeg stitching, and a duration sanity check that aborts if the audio is truncated. If the script exits non-zero, investigate and fix the root cause — do NOT commit partial output.
+3. Update `feed.xml` by adding a new `<item>` entry immediately after the opening channel metadata and before the existing items. Use the actual byte size of the generated mp3 for `enclosure length` and the actual duration (rounded seconds from `ffprobe`) for `itunes:duration`. Keep the RSS feed valid XML.
+4. Commit and push:
+
+       git add -A && git commit -m 'Episode: <title>' && git push
+
+The podcast is called AI Nuggets.
