@@ -23,3 +23,15 @@ Link: https://www.nature.com/articles/d41586-026-01278-1 • Site: https://agent
 - Stanford AI Index 2026 (via Nature): frontier AI agents still score roughly half as well as PhD humans on complex multi-step scientific tasks — https://www.nature.com/articles/d41586-026-01199-z
 
 Episode published: `2026-04-24-agent4science-ai-peer-review.mp3` (5m17s, 2.27 MB). Feed updated, commit `d3552fc` pushed to `main`.
+## Today's AI Nugget
+
+**OIH: An Autonomous LLM Agent Platform for Antibody-Drug Conjugate Design** ([bioRxiv, posted April 23, 2026](https://www.biorxiv.org/content/10.64898/2026.04.21.719907v1))
+
+A fresh preprint from Suzhou Kai Zhi Yuan introduces Open Intelligence Hub — an LLM-agnostic agent that dynamically plans and executes 32 containerized tools to design protein binders and prioritize antibody-drug conjugates. Across 5 oncology targets (including HER2 and Nectin-4) it correctly classified all 5, only needed human correction once, and produced binders with respectable ipTM scores (0.85–0.87). The reusable trick is "failure-to-knowledge distillation" from 265 curated failure cases plus tier-based decision routing — meaning the agent learns from past pipeline breakdowns instead of just retrying. ADCs are one of the hottest oncology modalities and a perfect multi-step problem for agents; results are still computational predictions, but it's a useful snapshot of where agentic compbio actually is.
+
+**More headlines:**
+- Google launches Deep Research and Deep Research Max with biomedical use case via Axiom Bio — https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/
+- CROssBARv2: Unified biomedical KG framework with LLM-driven natural language exploration — https://www.biorxiv.org/content/10.64898/2026.04.12.718028v1
+- Pipette: Skill Graph from 20,000 publications constraining a multi-agent bioinformatics pipeline — https://www.biorxiv.org/content/10.64898/2026.04.08.717332v1
+
+Episode (3:56) generated, feed updated, pushed to main.
