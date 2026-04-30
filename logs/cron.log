@@ -60,3 +60,15 @@ Today's pick: **SyntheMol-RL** — Jon Stokes' lab (the Halicin people) just pub
 - [Amazon Bio Discovery: AWS launches agentic AI platform with 40+ biological foundation models for drug discovery](https://www.usnews.com/news/top-news/articles/2026-04-14/amazon-launches-ai-research-tool-to-speed-early-stage-drug-discovery)
 
 Episode published: `2026-04-28-synthemol-rl-synthecin-antibiotic.mp3` (5:29, 2.27 MB), feed updated, pushed to main.
+**Today's AI Nugget — Beyond CRISPR: Lilly Bets $2.25B on Profluent's AI-Designed Recombinases**
+
+Eli Lilly and Profluent announced a strategic partnership yesterday (April 28, 2026) worth up to $2.25B in milestones to develop AI-designed recombinases for genetic medicine. The novelty isn't the dollar figure — it's the modality: recombinases natively integrate whole gene cassettes at defined sites, something CRISPR cannot do reliably. Profluent's pitch is that protein language models trained on millions of integrase sequences can simply generate variants tuned to whatever target site Lilly cares about, and they've earned the right to make it — OpenCRISPR-1 in 2024 was a fully AI-designed Cas9-style nuclease, 400+ mutations from any natural enzyme, with a 95% reduction in off-target editing on human cells. For anyone in computational biology, two things to watch: protein language models are now the entire upstream stack for new gene-editing modalities, which makes evolutionarily-diverse public sequence corpora load-bearing infrastructure; and Profluent is running open-source-the-halo, monetize-the-hard-problems in parallel — which assets stay open versus go behind partnership walls is what determines what academic labs can actually use.
+
+Link: https://www.statnews.com/2026/04/28/eli-lilly-crispr-gene-editing-deal-profluent-ai/
+
+**More headlines:**
+- AWS launches Amazon Bio Discovery — agentic AI orchestrating 40+ bioFMs with lab-in-the-loop integration: https://aws.amazon.com/blogs/industries/introducing-amazon-bio-discovery/
+- Tufts uses AI to screen 60,000 compounds for narrow-spectrum Lyme disease antibiotics: https://now.tufts.edu/2026/04/28/harnessing-power-ai-fight-lyme-disease
+- bioRxiv: LLM-autonomous development of deep learning models for quantitative microscopy — describe the problem, the agent designs training data, networks, and iterates without human intervention: https://www.biorxiv.org/content/10.64898/2026.04.03.716415v1
+
+Episode pushed: `episodes/2026-04-29-lilly-profluent-recombinases.mp3` (4:53, 1.98MB). Commit `6a79747`.
