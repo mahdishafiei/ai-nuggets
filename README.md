@@ -13,6 +13,9 @@ Each show under `podcasts/<slug>/` is a separate feed for a separate audience.
 The root `feed.xml` is a symlink to `podcasts/biomedical-agentic-ai/feed.xml`
 to preserve that show's original public RSS URL.
 
+After cloning, run `git config core.hooksPath .githooks` once to activate the
+pre-commit feed-XML validator.
+
 ## Repo layout
 
 ```
