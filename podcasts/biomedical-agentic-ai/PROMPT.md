@@ -70,7 +70,8 @@ Don't write your own TTS code. `gen_tts.py` is the single canonical pipeline:
 chunking, ffmpeg stitching, duration sanity check, primary→fallback
 orchestration, all already handled.
 
-Public RSS URL (subscriber-facing): the root `feed.xml` symlink points here.
+Public RSS URL: subscribers fetch
+`https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/biomedical-agentic-ai/feed.xml`.
 Episode mp3 enclosures are served via the `podcast` Cloudflare Worker so
 downloads are logged centrally. See `worker/README.md` for the Worker setup.
 

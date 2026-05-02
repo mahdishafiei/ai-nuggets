@@ -7,11 +7,8 @@ Each show under `podcasts/<slug>/` is a separate feed for a separate audience.
 
 | Slug | Audience | Subscribe |
 |---|---|---|
-| [`biomedical-agentic-ai`](podcasts/biomedical-agentic-ai/) | Andrew Su (Su Lab, Scripps) — agentic AI applied to biomedical research | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/feed.xml) |
+| [`biomedical-agentic-ai`](podcasts/biomedical-agentic-ai/) | Andrew Su (Su Lab, Scripps) — agentic AI applied to biomedical research | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/biomedical-agentic-ai/feed.xml) |
 | [`calibr-briefing`](podcasts/calibr-briefing/) | Travis Young (Calibr-Skaggs, Scripps) — daily biotech & pharma briefing | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/calibr-briefing/feed.xml) |
-
-The root `feed.xml` is a symlink to `podcasts/biomedical-agentic-ai/feed.xml`
-to preserve that show's original public RSS URL.
 
 After cloning, run `git config core.hooksPath .githooks` once to activate the
 pre-commit feed-XML validator.
