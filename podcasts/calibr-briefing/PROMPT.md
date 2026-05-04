@@ -11,7 +11,7 @@ Travis Young at Calibr-Skaggs, Scripps Research.
 Daily biotech/pharma briefings with explicit connections to the Calibr
 pipeline. Two episodes per day:
 
-1. **Headlines** (~3 min) — Top biotech/pharma news of the day, quick
+1. **Headlines** (~5 min) — Top biotech/pharma news of the day, quick
    roundup.
 2. **Spotlight** (~5–8 min) — Deep dive on the single most important
    development from focus areas or headlines. Thorough analysis: what
@@ -22,14 +22,14 @@ pipeline. Two episodes per day:
 ## Focus areas
 
 - **In Vivo CAR-T** — new approaches, publications, newcos, clinical data.
-  Relevant to Calibr's sCAR-T program (CLBR001 + SWI019, Phase 1 with AbbVie
-  for B-cell lymphoma, solid tumors, autoimmune).
 - **MASH / FGF21** — clinical trial data, publications, announcements.
   Relevant to Calibr's MASH biologic (dual-acting, multiple receptors,
   IND-enabling). Track efruxifermin (Akero), efimosfermin (BOS-580/GSK),
   resmetirom, and combination therapy approaches.
 - **General therapeutic development** — major deals, clinical readouts, FDA
   actions, new company launches.
+- **Artificial Intelligence in drug discovery** - major new findings, news from companies using AI in drug discovery (Xaira, Iambic, Revoluation Medicines, and others), status of clinical development, major new findings
+- **Foresite Capital or Foresite Labs portfolio companies** - news from companies previously or currently funded by Foresite Capital or Foresite Labs
 
 ## Calibr pipeline reference
 
@@ -45,10 +45,14 @@ Full pipeline details and therapeutic targets live in
 Headlines sources:
 
 - Fierce Biotech
+- Fierce Pharma
 - Endpoints News
 - STAT News
 - BioPharma Dive
 - Fierce Pharma
+- The Biotech Voyager
+- Clinical Trials Arena
+- Genetic Engineering & Biotech News
 
 For the spotlight, pick the single most important development. Pull
 publications, press releases, and trial data as needed.
@@ -59,6 +63,8 @@ publications, press releases, and trial data as needed.
 - Both episodes are spoken by Nigel.
 - Headlines: punchy, numbered, quick.
 - Spotlight: deep, analytical, with explicit Calibr-pipeline connections.
+- Always connect drug name to underlying target or mechanism
+- Give context to headlines and deep dives, who are prior investors, prior deals in the space, etc.
 
 # 4. TTS & distribution
 
