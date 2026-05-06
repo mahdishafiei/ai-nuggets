@@ -93,3 +93,75 @@ Sources:
 - [Stanford 2026 AI Index — Science chapter](https://hai.stanford.edu/ai-index/2026-ai-index-report/science)
 - [AIDO.Harness preprint (bioRxiv)](https://www.biorxiv.org/content/10.64898/2026.04.20.719735v1)
 - [FDA AI drug trial acceleration (Bloomberg)](https://www.bloomberg.com/news/articles/2026-04-28/fda-plans-to-speed-up-drug-trials-with-real-time-data-ai)
+Today's biomedical-agentic-ai episode (the Stanford AI Index "17% Problem") was already published earlier this morning. Since the daily SOP fired again in auto mode and there's precedent for two-per-day (4/16, 4/23), I produced a complementary second nugget rather than duplicate or skip.
+
+**Episode 2 of 2 for 2026-05-02:** *An Agent Optimizes for Outcomes — Rees and Wilsdon on Why Agentic AI Is Breaking Grant Funding*
+
+- Source: Rees & Wilsdon, Nature Comment, April 27, 2026 — fresh, agentic-AI-specific, complementary angle to the morning's benchmarks piece
+- Headline data: 4% / 17% / 57% volume increase across 12 funders (2023/24/25 vs 2022); Marie Curie postdocs up 142%, only 5% below quality threshold (was 20% in 2018)
+- Punchline tied to Su Lab's beat: their "AI-native funding systems" proposal lands squarely on multi-dimensional researcher knowledge graphs (ORCID/ROR/PubMed/RePORTER), so the same identifier infrastructure community is about to be politically conscripted
+- Three verified bioRxiv extras: GeneBench (Apr 23), human-supervised drug-repurposing agent (Apr 22), Pipette skill-graph multi-agent bioinformatics (Apr 12)
+- Audio: 461s, 3.32 MB, Mistral primary voice (4 chunks, ~417s synthesis)
+- Feed validated, committed, pushed (80d0e4e)
+=== 2026-05-02T15:05:18-07:00 start biomedical-agentic-ai ===
+Third nugget for 2026-05-02 is shipped.
+
+**Episode:** *From 17 to 98 — A Rebuttal Preprint Lands the Morning After Stanford's BixBench Number*
+
+**Why this paper:** Xiaoyu Zhang's bioRxiv preprint posted yesterday (May 1, 2026) directly contests the 17% BixBench figure from this morning's Stanford AI Index episode. With Claude Scientific Skills + bioSkills + web access, GPT-5.5 hits 98% (49/50) on BixBench-Verified-50; even offline, skill-augmented agents land at 84–88%. The single error isn't analytical — it's a sign-convention dispute about DepMap's CRISPR gene-effect encoding. Crucially, Zhang's failure-mode analysis shows offline errors cluster exactly on pathway/organism-annotation/BUSCO/PhyKIT lookups — i.e. the curated biomedical resources Su Lab–type infrastructure provides. That's the experimental version of the morning episode's "structured external resources close the gap" argument. Together with Rees & Wilsdon, today's three nuggets form one continuous arc: calibration check → structural consequence → methodology pointer.
+
+**Telegram message preview:**
+
+> A single-author bioRxiv preprint posted yesterday — Xiaoyu Zhang at CSU San Marcos — directly contests this morning's BixBench 17% number. On BixBench-Verified-50 (the curated 50-question subset), three frontier-agent configurations hit 88%, 84%, and 98%. The 98% configuration is GPT-5.5 + Claude Scientific Skills + bioSkills + web access; the lone miss is a DepMap CRISPR sign-convention disagreement, not a real analytical failure. Two real caveats: Verified-50 ≠ full BixBench, and the gains come from skills + tools, not raw model capability. Offline errors cluster exactly on pathway/organism-annotation/BUSCO/PhyKIT lookups — which is the experimental form of the "curated biomedical resources close the gap" argument. https://www.biorxiv.org/content/10.64898/2026.04.28.721523v1
+>
+> More headlines:
+> - Single-cell foundation models reveal context-sensitive cancer programmes under subtype shift — fine-tuned scGPT/Geneformer beat zero-shot baselines (bioRxiv, May 1): https://www.biorxiv.org/content/10.64898/2026.04.28.721114v1
+> - Aiki-GeNano: three-stage LM alignment for epitope-conditioned nanobody generation, bakes developability into training rather than post-hoc filtering (bioRxiv, May 1): https://www.biorxiv.org/content/10.64898/2026.04.28.721526v1
+> - MetaMuse: multi-agent biomedical metadata curation/harmonization with SapBERT-backed NormalizerAgent — 95%+ on a manually curated GEO gold standard, conservative-false-negative defaults to block hallucination (bioRxiv, April 20): https://www.biorxiv.org/content/10.64898/2026.04.12.718044v2
+
+Commit `9b859d2` pushed to main; mp3 is 2,287,648 bytes / 5:21 duration; feed XML validates clean.
+=== 2026-05-02T15:12:27-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-03T04:00:03-07:00 start biomedical-agentic-ai ===
+Episode shipped. Summary for May 3, 2026:
+
+**Main pick:** "Knowledge Inclusive Machine Learning for Disease Gene Prioritisation" (Halgamuge group, U Melbourne, bioRxiv posted May 2). KIML integrates three context streams — experimental data + PubMed embeddings + structured biomedical knowledge graphs — under a temporal-split benchmark on Developmental and Epileptic Encephalopathy, then generalizes across six diseases. Squarely in your wheelhouse: knowledge graphs, gene prioritization, ontologies, interpretable explanations.
+
+**More headlines:**
+- AutoResearchBench (arXiv 2604.25256, Apr 28) — frontier agents only ~9% on lit retrieval over 3M arXiv papers
+- AWS Amazon Bio Discovery — 40+ biological foundation models behind a natural-language agent (Apr 2026)
+- AIDO.Harness (bioRxiv, Apr 23) — autonomous biomedical ML model lifecycle from GenBio AI
+
+Audio: 5:24, mistral primary, 2.25 MB. Feed validates. Commit `066de2d` pushed to main.
+=== 2026-05-03T04:08:54-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-04T04:00:04-07:00 start biomedical-agentic-ai ===
+Episode shipped (commit `9542569`).
+
+## Today's AI Nugget — May 4, 2026
+
+**OptimusKG — FutureHouse and Zitnik Drop a 21-Million-Edge Multimodal Biomedical Knowledge Graph, and Validate It With a Paper-Reading Agent**
+
+OptimusKG, posted to arXiv on April 29 by Lucas Vittor, Ayush Noori, Iñaki Arango, Joaquín Polonuer, Sam Rodriques, Andrew White, David Clifton, and Marinka Zitnik — that author list pulls together FutureHouse, the Zitnik lab at Harvard, and Clifton at Oxford. 190,531 nodes / 21.8M edges / 67M property instances drawn from 18 ontologies, ~5x bigger than PrimeKG, and the load-bearing design choice is the labeled-property-graph (LPG) framing rather than RDF triples — schema enforced at the top level but type-specific properties, cross-references, and provenance kept on edges and nodes themselves. The validation lands hardest for this audience: the team used PaperQA3 (FutureHouse's literature-grounded multimodal agent) to check edges against the published literature — 70.0% of sampled real edges were supported, 83.4% of synthetic false edges were correctly rejected, and the unsupported real edges concentrated in experimental and functional-genomics resources, suggesting the graph captures knowledge that may precede synthesis in the secondary literature. This is the explicit operational pairing the week's through-line has been pointing at: curated, schema-constrained biomedical infrastructure plus an LLM agent that reads papers, in the same pipeline. Paper: https://arxiv.org/abs/2604.27269
+
+**More headlines:**
+- CompBioBench — 100-task bioinformatics benchmark; Codex CLI on GPT 5.4 hits 83%, Claude Code on Opus 4.6 hits 81%; the optimistic counter-narrative to the BixBench saturation argument from Saturday (bioRxiv): https://www.biorxiv.org/content/10.64898/2026.04.06.716850v1
+- Agent-Driven Validation of Oncology Therapeutic Targets — replication-focused AI agent framework that evaluates 31 gene target-disease hypotheses (bioRxiv, April 29): https://www.biorxiv.org/content/10.64898/2026.04.29.721634v1
+- Vibe Medicine — proposal that the human-AI co-work paradigm now visible in software engineering should be ported to biomedical research (arXiv, April 26): https://arxiv.org/abs/2604.23674
+
+Audio: 10:37 (637s), 4.57 MB, Mistral primary (5/5 chunks). Feed validates. Note: R2 upload requires `CLOUDFLARE_API_TOKEN` not present in this env, so the Worker's GitHub-raw fallback handles delivery — same path as every prior cron-driven episode.
+=== 2026-05-04T04:10:40-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-05T04:00:04-07:00 start biomedical-agentic-ai ===
+Episode published.
+
+**Today's nugget — May 5, 2026:**
+
+**Huang's ADA Consortium: An Agent Audits 31 Oncology Target Claims, and the Retraction Status of the Source Paper Predicts Whether the Agent Replicates** ([bioRxiv](https://www.biorxiv.org/content/10.64898/2026.04.29.721634v1))
+
+Kuan-lin Huang's group at Mount Sinai, with the new Accelerated Discovery with Agents (ADA) Consortium, ran an agent on 31 published oncology target claims with retraction status as a quasi-orthogonal ground-truth label. Non-retracted claims validated at 64.3% (9/14); retracted at 11.8% (2/17) — a 17-fold differential. Replicated set spans WRN/MSS, PRMT5/MTAP-deleted, plus newer hits (PTGES3, HASPIN, SLC5A3, PKMYT1, FAM126B, PAPSS1). The retraction-as-orthogonal-label framing is the move — it's the kind of external audit pharma agentic AI deployments need before anyone trusts their target prioritization output. The 11% false-positive rate on retracted means agent-driven validation can't be a sole gate but works as one signal in a portfolio.
+
+**More headlines:**
+- HADES (DILI agent w/ auditable mechanistic reasoning traces, ROC-AUC 0.68) — [arXiv 2605.02669](https://arxiv.org/abs/2605.02669)
+- Benchmarking biomedical RAG retrieval strategies (cross-encoder reranking wins) — [arXiv 2605.02520](https://arxiv.org/abs/2605.02520)
+- OpenManus/Manus on clinical decision benchmarks — agents win but margin is 0.5-8.9% and not statistically significant — [npj Digital Medicine](https://www.nature.com/articles/s41746-026-02443-6)
+
+Episode pushed (commit `613131e`); 471s mp3 (3.36 MB), live in the feed.
+=== 2026-05-05T04:15:43-07:00 done  biomedical-agentic-ai (exit 0) ===

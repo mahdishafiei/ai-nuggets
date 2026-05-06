@@ -1,0 +1,48 @@
+=== 2026-05-02T15:12:27-07:00 start calibr-briefing ===
+Today's calibr-briefing work is already complete. Both episodes for 2026-05-02 exist, are in the feed, and were committed in 765e9f5:
+
+- `2026-05-02-pharma-headlines.mp3` (246s, in feed)
+- `2026-05-02-jnj-cart-exit-spotlight.mp3` (488s, in feed) — J&J killing its LBCL CAR-T programs, with the explicit Calibr connection back to JNJ-4496 and the sCAR-T strategy
+
+The cron.log entry at 15:12 is this current invocation. The working tree has no uncommitted calibr-briefing changes (only an untracked `logs/cron.log` whose path isn't tracked, plus unrelated biomedical-agentic-ai noise).
+
+Re-running would either overwrite today's episodes or produce near-duplicates from the same news cycle, neither of which is useful. Stopping here.
+=== 2026-05-02T15:13:25-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-05-03T04:08:54-07:00 start calibr-briefing ===
+Done. Sunday brief shipped — two episodes for 2026-05-03:
+
+- **Headlines (5:03)** — Sunday catch-up on the Apr 27–May 1 gap that the Saturday brief didn't cover: Intellia HAELO Phase 3 win, Chiesi-KalVista $1.9B, BMS Krazati confirmatory miss in CRC, Boehringer survodutide 16.6% Phase 3 obesity, Lilly-Ajax $2.3B JAK, House panel call to ban China trial data, Vinay Prasad CBER stepdown.
+- **Spotlight (7:25)** — Intellia's HAELO Phase 3 readout as the first-ever in vivo CRISPR Phase 3 success, with three implications for Calibr's switchable sCAR-T: LNP delivery validation lifts in vivo CAR-T competitive intensity; gene-knockout safety profile diverges from in vivo CAR-T toxicity, sharpening the case for switchable control; CBER's leadership vacuum post-Prasad shapes the regulatory template. Plus the contrary view (does single-shot in vivo CAR-T eventually obsolete the switch?) and why autoimmune remains the cleanest wedge.
+
+Feed validates, byte sizes/ffprobe durations are real, pushed as `302c735`.
+
+Sources:
+- [Intellia Phase 3 HAELO press release](https://ir.intelliatx.com/news-releases/news-release-details/intellia-therapeutics-reports-positive-phase-3-results)
+- [Intellia HAELO — STAT](https://www.statnews.com/2026/04/27/intellia-therapeutics-phase-3-trial-hereditary-angioedema-crispr-treatment/)
+- [Chiesi-KalVista $1.9B — BioPharma Dive](https://www.biopharmadive.com/news/chiesi-kalvista-deal-acquire-hereditary-angioedema-ekterly/818798/)
+- [BMS Krazati confirmatory miss — Endpoints](https://endpoints.news/krazati-fails-confirmatory-trial-in-colorectal-cancer-putting-approval-at-risk/)
+- [House panel China data ban — Endpoints](https://endpoints.news/house-panel-calls-to-ban-china-trial-data-from-fda-drug-trial-applications/)
+- [Vinay Prasad CBER departure — STAT](https://www.statnews.com/2026/03/06/fda-vinay-prasad-controversial-cber-director-leaving/)
+- [J&J CAR-T axe — Fierce Biotech](https://www.fiercebiotech.com/biotech/jj-axes-5b-car-t-dream-months-after-touting-best-disease-efficacy)
+=== 2026-05-03T04:19:27-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-05-04T04:10:40-07:00 start calibr-briefing ===
+Monday brief shipped — two episodes for 2026-05-04:
+
+- **Headlines (4:34)** — UCB-Candid $2.2B (today's spotlight); Teva-Emalex $700M Tourette deal for ecopipam; Latus Bio $42M Series B for Huntington's MSH3 gene therapy; Trump psychedelics push splits the field; Vertex/Amgen layoffs + Pfizer earnings preview; Boehringer corp affairs hire; BlueRock CSO out.
+- **Spotlight (9:28)** — UCB's $2.2B acquisition of Candid Therapeutics for cizutamig (BCMA-by-CD3 bispecific TCE for autoimmune disease). Three Calibr implications: pharma just set a $2B price floor on autoimmune deep-immune-reset assets (a Foresite Labs incubation and Foresite Capital exit, with cizutamig ex-China licensed from EpimAb in Shanghai); the ex-China license model is now the regulatory firewall against last week's House appropriations push to ban China-origin trial data; and the structural moat for switchable CAR-T over BCMA TCEs comes down to depth/durability of remission, multi-CAR combinatorial extensibility, and real-time peptide-titratable safety control. Plus the bear case (TCEs commoditizing the easy autoimmune indications) and watch items into ACR/EULAR cizutamig readouts and possible Roche/AZ/Sanofi counterbids.
+
+R2 uploads succeeded after sourcing `CLOUDFLARE_API_TOKEN` from `~/.bashrc` (the non-interactive shell didn't pick it up automatically — worth flagging if cron runs hit the same issue). Feed validates, byte sizes/ffprobe durations are real, pushed as `52badfd`.
+
+Sources:
+- [UCB to acquire Candid Therapeutics — UCB press release](https://www.ucb.com/newsroom/press-releases/article/ucb-to-acquire-candid-therapeutics-building-upon-its-existing-immunology-pipeline-with-novel-t-cell-engagers)
+- [UCB bets $2B on Candid's T-cell engager ambitions — Endpoints](https://endpoints.news/ucb-bets-2-billion-on-candids-t-cell-engager-ambitions/)
+- [Two River and Vida Ventures — Candid exit press release](https://www.pharmiweb.com/press-release/2026-05-04/two-river-and-vida-ventures-extend-track-record-of-company-creation-and-value-realization-following)
+- [Cizutamig BCMA TCE preclinical-to-clinical — ACR Abstracts](https://acrabstracts.org/abstract/cizutamig-a-bcma-t-cell-engager-preclinical-to-clinical-translation-of-design-optimization-for-the-treatment-of-autoimmune-diseases/)
+- [Candid debuts with $370M (Foresite Labs incubation) — Cooley](https://www.cooley.com/news/coverage/2024/2024-09-09-cooley-advises-on-candid-therapeutics-370-million-capital-raise-three-way-merger)
+- [Teva-Emalex $700M Tourette deal — Fierce Biotech](https://www.fiercebiotech.com/biotech/teva-inks-700m-emalex-buyout-bag-near-approval-tourette-drug)
+- [Latus Bio $42M for Huntington's — STAT](https://www.statnews.com/2026/05/04/biotech-startup-latus-bio-raises-42-million-run-huntingtons-trial/)
+- [Trump psychedelics push — Fierce Biotech](https://www.fiercebiotech.com/biotech/real-momentum-or-completely-absurd-trump-support-offers-psychedelic-field-murky-path)
+=== 2026-05-04T04:24:06-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-05-05T04:15:43-07:00 start calibr-briefing ===
+Acknowledged — the background search for npx already gave me what I needed earlier. All work for today's Calibr-Skaggs Daily Briefing is complete and pushed.
+=== 2026-05-05T04:32:52-07:00 done  calibr-briefing (exit 0) ===
