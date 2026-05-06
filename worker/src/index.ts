@@ -1,10 +1,12 @@
 /**
- * Podcast analytics + redirect Worker.
+ * Podcast analytics + serve Worker.
  *
  * Route: GET|HEAD /p/:podcast/u/:user_id/:episode_id.mp3
  *   - logs one row to D1 and one data point to Analytics Engine (both via
- *     ctx.waitUntil so they don't block the redirect)
- *   - 302-redirects to the canonical mp3 URL produced by resolveTarget()
+ *     ctx.waitUntil so they don't block the response)
+ *   - serves the mp3 directly from R2 (with Range support), or, if the object
+ *     isn't in R2, 302-redirects to the GitHub raw fallback. The fallback lets
+ *     us migrate one show at a time and roll back without touching feed.xml.
  *
  * Anything else -> 404 plain text.
  *
@@ -16,6 +18,7 @@
 export interface Env {
   DB: D1Database;
   AE: AnalyticsEngineDataset;
+  BUCKET?: R2Bucket;
   IP_SALT: string;
   GITHUB_REPO_RAW: string;
   ALLOWED_PODCASTS: string;
@@ -43,13 +46,86 @@ async function hashIp(ip: string, salt: string, ts: number): Promise<string> {
   return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
-function resolveTarget(env: Env, podcast: string, _userId: string, episodeId: string): string {
-  // TODO: swap to R2 once audio leaves GitHub. Sketch:
-  // const obj = await env.BUCKET.get(`podcasts/${podcast}/episodes/${episodeId}.mp3`);
-  // return obj
-  //   ? new Response(obj.body, { headers: { "content-type": "audio/mpeg", "etag": obj.httpEtag } })
-  //   : new Response("Not Found", { status: 404 });
-  return `${env.GITHUB_REPO_RAW}/podcasts/${podcast}/episodes/${episodeId}.mp3`;
+function parseRange(header: string | null): R2Range | undefined {
+  if (!header) return undefined;
+  const m = /^bytes=(\d*)-(\d*)$/.exec(header);
+  if (!m || (!m[1] && !m[2])) return undefined;
+  const start = m[1] ? parseInt(m[1], 10) : undefined;
+  const end = m[2] ? parseInt(m[2], 10) : undefined;
+  if (start !== undefined && end !== undefined) return { offset: start, length: end - start + 1 };
+  if (start !== undefined) return { offset: start };
+  return { suffix: end! };
+}
+
+async function serveFromR2(req: Request, bucket: R2Bucket, key: string): Promise<Response | null> {
+  try {
+    if (req.method === "HEAD") {
+      const head = await bucket.head(key);
+      if (!head) return null;
+      const headers = new Headers();
+      head.writeHttpMetadata(headers);
+      headers.set("etag", head.httpEtag);
+      headers.set("accept-ranges", "bytes");
+      headers.set("cache-control", "public, max-age=86400");
+      headers.set("content-length", String(head.size));
+      if (!headers.has("content-type")) headers.set("content-type", "audio/mpeg");
+      return new Response(null, { status: 200, headers });
+    }
+
+    const range = parseRange(req.headers.get("range"));
+    const obj = await bucket.get(key, range ? { range } : undefined);
+    if (!obj) return null;
+
+    const headers = new Headers();
+    obj.writeHttpMetadata(headers);
+    headers.set("etag", obj.httpEtag);
+    headers.set("accept-ranges", "bytes");
+    headers.set("cache-control", "public, max-age=86400");
+    if (!headers.has("content-type")) headers.set("content-type", "audio/mpeg");
+
+    if (range) {
+      // R2 honors the range when requested, but obj.range is not always
+      // populated, so compute headers from the requested range and obj.size.
+      let offset: number;
+      let length: number;
+      if ("suffix" in range) {
+        offset = Math.max(0, obj.size - range.suffix);
+        length = Math.min(range.suffix, obj.size);
+      } else {
+        offset = range.offset ?? 0;
+        length = range.length ?? obj.size - offset;
+      }
+      length = Math.min(length, obj.size - offset);
+      const end = offset + length - 1;
+      headers.set("content-length", String(length));
+      headers.set("content-range", `bytes ${offset}-${end}/${obj.size}`);
+      return new Response(obj.body, { status: 206, headers });
+    }
+
+    headers.set("content-length", String(obj.size));
+    return new Response(obj.body, { status: 200, headers });
+  } catch (err) {
+    console.error("R2 serve failed for", key, err);
+    return null;
+  }
+}
+
+async function resolveTarget(
+  req: Request,
+  env: Env,
+  podcast: string,
+  _userId: string,
+  episodeId: string,
+): Promise<Response> {
+  const key = `podcasts/${podcast}/episodes/${episodeId}.mp3`;
+  if (env.BUCKET) {
+    const r2Response = await serveFromR2(req, env.BUCKET, key);
+    if (r2Response) return r2Response;
+  }
+  return Response.redirect(
+    `${env.GITHUB_REPO_RAW}/podcasts/${podcast}/episodes/${episodeId}.mp3`,
+    302,
+  );
 }
 
 export default {
@@ -105,6 +181,6 @@ export default {
       }
     })());
 
-    return Response.redirect(resolveTarget(env, podcast, userId, episodeId), 302);
+    return resolveTarget(req, env, podcast, userId, episodeId);
   },
 };

@@ -53,15 +53,20 @@ npm run db:init:remote
 npx wrangler secret put IP_SALT
 # (paste a long random string, e.g. `openssl rand -hex 32`)
 
-# 7. Local dev. The Worker binds to http://localhost:8787.
+# 7. Create the R2 bucket that holds episode mp3s. The bucket name must
+#    match `bucket_name` under [[r2_buckets]] in wrangler.toml.
+npx wrangler r2 bucket create ai-nuggets-episodes
+
+# 8. Local dev. The Worker binds to http://localhost:8787.
 npm run dev
 # In another terminal:
 curl -i "http://localhost:8787/p/biomedical-agentic-ai/u/test/2026-05-01-ablatecell-virtual-cell-repos.mp3"
 curl -I "http://localhost:8787/p/biomedical-agentic-ai/u/test/2026-05-01-ablatecell-virtual-cell-repos.mp3"
-# Expect 302 with a `location:` header pointing at the GitHub raw URL.
+# If the object is in R2: expect 200 with audio/mpeg content.
+# If the object is NOT in R2 yet: expect 302 to the GitHub raw URL (fallback).
 # Expect a row to appear in local D1: `npx wrangler d1 execute podcast --command "SELECT * FROM requests;"`
 
-# 8. Deploy.
+# 9. Deploy.
 npm run deploy
 # Note the printed `*.workers.dev` URL — looks like
 # `https://podcast.<your-subdomain>.workers.dev`.
@@ -112,7 +117,13 @@ for trends across months/years.
 
 ## Storage
 
-Right now the Worker redirects to `${GITHUB_REPO_RAW}/podcasts/<slug>/episodes/<ep>.mp3`.
-When audio moves to R2, only `resolveTarget()` in `src/index.ts` changes (the
-sketch is commented in place). Enclosure URLs in feeds stay stable across the
-swap because they point at the Worker, not at storage.
+The Worker tries R2 first (binding `BUCKET`, bucket `ai-nuggets-episodes`,
+key `podcasts/<slug>/episodes/<ep>.mp3`) and serves the bytes directly with
+Range support. If the object isn't in R2, it falls back to a 302 against
+`${GITHUB_REPO_RAW}/podcasts/<slug>/episodes/<ep>.mp3` so we can migrate
+one show at a time without touching `feed.xml`.
+
+Upload new episodes with `scripts/publish_episode.sh <slug> <basename>`
+from the repo root (the daily cron prompts already do this). Once every
+new episode is in R2 and old episodes are backfilled, mp3s can be excluded
+from git and the GitHub raw fallback becomes dead code.

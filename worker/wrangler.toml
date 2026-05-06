@@ -11,6 +11,10 @@ database_id = "458dc35f-a6be-4c8d-95df-7e30229e02de"
 binding = "AE"
 dataset = "podcast_requests"
 
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "ai-nuggets-episodes"
+
 [vars]
 GITHUB_REPO_RAW = "https://raw.githubusercontent.com/andrewsu/ai-nuggets/main"
 ALLOWED_PODCASTS = "biomedical-agentic-ai,calibr-briefing"

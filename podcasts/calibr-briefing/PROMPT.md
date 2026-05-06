@@ -126,7 +126,23 @@ therapeutic development) and rank by importance.
      podcasts/calibr-briefing/episodes/YYYY-MM-DD-<topic>-spotlight.mp3
    ```
 
-## Step 3: update feed and commit
+## Step 3: publish audio to R2
+
+Audio is served from Cloudflare R2 via the `podcast` Worker. Upload each
+generated mp3 with:
+
+```
+scripts/publish_episode.sh calibr-briefing YYYY-MM-DD-pharma-headlines
+scripts/publish_episode.sh calibr-briefing YYYY-MM-DD-<topic>-spotlight
+```
+
+(omit the `.mp3` suffix). The script wraps `wrangler r2 object put` and
+uploads to the `ai-nuggets-episodes` bucket configured in
+`worker/wrangler.toml`. If it fails, fix the error before committing — the
+feed will reference a key that doesn't exist in R2 and listeners will fall
+back to GitHub raw (only works while mp3s are still committed; see Step 4).
+
+## Step 4: update feed and commit
 
 Add new `<item>` entries to `podcasts/calibr-briefing/feed.xml` (newest
 first) with real byte sizes and ffprobe durations. Keep enclosure URLs
@@ -141,3 +157,8 @@ as `<guid isPermaLink="false">YYYY-MM-DD-slug</guid>` — bare slugs without
 ```
 git add -A && git commit -m 'Calibr: <headline + spotlight titles>' && git push
 ```
+
+Note: while we're in the R2 cutover, mp3s are still committed to git as a
+safety net (the Worker falls back to GitHub raw if R2 lacks the object).
+Once R2 is verified end-to-end, mp3s will be excluded from git and only
+uploaded to R2 — this prompt will be updated when that switch happens.
