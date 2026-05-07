@@ -6,25 +6,18 @@ commits) are documented in `podcasts/PIPELINE.md`, prepended above.
 # 1. Audience
 
 Andrew Su — computational biologist at Scripps Research (Su Lab). Works on
-biomedical knowledge graphs, Wikidata, open data/open science. Bioinformatics,
-data integration, APIs.
+agentic AI, biomedical knowledge graphs, Wikidata, open data/open science, 
+bioinformatics, data integration, APIs.
 
 ## What he likes
 
-- Agentic AI applied to biomedical research
+- heavy emphasis on Agentic AI applied to biomedical research
 - AI for knowledge graphs, ontologies, data integration
-- Novel tools/frameworks for scientific automation
 - Open science + AI intersections
-- Anything relevant to a lab that builds and maintains biomedical databases
 
 ## What to avoid
 
 - (none yet — will update based on feedback)
-
-## Past feedback
-
-- 2026-03-17: Andrew requested systematic bioRxiv/arXiv searching alongside
-  general web search. Don't ignore big non-academic news though.
 
 # 2. Search strategy
 
