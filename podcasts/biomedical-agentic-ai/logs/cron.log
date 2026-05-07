@@ -208,3 +208,24 @@ Substantive shortlist (after discarding spurious "agent" → "chemical agent" / 
 
 Why Payne won the slot: provenance closure as an architectural commitment is exactly the curated-infrastructure-plus-agent through-line the show has been tracking, and it pairs with the morning's PTM-LLM nugget on the same architectural axis (schema-constrained, multi-model LLM retrieval) at a different bench problem — both posted to bioRxiv inside a 48-hour window.
 === 2026-05-07T09:21:14-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-07T11:54:06-07:00 start biomedical-agentic-ai ===
+No third nugget for 2026-05-07. Two episodes already shipped today (PNNL PTMdiscoverer at 04:00, Payne Lab Text-to-Target at 09:21). The mid-day refresh found no fresh candidate that survives the tightened 2-day recency filter after those exclusions.
+
+**Candidate funnel — second mid-day refresh of 2026-05-07 (~12:00 PT):**
+
+Sources scanned strictly within 2026-05-05 → 2026-05-07:
+
+- **bioRxiv** (`api.biorxiv.org/details/biorxiv/2026-05-05/2026-05-07`, 644 papers in window, 30 sampled in detail; targeted searches for agent / LLM / multi-agent / foundation model)
+- **arXiv** cs.AI / cs.CL / q-bio biomedical-relevance hits (May 5–7)
+- **General web** — Nature / Science / Cell / company AI-bio announcements / policy & funding press
+
+Substantive shortlist after dropping spurious keyword matches and the two already-shipped picks:
+
+- ❌ **SegmentNT contextual biases** (bioRxiv, 2026-05-05) — https://www.biorxiv.org/content/10.1101/2025.04.09.647946 — v2 revision of an April 2025 paper; novelty is on the wrong side of the spirit of the recency rule.
+- ❌ **Origin-1 generative antibody platform** (bioRxiv, 2026-05-05) — https://www.biorxiv.org/content/10.64898/2026.01.14.699389v1 — generative, not agentic; carry-over from morning shortlist.
+- ❌ **Penn "Mollifier Layers" for inverse PDEs / chromatin epigenetics** (press 2026-05-05/06) — https://www.seas.upenn.edu/stories/ai-method-tackles-one-of-sciences-hardest-math-problems/ — ML-method paper, no agent layer.
+- ❌ **SynBioBeta 2026 "AI agent biomodelling" track** (press, May 4–7) — https://www.synbiobeta.com/read/press-release-combinatorial-synthetic-biology-and-a-revolution-in-ai-agent-biomodelling-at-synbiobeta-%E2%80%9826 — conference chatter, no substantive primary release.
+- ❌ **Biomedical RAG retrieval benchmarking** (arXiv 2605.02520) — submitted 2026-05-04, **out of window**.
+
+**Decision: skip.** No item clears the bar after excluding the two already-shipped picks and applying the strict last-2-days filter. Per the tightened recency rule, "no second [third] episode for the day" is the correct outcome rather than reaching back or substituting a marginal item. No new script, no audio, no feed change, no commit.
+=== 2026-05-07T11:57:07-07:00 done  biomedical-agentic-ai (exit 0) ===
