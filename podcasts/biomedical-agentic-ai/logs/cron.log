@@ -188,3 +188,23 @@ Execution error=== 2026-05-07T09:05:37-07:00 done biomedical-agentic-ai (exit 0)
 Invalid API key · Fix external API key
 === 2026-05-07T09:13:21-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-07T09:17:45-07:00 start biomedical-agentic-ai ===
+Bonus episode for May 7, 2026 is live: **Payne Lab's Text-to-Target** — bioRxiv preprint from Phil Payne and Fuhai Li's group at WashU (posted Tuesday) proposing a provenance-aware LLM retrieval framework fused with cohort-specific numeric omics, evaluated on PDAC and Alzheimer's. 318-second mp3 generated via Mistral TTS (Paul Neutral, 3/3 chunks), uploaded to R2, feed.xml validated, commit `905ab47` pushed.
+
+**Candidate funnel — afternoon refresh of May 7, 2026:**
+
+This is the second nugget today; the morning episode (PNNL/Bilbao PTMdiscoverer) had already shipped at 04:00. Search refresh focused on items missed or under-weighted in the morning pass.
+
+- **bioRxiv** — `details/biorxiv/2026-05-05/2026-05-07` API plus targeted searches for "agent", "LLM", "foundation model" hits in last 48h.
+- **arXiv** — cs.AI / cs.CL / q-bio biomedical-agent submissions through May 5–6.
+- **General web / journals** — Nature, Science, npj Digital Medicine, AI-pharma newswire, NIH/funder announcements.
+
+Substantive shortlist (after discarding spurious "agent" → "chemical agent" / "LLM" embedded in unrelated tokens):
+
+- ✅ **CHOSEN — Xu, ..., Payne, Li, "Interpreting Omics Data Analysis with Large Language Models for Disease Target and Drug Discovery"** (bioRxiv, May 5) — https://www.biorxiv.org/content/10.64898/2026.04.30.721768v1
+- PGxAI — agentic pharmacogenomic recommendation pipeline, beats GPT-5/Claude/Grok baselines on CPIC dosing (npj Digital Medicine, April 15) — https://www.nature.com/articles/s41746-026-02590-w
+- MSAgent — evidence-grounded agentic framework for LLM-driven mass-spec metabolomics (bioRxiv, April 23) — https://www.biorxiv.org/content/10.64898/2026.04.22.720103v1
+- SIMBA — agentic AI platform for single-molecule multi-dimensional imaging (bioRxiv, April 17) — https://www.biorxiv.org/content/10.64898/2026.04.16.719005v1
+- Origin-1 — generative AI platform for de novo antibody design against novel epitopes (bioRxiv, May 5) — https://www.biorxiv.org/content/10.64898/2026.01.14.699389v1
+
+Why Payne won the slot: provenance closure as an architectural commitment is exactly the curated-infrastructure-plus-agent through-line the show has been tracking, and it pairs with the morning's PTM-LLM nugget on the same architectural axis (schema-constrained, multi-model LLM retrieval) at a different bench problem — both posted to bioRxiv inside a 48-hour window.
+=== 2026-05-07T09:21:14-07:00 done  biomedical-agentic-ai (exit 0) ===
