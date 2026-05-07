@@ -77,6 +77,28 @@ git add -A && git commit -m '<commit-prefix>: <descriptive title>' && git push
 
 `<commit-prefix>` is set per-show in its PROMPT.md.
 
+## Final summary (logged to cron.log)
+
+The runner pipes Claude's stdout into `podcasts/<slug>/logs/cron.log`, so
+the final response is a permanent audit record of the run. Make it useful
+for retrospective review.
+
+After the commit/push line, print the **candidate funnel** that fed today's
+selection:
+
+- Per source (bioRxiv / arXiv / general web / press feeds — whichever the
+  show's PROMPT.md specifies), report how many items were scanned and how
+  many survived the relevance filter.
+- List the substantive shortlist **after** discarding spurious keyword
+  matches (e.g., "agent" → "chemical agent", "LLM" inside an unrelated
+  word). Title + URL per item, one line each.
+- Mark which one was chosen for today's episode (and for shows that pick
+  multiple items, mark all that were chosen).
+
+This makes it possible to audit, weeks later, what was on the table and
+why the picked item beat the others. Keep it terse — bullet list, no
+prose summary of each candidate.
+
 ## R2 cutover footnote
 
 While we're in the R2 cutover, mp3s are still committed to git as a safety
