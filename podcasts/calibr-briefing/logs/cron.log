@@ -50,3 +50,23 @@ Acknowledged — the background search for npx already gave me what I needed ear
 Acknowledged — the work is complete. The background locate command finished after I'd already found the npx path via nvm's bin directory and successfully uploaded both mp3s to R2.
 === 2026-05-06T05:39:12-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-07T04:07:41-07:00 start calibr-briefing ===
+Both episodes are live for Thursday, May 7, 2026.
+
+**Headlines (6:36)** — GSK-SiranBio $1B ALK7 siRNA deal as the lead-in to today's spotlight, plus Argenx Q1 blowout pre-PDUFA, Bayer-Perfuse $2.45B glaucoma deal, Angelini-Catalyst $4.1B neurology, Lilly's additional $4.5B Indiana manufacturing build, Entrada DMD topline, Gilead's Arcellx site trim, and BeOne's oncology cull.
+
+**Spotlight (11:57)** — GSK paying $1B+ for SiranBio's SA030 (an ACVR1C/ALK7-targeted GalNAc-siRNA in Phase 1 for obesity) framed as a target validation event for the activin axis. Walk through the human genetics (ACVR1C loss-of-function → lower abdominal fat, lower T2D), the competitive landscape (Arrowhead's ARO-ALK7, Wave INHBE, Lilly bimagrumab), and three Calibr-relevant implications: TGF-beta superfamily adjacency to FGF21-mimetic biology and combination logic; the MASH benchmark shift from histology to body-composition + histology (MRI-PDFF, lean mass, visceral readouts in the IND package); and the China sourcing dynamic compressing partnership economics. Bear case and watch items into the ARO-ALK7 readout, GSK Q2, and EASL June.
+
+Episode mp3s uploaded to R2, feed updated, all committed and pushed in `cb1a7a4`.
+
+Sources:
+- [GSK SiranBio $1B siRNA deal — Endpoints](https://endpoints.news/gsk-goes-to-china-for-1b-sirna-deal-in-arrowheads-obesity-lane/)
+- [Arrowhead ARO-ALK7 preclinical data](https://arrowheadpharma.com/news-press/arrowhead-pharmaceuticals-presents-preclinical-data-on-aro-alk7-for-treatment-of-obesity/)
+- [JCI Insight — Targeting ALK7 ameliorates adiposity](https://insight.jci.org/articles/view/161229)
+- [argenx Q1 2026 results](https://www.manilatimes.net/2026/05/07/tmt-newswire/globenewswire/argenx-reports-first-quarter-2026-financial-results-and-provides-business-update/2337949)
+- [Bayer-Perfuse $2.45B](https://www.biopharmadive.com/news/bayer-perfuse-deal-glaucoma-diabetic-retinopathy-drug/819429/)
+- [Angelini-Catalyst $4.1B](https://endpoints.news/angelini-fortifies-neurology-portfolio-with-4-1b-buyout-of-catalyst-pharma/)
+- [Lilly $4.5B Indiana investment](https://endpoints.news/lilly-plans-new-4-5b-manufacturing-investment-in-indiana/)
+- [Entrada ENTR-601-44 May 7 announcement](https://www.geneonline.com/entrada-therapeutics-to-announce-topline-entr-601-44-dmd-trial-results-on-may-7-2026/)
+- [Gilead trims 108 Arcellx jobs — Fierce Biotech](https://www.fiercebiotech.com/biotech/after-arcellx-buyout-close-gilead-trims-108-jobs-car-t-biotechs-redwood-city-outpost)
+- [BeOne culls five cancer programs — Endpoints](https://endpoints.news/beone-culls-five-cancer-programs-and-an-autoimmune-phase-2/)
+=== 2026-05-07T04:20:45-07:00 done  calibr-briefing (exit 0) ===
