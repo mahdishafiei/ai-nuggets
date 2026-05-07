@@ -181,3 +181,9 @@ Sources surveyed:
 - [bioRxiv: PTM-LLM pipeline](https://www.biorxiv.org/content/10.64898/2026.05.01.722279v1) (DOI 10.64898/2026.05.01.722279)
 - General web: [Mayo REDMOD pancreatic cancer](https://stanforddaily.com/2026/05/06/research-roundup-ai-companions/) and [Novo Nordisk × OpenAI](https://www.cnbc.com/2026/04/14/novo-nordisk-openai-ai-drug-discovery-healthcare-nvo.html) considered but less aligned with the agentic-AI-in-bioinformatics audience than the PNNL preprint
 === 2026-05-07T04:07:41-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-07T08:42:25-07:00 start biomedical-agentic-ai ===
+=== 2026-05-07T09:04:21-07:00 start biomedical-agentic-ai ===
+Execution error=== 2026-05-07T09:05:37-07:00 done biomedical-agentic-ai (exit 0) ===
+=== 2026-05-07T09:06:00-07:00 start biomedical-agentic-ai ===
+Invalid API key · Fix external API key
+=== 2026-05-07T09:13:21-07:00 done  biomedical-agentic-ai (exit 0) ===
