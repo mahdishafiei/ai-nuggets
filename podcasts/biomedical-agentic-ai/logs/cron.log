@@ -278,3 +278,31 @@ Pushed. Run summary follows.
 **Recency**: all chosen and shortlisted items posted within the May 6-8 window.
 === 2026-05-08T12:59:50-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-08T13:34:45-07:00 start biomedical-agentic-ai ===
+Pushed. Run summary follows.
+
+## 2026-05-08 candidate funnel — afternoon refresh (bonus episode)
+
+**Re-invocation context:** morning episode (Meyer at Cedars-Sinai — robotic perturbation proteomics + AI agents) shipped at 12:59 PT. Excluded from the afternoon shortlist per re-invocation rule. Same recency window (May 7-8), same sources, same audience criteria.
+
+**bioRxiv** (`api.biorxiv.org/details/biorxiv/2026-05-07/2026-05-08`, full pagination, 449 unique items, 88 raw keyword hits, ~10 substantive after dropping spurious "RAG"/"agent" matches).
+
+**arXiv** (`export.arxiv.org` API, 200 most recent in cs.AI/cs.CL/q-bio/cs.MA, 19 bio+agent intersections in window): Hygieia rare-disease diagnostic agent (2605.06226), NeuroAgent multimodal neuroimaging (2605.06584), BioMedArena biomedical deep-research-agent toolkit (2605.06177), GATHER cell-type retrieval (2605.06403), FunctionalAgent (2605.06215). API healthy this pass — recovered from this morning's 429.
+
+**ChemRxiv** (web search, `site:chemrxiv.org`): no new May 7-8 items beyond the existing comprehensive-review and JAK closed-loop discovery papers already out of window.
+
+**General web / press**: AWS Amazon Bio Discovery (April 2026, out of window); NVIDIA-Lilly co-innovation lab (older); KALA BIO Researgency.ai (May 7, but corporate strategy not substantive science).
+
+**Funder announcements**: ARPA-H IGoR (May 5, already shipped earlier in week); NIH/HHS press pages quiet on AI/biomed for May 7-8.
+
+Substantive shortlist (after re-invocation exclusions):
+
+- ✅ **CHOSEN — Song, Fu, Zhao, Yu, Yuan, Chen, "Towards autonomous biology: Compiler-Verified Protocols as a Foundation for Real World AI Execution"** (bioRxiv, May 7) — https://www.biorxiv.org/content/10.64898/2026.05.05.720956v1
+- Oesinghaus, Park, Shao, Koh, Seelig — "CytED" cytokine literature LLM pipeline (bioRxiv, May 7) — https://www.biorxiv.org/content/10.64898/2026.05.04.722753v1
+- Liang, Zhao, Wang, Chen, Huang, Yu — "BRIDGE" multi-organ histo-ST foundation model (bioRxiv, May 8) — https://www.biorxiv.org/content/10.64898/2026.05.05.722971v1 — foundation-model architecture, not agentic
+- Liu, Huang, Zou, Zhao et al. — "Hygieia" rare-disease diagnostic agent (arXiv, May 7) — https://arxiv.org/abs/2605.06226 — strong runner-up; lost to Bota on architectural-novelty grounds
+- Ye — "immuneKG" Immune-Cell-Aware KG (bioRxiv v2, May 7) — https://www.biorxiv.org/content/10.64898/2026.04.30.721823v2 — KG+GNN, no LLM agent layer
+
+**Why Bota won the slot:** clean architectural complement to the morning's Meyer pick — Meyer puts the agent on the analysis side of the closed loop; Bota puts it on the protocol-execution side. The compiler-verified-protocol commitment (typed schema + deterministic verifier in the LLM loop) is the same architectural pattern this show has tracked all week (Hardi-Musen, PNNL/Bilbao, Payne, STAT) applied to a new bench problem. 95.1% fidelity on 300 Nature Protocols + cross-platform wet-lab reproducibility validation gives the paper teeth, not just a pretty type system.
+
+Episode: 300-second mp3 generated via Mistral TTS (Paul Neutral, 3/3 chunks), uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml validated, commit `e6cd00a` pushed.
+=== 2026-05-08T13:42:31-07:00 done  biomedical-agentic-ai (exit 0) ===
