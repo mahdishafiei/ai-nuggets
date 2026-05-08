@@ -229,3 +229,29 @@ Substantive shortlist after dropping spurious keyword matches and the two alread
 
 **Decision: skip.** No item clears the bar after excluding the two already-shipped picks and applying the strict last-2-days filter. Per the tightened recency rule, "no second [third] episode for the day" is the correct outcome rather than reaching back or substituting a marginal item. No new script, no audio, no feed change, no commit.
 === 2026-05-07T11:57:07-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-07T17:06:15-07:00 start biomedical-agentic-ai ===
+Bonus episode for May 7, 2026 (evening, third of the day) is live: **STAT** — a bioRxiv preprint from Can Yang's group at HKUST (v1 May 5, v2 today) proposing a multi-agent framework for spatial transcriptomics that explicitly bets on interactive-over-autonomous design (persistent session, shared interactive tissue viewer, staged skill-aware pipeline). 308-second mp3 generated via Mistral TTS (Paul Neutral, 2/2 chunks), uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml validated, commit `fc30b01` pushed.
+
+**Candidate funnel — evening refresh of 2026-05-07 (~17:00 PT):**
+
+This is the third nugget today. Morning: PNNL/Bilbao PTMdiscoverer at 04:00. Mid-day: Payne Lab Text-to-Target at 09:21. A 12:00 PT mid-day refresh declared "skip" — but that pass only "sampled 30 in detail" out of the 725-paper bioRxiv corpus and missed several candidates that the full pagination this evening surfaced. Per PROMPT.md the right behavior is to paginate the full collection.
+
+Sources scanned strictly within 2026-05-05 → 2026-05-07:
+
+- **bioRxiv** (`api.biorxiv.org/details/biorxiv/2026-05-05/2026-05-07`, **725 papers paginated end-to-end**, 34 keyword-survivors after relevance filter, then negative-phrase scrub)
+- **arXiv** cs.AI / cs.CL / q-bio / cs.MA — API hit HTTP 429 from this IP this evening; the 11:54 PT pass already swept arXiv without a winner, so leaning on that
+- **General web / journals** — Nature-family DOIs surfaced via search (s41551, s41746-02594, s41746-02612, s41587, s41592, s41591) all dated 2026-02-24 to 2026-05-01 via CrossRef → **all out of strict 2-day window**; SPARK (s41591-026-04357-y) was already covered May 6
+- **Funder press** — ARPA-H (HEARING program May 7 — auditory neural bridge, not agentic-AI), NIH (May 6 GLP-1 brain penetration, May 6 testosterone glioblastoma — neither agentic-AI)
+
+Substantive shortlist after dropping spurious keyword matches and the two already-shipped picks:
+
+- ✅ **CHOSEN — Chen, Han, Chao, Liu, Zhang, Chen, Wang, Xiao, Yang, "STAT: A multi-agent framework for integrated and interactive spatial transcriptomics analysis"** (bioRxiv, v1 May 5 / v2 May 7) — https://www.biorxiv.org/content/10.64898/2026.05.01.722244v2
+- **Meyer et al., "Robotic perturbation proteomics and AI agents enable scalable drug mechanism discovery"** (bioRxiv, May 7) — https://www.biorxiv.org/content/10.64898/2026.05.04.722718v1 — closest runner-up; loses on editorial-diversity grounds (third proteomics-AI episode of the day)
+- **Ye, "immuneKG: An Immune-Cell-Aware Knowledge Graph Framework for Target Discovery in Immune-Mediated Diseases"** (bioRxiv, v1 May 5 / v2 May 7) — https://www.biorxiv.org/content/10.64898/2026.04.30.721823v2 — strong KG schema-design contribution but not strictly agentic
+- **Chen et al., "Bridging LLM Reasoning and Chemical Knowledge via an Evolutionary Multi-Agent Framework for Molecular Synthesis (EvoSyn)"** (bioRxiv, May 6) — https://www.biorxiv.org/content/10.64898/2026.05.02.722342v1 — multi-agent + RL/Markov-game; less directly biomedical (chemistry)
+- **Yasinetsky et al., "Claim-Level Transparency Analysis of LLM-Generated Diagnostic Reports"** (bioRxiv, May 6) — https://www.biorxiv.org/content/10.64898/2026.05.03.721751v1 — not agentic but a striking metric (2.7% unsupported, 30.2% biologically plausible without verified evidence chain across four frontier LLMs)
+- ❌ **Robotic perturbation proteomics** lost to STAT despite being newer because architectural diversity within a single day matters — STAT advances a different multi-agent design point
+- ❌ **immuneKG** lost on agentic-fit grounds — KG+GNN, no LLM agent layer
+
+Why STAT won the slot: clearly multi-agent (squarely on the show's central topic); different bench domain than the morning's PTM proteomics or mid-day's general omics target discovery; the explicit "interactive vs autonomous" architectural commitment is exactly the kind of design knob this audience should be tuning; HKUST Can Yang group's reproduction of a Visium HD colorectal cancer study on a different breast cancer cohort from natural-language prompts is a real reproducibility argument rather than a synthetic-task benchmark; the v2 revision posted today gives a recency anchor for the bonus slot.
+=== 2026-05-07T17:22:57-07:00 done  biomedical-agentic-ai (exit 0) ===
