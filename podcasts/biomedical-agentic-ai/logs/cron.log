@@ -255,3 +255,6 @@ Substantive shortlist after dropping spurious keyword matches and the two alread
 
 Why STAT won the slot: clearly multi-agent (squarely on the show's central topic); different bench domain than the morning's PTM proteomics or mid-day's general omics target discovery; the explicit "interactive vs autonomous" architectural commitment is exactly the kind of design knob this audience should be tuning; HKUST Can Yang group's reproduction of a Visium HD colorectal cancer study on a different breast cancer cohort from natural-language prompts is a real reproducibility argument rather than a synthetic-task benchmark; the v2 revision posted today gives a recency anchor for the bonus slot.
 === 2026-05-07T17:22:57-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-08T04:00:04-07:00 start biomedical-agentic-ai ===
+Waiting on arXiv rate limit. Will retry shortly.
+=== 2026-05-08T04:03:18-07:00 done  biomedical-agentic-ai (exit 0) ===
