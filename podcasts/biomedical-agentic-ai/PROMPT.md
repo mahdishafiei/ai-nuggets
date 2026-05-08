@@ -27,16 +27,39 @@ story is a product launch or Nature paper, but don't miss important
 preprints because a flashy announcement is easier to find.
 
 1. **bioRxiv** — recent preprints (last 2 days) in bioinformatics, genomics,
-   systems biology, pharmacology. Try queries like "agent", "LLM",
-   "foundation model", "autonomous", "multi-agent". Use the bioRxiv API
-   (`curl 'https://api.biorxiv.org/details/biorxiv/YYYY-MM-DD/YYYY-MM-DD'`,
-   yesterday and today) or web search with `site:biorxiv.org`.
+   systems biology, pharmacology.
+   - Use the details API: `curl 'https://api.biorxiv.org/details/biorxiv/YYYY-MM-DD/YYYY-MM-DD'`
+     for yesterday and today. **Pull the FULL collection, not a sample.**
+     Paginate via the `cursor` field if `messages[0].count` exceeds the
+     page size; the typical 2-day window is 400–700 entries. Filter the
+     entire collection by relevance keywords ("agent", "LLM", "foundation
+     model", "autonomous", "multi-agent", "knowledge graph", "ontology")
+     applied to title + abstract.
+   - Do not "sample 30 in detail" — that misses 95% of the corpus by
+     construction and has caused the script to skip top-of-corpus matches
+     in past runs (e.g., EvoSyn 2026-05-06).
+   - `site:biorxiv.org` web search is a fallback only; preprint indexing
+     lag in general search is multi-day.
 2. **arXiv** — recent papers in cs.AI, cs.CL, q-bio, cs.MA with
-   biomedical/scientific relevance. Use `site:arxiv.org` or the arXiv API.
+   biomedical/scientific relevance.
+   - Use the listing API for date-bounded enumeration, not `site:arxiv.org`
+     web search (which has multi-day indexing lag for fresh submissions):
+     `curl 'http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:q-bio+OR+cat:cs.MA&sortBy=submittedDate&sortOrder=descending&max_results=200'`
+   - Filter the returned Atom feed for submissions within the last 2 days
+     and biomedical relevance.
 3. **General web** — last 1–2 days. Big AI + science news that may NOT be
-   in preprints: major company announcements (DeepMind, NVIDIA, OpenAI),
-   Nature/Science publications, policy developments, funding news,
-   open-source tool releases.
+   in preprints: major company announcements (DeepMind, NVIDIA, OpenAI,
+   Isomorphic, Recursion, etc.), Nature/Science publications, open-source
+   tool releases.
+4. **Policy / funder announcements** — daily check of major US biomedical
+   funder press pages, since program launches and major awards rarely
+   surface in preprint or general web searches:
+   - ARPA-H news: https://arpa-h.gov/news
+   - NIH press: https://www.nih.gov/news-events/news-releases
+   - NSF news: https://www.nsf.gov/news/
+   - HHS press room: https://www.hhs.gov/about/news/
+   Any agentic-AI / biomedical-AI program launch on these pages is a
+   first-rate candidate (e.g., ARPA-H IGoR launch 2026-05-05).
 
 **Recency is a hard filter, not a hint.** Items posted or announced
 outside the stated windows are out-of-scope regardless of merit and do
