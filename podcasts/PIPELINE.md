@@ -7,6 +7,27 @@ specifies its slug, audience, search strategy, episode format, script
 filename convention, and commit-message prefix; this file handles
 everything after the script content has been written.
 
+## Source-level failures during search
+
+Individual search sources fail transiently — arXiv rate-limits the API
+(HTTP 429), bioRxiv has had brief 5xx windows, news sites occasionally
+return errors from a given IP. **A single failed source must not abort
+the run.**
+
+- One quick retry after a short pause (≈30s) is fine if the failure looks
+  transient. Do not sit in a long retry loop — that burns the cron window
+  and ships no episode.
+- If the source is still failing after the retry, **proceed with the
+  remaining sources** and ship the best candidate from what you have.
+  The other sources almost always carry the day's nugget; missing one of
+  three or four is a small recall hit, not a reason to skip the day.
+- In the candidate funnel (logged at end of run), explicitly record which
+  source(s) failed and how. Example: `arXiv — HTTP 429 from this IP, one
+  retry also 429, skipped`. This makes the gap auditable.
+- Skipping the day is reserved for the case where the *content* bar isn't
+  met (no fresh candidates after surveying available sources), not for
+  source-side outages.
+
 ## TTS & distribution
 
 Voice config lives in each show's `show.toml`:

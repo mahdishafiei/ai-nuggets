@@ -21,10 +21,13 @@ bioinformatics, data integration, APIs.
 
 # 2. Search strategy
 
-Cast a wide net across THREE source types — do not skip any. The best nugget
-might come from any of them; don't bias toward preprints if the biggest
-story is a product launch or Nature paper, but don't miss important
-preprints because a flashy announcement is easier to find.
+Cast a wide net across THREE source types — don't voluntarily skip any.
+The best nugget might come from any of them; don't bias toward preprints
+if the biggest story is a product launch or Nature paper, but don't miss
+important preprints because a flashy announcement is easier to find. If
+one source fails transiently (arXiv 429, bioRxiv 5xx, etc.) follow the
+source-level-failures rule in `PIPELINE.md` — proceed with the rest, note
+the gap in the funnel, ship the day's episode.
 
 1. **bioRxiv** — recent preprints (last 2 days) in bioinformatics, genomics,
    systems biology, pharmacology.
