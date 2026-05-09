@@ -331,3 +331,23 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 
 Request ID: req_011Castngzi8UwHacJxsTQen
 === 2026-05-09T16:52:00-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-09T16:52:24-07:00 start biomedical-agentic-ai ===
+## Run summary — 2026-05-09
+
+Shipped: **2026-05-09-mp2d-mcts-diffusion-protein-design** — MP2D from Kong, Dong et al. (Zhejiang U.), arXiv:2605.05829, accepted IJCAI 2026. Pareto-guided MCTS + global iterative refinement at inference time over a frozen discrete diffusion model, evaluated on antimicrobial peptide and protein binder design with 4–5 conflicting objectives. Audio 264s / 1.86 MB via Mistral primary. Feed updated, R2 published, pushed as 43061ec.
+
+### Candidate funnel
+
+- **arXiv q-bio (new submissions, May 7–8)** — scanned 12 listed items, 6 substantive AI-for-science candidates after filtering.
+  - PhenixCraft — automated AlphaFold-integrated cryo-EM density map segmentation (arXiv:2605.05259)
+  - **MP2D — Pareto-guided MCTS + discrete diffusion for multi-objective protein design (arXiv:2605.05829) ← CHOSEN**
+  - Nationwide EHR CRS prediction — classical ML on EHR, weak comp-bio fit (arXiv:2605.05213)
+  - Stochastic causal representation learning for personalized medicine (arXiv:2605.05706)
+  - BioResearcher — scenario-guided multi-agent system for translational medicine (arXiv:2605.05985)
+  - Hygieia — router-based knowledge-enhanced rare disease diagnostic agent, 12–60% over physicians (arXiv:2605.06226)
+- **arXiv q-bio (replacements, filtered out as non-fresh)** — MAT-Cell, PathRWKV, HDTree, DOGMA, Masked LMs for protein engineering, Laya EEG. Skipped because PROMPT.md asks for last-2-day papers.
+- **bioRxiv search** — HTTP 403 from this IP; no retry attempted because arXiv yielded a strong shortlist. Counts as a source-side gap.
+- **General web search** — surfaced only older Biomni / BioResearcher historical content; no fresh May 7–8 hits beyond what arXiv already returned.
+
+Why MP2D over the other two strong agent candidates (BioResearcher, Hygieia): the show shipped five agent-platform papers in the prior 48 hours (Tolkach SPARK, PNNL/Bilbao, Payne Text-to-Target, STAT, BPL/Bota, Meyer proteomics). MP2D is the cleanest non-agent, algorithmic AI-for-science contribution among the May 7–8 candidates and brings the show back to generative-model territory for one episode. BioResearcher and Hygieia are logged in the itunes:summary as deferred candidates.
+=== 2026-05-09T16:59:23-07:00 done  biomedical-agentic-ai (exit 0) ===
