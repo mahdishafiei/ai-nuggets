@@ -99,3 +99,27 @@ Both episodes are committed and pushed. Here's the candidate funnel for today's 
 **Spotlight pick rationale:** Odyssey IPO satisfies the Foresite-portfolio focus area, the AI-in-drug-discovery focus area (Rahko quantum-ML + Terray AI), and the autoimmune therapeutic-development focus area in a single story — and it sets the public-market comparator framework for upstream-signaling-node oral precision immunology, which has direct read-through to Calibr's immunology adjacency.
 === 2026-05-08T04:19:18-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-09T04:01:08-07:00 start calibr-briefing ===
+Pushed to main. Both episodes shipped.
+
+## Candidate funnel — May 9, 2026
+
+Quiet weekend tape, but Friday May 8 produced a dense candidate set across every focus area.
+
+**Sources scanned:** Fierce Biotech, Fierce Pharma, Endpoints News, BioPharma Dive, STAT News, Bloomberg/WSJ secondary coverage, GenEng News.
+
+**Substantive shortlist (May 8 hard news):**
+- **Daiichi Sankyo posts ¥149.4B (~$950M) extraordinary loss on ADC manufacturing overcapacity** — first big-pharma admission that 2023-vintage DXd capacity buildout has gotten ahead of demand; Datroway slip + patritumab withdrawal + DS-9606 discontinuation drove the miss. https://endpoints.news/daiichi-sankyo-posts-extraordinary-loss-of-nearly-1b/ — **CHOSEN AS SPOTLIGHT**
+- **Trump signs off on plan to fire FDA Commissioner Marty Makary** (WSJ/Bloomberg/Politico May 8 coordinated reporting; CBER/CDER both also lacking permanent leadership) — https://www.statnews.com/2026/05/08/fda-commissioner-marty-makary-exit-controversial-tenure/ — included in headlines
+- **Eisai-Biogen subcutaneous Leqembi PDUFA pushed 3 months to August 24, 2026** — https://www.prnewswire.com/news-releases/leqembi-iqlik-pdufa-date-updated-to-august-24-in-the-us-302766719.html — included in headlines
+- **Bayer-Perfuse Therapeutics up to $2.45B** (May 7) — https://www.biopharmadive.com/news/bayer-perfuse-deal-glaucoma-diabetic-retinopathy-drug/819429/ — included in headlines (M&A wave bucket)
+- **Roche-PathAI up to ~$1.05B** (May 7) — https://www.fiercebiotech.com/medtech/roche-shell-out-1b-acquire-pathai-move-boost-ai-based-dx-algorithms — included
+- **Angelini-Catalyst Pharmaceuticals $4.1B** (May 7) — https://endpoints.news/angelini-fortifies-neurology-portfolio-with-4-1b-buyout-of-catalyst-pharma/ — included
+- **enGene LEGEND bladder cancer 25% 12-month duration of response, shares crash** — https://www.fiercebiotech.com/biotech/analysts-cut-engene-cancer-sales-forecast-after-updated-data-widen-gap-jj — included
+- **Big Pharma AI showcase shifts framing to measurable impact** — https://www.fiercebiotech.com/biotech/drug-development-ma-big-pharmas-showcase-measurable-impact-ai — included
+
+**Discarded as already shipped:** Odyssey IPO trading debut (yesterday's spotlight); GSK-SiranBio ALK7 (May 7 spotlight); Capricor lawsuit (yesterday's headlines).
+
+**Source-side notes:** No source failures. Endpoints articles partially paywalled but corroborated via FiercePharma/STAT/BioSpace.
+
+Spotlight runtime 8:15 (495s); headlines runtime 7:01 (421s). Commit `a8068e7` pushed.
+=== 2026-05-09T04:14:18-07:00 done  calibr-briefing (exit 0) ===
