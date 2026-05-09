@@ -306,3 +306,8 @@ Substantive shortlist (after re-invocation exclusions):
 
 Episode: 300-second mp3 generated via Mistral TTS (Paul Neutral, 3/3 chunks), uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml validated, commit `e6cd00a` pushed.
 === 2026-05-08T13:42:31-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-09T04:00:03-07:00 start biomedical-agentic-ai ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach. If you are seeing this refusal repeatedly, try running /model claude-sonnet-4-20250514 to switch models.
+
+Request ID: req_011Cart1HsuRxD24UfCPaLoE
+=== 2026-05-09T04:01:08-07:00 done  biomedical-agentic-ai (exit 0) ===
