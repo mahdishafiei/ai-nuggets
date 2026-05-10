@@ -488,3 +488,31 @@ Directly in Su Lab's KG/RAG wheelhouse and complements rather than overlaps the 
 Pre-existing uncommitted modification to `PROMPT.md` (search-strategy restructuring removing ChemRxiv/web/funder sections) intentionally left out of this commit, consistent with the prior run's note that it warrants user review.
 === 2026-05-09T17:34:42-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-09T17:35:11-07:00 start biomedical-agentic-ai ===
+Shipped episode 5 of 5 for 2026-05-09: BioDesignBench (Kim & Romero, Duke, bioRxiv 2026-05-08). Audio generated via Mistral primary, uploaded to R2, feed.xml validated, committed and pushed.
+
+## Candidate funnel (5th invocation, 2026-05-09)
+
+Today's already-shipped (excluded from this slot):
+- MP2D — arXiv 2605.05829 (protein design system)
+- Open-Rosalind — bioRxiv 10.64898/2026.05.06.722404 (in-house bio-agent benchmark)
+- Hygieia — arXiv 2605.06226 (rare-disease diagnostic agent)
+- GATHER — arXiv 2605.06403 (KG-RAG cell-type annotation)
+
+**Sources scanned for this slot:**
+- bioRxiv 2026-05-08/09: 337 entries pulled (full collection, paginated), 22 hit AI/agent keywords after dropping the noisy "react" filter
+- arXiv: 200 recent submissions, 72 biomed×agent intersection, mostly 2026-05-07
+- ChemRxiv: 4 entries May 8 (chemistry-leaning, not biomedical-AI fit — Aitomia, ArIA, QuADMET-Former, crystallography copilot)
+- News/product: only CTONE Group AI agent computer launch (not biomedical) and Salesforce healthcare agents (March, out of window)
+- Funders: ARPA-H, NIH dry on AI; NSF blank fetch; HHS 403
+
+**Substantive shortlist (after excluding today's four):**
+- **BioDesignBench** — Kim & Romero, Duke, bioRxiv 10.64898/2026.05.06.723381 — held-out evaluation of 4 frontier LLM agents on 76 protein-design tasks; behavioral diagnosis (right tools, shallow eval, premature termination); enforcing multi-metric eval is the fix → **CHOSEN**
+- PromptBio-Bench — PromptBio Inc, bioRxiv 10.64898/2026.05.05.723092 — 194-task benchmark of Biomni + ToolsGenie + 1 other; deferred (commercial entity benchmarking competitors; thematic clash with already-shipped Open-Rosalind)
+- BRIDGE — bioRxiv 10.64898/2026.05.05.722971 — multi-organ histo-ST foundation model (foundation model, not agentic; deferred)
+- DigitalPedon — bioRxiv 10.64898/2026.05.05.722891 — soil science LLM agent (out of biomedical scope)
+- NeuroAgent — arXiv 2605.06584 — LLM agents for neuroimaging preprocessing (narrower domain, not strongest)
+- AI CFD Scientist — arXiv 2605.06607 — physics simulators (not biomedical)
+- Most other arXiv "biomed+agent" hits were spurious keyword overlaps (drug-development RCT statistics, reactive oxygen species, etc.)
+
+**Why BioDesignBench won:** Phil Romero academic credibility in protein ML; substantive scientific finding (the behavioral diagnosis with an actionable fix) rather than just "we built a benchmark"; converges with this morning's Open-Rosalind on the same architectural conclusion from a totally different domain — useful triangulation; open-source reference agents + public leaderboard fits the open-science framing.
+=== 2026-05-09T17:43:15-07:00 done  biomedical-agentic-ai (exit 0) ===
