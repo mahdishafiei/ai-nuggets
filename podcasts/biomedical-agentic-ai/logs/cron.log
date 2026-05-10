@@ -397,3 +397,8 @@ The draft contained one unverifiable editorial leap — framing "Open-Rosalind" 
 
 Two episodes shipped for the day. Left the pre-existing `PROMPT.md` modification (search-strategy restructuring removing ChemRxiv/web/funder sections) uncommitted since it's outside the episode-shipping task and warrants user review.
 === 2026-05-09T17:13:23-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-09T17:13:53-07:00 start biomedical-agentic-ai ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach. If you are seeing this refusal repeatedly, try running /model claude-sonnet-4-20250514 to switch models.
+
+Request ID: req_011CasvYS19nTDY9T817m5kz
+=== 2026-05-09T17:15:00-07:00 done  biomedical-agentic-ai (exit 0) ===
