@@ -439,3 +439,51 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 
 Request ID: req_011CaswM4Uf6L3qK9zcmNeJH
 === 2026-05-09T17:25:34-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-09T17:26:04-07:00 start biomedical-agentic-ai ===
+Episode shipped. Final summary:
+
+## Run summary — 2026-05-09 (4th of the day)
+
+Picked up the 4th invocation slot after three episodes had already shipped today (MP2D protein design, Open-Rosalind tool-first benchmarking, Hygieia rare-disease diagnostic agent). Two prior 4th-attempt runs got blocked by the API moderation classifier; this one cleared.
+
+### Candidate funnel — 4th slot
+
+**bioRxiv** (full 2-day collection, 2026-05-08 → 2026-05-09):
+- 452 unique entries paginated, 31 with agentic/LLM/KG/foundation-model keywords, 5 strong-signal after filtering
+- Substantive shortlist (excluding shipped):
+  - PromptBio-Bench end-to-end LLM bioinformatics agent (bioRxiv 10.64898/2026.05.05.723092) — overlapped with Open-Rosalind
+  - Benchmarking LLM agents for protein design (bioRxiv 10.64898/2026.05.06.723381) — overlapped with MP2D
+  - BRIDGE multi-organ histo-ST foundation model (bioRxiv 10.64898/2026.05.05.722971) — not agentic
+  - DigitalPedon — soil science, out of scope
+
+**arXiv** (cs.AI/cs.CL/q-bio/cs.MA, listing API single OR'd query):
+- 200 returned, 8 biomed+agentic in the last 3 days after excluding shipped:
+  - **GATHER — Convergence-Centric Hyper-Entity Retrieval for Zero-Shot Cell-Type Annotation (arXiv 2605.06403) — CHOSEN**
+  - BioMedArena open-source biomedical deep-research-agent toolkit (arXiv 2605.06177) — overlapped with Open-Rosalind
+  - Retina-RAG retinal diagnosis + report generation (arXiv 2605.06173) — narrower clinical scope, overlap with Hygieia
+  - NeuroAgent multimodal neuroimaging (arXiv 2605.06584) — narrower
+  - Data Language Models tabular foundation model (arXiv 2605.06290) — generic ML
+  - AI CFD Scientist (arXiv 2605.06607) — not biomedical
+  - Automated Clinical Report Generation for cognitive remediation (arXiv 2605.06594) — narrower clinical
+  - Navigating by Old Maps — LLM mech interp post-training (arXiv 2605.06076) — not biomedical
+
+### Why GATHER won
+
+Directly in Su Lab's KG/RAG wheelhouse and complements rather than overlaps the day's three prior episodes (clinical agent, generative protein design, agent benchmarking). The convergence-node retrieval primitive — global topology-aware traversal replacing entity-wise expansion + iterative LLM reasoning — is portable to any biology problem with many noisy entities pointing at one latent answer (pathway analysis, multi-symptom diagnosis, GWAS hit interpretation, polypharmacology), so the architectural lesson lands beyond cell typing. The morning's funnel had explicitly flagged GATHER as a strong candidate ("interesting, candidate for next week") deferred only to avoid stacking; the deferral cleared once the day's other slots were committed.
+
+### Pipeline
+
+- Audio: 273.0s / 1,854,867 bytes via Mistral primary (Paul Neutral, 2/2 chunks).
+- R2: uploaded to `ai-nuggets-episodes`.
+- Feed: new item prepended, XML validated.
+- Commit: `83d93bd` pushed to main.
+
+### Today's full lineup (4 episodes)
+
+1. MP2D — Pareto-guided MCTS over discrete diffusion for multi-objective protein design (arXiv 2605.05829)
+2. Open-Rosalind — tool-first biomedical agent with process-aware benchmarking (bioRxiv 10.64898/2026.05.06.722404)
+3. Hygieia — router-based knowledge-enhanced rare-disease diagnostic agent (arXiv 2605.06226)
+4. GATHER — convergence-centric KG-RAG for zero-shot cell-type annotation (arXiv 2605.06403)
+
+Pre-existing uncommitted modification to `PROMPT.md` (search-strategy restructuring removing ChemRxiv/web/funder sections) intentionally left out of this commit, consistent with the prior run's note that it warrants user review.
+=== 2026-05-09T17:34:42-07:00 done  biomedical-agentic-ai (exit 0) ===
