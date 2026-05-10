@@ -434,3 +434,8 @@ Episode shipped. Final summary:
 
 **Why Hygieia won**: complements rather than overlaps with today's two prior episodes (a method paper on protein design, and a benchmarking paper on biomedical agents); pivots to a deployed clinical agent with physician-validated outcomes; "risk gene prioritization" is directly Su Lab adjacent; router-based knowledge-enhanced architecture is the kind of design choice worth flagging.
 === 2026-05-09T17:23:35-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-09T17:24:16-07:00 start biomedical-agentic-ai ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach. If you are seeing this refusal repeatedly, try running /model claude-sonnet-4-20250514 to switch models.
+
+Request ID: req_011CaswM4Uf6L3qK9zcmNeJH
+=== 2026-05-09T17:25:34-07:00 done  biomedical-agentic-ai (exit 0) ===
