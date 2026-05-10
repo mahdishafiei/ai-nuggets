@@ -124,3 +124,30 @@ Quiet weekend tape, but Friday May 8 produced a dense candidate set across every
 Spotlight runtime 8:15 (495s); headlines runtime 7:01 (421s). Commit `a8068e7` pushed.
 === 2026-05-09T04:14:18-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-10T04:00:44-07:00 start calibr-briefing ===
+## Calibr 2026-05-10 — Run summary
+
+**Episodes shipped:**
+- `2026-05-10-pharma-headlines` — 3,097,971 bytes, 7:15
+- `2026-05-10-azalea-trac-cart-spotlight` — 4,127,627 bytes, 9:38
+
+Both audio files generated via Mistral Voxtral (`en_paul_neutral`), uploaded to R2 (`ai-nuggets-episodes`), feed.xml validated, committed (f37019a), pushed.
+
+**Candidate funnel — Sunday May 10, 2026:**
+
+Sources scanned: Endpoints, STAT, Fierce Biotech, Fierce Pharma, BioPharma Dive, BioSpace, GlobeNewswire, GenEng News, Lonza/BMS press, Argenx press, Madrigal IR, ASGCT abstracts. All sources responded normally — no transient failures today.
+
+Substantive shortlist (Sunday is light, so this is end-of-week + ASGCT-eve material):
+
+- **Azalea Therapeutics first-in-primate in vivo TRAC-CAR-T data** — May 8 release ahead of ASGCT late-breaker May 15 ([GlobeNewswire](https://www.globenewswire.com/news-release/2026/05/08/3291349/0/en/Azalea-Therapeutics-Announces-Late-Breaking-Oral-Presentation-at-ASGCT-Annual-Meeting-Demonstrating-First-in-Primate-In-Vivo-TRAC-CAR-T-Cell-Engineering.html)) **— SPOTLIGHT**
+- **Argenx Vyvgart FDA approval for all gMG serotypes** — May 8, first-ever therapy for triple-seronegative gMG ([Argenx GlobeNewswire](https://www.globenewswire.com/news-release/2026/05/08/3291372/0/en/argenx-Announces-U-S-FDA-Approval-Expanding-VYVGART-and-VYVGART-Hytrulo-for-Use-in-All-Adult-Patients-Living-with-gMG.html)) — headline #2
+- **ASGCT 2026 in vivo CAR-T track preview** — Sana SG293 Tuesday + Precision PBGENE-DMD + Capstan/Umoja/Outpace ([Sana](https://www.globenewswire.com/news-release/2026/04/27/3282052/0/en/Sana-Biotechnology-Announces-Oral-Presentation-Highlighting-Preclinical-Data-from-in-vivo-CAR-T-SG293-at-the-American-Society-of-Gene-Cell-Therapy-ASGCT-2026-Annual-Meeting.html)) — headline #3
+- **BMS/Lonza SYNtecan TOPO1 ADC linker-payload license** — May 7 ([Lonza](https://www.lonza.com/media-advisories/2026-05-07-14-00)) — headline #4
+- **Madrigal Q1 Rezdiffra $311M (+127% YoY) + PNPLA3 siRNA bolt-on** — May 6 ([Madrigal IR](https://www.globenewswire.com/news-release/2026/05/06/3288653/0/en/Madrigal-Pharmaceuticals-Reports-First-Quarter-2026-Financial-Results-and-Provides-Corporate-Updates.html)) — headline #5
+- **AACR 2026 roundup** — Revolution zoldonrasib 11.1mo PFS / Merck MK-2010 PD-1×VEGF 55% ORR ([BioPharma Dive](https://www.biopharmadive.com/news/aacr-2026-revolution-zoldonrasib-merck-vegf-nuvalent-nuvation/817916/)) — headline #6
+- *Survodutide Phase 3 16.6% weight loss* — covered conceptually under Madrigal MASH/GLP-1 framing
+- *GSK/SiranBio ALK7 siRNA* — covered as 5/7 spotlight, dropped today
+- *Bayer-Perfuse / Roche-PathAI / Angelini-Catalyst M&A* — covered yesterday, dropped today
+- *Daiichi ADC overcapacity* — yesterday's spotlight, referenced as context for BMS/Lonza item only
+
+Spotlight selection rationale: Azalea is the freshest data-bearing item in the focus area (in vivo CAR-T), is technically distinct from anything previously spotlit (TRAC site-specific gene editing — fourth branch alongside LNP/mRNA, fusosome, lentiviral), and lands on the eve of ASGCT, where the Calibr team will likely follow follow-on coverage all week.
+=== 2026-05-10T04:12:02-07:00 done  calibr-briefing (exit 0) ===
