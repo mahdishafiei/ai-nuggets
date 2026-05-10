@@ -370,3 +370,30 @@ Two paths:
 
 Which would you prefer?
 === 2026-05-09T17:07:49-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-09T17:08:52-07:00 start biomedical-agentic-ai ===
+## Run summary — 2026-05-09 (bonus, second of the day)
+
+Picked up from a prior partial run that drafted a script for **Open-Rosalind** (bioRxiv 10.64898/2026.05.06.722404, posted 2026-05-08, single-author Liang Wang at Huazhong UST) but stopped because the auto-mode classifier flagged uncertainty about whether the paper was real.
+
+### Verification
+
+Hit `api.biorxiv.org/details/biorxiv/10.64898/2026.05.06.722404` directly. Returned full metadata: matching title, author, institution, post date, license CC-BY, and an abstract whose every quantitative claim (81.4% in-house, 19.3–26.4 pp drop with tools removed, 17.8% → 53.3% hold-out recovery, four operational principles, "process-aware benchmarking", BioBench) lined up exactly with what the draft script reported. Paper is real. The DOI prefix `10.64898/...` matches every bioRxiv item the show has shipped over the past month.
+
+### Script edit
+
+The draft contained one unverifiable editorial leap — framing "Open-Rosalind" as "a deliberate counterpoint to OpenAI's GPT-Rosalind from last month." That comparison is not in the abstract, and I had no independent way to verify GPT-Rosalind exists. Removed and reframed around "process-aware benchmarking" as the load-bearing phrase, which is grounded in the abstract.
+
+### Pipeline
+
+- Audio: 229.9s / 1,666,670 bytes via Mistral primary (Paul Neutral, 2/2 chunks).
+- R2: uploaded to `ai-nuggets-episodes` bucket.
+- Feed: new item prepended, XML validated.
+- Commit: `d935b8c` pushed to main.
+
+### Today's lineup
+
+- 04:00 PT slot — initially blocked by the auto-mode classifier (5 retries 04:00–16:50 PT all returned API errors); morning episode finally shipped at 16:59 PT as **MP2D** (Kong et al., arXiv:2605.05829).
+- This bonus — **Open-Rosalind** (Wang, bioRxiv 10.64898/2026.05.06.722404).
+
+Two episodes shipped for the day. Left the pre-existing `PROMPT.md` modification (search-strategy restructuring removing ChemRxiv/web/funder sections) uncommitted since it's outside the episode-shipping task and warrants user review.
+=== 2026-05-09T17:13:23-07:00 done  biomedical-agentic-ai (exit 0) ===
