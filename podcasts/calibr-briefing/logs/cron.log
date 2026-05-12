@@ -172,3 +172,33 @@ Shortlist (substantive candidates after filter):
 Headlines: 6 min 17 s · Spotlight: 12 min 44 s · Commit `5a56eb5`.
 === 2026-05-11T04:20:24-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-12T04:01:07-07:00 start calibr-briefing ===
+Both episodes shipped for Tuesday, May 12, 2026.
+
+**Today's run summary**
+
+- **Headlines** (4:45 / 2.05 MB) — `2026-05-12-pharma-headlines`
+- **Spotlight** (6:33 / 2.79 MB) — `2026-05-12-bms-hengrui-spotlight`
+
+Both audio files generated via Mistral Paul Neutral, uploaded to R2 (`ai-nuggets-episodes`), feed updated, parses cleanly, committed and pushed as `acbc164`.
+
+**Candidate funnel**
+
+- Endpoints homepage — ~6 items scanned, 5 substantive (BMS-Hengrui, Flagship non-viral gene therapy / HydroGene, Rezdiffra Q1 update, Optum Rx fee model, Bayer pipeline cuts)
+- Fierce Biotech homepage — ~5 items scanned, 4 substantive (BMS-Hengrui detail, Inhibrx OX40 + Keytruda, Bayer cuts, Cellular Intelligence Parkinson's acquisition)
+- STAT homepage — ~3 items scanned, 1 substantive (Astellas rare disease restart — overlap with earlier coverage)
+- BioPharma Dive homepage — ~6 items scanned, 5 substantive (BioNTech layoffs, Inhibrx + Fractyl pair, Odyssey IPO recap, Sarepta decline, 1H'26 trials watch)
+- Direct searches — confirmed BMS-Hengrui press release (BMS/Hengrui/PR Newswire), Inhibrx Phase 2 HexAgon details, Enterprise Therapeutics ETD001 ENaC Phase 2 hit, HydroGene ASGCT preclinical NHP data, Optum Rx transparent PBM model, Bayer Q1 program cuts
+
+**Substantive shortlist**
+- BMS-Hengrui $15.2B / 13-asset oncology/heme/immunology deal — **CHOSEN headlines #1 + SPOTLIGHT**
+- Inhibrx INBRX-106 OX40 + Keytruda Phase 2 (44% vs 21.4% HNSCC, May 11) — **CHOSEN headlines #2**
+- Enterprise Therapeutics ETD001 ENaC Phase 2 hits primary in CF — **CHOSEN headlines #3**
+- Bayer Q1 + 4 program cuts (BDKRB1, runcaciguat) — **CHOSEN headlines #4**
+- Optum Rx transparent fee-based PBM model (May 11) — **CHOSEN headlines #5**
+- HydroGene non-viral DNA in NHPs at ASGCT — **CHOSEN headlines #6**
+- Madrigal Rezdiffra Q1 (already covered May 6) — skipped, stale
+- Sarepta Elevidys decline (already covered May 11) — skipped, stale
+- BioNTech layoffs / Cellular Intelligence Parkinson's — passed for tighter focus
+
+Spotlight chosen for BMS-Hengrui because (a) it's the dominant deal of the day, (b) the 4+4+5 structure with five joint-discovery programs is a genuinely novel template, and (c) it has direct read-throughs to Calibr's partnering strategy across in vivo CAR-T, MASH biologic, and immunology — the multi-asset bundling thesis lets us reframe how the Calibr platform should be marketed.
+=== 2026-05-12T04:09:19-07:00 done  calibr-briefing (exit 0) ===
