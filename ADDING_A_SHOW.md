@@ -119,8 +119,9 @@ Confirm that:
   Worker URL in the `<enclosure>`.
 - The commit landed on `main` with the expected prefix.
 - `curl -I "https://podcast.<sub>.workers.dev/p/my-new-show/u/<listener>/YYYY-MM-DD-foo.mp3"`
-  returns 200 (R2 hit) or 302 (GitHub raw fallback). 404 means the
-  Worker doesn't recognize the slug — recheck step 4.
+  returns 200 (R2 hit). 404 means either the Worker doesn't recognize the
+  slug (recheck step 4) or the R2 upload didn't land (re-run
+  `scripts/publish_episode.sh`).
 
 If anything is wrong, fix it before the cron picks it up the next morning.
 

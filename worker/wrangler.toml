@@ -16,5 +16,4 @@ binding = "BUCKET"
 bucket_name = "ai-nuggets-episodes"
 
 [vars]
-GITHUB_REPO_RAW = "https://raw.githubusercontent.com/andrewsu/ai-nuggets/main"
 ALLOWED_PODCASTS = "biomedical-agentic-ai,calibr-briefing,receptor-and-reason"

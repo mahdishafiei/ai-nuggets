@@ -151,11 +151,3 @@ This makes it possible to audit, weeks later, what was on the table and
 why the picked item beat the others. Keep it terse — bullet list, no
 prose summary of each candidate.
 
-## R2 cutover footnote
-
-While we're in the R2 cutover, mp3s are still committed to git as a safety
-net (the Worker falls back to GitHub raw if R2 lacks the object). Once R2
-is verified end-to-end, mp3s will be excluded from git and only uploaded
-to R2 — this file will be updated when that switch happens.
-
----

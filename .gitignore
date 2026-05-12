@@ -4,3 +4,4 @@ __pycache__/
 worker/node_modules/
 worker/.wrangler/
 docs/superpowers/specs/
+podcasts/*/episodes/*.mp3

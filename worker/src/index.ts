@@ -4,9 +4,8 @@
  * Route: GET|HEAD /p/:podcast/u/:user_id/:episode_id.mp3
  *   - logs one row to D1 and one data point to Analytics Engine (both via
  *     ctx.waitUntil so they don't block the response)
- *   - serves the mp3 directly from R2 (with Range support), or, if the object
- *     isn't in R2, 302-redirects to the GitHub raw fallback. The fallback lets
- *     us migrate one show at a time and roll back without touching feed.xml.
+ *   - serves the mp3 directly from R2 (with Range support). Missing objects
+ *     return 404.
  *
  * Anything else -> 404 plain text.
  *
@@ -18,9 +17,8 @@
 export interface Env {
   DB: D1Database;
   AE: AnalyticsEngineDataset;
-  BUCKET?: R2Bucket;
+  BUCKET: R2Bucket;
   IP_SALT: string;
-  GITHUB_REPO_RAW: string;
   ALLOWED_PODCASTS: string;
 }
 
@@ -118,14 +116,9 @@ async function resolveTarget(
   episodeId: string,
 ): Promise<Response> {
   const key = `podcasts/${podcast}/episodes/${episodeId}.mp3`;
-  if (env.BUCKET) {
-    const r2Response = await serveFromR2(req, env.BUCKET, key);
-    if (r2Response) return r2Response;
-  }
-  return Response.redirect(
-    `${env.GITHUB_REPO_RAW}/podcasts/${podcast}/episodes/${episodeId}.mp3`,
-    302,
-  );
+  const r2Response = await serveFromR2(req, env.BUCKET, key);
+  if (r2Response) return r2Response;
+  return new Response("Not Found", { status: 404, headers: { "content-type": "text/plain" } });
 }
 
 export default {
