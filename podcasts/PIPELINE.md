@@ -28,6 +28,23 @@ the run.**
   met (no fresh candidates after surveying available sources), not for
   source-side outages.
 
+## Writing for audio
+
+The script will be read aloud — write for the ear, not the eye. Things that
+look fine on a page can be useless or actively annoying when spoken.
+
+- **Never read out DOIs, arXiv IDs, or URLs.** They are noise in audio and
+  the link is in the show notes anyway. Drop them entirely from the script.
+- **No tables, bullet lists, or markdown structure in the spoken portion.**
+  Use prose with natural transitions ("first", "the second thing", "one
+  caveat").
+- **Spell out or rephrase anything that's hard to say.** Greek letters,
+  unusual symbols, chemical formulas, alphanumeric identifiers, ticker
+  symbols, dollar amounts — read them the way a human would say them, not
+  the way they're typed.
+
+Individual shows may add their own audio conventions in their PROMPT.md.
+
 ## TTS & distribution
 
 Voice config lives in each show's `show.toml`:
