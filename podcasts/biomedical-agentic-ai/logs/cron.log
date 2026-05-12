@@ -583,3 +583,50 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 Request ID: req_011CaxZRrgqkvmzS9Npc2w22
 === 2026-05-12T04:01:07-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-12T08:20:19-07:00 start biomedical-agentic-ai ===
+Episode shipped. Run summary follows.
+
+## Today's AI Nugget — 2026-05-12
+
+**AssayBench: An Assay-Level Virtual Cell Benchmark for LLMs and Agents** (arXiv 2605.10876, posted 2026-05-11)
+
+A Genentech-led collaboration assembles 1,920 publicly available CRISPR screens across five broad phenotype classes, formulates phenotypic-screen prediction as gene-rank prediction with an adjusted nDCG metric, and lands a counterintuitive headline: zero-shot generalist frontier LLMs beat biology-specific LLMs and trainable baselines. Third or fourth time this pattern has surfaced this year on a serious biomedical benchmark — at some point it stops being a fluke. Actionable corollary: for biomedical agents that rank perturbations/candidates, lean on prompt optimization, fine-tuning, and ensembling rather than a biology-specific backbone. Two caveats: still far from the empirical noise ceiling, and gene-rank-per-screen is one task in the virtual-cell vision, not the whole vision.
+
+Episode: 4:56 (296s), 2.08 MB at `episodes/2026-05-12-assaybench-generalist-llms-virtual-cell-screen.mp3`. Audio published to R2. Feed updated. Commit `b9f533d` pushed to `main`.
+
+## Candidate funnel
+
+**bioRxiv** — 322 unique papers scanned across 2026-05-11/2026-05-12 (full collection paginated through cursor=300; ~328 entries before dedup); 63 keyword hits, ~7 substantive after discarding spurious matches:
+- Talk2QSP — Deriving Executable Scenarios from Unstructured Literature via Human-in-the-Loop Agents — `https://www.biorxiv.org/content/10.64898/2026.05.06.723244v1` (strong agentic-pharmacology match; deferred)
+- A Scalable Sign-Aware Multi-Omics Knowledge Graph Foundation Model (SIGMA-KG / FLASH) — `https://www.biorxiv.org/content/10.64898/2026.04.29.721775v1` (republication; underlying content >2 days old)
+- ConvergeCELL — End-to-end platform from patient transcriptomics to therapeutic hypotheses — `https://www.biorxiv.org/content/10.64898/2026.05.07.723555v1`
+- Lense — Optimizing data preprocessing in single-cell omics using LLMs — `https://www.biorxiv.org/content/10.64898/2026.05.07.723465v1`
+- Autoresearch Discovery of Interpretable Filter Rules for Antibody Binder Classification — `https://www.biorxiv.org/content/10.64898/2026.05.05.723069v1`
+- Susagi — A Microbiome World Model — `https://www.biorxiv.org/content/10.64898/2026.05.07.723428v1`
+- Cadence — Benchmark of Narrative Velocity for Next Clinical Event Prediction in MIMIC-IV — `https://www.biorxiv.org/content/10.64898/2026.05.06.722409v1`
+
+**arXiv** — 200 entries pulled via listing API (one query, no fan-out); 31 strict biomed+agentic survivors after tightening keyword filters; top substantive shortlist:
+- **AssayBench** — Assay-Level Virtual Cell Benchmark for LLMs and Agents — `https://arxiv.org/abs/2605.10876` — **CHOSEN**
+- PrimeKG-CL — Continual Graph Learning Benchmark on Evolving Biomedical Knowledge Graphs — `https://arxiv.org/abs/2605.10529` (strong Su-aligned, deferred)
+- CMKL — Modality-Aware Continual Learning for Evolving Biomedical KGs — `https://arxiv.org/abs/2605.10510` (companion to PrimeKG-CL)
+- AgentRx — Benchmark Study of LLM Agents for Multimodal Clinical Prediction — `https://arxiv.org/abs/2605.10286`
+- Autonomous FAIR Digital Objects — `https://arxiv.org/abs/2605.10370` (open-data + rare-disease ontologies)
+- Hypothesis-Driven Deep Research with LLMs (HDRI/INFOMINER) — `https://arxiv.org/abs/2605.10224`
+- DeepRefine — Agent-Compiled Knowledge Refinement via RL — `https://arxiv.org/abs/2605.10488`
+- Clin-JEPA — Joint-Embedding Predictive Pretraining on EHR Trajectories — `https://arxiv.org/abs/2605.10840`
+- CLEF — EEG Foundation Model for Clinical Semantics — `https://arxiv.org/abs/2605.10817`
+
+**ChemRxiv** — WebSearch-based survey (Cloudflare gates the API from this host); 2 substantive in/near window:
+- Molecular Simulations Assisted by an Artificial Intelligence Agent (ArIA) — May 8, edge of window
+- Large Language Models as Crystallographic Copilots: Path to Agentic Crystallography — May 8, edge of window
+
+**News/products** — May 11/12 surfaced market and review pieces, no fresh biomedical agentic product launch in window; OpenBind first data release (May 6, outside window).
+
+**Policy / funders** — ARPA-H (May 11 impact story on pregnancy drug safety, not AI-agentic); NIH (May 11 hypertrophic cardiomyopathy risk model, May 12 pancreatic islet atlas — neither agentic AI); NSF news page returned empty; HHS press room HTTP 403 from this host (noted as a gap, not material to the pick).
+
+Sources:
+- [AssayBench (arXiv 2605.10876)](https://arxiv.org/abs/2605.10876)
+- [PrimeKG-CL (arXiv 2605.10529)](https://arxiv.org/abs/2605.10529)
+- [Talk2QSP (bioRxiv)](https://www.biorxiv.org/content/10.64898/2026.05.06.723244v1)
+- [ARPA-H news](https://arpa-h.gov/news)
+- [NIH news releases](https://www.nih.gov/news-events/news-releases)
+=== 2026-05-12T08:30:38-07:00 done  biomedical-agentic-ai (exit 0) ===
