@@ -1,0 +1,36 @@
+slug          = "receptor-and-reason"
+title         = "Receptor & Reason"
+description   = "Daily roundup of neuropsychopharmacology, computational pharmacology, and agentic AI in biology."
+host          = "Nigel"
+owner         = "Alan Huebschen <ahuebschen@scripps.edu>"
+podcast_slug  = "receptor-and-reason"
+
+[paths]
+prompt   = "PROMPT.md"
+feed     = "feed.xml"
+episodes = "episodes"
+scripts  = "scripts"
+logs     = "logs"
+
+[rss]
+base_url = "https://github.com/andrewsu/ai-nuggets/raw/main"
+link     = "https://github.com/andrewsu/ai-nuggets"
+
+# TTS providers. Mistral primary + ElevenLabs fallback matches the
+# production recommendation in podcasts/PIPELINE.md and the voice
+# (Paul Neutral / Bella) used by the other shows for cross-show vocal
+# consistency. Supported providers: "mistral", "elevenlabs".
+[tts.primary]
+provider = "mistral"
+model    = "voxtral-mini-tts-2603"
+voice    = "en_paul_neutral"
+
+[tts.fallback]
+provider = "elevenlabs"
+voice    = "hpp4J3VqNfWAUOO0d1Us"
+model    = "eleven_flash_v2_5"
+
+[tts.fallback.settings]
+speed            = 1.1
+stability        = 0.5
+similarity_boost = 0.75
