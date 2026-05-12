@@ -100,22 +100,14 @@ back to plug a 2- or 4-week-old paper is not.
 
 ## Writing for audio
 
-The script will be read aloud — write for the ear, not the eye. Things that
-look fine on a page can be useless or actively annoying when spoken.
+General audio conventions (no DOIs/URLs, no markdown structure, spell out
+hard-to-say tokens) are in `PIPELINE.md`. One show-specific rule:
 
-- **Never read out DOIs, arXiv IDs, or URLs.** They are noise in audio and
-  the link is in the show notes anyway. Drop them entirely from the script.
 - **Don't list authors.** Full author lists ("first author X with co-authors
   Y, Z, W, ...") waste the listener's attention. The last/corresponding
   author is worth naming *only* when it helps the listener anchor the work
   to prior work from that group ("Marinka Zitnik's lab again, after last
   month's..."). Otherwise skip it — the group affiliation alone is fine.
-- **No tables, bullet lists, or markdown structure in the spoken portion.**
-  Use prose with natural transitions ("first", "the second thing", "one
-  caveat").
-- **Spell out or rephrase anything that's hard to say.** Greek letters,
-  unusual symbols, chemical formulas, alphanumeric identifiers — read them
-  the way a human would say them, not the way they're typed.
 
 Once the script is written, follow `PIPELINE.md` to generate audio,
 publish to R2, update the feed, and commit.
