@@ -176,8 +176,8 @@ After the first cron firing, check:
   `=== done (exit 0) ===` markers.
 - `git log -10` — should show new commits from your daily run.
 - `curl -I "https://podcast.<sub>.workers.dev/p/<slug>/u/<listener>/<basename>.mp3"`
-  — 200 (R2 hit) or 302 (GitHub raw fallback) means listener-facing
-  delivery works. 404 means the Worker isn't recognizing the slug.
+  — 200 (R2 hit) means listener-facing delivery works. 404 means either
+  the Worker isn't recognizing the slug or the R2 upload didn't land.
 
 ## 8. Listener analytics
 
@@ -208,10 +208,9 @@ the dashboard.
 - **Worker returns 404 for a known slug.** The slug isn't in
   `ALLOWED_PODCASTS` or you forgot to redeploy after editing
   `wrangler.toml`. `cd worker && npm run deploy` again.
-- **mp3 in feed but Worker can't find it.** Either the R2 upload
-  failed silently (re-run `scripts/publish_episode.sh <slug> <basename>`)
-  or, while mp3s are still committed to git as a fallback, the GitHub
-  raw URL doesn't match your fork (recheck `GITHUB_REPO_RAW`).
+- **mp3 in feed but Worker returns 404.** The R2 upload failed silently —
+  re-run `scripts/publish_episode.sh <slug> <basename>`. There is no
+  fallback to GitHub raw; the mp3 must be in R2.
 
 ## Where to go next
 

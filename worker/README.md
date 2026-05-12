@@ -117,13 +117,10 @@ for trends across months/years.
 
 ## Storage
 
-The Worker tries R2 first (binding `BUCKET`, bucket `ai-nuggets-episodes`,
-key `podcasts/<slug>/episodes/<ep>.mp3`) and serves the bytes directly with
-Range support. If the object isn't in R2, it falls back to a 302 against
-`${GITHUB_REPO_RAW}/podcasts/<slug>/episodes/<ep>.mp3` so we can migrate
-one show at a time without touching `feed.xml`.
+The Worker serves mp3s directly from R2 (binding `BUCKET`, bucket
+`ai-nuggets-episodes`, key `podcasts/<slug>/episodes/<ep>.mp3`) with Range
+support. Missing objects return 404 — mp3s are no longer committed to git,
+so there is no fallback.
 
 Upload new episodes with `scripts/publish_episode.sh <slug> <basename>`
-from the repo root (the daily cron prompts already do this). Once every
-new episode is in R2 and old episodes are backfilled, mp3s can be excluded
-from git and the GitHub raw fallback becomes dead code.
+from the repo root (the daily cron prompts already do this).
