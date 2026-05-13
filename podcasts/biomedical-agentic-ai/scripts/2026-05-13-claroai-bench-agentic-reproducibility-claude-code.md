@@ -1,6 +1,6 @@
 # 2026-05-13 — ClaroAI-Bench: a benchmark for AI agents reproducing real NIH-funded biomedical papers — and Claude Code clears sixty percent
 
-Paper link: https://www.biorxiv.org/content/10.1101/2026.05.08.723611v1
+Paper link: https://www.biorxiv.org/content/10.64898/2026.05.08.723611v1
 
 ## Script
 
