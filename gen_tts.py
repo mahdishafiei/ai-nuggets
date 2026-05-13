@@ -21,6 +21,7 @@ MISTRAL_CHUNK_RETRIES times. Aborts non-zero if a chunk still fails.
 import argparse
 import base64
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -66,12 +67,28 @@ def load_env():
     return env
 
 
+# Spellings the TTS mispronounces. Replaced before synthesis so both Mistral and
+# ElevenLabs say them correctly. "archive" / "med-archive" / "bio-archive" are
+# the phonetic forms; the TTS already pronounces these naturally.
+PRONUNCIATION_SUBS = [
+    (re.compile(r"\bbiorxiv\b", re.IGNORECASE), "bio-archive"),
+    (re.compile(r"\bmedrxiv\b", re.IGNORECASE), "med-archive"),
+    (re.compile(r"\barxiv\b", re.IGNORECASE), "archive"),
+]
+
+
+def apply_pronunciation_subs(text):
+    for pattern, replacement in PRONUNCIATION_SUBS:
+        text = pattern.sub(replacement, text)
+    return text
+
+
 def extract_script_body(path):
     text = open(path).read()
     if "## Script" in text:
         text = text.split("## Script", 1)[1]
     lines = [l for l in text.strip().split("\n") if not l.strip().startswith("Paper link:")]
-    return "\n".join(lines).strip()
+    return apply_pronunciation_subs("\n".join(lines).strip())
 
 
 def chunk_text(text, max_chars):
