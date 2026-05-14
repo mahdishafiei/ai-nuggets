@@ -85,19 +85,30 @@ day unless the lower-tier item is dramatically more novel/important.
 Secondary priority.
 
 1. **arXiv** — last 7 days, categories cs.AI, cs.CL, cs.MA, q-bio.QM,
-   q-bio.NC. Use the listing API for date-bounded enumeration, not
-   `site:arxiv.org` web search (multi-day indexing lag):
-   ```
-   curl 'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.MA+OR+cat:q-bio.QM+OR+cat:q-bio.NC&sortBy=submittedDate&sortOrder=descending&max_results=400'
-   ```
-   Use `https://` directly — `http://` 301-redirects and inflates the
-   request count.
+   q-bio.NC.
+   - **Read the shared daily cache first:** `/tmp/ai-nuggets-arxiv-cache.xml`.
+     The runner pre-fetches the arXiv listing API once per day for the
+     category union of every show, so individual shows don't need to hit
+     arXiv themselves. The cache uses the `q-bio` supercategory, which
+     subsumes q-bio.QM and q-bio.NC. Filter the cached Atom feed for
+     submissions in the last 7 days AND biological/biomedical relevance
+     AND agentic/LLM/multi-agent/autonomous keywords in title or abstract.
+   - **If the cache is missing or empty** (runner pre-fetch failed), fall
+     back to a live listing call:
+     ```
+     curl 'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.MA+OR+cat:q-bio.QM+OR+cat:q-bio.NC&sortBy=submittedDate&sortOrder=descending&max_results=400'
+     ```
+     Use `https://` directly — `http://` 301-redirects and inflates the
+     request count.
    - **arXiv rate limit: 1 request per 3 seconds, hard.** A single
      OR'd query is enough — don't fan out per category. If a second
      arXiv call is genuinely needed, `sleep 4` between calls.
-   - Filter the returned Atom feed for submissions within the last 7
-     days AND biological/biomedical relevance AND
-     agentic/LLM/multi-agent/autonomous keywords in title or abstract.
+     Receptor-and-reason runs after biomedical-agentic-ai, so the IP
+     may already be in a cool-down window — assume 429 is likely.
+   - If the live API 429s, one 60s-backoff retry, then one 120s-backoff
+     retry. If it still 429s, fall back to `site:arxiv.org` web search
+     for the same 7-day window. Indexing lag means you'll miss the
+     freshest submissions, but it beats dropping arXiv entirely.
 
 2. **bioRxiv bioinformatics + systems biology** — last 7 days. Same
    API + pagination rules as Tier 1 bioRxiv.
