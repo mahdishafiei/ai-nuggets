@@ -45,8 +45,13 @@ the gap in the funnel, ship the day's episode.
      lag in general search is multi-day.
 2. **arXiv** — recent papers in cs.AI, cs.CL, q-bio, cs.MA with
    biomedical/scientific relevance.
-   - Use the listing API for date-bounded enumeration, not `site:arxiv.org`
-     web search (which has multi-day indexing lag for fresh submissions):
+   - **Read the shared daily cache first:** `/tmp/ai-nuggets-arxiv-cache.xml`.
+     The runner pre-fetches the arXiv listing API once per day for the
+     category union of every show, so individual shows don't need to hit
+     arXiv themselves. Filter the cached Atom feed for submissions within
+     the last 2 days and biomedical relevance.
+   - **If the cache is missing or empty** (runner pre-fetch failed), fall
+     back to a live listing call:
      `curl 'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:q-bio+OR+cat:cs.MA&sortBy=submittedDate&sortOrder=descending&max_results=200'`
      Use `https://` directly — `http://` 301-redirects and inflates the
      request count, which has triggered 429s in past runs.
@@ -55,11 +60,10 @@ the gap in the funnel, ship the day's episode.
      per-keyword. If a second arXiv call is genuinely needed, `sleep 4`
      between calls. Bursting trips a temporary IP block that bleeds into
      the next run.
-   - Filter the returned Atom feed for submissions within the last 2 days
-     and biomedical relevance.
-   - If the API still 429s after one retry, fall back to `site:arxiv.org`
-     web search for the same window. Indexing lag means you'll miss
-     same-day submissions, but it beats dropping arXiv entirely.
+   - If the live API 429s, one 60s-backoff retry; if it still 429s, fall
+     back to `site:arxiv.org` web search for the same window. Indexing
+     lag means you'll miss same-day submissions, but it beats dropping
+     arXiv entirely.
 3. **ChemRxiv** — recent preprints (last 2 days) relevant to biomedical
    AI agents. Use WebSearch with `site:chemrxiv.org` plus a relevance
    keyword (e.g., `site:chemrxiv.org agent 2026`); the public API is

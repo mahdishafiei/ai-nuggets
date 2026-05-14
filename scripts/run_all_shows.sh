@@ -18,6 +18,23 @@ if [ ! -f "$PIPELINE" ]; then
   exit 1
 fi
 
+# Pre-fetch arXiv listing once for the whole run so multiple shows don't
+# burst the same IP and trip a tarpit. The category union covers every
+# show's needs (cs.AI, cs.CL, cs.MA, q-bio supercategory). Each show's
+# PROMPT.md tells Claude to read from this cache instead of curling arXiv.
+# Stable path so prompts don't need to embed today's date; we refresh it
+# when its mtime is older than today's local midnight.
+ARXIV_CACHE=/tmp/ai-nuggets-arxiv-cache.xml
+if [ -z "$(find "$ARXIV_CACHE" -newermt "$(date +%F)" 2>/dev/null)" ]; then
+  rm -f "$ARXIV_CACHE"
+  curl -s --max-time 90 \
+    -A 'ai-nuggets/1.0 (https://github.com/andrewsu/ai-nuggets)' \
+    'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.MA+OR+cat:q-bio&sortBy=submittedDate&sortOrder=descending&max_results=500' \
+    -o "$ARXIV_CACHE.tmp" \
+    && mv "$ARXIV_CACHE.tmp" "$ARXIV_CACHE" \
+    || rm -f "$ARXIV_CACHE.tmp"
+fi
+
 for prompt in podcasts/*/PROMPT.md; do
   [ -f "$prompt" ] || continue
   slug=$(basename "$(dirname "$prompt")")
