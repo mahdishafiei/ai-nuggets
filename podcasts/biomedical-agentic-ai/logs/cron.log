@@ -653,3 +653,27 @@ Episode shipped. Summary:
 Commit `b9ffc1c` pushed to main.
 === 2026-05-13T04:06:19-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-14T04:00:03-07:00 start biomedical-agentic-ai ===
+Episode shipped. 309s mp3 published to R2, feed updated, commit pushed (`961cf3a`).
+
+## Candidate funnel — 2026-05-14
+
+**Sources surveyed:**
+- **bioRxiv** (details API, 2026-05-13–2026-05-14 window): 440 unique papers across 12 paginated pulls; 16 keyword-matching titles; 7 substantive after discarding spurious "agent" matches (chemical agent, agent-based ABM simulation, agent of disease).
+- **arXiv** (listing API, cs.AI/cs.CL/q-bio/cs.MA, max_results=200): rate-limited (429) twice — first retry after 8s also 429, second after 45s also 429, third after 60s succeeded. 200 entries returned; 145 with broad keyword hit in the last-2-day window; 13 after tight biomedical+agent filter.
+- **ChemRxiv** (WebSearch fallback): nothing dated 2026-05-13 or 2026-05-14; recent agentic-chemistry items predate the window.
+- **News / product launches / Nature / Science** (WebSearch): no 2026-05-13–14-dated agentic-biomedical announcements; CLYTE Soφ 4.0 (2026-05-11) and Oncotarget editorial (2026-05-04) outside window.
+- **ARPA-H / NIH / NSF / HHS press pages** (WebFetch): no 2026-05-13–14 news items; ARPA-H IGoR (2026-05-05) and hearing-restoration program (2026-05-07) outside window; NIH most recent is 2026-05-12 (pancreatic islet cell mapping, non-AI).
+
+**Substantive shortlist:**
+- bioRxiv | MechAInistic: An LLM-guided Multi-Agent System for Reasoning over Genome-Scale Constraint-Based Metabolic Models — https://www.biorxiv.org/content/10.64898/2026.05.11.723319v1 ← **chosen**
+- bioRxiv | Genomic Foundation Models Reveal Chromatin-Domain-Scale Transposable Element Impacts on Rice Genome Architecture — https://www.biorxiv.org/content/10.64898/2026.05.11.724192v1 (foundation model, not agentic; non-mammalian)
+- bioRxiv | xNNPCD identifies regulators of programmed cell death — https://www.biorxiv.org/content/10.64898/2026.05.10.724150v1 (interpretable NN, not agentic)
+- bioRxiv | BRIDGE: disease-guided functional gene mapping across species — https://www.biorxiv.org/content/10.64898/2026.05.10.720506v1 (rank-integration method, not agentic)
+- bioRxiv | SpaRank — transferable spatial omics deconvolution — https://www.biorxiv.org/content/10.64898/2026.05.09.723936v1 (method, not agentic)
+- arXiv | OpenAaaS: Open Agent-as-a-Service Framework for Distributed Materials-Informatics Research — https://arxiv.org/abs/2605.13618 (agentic but materials-science, not biomedical)
+- arXiv | RealICU: Do LLM Agents Understand Long-Context ICU Data? — https://arxiv.org/abs/2605.13542 (strong but narrower clinical-ICU scope)
+- arXiv | An Agentic LLM-Based Framework for Population-Scale Mental Health Screening — https://arxiv.org/abs/2605.13046 (narrower public-health screening scope)
+- arXiv | Multi-Agent Systems in Emergency Departments: ED Digital Twin Validation — https://arxiv.org/abs/2605.13345 (DES+ABM, not LLM-agentic)
+
+**Why MechAInistic won:** LLM-driven multi-agent system orchestrating real mechanistic (constraint-based metabolic) modeling with concrete drug-repurposing outputs on paired RA and MS disease/control models, hosted live at mechainistic.dtih.org, Architect-Reviewer pattern with deterministic solver underneath. Canonical agentic-biomedical-AI shape and thematically distinct from the last two weeks of shipped episodes (clinical reproducibility, virtual-cell screen, multi-turn clinical reasoning, agent infrastructure, behavioral agent eval, KG-RAG, gene prioritization, protein design).
+=== 2026-05-14T04:11:24-07:00 done  biomedical-agentic-ai (exit 0) ===

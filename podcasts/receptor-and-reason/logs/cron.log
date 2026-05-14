@@ -58,3 +58,52 @@ Tier 3 (computational pharmacology / industry):
 
 Tier 4 (seminal fallback) **not** activated — Tiers 1–3 cleared the 8-item floor (10 items shipped).
 === 2026-05-13T04:37:16-07:00 done  receptor-and-reason (exit 0) ===
+=== 2026-05-14T04:27:28-07:00 start receptor-and-reason ===
+Receptor & Reason 2026-05-14 shipped. Audio = 14m24s, 6.16 MB. Feed validates. R2 upload OK. Dedup ledger appended. Pushed to main as `ffcb854`.
+
+## Candidate funnel
+
+**Source-level outcome:**
+- bioRxiv (Tier 1 + Tier 2/3 neuropharm/bioinformatics): 1794 items pulled across 60 paginated calls, 7-day window (2026-05-07 → 2026-05-14). 205 matched the focused neuropsych/pharm/agentic-AI keyword filter.
+- arXiv (cs.AI / cs.CL / cs.MA / q-bio.QM / q-bio.NC): **HARD-BLOCKED from this IP with "Rate exceeded" responses across four retries with increasing backoffs (3s, 12s, 20s, 30s+) and a polite User-Agent. Proceeding per pipeline rules; logged the gap.**
+- Journal channels (Nature group, etc.): WebFetch blocked by Nature SSO/IDP redirects; Google site-search backfilled to surface 2 candidate items (cannabis longitudinal neurocog in NPP, NMDAR-ablation prefrontal synaptic dysfunction in NPP) — neither beat today's shortlist.
+- Psychiatric Times: 3 items in window — Fasedienol PALISADE-3 failure piece (selected, mapped to Vistagen primary-source May 12 OLE announcement); GLP-1 mental health outcomes editorial; bupropion-tinnitus case report.
+
+**Substantive shortlist (post-dedup, alphabetical):**
+
+- Acute inflammation attenuates METH sensitization via COX-2 / TNF-α — bioRxiv 2026-05-12
+- Benchmarking LLM agents for protein design (BioDesignBench) — bioRxiv 2026-05-08
+- Cannabidiol neuroprotection against 6-OHDA via Nrf2 — bioRxiv 2026-05-11
+- Cell-Level Virtual Screening — bioRxiv 2026-05-13 **[CHOSEN]**
+- Cerebellar-VTA VGLUT2 in chronic-stress depression — bioRxiv 2026-05-08 **[CHOSEN]**
+- Chemogenetic CoA inhibition reduces alcohol intake in dependent female mice — bioRxiv 2026-05-12
+- Cholinergic modulation of reinforcement learning (biperiden MEG) — bioRxiv 2026-05-08
+- Cortical stim strength × sgACC connectivity in prefrontal TMS — bioRxiv 2026-05-13
+- D3R subtype defines aversive effects of quetiapine — bioRxiv 2026-05-10 **[CHOSEN]**
+- Dehydrozingerone mitigates cranial-irradiation cognitive deficits — bioRxiv 2026-05-11
+- Demonstrating GABAergic zona-incerta motivation modulation — bioRxiv 2026-05-13
+- Developmental bioenergetic / glycolytic shift in schizophrenia vulnerability — bioRxiv 2026-05-11
+- Dopamine vesicles override SV-size constraints — bioRxiv 2026-05-13
+- Dual GLP-1/FGF21 agonism suppresses voluntary alcohol — bioRxiv 2026-05-10 **[CHOSEN]**
+- ECS drives cortical-spreading-depression-dependent IEG expression — bioRxiv 2026-05-10
+- EEG microstates under psilocybin microdosing + DMT — bioRxiv 2026-05-08
+- Fasedienol PALISADE-3 OLE preliminary positive — Vistagen / Psychiatric Times 2026-05-12 **[CHOSEN]**
+- FragDockRL fragment-based RL ligand design — bioRxiv 2026-05-13
+- Generative chemistry platform for RNA-targeting small molecules (Serna Bio) — bioRxiv 2026-05-12
+- GluD as ionotropic dopamine receptor — bioRxiv 2026-05-13 **[CHOSEN — OPENER]**
+- HANG-AB3L three-layered agent-based hippocampal neurogenesis model — bioRxiv 2026-05-12
+- LSD persistently disrupts affective pain in ACC — bioRxiv 2026-05-11 **[CHOSEN]**
+- NTSR1 biased agonism (SBI-553) in extended amygdala feeding — bioRxiv 2026-05-10 **[CHOSEN]**
+- OCD tendencies shift habitual vs goal-directed balance — bioRxiv 2026-05-11
+- Open-Rosalind tool-first bio-LLM agents + BioBench — bioRxiv 2026-05-08 **[CHOSEN]**
+- Para-subthalamic-nucleus DBS-target molecular cartography — bioRxiv 2026-05-11
+- PK-driven QSP model of cytokine release syndrome — bioRxiv 2026-05-08
+- Plasma proteomics defines three depression subtypes — bioRxiv 2026-05-08
+- Ramelteon facilitates hippocampal ripples — bioRxiv 2026-05-12 **[CHOSEN — CLOSER]**
+- Sex-dependent Grin1 KO in ALDH1A1+ DA neurons — bioRxiv 2026-05-11
+- Spatiotemporally dynamic noradrenergic regulation of cortex — bioRxiv 2026-05-13
+- Tianeptine opioid-receptor mediated beta oscillations / memory — bioRxiv 2026-05-13
+- Zero-shot LLM reasoning reproduces CRISPR synthetic-lethality predictions — bioRxiv 2026-05-11
+
+10 items chosen, all within the 7-day recency window; no Tier 4 fallback needed. Dedup ledger excluded 8 items previously shipped on 2026-05-13. ClaroAI-Bench (shipped in biomedical-agentic-ai feed, not in this show) was set aside in favor of Open-Rosalind to keep the agentic-AI block fresh.
+=== 2026-05-14T04:48:57-07:00 done  receptor-and-reason (exit 0) ===
