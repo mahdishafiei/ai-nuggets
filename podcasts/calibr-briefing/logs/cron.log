@@ -229,3 +229,6 @@ Both episodes shipped for Wednesday, May 13, 2026.
 
 Commit `7a1fc01` pushed to origin/main.
 === 2026-05-13T04:14:24-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-05-14T04:11:24-07:00 start calibr-briefing ===
+The background wrangler-lookup task completed; its results were already incorporated when I switched to the NVM-based PATH for the R2 publish step. Today's run is fully done — both episodes are pushed, audio is in R2, feed is updated.
+=== 2026-05-14T04:27:28-07:00 done  calibr-briefing (exit 0) ===
