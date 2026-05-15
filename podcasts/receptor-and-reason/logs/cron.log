@@ -108,3 +108,63 @@ Receptor & Reason 2026-05-14 shipped. Audio = 14m24s, 6.16 MB. Feed validates. R
 10 items chosen, all within the 7-day recency window; no Tier 4 fallback needed. Dedup ledger excluded 8 items previously shipped on 2026-05-13. ClaroAI-Bench (shipped in biomedical-agentic-ai feed, not in this show) was set aside in favor of Open-Rosalind to keep the agentic-AI block fresh.
 === 2026-05-14T04:48:57-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-15T04:18:55-07:00 start receptor-and-reason ===
+Episode 3 shipped: 14:53 mp3, pushed to main, uploaded to R2, feed updated, dedup ledger appended.
+
+## Candidate funnel — 2026-05-15
+
+**Tier 1 — bioRxiv neuroscience / pharmacology and toxicology (7-day window 2026-05-08 to 2026-05-15):**
+- 985 total items pulled, 958 unique after dedup; 26 strong-pharm-signal hits after CNS-pharm keyword filter.
+- Shortlist (substantive, post spurious-match filter):
+  - The role of opioid receptors in tianeptine-induced beta oscillations and memory enhancement — bioRxiv 2026-05-13 — **chosen (item 2)**
+  - Ultrasound-mediated focal serotonin delivery causally modulates motivation in primates — bioRxiv 2026-05-14 — **chosen (item 8)**
+  - The Central Nucleus of the Amygdala Encodes the Motivation to Pursue Ethanol — bioRxiv 2026-05-14
+  - Chemogenetic Inhibition of the Cortical Amygdala Reduces Alcohol Intake and Restores Thalamic Connectivity — bioRxiv 2026-05-12
+  - Activation by statins unveils two putative agonist binding sites in the pore domain of TRPA1 — bioRxiv 2026-05-12
+  - Acute inflammation-mediated attenuation of behavioural sensitization in methamphetamine-sensitized mice via distinct COX-2 and TNF-α pathways — bioRxiv 2026-05-12
+  - Differential efficacy of α5IA in the Dp(16)1Yey mouse model of Down syndrome — bioRxiv 2026-05-14
+  - Spatiotemporally dynamic noradrenergic regulation of cortical networks — bioRxiv 2026-05-13
+  - Spatial and temporal changes in JNJ-64413739 binding to P2X7R after status epilepticus — bioRxiv 2026-05-14
+  - Maternal high-fat diet drives sex-specific microglia remodeling of serotonergic reward circuits — bioRxiv 2026-05-13
+  - Reduction of Nav1.1 in dorsal striatum preferentially increases hyperthermia-induced seizures — bioRxiv 2026-05-14
+  - Polo-like kinase 1 controls activation of adult neural stem cells — bioRxiv 2026-05-14
+  - Reversible in vivo regulation of CYP1A2 activity through a dTAG knock-in strategy — bioRxiv 2026-05-12
+  - Cyclic Peptides Target CAPON and Modulate Cellular Responses under Alzheimer's Stress — bioRxiv 2026-05-13
+
+**Tier 1 — journals (last 7 days):**
+- Neuropsychopharmacology (Nature): 8 items, May 5–14. Shortlist:
+  - Acute fentanyl induces opposing directions of changes in tonic and phasic dopamine release — 2026-05-14 — **chosen (item 1)**
+  - Computational phenotyping of effort-based decision-making in T2D on/off semaglutide — 2026-05-06 — **chosen (item 9)**
+  - Traumatic stress recruits an excitatory orbitofrontal–amygdala pathway to drive maladaptive aggression — 2026-05-06
+  - Sex-specific role of microglia in Δ9-THC-induced disruption of fear memory reconsolidation — 2026-05-09
+  - PET imaging of FAAH in chronic Cannabis users — 2026-05-09
+  - Prenatal SRI exposure and fetal brain/placental development — 2026-05-09
+- Molecular Psychiatry: 8 items, May 12–14. Shortlist:
+  - How muscle talks to brain: apelin protein mediates exercise-induced antidepressant effects — 2026-05-14 — **chosen (item 3)**
+  - Nitrous oxide controls the DCN to VTA dopamine circuit by enhancing AMPA receptor functions — 2026-05-13 — **chosen (item 4)**
+  - Grin2a knockout in adolescent dopamine neurons disrupts prediction error signaling — 2026-05-13 — **chosen (item 5)**
+  - Genetic architecture of postpartum psychosis — 2026-05-14
+  - Sphingolipids in MDD and associated cognitive impairment — 2026-05-13
+  - Maternal fasting during early gestation and schizophrenia-related phenotypes — 2026-05-13
+  - Thalamo-cortical white matter connectivity and individual delay discounting — 2026-05-13
+- Biological Psychiatry articles-in-press: not surveyed in detail (search-result-only access; logging gap).
+
+**Tier 1 — Psychiatric Times (week of May 8–14):**
+- Lumateperone Ranks Highest Among Adjunctive MDD Therapies in First NMA — **chosen (item 6)**
+- FDA Clears Clinical Trial of NRX-101 in Combination with Robotic-Enabled TMS — **chosen (item 7)**
+- Psychiatry's Medication Pipeline in Motion — covered indirectly via lumateperone and NRX-101 items
+- Antidepressant Use in Pregnancy & Autism/ADHD — no clear link
+
+**Tier 2 — arXiv:**
+- Cache empty (rate exceeded earlier in the day, 14-byte file). One live call retried after 60s (HTTP 429) and 120s backoffs — third attempt succeeded with 400 entries. After bio+agentic filtering: 20 strong items. Most were generic LLM/clinical, none compelling enough to displace Tier 1 picks. Notable: ProtoMedAgent (clinical interpretability), SepsisAgent (ICU world model), Bounded-rationality drug-shortage pharmacist model — none lead-tier for this audience this week.
+
+**Tier 2 — bioRxiv bioinformatics + systems biology:**
+- BiomniBench — already shipped in calibr/biomedical-agentic-ai feeds this week (dedup)
+- MechAInistic: LLM-guided multi-agent reasoning over genome-scale metabolic models — not chosen (metabolic-modeling focus, less neuro/pharm)
+- ClaroAI-Bench — shipped earlier this week (dedup)
+- Do Larger Models Really Win in Drug Discovery? — strong contrarian benchmark, runner-up
+- Simpatico atomic-embedding virtual screening — bioRxiv 2026-05-13 — **chosen (item 10)**
+
+**Tier 3 — chemRxiv / industry:** not separately surveyed (Cloudflare-gated; covered by lumateperone press and NRX-101 FDA clearance items above).
+
+**Source failures logged:** arXiv pre-fetch cache empty for this run (14 bytes only); live API hit rate limits twice before succeeding on the 120s-backoff retry. No items dropped — arXiv was surveyed live and contributed no picks this week regardless. Biological Psychiatry articles-in-press content was not retrievable through search.
+=== 2026-05-15T04:38:35-07:00 done  receptor-and-reason (exit 0) ===
