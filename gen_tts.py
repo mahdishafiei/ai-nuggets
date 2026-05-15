@@ -107,18 +107,30 @@ def chunk_text(text, max_chars):
 
 
 def stitch(parts, output):
-    if len(parts) == 1:
-        open(output, "wb").write(parts[0])
-        return
+    # Mistral's voxtral TTS doesn't normalize loudness across an utterance and
+    # occasionally drops 15-25 dB through a paragraph. We always run a final
+    # ffmpeg pass: dynaudnorm smooths within-file drift, loudnorm targets EBU
+    # R128 podcast loudness (-16 LUFS integrated, -1 dBTP peak).
     with tempfile.TemporaryDirectory() as tmp:
-        manifest = os.path.join(tmp, "list.txt")
-        with open(manifest, "w") as mf:
-            for j, part in enumerate(parts):
-                pp = os.path.join(tmp, f"part{j}.mp3")
-                open(pp, "wb").write(part)
-                mf.write(f"file '{pp}'\n")
+        if len(parts) == 1:
+            raw = os.path.join(tmp, "raw.mp3")
+            open(raw, "wb").write(parts[0])
+        else:
+            manifest = os.path.join(tmp, "list.txt")
+            raw = os.path.join(tmp, "raw.mp3")
+            with open(manifest, "w") as mf:
+                for j, part in enumerate(parts):
+                    pp = os.path.join(tmp, f"part{j}.mp3")
+                    open(pp, "wb").write(part)
+                    mf.write(f"file '{pp}'\n")
+            subprocess.run(
+                ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", manifest, "-c", "copy", raw],
+                check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+            )
         subprocess.run(
-            ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", manifest, "-c", "copy", output],
+            ["ffmpeg", "-y", "-i", raw,
+             "-af", "dynaudnorm=f=200:g=15,loudnorm=I=-16:TP=-1:LRA=11",
+             "-ac", "1", "-ar", "22050", "-b:a", "64k", output],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
         )
 
