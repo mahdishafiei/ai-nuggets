@@ -677,3 +677,4 @@ Episode shipped. 309s mp3 published to R2, feed updated, commit pushed (`961cf3a
 
 **Why MechAInistic won:** LLM-driven multi-agent system orchestrating real mechanistic (constraint-based metabolic) modeling with concrete drug-repurposing outputs on paired RA and MS disease/control models, hosted live at mechainistic.dtih.org, Architect-Reviewer pattern with deterministic solver underneath. Canonical agentic-biomedical-AI shape and thematically distinct from the last two weeks of shipped episodes (clinical reproducibility, virtual-cell screen, multi-turn clinical reasoning, agent infrastructure, behavioral agent eval, KG-RAG, gene prioritization, protein design).
 === 2026-05-14T04:11:24-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-15T04:00:14-07:00 start biomedical-agentic-ai ===
