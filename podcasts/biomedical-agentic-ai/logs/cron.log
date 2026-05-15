@@ -678,3 +678,20 @@ Episode shipped. 309s mp3 published to R2, feed updated, commit pushed (`961cf3a
 **Why MechAInistic won:** LLM-driven multi-agent system orchestrating real mechanistic (constraint-based metabolic) modeling with concrete drug-repurposing outputs on paired RA and MS disease/control models, hosted live at mechainistic.dtih.org, Architect-Reviewer pattern with deterministic solver underneath. Canonical agentic-biomedical-AI shape and thematically distinct from the last two weeks of shipped episodes (clinical reproducibility, virtual-cell screen, multi-turn clinical reasoning, agent infrastructure, behavioral agent eval, KG-RAG, gene prioritization, protein design).
 === 2026-05-14T04:11:24-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-15T04:00:14-07:00 start biomedical-agentic-ai ===
+Shipped today's episode. Summary:
+
+**Pick: BiomniBench** (bioRxiv 2026-05-14, Stanford / Phylo — Leskovec & Huang, the Biomni team) — process-level evaluation framework for biomedical LLM agents. 100 data-analysis tasks across 17 task types and 5 disease areas, each grounded in a Nature/Cell/Science paper and co-developed with an original author. Three findings: frontier models lead but headroom remains; agent harness shifts scores as much as base model; agents recurrently fail on method selection, biological interpretation, and scientific reasoning. Pairs cleanly with the May 10 BiomedArena episode (outcome-level eval) as the process-level counterpart.
+
+**Candidate funnel**
+
+- bioRxiv (paginated 0→600, 666 total / 210 unique scanned): 8 keyword hits
+  - BiomniBench — process-level LLM agent eval, 2026-05-14 → **CHOSEN**
+  - OmniGene-4 — bio-language MoE foundation model w/ router interpretability, 2026-05-14 → strong but representation-learning not agentic
+  - Bayesian-Steered Structure Prediction (twisted diffusion) — DL not LLM/agent
+  - Synthetic MR perfusion / Generative Neural Engine / DeSpotX / weak-interaction methylation model / Explainable manifold networks — relevance keyword match but not agentic-AI
+- arXiv: prefetch cache returned `Rate exceeded` (14 bytes); live retry also 429. Recorded as gap; bioRxiv pick was strong enough that the missing arXiv day didn't change the call.
+- ChemRxiv: web search returned 2024–2025 priors only, no fresh agentic-biomedical hits in window.
+- News / policy (NIH news, ARPA-H news, general "biomedical agentic AI May 2026" search): no fresh May 13–15 announcements in scope. BioMedAgent (Nature BME) noted but published 2026-03-30, outside window.
+
+Episode mp3 (191s, 1.39 MB) uploaded to R2 and feed updated. Pushed to main.
+=== 2026-05-15T04:06:21-07:00 done  biomedical-agentic-ai (exit 0) ===
