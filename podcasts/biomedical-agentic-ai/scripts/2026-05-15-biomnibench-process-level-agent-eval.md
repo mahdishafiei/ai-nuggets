@@ -1,6 +1,6 @@
 # BiomniBench — Process-Level Evaluation of Biomedical Research Agents
 
-Paper link: https://www.biorxiv.org/content/10.1101/2026.05.12.724604v1
+Paper link: https://www.biorxiv.org/content/10.64898/2026.05.12.724604v1
 
 ## Script
 
