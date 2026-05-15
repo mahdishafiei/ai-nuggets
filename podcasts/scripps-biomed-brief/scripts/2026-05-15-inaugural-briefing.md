@@ -1,23 +1,26 @@
 # Scripps Biomedical Brief: Inaugural Briefing
 
+## Show notes
+
+- Tessera Therapeutics ASGCT 2026 in vivo gene editing data (Endpoints): https://endpoints.news/tessera-reveals-strongest-data-yet-for-in-vivo-sickle-cell-therapy/
+- FDA approval of vepdegestrant (Veppanu), first PROTAC: https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-vepdegestrant-er-positive-her2-negative-esr1-mutated-advanced-or-metastatic-breast
+- Joseph et al., "More than an attachment module: covalent inhibitor warheads influence BTK dynamics and function" (bioRxiv, posted May 8, 2026): https://www.biorxiv.org/content/10.64898/2026.05.07.723540v1
+- OpenAI, "Introducing GPT-Rosalind for life sciences research": https://openai.com/index/introducing-gpt-rosalind/
+
 ## Script
 
-Good morning, Pete. This is your inaugural Scripps Biomedical Brief for May 15, 2026. Today, we’re looking at major shifts in therapeutic modalities and the scaling of AI-driven drug design.
+Good morning, Pete. This is your Scripps Biomedical Brief for Friday, May 15. Four stories today, all pointing in one direction: the modalities and tools we use to make medicines are getting much more programmable.
 
-### Isomorphic Labs Scales AI Drug Design with $2.1 Billion Boost
-Isomorphic Labs has secured a massive $2.1 billion funding round to scale its AI-driven drug design engine. This move signals a transition from experimental AI applications to industrial-scale therapeutic discovery. For Scripps, this underscores the increasing necessity of integrating deep learning models like AlphaFold-3 into the earliest stages of target validation and lead optimization. The focus is now on moving beyond simple protein folding to predicting complex multi-component molecular interactions.
-[Source: BioSpace](https://www.biospace.com/press-releases/isomorphic-labs-secures-2-1-billion-funding-to-scale-its-ai-drug-design-engine)
+### In vivo gene editing crosses a credibility threshold at ASGCT
+At the American Society of Gene and Cell Therapy meeting in Boston this week, Tessera Therapeutics reported the strongest preclinical package yet for their RNA Gene Writer platform delivered systemically inside targeted lipid nanoparticles. In their sickle cell program, a single intravenous infusion edited roughly 85 percent of circulating blood cells in the disease model, with durable long-term hematopoietic stem cell editing in the 40 to 60 percent range and peak rewriting efficiency near 76 percent in non-human primates out to 84 days. They also showed the first permanent CAR transgene integration in primates from a single dose of a T-cell-directed LNP, expanding to about 60 percent of circulating T cells and clearing B cells in blood and lymph nodes. No apheresis, no busulfan, no ex vivo manufacturing. The chemical biology lift here is the targeted LNP itself: roughly 52-fold higher bone marrow than liver biodistribution, inverting the natural liver tropism of conventional ionizable particles. If this generalizes, in vivo replaces autologous transplant as the default cell therapy chassis.
 
-### Advancing ADCs: New Payloads and Resistance Modeling
-At the recent AACR 2026 meeting, the focus on Antibody-Drug Conjugates has shifted toward next-generation payloads and sophisticated resistance modeling. New integrated platforms are enabling better target validation for ADCs, particularly in overcoming traditional resistance mechanisms in solid tumors. This aligns with the ongoing work at Scripps and Calibr in refining linker technologies and exploring novel cytotoxic payloads that can be precisely delivered to the tumor microenvironment.
-[Source: Crown Bioscience](https://www.crownbio.com/about-us/news-and-events/aacr-2026-crown-bioscience-showcases-integrated-platforms-enabling-next-generation-oncology-modalities-including-adcs-and-radiopharmaceuticals)
+### The first PROTAC has cleared the FDA
+On May 1, the agency approved Arvinas and Pfizer's vepdegestrant, branded Veppanu, for ESR1-mutated, ER-positive, HER2-negative advanced breast cancer after at least one prior endocrine line. In the VERITAC-2 randomized trial, median progression-free survival was 5 months versus 2.1 months on fulvestrant, with a hazard ratio of 0.57 and an objective response rate of 19 percent versus 4. It is the first heterobifunctional protein degrader, anywhere, to earn an approval. Two things matter beyond the label. Vepdegestrant is oral, once daily; fulvestrant is intramuscular and only partially degrades the receptor. And induced proximity now has a regulatory blueprint, which directly de-risks every molecular glue and degrader program in the Scripps and Calibr portfolios.
 
-### ARPA-H Launches IGoR for AI-Enabled Research Ecosystems
-ARPA-H has introduced the IGoR program, designed to create incentives for building rigorous, AI-enabled research ecosystems. The goal is to accelerate therapeutic discovery for complex diseases by fostering environments where AI and laboratory automation work in a closed loop. This initiative is a direct call to action for institutes like Scripps to further automate high-throughput screening and integrate real-time data feedback into the discovery pipeline.
-[Source: ARPA-H](https://arpa-h.gov/explore-funding/programs/igor)
+### Covalent warheads are pharmacodynamic, not just chemistry
+A bioRxiv preprint from Amy Andreotti's group, posted last week, makes a sharp argument that the cysteine-reactive warhead in a covalent inhibitor is not merely an attachment module. Comparing acrylamide and 2-butynamide warheads on Bruton's tyrosine kinase, the authors show that the two electrophiles drive distinct long-range conformational dynamics in the kinase after covalent capture, and that those differences propagate into measurably different downstream signaling behavior. The practical implication is that warhead selection should be treated as a pharmacodynamic decision, not a synthetic-chemistry default. Two molecules can hit the same cysteine on the same target by the same nominal mechanism and still give different efficacy and resistance profiles. For our covalent and degrader programs, that argues for systematic warhead matrices instead of single-warhead optimization.
 
-### The Rise of Human-Relevant New Approach Methodologies (NAMs)
-A new report in Science highlights the widening translational gap and the urgent need for New Approach Methodologies, or NAMs. As we move toward complex modalities like oligonucleotides and targeted protein degraders, traditional animal models are increasingly falling short. The shift is toward human-centric models, including organ-on-a-chip and advanced 3D cell cultures, to better predict clinical outcomes. This is a critical area for Scripps to lead, especially in the development of more predictive assays for these emerging modalities.
-[Source: Science](https://www.science.org/doi/10.1126/science.aeb0045)
+### Domain-specific AI for life sciences picks up speed
+Last month OpenAI introduced GPT-Rosalind, a frontier reasoning model trained specifically for biology, chemistry, and protein engineering. On the BixBench bioinformatics benchmark it posted leading scores among published models, and on LABBench-2 it outperformed the generalist GPT-5.4 on six of eleven research tasks including literature retrieval, sequence manipulation, and protocol design. Launch partners include Amgen, Moderna, the Allen Institute, and Thermo Fisher, with a free Codex plugin wiring in more than fifty scientific databases. Two takeaways. The frontier vendors are now optimizing models against scientific workflows, not just chat, which shifts the cost-benefit calculus on building bespoke internal tooling. And access is gated through a trusted-access program for a handful of enterprises, so the strategic question is which partnerships earn Scripps a seat at the table before the toolset becomes a competitive moat.
 
-That’s all for today’s brief. We’ll continue to monitor these frontiers to keep you and the Scripps team at the leading edge of biomedical innovation.
+That is your brief for Friday. We will be back tomorrow.
