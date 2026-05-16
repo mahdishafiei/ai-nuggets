@@ -170,3 +170,41 @@ Episode 3 shipped: 14:53 mp3, pushed to main, uploaded to R2, feed updated, dedu
 === 2026-05-15T04:38:35-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-16T03:18:40-07:00 start receptor-and-reason ===
 === 2026-05-16T08:12:02-07:00 start receptor-and-reason ===
+Commit landed. Per PIPELINE.md, the orchestrator handles the push.
+
+## Candidate funnel
+
+**Re-invocation context:** Today's main episode (2026-05-16-receptor-and-reason.md) shipped at 03:28 with 10 items. This bonus drop adds 10 distinct, fresh items. No item appears in both episodes; full dedup ledger applied (40 prior keys excluded from this week + 10 from this morning).
+
+**Tier 1 — bioRxiv neuroscience + pharmacology (last 7 days):** 1,769 items scanned across the 2026-05-10 to 2026-05-16 window, filtered to 629 in target categories, then 175 with neuropharm keyword hits, then 75 after pharm-AND-neuro tightening with this-week dedup. Substantive shortlist (after spurious match discard):
+- Effects of NMDA antagonists on social behaviour: meta-analysis of 264 preclinical studies — bioRxiv 2026-05-15 — **chosen (item 1)**
+- Differential efficacy of α5IA in Dp(16)1Yey mouse model of Down syndrome — bioRxiv 2026-05-14 — **chosen (item 2)**
+- Preclinical Evaluation of P4B-2412 as PDE4B PET Radioligand — bioRxiv 2026-05-12 — **chosen (item 5)**
+- Spatial and temporal changes in JNJ-64413739 P2X7R binding after status epilepticus — bioRxiv 2026-05-14 — **chosen (item 6)**
+- Cyclic Peptides Target CAPON and Modulate Cellular Responses under AD-Relevant Stress — bioRxiv 2026-05-13 — **chosen (item 7)**
+- Activation by statins unveils two putative agonist binding sites in the pore domain of TRPA1 — bioRxiv 2026-05-12 — **chosen (item 8)**
+- A novel pipeline for the validation of manganese chelators — bioRxiv 2026-05-15 — **chosen (item 9)**
+- Neuronal secretome from bipolar patient-derived neurons / lithium response biomarkers — bioRxiv 2026-05-14 — **chosen (item 3)**
+- Cortical Stimulation Strength and sgACC Connectivity Shape Neuro-Cardiac Responses to Prefrontal TMS — bioRxiv 2026-05-13 — **chosen (item 4)**
+- Nmur1 and Cckar fail to support functional genetic access in adult dopamine neurons — bioRxiv 2026-05-14 — runner-up (methodology piece, narrow audience)
+- Single-cell quantification of the iron-neuromelanin balance in dopaminergic neurons across the lifespan — bioRxiv 2026-05-13 — runner-up
+- Postweaning social isolation induces gene expression alterations in NAc neurons — bioRxiv 2026-05-13 — runner-up
+
+**Tier 1 — journals (last 7 days):** not separately re-surveyed this run — this morning's episode already pulled the top items from NPP and Molecular Psychiatry.
+
+**Tier 1 — Psychiatric Times:** not separately re-surveyed (HTML scrape required JS; covered by this morning's lumateperone, NRX-101, low-dose lithium picks).
+
+**Tier 2 — bioRxiv bioinformatics + systems biology:** included in the 75-item tight shortlist above.
+- MechAInistic — bioRxiv 2026-05-13/14 — **chosen (item 10)**
+- BiomniBench, ClaroAI-Bench, S2F-agent — already shipped in other shows' feeds or this morning, dedup-skipped
+- OmniGene-4 bio-language MoE — runner-up, not CNS-focused
+- Do Larger Models Really Win in Drug Discovery — runner-up, contrarian scaling benchmark
+
+**Tier 2 — arXiv:** not re-surveyed in detail — this morning's run hit the cache (1.2 MB, fresh today) and concluded arXiv contributed no lead-tier items this week.
+
+**Tier 3 — chemRxiv / industry:** not re-surveyed.
+
+**Source-level gaps:** none — no sources failed in this re-invocation.
+
+**Episode:** `2026-05-16-receptor-and-reason-toolbox.mp3` — 15:08 duration, 7,261,248 bytes, committed and published to R2.
+=== 2026-05-16T08:24:50-07:00 done  receptor-and-reason (exit 0) ===

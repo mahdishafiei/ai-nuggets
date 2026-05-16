@@ -713,3 +713,33 @@ Episode shipped. Summary of today's run:
 Pushed to `main` as `1cf9a1a`.
 === 2026-05-16T03:07:02-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-16T07:52:02-07:00 start biomedical-agentic-ai ===
+Episode shipped. Final summary follows.
+
+---
+
+**Bonus episode for 2026-05-16:** S2F-agent — Zhejiang University's skill-grounded orchestration layer for Sequence-to-Function genomics foundation models (bioRxiv 10.64898/2026.05.13.724757, v1 posted 2026-05-15).
+
+- Script: `podcasts/biomedical-agentic-ai/scripts/2026-05-16-s2f-agent-skill-grounded-genomics.md`
+- Audio: `2026-05-16-s2f-agent-skill-grounded-genomics.mp3` (315s, 2.5MB, mistral primary)
+- R2 published, feed updated, commit `d9b6617` (orchestrator pushes)
+
+### Candidate funnel (re-invocation, already shipped today: Talk2QSP)
+
+**bioRxiv** — pulled full 2026-05-15:2026-05-16 window via details API, paginated 12 pages of 30 = 359 entries. Keyword-filtered (agent / LLM / foundation model / autonomous / multi-agent / knowledge graph / ontology / reasoning / RAG) → 33 hits → substantive shortlist after discarding spurious matches:
+
+- **S2F-agent: Skill-grounded agent for Sequence-to-Function computational genomics workflows** — 10.64898/2026.05.13.724757 **[CHOSEN]**
+- Talk2QSP v2 — 10.64898/2026.05.06.723244 (already shipped earlier today)
+- Metabolic Self-Organization: Emergence of Autonomous Agency in a Metabolically Constrained LLMs — 10.64898/2026.05.13.724883 (philosophical, not biomedical-applied)
+- Bio-BLIP: Multimodal architecture for transferable reasoning in genomic variant interpretation — 10.64898/2026.05.12.724740 (model architecture, not agentic)
+- Biological foundation models illuminate annotation blind spots — 10.64898/2026.05.15.724572 (foundation model application, not agentic)
+- Do Larger Models Really Win in Drug Discovery? v2 — 10.64898/2026.04.29.721568 (underlying date 2026-04-29 outside 2-day window)
+- Thoughts-as-Planning: Latent World Models — 10.64898/2026.05.10.724161 (general AI methodology, not biomedical-substantive)
+
+**arXiv** — read shared cache `/tmp/ai-nuggets-arxiv-cache.xml` (500 entries), filtered to 356 biomedical-relevant items in last 2 days. Top agentic hits (Self-Distilled Agentic RL, APWA distributed agentic workflows, agentic GraphRAG provenance, ATLAS visual reasoning) were biomedically tangential at best. None beat the bioRxiv pick.
+
+**ChemRxiv** — not surveyed (already have a stronger bioRxiv pick; bonus-episode threshold). Noted as a gap.
+
+**News / funder pages (ARPA-H, NIH, NSF, HHS)** — no fresh biomedical-AI agentic-program announcements in the 2026-05-15:2026-05-16 window. ARPA-H IGoR (2026-05-05) and ADVOCATE (January 2026) outside recency.
+
+Why S2F-agent beat the rest for the second slot: it pairs thematically with this morning's Talk2QSP (both are "agent as fragmentation-tax absorber" but in different biomedical domains — pharmacology models vs. genomics foundation models), the skill-grounding pattern is durable and travels, and it integrates 11 named SOTA S2F models (AlphaGenome, Borzoi, Evo 2 + 8 more) — directly in Su Lab's agentic-bioinformatics wheelhouse.
+=== 2026-05-16T07:58:24-07:00 done  biomedical-agentic-ai (exit 0) ===

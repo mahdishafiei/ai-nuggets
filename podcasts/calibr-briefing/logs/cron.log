@@ -260,3 +260,75 @@ Substantive shortlist (after discarding spurious hits):
 Chosen spotlight pick logic: Regenxbio is the largest individual-catalyst clinical readout of the day, sits at the intersection of accelerated-approval surrogate-endpoint mechanics + Makary-resignation regulatory continuity risk + post-Elevidys safety bar — all directly load-bearing for any Calibr biologic IND-enabling program. Strong analytical depth available on competitive positioning vs Sarepta.
 === 2026-05-15T04:18:55-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-16T03:07:02-07:00 start calibr-briefing ===
+Shipped today's Calibr-Skaggs Daily Briefing for Saturday, May 16, 2026.
+
+**Episodes:**
+- Headlines (5:00) — `2026-05-16-pharma-headlines.mp3`
+- Spotlight (8:00) — `2026-05-16-fda-leadership-vacuum-spotlight.mp3`
+
+**Spotlight pick:** Tracy Beth Høeg fired from acting CDER director on Friday — combined with Makary's May 12 resignation and Prasad's April 30 CBER exit, every senior FDA seat now sits on an acting director. Deep dive on what changes operationally, Michael Davis's profile (former CDER psychiatry team leader, recent psychedelics-nonprofit CMO), and three implications for Calibr's MASH biologic IND-enabling work at CBER.
+
+**Candidate funnel:**
+
+Scanned (May 15-16 windows):
+- Endpoints — 4 stories surveyed; Høeg firing the standout
+- FiercePharma — 4 stories; Roche/Natera ctDNA-guided bladder Tecentriq, Høeg-departing report
+- FierceBiotech — 5 stories; Novartis cuts, Model Meds AI feature, Alumis (covered yesterday)
+- STAT — 2 substantive (Høeg, UK drug pricing); 1 paywalled
+- BioPharma Dive — 4 stories; Sun Pharma/Organon, Pazdur petition + Takeda layoffs roundup
+- Clinical Trials Arena — 5 stories; Tempus-BMS expansion, Shionogi FXS miss, CGTxchange
+- GEN — no datable items in window
+- Voyager — site refused connection (ECONNREFUSED, skipped)
+
+Substantive shortlist (post-filter):
+- Tracy Beth Høeg fired from CDER (FierceBio/STAT/Endpoints/NBC/CBS) — **CHOSEN SPOTLIGHT + headline #1**
+- Roche Tecentriq + Natera Signatera ctDNA-guided bladder cancer FDA approval — headline #2
+- AstraZeneca perioperative Imfinzi + Padcev Phase 3 EFS/OS hit in muscle-invasive bladder cancer — headline #3
+- BeOne Beqalzi BCL-2 inhibitor FDA accelerated approval in R/R MCL — headline #4
+- Shionogi zatolmilast PDE4D Phase 3 double miss in fragile X — headline #5
+- Takeda 4,500 layoffs + Novartis biomedical research cuts — headline #6
+- CGTxchange marketplace launch (ASGCT + OTXL) — headline #7
+- Pazdur-for-FDA-Commissioner petition (300+ execs) — headline #8
+- Tempus-BMS expanded AI clinical trial collaboration — passed (covered enough by FDA spotlight context)
+- Sun Pharma-Organon $12B — passed (announced in April, no fresh news today)
+
+Saturday news cycle was Friday-heavy as expected; FDA shakeup was the day's clear lead story and deserved both the top headline slot and the spotlight given Calibr's CBER-routed MASH biologic IND-enabling pipeline.
+=== 2026-05-16T03:18:40-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-05-16T08:02:02-07:00 start calibr-briefing ===
+No fresh May 16-dated content surfaced across Endpoints, Fierce Biotech, Fierce Pharma, BioPharma Dive, STAT, BioSpace, Clinical Trials Arena, or GEN. All sites' most recent items are dated May 15 — which the 03:07 PT run already swept up. Targeted topical searches (FGF21/MASH, in vivo CAR-T, Foresite portfolio) returned only items already covered or older than today's window.
+
+Per PIPELINE.md re-invocation rules, this is the right outcome: no second episode today.
+
+## Re-invocation outcome — 2026-05-16 (Saturday, 08:02 PT)
+
+**Already shipped this morning (03:07–03:18 PT, commit `e693841`):**
+- Headlines: Høeg CDER firing (#1), Roche Tecentriq + Natera Signatera bladder, AstraZeneca Imfinzi + Padcev bladder, BeOne Beqalzi BCL-2 R/R MCL approval, Shionogi zatolmilast fragile X miss, Takeda 4,500 + Novartis BR cuts, CGTxchange marketplace, Pazdur petition
+- Spotlight: FDA leadership vacuum (Høeg out, Makary gone May 12, Prasad gone April 30 — all senior FDA seats on acting directors); Calibr CBER MASH biologic IND-enabling implications
+
+**Sources re-scanned this afternoon (May 16 window only):**
+- Endpoints News — no May 16-dated items; latest content May 15
+- Fierce Biotech — no May 16 items; latest May 15 (Novartis, Model Meds, Alumis, Aardvark, AC Immune all already covered)
+- Fierce Pharma — no May 16 items; latest May 15 (Roche Tecentriq, Høeg, Eisai Leqembi, SCOTUS, all covered or out-of-scope)
+- BioPharma Dive — no May 16 dated items
+- STAT News (biotech) — most recent May 14-15, all covered
+- BioSpace — latest May 15: Høeg, California CLS report, Genmab antibody drops, Takeda/Novartis, Sun Pharma recall — Genmab drop is the only un-covered item but it's incremental ADC trimming, not Calibr-relevant
+- Clinical Trials Arena — no May 16 items
+- GEN — no May 16 items
+- Foresite portfolio — no fresh announcements May 16
+- ASGCT in vivo CAR-T (Azalea TRAC-CAR T NHP data, Sana SG293) — presented May 12-15, already in yesterday's coverage window; nothing new specific to May 16
+
+**Substantive candidates after exclusion:** None.
+
+The only un-covered Friday item with any signal is Genmab dropping two antibody assets (one a former ProfoundBio ADC); it's a portfolio housekeeping item without Calibr-pipeline read-through and wouldn't sustain either a headlines roundup or a spotlight. The Saturday news cycle is dormant as expected.
+
+Per PIPELINE.md ("Do not widen the recency window or shift the source mix to 'find something different'. If after excluding today's already-shipped items there are no fresh candidates left, the right outcome is no second episode for the day."), no afternoon episode is shipped. No commit, no push.
+
+Sources:
+- [Endpoints News](https://endpoints.news/)
+- [Fierce Biotech](https://www.fiercebiotech.com/)
+- [Fierce Pharma](https://www.fiercepharma.com/)
+- [BioPharma Dive](https://www.biopharmadive.com/)
+- [STAT News biotech](https://www.statnews.com/category/biotech/)
+- [BioSpace](https://www.biospace.com/)
+- [Clinical Trials Arena](https://www.clinicaltrialsarena.com/news/)
+=== 2026-05-16T08:04:19-07:00 done  calibr-briefing (exit 0) ===
