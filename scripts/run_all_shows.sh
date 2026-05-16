@@ -2,13 +2,22 @@
 # Run the daily Claude pipeline for every show under podcasts/<slug>/.
 # A "show" is any directory containing a PROMPT.md.
 #
-# Sequential on purpose: avoids TTS API contention and races on `git push`.
-# Add a new show by creating podcasts/<slug>/PROMPT.md — no crontab edit needed.
+# Shows run concurrently with a stagger between launches so bursty API
+# calls (TTS, search) don't pile up on the same minute, and so a hang in
+# one show no longer stalls the whole queue. Per-show commits are
+# serialized via flock (see PIPELINE.md "Commit"); a single `git push`
+# at the very end avoids the non-fast-forward rejects that concurrent
+# pushes would produce.
+#
+# Add a new show by creating podcasts/<slug>/PROMPT.md — no crontab edit
+# needed. Override the stagger for quick testing: STAGGER_SECONDS=30
+# scripts/run_all_shows.sh
 
 set -u
 
 REPO=/home/asu/Science/ai-nuggets
 CLAUDE=/home/asu/.local/bin/claude
+STAGGER_SECONDS=${STAGGER_SECONDS:-600}
 
 cd "$REPO" || exit 1
 
@@ -35,14 +44,15 @@ if [ -z "$(find "$ARXIV_CACHE" -newermt "$(date +%F)" 2>/dev/null)" ]; then
     || rm -f "$ARXIV_CACHE.tmp"
 fi
 
-for prompt in podcasts/*/PROMPT.md; do
-  [ -f "$prompt" ] || continue
-  slug=$(basename "$(dirname "$prompt")")
-  log="$REPO/podcasts/$slug/logs/cron.log"
+run_show() {
+  local prompt="$1"
+  local slug="$2"
+  local log="$REPO/podcasts/$slug/logs/cron.log"
   mkdir -p "$(dirname "$log")"
 
   # The content-AUP classifier occasionally flags the biomedical-agentic-ai
   # prompt on the first attempt; a retry minutes later typically clears it.
+  local attempt tag out
   for attempt in 1 2; do
     tag=""
     [ "$attempt" -gt 1 ] && tag=" (retry $((attempt-1)))"
@@ -62,13 +72,24 @@ for prompt in podcasts/*/PROMPT.md; do
     rm -f "$out"
     break
   done
-done
+}
 
-# Claude's per-episode commit happens mid-run, before the closing "done"
-# line is written above. Pick up any straggling log changes as a follow-up
-# commit so they don't accumulate untracked between cron runs.
+first=1
+for prompt in podcasts/*/PROMPT.md; do
+  [ -f "$prompt" ] || continue
+  slug=$(basename "$(dirname "$prompt")")
+  if [ "$first" -eq 0 ]; then
+    sleep "$STAGGER_SECONDS"
+  fi
+  first=0
+  run_show "$prompt" "$slug" &
+done
+wait
+
+# All shows committed their own files inside flock'd critical sections
+# during the parallel phase. Pick up any straggling cron-log changes
+# tee'd after Claude's commit, then push everything once.
 if ! git diff --quiet -- 'podcasts/*/logs/cron.log'; then
-  git add 'podcasts/*/logs/cron.log' \
-    && git commit -m 'Update cron logs' \
-    && git push
+  git add 'podcasts/*/logs/cron.log' && git commit -m 'Update cron logs'
 fi
+git push

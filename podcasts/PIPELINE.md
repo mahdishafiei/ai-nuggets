@@ -71,6 +71,15 @@ Don't write your own TTS code. `gen_tts.py` is the canonical pipeline:
 chunking, ffmpeg stitching, duration sanity check, primary→fallback
 orchestration, all already handled.
 
+Run `gen_tts.py` **synchronously** in a single Bash tool call and wait
+for its exit code. Do not background it (`&`, `nohup`, `disown`) and
+then poll for the mp3 — a typical run is 3–5 minutes, well inside the
+bash tool's 10-minute timeout. The polling pattern has a sharp edge:
+`pgrep -f "gen_tts.py.*<slug>.*<date>"` matches the very shell that's
+running the polling regex (the pattern appears in the shell's own
+command line via `eval`), so the negation never fires and the loop
+sleeps forever. A 4-hour hang in May 2026 was traced to exactly this.
+
 Public RSS URL pattern: subscribers fetch
 `https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/<slug>/feed.xml`.
 Episode mp3 enclosures are served via the `podcast` Cloudflare Worker so
@@ -117,13 +126,24 @@ slug; `<basename>` is the episode basename (no `.mp3`).
    `<guid isPermaLink="false"><basename></guid>` — bare basenames without
    `isPermaLink="false"` violate RSS 2.0 and break strict podcast clients.
 
-## Commit and push
+## Commit (the orchestrator pushes)
 
 After all of today's episodes are generated, audio published to R2, and
-the feed updated:
+the feed updated, commit your show's files. Shows run concurrently in
+the same working tree, so:
+
+- **Stage only your own show's directory** — never `git add -A` or
+  `git add .`. Another show running in parallel may have in-flight
+  changes you must not sweep into your commit.
+- **Serialize the commit with `flock`** so the index isn't corrupted by
+  two shows writing it at once.
+- **Do not `git push`.** The orchestrator (`scripts/run_all_shows.sh`)
+  does one push at the end of the run; parallel pushes reject each
+  other with non-fast-forward.
 
 ```
-git add -A && git commit -m '<commit-prefix>: <descriptive title>' && git push
+flock /tmp/ai-nuggets-git.lock -c \
+  "git add podcasts/<slug>/ && git commit -m '<commit-prefix>: <descriptive title>'"
 ```
 
 `<commit-prefix>` is set per-show in its PROMPT.md.
