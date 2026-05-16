@@ -168,3 +168,4 @@ Episode 3 shipped: 14:53 mp3, pushed to main, uploaded to R2, feed updated, dedu
 
 **Source failures logged:** arXiv pre-fetch cache empty for this run (14 bytes only); live API hit rate limits twice before succeeding on the 120s-backoff retry. No items dropped — arXiv was surveyed live and contributed no picks this week regardless. Biological Psychiatry articles-in-press content was not retrievable through search.
 === 2026-05-15T04:38:35-07:00 done  receptor-and-reason (exit 0) ===
+=== 2026-05-16T03:18:40-07:00 start receptor-and-reason ===
