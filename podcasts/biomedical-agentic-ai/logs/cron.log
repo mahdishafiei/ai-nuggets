@@ -696,3 +696,19 @@ Shipped today's episode. Summary:
 Episode mp3 (191s, 1.39 MB) uploaded to R2 and feed updated. Pushed to main.
 === 2026-05-15T04:06:21-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-16T03:00:12-07:00 start biomedical-agentic-ai ===
+Episode shipped. Summary of today's run:
+
+**Today's pick (2026-05-16):** Talk2QSP from Tommaso Andreani's group at Sanofi (bioRxiv DOI `10.64898/2026.05.06.723244`, v2 posted 2026-05-15). Human-in-the-loop agentic framework that decomposes literature-to-QSP-intervention translation into semantic grounding + LLM Scenario Extractor + dual-agent Scenario Mapper emitting discrete verifiable work orders. Earns its decomposed architecture against single-shot SBML reasoning.
+
+**Candidate funnel:**
+- bioRxiv 2026-05-15:2026-05-16 window — 685 entries across 3 pages, 55 keyword hits, substantive shortlist of 3:
+  - **Talk2QSP (chosen)** — Sanofi HITL agents for QSP scenario translation
+  - S2F-agent (`10.64898/2026.05.13.724757`) — skill-grounded agent orchestrating AlphaGenome / Borzoi / Evo 2 for genomics workflows
+  - OmniGene-4 (`10.64898/2026.05.12.724542`) — 26B bio-language MoE foundation model (not agentic)
+- arXiv cache — 500 entries, 63 bio+agent matches, substantive shortlist of 1:
+  - Agentifying Patient Dynamics (`arXiv 2605.14723`) — patient-simulation clinical world model; did not beat Talk2QSP's deployment signal
+- ChemRxiv — no biomedical agentic items in the 2-day window
+- News/funder feeds (ARPA-H, NIH, NSF, HHS) — no fresh agentic-biomedical announcements 2026-05-15:2026-05-16; NVIDIA/Lilly (Jan), Amazon Bio Discovery (Apr), ARPA-H IGoR (May 5) all outside recency
+
+Pushed to `main` as `1cf9a1a`.
+=== 2026-05-16T03:07:02-07:00 done  biomedical-agentic-ai (exit 0) ===
