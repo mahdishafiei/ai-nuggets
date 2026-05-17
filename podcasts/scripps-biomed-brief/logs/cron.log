@@ -37,3 +37,4 @@ Episode committed (mp3 lives in R2; the bucket key matches the Worker URL). Let 
 
 **Source health:** All sources responsive. bioRxiv full-page WebFetch returned 403 from this IP, but the bioRxiv API (`api.biorxiv.org`) responded normally for both detail lookups and date-range scans; no recall hit. No retries needed elsewhere.
 === 2026-05-16T08:32:10-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-05-17T03:30:13-07:00 start scripps-biomed-brief ===
