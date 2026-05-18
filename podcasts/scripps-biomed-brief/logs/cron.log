@@ -76,3 +76,4 @@ Committed. Final summary follows.
 
 **Source health:** bioRxiv full-page WebFetch returned 403 (consistent with yesterday); `api.biorxiv.org` details endpoint responded normally for all four chosen papers and for the date-range scan. All news sites responsive on first attempt. No retries needed.
 === 2026-05-17T03:37:50-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-05-18T03:30:03-07:00 start scripps-biomed-brief ===
