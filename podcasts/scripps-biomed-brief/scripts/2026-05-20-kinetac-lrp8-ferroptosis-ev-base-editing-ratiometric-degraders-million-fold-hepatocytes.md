@@ -1,0 +1,26 @@
+# Scripps Biomedical Brief — 2026-05-20
+
+## Episode
+
+KineTACs against LRP8 starve cancer cells of selenium and trigger ferroptosis; biogenesis-guided extracellular vesicles carry base-editor RNPs into hepatocytes; ratiometric degradation circuits read protein abundance as a transcriptional signal; and a chemically expanded hepatocyte precursor scales primary human hepatocytes a million-fold.
+
+## Script
+
+Good morning. Today's brief covers four preprints from the last forty-eight hours that each open a new front in modality, delivery, screening, or supply.
+
+We start with the Wells lab at UCSF, who have pushed targeted protein degradation outside the cell to address a hard problem in oncology: ferroptosis resistance. Tumors lean heavily on glutathione peroxidase 4 to detoxify lipid peroxides, and GPX4 is a selenoprotein whose synthesis depends on receptor-mediated selenium import through the low-density lipoprotein receptor LRP8. The group built bispecific degraders they call KineTACs, which link an anti-LRP8 arm to a cytokine receptor that constitutively traffics to the lysosome. Surface LRP8 is hijacked into that pathway and destroyed, selenium uptake collapses, and GPX4 and other selenoproteins drop with it. The downstream effect is exactly what you would predict: cancer cells become much easier to push into ferroptosis. The conceptual win here is bigger than ferroptosis. They have shown that you can use an extracellular degrader to reprogram an intracellular translational dependency, which opens a general framework for going after nutrient-acquisition receptors as a way around therapy resistance.
+
+Second, a delivery story. The bottleneck for in vivo base editing is not the editor; it is getting the editor as protein, not nucleic acid, into the right cell. The Sluijter group at UMC Utrecht built an extracellular vesicle platform they call NEO-TOP-EVs by reverse-engineering native EV biogenesis: phosphatidylinositol four-five bisphosphate signals to recruit cargo to the plasma membrane, ESCRT machinery is hijacked to drive vesicle scission, and a self-assembling adaptor clusters cargo so that loading actually scales. They packaged Cas9 and an adenine base editor as ribonucleoproteins, with no DNA or guide template, and showed splice-site disruption at PCSK9 in vitro with the expected drop in PCSK9 and rebound of LDL receptor activity. In vivo they got functional Cre protein delivery to mouse liver. This is still proof of concept, but it directly attacks two persistent problems in the field: durable expression of editing machinery, which you do not want, and the immunogenicity that comes with viral or lipid nanoparticle re-dosing.
+
+Third, a synthetic biology lever from Steven Banik's group at Stanford. They have built circuits that turn protein degradation into a transcriptional readout in living cells. The trick is ratiometric: you fuse the protein of interest to a transcriptional inhibitor, and the cell senses the ratio between that inhibitor fusion and a transcription factor. When the protein of interest is degraded, the inhibitor goes with it, and the transcription factor turns on a reporter, a survival gene, or a barcode. Because the readout is mechanism-agnostic, the same circuit picks up degraders driven by ligases, molecular glues, or autophagy, and you can multiplex it across pools of cells. The team used it to discover new molecular glue degraders against oncogenic targets, which makes this a generic discovery engine for the induced-proximity field rather than just a measurement tool.
+
+Fourth, an enabling technology for drug development. Primary human hepatocytes are the gold standard for tox and metabolism, and the gold standard is expensive, variable, and chronically in short supply. Keisuke Kaji's group at Edinburgh report a culture condition that converts primary human hepatocytes into a proliferating precursor they call pre-cHep, which expands more than a million-fold over thirty days while keeping the ability to repopulate mouse liver at the same level as the starting cells. Three-dimensional spheroid differentiation in a week brings back albumin secretion and cytochrome P-four-five-oh activity to parity with primary hepatocyte spheroids, and the precursor is CRISPR-tractable, which makes isogenic disease modeling routine. If this holds up, the entire ADME and hepatotoxicity stack gets a cheaper, more reproducible, and genetically editable substrate.
+
+That is the brief for today. Four moves at once: a new extracellular degrader paradigm, a non-viral protein delivery platform, a transcriptional readout for induced proximity, and a million-fold-scalable hepatocyte source. Have a productive day.
+
+## Show notes
+
+- Wells lab — KineTAC against LRP8 to drive ferroptosis: https://www.biorxiv.org/content/10.64898/2026.05.16.725645v2
+- Sluijter lab — NEO-TOP-EVs for protein and base-editor delivery: https://www.biorxiv.org/content/10.64898/2026.05.18.721905v1
+- Banik lab — Ratiometric transcriptional activation by protein degradation: https://www.biorxiv.org/content/10.64898/2026.05.16.725679v1
+- Kaji lab — Pre-cHep with one-million-fold expansion and liver repopulation: https://www.biorxiv.org/content/10.64898/2026.05.15.725446v1

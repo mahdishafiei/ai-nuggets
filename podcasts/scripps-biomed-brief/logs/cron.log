@@ -126,3 +126,4 @@ Substantive shortlist (after dropping spurious matches, items in the four-day ro
 
 **Source health:** bioRxiv `/collection/*` 403 (consistent multi-day from this IP), worked around via per-date `details/biorxiv/<from>/<to>/<cursor>` API which responded normally. Endpoints required one redirect hop. R2 publish initially failed because `npx` is not on the default PATH for this shell; resolved by sourcing `~/.nvm/versions/node/v24.14.0/bin` and re-running `scripts/publish_episode.sh` — upload completed via worker/node_modules wrangler 3.114.17. Worth fixing in `publish_episode.sh` so the runner can find npx without a manual PATH export.
 === 2026-05-19T03:38:07-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-05-20T03:30:02-07:00 start scripps-biomed-brief ===
