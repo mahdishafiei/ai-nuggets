@@ -410,3 +410,4 @@ Source-side failures: none.
 
 Files committed: scripts + episodes + feed.xml updated; mp3s uploaded to R2 (`ai-nuggets-episodes` bucket via wrangler, both `Upload complete`).
 === 2026-05-19T03:23:37-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-05-20T03:10:02-07:00 start calibr-briefing ===
