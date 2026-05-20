@@ -268,3 +268,36 @@ Other strong but cut: Astrocytes shape cortical neuron development epigenetics (
 Audio: 17:19 min (1039 s), 8.3 MB, Mistral Voxtral primary all 10 chunks. Published to R2, feed updated as Episode 8, ledger appended, committed via flock. Orchestrator handles the push.
 === 2026-05-19T03:34:35-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-20T03:20:02-07:00 start receptor-and-reason ===
+Committed. The orchestrator handles the push. Final candidate funnel for the cron.log audit record:
+
+**Sources scanned (recency window 2026-05-13 to 2026-05-20):**
+
+- **bioRxiv neuroscience**: ~120 items scanned across pages (cursor 0/30/60/90 + per-day-range probes), 28 substantive shortlist after filtering CNS pharm / psychiatry / receptor / GPCR / neurodegeneration / dopamine / opioid / methodology relevance.
+- **bioRxiv pharmacology and toxicology**: 28 items scanned (single page exhausted), 4 substantive shortlist.
+- **bioRxiv bioinformatics**: 30 items scanned, 2 substantive shortlist (PLM/ligand methodology).
+- **arXiv**: 429 RATE-LIMITED throughout the run from this IP (two retries also 429); WebSearch fallback returned only out-of-window items. Logged gap; no Tier 2 arXiv pick today.
+- **Psychiatric Times**: 4 items, 1 fresh (XPro1595 MINDFul), 2 already shipped 2026-05-19, 1 just outside window.
+- **Nature NPP / Molecular Psychiatry**: blocked by idp.nature.com auth redirect on both `?type=article` and `/research-articles` paths; no pick today.
+
+**Substantive shortlist (after dedup ledger filtering):**
+
+- ✅ XPro1595 Phase 2 MINDFul — psychiatrictimes.com/view/phase-2-mindful-trial-results-on-xpro1595... — **CHOSEN (opener)**
+- ✅ GLP-1 analogs in SncaG51D mouse PD model — 10.64898/2026.05.18.726024 — **CHOSEN**
+- ✅ Oligodendrocyte subtype diversity in PD progression — 10.64898/2026.05.15.724963 — **CHOSEN**
+- ✅ GPR34 microglia AD — 10.1101/2025.11.26.690816 v2 — **CHOSEN**
+- ✅ Random Background for Ligand Optimization (Shoichet/Roth) — 10.64898/2026.05.10.724162 — **CHOSEN**
+- ✅ Nmur1/Cckar challenge GPCR atlas — 10.64898/2026.05.11.724447 — **CHOSEN**
+- ✅ Prenatal Leucettine L41 DYRK1A in Down syndrome — 10.64898/2026.05.13.724917 — **CHOSEN**
+- ✅ Anhedonia buffers early-life unpredictability — 10.64898/2026.05.16.725643 — **CHOSEN**
+- ✅ ChrimsonR-E300 from protein language model — 10.64898/2026.05.13.725064 — **CHOSEN**
+- ✅ Topological pharmacokinetics — 10.64898/2026.05.13.724751 — **CHOSEN (closer)**
+- ❌ Tau ablation rewires brain cell programs — 10.64898/2026.05.12.724684 — passed for size
+- ❌ Vision shapes hippocampal maps via midbrain (Scanziani) — 10.64898/2026.05.16.725555 — passed
+- ❌ APOE4 microglia lipoprotein/lysosomal dysfunction (Gage) — 10.64898/2026.05.12.724612 — passed
+- ❌ β-glucans aging hallmarks — 10.64898/2026.05.15.725450 — passed
+- ❌ Cell-type clusters MICrONS connectome — 10.64898/2026.05.12.724707 — passed
+- ❌ Proximity labeling pyroglutamate Aβ — 10.64898/2026.05.13.724866 — passed
+- ❌ ALIC fiber topography TRD (shipped 2026-05-17), GluCTC tRNA aging brain (too close to Krichevsky-AD shipped 2026-05-19), Astrocytic D1 cocaine (shipped 2026-05-19), Ahern UGA suppressor tRNA (covered in Scripps Brief 2026-05-19) — dedup-adjacent
+
+Episode 9 of receptor-and-reason shipped. 16:17 spoken, 7.8 MB mp3, R2 upload OK, feed validates, dedup ledger appended, single commit with flock.
+=== 2026-05-20T03:35:03-07:00 done  receptor-and-reason (exit 0) ===
