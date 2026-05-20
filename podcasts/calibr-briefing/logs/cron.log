@@ -411,3 +411,39 @@ Source-side failures: none.
 Files committed: scripts + episodes + feed.xml updated; mp3s uploaded to R2 (`ai-nuggets-episodes` bucket via wrangler, both `Upload complete`).
 === 2026-05-19T03:23:37-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-20T03:10:02-07:00 start calibr-briefing ===
+Committed. Per pipeline, the orchestrator does the push — leaving that alone.
+
+## Run summary — Calibr-Skaggs Daily Briefing 2026-05-20
+
+**Episodes shipped:**
+- Headlines (3:57, 1.89 MB) — `2026-05-20-pharma-headlines`
+- Spotlight (10:00, 4.80 MB) — `2026-05-20-wave-aatd-rna-editing-spotlight`
+
+Both audio files generated cleanly via Mistral Voxtral primary, published to R2, feed updated and validated, committed under flock.
+
+**Candidate funnel (today's scan)**
+
+Sources scanned: Endpoints (10 items), Fierce Biotech (10), BioPharma Dive (10), STAT News (10) — no source-level failures.
+
+Substantive shortlist after discarding spurious/duplicate/already-shipped items:
+- **Wave Life Sciences WVE-006 RestorAATion-2** — ADAR-recruiting GalNAc RNA editor hits MZ-like phenotype across biweekly + monthly dosing for AATD — `https://ir.wavelifesciences.com/news-releases/news-release-details/wave-life-sciences-announces-positive-update-restoraation-2` **← spotlight**
+- Relay Therapeutics zovegalisib Phase 2 PIK3CA vascular anomalies — 60% response, much cleaner safety than Vijoice — `https://ir.relaytx.com/news-releases/news-release-details/relay-therapeutics-announces-initial-clinical-data-0`
+- Oorja Bio $30M Series A launch from Westlake — ORJ-001 β1-integrin agonist for AEC2 cells in IPF, Acceleron alumni team — `https://www.globenewswire.com/news-release/2026/05/19/3297906/`
+- Incyte/Edison Scientific Kosmos AI scientist deal — `https://www.contractpharma.com/breaking-news/incyte-to-deploy-edison-scientifics-ai-scientist-kosmos-for-rd/`
+- Parabilis Medicines S-1 filing (ticker PBLS) — `https://www.sec.gov/Archives/edgar/data/0001657677/000119312526230994/`
+- Pfizer vaccine chief on hantavirus/Bundibugyo Ebola posture
+- TrumpRx 600+ generics expansion via Mark Cuban Cost Plus + Amazon Pharmacy + GoodRx
+
+Discarded: BioMarin BMN 401 ENPP1 miss (covered yesterday), AZ Baxfendy (covered Monday), Merck sac-TMT TroFuse-005 (covered yesterday), NIH leadership / acting directors (policy macro, not Calibr-aligned), Mentari migraine reverse merger (small).
+
+**Spotlight pick rationale:** Wave WVE-006 is the cleanest platform-level readout of the day with implications well beyond AATD — first compelling demonstration that ADAR-recruiting GalNAc oligos can deliver clinically meaningful protein restoration at monthly dosing, which puts pressure on every protein-deficiency modality stack and is directly relevant to Calibr's modality-comparison thinking when scoping point-mutation, liver-expressed disease targets.
+
+Sources:
+- [Wave Life Sciences RestorAATion-2 update](https://ir.wavelifesciences.com/news-releases/news-release-details/wave-life-sciences-announces-positive-update-restoraation-2)
+- [Relay zovegalisib vascular anomalies](https://www.biopharmadive.com/news/relay-zovegalisib-vascular-anomalies-study-results/820532/)
+- [Oorja Bio ORJ-001 launch](https://www.globenewswire.com/news-release/2026/05/19/3297906/0/en/Oorja-Bio-Unveils-Clinical-Data-for-ORJ-001-a-First-in-Class-Therapeutic-Targeting-Alveolar-Epithelial-Type-2-AEC2-Cells-for-Treatment-of-Idiopathic-Pulmonary-Fibrosis-IPF.html)
+- [Incyte/Edison Scientific Kosmos deal](https://www.contractpharma.com/breaking-news/incyte-to-deploy-edison-scientifics-ai-scientist-kosmos-for-rd/)
+- [Parabilis Medicines S-1 filing](https://www.sec.gov/Archives/edgar/data/0001657677/000119312526230994/ck0001657677-20260519.htm)
+- [Pfizer vaccine chief on hantavirus/Ebola](https://www.fiercebiotech.com/biotech/pfizer-vaccine-chief-aims-victory-over-bacteria-while-comfortable-step-fights-hantavirus)
+- [TrumpRx adds 600 generics](https://www.cnbc.com/2026/05/18/white-house-adds-generic-drugs-to-direct-to-consumer-trumprx-site.html)
+=== 2026-05-20T03:23:07-07:00 done  calibr-briefing (exit 0) ===

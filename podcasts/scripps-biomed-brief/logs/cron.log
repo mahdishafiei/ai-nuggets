@@ -127,3 +127,39 @@ Substantive shortlist (after dropping spurious matches, items in the four-day ro
 **Source health:** bioRxiv `/collection/*` 403 (consistent multi-day from this IP), worked around via per-date `details/biorxiv/<from>/<to>/<cursor>` API which responded normally. Endpoints required one redirect hop. R2 publish initially failed because `npx` is not on the default PATH for this shell; resolved by sourcing `~/.nvm/versions/node/v24.14.0/bin` and re-running `scripts/publish_episode.sh` — upload completed via worker/node_modules wrangler 3.114.17. Worth fixing in `publish_episode.sh` so the runner can find npx without a manual PATH export.
 === 2026-05-19T03:38:07-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-05-20T03:30:02-07:00 start scripps-biomed-brief ===
+Episode shipped. Audit summary for cron.log below.
+
+## Run summary — Scripps Biomedical Brief 2026-05-20
+
+Script: `2026-05-20-kinetac-lrp8-ferroptosis-ev-base-editing-ratiometric-degraders-million-fold-hepatocytes.md`
+Audio: 252.6 s / 2,020,876 bytes (Mistral primary, no fallback needed)
+R2 upload: ai-nuggets-episodes/podcasts/scripps-biomed-brief/episodes/...mp3 ✓
+Feed: validated, item inserted at top ✓
+Commit: 41ff721 (orchestrator will push)
+
+## Candidate funnel
+
+bioRxiv categories surveyed (date range 2026-05-18 to 2026-05-20):
+
+- pharmacology and toxicology — 7 scanned
+- bioengineering — 24 scanned
+- synthetic biology — 5 scanned
+- biochemistry — 30 scanned
+- cancer biology — 28 scanned
+
+General web (Endpoints, Fierce) — 24 to 48 hour window scanned; no must-feature industry story on novel targets/modalities surfaced (top hits were process/trial protocol commentary and trackers, not a new modality/target announcement).
+
+Substantive shortlist (after discarding keyword false positives, unrelated lobby/political news, surfaceomics atlases without novel modality content, and an in-house Schultz/Scripps SARS-CoV-2 Mpro paper to avoid self-promotion):
+
+- Wells lab — KineTAC against LRP8 to drive ferroptosis — biorxiv.org/content/10.64898/2026.05.16.725645v2 — **CHOSEN**
+- Sluijter lab — NEO-TOP-EVs for protein and base-editor delivery — biorxiv.org/content/10.64898/2026.05.18.721905v1 — **CHOSEN**
+- Banik lab — Ratiometric transcriptional activation by degradation — biorxiv.org/content/10.64898/2026.05.16.725679v1 — **CHOSEN**
+- Kaji lab — pre-cHep one-million-fold-expandable hepatocytes — biorxiv.org/content/10.64898/2026.05.15.725446v1 — **CHOSEN**
+- Yang lab — De novo binders against DELE1 (mitochondrial ISR) — biorxiv.org/content/10.64898/2025.12.22.695711v5 — held (older original work, v5 revision)
+- Kara/Cornell — non-MET otoprotective compound vs aminoglycoside ototoxicity — biorxiv.org/content/10.64898/2026.05.14.725303v1 — held (single chemotype, less platform-relevant for Schultz audience)
+- Liang/Le Fur — Lysyl oxidase turn-on fluorophore — biorxiv.org/content/10.64898/2026.05.14.725156v1 — held (already featured in 2026-05-19 Brief)
+- Evans/Downes (Salk) — HDAC inhibition global transcriptional redistribution sensitizes PDAC to DNA damage — biorxiv.org/content/10.64898/2026.05.18.726071v1 — held (mechanistic but not new modality)
+- Stueckmann/Ailles — Humanized PDX preserving tumor immune microenvironments — biorxiv.org/content/10.64898/2026.05.15.724697v1 — held (tooling story, secondary)
+
+Notes: All four chosen items represent distinct axes — extracellular degrader paradigm, non-viral protein delivery, induced-proximity discovery engine, and PHH-scale enabling supply.
+=== 2026-05-20T03:35:51-07:00 done  scripps-biomed-brief (exit 0) ===

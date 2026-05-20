@@ -812,3 +812,36 @@ Episode shipped. Summary:
 
 **One pipeline note worth flagging:** `scripts/publish_episode.sh` calls `npx` which isn't on this machine's PATH. The local `worker/node_modules/.bin/wrangler` works directly. Worth a one-line patch later.
 === 2026-05-19T03:07:13-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-05-20T03:00:02-07:00 start biomedical-agentic-ai ===
+Committed. Pre-commit hook (paper URL check) passed and orchestrator will push at end of run.
+
+# Final summary — biomedical-agentic-ai 2026-05-20
+
+Shipped one episode: **ToxCastLite** (bioRxiv 2026-05-19, IUF Leibniz Düsseldorf + Ruhr University Bochum) — a portable semantic-evidence-graph re-projection of EPA ToxCast that streams the ~100 GB MySQL distribution into assay-scoped SQLite profiles plus a versioned RDF layer, joins ToxRefDB v3.0 in-vivo and CPDat v4.0 product-use context through DSSTox identifiers, and exposes the graph to a locally deployed LLM that translates natural-language toxicology questions into SPARQL grounded by the versioned RDF schema for hallucination-by-construction. Audio: 4:09, 1,993,500 bytes; published to R2 and feed updated.
+
+Candidate funnel for 2026-05-19→05-20:
+
+bioRxiv (260 unique entries pulled across 2-day window via paginated details API; 18 keyword-survivors after agent/LLM/foundation-model/KG/ontology filter; substantive shortlist after discarding spurious matches like "agent" → "chemical/biocontrol/redox agent"):
+- ToxCastLite — portable SQLite + RDF + schema-grounded NL-to-SPARQL — https://www.biorxiv.org/content/10.64898/2026.05.16.724895v1 ★ CHOSEN
+- BioGAIP (Fudan, Ting Ni) — LLM-powered multi-agent bioinformatics platform with GUI — https://www.biorxiv.org/content/10.64898/2026.05.16.720484v1 — strong fit but incremental given recent run coverage
+- OmniGene-4 (Huazhong, Liang Wang) — bio-language MoE v2 with router-level interpretability — https://www.biorxiv.org/content/10.64898/2026.05.12.724542v2 — foundation model, not agentic
+- Autoresearch / RMSD-Tuned Triad rule (LLNL, Landajuela) — git-logged agent loop that retires LLMs from inference path, ties GPT-5 few-shot — https://www.biorxiv.org/content/10.64898/2026.05.05.723069v2 — striking but single-author, narrower domain
+- Learning the Language of the Microbiome with Transformers (Outpost Bio) — https://www.biorxiv.org/content/10.64898/2026.05.02.722381v2 — foundation model, not agentic
+- ProtmRNA cross-modal protein-to-mRNA — https://www.biorxiv.org/content/10.64898/2026.05.19.726141v1 — narrower scope
+
+arXiv: cache empty (runner prefetch returned 14-byte "Rate exceeded" response); two live retries also 429'd from this IP per arXiv's 1-req/3-sec hard limit; fell back to `site:arxiv.org` WebSearch per source-failure rule — only older indexed results surfaced (NeuroAgent 2605.06584 May 7, AgentRx 2605.10286 May 11, m-KAILIN 2504.19565, Beyond Correlation 2505.16982, STELLA 2507.02004), none in the 2-day recency window.
+
+ChemRxiv: WebSearch surfaced no fresh biomedical-agentic chemistry preprints in the 2-day window.
+
+Industry / press (2-day window):
+- Cohere acquires Reliant AI for North for Pharma agentic platform (announced 2026-05-19; Karl Moritz Hermann VP AI Verticalizations Berlin, Marc Bellemare VP Modeling Montreal; GSK/Ipsen/Kyowa Kirin customer book) — biggest agentic-AI biomedical industry news of the day but deal-announcement-shaped, less technical than ToxCastLite for the Su Lab brief
+- QIAGEN-NVIDIA BIO-IT World partnership for agentic workflows over biomedical KGs (2026-05-19) — on-topic but partnership announcement without technical specifics
+
+Funder / policy: ARPA-H news page most recent items 2026-05-11 / 05-07 / 05-05; NIH/NSF/HHS press feeds — no fresh agentic-AI biomedical program announcements in window.
+
+Sources:
+- [ToxCastLite preprint](https://www.biorxiv.org/content/10.64898/2026.05.16.724895v1)
+- [BioGAIP preprint](https://www.biorxiv.org/content/10.64898/2026.05.16.720484v1)
+- [Cohere acquires Reliant AI](https://www.businesswire.com/news/home/20260519725513/en/Cohere-Acquires-Reliant-AI-to-Expand-Sovereign-Enterprise-AI-for-the-Global-Biopharma-and-Healthcare-Sectors)
+- [QIAGEN-NVIDIA partnership](https://www.pharmiweb.com/press-release/2026-05-19/qiagen-to-advance-ai-driven-drug-discovery-with-graph-based-ai-and-curated-bioinformatics-knowledge)
+=== 2026-05-20T03:08:38-07:00 done  biomedical-agentic-ai (exit 0) ===
