@@ -846,3 +846,28 @@ Sources:
 - [QIAGEN-NVIDIA partnership](https://www.pharmiweb.com/press-release/2026-05-19/qiagen-to-advance-ai-driven-drug-discovery-with-graph-based-ai-and-curated-bioinformatics-knowledge)
 === 2026-05-20T03:08:38-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-21T03:00:02-07:00 start biomedical-agentic-ai ===
+Episode shipped. Commit a23c9cf.
+
+Today's pick: **VX** (Shirokikh & Cleynen, University of Western Australia, bioRxiv 10.64898/2026.05.17.725790 v1, posted 2026-05-20) — a desktop genome and transcriptome browser whose native agent-control layer is an MCP server with thirty-nine tools serving exactly the same contract that drives the GUI. The architectural argument — scientific software in the agentic-AI era should make GUI capability and agent capability the same protocol surface, not a narrow wrapper around the GUI — generalizes well past genome browsers. Audio is 4:19, published to R2, feed updated and validated.
+
+### Candidate funnel
+
+bioRxiv (303 unique items in 2026-05-20→21 window; 73 keyword hits; substantive agentic/AI shortlist after removing noise):
+- **VX: an AI-enabled desktop genome viewer and transcriptome browser with a programmable analysis framework** — 10.64898/2026.05.17.725790 v1 — Shirokikh, U Western Australia → **CHOSEN**
+- OmniCellAgent: An AI Scientist for Omic-Driven Scientific Discovery — 10.1101/2025.07.31.667797 v2 — Fuhai Li, Washington University → rejected (v2 of 2025-07 framework; conceptual novelty older than date suggests)
+- ChatDIA: zero-shot LLM workflow for DIA proteomics — 10.64898/2026.02.11.705360 v2 — Hannes Rost, U Toronto → rejected (v2 of February submission)
+- MetFoundation NMR metabolomic foundation model — 10.64898/2026.05.18.725977 → rejected (foundation model not agentic)
+- TMEformer spatial transcriptomics foundation framework — 10.64898/2026.05.17.725770 → rejected (foundation model not agentic)
+- Benchmarking GRN reconstruction in single-cell foundation models — 10.64898/2026.05.17.725083 → rejected (benchmark not agentic)
+
+arXiv: prefetch cache returned 14-byte "Rate exceeded" response, live retry also 429'd (one fallback per rate-limit rule); WebSearch fallback surfaced only older indexed agentic-biomedical hits outside the 2-day window — arXiv-side gap noted explicitly.
+
+ChemRxiv (WebSearch): no fresh biomedical agentic chemistry preprints in the 2-day window.
+
+News/policy: Cohere acquires Reliant AI / North for Pharma announced 2026-05-19 — biggest agentic-AI biopharma industry news of the week and on-theme, but corporate-acquisition story with thin technical content; VX wins on substance. ARPA-H/NIH/NSF/HHS press feeds — no fresh biomedical-AI agentic-program announcements in window.
+
+Sources:
+- [VX preprint (bioRxiv)](https://www.biorxiv.org/content/10.64898/2026.05.17.725790v1)
+- [OmniCellAgent preprint (bioRxiv)](https://www.biorxiv.org/content/10.1101/2025.07.31.667797v2)
+- [Cohere / North for Pharma news](https://asanify.com/blog/news/biopharma-ai-platform-may-21-2026/)
+=== 2026-05-21T03:09:20-07:00 done  biomedical-agentic-ai (exit 0) ===

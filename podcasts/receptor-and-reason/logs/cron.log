@@ -302,3 +302,30 @@ Committed. The orchestrator handles the push. Final candidate funnel for the cro
 Episode 9 of receptor-and-reason shipped. 16:17 spoken, 7.8 MB mp3, R2 upload OK, feed validates, dedup ledger appended, single commit with flock.
 === 2026-05-20T03:35:03-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-21T03:20:02-07:00 start receptor-and-reason ===
+Commit landed. Closing summary for the run log.
+
+---
+
+**Episode shipped:** `2026-05-21-receptor-and-reason.mp3` (10,198,039 bytes / 1,275s ≈ 21:15) — uploaded to R2, feed updated, dedup ledger appended (10 items), committed `1309bff`. Orchestrator will push.
+
+**Source funnel:**
+
+- **bioRxiv** (neuroscience + bioinformatics + systems biology, 7-day API across 1,405 entries / pagination cursors 0–1300): 154 keyword-positive candidates, 38 strong (≥3 keyword hits) after dedup against shipped ledger.
+- **arXiv** (live API; cache was empty 14 bytes): 200-entry pull, 90 bio+AI candidates after relevance filter; nothing strong enough on neuropsychopharm angle to beat the bioRxiv shortlist today.
+- **Psychiatric Times**: 11 items posted May 14–21; 2 strong picks (SYT-510 SERI Phase 2 entry, GLP-1-for-AUD review).
+- **Nature NPP / Molecular Psychiatry**: blocked behind idp.nature.com auth wall via WebFetch; WebSearch site-search returned no fresh 2026-05 articles outside what was already in dedup.
+
+**Shortlist (alphabetical title, * = picked):**
+
+- \* Anikeeva MIT magnetoelectric nanodiscs STN-DBS in PD mouse (`10.1101/2025.06.04.657885` v2)
+- \* Bittencourt USP MCH neurons in lactating MPOA (`10.64898/2026.05.12.724557` v2)
+- \* Donald Duke AlphaFold 3 D-peptide chirality failure (`10.1101/2025.03.14.643307` v3)
+- \* Georgakopoulos Mt Sinai γ-secretase / VCTF1 / VEGFR2 (`10.64898/2026.05.12.724648` v2)
+- \* Psychiatric Times — GLP-1s for AUD review (May 16)
+- \* Psychiatric Times — SYT-510 Phase 2 GAD dosing (May 14)
+- \* Vaidya TIFR postnatal Gq chemogenetic → adult glial dysfunction (`10.64898/2026.05.16.725656`)
+- \* Yamamoto DBCLS TogoMCP — MCP + schema-guided LLM SPARQL (`10.64898/2026.03.19.713030` v2)
+- \* Yebra/Rutishauser human SNc microstim → loss + happiness (`10.64898/2026.05.15.723537`) — LEAD
+- \* Zegarra-Valdivia/Torres Aleman AIK3a305 IGF-1 sensitizer in mild TBI (`10.64898/2026.05.13.724506`)
+- Bridgehead alternates not picked: Tagmazian petVAE amyloid PET subgroups (already-old preprint, weaker novelty); Dyke Tourette motor excitability mega-analysis (epi/TMS, off-axis for today); Rost ChatDIA LLM proteomics (not biomedical-pharm enough); Ni scalp-to-region distance for TMS planning (methods-only); Lauric acid antidepressant in CORT model (modest novelty); Kmiec hidden-state genomics interpretability (off-axis).
+=== 2026-05-21T03:35:17-07:00 done  receptor-and-reason (exit 0) ===

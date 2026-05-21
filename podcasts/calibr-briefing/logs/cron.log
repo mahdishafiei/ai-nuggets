@@ -448,3 +448,35 @@ Sources:
 - [TrumpRx adds 600 generics](https://www.cnbc.com/2026/05/18/white-house-adds-generic-drugs-to-direct-to-consumer-trumprx-site.html)
 === 2026-05-20T03:23:07-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-21T03:10:02-07:00 start calibr-briefing ===
+Today's run is committed. The orchestrator will push at the end of the run.
+
+**Candidate funnel for May 21, 2026:**
+
+Sources scanned (no source-side failures today):
+- Fierce Biotech, Fierce Pharma — full coverage of May 20–21
+- Endpoints News — homepage + 3 article-level fetches (1 paywalled, accessible via search snippet)
+- BioPharma Dive — biotech section + 2 article-level fetches
+- STAT News — biotech section
+- GEN — homepage scanned, no dated headlines available
+- Targeted searches: Infex / RESP-X, Engage Bio / Tethosome, cAMPfield, Mapp Bio Ebola, Immunovant RA, Akero MASH, Capstan/Umoja in-vivo CAR-T
+
+Substantive shortlist (May 20–21, post-keyword filter, after excluding items already covered in 2026-05-20 episodes):
+- Infex RESP-X (INFEX702) positive Phase 2a in NCFB Pseudomonas — anti-virulence mAb, quarterly dosing, p=0.08 exacerbation reduction — **selected for headlines (#1)**
+- cAMPfield Therapeutics $180M Series A — San Diego I&I, Gerhart-led, Novo + RA Capital — **selected for headlines (#2)**
+- Lilly acquires Engage Bio for up to $202M — Tethosome non-viral DNA delivery — **selected for SPOTLIGHT + headlines (#3)**
+- Immunovant IMVT-1402 Phase 2 in difficult-to-treat RA — ~75% ACR20, >33% ACR70 — **selected for headlines (#4)**
+- BMS-Anthropic enterprise Claude deal for global drug R&D — **selected for headlines (#5)**
+- US/Mapp Biopharmaceutical MBP134 Ebola Bundibugyo BARDA contract — **selected for headlines (#6)**
+- Pfizer 25-valent pneumococcal conjugate advances to Phase 3 — **selected for headlines (#7)**
+- Endpoints "Fetal gene therapy and embryo editing" feature — opinion piece, paywalled, dropped
+- "Next big pharma from China" Endpoints feature — opinion piece, paywalled, dropped
+- Q-Line Biotech (India IVD) IPO opening May 21 — out of scope for Calibr audience, dropped
+- STAT "Dark times at FDA" — already covered in 2026-05-16 spotlight, dropped
+- Ipsen pediatric-to-adult transition survey — marketing piece, dropped
+- Amgen CFO hire — internal personnel, dropped
+
+Spotlight rationale: Lilly-Engage deal complements yesterday's Wave RNA-editing spotlight as a modality-arc piece (RNA editing → non-viral DNA delivery), connects to all four Calibr focus areas (in-vivo CAR-T modality choice, chronic protein replacement, AI drug discovery, genetic medicines portfolio), and gives a deeper read on Lilly's systematic 6-acquisition modality build-out than a one-day clinical readout.
+
+Headlines: 4m 49s · 2.3 MB · `2026-05-21-pharma-headlines.mp3`
+Spotlight: 9m 26s · 4.5 MB · `2026-05-21-lilly-engage-bio-dna-delivery-spotlight.mp3`
+=== 2026-05-21T03:23:44-07:00 done  calibr-briefing (exit 0) ===

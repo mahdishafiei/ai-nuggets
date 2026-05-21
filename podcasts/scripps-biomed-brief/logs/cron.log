@@ -164,3 +164,40 @@ Substantive shortlist (after discarding keyword false positives, unrelated lobby
 Notes: All four chosen items represent distinct axes — extracellular degrader paradigm, non-viral protein delivery, induced-proximity discovery engine, and PHH-scale enabling supply.
 === 2026-05-20T03:35:51-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-05-21T03:30:02-07:00 start scripps-biomed-brief ===
+Episode shipped. The orchestrator will push.
+
+## Run summary — Scripps Biomedical Brief 2026-05-21
+
+**Episode:** `2026-05-21-cox2-nanobody-endoscopy-b3gnt7-glycans-ackr3-dynamics-cafet-aptamer`
+- mp3: 2,462,659 bytes / 307.8s (5:08)
+- Voice: mistral / en_paul_neutral (primary, no fallback needed)
+- R2 published, feed updated, validated XML, committed under flock
+
+## Candidate funnel
+
+**bioRxiv bioengineering (23 scanned, 2026-05-19→21):**
+- Marnett/Coffey/Duvall — COX-2 nanobody F9 lysine-engineered for fluorescent endoscopy of colorectal adenomas — https://www.biorxiv.org/content/10.64898/2026.05.16.724741v1 **[chosen]**
+- Soh lab — CAFET charge-amplified FET aptamer biosensor, picomolar in undiluted plasma — https://www.biorxiv.org/content/10.64898/2026.05.18.726065v1 **[chosen]**
+- Burdine — acellular normothermic spleen perfusion platform (single-author; interesting platform but narrow appeal)
+- Sluijter NEO-TOP-EVs — v2 update, already covered in 2026-05-20 episode (skipped)
+- Kaji pre-cHep — already covered in 2026-05-20 episode (skipped)
+
+**bioRxiv biochemistry (30 scanned):**
+- Kohler/Hooper — B3GNT7 mucin glycosyltransferase as colitis-protection target — https://www.biorxiv.org/content/10.64898/2026.05.18.725942v1 **[chosen]**
+- Mugridge — FTO separation-of-function mutations alter m6A vs m6Am selectivity (RNA epitranscriptome drug-target relevance, shortlisted)
+- Pyle — HOTAIR lncRNA conserved structural features (shortlisted)
+- Yamada — NRF1 stability via SELS/SELK (shortlisted)
+
+**bioRxiv pharmacology and toxicology (5 scanned):**
+- Kufareva — ACKR3 conformational dynamics explain G-protein incompetence via 10-µs MD — https://www.biorxiv.org/content/10.64898/2026.05.17.725760v1 **[chosen]**
+
+**bioRxiv synthetic biology (5 scanned):** nothing met bar.
+
+**Industry news (Endpoints, Fierce Biotech, STAT):**
+- Wave RNA editing AATD monthly dosing — Endpoints, paywalled (shortlisted, deferred)
+- Relay PI3Kα Phase 2 vascular anomalies — Endpoints (shortlisted)
+- Merck/Kelun ADC sac-TMT global Phase 3 win — Endpoints (shortlisted)
+- Most other top items (Infex, Lilly-Engage, Mapp-Bio Ebola, Pfizer 25-valent pneumo) already covered by today's Calibr episode — skipped.
+
+Source failures: none.
+=== 2026-05-21T03:36:23-07:00 done  scripps-biomed-brief (exit 0) ===
