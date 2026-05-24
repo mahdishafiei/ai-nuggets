@@ -392,3 +392,39 @@ Episode 11 of Receptor & Reason for 2026-05-22 is committed (commit `30d93d7`). 
 Slate: 10 items (9 bioRxiv Tier 1 + 1 arXiv Tier 2). No Tier 4 needed.
 === 2026-05-23T03:40:48-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-24T03:20:11-07:00 start receptor-and-reason ===
+Episode shipped. Summary follows.
+
+---
+
+## 2026-05-24 Receptor & Reason — candidate funnel
+
+**Sources scanned (7-day window 2026-05-17 → 2026-05-24):**
+
+- bioRxiv (paginated full daily collection): 1,713 items scanned, 1,641 unique, 580 in neuroscience/pharmacology/sysbio/bioinformatics/genomics buckets, 219 passed CNS-pharm/agentic-AI keyword filter
+- arXiv (read from `/tmp/ai-nuggets-arxiv-cache.xml`, 500-entry cache): 45 agentic-AI + biomedical hits in window
+- Psychiatric Times: WebSearch surfaced only items already shipped in prior episodes (PT direct fetch returned 403); no fresh-enough headline in window
+- chemRxiv / society press / industry: nothing dominant enough to displace today's bioRxiv-led slate
+
+**Substantive shortlist (after discarding spurious keyword hits):**
+
+- Lerner Northwestern — Thalamus orchestrates local ACh-dependent dopamine release in learning striatum (DMS not DLS, history-gated) ★ chosen, lead
+- Hohmeister/Jhou Maryland — Mu-opioid receptor expression across VTA cell-type afferents ★ chosen
+- VECT-HORUS Jacquot — TfR1 VHH single-domain antibodies systemic siRNA delivery, NHP-validated ★ chosen
+- 28bio LaCroix — Human CNS-3D organoid + ML predicts clinical seizure liability AUROC 0.872 ★ chosen
+- Lieber Institute Kwon — Schizophrenia spatial transcriptomics multi-scale in dlPFC, BDNF-TrkB convergence ★ chosen
+- Bethus/Mari Côte d'Azur — AETA APP-derived peptide as female-biased AD synapse driver ★ chosen
+- McGill Cruces — [18F]MK-6240 tau PET in temporal lobe epilepsy follows connectivity ★ chosen
+- UAB Madamanchi/Melkani — Drosophila glial-AD + axenic microbiome → autophagic-flux failure → tau/Aβ accumulation ★ chosen
+- USC Fang/Piray — Volatility-blind vs stochasticity-blind learners double-dissociate internalizing/externalizing ★ chosen
+- DeepMind Kasenberg/Daw/Stachenfeld — DataDIVER automated discovery of interpretable cognitive models ★ chosen (closer)
+- Northwestern Adney — SCN2A-M1879T iPSC neuron Nav1.2 blocker rescue (shipped in Ep 12, deduped)
+- Vanderbilt Kang — 4-phenylbutyrate GABRA1 chaperone rescue (shipped Ep 12, deduped)
+- Bristol Sabec/Ashby — pharmacological restoration of axonal mitochondrial trafficking in tauopathy (held, similar AD-mitochondrial coverage today)
+- Bergen TARP-pep — disruption of TARP-ARC interaction stabilizes synaptic AMPARs (held)
+- Glasgow Sharma — psoriasis-related neuroinflammation disrupts thalamostriatal driving anhedonia (held)
+- Tel Aviv — davunetide + estrogen replacement (held — weaker result)
+- arXiv SciCore-Mol (2605.22287) — pluggable molecular cognition modules for LLMs (held, DataDIVER more directly Alan-relevant)
+- arXiv SMDD-Bench (2605.21740) — shipped in Ep 12, deduped
+
+**Episode 13 published:** 10 items, 21:29 duration (1289s), 10,312,559 bytes, mp3 uploaded to R2 at `ai-nuggets-episodes/podcasts/receptor-and-reason/episodes/2026-05-24-receptor-and-reason.mp3`, feed.xml updated, shipped ledger appended, committed as `dfc398b`. Orchestrator will push.
+=== 2026-05-24T03:35:25-07:00 done  receptor-and-reason (exit 0) ===

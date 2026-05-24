@@ -525,3 +525,36 @@ BioPharma Dive: ASCO 2026 abstract drop (sac-TMT, pumitamig, SSGJ-707, KLN-1010,
 Episode files: `2026-05-23-pharma-headlines.mp3` (357s) + `2026-05-23-datroway-tnbc-spotlight.mp3` (702s).
 === 2026-05-23T03:25:08-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-24T03:10:11-07:00 start calibr-briefing ===
+Both episodes generated, published to R2, indexed in the feed, and committed. The orchestrator handles the push.
+
+**Run summary — Calibr-Skaggs Daily Briefing, Sunday 2026-05-24 (Memorial Day weekend):**
+
+Today's episodes
+- Headlines (5:27, 327s, 2.5 MB): 5 stories — daraxonrasib plenary teaser + Merck/Moderna intismeran 5-yr melanoma data + Parabilis IPO + Novartis T-Charge defense + Roche/Chugai Alecensa tumor-agnostic ALK Japan
+- Spotlight (12:24, 744s, 5.7 MB): Revolution Medicines RAS(ON) tri-complex platform, RASolute 302 plenary May 31, Iambic AI partnership, four Calibr read-throughs
+
+Candidate funnel
+- BioPharma Dive (ASCO26 5 data snapshots, Parabilis IPO, Lilly retatrutide, Biotech IPO tracker): scanned 5, retained 3 (intismeran 5-yr, Parabilis IPO, daraxonrasib plenary)
+- Fierce Biotech (Novartis T-Charge defense, Biogen-Denali kill, BioAge Labs, in-vivo CAR-T deals): scanned 5, retained 1 (T-Charge — Biogen-Denali/BIIB122 already covered Friday)
+- Fierce Pharma (Datroway, Wegovy pill EU CHMP, AbbVie/Novartis layoffs, Alecensa Japan): scanned 5, retained 1 (Alecensa — rest covered Saturday)
+- Revolution Medicines IR + Cancer Network + ASCO Post: scanned 6, retained 2 (RASolute 302 plenary confirmed; daraxonrasib detail dossier)
+- Endpoints News: 403, skipped (no retry)
+- Sunday-specific feeds (BioSpace, BusinessWire, PR Newswire): scanned, only market-research reports — no qualifying biotech news for May 24 itself
+
+Shortlist after deduplication
+- Revolution Medicines daraxonrasib RASolute 302 plenary confirmed for ASCO May 31 — CHOSEN (spotlight, plus headline #1)
+- Merck/Moderna intismeran INTerpath-001 5-yr follow-up — CHOSEN (headline #2)
+- Parabilis Medicines Nasdaq IPO filing (PBLS) — CHOSEN (headline #3)
+- Novartis T-Charge platform defense — CHOSEN (headline #4)
+- Chugai/Roche Alecensa Japan tumor-agnostic ALK approval — CHOSEN (headline #5)
+- Biogen-Denali BIIB122 LRRK2 Parkinson's failure — already covered Friday #2, dropped
+- PD-1/VEGF bispecific ASCO updates — already covered Friday #4, dropped
+- KLN-1010 ASCO abstract — already covered Saturday #5, dropped
+
+Spotlight rationale
+- Revolution Medicines explicitly named on Calibr AI-in-drug-discovery focus area
+- Iambic-RevMed AI partnership ($25M+R&D reimbursement, NeuralPLexer + PropANE, target-level exclusivity) is closest scalable platform-deal template for Calibr-sized AI partnerships
+- RASolute 302 plenary May 31 is single highest-impact data presentation of ASCO 2026
+- Multi-allelic RAS(ON) tri-complex chemistry parallels Friday's Helicon PPI spotlight (Parabilis) — completes the "current decade's chemistry frontier" frame
+- Four concrete Calibr read-throughs (AI partnership template, subpopulation-first labeling, PPI chemistry investment, solo-pharma launch posture)
+=== 2026-05-24T03:32:35-07:00 done  calibr-briefing (exit 0) ===

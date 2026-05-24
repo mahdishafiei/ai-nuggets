@@ -264,3 +264,30 @@ Substantive shortlist (after discarding spurious matches):
 Source-side failures: Endpoints News 404 after redirect; Fierce Biotech R&D page 404; Nature.com auth redirect. Proceeded with bioRxiv + STAT + Fierce homepage as the four-source basis — sufficient for today's selection.
 === 2026-05-23T03:40:06-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-05-24T03:30:11-07:00 start scripps-biomed-brief ===
+Episode shipped. Commit landed cleanly; orchestrator handles the push.
+
+## Candidate funnel
+
+bioRxiv (chemical biology / pharmacology and toxicology / bioengineering / synthetic biology + adjacent cell/cancer/immunology, 2026-05-22 → 2026-05-24, 120 of 397 items pulled across paginated API calls; 38 in relevant categories after category filter):
+
+- Mitcheltree/Boo/Boyer (Merck Sharp and Dohme) — Mirror-image mRNA display, all-D macrocyclic peptide for cryptic KRAS back pocket, https://www.biorxiv.org/content/10.64898/2026.05.20.726527v1 **[CHOSEN]**
+- Barrueco/Lakemeyer (Bath) — SuFEx-electrophile covalent macrocyclic ABPs against non-catalytic protease residues, https://www.biorxiv.org/content/10.64898/2026.05.20.726481v2 **[CHOSEN]**
+- Chen/Vining (Penn) — Mechanical licensing of DCs via matrix stress relaxation, https://www.biorxiv.org/content/10.64898/2026.05.19.725170v2 **[CHOSEN]**
+- Ghosh/Wei (Penn) — Mitochondrial copper as structural cofactor of TCA lipoylation machinery, https://www.biorxiv.org/content/10.64898/2026.05.20.726656v1 **[CHOSEN]**
+- Tittelmeier (LMU Munich) — Sphingolipid metabolism, endolysosomal membrane fluidity, tau seeding, https://www.biorxiv.org/content/10.1101/2024.10.24.619578v?
+- Carneiro (NOVA) — Endogenous intronic RNA as trigger for conditional CRISPR (intcgRNA), https://www.biorxiv.org/content/10.64898/2026.03.24.714022v2
+- Valero/Kjems (Aarhus) — Transcriptional incorporation of amino-acid and glycosyl-modified nucleotides into RNA, https://www.biorxiv.org/content/10.64898/2026.04.22.720138
+- Moeller (Gubra) — De novo cyclic MC4R peptide agonist (already covered 2026-05-22), excluded
+- Rolfe/Dadario (Columbia) — Convection-enhanced delivery of dexamethasone in glioma, https://www.biorxiv.org/content/10.1101/2025.09.24.677899
+- Ithakisiou (UMC Utrecht) — Personalized multi-assay PCD platform with DNAI1 mRNA-LNP rescue, https://www.biorxiv.org/content/10.64898/2026.05.21.726963
+
+Discarded as not Schultz-targeted: Plasmodium ALP3/5a, paclitaxel deacetylases, replisome architecture, Rhodiola antioxidants, yeast secretome, eL22 ribosome assembly, vascular deformation mapping, PET-hydrolyzing enzymes, retinal electrophysiology, phthalate exposure, oocyte development, Robinow syndrome DVL, MeCP2 frameshifts, X-ray radiation proteomics, immune reconstitution failure in HIV (interesting but no clear drug-discovery handle), JPT2/HN1L knockout mouse, cigarette smoke TRPV4, Nipah Virus fusion protein, MEK-resistance DRP1 in PDAC, TDP-43 in satellite cells, CDK1-cyclin B1 replication.
+
+Industry news: Sunday — STAT, Endpoints, FiercePharma quiet; Friday FDA actions (Datroway 1L TNBC, Hepcludex HDV) already covered in 2026-05-23 Calibr Briefing.
+
+Sources:
+- [Mirror-image mRNA display, cryptic KRAS back pocket — Merck](https://www.biorxiv.org/content/10.64898/2026.05.20.726527v1)
+- [Covalent macrocyclic ABPs, SuFEx scanning — Bath](https://www.biorxiv.org/content/10.64898/2026.05.20.726481v2)
+- [Mechanical licensing of dendritic cells — Penn](https://www.biorxiv.org/content/10.64898/2026.05.19.725170v2)
+- [Mitochondrial copper and TCA lipoylation — Penn](https://www.biorxiv.org/content/10.64898/2026.05.20.726656v1)
+=== 2026-05-24T03:37:47-07:00 done  scripps-biomed-brief (exit 0) ===
