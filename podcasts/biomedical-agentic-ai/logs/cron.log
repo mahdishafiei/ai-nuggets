@@ -954,3 +954,33 @@ Committed. Final run summary follows.
 **Why Text-to-Target won today:** direct Su Lab fit (agentic AI, data integration, drug discovery, provenance), three-way partition is the architectural pattern worth carrying forward, end-to-end empirical validation against orthogonal screen holdouts, thematic contrast with yesterday's ChronoMedKG (same multi-LLM primitive, different application), and explicit "agentic evidence-refresh loops" closing aligns with show brief. v2 within recency window; soft staleness concern from yesterday's run (v1 from 2026-04-30) noted in itunes:summary but the v2 update is in the 2-day window and the architectural lesson is the durable contribution.
 === 2026-05-24T03:10:26-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-25T03:00:48-07:00 start biomedical-agentic-ai ===
+Committed. Final summary follows for cron.log audit.
+
+---
+
+**Run summary — biomedical-agentic-ai 2026-05-25**
+
+Pick: HPO Mapper (Kadhim, Green, Boags, George, Heinson, Stammers, Kipps, Beattie, **Robinson**, Ashton, Ennis — Southampton + NIHR Southampton BRC + Berlin Institute of Health). medRxiv DOI 10.64898/2025.12.20.25342726 v2 posted 2026-05-23. Embedding-for-recall plus LLM-for-precision applied at the ontology *ingestion* layer; F1 0.85/0.84, 62.3% conversion of previously unusable free text, IBD cohort projection recovers NOD2/IL6/STAT3/IL10RA/CTLA4 drivers. Peter Robinson (HPO creator) co-authorship signals production trajectory.
+
+**Candidate funnel (last 2 days, 2026-05-23..2026-05-25):**
+
+- bioRxiv (full collection paged across 4 cursors, 101 total, 19 keyword hits) — survivors after discarding spurious keyword matches:
+  - Genos-m: foundation model for human-associated microbial genomes (10.64898/2026.05.21.726868 v1, 2026-05-24) — foundation-model not agentic; dropped
+- medRxiv (full collection paged across 2 cursors, 55 total, 7 keyword hits) — substantive shortlist:
+  - **HPO Mapper** (10.64898/2025.12.20.25342726 v2, 2026-05-23) — **chosen**
+  - MyeGPT: AI agent for Multiple Myeloma (10.64898/2026.05.14.26353252 v3, 2026-05-24, NUS Chng) — narrow scope (single disease, single dataset); strong runner-up
+  - Digital Registrar: schema-first multi-cancer LLM pathology abstraction (10.1101/2025.10.21.25338475 v9, 2026-05-23, China Medical U Taiwan Chang) — v9 means conceptual contribution in literature for months
+  - Cannot, Should Not, Did Anyway / FrameProbe-KnowDoBench (10.64898/2026.05.20.26353719 v1, 2026-05-24, Baylor Haq) — LLM safety not agentic biomedical AI
+- arXiv (live API HTTP 429 rate-limited despite single OR'd query and 30s backoff; fell back to /list/cs.AI/new, /list/q-bio/new, /list/cs.MA/new web fetches):
+  - PRAXIS: case-distilled and code-verified AI agents for biological research (2605.23169 v1, 2026-05-22) — at edge of 2-day window; HPO Mapper has tighter empirical case and more direct ontology fit
+  - Human-in-the-Loop Multi-Agent Ventilator Decision Support (2605.23320) — clinical bedside scope
+  - RAG4Outcome chronic osteomyelitis prognostic RAG (2605.22833) — narrow clinical scope
+  - Self-Refining Topology Optimization Multi-Agent (2605.23273) — engineering not biomedical
+- ChemRxiv (WebSearch fallback) — nothing fresh and on-theme in window
+- ARPA-H / NIH / NSF / HHS press pages — no fresh agentic-AI biomedical announcements in window (IGoR launch was 2026-05-05, outside)
+- General web / Nature / Science — no fresh agentic-biomedical-AI headline in window
+
+**Source failures:** arXiv live API rate-exceeded on both initial call and 30s-backoff retry; recovered via /list/ web fetch on cs.AI/q-bio/cs.MA endpoints. ChemRxiv via WebSearch fallback (Cloudflare gates the public API from this host).
+
+**Pipeline:** Script written, mistral TTS produced 361s mp3 (2,891,276 bytes), R2 upload to `ai-nuggets-episodes` bucket succeeded, feed.xml updated and validates as XML, commit a681c62 created via flock. Orchestrator handles push.
+=== 2026-05-25T03:14:26-07:00 done  biomedical-agentic-ai (exit 0) ===

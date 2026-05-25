@@ -292,3 +292,25 @@ Sources:
 - [Mitochondrial copper and TCA lipoylation — Penn](https://www.biorxiv.org/content/10.64898/2026.05.20.726656v1)
 === 2026-05-24T03:37:47-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-05-25T03:30:48-07:00 start scripps-biomed-brief ===
+Commit pattern matches yesterday's (no mp3 in git — served from R2). Run complete.
+
+## Candidate funnel — 2026-05-25
+
+Sources scanned: bioRxiv API for 2026-05-23 → 2026-05-25 (227 papers, filtered to chemical biology / pharmacology / bioengineering / biochemistry / cancer biology / synthetic biology / immunology adjacent — ~30 candidates surfaced).
+
+Substantive shortlist (after discarding off-topic keyword hits):
+
+- **[CHOSEN]** Nichakawade/Mog/Pearlman with Kinzler/Papadopoulos/Pardoll (Johns Hopkins) — MANTIS geometric AND-gated CAR architecture using extracellular receptor dimensions and kinetic-segregation triggering as the input gate — https://www.biorxiv.org/content/10.64898/2026.05.22.726983v1
+- **[CHOSEN]** Wang/Liu/Li (Houston Methodist with Stanford/Baylor) — Ferrous iron lysosomal accumulation as hallmark/vulnerability of therapy-induced senescence; sequential GPX4+FSP1 ferroptosis induction as senolytic in breast cancer PDX — https://www.biorxiv.org/content/10.64898/2026.05.20.726695v1
+- **[CHOSEN]** Lee/Zhou/Xue with Freeman + van der Donk (Minnesota) — Sinefungin biosynthesis solved: B12-dependent radical SAM enzyme + PEARL aminoacyl-tRNA ligases — https://www.biorxiv.org/content/10.64898/2026.05.21.726688v1
+- **[CHOSEN]** Cohen/Gabay/Gal (Tel Aviv University) — Cell-permeable C16orf74 peptide selectively blocks calcineurin-NFAT PPI without inhibiting calcineurin catalysis — non-toxic alternative to cyclosporine — https://www.biorxiv.org/content/10.64898/2026.05.21.726749v1
+- Wedan/Nowinski (Van Andel Institute) — ACC1-dependent endogenous malonate synthesis fuels mtFAS and OXPHOS — strong biochemistry but narrower translational hook than chosen four — https://www.biorxiv.org/content/10.64898/2026.05.22.727248v1
+- Nathalia/de Greef (Eindhoven) — miRNA negative-feedback circuits for autonomous synNotch control — solid synthetic biology, narrower than MANTIS — https://www.biorxiv.org/content/10.64898/2026.05.22.727153v1
+- Kaneko/Komatsu (University of Tokyo) — single-molecule fluorogenic glycosidase probes for activity-based liquid biopsy — interesting chemical-biology tool, smaller scope — https://www.biorxiv.org/content/10.64898/2026.05.22.727124v1
+- Santa Maria/Gorman (Wyss/Harvard) — 10× inter-individual variance in brain shuttle receptor expression — already covered by yesterday's receptor-and-reason episode, skipped per "not already shipped today" rule analogue
+- Texier/Szelechowski (Toulouse) — microglial Foxo3 as PD vulnerability — neuroscience-leaning, fits receptor-and-reason better
+
+**Skipped**: arXiv (single-show pipeline focuses on bioRxiv for biomedical brief audience); industry news outlets (no fresh R&D-pipeline pieces in scan window meeting the depth bar over today's preprint set).
+
+Ship: `2026-05-25-mantis-logic-car-tis-ferroptosis-senolysis-sinefungin-radical-sam-cn-nfat-peptide.mp3` (3,569,624 bytes, 446s) → R2 uploaded; feed updated; committed `03dae72`; orchestrator will push.
+=== 2026-05-25T03:38:18-07:00 done  scripps-biomed-brief (exit 0) ===
