@@ -429,3 +429,41 @@ Episode shipped. Summary follows.
 **Episode 13 published:** 10 items, 21:29 duration (1289s), 10,312,559 bytes, mp3 uploaded to R2 at `ai-nuggets-episodes/podcasts/receptor-and-reason/episodes/2026-05-24-receptor-and-reason.mp3`, feed.xml updated, shipped ledger appended, committed as `dfc398b`. Orchestrator will push.
 === 2026-05-24T03:35:25-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-25T03:20:48-07:00 start receptor-and-reason ===
+Episode shipped. Final audit log below.
+
+---
+
+**Receptor & Reason — 2026-05-25 run summary**
+
+- Audio: `2026-05-25-receptor-and-reason.mp3` — 7,633,441 bytes, 954 s (15:54), Mistral primary
+- R2 upload: complete; feed updated; ledger appended (10 keys); committed `2ed51fd`
+- Push deferred to orchestrator
+
+**Source funnel:**
+
+- bioRxiv (1691 papers in 7-day window 2026-05-18→05-25, paginated 17 pages): 64 in neuroscience/pharmacology categories → 59 after pharm/psych keyword filter → 17 substantive shortlist after manual review
+- arXiv (live API 400-result listing, no cache today — runner pre-fetch failed): 227 in cs.AI/cs.CL/cs.MA/q-bio.QM/q-bio.NC with bio+agentic overlap → 86 strict-filtered → ~6 substantive shortlist (most arxiv items were generic LLM/agent papers without neuro/pharm grounding)
+- Tier 1 journals + Psychiatric Times + chemRxiv: not surveyed today (sufficient floor already met from bioRxiv)
+
+**Substantive shortlist:**
+
+- bioRxiv 10.64898/2026.05.22.727319 — ASXL3-thyroid hormone axis in PV interneurons / ASD (Qiu, Songjiang) — **CHOSEN #1**
+- bioRxiv 10.64898/2026.05.20.725748 — CGRP / influenza A immune engram / rimegepant (Bilbo, Duke) — **CHOSEN #2**
+- bioRxiv 10.64898/2026.05.18.725939 — ASIC1A / BLA / CO2 panic (Wemmie, Iowa) — **CHOSEN #3**
+- bioRxiv 10.64898/2026.05.18.725995 — MOV10 / corticalized fear / PTSD (Ceman, UIUC) — **CHOSEN #4**
+- bioRxiv 10.64898/2026.05.20.726604 — DESINE / schizophrenia constrained repertoire (Calhoun, Georgia State) — **CHOSEN #5**
+- bioRxiv 10.64898/2026.05.18.724443 — DRS / m6A / AD (Le, Genentech) — **CHOSEN #6**
+- bioRxiv 10.64898/2026.05.10.724145 — CACNA1G calibrated patch-clamp (Finol-Urdaneta/Ng, Wollongong) — **CHOSEN #7**
+- bioRxiv 10.64898/2026.05.15.725418 — TYK2 / IL-6 / OSM sensory neurons (Bulmer, Cambridge) — **CHOSEN #8**
+- bioRxiv 10.64898/2026.05.18.726103 — VPS26B / MPTP / M1 (Lee, KRIBB) — **CHOSEN #9**
+- arXiv 2605.23035 — SAE / Brain-LLM cortical semantic topography — **CHOSEN #10**
+- bioRxiv 10.64898/2026.05.20.726332 — ML predicting autopsy neuropathology (USC) — not chosen (lower differentiation)
+- bioRxiv 10.64898/2026.05.20.726671 — 3rd-trimester EtOH subiculum (UNM) — not chosen
+- bioRxiv 10.64898/2026.05.19.726255 — Prenatal EtOH anxiety (Binghamton) — not chosen
+- bioRxiv 10.64898/2026.05.22.727208 — Hippocampal astrocytes / fear context (Minho) — not chosen
+- bioRxiv 10.64898/2026.05.20.726444 — Cortico-striatal dopamine remodeling (Niigata) — not chosen
+- bioRxiv 10.64898/2026.05.16.716261 — sALS causal-source recovery (Shiga) — not chosen
+- arXiv 2605.23148 — LLM Psychiatric Screening (SCID benchmark) — not chosen
+- arXiv 2605.22993 — Multi-agent ADOS-2 / autism dialogue — not chosen
+- arXiv 2605.22356 — Pathology-like behavioral patterns in LMs — not chosen
+=== 2026-05-25T03:35:50-07:00 done  receptor-and-reason (exit 0) ===

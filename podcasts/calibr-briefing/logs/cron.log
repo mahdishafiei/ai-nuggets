@@ -559,3 +559,39 @@ Spotlight rationale
 - Four concrete Calibr read-throughs (AI partnership template, subpopulation-first labeling, PPI chemistry investment, solo-pharma launch posture)
 === 2026-05-24T03:32:35-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-25T03:10:48-07:00 start calibr-briefing ===
+Commit succeeded. Note: some unescaped `$` in the commit message were shell-expanded (the feed.xml itself is intact since it didn't go through shell). Per pipeline instructions, the orchestrator will handle the push.
+
+Now the candidate funnel summary.
+
+## Run summary
+
+**Episodes generated and committed:**
+- `2026-05-25-pharma-headlines` — 6:31 (3,131,185 bytes)
+- `2026-05-25-biontech-pumitamig-spotlight` — 11:29 (5,513,134 bytes)
+
+Both audio files generated via Mistral primary TTS, uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml updated and validated, committed as `f70b574` under the git lock. Push deferred to orchestrator.
+
+**Candidate funnel for May 25, 2026 (Memorial Day):**
+
+Source: ASCO 2026 abstracts (released May 21, embargo lifted) — meeting opens May 29
+- BioNTech pumitamig ROSETTA Lung-02 1L NSCLC interim Phase 2 readout May 30 — **chosen as spotlight + headline #1**
+- BioNTech gotistobart PRESERVE-004 platinum-resistant ovarian Phase 2 OS May 30 — woven into spotlight
+- Akari Therapeutics AKTX-101 spliceosome modulator ADC + KRAS combo (preclinical) — **chosen #2**
+- Legend Biotech LB2102 DLL3 CAR-T R/R SCLC/LCNEC Phase 1 — **chosen #3**
+
+Source: Fierce Pharma / BioPharma Dive / STAT (Memorial Day weekend, light news cycle)
+- Full-Life Technologies $150M Series D + Ac-225 manufacturing (May 18-22) — **chosen #4**
+- Retro Biosciences $1.8B valuation (May 22, Sam Altman-anchored longevity) — **chosen #5**
+- AbbVie 85 Allergan Aesthetics layoffs (May 22) — covered yesterday, skipped
+- Novartis 76 NJ cuts (May 22) — covered yesterday, skipped
+- Wegovy pill EU CHMP positive opinion (May 22) — covered yesterday's headlines, skipped
+- AZ/Daiichi Datroway 1L TNBC (May 22) — covered Friday's spotlight, skipped
+- AZ Etcamah CHMP split with FDA AdComm (May 22) — covered yesterday, skipped
+- BioAge NLRP3 podcast (May 22) — secondary, skipped
+- Lecanemab Iqlik PDUFA extension (May 8 announcement, May 24 prior PDUFA) — too stale, skipped
+- Merck-Kelun sac-TMT ASCO (May 21) — covered, skipped
+
+Source-side outages: none — all four primary sources reachable; endpoints.news returned 403 to anonymous WebFetch but other sources covered the same items.
+
+Editorial pivot: yesterday went deep on RAS pipeline (RevMed daraxonrasib). Today pivots to different platform — bispecific antibodies (BioNTech pumitamig) — with Akari AKTX-101 as the bridge headline (RAS + ADC chemistry combination, the natural follow-up to yesterday's RevMed combination-strategy framing).
+=== 2026-05-25T03:25:50-07:00 done  calibr-briefing (exit 0) ===
