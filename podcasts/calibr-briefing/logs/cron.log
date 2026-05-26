@@ -596,3 +596,32 @@ Source-side outages: none — all four primary sources reachable; endpoints.news
 Editorial pivot: yesterday went deep on RAS pipeline (RevMed daraxonrasib). Today pivots to different platform — bispecific antibodies (BioNTech pumitamig) — with Akari AKTX-101 as the bridge headline (RAS + ADC chemistry combination, the natural follow-up to yesterday's RevMed combination-strategy framing).
 === 2026-05-25T03:25:50-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-26T03:10:07-07:00 start calibr-briefing ===
+Commit landed clean with the full candidate funnel. Both episodes are written, audio generated, published to R2, feed.xml updated and validated as XML, and committed. The orchestrator handles the push.
+
+**Final summary for Tuesday May 26, 2026:**
+
+Two episodes produced and shipped for `calibr-briefing`:
+
+1. **Headlines** (4:41, 2.2 MB) — Six items led by Lilly VERVE-102 Heart-2 Phase 1b data, plus Innovent IBI363 ASCO abstract, BMS SUCCESSOR-2 mezigdomide ASCO data, Summit/Akeso HARMONi-6 ivonescimab plenary preview, GSK/Boston efimosfermin Phase 2 MASH data (FGF21-relevant), Lilly Engage Bio acquisition close.
+
+2. **Spotlight** (8:49, 4.2 MB) — Deep dive on VERVE-102 in vivo PCSK9 base editor: NEJM + EAS late-breaker May 25; GalNAc-LNP delivers mRNA-encoded adenine base editor + guide RNA targeting PCSK9 splice donor; 88% PCSK9 + 62% LDL reduction at top dose sustained 18 months; validates Lilly's $10B+ in vivo platform (Verve, Orna, Kelonia, Engage Bio); three Calibr read-throughs covering in vivo CAR-T paradigm validation, chronic-dosing competitive frame, and pricing implications.
+
+**Candidate funnel:**
+Sources scanned: Fierce Biotech, Fierce Pharma, Endpoints, STAT, BioPharma Dive, BioSpace, pharmaphorum, ASCO abstracts, EAS press releases, NEJM. All sources returned content; no source-level outages.
+
+Shortlist after filtering:
+- Lilly VERVE-102 Heart-2 Phase 1b (NEJM + EAS, May 25) — [CHOSEN SPOTLIGHT]
+- Innovent IBI363 PD-1×IL-2α bispecific ASCO abstract — [headline]
+- BMS SUCCESSOR-2 mezigdomide Phase 3 R/R MM ASCO abstract — [headline]
+- Summit/Akeso HARMONi-6 ivonescimab Phase 3 plenary May 31 — [headline]
+- GSK/Boston efimosfermin Phase 2 24-week MASH data — [headline]
+- Lilly Engage Bio acquisition closed Monday — [headline]
+- BioNTech ASCO push update (dropped — covered May 25 spotlight)
+- Lilly retatrutide Phase 3 obesity (dropped — covered May 22)
+- AZ EMERALD-3 hepatocellular Imfinzi+Imjudo+TACE (dropped — lower priority)
+- Pfizer ASCO oncology pipeline showcase (dropped — broad PR)
+- AbbVie + Novartis US workforce cuts (dropped — May 22, not fresh)
+- Daiichi/AZ Datroway 1L TNBC approval (dropped — covered May 23)
+
+Commit: `c275367` on main. Orchestrator will push.
+=== 2026-05-26T03:22:20-07:00 done  calibr-briefing (exit 0) ===

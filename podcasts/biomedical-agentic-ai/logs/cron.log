@@ -985,3 +985,32 @@ Pick: HPO Mapper (Kadhim, Green, Boags, George, Heinson, Stammers, Kipps, Beatti
 **Pipeline:** Script written, mistral TTS produced 361s mp3 (2,891,276 bytes), R2 upload to `ai-nuggets-episodes` bucket succeeded, feed.xml updated and validates as XML, commit a681c62 created via flock. Orchestrator handles push.
 === 2026-05-25T03:14:26-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-05-26T03:00:07-07:00 start biomedical-agentic-ai ===
+Episode shipped. Final run summary follows for cron.log audit.
+
+---
+
+**Run summary — biomedical-agentic-ai 2026-05-26**
+
+**Pick:** SpatialClaw — memory-augmented autonomous agent ecosystem for spatial omics analysis. Group at Northwestern Polytechnical University (Xuequn Shang corresponding). bioRxiv DOI 10.64898/2026.05.21.723451 v1, posted 2026-05-25. Thirty specialized spatial-omics skills plus a graph-based persistent memory architecture with three hierarchical layers (session/episodic/semantic) under a deterministic promotion policy, bridged to the main agent via a Memory-Augmented Reasoning (MAR) operator. Beats both standard-LLM and memory-only configurations across three memory-sensitive scenarios on ten skills. End-to-end TNBC tumor-microenvironment analysis on a 15-section cohort in three conversational turns with zero direct scripting. Read: versioned-nodes-and-edges memory is essentially a knowledge-graph substrate for agent state — directly in Su Lab's wheelhouse on agentic AI, biomedical KGs, and reproducibility.
+
+**Candidate funnel (last 2 days, 2026-05-25..2026-05-26):**
+
+- bioRxiv (full collection paged across 6 cursors, 168 items, 28 keyword hits) — survivors after discarding spurious matches:
+  - **SpatialClaw** (10.64898/2026.05.21.723451 v1, 2026-05-25) — **chosen**
+  - Carbon: Decoding the Language of Life (10.64898/2026.05.22.727119 v1, 2026-05-25, Hugging Face / Bernardo) — strong genomic foundation model paper (3B/8B decoder-only, non-overlapping 6-mer tokenization, 65K-131K context, competitive with Evo2-7B at <half params and tens-fold faster inference) but architecturally a foundation-model story not agentic; close runner-up on quality, weaker on brief fit
+  - OryzaG3 single-species rice pangenome foundation model (10.64898/2026.05.22.727045 v1, 2026-05-26) — foundation-model not agentic, plant-focused (less biomedical fit)
+- arXiv (500 cached entries, 94 biomedical × agentic-keyword matches in 2-day window):
+  - What Makes a Medical Checker Trainable? (2605.25988 v1, 2026-05-25, Yuelyu Ji) — diagnostic study of NLI checkers as process rewards in GRPO-trained medical RAG; signal-collapse and reward-hacking findings are technically interesting but contribution is diagnostic rather than architectural
+  - Uncertainty Reasoning with LLMs for Explainable Disease Diagnosis (2605.25566 v1, 2026-05-25) — on-theme but architecturally less novel
+  - A Multimodal 3D Foundation Model for Light Sheet Fluorescence Microscopy (2605.26026 v1, 2026-05-25) — biomedical foundation model, narrow modality
+  - From Model Scaling to System Scaling: Scaling the Harness in Agentic AI (2605.26112 v1, 2026-05-25) — on-theme architecturally but not biomedical-specific
+- ChemRxiv (WebSearch fallback) — no fresh on-theme items in 2-day window
+- ARPA-H / NIH / NSF / HHS press — no fresh agentic-AI biomedical announcements in window (WebSearch surfaced only NVIDIA GTC 2026 industry-trend pieces and pre-window items)
+- General web / Nature / Science — no fresh agentic-biomedical-AI headline in window
+
+**Why SpatialClaw won:** (1) direct Su Lab fit across agentic AI + KGs + ontologies + data integration + reproducibility; (2) the graph-based persistent memory plus MAR operator is the architectural pattern worth carrying forward — versioned nodes/edges + promotion policy = KG primitives applied to agent memory; (3) memory-only ablation isolates the value of the reasoning bridge rather than just having any memory; (4) end-to-end paper-grade biology demonstration (TNBC, 15 sections, 3 turns); (5) thematically distinct from recent stretch (first persistent-memory-as-graph episode and first deep-skill-library episode in this run); (6) on-recency (v1 posted 2026-05-25).
+
+**Source failures / friction:** None at the search layer (bioRxiv, arXiv cache, WebSearch all responsive). One pipeline friction: `scripts/publish_episode.sh` hard-codes `npx` which is not on PATH in this environment; worked around by invoking `node worker/node_modules/.bin/wrangler` directly from the worker dir. R2 upload then succeeded. Worth fixing the script to detect-and-fallback (e.g., prefer `worker/node_modules/.bin/wrangler` if present) so a stock host without npm installed isn't blocked.
+
+**Pipeline:** Script written (5057 chars), Mistral TTS produced 265s mp3 (2,123,694 bytes) in 2 chunks, R2 upload to `ai-nuggets-episodes/podcasts/biomedical-agentic-ai/episodes/2026-05-26-spatialclaw-memory-augmented-autonomous-spatial-omics.mp3` succeeded, feed.xml updated and parses, commit `c72c245` created via flock. Orchestrator handles push.
+=== 2026-05-26T03:08:23-07:00 done  biomedical-agentic-ai (exit 0) ===

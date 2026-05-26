@@ -315,3 +315,28 @@ Substantive shortlist (after discarding off-topic keyword hits):
 Ship: `2026-05-25-mantis-logic-car-tis-ferroptosis-senolysis-sinefungin-radical-sam-cn-nfat-peptide.mp3` (3,569,624 bytes, 446s) → R2 uploaded; feed updated; committed `03dae72`; orchestrator will push.
 === 2026-05-25T03:38:18-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-05-26T03:30:08-07:00 start scripps-biomed-brief ===
+Committed. The orchestrator will push at end of run.
+
+## Final summary — Scripps Biomedical Brief, 2026-05-26
+
+**Shipped:** `2026-05-26-darc1-capsid-ass1-arginine-ph-all-cgas-bubble-dna-tact-hydrogel-adc`
+- Script: 717 words
+- Audio: 2,182,208 bytes, 272.7s (Mistral primary, both chunks)
+- R2: uploaded to `ai-nuggets-episodes/podcasts/scripps-biomed-brief/episodes/...mp3`
+- Feed: validated, new `<item>` prepended
+- Commit: `166cf1a` (flock-serialized, no push)
+
+**Candidate funnel (May 25–26, 2026):**
+
+- **bioRxiv**: 174 preprints across the window scanned via API; substantive shortlist (after discarding off-topic matches):
+  - **In vitro-reconstituted Drosophila Arc capsids deliver gene editors to dystrophic muscle** — Lash/Strebinger/Segel, F. Zhang lab, Broad. https://www.biorxiv.org/content/10.64898/2026.05.25.727180v1 ✓ **CHOSEN**
+  - **ASS1 deficiency defines a therapeutic vulnerability in Ph+ ALL** — Austin/Patel, Barts. https://www.biorxiv.org/content/10.64898/2026.05.21.724233v1 ✓ **CHOSEN**
+  - **cGAS bends unpaired DNA to form an unconventional structure that hyperactivates the innate immune response** — Yang/Wu, J. Ting lab, UNC. https://www.biorxiv.org/content/10.64898/2026.05.22.726336v1 ✓ **CHOSEN**
+  - **Hydrogel confinement enables subcutaneous delivery of vesicant ADCs** — Jacquot/Hervy, Detappe lab, Strasbourg. https://www.biorxiv.org/content/10.64898/2026.05.21.726796v1 ✓ **CHOSEN**
+  - Reversion mutations define minimal BRCA1/2 requirements for therapy resistance — Magraner-Pardo et al. https://www.biorxiv.org/content/10.64898/2026.05.22.727163v1
+  - CRISPR activation of endogenous PKD1 increases polycystin-1 and suppresses cellular ADPKD features. https://www.biorxiv.org/content/10.64898/2026.05.23.727418v1
+  - PIEZO1-mediated mechanosensation links aging to bladder dysfunction. https://www.biorxiv.org/content/10.64898/2026.05.24.726025v1
+- **Endpoints / STAT / Fierce Biotech**: only fresh item was Lilly–Verve PCSK9 base editor (already extensively covered by sibling Calibr Briefing today; not duplicated here).
+- **Nature / Science / Cell**: 403 from WebFetch on direct article listings; skipped (no retry burned).
+- **ChemRxiv**: no May 25–26 hits matching brief.
+=== 2026-05-26T03:37:44-07:00 done  scripps-biomed-brief (exit 0) ===

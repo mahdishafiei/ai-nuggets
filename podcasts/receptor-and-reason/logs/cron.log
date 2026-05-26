@@ -468,3 +468,39 @@ Episode shipped. Final audit log below.
 - arXiv 2605.22356 — Pathology-like behavioral patterns in LMs — not chosen
 === 2026-05-25T03:35:50-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-26T03:20:07-07:00 start receptor-and-reason ===
+Episode shipped. Audio is 17:51 (1071 s), 8.6 MB, voiced by Mistral Paul Neutral.
+
+---
+
+**Candidate funnel — receptor-and-reason 2026-05-26 (rolling 7d, 2026-05-19 → 2026-05-26):**
+
+Sources scanned:
+- bioRxiv (neuroscience/pharm/bioinformatics/animal behavior/systems biology): 1,485 unique DOIs across the 7-day window, 287 in those categories, 256 after title-level neuropsychopharm/agentic-AI filter, dedup ledger applied (140 prior shipped keys).
+- arXiv cs.AI/cs.CL/cs.MA/q-bio cache: 500 entries, 121 with biomedical + agentic relevance after recency filter.
+- Neuropsychopharmacology, Molecular Psychiatry: nature.com behind authwall — `WebFetch` 303-redirected to IdP, fell back to `WebSearch site:nature.com` which surfaced May-dated items but none distinctly inside the 7-day window passed the threshold.
+- Psychiatric Times: 403 from `WebFetch`; `WebSearch` returned recent items but the strongest (COMP360 PTSD IND) is Jan 2026, outside window.
+- chemRxiv: not surveyed (none surfaced through bioRxiv/arXiv filters; deferred).
+
+Substantive shortlist after spurious-match cull (✔ = chosen):
+
+- ✔ Steinfeld/Niswender/Javitch — mGlu1/5 heterodimer protomer asymmetry, CODA-RET, allosteric inversion (10.64898/2026.05.20.726619)
+- ✔ Gundersen/Bramham + Greger — TARP-ARC TAT peptide rescues social-isolation fear deficit (10.1101/2024.08.04.606518 v2)
+- ✔ Yang/Sun (Peking U NIDD) — ANKS1B nucleus accumbens cocaine escalation via CBP-FoxO3 (10.64898/2026.01.11.698845 v2)
+- ✔ Gusinskaia/Maldonado — female cannabinoid (WIN 55,212-2) addiction-like + mPFC miRNA (10.64898/2026.05.21.726674)
+- ✔ Saleki/Kienlen-Campard (UCLouvain) — PSEN2 N141I → Gbf1 → lipid/mito axis (10.64898/2026.05.20.726466)
+- ✔ Abdelrahman/Gabr (Weill Cornell) — HT-CETSA IB15C LILRB4 modulator restores microglial amyloid uptake (10.64898/2026.05.19.726383)
+- ✔ Epuran/Albrecht (Fribourg) — Per1 region-specific dissociates light circadian vs mood (10.64898/2026.05.21.726853)
+- ✔ Zhang/Bowman (Penn) — AE-PocketMiner attention GNN cryptic pockets + allosteric coupling (10.64898/2026.05.21.726899)
+- ✔ Li/SAI-Lab NYU — LipoAgent safety-gated multi-agent LLM for lipid nanoparticle design (arxiv:2605.25250)
+- ✔ Stephen/Jha (Princeton) — KG-driven expert neuroscience reasoning from textbook (arxiv:2605.25183)
+- Shirotani — Trem2 R47H vs Trem2 KO AppNL-F microglia (10.64898/2026.05.18.724708) — close runner-up
+- Amontree/Conant (Georgetown) — 4-methylumbelliferone APP/PS1 (10.64898/2026.05.21.726929) — adjacent to LILRB4 pick
+- Olson/Novak — dasatinib-quercetin not senolytic in FCD (10.64898/2026.05.19.726138) — negative-result; held
+- Tsutsumi (Nagoya) — population-individual depressive symptom energy landscapes (10.64898/2026.05.20.726729) — held
+- Serce/Palanisamy (Wash U) — lactational synthetic oxytocin sex-specific PFC dimorphism (10.64898/2026.05.19.726042) — held
+- Tang/Zhang — GPR40/FFAR1 ChEMBL cheminformatic reappraisal (10.64898/2026.05.19.726272) — non-CNS, dropped
+- Keene/Jones (Texas A&M) — direct SCN→DMH circadian output pathway (10.64898/2026.05.21.726959) — held, non-pharm
+- SpatialClaw — DROPPED (overlaps biomedical-agentic-ai ep today, c72c245)
+
+10 of 10 from Tiers 1–3 fresh, no Tier 4 fallback needed.
+=== 2026-05-26T03:37:49-07:00 done  receptor-and-reason (exit 0) ===
