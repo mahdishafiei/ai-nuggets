@@ -352,3 +352,40 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 Request ID: req_011CbSvYhXvPXZ3rmJYSXvzi
 === 2026-05-27T03:34:41-07:00 done  scripps-biomed-brief (exit 0) (retry 1) ===
 === 2026-05-28T03:30:15-07:00 start scripps-biomed-brief ===
+Episode shipped. Summary follows.
+
+# Run summary — Scripps Biomedical Brief 2026-05-28
+
+**Script:** `podcasts/scripps-biomed-brief/scripts/2026-05-28-rab27-covalent-muscle-aav-protac-ubiquitin-sites-hipk4-macrocycle.md`
+**Episode:** 2,481,049 bytes, 310 seconds, Mistral Paul Neutral primary (no fallback hit)
+**R2:** uploaded to `ai-nuggets-episodes/podcasts/scripps-biomed-brief/episodes/2026-05-28-...mp3`
+**Feed:** new `<item>` prepended, XML validates
+**Commit:** 7cff4e5 (push deferred to orchestrator)
+**Note:** Last scripts-dir episode was 2026-05-26; 2026-05-27 was missed (no script in scripts/). Today's run did not attempt to backfill.
+
+## Candidate funnel
+
+bioRxiv categories scanned (date range 2026-05-26 → 2026-05-28):
+- bioengineering — 19 items
+- pharmacology and toxicology — 9 items
+- synthetic biology — 2 items
+- biochemistry — 22 items
+- cell biology — 25 items
+- cancer biology — 25 items
+
+General web search (Endpoints, Fierce, drug-discovery press) — no specific dated breakthrough surfaced; preprint sources carried the day.
+
+Substantive shortlist (after pruning resource papers, methodological microfluidics, and ecology):
+- De Vita/Tate (Queen Mary) — first cell-active covalent inhibitors of RAB27A/B-effector PPI via non-conserved Cys123 — https://www.biorxiv.org/content/10.64898/2026.05.22.727177v1 **[CHOSEN]**
+- Luo et al. (Qilu Pharmaceutical) — muscle-tropic AAV capsid M1 with >10× AAV9 transduction and 183× liver de-targeting in NHPs — https://www.biorxiv.org/content/10.64898/2026.05.22.727076v1 **[CHOSEN]**
+- Olsson/Bersuker (Calico) — site-specific combinatorial ubiquitination governs heterobifunctional degrader efficacy — https://www.biorxiv.org/content/10.64898/2026.05.23.727405v1 **[CHOSEN]**
+- Zerva/Hanke/Knapp (Goethe) — macrocyclized bosutinib AZ137 as HIPK4 dark-kinome probe — https://www.biorxiv.org/content/10.64898/2026.04.22.720179v2 **[CHOSEN]**
+- Weiss/Mann et al. (MPI Biochemistry) — cell-type-resolved Deep Visual Proteomics atlas across 27 cell types/14 tissues — https://www.biorxiv.org/content/10.64898/2026.05.26.727663v1
+- Matsuoka/Kiyonaka (Nagoya) — off-target-free chemogenetic GPCR platform via engineered antagonist-insensitive mutants — https://www.biorxiv.org/content/10.64898/2026.05.24.727545v1
+- Fahie/Kardon (Brandeis) — HAX1 drives CLPB mitochondrial chaperone assembly/activation (congenital neutropenia mechanism) — https://www.biorxiv.org/content/10.64898/2026.05.24.727526v1
+- Bobkova/Erb (MPI Terrestrial Microbiology) — chemically tunable α-hemolysin permeability in synthetic cells — https://www.biorxiv.org/content/10.64898/2026.05.26.727826v1
+- Gao/Wu — stapled peptide inhibitors of talin-induced integrin activation — https://www.biorxiv.org/content/10.64898/2026.05.25.727761v2
+- Wong et al. — vincamine as selective CPT1b inhibitor (repurposing) — https://www.biorxiv.org/content/10.64898/2026.05.23.727424v1
+
+Source failures: none.
+=== 2026-05-28T03:35:45-07:00 done  scripps-biomed-brief (exit 0) ===

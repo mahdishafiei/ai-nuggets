@@ -521,3 +521,50 @@ Request ID: req_011CbUoNziwnCewWydiFYGan
 === 2026-05-28T03:21:51-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-05-28T03:21:51-07:00 AUP-refusal detected for receptor-and-reason; retrying in 180s ===
 === 2026-05-28T03:24:51-07:00 start receptor-and-reason (retry 1) ===
+Episode shipped. Here's the final run summary for the cron log.
+
+---
+
+**Run summary — receptor-and-reason 2026-05-28**
+
+Episode: `2026-05-28-receptor-and-reason` — 18:14 audio, 10 items, all fresh.
+
+Commit: `af67660` (orchestrator handles push).
+
+R2 upload: ✓ (`ai-nuggets-episodes/podcasts/receptor-and-reason/episodes/2026-05-28-receptor-and-reason.mp3`).
+
+Picks (mixed across tiers, topical adjacency ordering):
+1. **Kiyonaka (Nagoya)** — Off-target-free chemogenetic platform for class-A GPCRs (A2A proof-of-concept). bioRxiv 10.64898/2026.05.24.727545.
+2. **Goldschen-Ohm (UT Austin)** — 600-million-year-conserved tyrosine H-bond gates inhibitory pLGICs. bioRxiv 10.64898/2026.05.22.727206.
+3. **Freude (Copenhagen)** — miRNAs drive premature GABAergic maturation in SCZ forebrain organoids. bioRxiv 10.64898/2026.05.25.727574.
+4. **Chaudhry (Oslo)** — Slc38a1 glutamine-carrier KO produces depression/anxiety phenotype + human variant. bioRxiv 10.64898/2026.05.20.726495.
+5. **Moschak (UT El Paso)** — Distinct prelimbic ensembles for cocaine vs water motivation. bioRxiv 10.64898/2026.05.24.727445.
+6. **Nobis (Vanderbilt)** — Chronic stress × Dravet BNST CRF circuit interaction. bioRxiv 10.64898/2026.05.19.723288.
+7. **Wade-Martins (Oxford)** — Humanized GBA-L444P transgene dissociates GoF (dopamine release) from LoF (α-synuclein) in PD. bioRxiv 10.64898/2026.05.25.727583.
+8. **Liu (Peking U Third)** — PKFM grey-box Transformer + PM Agent for sparse pharmacokinetics. bioRxiv 10.64898/2026.05.23.727373.
+9. **MolLingo** — Multi-agent system with BRICS fragment SMILES for molecular design (4× docking-score gain). arXiv 2605.27853.
+10. **CaMBRAIN** — Causal Mamba SSM for real-time continuous EEG inference. arXiv 2605.28792.
+
+**Candidate funnel:**
+
+- **bioRxiv (Tier 1 + 2):** 1517 unique items pulled across 2026-05-21 → 2026-05-28 (full pagination, 53 pages). 633 survived keyword relevance filter; 340 ranked into priority buckets (PHARMA / PSYCH / AGENTIC / COMP); 124 after CNS-priority filter; 8 picked.
+
+- **arXiv (Tier 2):** 500 entries in pre-fetched daily cache; 90 in 7-day window passing CNS-pharma-bio-agentic filter; 74 after biomedical keyword pass; 2 picked (MolLingo, CaMBRAIN).
+
+- **Psychiatric Times / journal Tier 1 sources:** Cloudflare 403 blocked direct fetches all run; relied on web search snippets. Recent hits surfaced (CTx-1301 NDA → Oct 2025, PDUFA May 31 2026; BHV-7000 MDD failure → Dec 2025; Auvelity dementia agitation approval → Apr 30 2026) — all outside the 7-day recency window. Skipped, gap logged here.
+
+- **Nature/NPP, Molecular Psychiatry, Biological Psychiatry, etc.:** Direct fetches 403/303-redirected; web search returned thin late-May results. The two Nature NPP items from May 27 were already shipped on 2026-05-27 (Castro pancreatic MOPR, Shadani psilocybin, Jang DMN-escitalopram, Sofuoglu CBD-OAT) so the journal layer for this run was effectively dry.
+
+**Substantive shortlist (not picked but considered):**
+
+- 10.64898/2026.05.26.728058 — Modeling Prenatal Immune Activation in Brain Organoids (IL-6 interneuron dysmaturation). Held back — overlapped thematically with the schizophrenia organoid pick.
+- 10.64898/2026.05.24.721255 — Hypoxia-primed Wharton's Jelly MSC sEVs in VPA ASD model (intranasal). Held back — preclinical/translational depth issue; sat below first-line picks.
+- 10.64898/2026.05.21.727023 — ML-assisted tFUS phased-array design for mouse hypothalamic neuromodulation. Held back — engineering/methods, no clear CNS-pharma application yet.
+- 10.64898/2026.04.30.721768 — Text-to-Target LLM framework for AD/PDAC. Held back — agentic but heavier in cancer, weaker CNS payoff than MolLingo.
+- 10.64898/2026.05.26.727958 — Boltz-2 affinity fine-tuning open framework. Held back — strong agentic-AI-for-drug-discovery, but MolLingo offered the more architecturally novel multi-agent story.
+- 10.64898/2026.05.20.726332 — ML model predicting autopsy-confirmed AD neuropathology. Held back — useful biomarker work but less mechanistically pivotal.
+- arxiv:2605.27082 — SCENE bi-level multi-agent for clinical/biological knowledge contextualization. Held back — adjacent to MolLingo's space, MolLingo's chemistry grounding was more directly relevant.
+- arxiv:2605.28129 — ClinPivot benchmark for whether clinical foundation models change treatments. Held back — clinical-LLM evaluation, not pharmacology proper.
+- arxiv:2605.28065 — SpatialBench-Long long-horizon spatial biology agent benchmark. Held back — spatial-omics-centric, weaker neuropsychopharm fit.
+- arxiv:2605.28563 — Multi-dimensional evaluation framework for EEG foundation models. Held back — CaMBRAIN took the EEG slot with a more concrete architectural advance.
+=== 2026-05-28T03:43:37-07:00 done  receptor-and-reason (exit 0) (retry 1) ===

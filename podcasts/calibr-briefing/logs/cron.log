@@ -651,3 +651,31 @@ Two episodes shipped for 2026-05-27. Below is the candidate funnel.
 Audio published to R2, feed.xml updated, commit `b77f7f6` created via flock. Push deferred to orchestrator per pipeline.
 === 2026-05-27T03:29:14-07:00 done  calibr-briefing (exit 0) ===
 === 2026-05-28T03:10:15-07:00 start calibr-briefing ===
+Both episodes generated, audio published to R2, feed updated, and changes committed. Summary follows.
+
+**Episodes published for 2026-05-28:**
+
+- Headlines (6:32, 3.1 MB) — GSK/Ionis bepirovirsen B-Well NEJM + D&D zabopegdutide MASH + Kailera HRS-4729 tri-agonist + GSK-35Pharma HS-235 + Outlook Lytenava FDA appeal + Quince-Foresite financing
+- Spotlight (8:18, 4.0 MB) — D&D Pharmatech zabopegdutide 48-week MASH histology and the multi-receptor MASH design thesis vs efruxifermin / efimosfermin / resmetirom / tirzepatide
+
+**Candidate funnel (sources surveyed for 2026-05-28):**
+
+Sources hit: Fierce Biotech, Fierce Pharma, Endpoints News (403 — skipped after retry), STAT News, BioPharma Dive, plus targeted Web searches for press releases on bepirovirsen / zabopegdutide / VERVE-102 / Kailera / 35Pharma / Outlook / Quince. Endpoints 403 did not affect coverage; the same stories surfaced via Fierce, BioPharma Dive, and STAT.
+
+Substantive shortlist (post-filter):
+- GSK/Ionis bepirovirsen B-Well 1 + B-Well 2 NEJM (19% functional cure in chronic HBV) — https://www.nejm.org/ + https://www.businesswire.com/news/home/20260527201380/en/ — CHOSEN as lead headline
+- D&D Pharmatech zabopegdutide DD01 48-week histology Phase 2 MASH — https://www.biospace.com/press-releases/d-d-pharmatech-announces-positive-48-week-histology-results-for-zabopegdutide-dd01-demonstrating-statistically-significant-fibrosis-improvement-and-mash-resolution — CHOSEN as spotlight (MASH focus area, multi-receptor frame)
+- Kailera/Hengrui HRS-4729 Phase 1 tri-agonist (16% weight loss at 12 weeks) — https://www.biopharmadive.com/news/kailera-triple-G-obesity-drug-phase-1-data-hengrui/821191/ — CHOSEN as headline
+- GSK $950M completed 35Pharma acquisition + HS-235 activin trap — https://www.gsk.com/en-gb/media/press-releases/gsk-completes-acquisition-of-35pharma-inc/ — CHOSEN as headline
+- Outlook Therapeutics Formal Dispute Resolution win for Lytenava nAMD — https://ir.outlooktherapeutics.com/news-releases/news-release-details/outlook-therapeutics-wins-appeal-following-formal-dispute — CHOSEN as headline
+- Quince Therapeutics $187M private placement (Foresite participation) — https://www.sec.gov/Archives/edgar/data/0001662774/000119312526228133/d109149dex991.htm — CHOSEN as headline (Foresite portfolio watch)
+- Lilly VERVE-102 NEJM formal publication of Phase 1b — already covered in 2026-05-26 spotlight, dropped to avoid duplication
+- Biogen/Denali BIIB122 LUMA Parkinson's failure (May 21) — too old, dropped
+- BMS/Anthropic Claude Enterprise deal (May 20) — too old, dropped
+- AstraZeneca camizestrant PDUFA extension — covered in 2026-05-27 spotlight, dropped
+- Apogee zumilokibart APEX Part B (May 27) — covered in 2026-05-27 headlines, dropped
+- BioMarin Voxzogo hypochondroplasia Phase 3 (May 20) — too old, dropped
+- Lilly $3.8B vaccine triple (Curevo / LimmaTech / Vaccine Company) — covered in 2026-05-27 headlines, dropped
+
+Push held for the orchestrator per PIPELINE.md.
+=== 2026-05-28T03:27:35-07:00 done  calibr-briefing (exit 0) ===
