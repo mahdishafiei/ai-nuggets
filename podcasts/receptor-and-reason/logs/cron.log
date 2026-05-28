@@ -514,3 +514,10 @@ Final state for 2026-05-27:
 - `shipped.jsonl`: 16 lines, valid JSON
 - Commit `c69fce7` on `main` via flock; push deferred to orchestrator
 === 2026-05-27T03:41:56-07:00 done  receptor-and-reason (exit 0) ===
+=== 2026-05-28T03:20:15-07:00 start receptor-and-reason ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach.
+
+Request ID: req_011CbUoNziwnCewWydiFYGan
+=== 2026-05-28T03:21:51-07:00 done  receptor-and-reason (exit 0) ===
+=== 2026-05-28T03:21:51-07:00 AUP-refusal detected for receptor-and-reason; retrying in 180s ===
+=== 2026-05-28T03:24:51-07:00 start receptor-and-reason (retry 1) ===
