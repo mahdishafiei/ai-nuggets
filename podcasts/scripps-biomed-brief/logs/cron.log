@@ -451,3 +451,4 @@ Cross-show de-duplication: biomedical-agentic-ai 2026-05-30 covered MedMisBench;
 
 Source failures: WebFetch HTTP 403 (Cloudflare challenge) on four bioRxiv content URLs (728243 CIS protein delivery, 728449 optopharm actin, 728000 sialidase EGFR, 728554 HIPK2 PARP) — same DOIs also returned "no preprint found" from the bioRxiv API and MCP tool (indexing delay). Skipped without retry to avoid burning the cron window; not in the chosen four.
 === 2026-05-30T03:41:07-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-05-31T03:30:06-07:00 start scripps-biomed-brief ===
