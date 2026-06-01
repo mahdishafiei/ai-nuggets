@@ -1105,3 +1105,28 @@ Episode committed cleanly. Final summary:
 
 **Operational note:** Three of the four strongest candidates today were held back by a bioRxiv per-DOI endpoint indexing lag for very fresh (≤2-day-old) DOIs. The date-range collection endpoint had them with full metadata. The hook's per-DOI check is the strict gate. Worth knowing for future runs where the freshest papers may not be commit-able the same day they post.
 === 2026-05-31T03:17:29-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-01T03:00:10-07:00 start biomedical-agentic-ai ===
+Committed successfully. Final candidate funnel:
+
+**biomedical-agentic-ai 2026-06-01 — shipped: HypoAgent**
+
+Sources scanned:
+- bioRxiv (2026-05-30 to 2026-06-01 collection API, full 256-entry corpus paginated, AI+agent keyword filter): 40 keyword hits, narrowed to substantive shortlist
+- arXiv (shared daily cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries spanning 2026-05-28 to 2026-05-29, AI-agent+biomedical filter): 226 raw hits, narrowed to substantive shortlist
+- ChemRxiv: nothing fresh in the 2-day window
+- ARPA-H / NIH / NSF / HHS press: no fresh agentic-AI biomedical announcements in window
+- General web / product launches: nothing fresh in window
+
+Substantive shortlist:
+- **CHOSEN: HypoAgent — Agentic Framework for Interactive Abductive Hypothesis Generation over Knowledge Graphs** (arXiv:2605.31370, HKUST-KnowComp, 2026-05-29) — https://arxiv.org/abs/2605.31370
+- Ontology-driven software engineering using LLMs for knowledge graphs in engineering biology (bioRxiv 10.64898/2026.05.29.728869, 2026-05-30, Mısırlı/SynBioDex/SBOL3) — held over: bioRxiv per-DOI endpoint had not yet indexed this fresh DOI at run time (date-range collection lookup confirmed the paper but pre-commit URL check could not verify via per-DOI endpoint)
+- SpatialDataAgent: Autonomous Spatial Omics Data Curation at Decade Scale (bioRxiv 10.64898/2026.05.27.727615, 2026-05-30) — rejected: thematically adjacent to SpatialClaw 2026-05-26, and bioRxiv per-DOI endpoint not yet indexed
+- AutoSci: Memory-Centric Agentic System for the Full Scientific Research Lifecycle (arXiv:2605.31468, 2026-05-29) — rejected: thematically adjacent to AutoScientists 2026-05-28
+- ProjectionBench: Evaluating Scientific Hypothesis Generation in LLMs Under Progressive Information Disclosure (arXiv:2605.30284, 2026-05-28) — rejected: more evaluation-framework than agentic-architecture
+- Reliable Multilingual Orthopedic Decision Support from Clinical Narratives (arXiv:2605.31512, 2026-05-29) — rejected: narrower clinical fit than KG-reasoning architecture
+- Explainable ML for RBP regulatory logic of exon skipping (bioRxiv 10.64898/2026.05.29.728731) — rejected: not agentic
+- Preprint Commons preprint tracking platform (bioRxiv 10.64898/2026.05.27.727227) — rejected: database resource, not agentic architecture
+- HiCAT atlas-guided spatial-omics annotation (bioRxiv 10.64898/2026.05.27.728266) — rejected: not agentic
+
+Episode shipped: mp3 generated (2.18 MB, 273s), published to R2 (`ai-nuggets-episodes` bucket), feed.xml updated and committed (e23b52e). Orchestrator will push.
+=== 2026-06-01T03:11:41-07:00 done  biomedical-agentic-ai (exit 0) ===

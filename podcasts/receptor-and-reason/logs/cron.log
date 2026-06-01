@@ -698,3 +698,6 @@ Commit landed. Pre-commit hook passed (URL checks succeeded for all 10 verified 
 - `doi:10.64898/2026.05.20.726582` — persistent microglial HIV reservoir drives neuroinflammation despite ART
 - `doi:10.64898/2026.05.28.728561` (Soma-seq, joint protein+RNA in AD brain) and `doi:10.64898/2026.05.27.728255` (zebrafish CaMPARI pharmacology screen) were initially picked but **swapped out** when the bioRxiv details API returned `no posts found` for them (propagation lag vs. the daily-range API); replacements (Picotti α-synuclein + Cakir organoid recording) were both verified `ok` via API before commit so the pre-commit URL check passed.
 === 2026-05-31T03:37:45-07:00 done  receptor-and-reason (exit 0) ===
+=== 2026-06-01T03:20:10-07:00 start receptor-and-reason ===
+You've hit your session limit · resets 3:50am (America/Los_Angeles)
+=== 2026-06-01T03:20:16-07:00 done  receptor-and-reason (exit 0) ===

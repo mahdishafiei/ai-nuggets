@@ -488,3 +488,6 @@ Source failures: WebFetch HTTP 403 (Cloudflare challenge) on bioRxiv content URL
 
 Cross-show de-duplication: receptor-and-reason 2026-05-30 and biomedical-agentic-ai 2026-05-30 had no overlap; calibr-briefing 2026-05-30 covered ASCO plenary day five drug-pipeline news — distinct from these four basic-science / drug-discovery chemistry stories.
 === 2026-05-31T03:43:42-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-01T03:30:10-07:00 start scripps-biomed-brief ===
+You've hit your session limit · resets 3:50am (America/Los_Angeles)
+=== 2026-06-01T03:30:13-07:00 done  scripps-biomed-brief (exit 0) ===
