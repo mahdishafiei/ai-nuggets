@@ -779,3 +779,40 @@ Caveat: actual OS hazard ratio not published in pre-plenary embargo lift; spotli
 You've hit your session limit · resets 3:50am (America/Los_Angeles)
 === 2026-06-01T03:11:46-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-02T03:10:10-07:00 start calibr-briefing ===
+Commit done. Note: the mp3s themselves are kept out of git and live in R2 (both uploads completed earlier — see the wrangler "Upload complete." messages).
+
+### Run summary
+
+**Episodes shipped (2026-06-02):**
+- `2026-06-02-pharma-headlines.mp3` — 5:17, 2.5 MB
+- `2026-06-02-kelonia-in-vivo-cart-spotlight.mp3` — 8:46, 4.2 MB
+
+**Headlines covered:**
+1. Abivax obefazimod Phase 3 ABTECT maintenance — strongest UC efficacy on record (50.8%/51.3% vs 10.4% placebo) but stock dropped >30% on malignancy cases
+2. Celcuity VIKTORIA-1 PIK3CA-mutant late-breaker at ASCO today
+3. HARMONi-6 plenary OS numbers — 27.89 vs 23.69 months
+4. Kelonia KLN-1010 in vivo BCMA CAR-T update (spotlight teaser)
+5. Lilly–Hanmi GLP-2 license
+6. Pfizer–Innovent deal-cap validation context
+
+**Spotlight selection:** Kelonia in vivo CAR-T — directly in Travis's focus area (in vivo CAR-T), most mature clinical dataset in field, with Lilly $3.2B acquisition context and three Calibr read-throughs.
+
+**Candidate funnel:**
+- Fierce Biotech — Kelonia at ASCO ✓ (picked for spotlight); Lilly–Hanmi GLP-2 ✓ (headline)
+- Endpoints/STAT — Abivax obefazimod malignancy story ✓ (headline lead)
+- ClinicalTrialsArena/CancerNetwork — ASCO plenary follow-up (HARMONi-6 OS, PROTEUS, LIBRETTO-432) ✓ (headline)
+- BioPharma Dive/Stocktitan — Celcuity VIKTORIA-1 today ✓ (headline)
+- Other candidates considered and not picked: Datroway TROPION-Breast02 (covered in prior episode); Verve Capstan Umoja (no fresh data today); Foresite portfolio (no June 2 news surfaced).
+
+The orchestrator handles the push.
+
+Sources:
+- [STAT — Abivax UC drug efficacy / cancer concerns](https://www.statnews.com/2026/06/01/abivax-ulcerative-colitis-obefazimod/)
+- [Abivax ABTECT Maintenance press release (GlobeNewswire)](https://www.globenewswire.com/news-release/2026/06/01/3304711/0/en/Abivax-Announces-Landmark-Phase-3-ABTECT-Maintenance-Trial-Results-Evaluating-Obefazimod-in-Moderately-to-Severely-Active-Ulcerative-Colitis.html)
+- [CNBC — Abivax stock drop on cancer cases](https://www.cnbc.com/2026/06/02/abivax-stock-bowel-crohns-disease-trial-data.html)
+- [Kelonia KLN-1010 ASCO 2026 update](https://keloniatx.com/kelonia-therapeutics-presents-updated-first-in-human-data-from-phase-1-inmmycar-study-of-kln-1010-in-vivo-bcma-car-t-therapy-at-the-2026-american-society-of-clinical-oncology-asco-annual-meeting/)
+- [Endpoints — Kelonia in vivo CAR-T update at ASCO26](https://endpoints.news/asco26-kelonia-therapeutics-delivers-an-impressive-in-vivo-car-t-update/)
+- [BioPharm International — Ivonescimab OS in HARMONi-6](https://www.biopharminternational.com/view/ivonescimab-improves-overall-survival-in-phase-iii-harmoni-6-trial-for-squamous-nsclc)
+- [Celcuity VIKTORIA-1 ASCO conf call announcement](https://www.globenewswire.com/news-release/2026/06/01/3304375/0/en/Celcuity-to-Hold-Conference-Call-to-Discuss-Results-for-the-PIK3CA-Mutant-Cohort-of-the-Phase-3-VIKTORIA-1-Clinical-Trial-of-Gedatolisib-Regimens-in-HR-HER-Advanced-Breast-Cancer-o.html)
+- [In Vivo CAR-T competitive landscape (Morning Glory Sciences)](https://www.morningglorysciences.com/en/in-vivo-cart-competitive-landscape-en/)
+=== 2026-06-02T03:20:50-07:00 done  calibr-briefing (exit 0) ===
