@@ -734,3 +734,4 @@ Commit landed (2ac86a8). Per PIPELINE.md the orchestrator handles the push.
 - pubDate weekday "Mon" needed correction to "Tue" — pre-commit hook caught it.
 - npx/wrangler not on PATH under default shell; sourced from `~/.nvm/versions/node/v24.14.0/bin/` for `publish_episode.sh`.
 === 2026-06-02T03:45:49-07:00 done  receptor-and-reason (exit 0) ===
+=== 2026-06-03T03:20:02-07:00 start receptor-and-reason ===
