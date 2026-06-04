@@ -735,3 +735,40 @@ Commit landed (2ac86a8). Per PIPELINE.md the orchestrator handles the push.
 - npx/wrangler not on PATH under default shell; sourced from `~/.nvm/versions/node/v24.14.0/bin/` for `publish_episode.sh`.
 === 2026-06-02T03:45:49-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-03T03:20:02-07:00 start receptor-and-reason ===
+Episode shipped. Commit `a8341a9` landed with the script, audio uploaded to R2, feed updated to Episode 22, and 10-item dedup record appended.
+
+## Candidate funnel — 2026-06-03
+
+**Tier 1 — Neuropsychopharmacology**
+- bioRxiv neuroscience + pharm + systems-bio (last 7 days): 1625 papers scanned → 169 strong-relevance items after keyword+score filter → 387 unique after dedup against shipped.jsonl
+- Psychiatric Times / journal scan: COMP360 ASCP poster, Reunion luvesilocin (already shipped 2026-05-29), May pipeline roundup (already shipped 2026-06-02) — no fresh Tier-1 industry pick today
+- ACNP/SOBP/ECNP press: nothing new in window
+
+**Tier 2 — Agentic AI in compbio**
+- arXiv cache: empty (rate-limited / fetch failed) — fell back to bioRxiv bioinfo (163 papers) + WebSearch
+- bioRxiv bioinfo standouts: PromptBio-Bench (chosen), SpatialDataAgent, Bridging Ancestry Gaps Tabular Foundation Models, ToolMol (arXiv via web search)
+
+**Tier 3 — Computational pharm / industry**
+- bioRxiv pharm (21 papers): Computational 5-HT1B agonists (thin docking-only paper, rejected); PCO371 PTH1R (non-CNS, skipped)
+- Industry: AstraZeneca/Genentech/Xaira/Iambic/Recursion/Insitro — nothing new in window
+
+**Shortlist (12):**
+- Antidep hippocampal-amygdala biomarkers (Castro/Leal) — initially chosen as opener, **dropped** after URL check; bioRxiv individual-detail API not yet indexed
+- Habenula transdiagnostic transcriptomics (Newell) ✓ promoted to opener
+- TMS anterior DMN dynamics (Cocchi QIMRB) ✓
+- Endocannabinoid placebo analgesia (Moayedi Toronto / Atlas NIH) ✓
+- Fentanyl PFC dynamics (Ferguson Seattle) — initially chosen, **dropped** after URL check (same indexing-lag issue)
+- Chronic stress hippocampal myelination via SOX6 (Wang Augusta) ✓ swap-in
+- Androgen depletion mesoaccumbal effort costs (Delevich WSU) ✓ swap-in
+- Glial adenosine in PD via kinome screen (Olsen Pittsburgh) ✓
+- Levodopa → SN iron (Mailman Penn State) ✓
+- Netrin-1 DA graft plasticity (Parish Florey) ✓
+- Computational ketone NT cycling (Mujica-Parodi Stony Brook) ✓
+- PromptBio-Bench (PromptBio Inc) ✓ close
+
+**Episode:** 10 items, 890s (~14:50), opener Newell habenula.
+
+**Gaps logged:**
+- arXiv listing API: shared daily cache `/tmp/ai-nuggets-arxiv-cache.xml` was 14 bytes ("Rate exceeded") — used `site:arxiv.org` WebSearch as fallback
+- bioRxiv individual-detail API lag: 2026.06.01.726320 and 2026.05.28.728535 returned "no posts found" individually despite appearing in date-range API; URL-check hook would have failed → swapped both items for ones with confirmed individual-detail responses
+=== 2026-06-03T03:45:38-07:00 done  receptor-and-reason (exit 0) ===

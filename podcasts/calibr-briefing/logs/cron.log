@@ -817,3 +817,30 @@ Sources:
 - [In Vivo CAR-T competitive landscape (Morning Glory Sciences)](https://www.morningglorysciences.com/en/in-vivo-cart-competitive-landscape-en/)
 === 2026-06-02T03:20:50-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-03T03:10:02-07:00 start calibr-briefing ===
+MP3s gitignored as expected; R2 hosts them via the Worker. Commit landed.
+
+## Final summary
+
+Two episodes produced for Calibr-Skaggs Daily Briefing 2026-06-03:
+
+**Candidate funnel (post-ASCO, fresh items since 2026-06-02 commit):**
+- NewLimit $435M Series C at $3.1B led by Founders Fund (Endpoints/Fierce/STAT) — **picked for spotlight + headline #1**
+- Travere/Everest civorebrutinib BTK in rare kidney disease, $112.5M up + $1.03B milestones — **headline #2**
+- Vera atacicept ORIGIN earlier eGFR FDA alignment, Q3 readout + Jul-7 PDUFA — **headline #3**
+- Roche giredestrant persevERA Phase 3 miss in 1L MBC — **headline #4**
+- Takeda zasocitinib Phase 3 plaque psoriasis hits both trials, NDA FY26 — **headline #5**
+- Apogee/Blackstone $1.3B synthetic royalty — *already covered May 27, dropped*
+- United Therapeutics UHeart EXPRESS xeno IND clearance, Genentech Tecentriq ctDNA-guided MIBC, Abivax ABTECT — *already covered or off-strategy*
+
+**Spotlight pick rationale:** NewLimit Series C is the largest pre-clinical biotech round of the week, and the Eli Lilly Ventures re-up makes the in-vivo-CAR-T delivery-platform read explicit — three Calibr connections (shared LNP-mRNA delivery infrastructure with in vivo CAR-T, in-house-vs-pure-play strategic consolidation question, partial-reprogramming/MASH biological overlap with the FGF-21 franchise).
+
+**Shipped:** scripts (847 + 1,305 words), mp3s (5:15 headlines + 7:30 spotlight) generated via Mistral Paul Neutral, uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml updated with both items, committed at 63685b5. Push handled by the orchestrator.
+
+Sources:
+- [NewLimit Series C — STAT](https://www.statnews.com/2026/06/02/longevity-startup-newlimit-announces-435-million-clinical-trial-financing/)
+- [NewLimit Series C — Endpoints](https://endpoints.news/anti-aging-biotech-newlimit-raises-435m-at-3b-valuation/)
+- [Travere/Everest civorebrutinib](https://www.prnewswire.com/apac/news-releases/everest-medicines-enters-into-exclusive-licensing-agreement-with-travere-therapeutics-for-civorebrutinib-a-potential-best-in-class-btk-inhibitor-for-rare-kidney-diseases-302788528.html)
+- [Vera atacicept earlier ORIGIN eGFR](https://www.manilatimes.net/2026/06/02/tmt-newswire/globenewswire/vera-therapeutics-announces-alignment-with-us-fda-on-earlier-origin-phase-3-analysis-to-support-potential-full-approval-for-atacicept-in-adults-with-iga-nephropathy/2356641)
+- [Roche giredestrant persevERA miss — Fierce](https://www.fiercebiotech.com/biotech/roches-oral-serd-flunks-phase-3-trial-first-line-breast-cancer)
+- [Takeda zasocitinib Phase 3](https://www.takeda.com/newsroom/newsreleases/2026/zasocitinib-phase3-clinical-trial-results/)
+=== 2026-06-03T03:22:34-07:00 done  calibr-briefing (exit 0) ===
