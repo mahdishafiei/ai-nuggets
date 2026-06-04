@@ -571,3 +571,22 @@ Episode shipped. Funnel summary follows.
 - Commit landed (no push, per orchestration). One concurrent show (receptor-and-reason) had staged content that I unstaged before committing to avoid bundling another show's work into this commit; their orchestrator will retry independently.
 === 2026-06-03T03:39:58-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-04T03:30:03-07:00 start scripps-biomed-brief ===
+Today's Scripps Biomedical Brief shipped. Episode written, audio generated (445s, 3.56MB), published to R2, feed updated and validated, committed under the orchestrator lock (no push, per pipeline).
+
+Candidate funnel (2026-06-04):
+
+bioRxiv — date_from 2026-06-01 to 2026-06-04, categories scanned: pharmacology and toxicology (10), bioengineering (30), biochemistry (30), synthetic biology (17), cancer biology (30). chemical biology not a valid bioRxiv category — coverage came via biochemistry. Industry-news side: 2 web searches; nothing fresh enough to displace bioRxiv set (Xocova 5/29, Decnupaz 5/27 ADC for BPDCN both stale by recency filter).
+
+Substantive shortlist after discarding spurious / stale / already-covered items:
+
+- Linezolid Acts as a Selective Inhibitor of the JAK2V617F Mutation — Gumerova/Li/Hoffman, Mt Sinai — https://www.biorxiv.org/content/10.64898/2026.05.31.729063v1  **[CHOSEN]**
+- Active Nuclear Shuttling Enables Efficient Virus-Free CAR Gene Integration Using Ready-to-Use LNPs — Inoue/Suzuki-Yamazaki, FUJIFILM — https://www.biorxiv.org/content/10.64898/2026.05.29.728914v1  **[CHOSEN]**
+- ProNotch converts extracellular protease activity into programmable transcriptional outputs — Tran/Kuffner/Ngo, BU — https://www.biorxiv.org/content/10.64898/2026.06.01.728985v1  **[CHOSEN]**
+- Short ssDNA oligonucleotides enable intracellular transcription of functional RNAs in mammalian cells — Mahas/Perrotta/Church, HMS — https://www.biorxiv.org/content/10.64898/2026.05.30.729002v1  **[CHOSEN]**
+- A hERG Blocker Facilitates K+ Channel Current by Agonizing Pore Opening while Blocking — Sack et al. — biorxiv 10.64898/2026.05.30.728541 (paradoxical drug pharmacology; interesting but narrower)
+- Generating E. coli 0.5 controlled by a half-sized genome — Mukai et al. — biorxiv 10.64898/2026.06.01.729178 (genome reduction; tool not therapeutic)
+- Small Molecule-Directed RNA Modification via Proximity-Driven Catalysis — Zhu et al. — biorxiv 10.64898/2026.05.31.729146 (RNA chemistry; technical but less translational)
+- Mono-ADP-ribosylation-driven immunosuppression and cross-resistance to therapy — Spiegelman/Fuchs/Cohen — biorxiv 10.64898/2026.06.01.729331 (MARylation in TME; would need more cross-validation)
+- Chaperones shape conformational landscape of 26S proteasome — Martin/Hsieh — biorxiv 10.64898/2026.06.01.729410 (basic structural biology; less actionable)
+- Argininosuccinate Synthase 1 links hepatic urea cycle to whole-body lipid metabolism — Simon/Arany, Penn — biorxiv 10.64898/2026.06.02.729618 (metabolic; less immediately translational)
+=== 2026-06-04T03:38:35-07:00 done  scripps-biomed-brief (exit 0) ===

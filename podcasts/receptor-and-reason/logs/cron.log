@@ -773,3 +773,45 @@ Episode shipped. Commit `a8341a9` landed with the script, audio uploaded to R2, 
 - bioRxiv individual-detail API lag: 2026.06.01.726320 and 2026.05.28.728535 returned "no posts found" individually despite appearing in date-range API; URL-check hook would have failed → swapped both items for ones with confirmed individual-detail responses
 === 2026-06-03T03:45:38-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-04T03:20:03-07:00 start receptor-and-reason ===
+Episode shipped. Audio: 1,135.8s mp3 (Mistral Paul Neutral, 9,086,685 bytes), uploaded to R2 `ai-nuggets-episodes` bucket, feed updated with Episode 23, dedup ledger appended, committed as `ddf13b8`. No push — the orchestrator pushes at end of run.
+
+One environmental note (already documented in the biomedical-agentic-ai cron log today): `scripts/publish_episode.sh` failed initially because `npx` was not in PATH under this shell — had to prepend `/home/asu/.nvm/versions/node/v24.14.0/bin` manually. Worth a fix in the publish script (source nvm or hardcode the node bin path) since this is the second show today to hit it.
+
+Candidate funnel:
+
+- **bioRxiv neuroscience + pharmacology + bioinformatics + systems-bio** — 1624 unique items in the 7-day window (2026-05-28 → 2026-06-04). After dedup against the 219 already-shipped keys and a word-boundary relevance filter (CNS pharmacology + comp pharma + agentic AI keywords with score ≥ 9), 46 strong candidates.
+- **arXiv** — pre-fetched cache `/tmp/ai-nuggets-arxiv-cache.xml` was 14 bytes (runner pre-fetch failed). Live API at `export.arxiv.org` returned HTTP 429 on initial request and again after a 60s+ backoff retry (receptor-and-reason runs after biomedical-agentic-ai which had already exhausted the IP's quota for the window). Skipped per PIPELINE.md's source-failure rule; bioRxiv had ample agentic candidates so the recall loss is small.
+- **Psychiatric Times** — `/may-2026-in-review` was the live page but had already been shipped 2026-06-02. The freshly-named `/june-in-review-updates-on-the-psychiatric-treatment-pipeline` page 403s on direct fetch and search snippets do not show June-2026-fresh items. COMP360 ASCP late-breaking poster and Modius Spero PTSD FDA approval already in the May 2026 in Review.
+- **Nature NPP / Molecular Psychiatry / Biological Psychiatry / chemRxiv** — all blocked or empty for the 7-day window via WebFetch/WebSearch (Nature redirects to IDP auth, BPJ 403, chemRxiv unindexed for the window).
+- **CPT:PSP** — May 2026 issue's QSP-Amid-Rise-of-Agentic-AI piece already shipped 2026-05-29.
+
+Substantive shortlist (post-dedup, post-relevance, in score order):
+
+1. ★ (2R,6R)-Hydroxynorketamine elicits rapid antidepressant effects by promoting astrocytic μ-δ opioid receptor heterodimerization — bioRxiv 10.64898/2026.05.31.729044 [PICKED]
+2. ★ Astrocytic μ-δ opioid receptor heterodimers mediate the antidepressant effects of ketamine's metabolite — bioRxiv 10.64898/2026.05.31.727553 [PICKED — paired with #1]
+3. ★ Antidepressant mechanism and treatment response define distinct hippocampal-amygdala circuit biomarkers — bioRxiv 10.64898/2026.06.01.726320 [PICKED]
+4. ★ Reorganization of Human Brain Waves Across Diverse States of Consciousness — bioRxiv 10.64898/2026.05.27.728182 [PICKED]
+5. ★ Protein-state dysregulation and sex-specific neurodevelopmental signatures in schizophrenia forebrain organoids — bioRxiv 10.64898/2026.06.01.729221 [PICKED]
+6. ★ Phenotypic diversity and cell-type-specific PFC calcium dynamics in rat fentanyl self-administration — bioRxiv 10.64898/2026.05.28.728535 [PICKED]
+7. ★ Hypothalamic MCH neurons link tau pathology to sleep disruption — bioRxiv 10.64898/2026.05.31.729026 [PICKED]
+8. ★ Toxic Tau-PFKFB3 Circuit Reduces F2,6BP Levels and Drives Neurodegeneration — bioRxiv 10.64898/2026.05.28.728580 [PICKED]
+9. ★ Structural basis for LRRK2 activation and autoinhibition — bioRxiv 10.64898/2026.05.31.729085 [PICKED]
+10. ★ Multiplex Proteomics of Lewy Body Dementia Reveals CSF Biomarkers — bioRxiv 10.1101/2025.06.10.658994 v2 [PICKED]
+11. ★ Autopipe — reproducible and shareable bioinformatics pipelines from natural-language prompts — bioRxiv 10.64898/2026.05.28.719125 [PICKED]
+12. Multi-Agent RAG Framework for Biomedical Literature Analysis — bioRxiv 10.64898/2026.05.26.727050 (small 40-question pilot, beat by Autopipe on substance)
+13. Stochastic Differential Equations in NONMEM for popPK misspecification — bioRxiv 10.64898/2026.05.28.728340 (solid Tier 3 but methods-heavy; bumped for clinical-translational picks)
+14. Patient-Derived ALI Forebrain Organoids Functional Synaptic Deficits in Schizophrenia — bioRxiv 10.64898/2026.06.01.729183 (overlapping with picked #5 schizophrenia organoid)
+15. PAD2 knockout in SOD1-ALS — bioRxiv 10.64898/2026.05.30.729013
+16. Multi-omics CA1 chromatin/transcriptomic remodeling after adolescent social isolation — bioRxiv 10.64898/2026.06.01.729282
+17. Whole brain dimensional approach to networks of stress susceptibility (v2) — bioRxiv 10.1101/2025.05.10.653278
+18. GluD1 deletion ultrastructural features of corticostriatal/thalamostriatal synapses — bioRxiv 10.64898/2026.05.26.727726
+19. Cocaine + SARS-CoV-2 spike Long-COVID-like outcomes in rat — bioRxiv 10.64898/2026.06.02.729575
+20. Distinct auditory thalamocortical pathologies in Cln3 Batten disease mouse — bioRxiv 10.64898/2026.06.01.729359
+
+Back tomorrow.
+
+Sources:
+- [May 2026 in Review — Psychiatric Times](https://www.psychiatrictimes.com/view/may-2026-in-review-updates-on-the-psychiatric-treatment-pipeline)
+- [COMP360 Phase 3 ASCP 2026 LBP — Psychiatric Times](https://www.psychiatrictimes.com/view/phase-3-program-investigating-comp360-psilocybin-for-treatment-resistant-depression-breaking-poster-data-from-the-2026-ascp-annual-meeting)
+- [Modius Spero FDA De Novo — Psychiatric Times](https://www.psychiatrictimes.com/view/fda-grants-de-novo-approval-to-modius-spero-neuromodulation-device-for-ptsd)
+=== 2026-06-04T03:41:49-07:00 done  receptor-and-reason (exit 0) ===

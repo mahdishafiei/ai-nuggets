@@ -1177,3 +1177,29 @@ Today's episode for **biomedical-agentic-ai (2026-06-03)**: **OmniCellAgent** (b
 Audio: 233.0s mp3 (Mistral Paul Neutral), uploaded to R2 (`ai-nuggets-episodes` bucket), feed updated, committed as `d299bf4`. One environmental note: `npx` was not in PATH when `scripts/publish_episode.sh` was invoked — had to manually prepend `/home/asu/.nvm/versions/node/v24.14.0/bin` to PATH before the publish succeeded. Worth investigating whether cron's environment is masking the nvm node bin under some condition.
 === 2026-06-03T03:10:05-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-04T03:00:03-07:00 start biomedical-agentic-ai ===
+Commit landed (bba9383). MP3 is in R2 and the feed is updated. The other shows' cron.log entries were already staged in the index by sibling runs and got swept into the commit alongside this show's changes — not a hand-staged decision, just the pre-existing state of the index.
+
+## Final summary
+
+One episode produced for Biomedical Agentic AI 2026-06-04:
+
+**Pick:** CodeCytos — coding-based reasoning agent framework for spatial molecular imaging analysis from Hien V. Nguyen's group at the University of Houston (with co-authors including Stephen T.C. Wong at Houston Methodist). bioRxiv DOI 10.64898/2026.05.30.728935, v1 posted 2026-05-30, surfaced in the 2026-06-03 details snapshot. Code as the action space, multiple coding-strong LLM backbones tested on four expert-curated datasets (frontal cortex, NSCLC, pancreas, tonsil) under a minimal-prompt setting. Load-bearing finding: domain-agnostic few-shot coding examples from outside the spatial-omics domain still lift performance substantially — general coding-reasoning quality is the bottleneck, not domain-specific curation.
+
+**Candidate funnel:**
+- bioRxiv (259 entries across 2026-06-03/04 pages 0-240, deduped): 15 AI/foundation-model hits after strict filter
+  - CodeCytos (10.64898/2026.05.30.728935) — **picked**
+  - SciCore-Omics tri-modal foundation model (10.64898/2026.05.30.728937 v2) — foundation model, not agent
+  - SQUALL multimodal foundation model (10.64898/2026.06.01.729028) — foundation model, not agent
+  - MAGI mechanistic variant interpretation via genomic foundation models (10.64898/2026.05.31.729117) — logic layer over transformer, not agent
+  - GLM-Prior genomic language model for GRN (10.1101/2025.06.29.662198 rev) — model as prior, not agent
+  - Data-Efficient Enzyme Function ML (10.64898/2026.06.02.729712) — ML predictor, not agent
+  - Convergent grass adaptation w/ gLLMs (10.64898/2026.06.01.729361) — evolutionary biology, not biomedical
+  - AdventML transformer enzyme Topt (10.64898/2026.05.30.728975) — predictor, not agent
+  - STAR Suite AI-assisted dev (10.64898/2026.03.09.710580) — tool release, not architecture
+- arXiv listing API: HTTP 503 then 429 on retries, background until-loop did not recover within run window — fell back to `site:arxiv.org` web search over June 1-4, results mostly older or already-covered architectures; coverage best-effort, flagged
+- ChemRxiv: nothing fresh in 2-day window (MutexaGPT result was April 2026, outside window)
+- ARPA-H / NIH / NSF / HHS press: no fresh agentic-AI biomedical program/award launches in 2-day window beyond previously-covered IGoR
+- News/product launches: BMS-Anthropic partnership, Labcorp MyLabcorp (OpenAI reasoning) — partnerships/consumer apps without novel technical content
+
+**Shipped:** script (~835 words), 240-second mp3 via Mistral Paul Neutral, uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml updated, committed at bba9383. Push handled by the orchestrator.
+=== 2026-06-04T03:12:08-07:00 done  biomedical-agentic-ai (exit 0) ===

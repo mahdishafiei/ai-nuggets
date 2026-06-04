@@ -845,3 +845,28 @@ Sources:
 - [Takeda zasocitinib Phase 3](https://www.takeda.com/newsroom/newsreleases/2026/zasocitinib-phase3-clinical-trial-results/)
 === 2026-06-03T03:22:34-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-04T03:10:03-07:00 start calibr-briefing ===
+Commit successful. The orchestrator handles the push.
+
+## Run summary
+
+**Episodes shipped:**
+- `2026-06-04-pharma-headlines` (5:18, 2.55 MB) — five Wednesday-Thursday items
+- `2026-06-04-ascidian-lilly-exon-editing-spotlight` (8:43, 4.19 MB) — deep dive
+
+**Headlines:**
+1. Lilly + Ascidian Therapeutics up-to-$1.9B RNA exon-editing deal for monogenic kidney diseases (chosen for spotlight)
+2. Alnylam + Inceptive Nucleics — first major AI drug discovery deal, $30M upfront / up to $2B milestones for siRNA design
+3. Regeneron + CytomX expanded conditional bispecific oncology pact — $37M target nominations, up to $4B total
+4. Lilly + Boehringer cut German investments €1B+ each in response to Berlin healthcare pricing reform
+5. Legend Biotech LB2501 in vivo CD19/CD20 CAR-T — 100% ORR + 5/6 CRs in R/R NHL with no lymphodepletion (EHA late-breaker June 14)
+
+**Candidate funnel:**
+- Endpoints News homepage scan — HTTP 403 to WebFetch, recovered via WebSearch
+- Fierce Biotech homepage — 6 in-date items, dug into each via search
+- Fierce Pharma homepage — Lilly/Boehringer Germany story, ASCO recap, FDA marketing letter (passed), Gilead-Cencora CAR-T distribution (passed — incremental commercial, not strategic)
+- STAT News biotech — Legend market story (passed — passed-through stock note, no new data), confirmed Alnylam-Inceptive
+- bioRxiv/MASH check — no fresh MASH/FGF21 clinical news today
+- Foresite portfolio check — no fresh portfolio news today
+
+Spotlight logic: Lilly-Ascidian extends yesterday's NewLimit thread directly — two pieces of Lilly's in vivo modality stack in 48 hours, plus Apple Tree Partners' RNA-platform lineage (Translate Bio → Dyne → Ascidian) is itself a Calibr-relevant track record. Legend's in vivo CAR-T data was the runner-up but is full-data-pending (EHA June 14) and gets covered when the full set lands.
+=== 2026-06-04T03:21:09-07:00 done  calibr-briefing (exit 0) ===
