@@ -1149,3 +1149,31 @@ Today's episode for **biomedical-agentic-ai (2026-06-02)**: **AgentPLM** (arXiv 
 Audio: 275.7s mp3 (Mistral Paul Neutral), uploaded to R2, feed updated, committed as `bd62690`.
 === 2026-06-02T03:09:06-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-03T03:00:02-07:00 start biomedical-agentic-ai ===
+Episode committed. Orchestrator will push.
+
+## Summary
+
+Today's episode for **biomedical-agentic-ai (2026-06-03)**: **OmniCellAgent** (bioRxiv 10.1101/2025.07.31.667797 v3, posted 2026-06-02) — a multi-agent AI scientist for omic-driven discovery from Fuhai Li's group at WashU St. Louis. Three explicit agentic tiers: an autonomous data-curation agent on top of a large scRNA-seq corpus, a biomedical prior-knowledge agent grounding target annotation in curated databases and literature, and a layer of domain-specific expert agents for interpretation.
+
+### Candidate funnel
+
+- **bioRxiv** (270 entries scanned across cursors 0–240 over 2026-06-02 / 2026-06-03):
+  - **OmniCellAgent v3** (10.1101/2025.07.31.667797, 2026-06-02) — chosen
+  - Vermeer autoregressive microscopy/protein-localization (10.64898/2026.06.01.729395) — generative, not agentic
+  - Mechanistic Interpretability for PLMs (10.64898/2026.05.29.727021) — interpretability, not agentic
+  - PepForge HELM-based peptide generation (10.64898/2026.05.29.728379) — generative, not agentic
+  - Decoding the Grammar of PPI Interfaces (10.64898/2026.05.29.728739) — multimodal repr learning, not agentic
+- **arXiv listing API**: HTTP 429 on three retries (run pre-fetch cache was empty at 03:00); fall-back via `site:arxiv.org` web search:
+  - UniD³ KG-RAG drug-disease (2606.01394, v1 2026-05-31) — strong KG-RAG fit, edge of window
+  - AutoForest forest-plot synthesis (2606.02403, v1 2026-06-01) — narrower fit
+  - Site4Drug binding-site agent (2606.01816, v1 2026-06-01) — narrower fit
+  - DrugClaw + DrugAudit (2606.01434) — already covered by sibling show 2026-06-02
+  - Radiotherapy M2M LLM agent (2606.00922, 2026-05-30) — out of window
+- **ChemRxiv** WebSearch — nothing fresh in window
+- **News / ARPA-H / NIH / NSF / HHS**: Causaly + Microsoft Discovery partnership announced 2026-06-02 at Microsoft Build — on-theme (KG + agentic AI life sciences R&D) but a product/partnership announcement light on novel technical content; no other agentic-biomedical-AI headlines
+
+**Chosen**: OmniCellAgent — freshest agentic biomedical paper in the 2-day window, cleanest recent expression of dataset-curation-as-an-agentic-role, three-tier separation (curation / KG-grounded annotation / interpretation) is a transferable architectural pattern, directly on Su Lab's agentic-AI + biomedical-KG + data-integration axes, thematically distinct from yesterday's AgentPLM (in-decoder tool use) and day-before HypoAgent (three-agent KG-reasoning diagnosis loop). Caveats stated honestly in the script: abstract is light on hard numbers and v3 status of a July-2025 manuscript means the architecture has been iterating publicly for nearly a year.
+
+Audio: 233.0s mp3 (Mistral Paul Neutral), uploaded to R2 (`ai-nuggets-episodes` bucket), feed updated, committed as `d299bf4`. One environmental note: `npx` was not in PATH when `scripts/publish_episode.sh` was invoked — had to manually prepend `/home/asu/.nvm/versions/node/v24.14.0/bin` to PATH before the publish succeeded. Worth investigating whether cron's environment is masking the nvm node bin under some condition.
+=== 2026-06-03T03:10:05-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-04T03:00:03-07:00 start biomedical-agentic-ai ===
