@@ -871,3 +871,25 @@ Commit successful. The orchestrator handles the push.
 Spotlight logic: Lilly-Ascidian extends yesterday's NewLimit thread directly — two pieces of Lilly's in vivo modality stack in 48 hours, plus Apple Tree Partners' RNA-platform lineage (Translate Bio → Dyne → Ascidian) is itself a Calibr-relevant track record. Legend's in vivo CAR-T data was the runner-up but is full-data-pending (EHA June 14) and gets covered when the full set lands.
 === 2026-06-04T03:21:09-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-05T03:10:18-07:00 start calibr-briefing ===
+Both episodes shipped. Audio in R2, feed updated, files committed (no push — orchestrator handles that at end of run).
+
+**Today's episodes:**
+- `2026-06-05-pharma-headlines.mp3` — 3.09 MB, 6:26
+- `2026-06-05-innovent-cldn182-adc-spotlight.mp3` — 4.12 MB, 8:35
+
+**Candidate funnel (June 4-5, 2026 news, excluding items already shipped in Jun 4 episodes):**
+
+Fierce Biotech / Fierce Pharma / Endpoints / BioPharma Dive / STAT / press releases scanned. Substantive shortlist after dropping spurious matches and items already covered:
+
+- **Innovent IBI343 Phase 3 G-HOPE met PFS+OS in gastric/GEJ adenocarcinoma + China NMPA NDA acceptance** — first CLDN18.2 ADC anywhere in world to enter regulatory review; Takeda holds ex-China rights via Oct 2025 $1.2B upfront / $10.2B milestones deal. **[CHOSEN — spotlight + headline 1]**
+- **ADC Therapeutics LOTIS-5 Zynlonta+R hit PFS but 27 deaths (13.2%) vs 9 (4.6%) control in R/R DLBCL** — stock crashed 50%+ to $1.44. **[CHOSEN — headline 2]**
+- **Autobahn Therapeutics elunetirom Phase 2 positive in bipolar depression** — oral brain-penetrant CNS thyroid hormone receptor agonist, FDA Fast Track, advancing to Phase 3; thyroid receptor cross-link to resmetirom MASH mechanism. **[CHOSEN — headline 3]**
+- **Cabaletta Bio rese-cel update at EULAR 2026 Madrid** — 52 evaluable patients across myositis/lupus/SSc; first preconditioning-free lupus dosing shows deep B-cell depletion. **[CHOSEN — headline 4]**
+- **Parabilis Medicines $413M IPO filing + $75M Regeneron private placement** — Foresite portfolio company; zolucatetide beta-catenin Helicon peptide into Phase 3 desmoid 1H 2027. **[CHOSEN — headline 5; spotlight already covered May 19]**
+- **Ona Therapeutics $86.6M Series B** — Spanish ADC for HR+/HER2- breast cancer (ONA-255) + CRC (ONA-389) targeting treatment-resistant tumor biology. **[CHOSEN — headline 6]**
+- Replimune RP1 BLA resubmission path — already May 29, not fresh enough.
+- DiaMedica ReMEDy2 75% enrollment — not material enough.
+- Roche giredestrant + CDK4/6 new adjuvant study — covered in June 3 Roche persevERA miss spotlight context.
+
+All source pulls succeeded (no transient failures). Spotlight chose Innovent over Parabilis (already a May 19 spotlight) and over ADC Therapeutics deaths (worse-news angle has less Calibr-strategic substance than the CLDN18.2 modality-cascade story).
+=== 2026-06-05T03:23:49-07:00 done  calibr-briefing (exit 0) ===

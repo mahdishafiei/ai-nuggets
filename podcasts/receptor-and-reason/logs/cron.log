@@ -816,3 +816,5 @@ Sources:
 - [Modius Spero FDA De Novo — Psychiatric Times](https://www.psychiatrictimes.com/view/fda-grants-de-novo-approval-to-modius-spero-neuromodulation-device-for-ptsd)
 === 2026-06-04T03:41:49-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-05T03:20:18-07:00 start receptor-and-reason ===
+Another stale background find — already resolved by locating wrangler in `worker/node_modules/.bin/`. Episode shipped, nothing to do.
+=== 2026-06-05T03:52:28-07:00 done  receptor-and-reason (exit 0) ===

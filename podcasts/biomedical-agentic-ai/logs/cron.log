@@ -1203,3 +1203,26 @@ One episode produced for Biomedical Agentic AI 2026-06-04:
 
 **Shipped:** script (~835 words), 240-second mp3 via Mistral Paul Neutral, uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml updated, committed at bba9383. Push handled by the orchestrator.
 === 2026-06-04T03:12:08-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-05T03:00:18-07:00 start biomedical-agentic-ai ===
+Committed. Episode shipped.
+
+## Episode summary — 2026-06-05
+
+**Picked:** ChatSpatial v3 (bioRxiv 10.64898/2026.02.26.708361, posted 2026-06-04) — Jun Chen's group at Mayo Clinic. Schema-enforced agentic orchestration platform for spatial transcriptomics built on Model Context Protocol, deliberately rejecting code-as-action-space in favor of a curated menu of pre-validated tool schemas; sixty-plus methods across fifteen categories spanning Python + R, validated across seven LLM platforms, near-deterministic reproducibility at the workflow level on two replicated published studies.
+
+**Why it won today:** Directly contrastive paired episode with yesterday's CodeCytos (code-as-action-space). Same problem domain (spatial biology), opposite design choice (schema-enforced vs free-form code). Two days, two paradigms, each one's strongest argument being the other's weakest spot — the right design lesson for Andrew's wheelhouse at the agentic-AI / ontology-and-data-integration / open-science / APIs intersection.
+
+**Candidate funnel:**
+- **bioRxiv** — 511 entries scanned across 2026-06-03 / 2026-06-05 (161 unique after dedup); 5 substantive matches after chemistry-keyword exclusion:
+  - ChatSpatial v3 — schema-enforced agentic orchestration / MCP / spatial transcriptomics — *chosen*
+  - STAR Suite v2 (10.64898/2026.03.09.710580) — AI-developed transcriptomics binary deployed by NIH MorPhiC, designed agent-friendly — interesting meta story, tool release not novel agentic architecture
+  - Data-Efficient Enzyme Exploration (10.64898/2026.06.02.729712) — family-specific ML beats foundation models; not agentic
+  - Convergent grass adaptation (10.64898/2026.06.01.729361) — gLLMs on 707 plant genomes; evolutionary biology, not biomedical
+  - DeMoDa (10.64898/2026.05.30.728952) — dental morphology DB, incidental "ontology" keyword match
+- **arXiv listing API** — HTTP 429 on initial call and 60s-backoff retry (still 429), fell back to `site:arxiv.org` WebSearch per PIPELINE.md; nothing in the 2-day window beat ChatSpatial (BioMedArena 2605.06177 outside window)
+- **ChemRxiv** — nothing fresh + biomedical-agentic-AI in 2-day window
+- **News / ARPA-H / NIH / NSF / HHS** — IGoR Proposers' Day announced June 9 in DC but no fresh program/award launches in the 2-day window
+- **arXiv direct via WebSearch fallback** flagged in funnel as best-effort coverage
+
+**Shipped:** Script + audio (343.8s, 2.75 MB) generated via Mistral primary voice, uploaded to R2 bucket `ai-nuggets-episodes`, feed.xml updated, commit `ba70eb3`. Push left to the orchestrator.
+=== 2026-06-05T03:11:07-07:00 done  biomedical-agentic-ai (exit 0) ===
