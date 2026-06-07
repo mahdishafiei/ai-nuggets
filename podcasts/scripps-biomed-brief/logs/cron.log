@@ -629,3 +629,37 @@ Picked: 4 stories — xVDM volumetric DNA microscopy (Weinstein, U Chicago), LDL
 Script ~700 words; mp3 408 s / 3.27 MB; feed.xml updated and validated; committed under flock as instructed (no push — orchestrator handles that).
 === 2026-06-06T03:37:38-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-07T03:30:04-07:00 start scripps-biomed-brief ===
+Episode shipped. Summary follows.
+
+## Scripps Biomedical Brief 2026-06-07 — Run summary
+
+Script: `podcasts/scripps-biomed-brief/scripts/2026-06-07-hsv-ul12-vni-cdlnp-pkd2-cascademap-dhh-pai1-atherosclerosis.md`
+Audio: 3,670,770 bytes, 7:38.81 (Mistral en_paul_neutral, 4 chunks, all primary)
+R2: uploaded to `ai-nuggets-episodes` bucket
+Feed: `<item>` added; XML validates
+Commit: `ad32c68` (orchestrator handles push)
+
+### Candidate funnel (bioRxiv, 2026-06-05 to 2026-06-07)
+
+- pharmacology/toxicology: 4 scanned, 2 substantive
+- biochemistry: 13 scanned, 4 substantive
+- bioengineering: 12 scanned, 2 substantive
+- synthetic biology: 4 scanned, 0 substantive (mostly non-biomedical / environmental)
+- cell biology: 19 scanned, 1 substantive (metformin/autophagy mechanism)
+- cancer biology: 8 scanned, 0 top-tier (mostly spatial-transcriptomics / tumor profiling)
+- immunology: 6 scanned, 0 top-tier
+- molecular biology: 11 scanned, 0 top-tier (RNAPII structure interesting but basic)
+
+### Shortlist after relevance filtering
+
+- Sharma/Weller, UConn — Viral nuclease inhibitors of UL12 alkaline exonuclease, broad anti-herpesvirus chemistry — **CHOSEN** (10.64898/2026.06.03.729350)
+- Giblin/Chung, USC — Collecting-duct-targeted LNPs deliver Pkd2 mRNA, reverses ADPKD — **CHOSEN** (10.64898/2026.06.02.728835)
+- Vasina/Prokop, Masaryk + ETH — CascadeMAP autonomous closed-loop enzyme cascade optimization with multi-agent AI — **CHOSEN** (10.64898/2026.06.04.730034)
+- Ilyas/Xu, USTC + multi — Desert hedgehog endothelial resilience factor mitigating PAI-1 signaling in atherosclerosis — **CHOSEN** (10.64898/2026.06.02.729715)
+- Hopp et al. — Anti-polyamine therapy for ADPKD (10.64898/2026.06.02.729335) — passed; same disease as Chung but less novel modality
+- Ibarra-Garcia/Prosper — sdAb-based BCMA CAR-T engineering for multiple myeloma (10.64898/2026.06.02.729637) — passed; CAR-T improvement rather than first-in-class
+- Wu et al., deep-learning hydrolases for crystalline PET (10.64898/2026.06.04.730138) — passed; environmental application rather than human health
+- Hwang/Kim, carbon-nanotube metabolite corona for plasma metabolomics (10.64898/2026.06.02.729405) — passed; tool-level
+- Switzer, SOD1 catalyzes thiol oxidation to thiosulfinates (10.64898/2026.06.03.729904) — passed; basic mechanism
+- Mutawi et al., metformin redirects autophagy to mitophagy (10.64898/2026.06.04.730191) — passed; mechanistic re-interpretation
+=== 2026-06-07T03:37:24-07:00 done  scripps-biomed-brief (exit 0) ===

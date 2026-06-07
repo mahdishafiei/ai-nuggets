@@ -920,3 +920,45 @@ All sources responded normally; no transient failures this run.
 **Spotlight**: EULAR 2026 autoimmune B-cell depletion convergence — autologous CD19 CAR-T (Cabaletta + Kyverna) vs subcutaneous CD19xCD3 TCE (Cullinan), tissue-vs-blood depletion, immune-reset definition, and what the modality split means for Calibr's pipeline thinking.
 === 2026-06-06T03:23:37-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-07T03:10:04-07:00 start calibr-briefing ===
+Both episodes shipped — committed at `0681a9f`. The orchestrator will push.
+
+## Sunday roundup — candidate funnel
+
+Sources scanned (Sunday-light, 3-item headlines + 1 spotlight):
+
+**Fierce Biotech** — front page scanned for Jun 6-7 content
+- Lundbeck bocunebart PACAP receptor antagonist mid-stage migraine progress
+- Amarin/Hikma Vascepa skinny-label Supreme Court victory
+- Bepirovirsen (GSK/Ionis) HBV antisense functional-cure framing
+
+**Endpoints News** — front page scanned for Jun 6-7 content
+- Lilly triple-G obesity ADA presentation (subsumed → spotlight)
+- Pfizer berobenatide obesity post-Metsera
+- Roche/Zealand petrelintide tolerability ADA
+- RA Capital "China-clinical-expertise-in-a-box"
+- Cullinan TCE EULAR (covered yesterday)
+
+**BioPharma Dive** — HTTP 403, not retrievable; covered via search
+
+**ADA 2026 press wire (PRNewswire/BioSpace/GlobeNewswire)** — extensively scanned
+- Lilly retatrutide TRIUMPH-1/TRANSCEND-T2D-1/TRIUMPH-OA/TRIUMPH-OSA Phase 3 (Sat) ★ spotlight
+- Novo Nordisk zenagamtide (amycretin) Phase 2 T2D ★ headline 2
+- Roche/Zealand petrelintide ZUPREME-1 Phase 2 ★ headline 3
+- Novo CagriSema additional data (prior readout, less novel)
+
+**ASCO 2026 / post-conf** — scanned for Jun 6-7 news beyond yesterday's LIBRETTO-432 pick
+- Kelonia KLN-1010 in vivo BCMA CAR-T 100% ORR in MM (already covered as Jun 2 spotlight, didn't repeat)
+
+**EULAR 2026 wrap-up** — scanned; field covered in yesterday's spotlight
+
+**Substantive shortlist (after relevance filter):**
+- Lilly retatrutide Phase 3 TRIUMPH ADA readouts — picked (headline + spotlight)
+- Novo zenagamtide Phase 2 T2D ADA — picked (headline)
+- Roche/Zealand petrelintide ZUPREME-1 Phase 2 ADA — picked (headline)
+- Lundbeck bocunebart PACAP migraine — not picked (lower Calibr relevance)
+- Amarin/Hikma Vascepa SCOTUS — not picked (generic-pharma legal, not Calibr-relevant)
+- GSK/Ionis bepirovirsen HBV — not picked (no fresh data, just framing)
+- Kelonia KLN-1010 ASCO update — not picked (already spotlight Jun 2)
+
+**Selection rationale:** Sunday is light by design; ADA 2026 produced three same-weekend incretin readouts that line up as a tight thematic roundup. Retatrutide Phase 3 is the largest pharmacologic weight-loss readout ever and directly recalibrates Calibr's MASH biologic competitive landscape via TRIUMPH-3 (Phase 3 MASH reading out 2H 2026) — clear spotlight pick.
+=== 2026-06-07T03:22:55-07:00 done  calibr-briefing (exit 0) ===
