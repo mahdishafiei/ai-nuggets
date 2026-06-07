@@ -1249,3 +1249,23 @@ MP3s are correctly excluded — R2 is authoritative. Commit complete. The orches
 Episode committed (`9f405b4`); audio uploaded to R2; orchestrator will push at end of run.
 === 2026-06-06T03:08:02-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-07T03:00:04-07:00 start biomedical-agentic-ai ===
+Episode shipped — committed locally (orchestrator will push).
+
+**Today's pick:** BacteReason — Koji Tsuda group at University of Tokyo, bioRxiv 2026-06-07. Knowledge-graph-grounded reasoning LLM for antimicrobial-resistance prediction. Teacher LLM uses TogoMCP (MCP-wrapped biomedical KGs) to generate grounded mechanistic rationales for known susceptibility outcomes; open-weight student LLM is fine-tuned on those rationales. Headline: 43% relative improvement over untuned base on extrapolation benchmark; load-bearing 38% improvement over the same base fine-tuned without rationales — the clean ablation showing the lift comes from KG-grounded rationale supervision, not just more clinical data.
+
+## Candidate funnel
+
+**bioRxiv** (2026-06-06 to 2026-06-07): 145 entries scanned, 29 keyword matches, substantive shortlist:
+- ✅ **BacteReason** — KG-grounded reasoning LLM via TogoMCP for AMR (10.64898/2026.06.04.730229, 2026-06-07) — CHOSEN
+- CascadeMAP — Masaryk Univ, autonomous closed-loop enzyme-cascade microfluidic + Bayesian opt + multi-agent AI, 7-day unsupervised, ~220K reactions (10.64898/2026.06.04.730034, 2026-06-07) — held in reserve; thematically adjacent to yesterday's MicroGrowAgents (multi-agent + lab automation + biology)
+- PAG-Agent — Auburn, biologist research assistant for pathway analysis, beat 6 LLMs on citation retrieval (10.64898/2026.06.02.729674, 2026-06-06) — narrower architectural contribution
+- Chromap Suite — UW Tacoma, single-binary open-source multiomic pipeline ships MCP server, 2.12x vs Cell Ranger ARC (10.64898/2026.06.02.729736, 2026-06-06) — tool release with MCP integration, not novel architecture
+- Ignet 2.0 + Vignet — UND, ontology-driven gene-interaction platform with BioBERT + MCP endpoint (10.64898/2026.06.02.729682, 2026-06-06) — BioBERT is older tech, platform release
+- HOPE — interpretable histology + spatial-omics signatures (10.64898/2026.06.03.729847, 2026-06-06) — foundation-model interpretability, not agentic
+
+**arXiv**: 300-entry live fetch (cache was stale at June 3-4). Returned only June 3-4 submissions — typical weekend lag, arXiv does not publish Sat/Sun. Zero biomedical-agentic-AI matches in the June 5-7 window.
+
+**ChemRxiv** (via WebSearch): all top hits (April 2026 LLM review, philosophical-reasoning agents, agentic retrieval for bio-based recovery) are outside the 2-day window. No fresh biomedical-agentic hits.
+
+**News / funders / ARPA-H / NIH / NSF / HHS**: NVIDIA agentic-AI healthcare model announcements and a Nature Biotechnology commentary surfaced in search but are commentary/announcement material rather than novel research in the 2-day window.
+=== 2026-06-07T03:08:00-07:00 done  biomedical-agentic-ai (exit 0) ===

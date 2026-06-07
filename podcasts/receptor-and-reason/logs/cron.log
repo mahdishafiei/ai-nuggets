@@ -853,3 +853,37 @@ Committed. Episode shipped — mp3 uploaded to R2, feed updated, ledger appended
 No source-level failures; no Tier 4 fallback needed. Push will be handled by the orchestrator.
 === 2026-06-06T03:36:14-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-07T03:20:04-07:00 start receptor-and-reason ===
+Episode committed. Final summary follows.
+
+## Final summary — receptor-and-reason 2026-06-07
+
+**Pipeline outcome:** Script → mp3 (17.0 min, 8.18 MB) → R2 → feed Episode 26 → commit `d97cbbd`. Ledger appended with 10 keys. No `git push` (orchestrator handles).
+
+**Candidate funnel — rolling 7-day window 2026-05-31 → 2026-06-07**
+
+Sources scanned:
+- bioRxiv (neuroscience/pharm/psych/biochem/cell/molecular/genomics/bioinformatics, 4 days 06-04 → 06-07): 612 total preprints, full collections pulled with pagination, 161 keyword-pass, 122 after strong-signal filter
+- arXiv (shared daily cache, last 7d, ~500 entries): 10 tight bio×agentic candidates after filtering
+- Psychiatric Times: scanned, top hits (Arynta lisdexamfetamine oral solution, APSARD 2026 ADHD pipeline) traced to Feb/Jan 2026 — outside 7-day window, skipped
+- Nature NPP / Mol Psychiatry: 303-redirect to authenticated endpoint — skipped (not a transient failure, not retrying further; bioRxiv carried the day)
+
+**Substantive shortlist:**
+- 10.64898/2026.06.02.729530 — Beta-blockers in ED cocaine presentations PRISMA review ★ CHOSEN
+- 10.64898/2026.06.04.730003 — Shank3 NAc social-ensemble avoidance encoding (Yale Picciotto/Jiang) ★ CHOSEN
+- 10.64898/2026.06.01.729421 — Depression GA face-synthesis cognitive process (Northeastern Bex) ★ CHOSEN
+- 10.64898/2026.06.05.730542 — Thalamic SO propagation pulvinar/centromedian (U Chicago) ★ CHOSEN
+- 10.64898/2026.06.01.729093 — Adaptive Bayesian TMS motor localization (Aalto Ilmoniemi) ★ CHOSEN
+- 10.64898/2026.05.28.728263 — FBXO7/PI31 proteasome 20S cryo-EM (Schulman/Harper) ★ CHOSEN
+- 10.1101/2024.07.25.605088 — CLEM Lewy ultrastructure substantia nigra (EPFL Stahlberg) ★ CHOSEN
+- 10.64898/2026.06.02.729674 — PAG-Agent pathway analysis (Auburn) ★ CHOSEN
+- arxiv:2606.04494 — BioManus MCP-native graph planning ★ CHOSEN
+- 10.64898/2026.06.02.728455 — Exercise-induced sweat antidepressant (Wuhan Sports) ★ CHOSEN (curiosity close)
+- 10.64898/2026.06.02.729530 — also considered: Distinct adolescent psychopathology (Yale Ramduny) — passed for cognition/methods, dropped vs. GA face task
+- arxiv:2606.05925 — Towards World Models in Biomedical Research — perspective-only, dropped
+- arxiv:2606.05847 — Agentic Molecular Recovery — narrow SMILES repair, dropped
+- arxiv:2606.05112 — MedSP1000 LLM clinical-agent benchmark — less neuropharm-relevant, dropped
+- 10.64898/2026.06.01.729291 — Spinal cord Ca imaging glial central sensitization OA pain — passed, dropped vs other pain items
+- 10.64898/2026.06.01.729333 — NOS2 / oligodendrocyte Costello — dropped (rarer indication)
+- 10.64898/2026.06.01.729258 — sleep / noise overexposure tinnitus — dropped (low CNS-pharm fit)
+- 10.64898/2026.06.04.730034 — CascadeMAP enzyme-cascade agentic optimization — dropped (synthetic biology not pharm)
+=== 2026-06-07T03:35:25-07:00 done  receptor-and-reason (exit 0) ===
