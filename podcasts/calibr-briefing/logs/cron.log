@@ -986,3 +986,35 @@ Sources scanned: Endpoints, Fierce Biotech, BioPharma Dive, STAT, ADA 2026 progr
 Commit `58398b2` is local; orchestrator pushes.
 === 2026-06-08T03:22:19-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-09T03:10:18-07:00 start calibr-briefing ===
+Both episodes shipped for Calibr-Skaggs Daily Briefing 2026-06-09. Scripts written, audio generated on Mistral primary (6:16 headlines, 10:14 spotlight), uploaded to R2, feed updated, commit landed (orchestrator will push).
+
+**Today's selection:**
+
+**Headlines (376s)** — six items led by the GSK-Nuvalent transaction:
+1. GSK-Nuvalent $10.6B all-cash (tee up spotlight) — **chosen**
+2. J&J-Firefly Bio $1B degrader-ADC
+3. Incyte-Vega Therapeutics $1.25B upfront / up to $2B (VWD sub-Q mAb)
+4. Tango-Revolution Medicines 92% ORR pancreatic combo (vopimetostat + daraxonrasib)
+5. City Therapeutics $100M Series B (extra-hepatic RNAi)
+6. Bial Parkinson's discontinuation + Pfizer Hympavzi pediatric FDA expansion
+
+**Spotlight (615s)** — GSK acquiring Nuvalent for $10.6B all-cash, $124/share, ~40% premium. Four threads: (1) macrocyclic selective design philosophy for ROS1/ALK, brain penetration + G2032R/G1202R resistance coverage; (2) ARROS-1 and ALKOVE-1 pivotal evidence supporting the regulatory bet (PDUFA Sept 18 + Nov 27, 2026); (3) competitive geometry vs Pfizer/Roche/BMS franchises and GSK's strategic oncology gap; (4) Calibr read-throughs on precision-oncology valuation, chemistry-platform comparable, and the current Big Pharma dealmaking shape (next-gen small molecules + novel modalities billion-dollar-priced, middle ground quieter).
+
+**Candidate funnel:**
+
+Sources scanned: Fierce Biotech, BioPharma Dive, Fierce Pharma, STAT News, Endpoints News.
+
+Substantive shortlist (after filtering general/calendar/sentiment links):
+- GSK to acquire Nuvalent for $10.6B (Endpoints/BioPharma Dive/Fierce/STAT) — **chosen for both episodes**
+- J&J to acquire Firefly Bio for $1B (J&J PR / BioPharma Dive) — headlines
+- Incyte to acquire Vega Therapeutics for up to $2B (BusinessWire / Incyte 8-K) — headlines
+- Tango + Revolution Medicines 92% ORR pancreatic combo data (BioPharma Dive / STAT) — headlines
+- City Therapeutics ~$100M Series B (Fierce Biotech / BioPharma Dive) — headlines
+- Bial Parkinson's Phase 2 discontinuation (Fierce Biotech) — headlines
+- Pfizer Hympavzi pediatric FDA expansion (Fierce Pharma) — headlines
+- ADA wrap-up coverage (BioPharma Dive / Fierce Pharma) — covered in yesterday's spotlight; not re-covered today
+- Treeline reverse merger (Fierce Biotech) — dropped, less material
+- Endpoints article body (403 from server) — substituted via mirrors and SEC/PR.
+
+Source-side issues: Endpoints article bodies 403'd from this IP on retry; substituted with SEC filings, Bloomberg/Reuters mirrors, and BioPharma Dive/Fierce Biotech for the same items. No content gap.
+=== 2026-06-09T03:28:22-07:00 done  calibr-briefing (exit 0) ===

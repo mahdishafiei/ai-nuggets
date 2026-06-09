@@ -929,3 +929,56 @@ Failed sources: Biological Psychiatry + Neuropharmacology RSS (ScienceDirect ser
 - arXiv 2606.05847 — AMREC Agentic Molecular Recovery — held; molecular generation invalid-SMILES recovery felt narrower than the chosen 10
 === 2026-06-08T03:33:08-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-09T03:20:18-07:00 start receptor-and-reason ===
+Episode committed. Final candidate funnel for cron.log audit record:
+
+## Run summary — receptor-and-reason 2026-06-09
+
+Script: `podcasts/receptor-and-reason/scripts/2026-06-09-receptor-and-reason.md` (2273 spoken words)
+Audio: `podcasts/receptor-and-reason/episodes/2026-06-09-receptor-and-reason.mp3` (6.83 MB, 14:14, Mistral voxtral-mini-tts-2603 / en_paul_neutral, no fallback needed)
+R2 upload: `podcasts/receptor-and-reason/episodes/2026-06-09-receptor-and-reason.mp3` to `ai-nuggets-episodes` — complete
+Feed: Episode 28 inserted at top of `podcasts/receptor-and-reason/feed.xml`, XML validated
+Dedup ledger: 11 items appended to `state/shipped.jsonl`
+Commit: e574810 (pushed by orchestrator)
+
+### Candidate funnel
+
+**Tier 1 — bioRxiv neuroscience + pharmacology (last 7d window 2026-06-02 to 2026-06-09):**
+- Scanned: 1,493 raw items (paginated full collection), 1,453 after dedup-to-latest-version
+- 542 passed broad CNS/pharm/neuro topic filter; 271 already in shipped ledger were excluded
+- 144 passed strong-signal filter (receptor/agonist/antagonist/inhibitor/psychedelics/SSRI/addiction/CNS pharm/computational pharm)
+- 67 with date ≥ 2026-06-05 (most likely unshipped)
+
+**Tier 1 — Journal listings (Neuropsychopharmacology / Molecular Psychiatry / Biological Psychiatry / Neuropharmacology):**
+- Nature NPP and MP redirected to idp.nature.com (auth wall) — could not enumerate
+- Biological Psychiatry / ScienceDirect Neuropharmacology articles-in-press pages 403 Forbidden
+- Logged gap; relied on bioRxiv depth (1.4k items already exceeds journal page yield this week)
+
+**Tier 1 — Psychiatric Times:** 403 Forbidden from this IP — logged gap
+
+**Tier 2 — arXiv (last 7d from shared cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries since 2026-06-02):**
+- 39 passed biomedical + agentic/LLM keyword filter
+- 9 passed drug/molecule/protein/compound subfilter
+- 2 picked for episode (drug-asset valuation ablation + LLM mol design)
+
+**Tier 3 — chemRxiv, CPT:PSP, CP&T, DDT, industry feeds:** not separately surveyed this run; bioRxiv + arXiv yield carried the day to 10 items, above the 8-item floor
+
+**Substantive shortlist:**
+- doi:10.64898/2026.06.03.729927 — UCSF Von Zastrow GPCR temporal coding ★ chosen (opener)
+- doi:10.64898/2026.06.03.729849 — Nencki ESR1/amygdala alcohol craving ★ chosen
+- doi:10.64898/2026.06.04.730038 — Shenzhen REM-sleep neuroimmune circuit ★ chosen
+- doi:10.1101/2025.04.29.651264 — USUHS LHb CRF neurons ★ chosen
+- doi:10.64898/2026.06.02.729568 — Nagoya differentiable tau propagation ★ chosen
+- doi:10.64898/2026.06.03.729455 — Catalytide pentapeptide Aβ cleavage ★ chosen
+- doi:10.64898/2026.06.04.730114 — Harvard GDF11 ICH/TBI recovery ★ chosen
+- doi:10.64898/2026.06.05.730478 — Einstein CA2 trace fear conditioning ★ chosen
+- doi:10.64898/2026.06.02.729661 — UConn LC noradrenergic taste cortex ★ chosen (closer)
+- arxiv:2606.09556 — Noah AI drug-asset valuation 3-arm ablation ★ chosen
+- arxiv:2606.09520 — Self-reflective LLM molecular design w/ first-principles loop ★ chosen
+- doi:10.64898/2026.06.03.729810 — MIT theta gating PFC information (Earl Miller) — held
+- doi:10.64898/2026.06.03.729927v1+730575 — Maryland Functional connectivity difficult listening — held
+- doi:10.64898/2026.06.08.730839 — Barcelona BDNF-loaded EVs from young cortex — held
+- doi:10.64898/2026.06.04.730240 — Vanderbilt structure-guided virtual screening for LRH-1 — held (not CNS)
+- arxiv:2606.09671 — Alzheimer's digital twin transition model — held (lighter ML)
+
+Sources with gaps: Nature NPP/MP (auth wall), Biol Psych + Neuropharmacology articles-in-press (403), Psychiatric Times (403). All logged; bioRxiv depth (1.4k items) compensated.
+=== 2026-06-09T03:39:29-07:00 done  receptor-and-reason (exit 0) ===
