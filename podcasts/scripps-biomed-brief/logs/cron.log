@@ -701,3 +701,5 @@ Sources:
 - [Autoantibodies Drive Fc Gamma Receptor-Dependent Colon Inflammation During Immune Checkpoint Blockade](https://www.biorxiv.org/content/10.64898/2026.06.03.729692v1)
 === 2026-06-08T03:39:19-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-09T03:30:18-07:00 start scripps-biomed-brief ===
+The background find command completed — already resolved by locating npx under `~/.nvm/versions/node/v24.14.0/bin/` and prepending it to PATH for the R2 upload. Episode shipped successfully.
+=== 2026-06-09T03:46:27-07:00 done  scripps-biomed-brief (exit 0) ===
