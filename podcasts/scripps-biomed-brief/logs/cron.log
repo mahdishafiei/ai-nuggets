@@ -703,3 +703,4 @@ Sources:
 === 2026-06-09T03:30:18-07:00 start scripps-biomed-brief ===
 The background find command completed — already resolved by locating npx under `~/.nvm/versions/node/v24.14.0/bin/` and prepending it to PATH for the R2 upload. Episode shipped successfully.
 === 2026-06-09T03:46:27-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-10T03:30:11-07:00 start scripps-biomed-brief ===
