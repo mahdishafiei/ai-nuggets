@@ -21,7 +21,7 @@ for attempt in 1 2; do
   out=$(mktemp)
   {
     echo "=== $(date -Iseconds) start $slug$tag ==="
-    printf 'Read podcasts/PIPELINE.md and podcasts/%s/PROMPT.md (in that order), then execute today'\''s pipeline run as documented in those files. PIPELINE.md describes production mechanics shared across shows; the show-specific PROMPT.md defines audience, sources, episode format, and commit conventions for slug %s.\n' "$slug" "$slug" \
+    printf 'You are producing today'\''s episode of a daily podcast for slug %s. Please read the production guide at podcasts/PIPELINE.md and the show'\''s editorial brief at podcasts/%s/PROMPT.md, then follow the instructions in those files to publish today'\''s episode.\n' "$slug" "$slug" \
       | /home/asu/.local/bin/claude -p --permission-mode auto
     echo "=== $(date -Iseconds) done  $slug (exit $?)$tag ==="
   } 2>&1 | tee -a "$log" > "$out"

@@ -63,7 +63,7 @@ run_show() {
     out=$(mktemp)
     {
       echo "=== $(date -Iseconds) start $slug$tag ==="
-      printf 'Read podcasts/PIPELINE.md and %s (in that order), then execute today'\''s pipeline run as documented in those files. PIPELINE.md describes production mechanics shared across shows; the show-specific PROMPT.md defines audience, sources, episode format, and commit conventions for slug %s.\n' "$prompt" "$slug" \
+      printf 'You are producing today'\''s episode of a daily podcast for slug %s. Please read the production guide at podcasts/PIPELINE.md and the show'\''s editorial brief at %s, then follow the instructions in those files to publish today'\''s episode.\n' "$slug" "$prompt" \
         | "$CLAUDE" -p --permission-mode auto
       echo "=== $(date -Iseconds) done  $slug (exit $?)$tag ==="
     } 2>&1 | tee -a "$log" > "$out"
