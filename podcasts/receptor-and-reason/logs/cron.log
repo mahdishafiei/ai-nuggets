@@ -983,3 +983,23 @@ Commit: e574810 (pushed by orchestrator)
 Sources with gaps: Nature NPP/MP (auth wall), Biol Psych + Neuropharmacology articles-in-press (403), Psychiatric Times (403). All logged; bioRxiv depth (1.4k items) compensated.
 === 2026-06-09T03:39:29-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-10T03:20:11-07:00 start receptor-and-reason ===
+Receptor & Reason episode for 2026-06-10 shipped. Commit `165e1fb`. Orchestrator will handle the push.
+
+**Today's selections (11 items):**
+
+1. (open) **Bristol Mosienko bioRxiv** — Fluoxetine astrocyte cAMP cascade via glial crosstalk (5-HT2B → ATP → microglia → adenosine → A2B) — selected
+2. **Toronto Mississauga Martin bioRxiv** — ACC mu-opioid neurons gate placebo analgesia — selected
+3. **Georgetown Ostroumov bioRxiv** — acute stress VTA-GABA KCC2 potentiates operant learning, CLP290 rescues — selected
+4. **Purdue Chubykin NPP** — vlPAG GABAergic neurons mediate fentanyl withdrawal hyperalgesia — selected
+5. **Ohio State Gu NPP** — Cannabidiol restores sleep + reduces seizures in Angelman model — selected
+6. **UNC Won/Anton bioRxiv** — SCZ CRISPR-CROP-seq converges on ciliary programs — selected
+7. **Mayo Springer/Fiesel bioRxiv** — PINK1 astrocyte non-cell-autonomous PD neuronal death — selected
+8. **Weill Cornell Gabr bioRxiv** — ILT3/LILRB4 small-molecule LT12 for AD — selected
+9. **Minnesota Widge bioRxiv** — Right dorsal PFC pathways carry VCVS DBS cognitive-control benefit — selected
+10. **Mount Sinai Huang bioRxiv** — LinkD agentic drug repurposing, propranolol/carvedilol prostate cancer — selected
+11. (close) **arXiv 2606.10796** — Dep-LLM training-free depression diagnosis — selected
+
+**Source funnel:** bioRxiv 244+220+130+102+282+266+38 = 1,282 papers across the 7-day window paginated; strict-keyword shortlist 197 → 167 after dedup; ~24 abstracts inspected in detail. NPP scraped (latest 20 in 2026, 8 within window). arXiv cache (13,986 lines) → 28 agentic-bio candidates in window; selected one not already shipped yesterday. All Tier 1-3 sources responded normally — no source-level failures.
+
+Duration 910s (15:10), 7.28 MB. Feed XML validated; dedup ledger appended.
+=== 2026-06-10T03:38:53-07:00 done  receptor-and-reason (exit 0) ===

@@ -1334,3 +1334,14 @@ Episode shipped. Commit `a64b40f` on `main`; push deferred to the orchestrator.
 
 === 2026-06-09 done biomedical-agentic-ai ===
 === 2026-06-09T03:09:27-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-10T03:00:11-07:00 start biomedical-agentic-ai ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach.
+
+Request ID: req_011CbuPSwKiJncKD1R4RNZmH
+=== 2026-06-10T03:02:53-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-10T03:02:53-07:00 AUP-refusal detected for biomedical-agentic-ai; retrying in 180s ===
+=== 2026-06-10T03:05:53-07:00 start biomedical-agentic-ai (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach.
+
+Request ID: req_011CbuPn3CiG4MtpH2KT2GUN
+=== 2026-06-10T03:07:12-07:00 done  biomedical-agentic-ai (exit 0) (retry 1) ===

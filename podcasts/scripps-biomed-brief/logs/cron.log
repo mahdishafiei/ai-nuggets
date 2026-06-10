@@ -704,3 +704,41 @@ Sources:
 The background find command completed — already resolved by locating npx under `~/.nvm/versions/node/v24.14.0/bin/` and prepending it to PATH for the R2 upload. Episode shipped successfully.
 === 2026-06-09T03:46:27-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-10T03:30:11-07:00 start scripps-biomed-brief ===
+Episode shipped. Final summary follows.
+
+# Scripps Biomedical Brief — 2026-06-10
+
+**Episode:** `2026-06-10-ilt3-asms-tric-checkpoint-zfand5-proteasome-feedback-ckk-stereo-lnp-seap-pdac`
+- Script: 9,749 chars (script body)
+- Audio: 4,358,731 bytes / 544.8 s / Mistral primary (`en_paul_neutral`)
+- Published to R2: `ai-nuggets-episodes` bucket
+- Feed: 25 items, parses
+- Commit: `7bdacd9` (push deferred to orchestrator)
+
+## Candidate funnel
+
+**bioRxiv pharmacology and toxicology (2026-06-08 → 2026-06-10, 7 items scanned, 5 substantive after discarding already-covered):**
+- ILT3/LILRB4 small molecules by AS-MS for Alzheimer's neuroimmune checkpoint (Gabr, Weill Cornell) — https://www.biorxiv.org/content/10.64898/2026.06.05.730337v1 ✅ CHOSEN (nugget 1a)
+- ILT3/LILRB4 small molecules by TRIC for tumor myeloid checkpoint (Gabr, Weill Cornell) — https://www.biorxiv.org/content/10.64898/2026.06.05.730341v1 ✅ CHOSEN (nugget 1b)
+- Stereochemistry of LNPs (cKK-E12 enantiomers controlling lamellar vs inverse hexagonal phases) (Kros, Leiden) — https://www.biorxiv.org/content/10.64898/2026.06.05.730351v1 ✅ CHOSEN (nugget 3)
+- UT-018 substrate-directed collagen stabilization (Saxena, Reagene) — https://www.biorxiv.org/content/10.64898/2026.06.04.730073v1
+- iRhom2 in acute lung inflammation (Ludwig) — narrower scope, skipped
+
+**bioRxiv bioengineering (25 items scanned, ~6 substantive):**
+- Miniaturized subcutaneous cellular implants for sustained protein delivery (Ma, Cornell) — already covered 2026-06-09
+- ProtGPT3 promptable protein language models (Ferruz) — incremental, skipped
+- shRNA-loaded extracellular vesicles for extrahepatic RNAi (El Andaloussi, Karolinska) — https://www.biorxiv.org/content/10.64898/2026.06.05.730346v1
+- Glucagon hypoglycemia kinetics + microneedle patches (Traverso, MIT) — https://www.biorxiv.org/content/10.64898/2026.06.05.729994v1
+- Synthetic protease-activated receptors (Ting, Stanford) — already covered 2026-06-09
+
+**bioRxiv biochemistry (30 items scanned, ~5 substantive):**
+- Proteasome activation by ubiquitin-independent feedback (ZFAND5/6) (Lehner, Cambridge) — https://www.biorxiv.org/content/10.64898/2026.06.05.730379v1 ✅ CHOSEN (nugget 2)
+- Single-molecule enzyme activity profiling for early PDAC (Kagami/Komatsu, Cosomil/U Tokyo) — https://www.biorxiv.org/content/10.64898/2026.06.05.730533v1 ✅ CHOSEN (nugget 4)
+- BRCA1-A ubiquitin chain-feeding mechanism (Sixma) — basic biology, skipped
+- Methionine genetically encoded biosensor (Schmitt) — chemical biology tool but narrower, skipped
+- TDP-43 NLS region disorder (Dormann) — already covered earlier in week
+
+**bioRxiv synthetic biology (5 items scanned):** dtSFM already covered 2026-06-09; remaining items off-thesis.
+
+**Source failures:** none — all four bioRxiv searches returned in-window.
+=== 2026-06-10T03:38:09-07:00 done  scripps-biomed-brief (exit 0) ===

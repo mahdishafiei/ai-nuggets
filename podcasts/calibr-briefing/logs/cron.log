@@ -1019,3 +1019,38 @@ Substantive shortlist (after filtering general/calendar/sentiment links):
 Source-side issues: Endpoints article bodies 403'd from this IP on retry; substituted with SEC filings, Bloomberg/Reuters mirrors, and BioPharma Dive/Fierce Biotech for the same items. No content gap.
 === 2026-06-09T03:28:22-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-10T03:10:11-07:00 start calibr-briefing ===
+Commit landed. Final summary of today's run:
+
+Calibr-Skaggs Daily Briefing for Wednesday, June 10, 2026 — shipped both episodes. The lead story is Parabilis Medicines pricing the largest biotech IPO in history overnight ($670M primary + $75M concurrent placement = $745M total at $20/share, above the $17-19 marketed range, trading on Nasdaq as PBLS today). Strong Calibr fit: chemistry-platform company, intracellular undruggable target (β-catenin:TCF), Helicon stabilized-peptide modality, Verdine pedigree, recent Regeneron $2.3B antibody-Helicon-conjugate deal.
+
+Files shipped:
+- `podcasts/calibr-briefing/scripts/2026-06-10-pharma-headlines.txt` (8,664 chars, 469.5s / ~7:50 mp3)
+- `podcasts/calibr-briefing/scripts/2026-06-10-parabilis-ipo-spotlight.txt` (11,307 chars, 597.2s / ~9:57 mp3)
+- Both mp3s uploaded to R2 (`ai-nuggets-episodes` bucket)
+- `podcasts/calibr-briefing/feed.xml` updated with two new items at the top
+- Single commit `b510a40`; orchestrator will push at end of run
+
+Candidate funnel (sources scanned: Endpoints, Fierce Biotech, Fierce Pharma, BioPharma Dive, STAT, BioSpace, additional web searches):
+- Parabilis Medicines IPO ($670M record) — Endpoints, Fierce Biotech, Bloomberg, BioPharma Dive  **← CHOSEN for spotlight + headline #1**
+- Gilead-Merck ISLEND-1/2 once-weekly oral HIV Phase 3 win — Endpoints, BioPharma Dive, Fierce Pharma  **← headline #2**
+- Gilead-Merck KEYNOTE-D46/EVOKE-03 Trodelvy NSCLC Phase 3 discontinuation — Endpoints, BioPharma Dive  **← headline #3**
+- Treeline Biosciences / Standard BioTools reverse merger (announced June 8) — Endpoints, BioPharma Dive, Fierce Biotech  **← headline #4**
+- Novo Nordisk CagriSema REIMAGINE 1/2/3 Phase 3 T2D data at ADA 2026 — Novo PR, ClinicalTrialsArena  **← headline #5**
+- WuXi AppTec added to Pentagon entities list — Fierce Pharma  **← headline #6a**
+- Sanofi-Owkin multi-year AI agent expansion — Fierce Pharma  **← headline #6b**
+- Sanofi Phase 3 autoimmune trial early-termination (Fierce Biotech tease) — could not confirm specifics, dropped
+- City Therapeutics $99.5M extra-hepatic RNAi Series B — already covered in yesterday's headlines, omitted
+- ADC Therapeutics LOTIS-5 safety signal (June 3-4) — already older news
+- ASCO 2026 daraxonrasib / pumitamig recap — already covered in prior episodes
+- AbbVie Skyrizi ad spending, AstraZeneca LinkedIn reprimand, Hikma Ohio investment — too marginal for Calibr audience
+
+Sources:
+- [Parabilis $670M IPO sets new biotech record](https://endpoints.news/parabilis-670m-ipo-sets-new-biotech-record-will-fund-cancer-drug/)
+- [Drugmaker Parabilis Raises $745 Million in US IPO, Placement (Bloomberg)](https://www.bloomberg.com/news/articles/2026-06-10/drugmaker-parabilis-raises-745-million-in-us-ipo-placement)
+- [After raising $800M, Parabilis seeks an IPO to pursue 'undruggable' targets (BioPharma Dive)](https://www.biopharmadive.com/news/parabilis-biotech-ipo-helicon-peptide-desmoid/820709/)
+- [Parabilis–Regeneron $2.3B antibody-Helicon-conjugate collaboration](https://parabilismed.com/press-release/parabilis-medicines-announces-strategic-collaboration-with-regeneron-pharmaceuticals-to-advance-novel-antibody-helicon-conjugates-across-multiple-therapeutic-areas/)
+- [Zolucatetide FDA Orphan Drug designation in desmoid tumors](https://parabilismed.com/press-release/parabilis-medicines-zolucatetide-the-first-and-only-direct-inhibitor-of-the-elusive-%CE%B2-catenintcf-interaction-receives-fda-orphan-drug-designation-for-the-treatment-of-desmoid-tumors/)
+- [Gilead and Merck mixed outcomes in lung cancer, HIV studies (BioPharma Dive)](https://www.biopharmadive.com/news/merck-gilead-trodelvy-evoke-islend-hiv-results/822344/)
+- [Treeline to go public via reverse merger with Standard BioTools (Endpoints)](https://endpoints.news/treeline-to-go-public-via-reverse-merger-with-standard-biotools/)
+- [Novo Nordisk CagriSema REIMAGINE Phase 3 T2D at ADA 2026](https://www.prnewswire.com/news-releases/novo-nordisks-cagrisema-2-4-mg--2-4-mg-demonstrated-significant-reduction-in-hba1c-and-weight-across-multiple-studies-in-the-reimagine-program-presented-at-ada-2026--302793443.html)
+=== 2026-06-10T03:23:43-07:00 done  calibr-briefing (exit 0) ===
