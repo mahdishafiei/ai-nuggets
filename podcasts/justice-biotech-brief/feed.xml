@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Justice's Biotech Brief</title>
+    <description>Daily biotech and pharma briefing for Justice Fleischmann (Rodgers Lab, Calibr at Scripps Research).</description>
+    <link>https://github.com/andrewsu/ai-nuggets</link>
+    <language>en-us</language>
+    <itunes:author>Nigel</itunes:author>
+    <itunes:owner>
+      <itunes:name>Andrew Su</itunes:name>
+    </itunes:owner>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Technology"/>
+  </channel>
+</rss>
