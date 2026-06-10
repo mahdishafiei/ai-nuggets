@@ -1,11 +1,12 @@
 # Production pipeline (shared)
 
 This file documents the production mechanics shared by every podcast under
-`podcasts/<slug>/`. The runner (`scripts/run_all_shows.sh`) prepends it to
-each show's `PROMPT.md` before piping to Claude. Each show's PROMPT.md
-specifies its slug, audience, search strategy, episode format, script
-filename convention, and commit-message prefix; this file handles
-everything after the script content has been written.
+`podcasts/<slug>/`. The runner (`scripts/run_all_shows.sh`) instructs Claude
+to read this file together with each show's `PROMPT.md` at the start of
+every run. Each show's PROMPT.md specifies its slug, audience, search
+strategy, episode format, script filename convention, and commit-message
+prefix; this file handles everything after the script content has been
+written.
 
 ## Source-level failures during search
 
