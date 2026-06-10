@@ -1356,3 +1356,10 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 
 Request ID: req_011Cbv7BpbNqPwQtbW4NTbQw
 === 2026-06-10T12:10:15-07:00 done  biomedical-agentic-ai (exit 0) (retry 1) ===
+=== 2026-06-10T12:17:05-07:00 start biomedical-agentic-ai ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach.
+
+Request ID: req_011Cbv7p5qAVebnCQxR4Q4t3
+=== 2026-06-10T12:18:26-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-10T12:18:26-07:00 AUP-refusal detected for biomedical-agentic-ai; retrying in 180s ===
+=== 2026-06-10T12:21:26-07:00 start biomedical-agentic-ai (retry 1) ===
