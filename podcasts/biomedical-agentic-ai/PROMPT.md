@@ -92,8 +92,10 @@ back to plug a 2- or 4-week-old paper is not.
 # 3. Episode format
 
 - **One episode per day, ~5 minutes.**
-- Pick the single best item from your candidates. Write a punchy 3–5
-  sentence summary — why it matters, what's novel. Be opinionated.
+- Pick the single best item from your candidates, **read the full text
+  before drafting** (see "Writing the summary" in `PIPELINE.md`), then
+  write a punchy 3–5 sentence summary — why it matters, what's novel.
+  Be opinionated.
 - Real, verified URL only — never fabricate. If you can't find the primary
   source, drop the item.
 - **Script file:** `podcasts/biomedical-agentic-ai/scripts/YYYY-MM-DD-<slug>.md`

@@ -29,6 +29,69 @@ the run.**
   met (no fresh candidates after surveying available sources), not for
   source-side outages.
 
+## Writing the summary
+
+Episode summaries center on **overall significance** of the work and
+the **intuition behind the methodology**. Methodological specifics —
+architecture, datasets, sample sizes, effect sizes, baselines,
+ablations, limitations — surface **only when they materially change
+the significance-or-intuition take**. If a detail doesn't change how
+a listener should think about the work, leave it out. The audience is
+working scientists who can read the paper themselves; the value of
+the show is the take, not the recap.
+
+### Read the source in full before drafting
+
+Title + abstract are enough to *select* an item but often not enough
+to *summarize* it accurately. Abstracts compress or omit the actual
+mechanism, the regime where the method works, the scale of the
+experiment, and the specific result that makes the work interesting.
+Fetch the full text of each pick before drafting so the summary is
+grounded in what the paper actually shows, not in what the abstract
+gestures at.
+
+Read with the depth your summary requires:
+
+- **Single-item / spotlight items** (biomedical-agentic-ai's daily
+  pick, justice-biotech-brief's daily pick, calibr-briefing's
+  spotlight, each paper in scripps-biomed-brief): full text is
+  mandatory.
+- **Multi-item shows** (receptor-and-reason, calibr-briefing
+  headlines): full text is mandatory for the lead/opener and for any
+  item where the abstract leaves a material question about
+  significance. Tail items getting a 30–60-second mention can be
+  abstract-only when the abstract is self-contained.
+
+Fetch order by source type:
+
+- **bioRxiv**: `WebFetch` the `.full` HTML page at
+  `https://www.biorxiv.org/content/<prefix>/<id>v<n>.full` — use the
+  DOI prefix the details API returned (`10.1101/` vs. `10.64898/`;
+  see "Paper-link URLs" below). Fall back to `.full.pdf` if the HTML
+  is sparse.
+- **arXiv**: `WebFetch https://arxiv.org/pdf/<id>` — the PDF
+  text-extracts cleanly. Use `abs/<id>` only if the PDF endpoint
+  stalls.
+- **Published journals**: `WebFetch` the article URL. If it hits an
+  auth wall (`idp.nature.com`, `auth.elsevier.com`, ScienceDirect),
+  check whether the same work has a bioRxiv/medRxiv/arXiv preprint
+  and read that instead. PubMed Central is also worth a shot for
+  NIH-funded work.
+- **Press / product launches**: `WebFetch` the announcement page plus
+  any linked technical companion — white paper, GitHub README, model
+  card, system card, accompanying preprint.
+
+If the full text is genuinely unobtainable for a pick that requires
+it, prefer **dropping the item and using the next-best candidate**
+over a summary that may misread the work. The exception is a clearly
+dominant item with no close runner-up — in that case, say so in the
+script in one short phrase (e.g., "going off the abstract here — the
+preprint is request-only") so the listener knows the depth of the
+take.
+
+Note in the candidate funnel which items you opened in full vs.
+abstract-only, and which fetches hit auth walls.
+
 ## Writing for audio
 
 The script will be read aloud — write for the ear, not the eye. Things that
