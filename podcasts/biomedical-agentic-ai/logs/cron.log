@@ -1437,3 +1437,4 @@ All sources online; no transient failures this run.
 
 GEOAgent won on (1) right altitude — automating the shared data-engineering preamble across labs, not the science end; (2) architectural choice of agent-on-Nextflow rather than agent-executes-shell-commands; (3) open code + open data + open service trifecta on a 20-year community pain point; (4) directly hits the data-integration / APIs / bioinformatics / open-science axes of the audience; (5) thematically distinct from the recent week of science-end-agent papers.
 === 2026-06-11T03:06:57-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-12T03:00:05-07:00 start biomedical-agentic-ai ===
