@@ -50,3 +50,4 @@ Shipped: **Lasme-cel — first allogeneic CAR-T with FDA RMAT and final Phase 1 
 - Endpoints News fetched HTTP 403 from this IP (no retry helped); proceeded with Fierce Biotech + GlobeNewswire + BioSpace + targeted searches. Did not skip the day.
 - `scripts/publish_episode.sh` initially failed because `npx` was not on the cron-style PATH; resolved by prepending `~/.nvm/versions/node/v24.14.0/bin` before re-running. R2 upload then completed cleanly.
 === 2026-06-11T03:31:47-07:00 done  justice-biotech-brief (exit 0) ===
+=== 2026-06-12T03:20:05-07:00 start justice-biotech-brief ===
