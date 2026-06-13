@@ -799,3 +799,4 @@ Substantive shortlist (after discarding spurious hits and yesterday's already-sh
 
 Depth caveat: all three picked items were summarized from the bioRxiv `get_preprint` abstract (full-text endpoints unreachable via Cloudflare from this network). Script discloses this in the opening sentence and the takes stay within what the abstracts assert.
 === 2026-06-12T03:50:51-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-13T03:40:05-07:00 start scripps-biomed-brief ===
