@@ -1484,3 +1484,28 @@ Episode shipped. The mp3 is served from R2 (gitignored, as expected). Posting fi
 **Why MDForge won**: methodological contribution (open-ended code generation + per-stage typed expert critique under verbal RL beats the tool-calling pattern of MDCrow/MDAgent/DynaMate); prospective wet-lab confirmation (picomolar CB[7] binder by competition 1H NMR vs FMTA reference, Ka ≈ 8×10^12 M^-1) elevates this from benchmark paper to genuine prospective scientific discovery; competitive with the canonical pAPRika human-expert pipeline on SAMPL CB[7]; directly in the agentic-AI-applied-to-biomedical-research wheelhouse; on-recency with v1 posted 2026-06-11.
 === 2026-06-12T03:10:42-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-13T03:00:05-07:00 start biomedical-agentic-ai ===
+Episode shipped. Commit 306eae5.
+
+**Candidate funnel — 2026-06-13**
+
+**bioRxiv** (2026-06-12 to 2026-06-13, 198 unique papers): 14 relevance hits after keyword filter, 2 substantive:
+- CAREPath: Semantic Context-Aware Reasoning Paths with Mechanism-Augmented Embeddings for Drug Repurposing — bioRxiv 10.64898/2026.06.09.731247 — KG+LLM, +3.8% AUPRC over 18 baselines; abstract via MCP, full text blocked by Cloudflare 403 from this host
+- PHI-Reason: evidence-grounded species-level phage-host prediction from structured biological text profiles — bioRxiv 10.64898/2026.06.10.727770
+
+**arXiv** (shared daily cache /tmp/ai-nuggets-arxiv-cache.xml, 500 entries, filtered to last 2 days + biomedical): 14 hits, substantive:
+- **EpiBench: Verifiable Evaluation of AI Agents on Epigenomics Analysis** — arXiv:2606.13602 — LatchBio, 106 deterministic-grader tasks × 16 model-harness pairs × 3 attempts = 5,088 trajectories; top GPT-5.5/Pi 45.0%, no system passes majority (full text read via mutool conversion of arXiv PDF) **← CHOSEN**
+- HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents — arXiv:2606.13663 — foundational agent tooling, not biomedical-specific
+- ArogyaSutra: A Multi-Agent Framework for Multimodal Medical Reasoning in Indic Languages — arXiv:2606.13572
+- scLLM-DSC: LLM-Knowledge Enhanced Cross-Modal Deep Structural Clustering — arXiv:2606.13007 — useful but not agentic
+- Small LLMs for Biomedical Claim Verification — arXiv:2606.12854 — fine-tuning study, not agentic
+- Hallucination in Medical Imaging AI (taxonomy framework) — arXiv:2606.13211
+- Getting Better at Working With You (coding-agent personalization) — arXiv:2606.13174
+
+**ChemRxiv**: no fresh biomedical-agentic-AI hits in window (not separately queried — bioRxiv+arXiv already produced a dominant pick).
+
+**ARPA-H / NIH / NSF / HHS press**: not separately checked (the arXiv frontier-agent calibration result was clearly the day's top item and the policy pages have produced no agentic-AI hits in recent runs).
+
+**Why EpiBench beat CAREPath**: EpiBench is a frontier-agent capability calibration on real biomedical analysis (sub-50% pass rates with a clean tool-execution-vs-scientific-judgment dissociation) — load-bearing methodologically and audience-relevant for someone building agentic AI in biomedicine. CAREPath is a +3.8% AUPRC incremental improvement on standard drug-repurposing benchmarks; solid but smaller take.
+
+**Source failures**: bioRxiv full-text HTML and PDF endpoints return Cloudflare 403 from this host (matches the [[reference_biorxiv_fulltext_blocked]] memory); used the bioRxiv MCP `get_preprint` tool for CAREPath abstract metadata. arXiv PDF (epibench) fetched via `curl` + `mutool convert` since `pdftotext`/`pypdf` weren't available.
+=== 2026-06-13T03:08:11-07:00 done  biomedical-agentic-ai (exit 0) ===

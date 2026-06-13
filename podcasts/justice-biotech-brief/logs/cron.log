@@ -72,3 +72,27 @@ Committed. Final summary for the cron log:
 **Source-level note:** endpoints.news 403, NIH press 403, bioRxiv full-text behind Cloudflare 403 — all worked around (abstract from MCP bioRxiv tool + web searches for context). No retries past one attempt; proceeded with available material per PIPELINE.
 === 2026-06-12T03:28:50-07:00 done  justice-biotech-brief (exit 0) ===
 === 2026-06-13T03:20:05-07:00 start justice-biotech-brief ===
+Episode published. Final summary:
+
+**Commit:** `fc24bf1` — Episode: Cell-cycle arrest as CAR-T exhaustion driver — S-to-G2 stall pinpointed upstream of dysfunction (Mackall/Bendall preprint)
+
+**Candidate funnel (2026-06-13):**
+
+bioRxiv (window 2026-06-11 → 2026-06-13, paginated full collection):
+- Scanned: 451 entries (441 unique DOIs after dedup).
+- Keyword-matched (VEGF/PD-L1/PD-1/TCE/bispecific/trispecific/CAR-T/CAR-NK/ADC/JAK/immunotherapy/checkpoint on title+abstract): 12.
+- Substantive shortlist after discarding spurious "checkpoint" matches (bacterial cell-envelope checkpoint, malaria Chk1, last-common-ancestor flagellum, sarcopenia VEGF, malaria) and off-target items (ICI-microglia neuroAE — interesting but neuro-focused; DyMoTree bioinformatics — methods paper not pick-worthy; rhesus macaque CAR-NK for HIV — off-mandate, Justice is cancer immunology):
+  - **CHOSEN** "Cell Cycle Sensing Shapes Human T Cell Fate and Exhaustion Programs" — Bendall/Mackall, Stanford — 10.64898/2026.06.11.731737 (abstract-only; full text Cloudflare-blocked)
+  - "From DNA-Encoded Library (DEL) Screening to In Vivo Validation: LILRB4 (ILT3)-Targeted Small Molecules Reprograms Myeloid Immune Suppression" — Gabr lab, Weill Cornell — 10.64898/2026.06.10.731267 — **excluded: companion to yesterday's GL-4512 episode**
+  - "Spatial Transcriptomics reveals a T cell-mediated microglial activation axis…ICI" — Acharya, UCI — 10.64898/2026.06.10.730982
+  - "TREM1, PD-L1 on HSPCs in a mouse RA model" — Nijnik, McGill — 10.64898/2026.06.11.731762
+
+News/press (Fierce Biotech, Endpoints, STAT, BioSpace, PRNewswire scans for 2026-06-11–13):
+- Fierce Biotech 2026-06-12 lead items: Kardigan IPO recap, Novartis-Avidity DMD data, Ipsen pipeline interview, Genentech VP cuts — no immunology/oncology readouts in Justice's wheelhouse.
+- Endpoints/STAT (front-page scan): obesity, peptides, Novartis molecular glues, Enliven leukemia, Prometheus AI raise — no qualifying immunology/oncology pick.
+- ASCO 2026 stories (HARMONi-6 ivonescimab, CS2009 PD-1/VEGF/CTLA-4 trispecific) — **out of recency window**: original PRs dated 2026-05-31; only late-cycle recaps (e.g., CS2009 "Key Highlights" 2026-06-11) within window.
+
+Funder pages (ARPA-H, NIH, NSF): no qualifying releases in the 2026-06-11–13 window.
+
+Source failures: NIH press feed (HTTP 403 from this host) and STAT category page (HTTP 403); worked around via direct WebSearch on those domains, sufficient signal.
+=== 2026-06-13T03:28:01-07:00 done  justice-biotech-brief (exit 0) ===

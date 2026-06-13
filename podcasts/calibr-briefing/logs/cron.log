@@ -1103,3 +1103,36 @@ Spotlight rationale: Takeda zasocitinib chosen over Novartis del-brax because (a
 === 2026-06-12T... done calibr-briefing ===
 === 2026-06-12T03:27:44-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-13T03:10:05-07:00 start calibr-briefing ===
+Both episodes published. Now printing the candidate funnel.
+
+Both episodes published, audio uploaded to R2, feed updated, committed (2816d07). Orchestrator will push.
+
+**Candidate funnel (Saturday 2026-06-13):**
+
+Sources scanned: Fierce Biotech, Fierce Pharma, Endpoints News (403 on listing pages — used the search-engine cache instead), BioPharma Dive, STAT News biotech, Genetic Engineering News, BioSpace, J&J/Sarepta/SonoThera press releases, EHA 2026 conference coverage, FDA calendar, plus targeted searches for in-vivo CAR-T / MASH-FGF21 / Foresite portfolio activity.
+
+Substantive shortlist (post-filter):
+- SonoThera $125M Series B (closed June 10) — Vida-led, broad pharma CVC syndicate, non-viral ultrasound microbubble gene-therapy platform, full 13kb dystrophin delivery, DMD IND 2027, ADPKD #2 — https://www.biospace.com/press-releases/sonothera-closes-oversubscribed-125-million-series-b-financing-to-advance-clinical-development-of-ultrasound-mediated-nonviral-genetic-medicines **[CHOSEN: headlines #1 + SPOTLIGHT]**
+- J&J MonumenTAL-3 EHA plenary — Talvey (GPRC5D x CD3 bispecific) + Darzalex Faspro ± pom in R/R MM after ≥1 prior line; PFS hazard up to 72% reduction; first Phase 3 evidence of GPRC5D bispecific in earlier-line MM — https://www.fiercepharma.com/pharma/eha-jj-sharpens-myeloma-edge-talvey-darzalex-faspro-combo-proves-its-worth-earlier-disease **[CHOSEN: headlines #2]**
+- Rapport Therapeutics RAP-219 Phase 3 enrollment open in focal epilepsy — selective NAM of TARP-γ8 AMPA-receptor subunit, Ph2 78% median seizure reduction, Ph3 powered 40-50% — https://www.biopharmadive.com/news/Rapport-Ceesay-seizure-epilepsy-drug-neuroscience-biotech-product-launch/822809/ **[CHOSEN: headlines #3]**
+- Novo Wegovy oral MHRA UK approval — extends oral GLP-1 franchise into Europe's largest privately-funded weight-loss market after US pricing parity vs Lilly Foundayo — https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026 **[CHOSEN: headlines #4]**
+- Jazz/PharmaMar Zepzelca IMforte Phase 3 confirmatory in 1L maintenance ES-SCLC failed; accelerated approval (2L SCLC 2020) now at risk — https://www.fiercepharma.com/pharma/latest-twist-zepzelca-saga-jazz-and-pharmamar-lung-cancer-drug-fails-phase-3-test **[CHOSEN: headlines #5]**
+- Bezos's Prometheus $12B raise at $41B valuation — physics-grounded foundation-model family for "artificial general engineer" with explicit drug-compound scope — https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/ **[CHOSEN: headlines #6]**
+- Takeda zasocitinib LATITUDE Atlas — was 6-12 spotlight, stale, skipped
+- Novartis del-brax FORTITUDE — was 6-12 headlines #2, stale, skipped
+- J&J Imaavy nipocalimab ENERGY in wAIHA — was 6-12 headlines #3, stale, skipped
+- Genentech R&D layoffs — was 6-12 headlines #4, stale, skipped
+- Kardigan cardiology IPO terms — was 6-12 headlines #5, stale, skipped
+- Summit Therapeutics pulled $500M share sale — was 6-12 headlines #6, stale, skipped
+- Perrigo CEO ousted / Apnimed Kevin Lind CEO — leadership noise, deprioritized
+- Ipsen R&D podcast — no concrete data, deprioritized
+- China Order 818 "tech track" alt-approval pathway — older policy news (June 10), deprioritized
+- BioCryst APeX-P / ALPHA-STAR at EAACI — narrow HAE, deprioritized
+- PharmaEssentia/Forus Therapeutics ($36.5M) + AmMax/Lonza ADC + Adial/Azora + Rocket PRV sale ($180M) — small bolt-ons, deprioritized
+
+Items opened in full: SonoThera BioSpace press release + Fierce Biotech analysis + GEN coverage (microbubble + RIPPLE/PORE technical details, full investor syndicate, IND timeline); MonumenTAL-3 search-cached Fierce Pharma article (PFS/OS hazards, cytopenia rates); Rapport RAP-219 BioPharma Dive; SonoThera Series A page (December 2022 baseline); Prometheus TechCrunch + CNBC; oral GLP-1 tracker and Zepzelca fail articles via search-cache only (Fierce Pharma 403'd on direct fetch).
+
+Spotlight rationale: SonoThera chosen over MonumenTAL-3 because (a) it maps directly onto Calibr's in-vivo CAR-T + cell-targeted-delivery focus area, while MonumenTAL-3 is hematology/oncology with weak Calibr read-through, (b) the non-viral platform thesis arrives exactly as AAV hits its safety ceiling (Elevidys boxed warning + acute liver failure deaths), giving a clear architectural-shift narrative, (c) the broad pharma CVC syndicate (J&J/Bayer/UCB/Otsuka/Vertex) extends the platform-validation arc covered all week (Nurix Mon → Parabilis Wed → Orionis Thu → Nimbus-Schrödinger Fri → SonoThera Sat), (d) SonoThera received only a brief 2-sentence mention in Thursday's headlines roundup (item #5, lumped with Ethyreal Bio) and never got the deep treatment, so the spotlight depth is not redundant.
+
+=== 2026-06-13T... done calibr-briefing ===
+=== 2026-06-13T03:28:25-07:00 done  calibr-briefing (exit 0) ===
