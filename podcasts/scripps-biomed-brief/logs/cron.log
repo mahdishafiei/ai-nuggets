@@ -800,3 +800,45 @@ Substantive shortlist (after discarding spurious hits and yesterday's already-sh
 Depth caveat: all three picked items were summarized from the bioRxiv `get_preprint` abstract (full-text endpoints unreachable via Cloudflare from this network). Script discloses this in the opening sentence and the takes stay within what the abstracts assert.
 === 2026-06-12T03:50:51-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-13T03:40:05-07:00 start scripps-biomed-brief ===
+Episode committed. Final summary:
+
+## Final summary
+
+**Today's episode**: `2026-06-13-af3-docking-covalent-tyms-rfdiff2-biomineralization-his2o-pf-map.mp3` (349s, 2,795,981 bytes, mistral en_paul_neutral)
+
+**Audio published to R2**: ✓ (key: `podcasts/scripps-biomed-brief/episodes/2026-06-13-af3-docking-covalent-tyms-rfdiff2-biomineralization-his2o-pf-map.mp3`)
+
+**Commit**: 048704a (orchestrator pushes)
+
+### Candidate funnel
+
+bioRxiv MCP scanned (2026-06-11 → 2026-06-13):
+- pharmacology and toxicology: 8 scanned
+- biochemistry: 9 scanned
+- bioengineering: 24 scanned
+- cancer biology: 4 scanned
+- immunology: 25 scanned
+- cell biology: 6 scanned
+- microbiology: 20 scanned
+- synthetic biology: 0 scanned
+- WebFetch on bioRxiv collection pages: 403 (Cloudflare) as expected — MCP used throughout
+
+Source-side issues: none for MCP. WebFetch to `www.biorxiv.org/collection/...` returned 403, as documented in [[reference_biorxiv_fulltext_blocked]].
+
+Substantive shortlist after removing irrelevant matches and yesterday-already-shipped items (CXP1 PMO arginine-depleted CPP from Pentelute MIT was covered in 2026-06-11 episode and excluded):
+
+- **[CHOSEN]** AlphaFold 3 for Structure-guided Ligand Discovery — Menon/Davasam/Lyu, Rockefeller (v2 posted 2026-06-12): https://www.biorxiv.org/content/10.64898/2025.12.04.692352v2
+- **[CHOSEN]** Phenotype-first covalent fragment screening identifies a synthetic-lethal TYMS inhibitor in ATRX-deficient cells — Raguseo/Fellows/Boulton, Francis Crick: https://www.biorxiv.org/content/10.64898/2026.06.10.731339v1
+- **[CHOSEN]** Controlling metal-carbonate phase, form, and function through de novo protein design — Kwon/Baker, U. Washington: https://www.biorxiv.org/content/10.64898/2026.06.10.730916v1
+- **[CHOSEN]** Water oxidation-driven histidine dioxidation enables probe-free proximity labeling — Lee/Kwon/Rhee, UNIST: https://www.biorxiv.org/content/10.64898/2026.06.10.731337v1
+- Deep learning based design of buried hydrogen bond networks with HBDesigner — Dieckhaus/Kuhlman, UNC: https://www.biorxiv.org/content/10.64898/2026.06.08.730848v1
+- Inhibition of NSD1 by 5-O-Sulfamoyl Adenosine improved 5-FU sensitivity — Rafiq/Tikoo: https://www.biorxiv.org/content/10.64898/2026.06.10.731397v1
+- Pathogen-driven reactivation of metabolite prodrugs defines nitroxoline's iron-deprivation antibiotic activity — Deschner/Mueller, HIPS: https://www.biorxiv.org/content/10.64898/2026.06.11.731531v1
+- AI-enabled discovery of small molecules for hair follicle rejuvenation — Qu/Zhang, LK Innovations: https://www.biorxiv.org/content/10.64898/2026.06.09.728282v1
+- Cell Cycle Sensing Shapes Human T Cell Fate and Exhaustion Programs — Amouzgar/Mackall/Bendall, Stanford (already covered 2026-06-12 by receptor-and-reason)
+- Multiplex engineering of rhesus macaque NK cells for HIV B-cell follicle homing — Thron/Skinner: https://www.biorxiv.org/content/10.64898/2026.06.09.731145v1
+- A membrane homeostatic response to lipid overload — Xiang/Walther/Farese: https://www.biorxiv.org/content/10.64898/2026.06.10.731409v1
+- HUSH Complex regulates EBV-transformed B cell NK surveillance — Sun/Gewurz: https://www.biorxiv.org/content/10.64898/2026.06.10.731186v1
+
+All four picks read in full from bioRxiv JSON metadata via MCP (full abstracts retrieved; full-text PDFs available but abstracts plus structural mechanism details were sufficient to ground summaries). No paywall blockers. Slate emphasizes the AI/computation × chemical biology × de novo design × proteomics quadrant the audience prizes; the AF3 paper deliberately leads as a corrective to generic AI hype, which the show brief explicitly flags as a category to avoid.
+=== 2026-06-13T03:47:09-07:00 done  scripps-biomed-brief (exit 0) ===

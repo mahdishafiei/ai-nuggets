@@ -1054,3 +1054,43 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 Request ID: req_011CbyDqiJNwCxZYdbQrZdPf
 === 2026-06-12T03:39:16-07:00 done  receptor-and-reason (exit 0) (retry 1) ===
 === 2026-06-13T03:30:05-07:00 start receptor-and-reason ===
+Episode shipped. Summary follows.
+
+**Receptor & Reason 2026-06-13 — committed (3d7d58a)**
+
+- Script: `podcasts/receptor-and-reason/scripts/2026-06-13-receptor-and-reason.md` (11 items)
+- Audio: `podcasts/receptor-and-reason/episodes/2026-06-13-receptor-and-reason.mp3` — 6,442,466 bytes, 13:25 (805s), Mistral en_paul_neutral
+- R2: uploaded to `podcasts/receptor-and-reason/episodes/2026-06-13-receptor-and-reason.mp3`
+- Feed: prepended Episode 31 item; XML parses
+- Dedup ledger: appended 11-item record
+- Push: deferred to orchestrator
+
+**Candidate funnel:**
+
+- bioRxiv (neuroscience + pharm/tox + bioinformatics + systems biology, 2026-06-08 → 2026-06-12 inclusive): 1,304 items scanned across 5 days; 175 surviving keyword filter after spurious-match cull. Dedup'd against prior shipped ledger.
+- arXiv (cs.AI/cs.CL/cs.MA/q-bio cache, 2026-06-09 → 2026-06-11): 500 entries scanned; ~30 biomed-relevant; 1 selected (CAREPath was bioRxiv; arXiv yielded no must-include candidate after de-dup).
+- Journals via PubMed (Mol Psych / Neuropsychopharm / Biol Psych / Neuropharm, last 7 days): 22 articles; 4 surfaced for episode.
+- Psychiatric Times: 6 headlines from 2026-06-06 → 2026-06-12; bretisilocin/AbbVie picked (Cannon interview tied to NCT07604558 found via ClinicalTrials.gov API). Source-level failures: Psychiatric Times article pages returned 403 (Cloudflare) on retries; homepage summary + ClinicalTrials.gov substituted. www.biorxiv.org full text 403'd as expected from this host (per memory note) — used bioRxiv MCP get_preprint for full abstracts.
+
+Shortlist (✓ = picked):
+
+- ✓ GluD1 as ACh receptor — doi:10.1038/s41380-026-03675-4 (Mol Psych, Dravid/Texas A&M)
+- ✓ Lower M1 PET in schizophrenia — doi:10.1016/j.biopsych.2026.06.002 (Biol Psych)
+- ✓ Bretisilocin/ABBV-2505 — NCT07604558 + Psychiatric Times Cannon piece
+- ✓ EEG microstates during psilocybin — doi:10.64898/2026.06.09.731183
+- ✓ Thalamic 5-HT2A absence seizures — doi:10.1016/j.neuropharm.2026.111073
+- ✓ PN6047 DOR agonist headache — doi:10.64898/2026.06.09.729278
+- ✓ Tau disaggregator PT-13 — doi:10.64898/2026.06.09.731185
+- ✓ Striatal ACh dynamics PD/L-DOPA — doi:10.64898/2026.06.11.731672
+- ✓ Dynorphin Islands of Calleja AUD — doi:10.64898/2026.06.05.730464
+- ✓ Cannabinoid stress generalization — doi:10.1038/s41380-026-03687-0
+- ✓ CAREPath KG-LLM drug repurposing — doi:10.64898/2026.06.09.731247
+- — Sirtuin 2 / opioid withdrawal aversive memory (Biol Psych) — dropped: niche; ACh-LID + dynorphin-AUD already cover addiction circuits.
+- — Cerebellar Kv2.1 / phencyclidine schizophrenia (Neuropharmacology) — dropped: descriptive only.
+- — NAc D1/D2 valence sex-dependent (Neuropsychopharmacology) — dropped: cannabinoid Mol Psych paper carries the addiction-circuit/sex-difference slot more cleanly.
+- — BMP pathway Parkinson's (bioRxiv 730818) — dropped: striatal ACh + tau disaggregator already carry the neurodegeneration slot.
+- — Cannabidiol CIPN NAPE-PLD (bioRxiv 730909) — dropped: cannabinoid-stress paper carries the cannabinoid slot.
+- — Aversion-resistant alcohol DMS CP-AMPA (bioRxiv 731723) — dropped: dynorphin-Calleja carries the AUD slot.
+- — Sensory stimulation 5-HT/DA spike responses (bioRxiv 731093) — dropped: solid but no clear take.
+- — MDForge agentic MD pipeline (arxiv 2606.12936), MARD DDI prediction (arxiv 2606.12578) — dropped: CAREPath is the stronger comp-pharm pick.
+=== 2026-06-13T03:45:21-07:00 done  receptor-and-reason (exit 0) ===
