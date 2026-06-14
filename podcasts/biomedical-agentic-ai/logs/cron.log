@@ -1509,3 +1509,4 @@ Episode shipped. Commit 306eae5.
 
 **Source failures**: bioRxiv full-text HTML and PDF endpoints return Cloudflare 403 from this host (matches the [[reference_biorxiv_fulltext_blocked]] memory); used the bioRxiv MCP `get_preprint` tool for CAREPath abstract metadata. arXiv PDF (epibench) fetched via `curl` + `mutool convert` since `pdftotext`/`pypdf` weren't available.
 === 2026-06-13T03:08:11-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-14T03:00:05-07:00 start biomedical-agentic-ai ===
