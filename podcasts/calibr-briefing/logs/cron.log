@@ -1137,3 +1137,39 @@ Spotlight rationale: SonoThera chosen over MonumenTAL-3 because (a) it maps dire
 === 2026-06-13T... done calibr-briefing ===
 === 2026-06-13T03:28:25-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-14T03:10:05-07:00 start calibr-briefing ===
+Both episodes shipped. Commit `fa895c0` covers headlines + spotlight (orchestrator will push).
+
+**2026-06-14 Calibr-Skaggs Daily Briefing — final summary**
+
+- Commit: `fa895c0` Calibr 2026-06-14
+- Headlines: `2026-06-14-pharma-headlines.mp3` (7:13, 3.5MB)
+- Spotlight: `2026-06-14-legend-in-vivo-car-t-spotlight.mp3` (9:18, 4.5MB)
+- R2 uploads to `ai-nuggets-episodes` bucket: both succeeded
+- Feed XML: validated, 2 new items inserted
+
+**Candidate funnel**
+
+Sources scanned (all 8 from PROMPT.md plus EHA press wire):
+- Fierce Biotech / Fierce Pharma — homepage scan
+- Endpoints News — homepage blocked HTTP 403 from this IP; covered via cross-references
+- BioPharma Dive — homepage scan
+- STAT News — homepage scan
+- PR Newswire / BusinessWire / GlobeNewswire — EHA company press releases
+- Genetic Engineering & Biotech News — no fresh material today
+- The Biotech Voyager / Clinical Trials Arena — no fresh material today
+
+Shortlist (Stockholm EHA 2026 dominated the day, June 11–14):
+- **Legend Biotech LB2501 CD19/CD20 in-vivo CAR-T** — late-breaking oral EHA Sunday, 100% ORR / 83% CR at DL2, zero lymphodepletion — **CHOSEN SPOTLIGHT**
+- **Lilly-Ajax AJ1-11095 first-in-class Type-II JAK2 inhibitor Phase 1** — EHA Saturday, 70% SVR35 in 2L MF — **CHOSEN headlines #2**
+- **Lilly Jaypirca BRUIN CLL-322** — EHA late-breaker, 45% PFS hazard reduction — **CHOSEN headlines #3**
+- **Sanofi Tzield FDA pediatric T1D approval** — June 13 — **CHOSEN headlines #4**
+- **Novartis-Avidity del-brax FSHD biomarker primary endpoint hit** — June 11 — **CHOSEN headlines #5**
+- **Genentech gRED layoffs (Dixit/Tan/McDevitt)** — June 11 — **CHOSEN headlines #6**
+- Kardigan $373M IPO pricing — covered yesterday's news cycle, deprioritized
+- J&J MonumenTAL-3 EHA plenary — covered in yesterday's headlines
+- Kelonia ASCO update — already two weeks old, used as comparator in spotlight
+
+Selection rationale: Legend's LB2501 readout is today's news (EHA Stockholm Sunday late-breaker), lands squarely in Calibr's #1 focus area (in-vivo CAR-T), and is the cleanest first-in-human in-vivo CAR-T efficacy/safety package in oncology — a structural inflection point for the modality.
+
+Source-side notes: Endpoints homepage returned 403 from cron IP (covered via cross-references); no other failures.
+=== 2026-06-14T03:28:31-07:00 done  calibr-briefing (exit 0) ===

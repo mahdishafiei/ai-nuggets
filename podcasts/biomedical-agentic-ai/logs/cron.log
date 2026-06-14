@@ -1510,3 +1510,21 @@ Episode shipped. Commit 306eae5.
 **Source failures**: bioRxiv full-text HTML and PDF endpoints return Cloudflare 403 from this host (matches the [[reference_biorxiv_fulltext_blocked]] memory); used the bioRxiv MCP `get_preprint` tool for CAREPath abstract metadata. arXiv PDF (epibench) fetched via `curl` + `mutool convert` since `pdftotext`/`pypdf` weren't available.
 === 2026-06-13T03:08:11-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-14T03:00:05-07:00 start biomedical-agentic-ai ===
+Episode shipped. Final summary:
+
+**Episode:** `2026-06-14-medcta-clinical-tool-agents-benchmark-brittle-planning`
+**Pick:** MedCTA — clinical tool agents benchmark (arXiv:2606.11702, KAUST + MIT, v1 2026-06-10)
+**Take:** Frontier multimodal models hit 31.5% autonomous outcome accuracy on clinician-verified clinical tool-use trajectories; 35-point gold-routing gain dissociates planning from perception — the bottleneck is planning, not the backbone. CC BY 4.0 code+dataset+eval suite.
+**MP3:** 1,906,982 bytes / 238s / mistral primary voice. Uploaded to R2 bucket `ai-nuggets-episodes`.
+**Commit:** `0f811f5` (push handled by orchestrator).
+
+**Candidate funnel (2026-06-13 to 2026-06-14):**
+- bioRxiv (55 unique entries, 2 days): 4 keyword hits — RDiffusion (RNA foundation model, not agentic); virus-human PPI (ML, not agentic); haemoglobin-depletion proteomics (workflow keyword only); AAV CaptureSMB (workflow keyword only).
+- arXiv (cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries through 2026-06-11; 06-12+ batches not yet announced at 03:00 PDT cron time): widened to 06-10/06-11 per arXiv announcement cadence. 33 agentic-biomedical hits. Shortlist: MedCTA (arXiv:2606.11702, **chosen**); Lung-R1 / LungKG (arXiv:2606.11675); ArogyaSutra (arXiv:2606.13572); Skill-Augmented AI Agents / OpenClaw (arXiv:2606.11830); MARD DDI (arXiv:2606.12578); Containment Gap (arXiv:2606.12797); Hallucination in Medical Imaging (arXiv:2606.13211).
+- ChemRxiv: no fresh biomedical-agentic-AI hits.
+- ARPA-H news: most recent 2026-05-22 (FRONT performer team), out of window.
+- NIH / NSF / HHS press: no fresh agentic-AI biomedical announcements.
+- General news / product launches: nothing top-tier in window.
+
+**Why MedCTA over Lung-R1:** Stronger agentic-AI angle (multi-step tool use, gold-routing planning ablation) versus Lung-R1's KG-guided supervised LLM training; MedCTA's bottleneck-is-planning conclusion is more actionable for the audience and the 18-model comparison + CC BY 4.0 release is uniformly open-science.
+=== 2026-06-14T03:08:26-07:00 done  biomedical-agentic-ai (exit 0) ===

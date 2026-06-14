@@ -842,3 +842,14 @@ Substantive shortlist after removing irrelevant matches and yesterday-already-sh
 
 All four picks read in full from bioRxiv JSON metadata via MCP (full abstracts retrieved; full-text PDFs available but abstracts plus structural mechanism details were sufficient to ground summaries). No paywall blockers. Slate emphasizes the AI/computation × chemical biology × de novo design × proteomics quadrant the audience prizes; the AF3 paper deliberately leads as a corrective to generic AI hype, which the show brief explicitly flags as a category to avoid.
 === 2026-06-13T03:47:09-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-14T03:40:05-07:00 start scripps-biomed-brief ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cc31dtHBc3U86Dcu1XS8A
+=== 2026-06-14T03:41:42-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-14T03:41:42-07:00 AUP-refusal detected for scripps-biomed-brief; retrying in 180s ===
+=== 2026-06-14T03:44:42-07:00 start scripps-biomed-brief (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cc31ySXCFFcRKbExy9mzu
+=== 2026-06-14T03:46:05-07:00 done  scripps-biomed-brief (exit 0) (retry 1) ===

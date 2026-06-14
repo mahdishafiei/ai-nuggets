@@ -97,3 +97,25 @@ Funder pages (ARPA-H, NIH, NSF): no qualifying releases in the 2026-06-11–13 w
 Source failures: NIH press feed (HTTP 403 from this host) and STAT category page (HTTP 403); worked around via direct WebSearch on those domains, sufficient signal.
 === 2026-06-13T03:28:01-07:00 done  justice-biotech-brief (exit 0) ===
 === 2026-06-14T03:20:05-07:00 start justice-biotech-brief ===
+Episode shipped. Final summary follows.
+
+**Commit:** `5a010ec` — Episode: AJ1-11095 — Lilly/Ajax first-in-class Type II JAK2 inhibitor posts 70% SVR35 and 70% TSS50 with mutant-allele-burden reduction in 21/23 post-JAK myelofibrosis patients at EHA 2026 (Phase 1 AJX-101 Stockholm oral S218)
+
+**Candidate funnel (2026-06-14):**
+
+bioRxiv (window 2026-06-13 → 2026-06-14, paginated full collection):
+- Scanned: 55 entries (paginated via cursor=0,30; full 2-day window).
+- Keyword-matched (VEGF/PD-L1/PD-1/TCE/bispecific/trispecific/CAR-T/ADC/JAK/immunotherapy/checkpoint/CD3/CTLA + adjacent terms): 3.
+- Substantive shortlist after dropping spurious matches (ribosomal kinetic "checkpoint" — translation initiation, not immune; AAV CaptureSMB twin-column — bioprocess, not therapeutic; choroid-plexus lymphatic VEGF in Alzheimer's — neuro, not Justice's mandate): **none qualifying**.
+
+News / press (Fierce Biotech, Endpoints, STAT, BioPharma Dive, last 2 days):
+- **CHOSEN** Lilly Investor Relations + Fierce Biotech: AJ1-11095 first clinical data, EHA 2026 oral S218 (2026-06-13). Full text read from Fierce Biotech feature and Lilly press release; numbers cross-checked against the EHA abstract description. Single-asset spotlight; clear winner.
+- Takeda zasocitinib (TYK2) head-to-head superiority over Sotyktu in psoriasis (BioPharma Dive, 2026-06-13). Strong JAK-family relevance but PASI-only top-line; limited disease-modifying angle. Runner-up.
+- BioPharma Dive opinion: "Pharma is betting big on PD-1/VEGF bispecifics — wrong target?" (2026-06-13). Squarely on Justice's VEGF×PD-1 list but editorial, no new clinical data. Skipped.
+- Novartis del-brax / Avidity DMD trial win (2026-06-13). RNA/RNAi, off-mandate.
+- Lilly's "ADA '26: retatrutide dominance" — off-mandate (obesity/metabolic, not immuno-onc).
+
+Funder pages (ARPA-H, NIH, NSF): not scanned this run — single dominant story locked early; would have been confirmation of nothing in window per prior pattern.
+
+Source failures: endpoints.news returned HTTP 403; BioPharma Dive Lilly URL 404 (article served on Fierce Biotech instead); both worked around by fetching the alternative source (Fierce Biotech feature + Lilly IR press release + EHA-listed numbers via search). One source-side outage, no recall hit on the chosen item. No retries past one attempt; proceeded with available material per PIPELINE.
+=== 2026-06-14T03:27:55-07:00 done  justice-biotech-brief (exit 0) ===
