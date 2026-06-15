@@ -1174,3 +1174,32 @@ Selection rationale: Legend's LB2501 readout is today's news (EHA Stockholm Sund
 Source-side notes: Endpoints homepage returned 403 from cron IP (covered via cross-references); no other failures.
 === 2026-06-14T03:28:31-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-15T03:10:06-07:00 start calibr-briefing ===
+Both episodes shipped. Calibr 2026-06-15 commit `fcc6b61`.
+
+## Candidate funnel — 2026-06-15
+
+**Sources scanned:**
+- Endpoints News (homepage 403 Forbidden, news index 403 Forbidden; relied on Google `site:endpoints.news` for recent items)
+- Fierce Biotech / Fierce Pharma (most recent items dated June 11-13)
+- STAT News biotech (most recent dated through ~June 12)
+- BioPharma Dive (most recent ~June 11)
+- BioSpace (today's homepage + press release lists; only non-EHA item dated June 15 visible)
+- Targeted/topical searches: EHA late-breakers, EHA Sunday session, AML/MF/MM Phase 3 readouts, in-vivo CAR-T, AAV-alternatives, Foresite portfolio
+
+**Substantive shortlist** (post-disambiguation, EHA Sunday late-breakers + a few non-EHA items, filtering items already covered in 06-13/06-14 Calibr episodes):
+- Karyopharm/Menarini SENTRY Phase 3 frontline MF — selinexor + ruxolitinib n=353 — https://www.globenewswire.com/news-release/2026/06/14/3311439/21662/en/Menarini-Group-Reports-Data-from-the-Phase-3-SENTRY-Trial-of-Selinexor-NEXPOVIO-Plus-Ruxolitinib-in-Myelofibrosis-at-The-European-Hematology-Association-EHA-2026-Congress.html — **CHOSEN (spotlight + headlines #1)**
+- Kura/Kyowa Kirin KOMET-007 frontline AML ziftomenib + 7+3 — https://www.globenewswire.com/news-release/2026/05/12/3293020/35186/en/Kura-Oncology-and-Kyowa-Kirin-to-Present-Updated-Frontline-Ziftomenib-7-3-Combination-Data-at-EHA-2026-Congress.html — **CHOSEN (headlines #2)**
+- HOVON-156/PrE0905 gilteritinib vs midostaurin frontline FLT3-mut AML (Astellas vs Novartis, OS HR 1.02 missed) — AJMC summary — **CHOSEN (headlines #3)**
+- BCMA CAR-T pilot in multi-refractory primary ITP (EHA Sunday) — AJMC summary — **CHOSEN (headlines #4)**
+- BIO International Convention 2026 (San Diego, June 22-25) industry calendar setup — **CHOSEN (headlines #5)**
+- J&J MonumenTAL-3 GPRC5D bispecific Phase 3 in RRMM — **DISCARDED** (already covered in 06-13 Saturday headlines)
+- Foresite Capital exit from Parabilis (June 10) — **DISCARDED** (Parabilis IPO covered in 06-10 spotlight + 06-12 headlines context)
+- Karyopharm SENTRY initial selection notice (June 2) — already aged out, used full Sunday readout instead
+- BioNTech 1860 manufacturing layoffs — **DISCARDED** (May 5 announcement, not fresh)
+- Amylyx LUCIDITY post-bariatric hypoglycemia (Q3 readout) — **DISCARDED** (no fresh data, just timeline)
+- DemeRx ibogaine IND clearance — **DISCARDED** (April news, off-focus for Calibr therapeutic interests)
+
+**Picked items audited in full text:** SENTRY data via GlobeNewswire press release (full read); MonumenTAL-3 verified against BioSpace (used only for confirming the duplicate-coverage check); SVR35 + Abs-TSS + OS HR figures cross-referenced across PRNewswire, Yahoo Finance Karyopharm release, and Hematology Advisor.
+
+**Failed sources:** Endpoints News (403 across multiple endpoints); AJMC late-breakers article (403); used Google `site:` queries as fallback. No Cloudflare-blocked items were the dominant pick, so no abstract-only summaries.
+=== 2026-06-15T03:33:50-07:00 done  calibr-briefing (exit 0) ===

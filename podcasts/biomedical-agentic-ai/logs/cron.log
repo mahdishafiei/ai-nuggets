@@ -1529,3 +1529,38 @@ Episode shipped. Final summary:
 **Why MedCTA over Lung-R1:** Stronger agentic-AI angle (multi-step tool use, gold-routing planning ablation) versus Lung-R1's KG-guided supervised LLM training; MedCTA's bottleneck-is-planning conclusion is more actionable for the audience and the 18-model comparison + CC BY 4.0 release is uniformly open-science.
 === 2026-06-14T03:08:26-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-15T03:00:06-07:00 start biomedical-agentic-ai ===
+Episode shipped. Final summary:
+
+**Episode:** OmicsNavigator — pre-registered, human-audited blueprints turn an autonomous LLM multi-agent system into an auditable scientific partner for spatial omics hypothesis validation
+
+**Commit:** e8354dd (orchestrator handles push)
+
+**Audio:** 1,840,945 bytes, 230 seconds (mistral primary, both chunks succeeded). Published to R2 at `podcasts/biomedical-agentic-ai/episodes/2026-06-15-omicsnavigator-auditable-blueprints-spatial-omics-hypothesis-validation.mp3`.
+
+## Candidate funnel
+
+**bioRxiv (2026-06-14 to 2026-06-15, full corpus paginated):** 58 entries total. Filtered by relevance keywords (agent, LLM, foundation model, knowledge graph, ontology, autonomous, transformer, embedding, etc.) → 15 hits after spurious-match filter:
+- OmicsNavigator v2 — auditable LLM multi-agent spatial omics partner (DOI 10.1101/2025.07.21.665821) — **CHOSEN**
+- Systematic AI-Driven Drug Repurposing via Clinical Trial Data Mining (10.64898/2026.06.11.731629)
+- Cellfm-datasets foundation-model pretraining infrastructure (10.64898/2026.06.11.731508)
+- Generative TCR conditional-diffusion (10.64898/2026.06.10.730756)
+- FENNEC siRNA design ensemble NNs (10.64898/2026.06.13.732049)
+- Virtual phenotypic screening PI3K/mTOR (10.64898/2026.06.10.731476)
+- Robust integration of weakly anchored spatial multi-omics (10.64898/2026.06.10.731246)
+- + 8 others where the keyword match was incidental (neural network on stress-amygdala, diffusion on flippases, etc.)
+
+**arXiv:** Shared cache at /tmp/ai-nuggets-arxiv-cache.xml covered 2026-06-10 to 2026-06-12 only; a live arXiv listing call from this host returned the same date range with no 2026-06-13/14 entries indexed yet (consistent with normal announce delay). 64 biomedical-relevant entries scanned for the 06-12 window. Notable candidates considered:
+- CARE — auditable evidence review for LLM-generated scientific-experiment policies (arXiv:2606.14581) — thematically aligned with OmicsNavigator's angle, worth a future episode but general-science not biomedical-specific
+- When the Tool Decides — LLM agents defer blindly to GNN tools (arXiv:2606.14476) — interesting general agent finding, not biomedical
+- Applicability Condition Extraction for Drug-Disease Relations (arXiv:2606.14031) — biomedical IE not agentic
+
+**ChemRxiv (WebSearch site filter):** no fresh biomedical-agentic-AI hits in the 2-day window.
+
+**Funder/policy press (ARPA-H, NIH, NSF, HHS):** no fresh agentic-AI biomedical announcements in the 2-day window.
+
+**News and product launches:** no top-tier biomedical-agentic-AI launches in the 2-day window.
+
+**Source-level failures / depth caveats:** bioRxiv full text remains Cloudflare-blocked from this host (memory note `biorxiv_fulltext_blocked` and PIPELINE.md known limitation); attempted v2 PDF + HTML + jatsxml all returned the Cloudflare JS challenge or HTTP 403. The pick was justified on the v2 abstract + v1 web search synthesis and the v2 framing shift is itself disclosed in the script.
+
+**Why OmicsNavigator won:** the v1→v2 title shift from "autonomous zero-shot" to "auditable scientific partner with pre-registered human-audited blueprints" is the right story to tell about where agentic biomedical AI actually is, and the convergence with ChatSpatial / CodeCytos / CARE on the structured-constraint-layer pattern makes this a useful episode for Andrew Su on agentic AI applied to biomedical research, data integration, and modality-agnostic infrastructure.
+=== 2026-06-15T03:08:36-07:00 done  biomedical-agentic-ai (exit 0) ===
