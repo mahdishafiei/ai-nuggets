@@ -1128,3 +1128,34 @@ Committed. Final summary below.
 - Strong candidates considered but passed: mGluR2/3 LY341495 reward (`10.64898/2026.04.18.719355v2`, content unchanged from April v1 — failed substantive-recency test); huntingtin-HAP40 rheostat (`10.64898/2026.06.03.729778`, basic-science angle paired thematically with HD CRISPR but bumped to keep show focused); music for sleep-onset insomnia (`10.64898/2026.06.09.731083`, not pharm-centric); ADMETron SaaS (`10.64898/2026.06.13.732026`, vendor-paper smell); LNP stereochemistry (`10.64898/2026.06.05.730351`, not neuro/CNS).
 === 2026-06-14T03:53:47-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-15T03:30:06-07:00 start receptor-and-reason ===
+Committed. Final summary follows.
+
+---
+
+**Receptor & Reason 2026-06-15 — published**
+
+11 items, 18:18 spoken (1098s), 8.78 MB. mp3 uploaded to R2 bucket `ai-nuggets-episodes`; feed.xml updated and parses; ledger appended; committed as `188181d`. Orchestrator will push.
+
+**Final shortlist (all picked):**
+
+- Molecular Psychiatry: Hannan/Hensch/Tyagarajan (Zurich + Harvard + MIT) — Adamtsl3 in PV interneurons regulates PNNs/MMP9; adult cKO reopens juvenile ocular-dominance plasticity — `doi:10.1038/s41380-026-03672-7` ★ **opener**
+- bioRxiv neuroscience: Adnp allelic series — HVDAS dosage in cortical neurogenesis + learning — `doi:10.64898/2026.06.10.731333`
+- Neuropharmacology: LC-TH+ → CA1 optogenetic LTP + durable spatial memory via β-adr + D1 + NMDA — `doi:10.1016/j.neuropharm.2026.111072`
+- Biological Psychiatry: Sirt2 dorsal hippocampus actin/MT pathway in opioid-withdrawal aversive memory — `doi:10.1016/j.biopsych.2026.06.001`
+- Neuropharmacology: α-conotoxin LvIC variant α6/α3β4 selectivity, 3 driver residues — `doi:10.1016/j.neuropharm.2026.111070`
+- bioRxiv cell biology: Tau endolysosomal escape — PITT pathway + VPS13C as restriction; cryo-ET shows reversible pores — `doi:10.64898/2026.06.08.731026`
+- bioRxiv neuroscience: MSA-C vs MSA-P α-syn strain homogeneity (negative-result anatomy-not-strain) — `doi:10.64898/2026.06.05.730469`
+- bioRxiv biophysics: A2A in nanodiscs — anionic-lipid clustering shapes GPCR active-state population — `doi:10.64898/2026.06.11.731710`
+- bioRxiv neuroscience: Capsinoid TRPV1 peripheral hypothermia in aged-mouse stroke — `doi:10.64898/2026.06.05.730536`
+- bioRxiv neuroscience: DigiMus connectome-motif spiking framework — `doi:10.64898/2026.06.09.731075`
+- bioRxiv: M3A agentic-AI benchmark for multi-omic discovery (autonomous vs copilot) — `doi:10.64898/2026.06.04.729919` ★ **closer**
+
+**Candidate funnel:**
+
+- bioRxiv API: pulled 1,143 unique-DOI records across 2026-06-09 to 2026-06-15 (7 days, paginated by 30). 506 candidates passed pharm/AI keyword filter after dedup against shipped ledger. ~80-item substantive shortlist by category. Selected 7 from this set.
+- arXiv shared cache (`/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries since ~06-08): 281 bio+AI candidates; 7 neuro/pharm/drug-discovery-focused (GMN4AD, Mental-R1, MOSAIC PD-gait, APCyc cyclic peptides, OCOO-T virtual cell, MARD DDI, pediatric brain-tumor MRI). All passed today — substance not strong enough to compete with the bioRxiv pharm picks, and MARD was already covered by Calibr 2026-06-12.
+- PubMed via Mol Psych / Neuropsychopharm / Biol Psych / Neuropharmacology in last 7 days: ~12 in-range hits beyond already-shipped. Selected 3 (Adamtsl3, Sirt2, LC-CA1 LTP, α-conotoxin = 4 actually). Excluded NPP Effort-choice task (06-10, dopamine modulator screen), Mol Psych Adamtsl3-style PM2.5/AD methylation (06-10), Mol Psych Anxiety-NSSI iTBS (06-09), Mol Psych Plasma proteomics of sleep traits (06-11), Mol Psych FinnGen NDD review (06-12), Neuropharm Cerebellar Kv2.1 PCP (06-12, descriptive only — yesterday's drop list same call).
+- Psychiatric Times: all 9 candidate URLs (ALTO-203, CTX-1301 CRL, esketamine TRD relapse, BXCL501 home agitation, muscarinic SCZ review, Perlis AI-psychopharm, May 2026 pipeline, ketamine+CBT, Monoamines) returned 403 from this host (Cloudflare). Substituted via WebSearch primary-source verification: ALTO-203 traced to a June 2025 Alto press release re-presented at ASCP 2026 — year-old readout, dropped as not substantively fresh; other items not pursued given the strong preprint shortlist.
+- Sources skipped/limited: nature.com (NPP/MP article-list pages auth-redirected to idp.nature.com, NPP RSS worked first-call only), ScienceDirect Neuropharmacology and biologicalpsychiatryjournal.com (403). Mitigations: PubMed via MCP served as the canonical journal source for all four; bioRxiv abstracts via the details API were rich enough for the picks.
+- Strong candidates considered but passed: ConnectoFM (`10.64898/2026.06.06.730367`, EM-connectomics foundation model — DigiMus carries comp-neuro slot more crisply for a behavioral-pharm audience); Sensory stimulation 5-HT/DA spike responses (`10.64898/2026.06.04.729...`, yesterday's drop list still applies); LILRB4 trilogy (3 papers, `10.64898/2026.06.10.731267` + `731269` + `2026.06.05.730341`, oncology immune-checkpoint angle, not CNS-pharm-centric); GPCR conformational equilibria competing biophysics piece (`2026.06.06.730629`, transformer-only state landscape — A2A lipid-nanodisc piece is more directly pharma-relevant); BBB model architecture PD (`10.64898/2026.06.04.730214`, methodological-comparison paper); Adolescent depression naturalistic-film fMRI (`10.64898/2026.06.04.730065`, descriptive); Sirt2 was on yesterday's drop list as "niche" but with today's leaner addiction-circuit slot it earned a spot.
+=== 2026-06-15T03:50:55-07:00 done  receptor-and-reason (exit 0) ===

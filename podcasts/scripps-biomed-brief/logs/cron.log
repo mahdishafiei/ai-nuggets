@@ -854,3 +854,32 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 Request ID: req_011Cc31ySXCFFcRKbExy9mzu
 === 2026-06-14T03:46:05-07:00 done  scripps-biomed-brief (exit 0) (retry 1) ===
 === 2026-06-15T03:40:06-07:00 start scripps-biomed-brief ===
+Episode published.
+
+**Today's episode (2026-06-15)** — four bioRxiv preprints for the Scripps audience:
+
+1. **Protea-Tac** (Lee, Seoul NU College of Medicine, v3 2026-06-13) — ubiquitin-independent TPD via 26S proteasome through a Ub-receptor + intrabody chimera; substrate space bounded by intrabody specificity rather than the E3 ligase landscape
+2. **F508del-CFTR nanobody-mRNA rescue** (Govaerts ULB + Hunt Columbia + Mall Charité + Sheppard Bristol, v3 2026-06-14) — mRNA-LNP-delivered nanobody T2a stabilizes NBD1; cryo-EM reveals a novel open conformation where NBD1 binds an alternative site incompatible with canonical NBD1-NBD2 dimerization
+3. **PhenoCompass** (Richmond, Genentech) — Cell Painting + structure co-embedding trained on JUMP, prospective 3.8B-compound REAL screen for PI3K/mTOR yields 11 novel scaffolds at 54× enrichment, 7 confirmed by FOXO3A reporter + direct kinase
+4. **CHAMP** (Pires, UVA) — chloroalkane-azide HaloTag assay shows hydrophobic lipid conjugates help mammalian uptake but block Gram-negative entry; quantitative explanation for the scarcity of lipidated diderm antimicrobials
+
+Commit `283e2d5` (not pushed — orchestrator handles push).
+
+**Candidate funnel (bioRxiv 2026-06-13 to 2026-06-14)**
+
+- pharmacology-and-toxicology / bioengineering / biochemistry / synthetic biology / cell biology / immunology / molecular biology — scanned via MCP `search_preprints` across the 2026-06-13 to 2026-06-14 window
+- Microbiology query returned an MCP error; not retried (low-priority category for this show)
+- Full-text fetches: all four picks Cloudflare-blocked (per memory `reference_biorxiv_fulltext_blocked.md`); abstracts only via MCP `get_preprint`; version history confirmed via `api.biorxiv.org/details`
+
+**Shortlist (substantive, after discarding off-topic matches):**
+- Protea-Tac — Lee, Seoul — Ub-independent TPD — https://www.biorxiv.org/content/10.1101/2025.08.18.670774v3 — **CHOSEN**
+- F508del-CFTR nanobody-mRNA rescue — Govaerts, ULB — https://www.biorxiv.org/content/10.1101/2025.10.08.681081v3 — **CHOSEN**
+- PhenoCompass — Richmond, Genentech — phenotypic VS @ 3.8B — https://www.biorxiv.org/content/10.64898/2026.06.10.731476v1 — **CHOSEN**
+- CHAMP lipidation rules — Pires, UVA — https://www.biorxiv.org/content/10.64898/2026.06.10.731343v1 — **CHOSEN**
+- RDiffusion (Tan, Zhejiang) — RNA generative diffusion — https://www.biorxiv.org/content/10.64898/2026.06.13.732023v1
+- FENNEC (Marsico, Roche/Helmholtz) — chemically-modified siRNA efficacy prediction — https://www.biorxiv.org/content/10.64898/2026.06.13.732049v1
+- TCRDiff (Song, Monash) — diffusion-design of antigen-specific TCRs — https://www.biorxiv.org/content/10.64898/2026.06.10.730756v1
+- UCH-L1 knotted topology and PD I93M (Carnevale, Temple) — https://www.biorxiv.org/content/10.64898/2026.06.12.731949v1
+- Apical-out intestinal-spheroid microfluidic platform (Ota, Tokyo) — https://www.biorxiv.org/content/10.64898/2026.06.10.731294v1
+- Cell-type-selective optogenetic vagal cholinergic VNS for systemic cytokine suppression (Anikeeva MIT + Fontaine CU-Anschutz) — https://www.biorxiv.org/content/10.64898/2026.06.10.731452v1
+=== 2026-06-15T03:50:31-07:00 done  scripps-biomed-brief (exit 0) ===

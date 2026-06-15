@@ -120,3 +120,37 @@ Funder pages (ARPA-H, NIH, NSF): not scanned this run — single dominant story 
 Source failures: endpoints.news returned HTTP 403; BioPharma Dive Lilly URL 404 (article served on Fierce Biotech instead); both worked around by fetching the alternative source (Fierce Biotech feature + Lilly IR press release + EHA-listed numbers via search). One source-side outage, no recall hit on the chosen item. No retries past one attempt; proceeded with available material per PIPELINE.
 === 2026-06-14T03:27:55-07:00 done  justice-biotech-brief (exit 0) ===
 === 2026-06-15T03:20:06-07:00 start justice-biotech-brief ===
+Episode shipped. Final summary follows.
+
+**Commit:** `8770d1e` — Episode: Talquetamab MonumenTAL-3 — GPRC5D×CD3 bispecific T-cell engager cuts PFS hazard 72% in second-line r/r myeloma (NEJM + EHA 2026 S100, June 13 simultaneous publication); GPRC5D lands as proven second non-overlapping myeloma antigen with infection-light safety vs BCMA bispecifics.
+
+**Candidate funnel (2026-06-15):**
+
+bioRxiv (window 2026-06-14 → 2026-06-15, paginated full collection):
+- Scanned: 62 entries (60 unique DOIs after dedup; cursors 0,30).
+- Keyword-matched (VEGF/PD-L1/PD-1/TCE/bispecific/trispecific/CAR-T/ADC/JAK/immunotherapy/checkpoint/CTLA/TIGIT/LAG3/TIM3 on title+abstract): 10 raw, but 8 were spurious "BiTE" substring hits in unrelated categories (animal behavior, evolutionary biology, ecology, biochemistry refolding). Substantive shortlist:
+  - "Generative design of antigen-specific T-cell receptor sequences with a conditional diffusion model" — bioinformatics — DOI 10.64898/2026.06.10.730756 — interesting but methods-only, no clinical/translational data
+  - "Circadian clock gates retinal regeneration by orchestrating Cxcl12-dependent immune coordination" — neuroscience, "checkpoint" used in cell-cycle sense — off-mandate
+- Net: no qualifying preprint in Justice's wheelhouse this window.
+
+News / press (Fierce Biotech, Endpoints, STAT, BioSpace, J&J IR, EHA 2026 coverage on Targeted Oncology / OncLive / CancerNetwork / EMJ / OncoDaily / AJMC):
+- **CHOSEN** Talquetamab MonumenTAL-3 phase 3 — EHA 2026 abstract S100 (Saturday June 13, Stockholm) + simultaneous NEJM publication June 13, DOI 10.1056/NEJMoa2604657 (Mina et al.). 864-pt r/r myeloma, triplet PFS HR 0.28, doublet 0.33. Numbers cross-checked against J&J/BioSpace press release + EMJ EHA recap + CancerNetwork coverage. Single dominant TCE story.
+- BCMA CAR-T in r/r primary immune thrombocytopenia (PRG-1801, NCT06519565, Huazhong/Jinhui Shu) — EHA 2026 late-breaker, n=8 (4 evaluable, all CR, 1 relapse at 9 mo). Strong autoimmune-CAR-T angle and a Justice-shaped fit, but smaller/earlier-stage than MonumenTAL-3. Runner-up.
+- JNJ-79635322 / ramantamig (BCMA×GPRC5D×CD3 trispecific) — last hard update was ASCO 2025 / EHA 2025 Milan; no EHA 2026 Stockholm refresh surfaced. Skipped on recency.
+- CD20×CD3 bispecific-as-bridging-to-CAR-T LBCL retrospective at EHA 2026 — descriptive, not a registration/efficacy story.
+- Bristol Myers' BL-B01D1 / izalontamab brengitecan (EGFR×HER3 bispecific ADC) TNBC PFS win — ASCO 2026 (end of May), out of recency window.
+- Ivonescimab HARMONi-6 / CS2009 PD-1/VEGF/CTLA-4 trispecific — both ASCO 2026, out of window.
+
+Funder pages (ARPA-H, NIH, NSF): not scanned this run — dominant story locked early on the EHA late-breaker + NEJM publication; would have been confirmation of nothing in window per prior pattern.
+
+Source failures: jnj.com press release (HTTP 403 from this host) and onclive.com (HTTP 403) — both worked around by fetching the BioSpace mirror and EMJ EHA recap, which carried full PFS/OS/ORR/CR/MRD/safety numbers. No retries past one attempt per failed source; proceeded with available material per PIPELINE. One source-side outage cluster, no recall hit on the chosen item.
+
+Sources:
+- [Talquetamab–daratumumab in Relapsed or Refractory Myeloma — NEJM](https://www.nejm.org/doi/full/10.1056/NEJMoa2604657)
+- [TALVEY + daratumumab MonumenTAL-3 phase 3 press release (BioSpace)](https://www.biospace.com/press-releases/new-talvey-talquetamab-plus-daratumumab-data-demonstrate-the-potential-strength-of-a-novel-bispecific-combination-in-earlier-line-relapsed-or-refractory-multiple-myeloma)
+- [Talquetamab Combinations Extend Survival in RRMM — EHA 2026 (EMJ)](https://www.emjreviews.com/hematology/news/talquetamab-combinations-extend-survival-in-rrmm-eha-2026/)
+- [EHA 2026 Late Breakers — AJMC roundup](https://www.ajmc.com/view/eha-2026-late-breakers-deliver-practice-shifting-phase-3-data-and-novel-car-t-approaches-across-hematology)
+- [BCMA-targeted CAR T cells for multi-refractory primary ITP — Blood pilot](https://ashpublications.org/blood/article/146/Supplement%201/1267/551490/BCMA-targeted-CAR-T-cells-for-multi-refractory)
+
+=== 2026-06-15T03:33-07:00 done justice-biotech-brief (exit 0) ===
+=== 2026-06-15T03:29:59-07:00 done  justice-biotech-brief (exit 0) ===
