@@ -119,3 +119,4 @@ Funder pages (ARPA-H, NIH, NSF): not scanned this run — single dominant story 
 
 Source failures: endpoints.news returned HTTP 403; BioPharma Dive Lilly URL 404 (article served on Fierce Biotech instead); both worked around by fetching the alternative source (Fierce Biotech feature + Lilly IR press release + EHA-listed numbers via search). One source-side outage, no recall hit on the chosen item. No retries past one attempt; proceeded with available material per PIPELINE.
 === 2026-06-14T03:27:55-07:00 done  justice-biotech-brief (exit 0) ===
+=== 2026-06-15T03:20:06-07:00 start justice-biotech-brief ===
