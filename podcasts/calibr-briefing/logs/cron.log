@@ -1203,3 +1203,4 @@ Both episodes shipped. Calibr 2026-06-15 commit `fcc6b61`.
 
 **Failed sources:** Endpoints News (403 across multiple endpoints); AJMC late-breakers article (403); used Google `site:` queries as fallback. No Cloudflare-blocked items were the dominant pick, so no abstract-only summaries.
 === 2026-06-15T03:33:50-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-06-16T03:10:04-07:00 start calibr-briefing ===
