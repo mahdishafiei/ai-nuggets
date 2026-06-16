@@ -1565,3 +1565,30 @@ Episode shipped. Final summary:
 **Why OmicsNavigator won:** the v1→v2 title shift from "autonomous zero-shot" to "auditable scientific partner with pre-registered human-audited blueprints" is the right story to tell about where agentic biomedical AI actually is, and the convergence with ChatSpatial / CodeCytos / CARE on the structured-constraint-layer pattern makes this a useful episode for Andrew Su on agentic AI applied to biomedical research, data integration, and modality-agnostic infrastructure.
 === 2026-06-15T03:08:36-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-16T03:00:04-07:00 start biomedical-agentic-ai ===
+Episode shipped. Final summary for the cron log:
+
+## Candidate funnel — biomedical-agentic-ai 2026-06-16
+
+**Sources scanned (last 2 days, 2026-06-15 → 2026-06-16):**
+
+- **bioRxiv** — 164 entries pulled across 6 paginated cursors (full collection, not a sample). 20 relevance hits after keyword filter; most-of-those-spurious (workflow=bioinformatics-pipeline-meaning, "agent" inside protozoan biology, etc.). Substantive shortlist: 2.
+- **arXiv (shared cache)** — 500 entries scanned. After filtering for genuine biomedical-AI signal (discarding ~170 generic LLM/RL papers where "gene"/"rna" were spurious matches inside "generative"/"alternative"/etc.): 4 candidates.
+- **ChemRxiv** — no fresh biomedical-agentic-AI hits in the 2-day window via `site:chemrxiv.org`.
+- **ARPA-H / NIH / NSF / HHS** — no fresh agentic-AI biomedical funder/policy announcements.
+- **News / product launches** — no top-tier biomedical-agentic-AI launches.
+
+**Substantive shortlist (recency-filtered):**
+
+- **[CHOSEN]** Trustworthy agentic genomics through versioned skill libraries — Corpas et al., bioRxiv 10.64898/2026.06.11.731523 (2026-06-15) — https://www.biorxiv.org/content/10.64898/2026.06.11.731523v1
+- VrySure: Multi-Task AI Scientific Fraud Detection Platform for biomedical research images — bioRxiv 10.64898/2026.06.10.731492 (2026-06-15)
+- Benchmarking LLM Agents on Meta-Analysis Articles from Nature Portfolio (MetaSyn) — arXiv:2606.17041 (2026-06-15)
+- Compositional Reasoning Depth Predicts Clinical AI Failure — arXiv:2606.16890 (2026-06-15)
+- LabOSBench: Computer Use Agents for Scientific Instrument Control — arXiv:2606.16802 (2026-06-15)
+- DEEPRUBRIC: Evidence-Tree Rubric Supervision for Deep Research Agents — arXiv:2606.17029 (2026-06-15)
+
+**Full-text status:** bioRxiv pick — full text unobtainable from this host (Cloudflare JS challenge, known limitation). Wrote from a substantive abstract, flagged honestly in the script body. arXiv candidates opened in abstract only; not picked.
+
+**Pick rationale:** clear architectural finding (RAG made lethal-class errors worse; versioned skill-as-code beat both reasoning and RAG-grounded reasoning); clinical-stakes benchmark (44,550 evaluations × 9 frontier LLMs × 110 cases + 7,000+ real diplotypes across 3 ancestrally diverse populations); ancestry-gradient result that relocated disparity from hidden model bias to auditable upstream caller-completeness; direct Su Lab fit on agentic-AI / knowledge-graph / ontology / data-integration axes; thematic continuity with MedCTA, EpiBench, OmicsNavigator.
+
+Commit `1f75e9a` on `main`. mp3 published to R2 at `ai-nuggets-episodes/podcasts/biomedical-agentic-ai/episodes/2026-06-16-versioned-skill-libraries-trustworthy-agentic-genomics.mp3`. Orchestrator will push.
+=== 2026-06-16T03:13:26-07:00 done  biomedical-agentic-ai (exit 0) ===

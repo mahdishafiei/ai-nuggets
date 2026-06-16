@@ -1160,3 +1160,62 @@ Committed. Final summary follows.
 - Strong candidates considered but passed: ConnectoFM (`10.64898/2026.06.06.730367`, EM-connectomics foundation model — DigiMus carries comp-neuro slot more crisply for a behavioral-pharm audience); Sensory stimulation 5-HT/DA spike responses (`10.64898/2026.06.04.729...`, yesterday's drop list still applies); LILRB4 trilogy (3 papers, `10.64898/2026.06.10.731267` + `731269` + `2026.06.05.730341`, oncology immune-checkpoint angle, not CNS-pharm-centric); GPCR conformational equilibria competing biophysics piece (`2026.06.06.730629`, transformer-only state landscape — A2A lipid-nanodisc piece is more directly pharma-relevant); BBB model architecture PD (`10.64898/2026.06.04.730214`, methodological-comparison paper); Adolescent depression naturalistic-film fMRI (`10.64898/2026.06.04.730065`, descriptive); Sirt2 was on yesterday's drop list as "niche" but with today's leaner addiction-circuit slot it earned a spot.
 === 2026-06-15T03:50:55-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-16T03:30:04-07:00 start receptor-and-reason ===
+Episode shipped. Commit `2fb5f75` pushed locally (orchestrator will push). Final summary follows.
+
+---
+
+## Receptor & Reason — 2026-06-16 (Episode 34)
+
+**Length:** 1082s ≈ 18:02; 8,659,740-byte mp3; 11 items, all fresh (no Tier 4 needed).
+
+### Candidate funnel
+
+**bioRxiv (Tier 1 + Tier 2/3 bioinformatics):**
+- Scanned: 1,335 preprints across 2026-06-09 → 2026-06-16 (full per-day pagination, no sampling).
+- After dedup against shipped ledger (337 prior keys): 1,298 unique preprints.
+- After strict CNS-pharmacology / psychiatric / drug-discovery keyword filter: 117 candidates.
+- After agentic-AI-applied-to-biomedicine filter: 3 candidates.
+- Substantive shortlist (after discarding non-substantive matches; deduped):
+  - **PICKED** psychedelics relax predictive processing — 10.1101/2024.07.03.601959v2
+  - **PICKED** NRXN1 allele-specific monoamine rescue (olanzapine) — 10.64898/2026.02.06.703315v2
+  - **PICKED** KCNQ2/3 in cocaine-seeking — 10.64898/2026.06.14.732187v1
+  - **PICKED** mGluR2/3 antagonist LY341495 reward — 10.64898/2026.04.18.719355v2
+  - **PICKED** CSF1R microglia upstream of NAc MMP-2/9 — 10.64898/2026.06.08.730923v1
+  - **PICKED** MIA + peripubertal two-hit hippocampal E/I — 10.64898/2026.06.13.732070v1
+  - **PICKED** TRPM4 temperature-dependent ligand relocation — 10.64898/2026.05.13.724805v2
+  - **PICKED** tau hyperphosphorylation MT envelope + lysosome trafficking — 10.1101/2025.07.31.667882v3
+  - **PICKED** mutant SOD1 oligodendrocyte myelinic nanochannels ALS — 10.64898/2026.06.09.731100v1
+  - **PICKED** TITAN-BBB multi-modal BBB permeability — 10.64898/2026.02.15.706007v2
+  - JNK regulates β3-GABA-A via GIT1 — 10.1101/2025.01.22.634236v2 (held — overlaps GABA pharm thesis with two-hit picks)
+  - MAG cerebellar autism — 10.64898/2026.06.11.731430v1 (held — neurodev overlaps two-hit pick)
+  - cell-type-selective cortical synucleinopathy — 10.64898/2026.06.08.730454v1 (held — overlapped with prior MSA strain pick)
+  - HERV-W anti-ENV in demyelination — 10.64898/2026.06.10.731326v1 (held — narrower than top-tier)
+  - LC-dlPFC ambiguity-resolution drift — 10.64898/2026.06.10.730879v1 (held — less drugable handle)
+  - DRN/vlPAG 5-HT vs DA aversive responses — 10.64898/2026.06.11.731093v1 (held — overlaps DA-circuit thesis)
+  - tauopathy dendritic spine functional/structural — 10.64898/2026.06.08.730960v1 (held — overlapped with cooperative-MT pick)
+  - SpineAgent multi-agent spine MRI — 10.64898/2026.06.07.730703v1 (held — chose LiteOdyssey for cleaner reasoning-architecture argument)
+  - propolis BBB atomistic MD — 10.64898/2026.06.08.730943v1 (held — TITAN-BBB is more directly drug-discovery-actionable)
+
+**arXiv (Tier 2 agentic AI in biology, cached daily):**
+- Scanned: 500 entries spanning last 7d in cs.AI ∪ cs.CL ∪ cs.MA ∪ q-bio (cache pre-fetched by runner).
+- After agentic-keyword × biomedical-keyword filter: 12 candidates.
+- Substantive shortlist:
+  - **PICKED** LiteOdyssey rare-disease diagnostic agent — arxiv:2606.16149
+  - DeepRoot KG-coordinated multi-agent for therapeutic reasoning over historical medical texts — arxiv:2606.15931 (strong; held for future)
+  - BioMedHop / BioWeave biomedical-reasoning benchmark — arxiv:2606.16211 (held)
+  - Compositional reasoning depth predicts clinical AI failure (EHR QA) — arxiv:2606.16890 (held)
+  - ClinHallu medical-MLLM stage-wise hallucination benchmark — arxiv:2606.14697 (held)
+  - Cloze open platform for human-AI mental-health conversations — arxiv:2606.15033 (infrastructure paper; held)
+  - Medical Heuristic Learning interpretable clinical decision rules — arxiv:2606.16337 (held)
+  - EC-Script LLM-agent affective-trajectory art-therapy narratives — arxiv:2606.16481 (off-thesis; held)
+  - Unified MRI imputation/understanding model — arxiv:2606.16484 (off-thesis)
+  - LLM-as-judge peer-reviewed medical QA — arxiv:2606.15419 (off-thesis)
+  - Misinformation propagation in benign multi-agent systems — arxiv:2606.16710 (not biomed-applied; held)
+  - Battery SOH temporal-contrastive — arxiv:2606.16434 (off-thesis)
+
+**Journals (Tier 1 + Tier 3):** Nature/NPP/MP/Biological Psychiatry/Neuropharmacology/Sciencedirect all returned auth-walled redirects (303 → idp.nature.com) or 403 Forbidden when WebFetched from this host; **proceeded with bioRxiv-rich corpus per source-failure rule** rather than burning the cron window. Psychiatric Times succeeded — surfaced one fresh pipeline item (intranasal esketamine review, 2026-06-15) and one lithium dosing update (2026-06-12); both off-thesis for today's lineup, deprioritized in favor of mechanism-rich bioRxiv leads.
+
+### Header note
+
+Today's lineup is bioRxiv-dominant (10 of 11) because the Nature/Elsevier portals 403'd on the cron host. The neuroscience corpus over the rolling 7d had unusually strong substance — 117 CNS-relevant candidates after strict filtering — so the recall hit from skipping journal portals was modest.
+=== 2026-06-16T03:58:25-07:00 done  receptor-and-reason (exit 0) ===

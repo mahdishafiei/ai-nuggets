@@ -155,3 +155,32 @@ Sources:
 === 2026-06-15T03:33-07:00 done justice-biotech-brief (exit 0) ===
 === 2026-06-15T03:29:59-07:00 done  justice-biotech-brief (exit 0) ===
 === 2026-06-16T03:20:04-07:00 start justice-biotech-brief ===
+Episode shipped. Title: **LB2501 — Legend Biotech's in vivo CD19/CD20 CAR-T hits 100% ORR and 83% CR with no ICANS at top dose in r/r B-NHL** (EHA 2026 late-breaking oral session, Saturday June 14). Audio is 5:37, uploaded to R2, feed updated, committed (the orchestrator pushes).
+
+## Candidate funnel
+
+**bioRxiv** (2026-06-15 to 2026-06-16): 168 entries scanned in full (6 pages, 30/page). On-target keyword survivors after de-duplication:
+- `10.64898/2026.05.17.725710` — *T-cell Receptor (TCR) targeting with Multivalent T-cell Engagers* (Wagner lab, U Minn, v2 posted 6/15; CSAN-displayed TCRαβ nanobody as moderate-affinity CD3-bypass TCE — strong fit, pre-clinical only)
+- `10.64898/2026.01.02.697332` — *Glycosylation-Dependent Checkpoint Restrains IEL Activation* (intestinal immunity, not on Justice's target list)
+- `10.64898/2026.06.11.731578` — `oxo-flow` workflow orchestration (false keyword hit on "checkpoint")
+- Capsid structures of Atlas viruses (false hit on "CTLA-4")
+
+**medRxiv** (2026-06-15 to 2026-06-16): 91 entries scanned across 3 pages. No keyword hits.
+
+**News / press feeds:**
+- Legend Biotech LB2501 in vivo CAR-T EHA 2026 LBO data — press release 2026-06-14 → **PICKED** ✓
+- J&J Talvey/talquetamab MonumenTAL-3 — already covered yesterday, skip
+- Lilly JAK MF data (AJ1-11095 / Ajax acquisition) — already covered 2026-06-14, skip
+- Merck Welireg + Keytruda adjuvant ccRCC FDA approval — June 12 (4 days back, outside recency window)
+- Intellia HAE Phase 3, Amgen/Harbour patent verdict, Neumora navacaprant failures, Spyre UC, Tzield expansion — off-target
+
+**Policy / funders** (ARPA-H/NIH/NSF): no T-cell/oncology items 6/14–6/16.
+
+**Sources used:**
+- [Legend Biotech press release on EHA 2026 LBO](https://www.globenewswire.com/news-release/2026/06/02/3305321/0/en/legend-biotech-announces-late-breaking-oral-presentation-at-eha-2026-showcasing-initial-phase-1-in-vivo-car-t-data-with-lb2501-in-non-hodgkin-lymphoma-nhl.html)
+- [StockTitan readout summary (2026-06-14 data release)](https://www.stocktitan.net/news/LEGN/legend-biotech-establishes-clinical-proof-of-concept-for-lb2501-a-iwevw3gtqjv7.html)
+- [BioSpace press release coverage](https://www.biospace.com/press-releases/legend-biotech-announces-late-breaking-oral-presentation-at-eha-2026-showcasing-initial-phase-1-in-vivo-car-t-data-with-lb2501-in-non-hodgkin-lymphoma-nhl)
+- [Fierce Biotech homepage](https://www.fiercebiotech.com/)
+- [BioPharma Dive homepage](https://www.biopharmadive.com/)
+- [STAT Biotech](https://www.statnews.com/category/biotech/)
+=== 2026-06-16T03:37:30-07:00 done  justice-biotech-brief (exit 0) ===

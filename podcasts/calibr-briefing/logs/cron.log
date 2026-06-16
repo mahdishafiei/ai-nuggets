@@ -1204,3 +1204,43 @@ Both episodes shipped. Calibr 2026-06-15 commit `fcc6b61`.
 **Failed sources:** Endpoints News (403 across multiple endpoints); AJMC late-breakers article (403); used Google `site:` queries as fallback. No Cloudflare-blocked items were the dominant pick, so no abstract-only summaries.
 === 2026-06-15T03:33:50-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-16T03:10:04-07:00 start calibr-briefing ===
+Both episodes shipped and committed. Final summary follows.
+
+---
+
+**Calibr-Skaggs Daily Briefing — Tuesday June 16, 2026 — Run Complete**
+
+Two episodes published, audio uploaded to R2, feed updated, single commit landed locally (orchestrator will push).
+
+- **Headlines** (7m 11s, 3.4 MB): Spyre SPY002 anti-TL1A Phase 2 SKYLINE Part A win; Neumora navacaprant Phase 3 KOASTAL-2/-3 failure + 35% layoffs; Adaptive Biotechnologies MRD/Immune Medicine separation + $250M converts; CMS proposed subQ "evergreening" closure (Keytruda/Opdivo/Tecentriq/Ocrevus); AstraZeneca Truqap PTEN-deficient mHSPC approval.
+- **Spotlight** (9m 47s, 4.7 MB): Spyre SPY002 + the anti-TL1A class as the next IBD wave — TL1A/DR3 biology, YTE-modified extended-half-life platform, competitive landscape (Merck/Roche/Sanofi-Teva/AbbVie/Absci), read-through to Calibr (platform-spinout validation, combination-medicine thesis, single-target dual-mechanism = MASH biologic ambition).
+
+**Candidate funnel (sources scanned for Tue June 16):**
+- Fierce Biotech homepage — scanned, no June 16-specific items beyond layoff tracker + Neumora coverage
+- Fierce Pharma homepage — scanned, Big-Pharma-CEO-pay roundup + Welireg/Truqap/Tzield follow-up
+- BioPharma Dive homepage — scanned, 6 June-16-dated items
+- STAT News biotech — scanned, latest dated June 15 (no June 16 items visible from public page)
+- Endpoints News — HTTP 403 from this IP, one retry also 403, used WebSearch cache to locate items
+- WebSearch — surfaced June 15-16 catalysts (Spyre, Neumora, Adaptive, CMS rule)
+
+**Shortlist after relevance filter:**
+- Spyre SPY002 Phase 2 SKYLINE Part A — Spyre press release / BioSpace / Fierce Biotech — **CHOSEN spotlight + headline #1**
+- Neumora navacaprant Phase 3 KOASTAL-2/-3 miss + 35% layoffs — Fierce Biotech / BioSpace — **CHOSEN headline #2**
+- Adaptive Biotechnologies MRD/Immune Medicine separation + $250M converts — GlobeNewswire / StockTitan — **CHOSEN headline #3**
+- CMS proposed rule on subQ Keytruda/Opdivo negotiation — BioPharma Dive / Healthcare Dive — **CHOSEN headline #4**
+- AstraZeneca Truqap PTEN mHSPC FDA approval (Jun 12, follow-up coverage Jun 15-16) — FDA / AstraZeneca / Medscape — **CHOSEN headline #5**
+- J&J Talvey/Darzalex Faspro follow-up — discarded, MonumenTAL-3 already covered in Jun 13 spotlight
+- Lilly Ajax JAK2 EHA Saturday follow-up — discarded, already covered in Jun 14 episodes
+- Merck Welireg + Keytruda QLEX adjuvant RCC (Jun 12) — discarded, prior episodes
+- Intellia HAELO additional EAACI data + NEJM — discarded, presented Jun 13 EAACI
+- Sanofi Tzield pediatric T1D — discarded, covered Jun 14
+- Climb Bio CLYM116 ERA 2026 — discarded, Jun 5 (old)
+- UCB-Candid Therapeutics — discarded, May 3 (old)
+- Serif Biomedicines launch — discarded, April 21 (old)
+- Foresite portfolio scan — no June 14-16 portfolio news beyond Parabilis (already covered) and Candid (May)
+
+**Reading depth:**
+- Full text fetched for Spyre SPY002 press release (BioSpace) and Spyre's own approach page (YTE platform details) for spotlight
+- Tulisokibart NEJM Artemis-UC numbers fetched for cross-trial comparison
+- Headlines tail items (Adaptive, CMS rule, Truqap) verified via press-release-grade summaries
+=== 2026-06-16T03:34:58-07:00 done  calibr-briefing (exit 0) ===

@@ -883,3 +883,14 @@ Commit `283e2d5` (not pushed — orchestrator handles push).
 - Apical-out intestinal-spheroid microfluidic platform (Ota, Tokyo) — https://www.biorxiv.org/content/10.64898/2026.06.10.731294v1
 - Cell-type-selective optogenetic vagal cholinergic VNS for systemic cytokine suppression (Anikeeva MIT + Fontaine CU-Anschutz) — https://www.biorxiv.org/content/10.64898/2026.06.10.731452v1
 === 2026-06-15T03:50:31-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-16T03:40:04-07:00 start scripps-biomed-brief ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cc6oQ5XagxFWZaLy9MkRE
+=== 2026-06-16T03:43:35-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-16T03:43:35-07:00 AUP-refusal detected for scripps-biomed-brief; retrying in 180s ===
+=== 2026-06-16T03:46:35-07:00 start scripps-biomed-brief (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cc6omVwrF4tBdHaFwJ5rr
+=== 2026-06-16T03:48:28-07:00 done  scripps-biomed-brief (exit 0) (retry 1) ===
