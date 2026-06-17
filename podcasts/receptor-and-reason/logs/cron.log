@@ -1220,3 +1220,30 @@ Episode shipped. Commit `2fb5f75` pushed locally (orchestrator will push). Final
 Today's lineup is bioRxiv-dominant (10 of 11) because the Nature/Elsevier portals 403'd on the cron host. The neuroscience corpus over the rolling 7d had unusually strong substance — 117 CNS-relevant candidates after strict filtering — so the recall hit from skipping journal portals was modest.
 === 2026-06-16T03:58:25-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-17T03:30:09-07:00 start receptor-and-reason ===
+Episode published. Final summary follows.
+
+Receptor & Reason 2026-06-17 shipped — 11 items, ~18:50 spoken, mp3 9.04MB uploaded to R2, feed updated as Episode 35, ledger appended (11 fresh items), committed `385bfe8`.
+
+Candidate funnel:
+- bioRxiv (neuroscience + biophysics + pharmacology/toxicology + bioinformatics + genomics + systems biology) — 8-day window 2026-06-10 through 2026-06-17 — 149 keyword-relevant candidates surfaced after category filtering, 11 picked. Top shortlist:
+  - doi:10.64898/2026.06.12.731880 — Buprenorphine restricts MOR conformational landscape (biophysics) — **CHOSEN (lead)**
+  - doi:10.64898/2026.06.12.731811 — Psilocybin vs escitalopram fluctuation-dissipation theorem (neuroscience) — **CHOSEN**
+  - doi:10.64898/2026.06.12.731845 — AI-guided LILRB4 small-molecule inhibitors AD (pharm/tox) — **CHOSEN**
+  - doi:10.64898/2026.06.10.731457 — Schizophrenia developmental liquidity + GABA switch (genomics) — **CHOSEN**
+  - doi:10.1101/2025.09.10.675343 — Spine nanostructure Ecrg4 schizophrenia (neuroscience) — **CHOSEN**
+  - doi:10.64898/2026.06.12.731805 — Mancozeb astrocyte SOCE (pharm/tox) — **CHOSEN**
+  - doi:10.64898/2026.05.29.728816 — α2-adrenergic glymphatic transport (neuroscience) — **CHOSEN**
+  - doi:10.64898/2026.06.13.732026 — ADMETron AI ADMET SaaS (bioinformatics) — **CHOSEN**
+  - doi:10.64898/2026.06.12.731250 — AutoZyme agentic bioinformatics optimization (bioinformatics) — **CHOSEN**
+  - doi:10.64898/2026.06.10.731456 — Plasticity-switching synaptic rules RNN (neuroscience) — **CHOSEN**
+  - doi:10.64898/2026.06.12.731650 — Microglial MyD88 alcohol (negative results, dropped)
+  - doi:10.64898/2026.06.11.731775 — OmicOS agent system (biomedical-agentic-ai pick today, dropped to avoid duplicate framing)
+  - doi:10.64898/2026.06.10.731399 — Graph QSAR PubChem hepatotoxicity (held back as backup)
+  - doi:10.64898/2026.06.13.732043 — MoE-Bind sparse-experts protein binder (held back)
+- arXiv (cached /tmp/ai-nuggets-arxiv-cache.xml, 1.21 MB, q-bio union; rolling 7d) — 31 biomed-agentic candidates. **CHOSEN:** arxiv:2606.17127 (AMPGAN v3 + PepCraft agentic AMP). Notable runner-up: arxiv:2606.18068 (premature diagnostic handoff mitigation) — kept off as clinical-deployment AI, less core to neuropsychopharm focus.
+- Tier 1 journals (Nature/MP/NPP/Biol Psy/Neuropharmacology) — auth-walled (idp.nature.com 303, ScienceDirect 403); WebSearch surfaced only older items (Feb–Apr 2026 DOIs). No fresh in-window picks added from this tier.
+- Psychiatric Times news — WebSearch returned only items already covered (HPL-003, COMP360 PTSD, brilaroxazine) from prior weeks. No fresh.
+- Tier 4 not activated (Tiers 1-3 yielded 11 fresh items, above the 10 threshold).
+
+Full-text availability: bioRxiv `.full` blocked by Cloudflare per [[reference_biorxiv_fulltext_blocked]] — wrote from structured abstracts. arXiv lead (AMPGAN v3) and arXiv backup (diagnostic-handoff) fetched in full via WebFetch.
+=== 2026-06-17T03:45:28-07:00 done  receptor-and-reason (exit 0) ===

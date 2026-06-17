@@ -1245,3 +1245,42 @@ Two episodes published, audio uploaded to R2, feed updated, single commit landed
 - Headlines tail items (Adaptive, CMS rule, Truqap) verified via press-release-grade summaries
 === 2026-06-16T03:34:58-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-17T03:10:09-07:00 start calibr-briefing ===
+Episode shipped successfully. 
+
+**Calibr-Skaggs Daily Briefing — Wed June 17, 2026**
+
+Spotlight: **Merck + Protillion Biosciences drug-discovery collaboration** (announced June 16, up to $510M milestones + undisclosed upfront for AI-driven antibody design). Unpacked the Prot-MaP platform (tethered transcription/translation on Illumina sequencing flow cells, ~1M protein variants per 48-hour experiment), Merck's milestone-per-program structure vs Generate-Novartis-style platform-wide licenses, the 3-layer competitive map (Model: Xaira/Generate/Iambic; Assay: Absci/AbCellera/Protillion; Integrated: Absci ABS-101 anti-TL1A Ph 1), and read-through to Calibr (antibody-platform spinout-model thesis extended one layer deeper from yesterday's Spyre/Paragon spotlight; pH-dependent sweeping + multi-target specificity map onto Calibr MASH biologic ambitions; Spyre's empirical YTE trick now systematizable via Prot-MaP).
+
+Headlines added: Lilly acquires 4E Therapeutics (Austin TX, MNK-eIF4E peripheral pain), Altaris take-private of Simulations Plus for $375M (PE roll-up of AI drug-discovery software with Chemical Computing Group), Edgewise EDG-7500 Phase 2 CIRRUS-HCM Part D positive (sarcomere modulator, no LVEF drops, Phase 3 Q4), and Moderna MFLUSIVA favorable FDA briefing docs ahead of June 18 VRBPAC.
+
+**Candidate funnel (sources scanned for Tue June 16 – Wed June 17):**
+- Fierce Biotech homepage — scanned, 8 June-16-dated items
+- Fierce Pharma homepage — scanned, 2 June-16-dated + 1 June-17-dated (PwC growth projection)
+- BioPharma Dive homepage — scanned, articles not date-stamped on homepage, individual articles confirmed via WebSearch (Lilly/4E, Moderna FDA briefing)
+- STAT News biotech — scanned, 2 June-16-dated + 1 June-17-dated (China VC investment commentary, gated)
+- Endpoints News — HTTP 403 from this IP (one retry also 403), used WebSearch to triangulate
+- GEN — scanned, only event listing for June 17
+- Direct Fierce Biotech article URLs (Lilly/4E, Altaris/SLP, Merck/Protillion, Edgewise, Adaptive) — HTTP 403 from this IP, fell back to WebSearch + BusinessWire/GEN press releases
+
+**Shortlist after relevance filter:**
+- Merck-Protillion $510M biobucks AI protein-design collaboration — BusinessWire / GEN / Fierce Biotech — **CHOSEN spotlight + headline #1**
+- Lilly acquires 4E Therapeutics (non-opioid pain, MNK-eIF4E) — Newswise / BioPharma Dive / Yahoo / WSGR — **CHOSEN headline #2**
+- Altaris Capital take-private of Simulations Plus $375M — BusinessWire / Yahoo / TipRanks — **CHOSEN headline #3**
+- Edgewise EDG-7500 Phase 2 CIRRUS-HCM Part D positive — BioSpace / PR Newswire / BioWorld — **CHOSEN headline #4**
+- Moderna MFLUSIVA mRNA flu favorable FDA briefing ahead of June 18 VRBPAC — Yahoo / BioSpace / BioPharma Dive — **CHOSEN headline #5**
+- Adaptive Biotechnologies MRD/Immune Medicine separation — Fierce Biotech / TipRanks — **discarded, already covered in yesterday's June 16 episode**
+- Biogen pipeline-transformation VC-mindset feature — Fierce Biotech — discarded, thematic not catalytic
+- FDA-MHRA liaison program — Fierce Pharma — discarded, low strategic content
+- PwC M&A growth projection June 17 — Fierce Pharma — discarded, too generic
+- Moderna new CCO from Novartis — Fierce Pharma — discarded, executive move
+- Verge Labs AI for neurology clinical trials — STAT — discarded, lower priority than 5 chosen items
+- Spyre SPY002 follow-up coverage June 16 — discarded, fully covered in yesterday's spotlight
+
+**Reading depth:**
+- Full text fetched for Merck-Protillion BusinessWire press release equivalent via GEN article + Protillion company website (spotlight subject)
+- Newswise + BioPharma Dive article fetched for Lilly/4E mechanism + deal context
+- BusinessWire/Yahoo summary fetched for Simulations Plus take-private terms
+- Edgewise CIRRUS-HCM Part D top-line data confirmed via BioSpace/PR Newswire press-release-grade summary
+- Moderna FDA briefing-document content verified via BioSpace + Yahoo Finance + BioPharma Dive coverage
+- Xaira/Generate/Absci competitive-context verified via Geekwire/Fierce Biotech founding coverage to support competitive-landscape thread in spotlight
+=== 2026-06-17T03:26:07-07:00 done  calibr-briefing (exit 0) ===

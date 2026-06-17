@@ -185,3 +185,31 @@ Episode shipped. Title: **LB2501 — Legend Biotech's in vivo CD19/CD20 CAR-T hi
 - [STAT Biotech](https://www.statnews.com/category/biotech/)
 === 2026-06-16T03:37:30-07:00 done  justice-biotech-brief (exit 0) ===
 === 2026-06-17T03:20:09-07:00 start justice-biotech-brief ===
+Episode published. Final summary:
+
+## Justice's Biotech Brief — 2026-06-17 — published
+
+**Pick:** CTIM-76 (Context Therapeutics, Nasdaq CNTX) — CLDN6×CD3 bispecific T cell engager. Phase 1a interim in platinum-resistant ovarian (announced June 15, May 29 data cut): ORR 29% (2/7 PRs at active dose), DCR 57%, 3 patients past 6 months. Safety: G1 CRS in 1/9, zero ICANS, zero DLTs. Heavy pretreatment denominator (median 7 prior lines, 89% prior ADC including likely mirvetuximab, 100% prior VEGF). Spotlight angle: matches BioNTech BNT211 CLDN6 CAR-T efficacy band on an off-the-shelf antibody footprint — the bispecific-vs-CAR-T shape from B-cell malignancies extending into a solid tumor.
+
+**Commit:** `daed7ea`. mp3 published to R2 (1.97 MB, 4:06 duration). Feed XML validated.
+
+## Candidate funnel
+
+**bioRxiv (2026-06-16/17, 263 entries paginated in full):**
+- DC-SIGN/ICAM-2 PD-1 resistance v4 (10.64898/2026.01.19.699861) — substantively unchanged from v1 (Jan 2026), title refresh only, recency stretched. Skip.
+- Treg memory phenotype competitive expansion in aging (10.64898/2026.06.16.732599) — basic immunology, off-thesis.
+- CD19 CAR-T lentiviral vector copy number reference cell lines (10.64898/2026.06.15.731627) — manufacturing/QC niche.
+- LILRB4-ApoE microglia AD (10.64898/2026.06.12.731845) — Alzheimer's, off-thesis (and adjacent to GL-4512 2026-06-12 pick).
+
+**Press / clinical readouts (Fierce Biotech, Fierce Pharma, BioPharma Dive, STAT, GlobeNewswire scanned):**
+- **CTIM-76 Phase 1 interim — CHOSEN.** (June 15) https://www.globenewswire.com/news-release/2026/06/15/3311621/
+- J&J Talvey earlier-stage MM expansion — same drug as 2026-06-15 Talquetamab MonumenTAL-3 pick. Skip.
+- Edgewise EDG-7500 cardiomyopathy Phase 2 — off-thesis (cardiac).
+- Lilly buys 4E Pharma (non-opioid pain) — off-thesis.
+- Moderna mRNA flu FDA briefing — off-thesis (vaccine).
+- Spyre SPY002 TL1A SKYLINE Phase 2 UC — on-thesis but already today's calibr-briefing spotlight.
+- AstraZeneca Truqap PTEN-mHSPC approval — already covered in calibr-briefing.
+- OBX-115 TIL melanoma OncLive recap — original data from June 1 ASCO presentation, outside recency window.
+
+**ARPA-H / NIH / NSF:** ARPA-H sleep-as-driver program launch (off-thesis); nothing else immunology/oncology-relevant in the 2-day window.
+=== 2026-06-17T03:34:16-07:00 done  justice-biotech-brief (exit 0) ===
