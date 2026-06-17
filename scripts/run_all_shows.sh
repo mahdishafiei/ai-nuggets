@@ -27,6 +27,14 @@ if [ ! -f "$PIPELINE" ]; then
   exit 1
 fi
 
+# Pull origin/main before per-show commits pile up, so the final push at
+# the bottom is a fast-forward. Without this, any upstream commit that
+# landed since the last run (e.g. a script tweak pushed from another
+# machine) makes `git push` reject as non-fast-forward and today's
+# feed.xml updates never reach the raw.githubusercontent.com URLs
+# subscribers fetch.
+git pull origin main || echo "WARN: git pull origin main failed; continuing" >&2
+
 # Pre-fetch arXiv listing once for the whole run so multiple shows don't
 # burst the same IP and trip a tarpit. The category union covers every
 # show's needs (cs.AI, cs.CL, cs.MA, q-bio supercategory). Each show's
