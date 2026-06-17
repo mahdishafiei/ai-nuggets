@@ -1593,3 +1593,37 @@ Episode shipped. Final summary for the cron log:
 Commit `1f75e9a` on `main`. mp3 published to R2 at `ai-nuggets-episodes/podcasts/biomedical-agentic-ai/episodes/2026-06-16-versioned-skill-libraries-trustworthy-agentic-genomics.mp3`. Orchestrator will push.
 === 2026-06-16T03:13:26-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-17T03:00:09-07:00 start biomedical-agentic-ai ===
+Episode shipped. Final summary for the cron log:
+
+**Episode:** OmicOS — a registry-grounded omics substrate where agents compose real analyses from verified community methods instead of inventing tools (bioRxiv DOI 10.64898/2026.06.11.731775, v1 2026-06-16; Stanford-led, corresponding author Zehua Zeng with the open-source OmicVerse community).
+
+**Pick rationale:** Substrate-level reproduction of yesterday's versioned-skill-libraries finding, now extended from a single clinical sub-domain (pharmacogenomic decision-logic placement) to the full omics analysis stack — single-cell + spatial + bulk + multi-omics + pathology. Two-layer architecture: OmicVerse V2 community substrate (AnnDataOOM-compatible Rust backends + agent-friendly Python algorithms + interfaces to single-cell FMs + Python-native reconstructions of historically R-centred Bioconductor/CRAN workflows) under an OmicOS layer that registers each analytical function as a state-aware capability contract. Results: 81.2% on BiomniBench (top of leaderboard among evaluated systems), +34.2pp task-completion on qwen-3.6-35b when OmicVerse is added to a minimal agent, controlled ablation explicitly attributes gains to registry-grounded execution NOT to model scale, doc retrieval, or unrestricted tool exposure. Discovery vignette: starting from a whole-body spatial map + "Alzheimer disease," the agent composed a non-canonical workflow integrating spatial expression + GWAS + eQTL + colocalization to nominate a colon epithelial risk axis centred on PICALM, CD2AP, and CR1 — textbook AD GWAS loci nominated in a fresh tissue context.
+
+**Audio:** 2,211,675 bytes / 276s, both Mistral chunks succeeded. Published to R2 at `ai-nuggets-episodes/podcasts/biomedical-agentic-ai/episodes/2026-06-17-omicos-registry-grounded-omics-substrate-agentic-biology.mp3`.
+
+**Commit:** `db064f9` on `main` (push handled by orchestrator).
+
+**Candidate funnel — biomedical-agentic-ai 2026-06-17**
+
+Sources scanned (2026-06-16 → 2026-06-17):
+
+- **bioRxiv** — 253 entries pulled across 9 paginated cursors (full collection, not sample). 24 strict-boundary keyword hits after spurious-match filter (dropping "RAG"-as-fragment, "agent" inside "causative agent" etc.). Substantive shortlist: 5.
+- **arXiv (shared cache)** — 500 entries scanned across 2026-06-14 → 2026-06-16. 33 agentic-biomedical hits after filter; substantive shortlist: ~7.
+- **ChemRxiv** — no fresh biomedical-agentic-AI hits in the 2-day window via `site:chemrxiv.org`.
+- **ARPA-H / NIH / NSF / HHS** — no fresh agentic-AI biomedical funder/policy announcements.
+- **News / product launches** — no top-tier biomedical-agentic-AI launches.
+
+Substantive shortlist (recency-filtered, 2-day window):
+
+- **[CHOSEN]** OmicOS — comprehensive omics ecosystem infrastructure + agent system (bioRxiv 10.64898/2026.06.11.731775, Stanford)
+- FlowBench — separating planning, fault recovery, and interpretation in agentic bioinformatics (bioRxiv 10.64898/2026.06.12.731844, Entelo Bio)
+- Orion — lab automation with computer-using agents (bioRxiv 10.64898/2026.06.13.732095, Genentech, Aviv Regev's group)
+- scIsoAgent — autonomous isoform-resolved characterization for long-read scRNA-seq (bioRxiv 10.64898/2026.06.11.731519, Microsoft Research Asia)
+- AutoZyme — autonomous agentic framework optimizing bioinformatics software (bioRxiv 10.64898/2026.06.12.731250, UWisc) — 8.52× median Seurat/Scanpy speedup, 676× max
+- DeepRoot — KG-coordinated multi-agent system for therapeutic reasoning over historical medical texts (arXiv:2606.15931)
+- RubricsTree (arXiv:2606.18203), WEQA (arXiv:2606.18147), ProvenanceGuard (arXiv:2606.18037), AIPatient Arena (arXiv:2606.17474), Agentic AMPGAN v3 (arXiv:2606.17127) — all considered, none preferred over OmicOS
+
+**Full-text status:** bioRxiv MCP returned the abstract only (not the JATS body); direct WebFetch on `/full` and `/source.xml` returned HTTP 403 from the Cloudflare interstitial (known limitation, logged in memory note `biorxiv_fulltext_blocked` and acknowledged in PIPELINE.md). Pick justified on a substantive abstract that covers architecture, benchmark numbers, ablation, and the discovery vignette. Limitation flagged honestly in the script body.
+
+**Why OmicOS over FlowBench / Orion / scIsoAgent / AutoZyme:** Substrate-level architectural contribution that operationalizes the registry-grounded-execution lesson at the scale of the broad omics ecosystem (vs. FlowBench's evaluation framing, Orion's image-analysis pocket, scIsoAgent's long-read isoform niche, AutoZyme's runtime-optimization niche). Explicit ablation finding (gains came from registry-grounded execution, not model scale or doc retrieval or unrestricted tool exposure) is the load-bearing experimental result for this audience. Convergence with yesterday's versioned-skill-libraries paper from a completely different lab on the same architectural claim — that agentic-biomedical-AI gains come from wiring the hands, not scaling the brain — is the moment the architecture stops being one paper's pitch and becomes a pattern.
+=== 2026-06-17T03:09:01-07:00 done  biomedical-agentic-ai (exit 0) ===

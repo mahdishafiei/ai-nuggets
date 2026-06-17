@@ -895,3 +895,41 @@ API Error: Claude Code is unable to respond to this request, which appears to vi
 Request ID: req_011Cc6omVwrF4tBdHaFwJ5rr
 === 2026-06-16T03:48:28-07:00 done  scripps-biomed-brief (exit 0) (retry 1) ===
 === 2026-06-17T03:40:09-07:00 start scripps-biomed-brief ===
+Episode shipped.
+
+**Scripps Biomedical Brief — 2026-06-17 — committed (orchestrator will push)**
+
+- Script: `podcasts/scripps-biomed-brief/scripts/2026-06-17-alaa-mtb-auxotrophy-boltzgen-binder-n332-gt5-hvtn144-amybind-asyn.md` (755 words)
+- Audio: `2026-06-17-...mp3` — 2,972,360 bytes, 371.5 s, Mistral `voxtral-mini-tts-2603` / `en_paul_neutral` in 3 chunks (112.3s + 124.7s + 111.5s)
+- R2: uploaded to `ai-nuggets-episodes` bucket via `npx wrangler r2 object put` (PATH-augmented; cron `publish_episode.sh` couldn't find npx on the default PATH but the upload succeeded after exporting `/home/asu/.nvm/versions/node/v24.14.0/bin`)
+- Feed: new `<item>` prepended; XML validates
+- Commit: `d36c3b6` (no push, per pipeline)
+
+## Candidate funnel — 2026-06-17
+
+Sources scanned via bioRxiv MCP `search_preprints` for the 2026-06-15 → 2026-06-17 window:
+- pharmacology and toxicology: 5 items scanned
+- bioengineering: 28 scanned
+- biochemistry: 26 scanned
+- synthetic biology: 0 (empty window)
+- cell biology: 0 (empty window)
+- cancer biology: 0 (empty window)
+- immunology: 12 scanned
+- microbiology: 30 scanned
+
+Full text: all four picks hit Cloudflare 403 on `www.biorxiv.org/.../full` (per [[reference_biorxiv_fulltext_blocked]]); abstracts retrieved via MCP `get_preprint` and version history confirmed via `api.biorxiv.org/details`. The summaries stay within what the abstracts assert.
+
+Substantive shortlist (after discarding spurious matches and yesterday-shipped overlap):
+- **[CHOSEN]** Shalaby/Beeralingappa et al. (Flaherty, Purdue) — TI-801 alanine auxotrophy / AlaA Mtb — https://www.biorxiv.org/content/10.64898/2026.06.12.731178v1
+- **[CHOSEN]** Stark/Faltings et al. (Jaakkola/Barzilay/Corso, MIT) — BoltzGen universal binder design v2 — https://www.biorxiv.org/content/10.1101/2025.11.20.689494v2
+- **[CHOSEN]** Pallerla/Uplekar et al. (Schief, Scripps/IAVI) — N332-GT5 HVTN144 cGMP bioprocess — https://www.biorxiv.org/content/10.64898/2026.06.11.731363v1
+- **[CHOSEN]** Sadek/Rey et al. (Correia, EPFL) — AmyBind polymorph-specific α-Syn fibril binders — https://www.biorxiv.org/content/10.64898/2026.06.13.732066v1
+- Abdel-Rahman/Gabr (Weill Cornell) — AI-Guided LILRB4 (ILT3) Inhibitors — https://www.biorxiv.org/content/10.64898/2026.06.12.731845v1 — **dropped**: third Gabr LILRB4 paper in <10 days (LT12/ICB-7 covered 2026-06-10; GL-4512 referenced 2026-06-11)
+- Lin/Ma et al. (Zheng, Purdue) — Norepinephrinylation as a widespread PTM — https://www.biorxiv.org/content/10.64898/2026.06.11.731782v1 — held in reserve
+- Zhai et al. (Modis, Cambridge) — Atlas viruses engineerable nanoparticle scaffold — https://www.biorxiv.org/content/10.64898/2026.03.22.711591v2 — held in reserve
+- Mavar et al. (Niederweis) — improved calreticulin nanobody framework engineering — narrower
+- Pallerla/Uplekar (Schief) is a bioprocess paper not a discovery paper; the Scripps connection + sequential germline-targeting strategic significance carried it
+- Industry news: only routine corporate items in the Endpoints/Fierce homepages today; nothing competing with the bioRxiv slate
+
+Source health: bioRxiv MCP responsive; full-text endpoints Cloudflare-blocked (known). No retries needed.
+=== 2026-06-17T03:47:55-07:00 done  scripps-biomed-brief (exit 0) ===
