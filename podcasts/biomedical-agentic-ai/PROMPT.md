@@ -69,10 +69,25 @@ the gap in the funnel, ship the day's episode.
    keyword (e.g., `site:chemrxiv.org agent 2026`); the public API is
    gated by Cloudflare from this host. Filter result snippets to the
    last 2 days.
-4. **News and product launches** — last 1–2 days. Headlines from
+4. **PubMed** — recently indexed articles (last 5 days) covering agentic
+   AI / LLMs applied to biomedicine. The window is wider than the
+   preprint sources because PubMed indexing lags real publication by a
+   few days, and journal pub dates cluster on weekly cycles.
+   - Prefer the PubMed MCP (`mcp__claude_ai_PubMed__search_articles`)
+     when available — it returns structured metadata directly.
+   - Otherwise use NCBI E-utilities, term-filtered server-side because
+     the daily corpus is large (~3–5k articles/day):
+     `curl 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=(agent+OR+agentic+OR+LLM+OR+%22large+language+model%22+OR+%22foundation+model%22+OR+autonomous+OR+multi-agent+OR+%22knowledge+graph%22+OR+ontology)&reldate=5&datetype=pdat&retmax=300&retmode=json'`
+     then `efetch` (or `esummary`) the returned PMIDs to retrieve titles
+     and abstracts for the relevance filter. Same keyword set as bioRxiv;
+     same audience criteria as the rest of the show.
+   - Discard the usual spurious keyword matches ("chemical agent",
+     "biological agent", "LLM" inside an unrelated word) before
+     shortlisting.
+5. **News and product launches** — last 1–2 days. Headlines from
    science-news outlets covering AI in biomedicine, Nature/Science
    publications, and open-source tool releases.
-5. **Policy / funder announcements** — daily check of major US biomedical
+6. **Policy / funder announcements** — daily check of major US biomedical
    funder press pages, since program launches and major awards rarely
    surface in preprint or general web searches:
    - ARPA-H news: https://arpa-h.gov/news
