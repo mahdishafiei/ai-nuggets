@@ -934,3 +934,30 @@ Substantive shortlist (after discarding spurious matches and yesterday-shipped o
 Source health: bioRxiv MCP responsive; full-text endpoints Cloudflare-blocked (known). No retries needed.
 === 2026-06-17T03:47:55-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-18T03:40:12-07:00 start scripps-biomed-brief ===
+Episode shipped. Summary log for `cron.log`:
+
+**Episode**: 2026-06-18-solid-map-rna-designmaster-protac-falcon-lnp-ubcmk-e2
+- Script: 913 words / ~6 minutes
+- Audio: 3,018,545 bytes, 377 s
+- R2 upload: ✓ (`ai-nuggets-episodes/podcasts/scripps-biomed-brief/episodes/...mp3`) via `npx wrangler r2 object put` after PATH-augmenting with `/home/asu/.nvm/versions/node/v24.14.0/bin` (cron `publish_episode.sh` couldn't find npx on default PATH)
+- Feed: new `<item>` added, XML validates
+- Commit: `24826e3` under `flock /tmp/ai-nuggets-git.lock`; orchestrator will push.
+
+**Candidate funnel** (bioRxiv interval 2026-06-17 → 2026-06-18, 194 records scanned):
+- arXiv / industry news / journals — not surveyed today (bioRxiv carried four strong on-brand items; per PIPELINE, single-source failures don't abort but here no failure occurred — biorxiv supply was sufficient on its own).
+- bioRxiv full text: blocked from this host (Cloudflare); all picks selected from abstracts retrieved via MCP `get_preprint`. Memory `reference_biorxiv_fulltext_blocked.md` already captures this.
+
+Shortlist after relevance filtering (each was a credible nugget for the Schultz audience):
+- **[CHOSEN]** SOLiD-MaP — photoproximity labeling for small-molecule RNA binding-site mapping (Rietveld/Wu/Z. Li, Utrecht, 06-17) https://www.biorxiv.org/content/10.64898/2026.06.16.732620v1
+- **[CHOSEN]** DesignMaster — multi-conditional diffusion for PROTAC linker design (Shi/J. Liu/F. Li, Adelaide, 06-17) https://www.biorxiv.org/content/10.64898/2026.06.15.732318v1
+- **[CHOSEN]** FALCON — closed-loop active-learning LNP optimization, 84× cell selectivity (Toh/Cheng/Mao, Johns Hopkins, 06-17) https://www.biorxiv.org/content/10.64898/2026.06.13.731774v1
+- **[CHOSEN]** UbCMK — first standalone activity-based probe for E2 ubiquitin-conjugating enzymes (W. Liu/Chanda, Texas A&M, 06-17) https://www.biorxiv.org/content/10.64898/2026.06.16.732757v1
+- Cryo-EM structure of human LRRC15 + de novo concave-face minibinders — skipped, already covered today by receptor-and-reason https://www.biorxiv.org/content/10.64898/2026.06.16.732218v1
+- Mitochondrial Complex I modulator for advanced Alzheimer's — interesting but less mechanistically anchored than the four chosen https://www.biorxiv.org/content/10.64898/2026.06.14.732179v1
+- Q-DOAS proximity-quenching protein-aggregation assay — chemical biology tool but narrower https://www.biorxiv.org/content/10.64898/2026.06.16.732424v1
+- Chemoselective halogenation of premarineosin A for antimalarials — narrower medicinal-chem note https://www.biorxiv.org/content/10.64898/2026.06.16.732709v1
+- Universal oligo adapters for DNA-barcoded antibody panels — useful tool but adjacent to the modality focus https://www.biorxiv.org/content/10.64898/2026.06.16.730979v1
+- Tcf7 regulators / Trim28 CRISPR screen for CD8 T cell tumor differentiation — solid immunology but less on the new-modality/new-tech beat https://www.biorxiv.org/content/10.64898/2026.06.14.732162v1
+
+Selection logic: the four chosen items collectively span the four Schultz beats — RNA-targeted small molecules + chemical biology platform (SOLiD-MaP), TPD with AI (DesignMaster), LNP delivery + closed-loop ML for precision delivery (FALCON), and ubiquitin-system chemical probes that enable next-generation degrader programs (UbCMK).
+=== 2026-06-18T03:51:01-07:00 done  scripps-biomed-brief (exit 0) ===

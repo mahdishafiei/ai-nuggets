@@ -1628,3 +1628,40 @@ Substantive shortlist (recency-filtered, 2-day window):
 **Why OmicOS over FlowBench / Orion / scIsoAgent / AutoZyme:** Substrate-level architectural contribution that operationalizes the registry-grounded-execution lesson at the scale of the broad omics ecosystem (vs. FlowBench's evaluation framing, Orion's image-analysis pocket, scIsoAgent's long-read isoform niche, AutoZyme's runtime-optimization niche). Explicit ablation finding (gains came from registry-grounded execution, not model scale or doc retrieval or unrestricted tool exposure) is the load-bearing experimental result for this audience. Convergence with yesterday's versioned-skill-libraries paper from a completely different lab on the same architectural claim — that agentic-biomedical-AI gains come from wiring the hands, not scaling the brain — is the moment the architecture stops being one paper's pitch and becomes a pattern.
 === 2026-06-17T03:09:01-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-18T03:00:12-07:00 start biomedical-agentic-ai ===
+Episode shipped. Orchestrator will push.
+
+**Today's pick:** MetaHarmonizer (bioRxiv 10.64898/2026.06.13.732088, v1 posted 2026-06-17) from Sehyun Oh's group at CUNY SPH. Robust biomedical metadata harmonization paired with a contamination-control protocol — under zero-schema context, 3 of 5 frontier LLMs recover 80-100% of GDC identifiers (direct memorization), and the apparent LLM-only advantage on the most-cited schema-mapping benchmark inverts once you control for that. The system response: SchemaMapper + OntologyMapper as multi-stage cascades grounded in pre-defined controlled vocabularies, with LLMs used only as bounded offline preprocessing — 71.6% Top-1 on GDC, 77.9-95.5% on four EFO benchmarks (beats text2term by 16.4 pp / direct LLM by 19.2 pp), AUC 0.73-0.94 calibrated confidence, fully local + deterministic Python package. The contamination protocol is generalizable to any LLM-augmented bioinformatics benchmark on public data; the architectural pattern (LLMs as bounded preprocessing, controlled-vocabulary grounding, multi-stage cascades, calibrated confidence) extends the convergent thread from versioned skill libraries / OmicOS / OmicsNavigator / CARE / ChatSpatial / CodeCytos to the metadata layer those systems depend on.
+
+**Candidate funnel (2026-06-17 to 2026-06-18 window):**
+
+- bioRxiv (last 2 days): 186 unique items pulled across paginated cursors; 14 keyword hits; 2 substantive after discarding "agent" → causal agent / chemical agent and "tool use" → motor handedness; final shortlist:
+  - MetaHarmonizer — 10.64898/2026.06.13.732088 (CHOSEN)
+  - VaxjoGNN — 10.1101/2025.11.27.690985 v3 (v3 revision of older paper; on-recency questionable)
+- arXiv (shared daily cache; cs.AI ∪ cs.CL ∪ q-bio ∪ cs.MA): 98 keyword hits, 48 with strong biomedical filter, top shortlist:
+  - TxBench-PP — arXiv:2606.19245 (verifiable benchmark for AI agents on small-molecule preclinical pharmacology; best Claude Opus 4.8 / Pi 59.3%; strong runner-up; passed because MetaHarmonizer's contamination critique + architectural inversion has broader read-through and the metadata layer is upstream of TxBench-PP's evaluation targets)
+  - LEADS / Cardiac EP Digital Twins — arXiv:2606.18154 (LLM agent for hybrid physics-neural architecture discovery; cardiac-specific scope is narrower)
+  - PhysAssistBench — arXiv:2606.18613 (clinical-LLM benchmark; benchmark-paper concentration is already high in the recent run)
+  - Agentic Framework for Diagnostic Handoff / Silent Hallucination — arXiv:2606.18068
+  - WEQA — arXiv:2606.18147 (wearable health QA)
+  - AIPatient Arena — arXiv:2606.17474 (EHR-grounded clinical-consultation eval)
+  - PARSE — arXiv:2606.17467 (provenance-aware retrieval sanitization)
+  - ProvenanceGuard — arXiv:2606.18037 (MCP factuality)
+  - RubricsTree — arXiv:2606.18203 (personal-health-agent eval)
+  - SciRisk-Bench — arXiv:2606.18936 (AI4Science safety)
+- ChemRxiv via WebSearch — no fresh biomedical-agentic-AI hits in the 2-day window
+- PubMed (last 5 days) — covered by the bioRxiv + arXiv pull; no additional standalone PubMed-only candidates that beat the shortlist
+- ARPA-H / NIH / NSF / HHS press pages — no fresh agentic-AI biomedical funder/policy announcements in the window
+- General news / product launches — no top-tier biomedical-agentic-AI launches in the window
+
+**Source-side notes:**
+- bioRxiv full text remains Cloudflare-blocked from this host (logged in memory + PIPELINE.md); MetaHarmonizer abstract is unusually comprehensive (architecture + contamination protocol + numbers + AUC + deployment), so the take is grounded without misreading. Acknowledged in-script per PIPELINE guidance.
+- bioRxiv MCP server returned only abstract metadata (no JATS body), direct WebFetch returned HTTP 403 from the Cloudflare interstitial, JATS XML URL also 403; no full-text path from this host.
+- TxBench-PP and LEADS read in full via arXiv.
+
+**Files committed (commit b0f7c80):**
+- podcasts/biomedical-agentic-ai/scripts/2026-06-18-metaharmonizer-contamination-controlled-biomedical-metadata-harmonization.md
+- podcasts/biomedical-agentic-ai/feed.xml (new item prepended; valid XML; 121 items total)
+- podcasts/biomedical-agentic-ai/logs/cron.log (runner-managed)
+
+**Episode mp3:** 2,687,103 bytes, 336s, uploaded to R2 (ai-nuggets-episodes/podcasts/biomedical-agentic-ai/episodes/2026-06-18-metaharmonizer-contamination-controlled-biomedical-metadata-harmonization.mp3) via Mistral TTS Paul Neutral on first try (no fallback needed).
+=== 2026-06-18T03:11:14-07:00 done  biomedical-agentic-ai (exit 0) ===

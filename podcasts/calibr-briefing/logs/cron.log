@@ -1285,3 +1285,31 @@ Headlines added: Lilly acquires 4E Therapeutics (Austin TX, MNK-eIF4E peripheral
 - Xaira/Generate/Absci competitive-context verified via Geekwire/Fierce Biotech founding coverage to support competitive-landscape thread in spotlight
 === 2026-06-17T03:26:07-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-18T03:10:12-07:00 start calibr-briefing ===
+Both episodes shipped. Summary for cron.log audit:
+
+**Calibr-Skaggs Daily Briefing 2026-06-18 — published**
+
+Episodes:
+- Headlines (491s / 3,930,741 B) — Thursday roundup, 5 items
+- Spotlight (672s / 5,372,700 B) — uniQure AMT-130 Huntington's BLA acceptance
+
+Audio published to R2 (`ai-nuggets-episodes` bucket); feed.xml updated and validates as XML; single commit `1327d85` made via flock-serialized `git commit` (no push, orchestrator handles that).
+
+**Candidate funnel:**
+
+Sources surveyed: STAT News, Fierce Biotech, BioPharma Dive, Endpoints (via WebFetch + targeted WebSearch). Endpoints homepage WebFetch returned 403; substituted with WebSearch for individual deal/readout confirmations. No other source-side failures.
+
+Substantive shortlist (post-filter):
+- uniQure AMT-130 Huntington's BLA Q3 2026 — FDA accepts 3-yr Phase 1/2 data (globenewswire 2026-06-17) **← SPOTLIGHT + headline #1**
+- Jazz/AbCellera TCE multispecific antibody collab, $56M up / $792M per program biobucks (biopharmadive, prnewswire 2026-06-17) **← headline #2**
+- Kardigan upsized $400M IPO at $16/share, KARD (biopharmadive, bloomberg 2026-06-18) **← headline #3**
+- F2G/Shionogi olorofim Ph 3 OASIS positive non-inferiority vs AmBisome in invasive aspergillosis (globenewswire 2026-06-18) **← headline #4**
+- Vedana Therapeutics $46M Series A stealth launch — PACAP + dual PACAP/CGRP migraine antibodies (biospace, biopharmadive 2026-06-17) **← headline #5**
+- Moderna mFlusiva VRBPAC adcomm — meeting today, outcome not yet available at publish time; covered yesterday on briefing-doc release — dropped
+- GSK-Nuvalent $11B M&A — already spotlighted 2026-06-09; dropped
+- Eli Lilly / 4E Therapeutics — covered in 2026-06-17 headlines; dropped
+- Edgewise EDG-7500 Ph2 CIRRUS-HCM — covered in 2026-06-17 headlines; dropped
+- Daiichi Sankyo ADC strategy (Tsai) — feature piece, not a discrete event; dropped
+
+All 5 picked items opened in full via WebFetch / WebSearch result extracts; uniQure spotlight cross-checked against globenewswire press release + September 2025 36-month topline + 2022 voluntary high-dose pause history.
+=== 2026-06-18T03:25:23-07:00 done  calibr-briefing (exit 0) ===
