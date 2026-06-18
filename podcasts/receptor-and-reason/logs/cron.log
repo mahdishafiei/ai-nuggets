@@ -1248,3 +1248,50 @@ Candidate funnel:
 Full-text availability: bioRxiv `.full` blocked by Cloudflare per [[reference_biorxiv_fulltext_blocked]] — wrote from structured abstracts. arXiv lead (AMPGAN v3) and arXiv backup (diagnostic-handoff) fetched in full via WebFetch.
 === 2026-06-17T03:45:28-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-18T03:30:12-07:00 start receptor-and-reason ===
+Episode 36 of Receptor & Reason shipped — 10 items, 13:27 spoken (807s), mp3 6.46MB uploaded to R2, feed updated, ledger appended, committed `025cd95`.
+
+Candidate funnel:
+
+- **bioRxiv** (neuroscience + pharmacology + bioinformatics, 7-day window 2026-06-11 → 2026-06-18, all 1132 entries fetched via cursor pagination, 1103 unique after dedup, 1048 keyword-relevant after CNS/pharm filter, 673 high-relevance after dual-keyword scoring). Substantive shortlist (DOI / title / disposition):
+  - **PICKED (lead)** doi:10.64898/2026.06.14.732113 — Schizophrenia ensemble + clozapine + rational multi-receptor antagonist cocktail without NREM penalty
+  - **PICKED** doi:10.64898/2026.06.14.732204 — Female-biased MDD via committed-OPC GABRG3-NRXN
+  - **PICKED** doi:10.64898/2026.04.22.719367 — Htr1b/triptans on A-fiber mechanonociceptors + orphan Gpr19 as new pain target
+  - **PICKED** doi:10.64898/2026.06.12.731854 — Gi inverts to ↑TNF in glia (vs neurons)
+  - **PICKED** doi:10.64898/2026.03.20.713091 — Gq-pathway activation in CA1 astrocytes rescues post-stroke memory; astrocyte Ca²⁺ leads neurons by 600 ms
+  - **PICKED** doi:10.64898/2026.06.12.731896 — Chronic vapourized cannabis flower + rimonabant withdrawal in male rats + behavioural network analysis
+  - **PICKED** doi:10.64898/2026.06.12.731966 — Cocaine-enriched oral Streptococcus parasanguinis + cysteine-S-sulfate / histamine metabolite chain
+  - **PICKED (closer)** doi:10.64898/2026.06.12.731897 — Cross-condition empirical test of Entropic Brain Theory; psychedelics + schizophrenia colocalize at high-entropy end
+  - doi:10.64898/2026.06.10.731411 — Propofol mechanistic simulation (was a strong tentative pick; **dedup hit — already shipped 2026-06-14**)
+  - doi:10.64898/2026.06.11.731723 — DMS calcium-permeable AMPARs in aversion-resistant alcohol drinking (**dedup hit — already shipped 2026-06-14**)
+  - doi:10.64898/2026.06.10.731267 — LILRB4 DEL→APX1→5xFAD (held; fourth LILRB4 paper in three weeks, would have been editorial overlap with 2026-05-26, 2026-06-10, 2026-06-17 shipped items — different DOI than each, dedup ledger would have allowed, but kept off to avoid serial saturation)
+  - doi:10.64898/2026.06.11.731708 — Subregion-specific NBM/HDB cholinergic input organization in 5xFAD (held)
+  - doi:10.64898/2026.06.11.731777 — Convergent metabolic-kinase axis Parkinson's/MSA (held; bioRxiv full text 403-blocked, abstract-only insufficient for confident summary)
+  - doi:10.64898/2026.06.11.731747 — miR-181 regulates neprilysin + tau pathways AD (held)
+  - doi:10.1101/2025.07.09.663930 — Cholinergic medial septal amyloid REM/cognition v2 (held; v1 outside 7d window though v2 within)
+  - doi:10.64898/2026.06.11.731629 — AI drug repurposing via clinical-trial mining (held; single-author tool paper, case-study-driven)
+  - doi:10.64898/2026.06.13.732037 — Lorentz hyperbolic AD transcriptomics (held; methodology paper, less translational)
+  - doi:10.64898/2026.06.12.731650 — Microglial MyD88 alcohol consumption (held; negative-result outcome)
+  - doi:10.64898/2026.06.09.731031 — Bipolar iPSC cortical-network TLR signaling (held; small n, preliminary)
+  - doi:10.64898/2026.06.10.731399 — Graph QSAR PubChem hepatotoxicity (held; covered as ADMET layer recently)
+
+- **arXiv** (cached `/tmp/ai-nuggets-arxiv-cache.xml`, 1.21 MB, q-bio + cs.AI + cs.CL + cs.MA union, 500 entries, 7-day window). 293 biomed+agentic candidates after keyword filter, 134 after pharma/CNS-focus tightening. Substantive shortlist:
+  - **PICKED** arxiv:2606.19245 — TxBench-PP: AI agents on small-molecule preclinical pharmacology (the most on-target arXiv item of the week)
+  - **PICKED** arxiv:2606.18019 — LLM dementia + depression severity from clinical-interview speech (154 German subjects)
+  - arxiv:2606.17420 — Feynman-Kac Reweighted Schrödinger Bridge Matching for tau PET harmonization (held; PET-imaging method, second-tier vs TxBench-PP)
+  - arxiv:2606.17973 — Fine-tuning LLMs for passive depression severity (held; overlapping niche with 2606.18019)
+  - arxiv:2606.17867 — Quantitative analysis of multimodal biomarkers in AD (held)
+  - arxiv:2606.18979 — Compensating for nonverbal subtests in speech-based dementia (held; overlapping niche)
+  - arxiv:2606.18154 — Cardiac electrophysiology digital twins via agentic discovery (held; cardiac not CNS)
+
+- **Tier 1 journals** (Neuropsychopharmacology / Molecular Psychiatry / Biological Psychiatry / IJNP / PNPBP / Neuropharmacology): not queried in this run; the cron host has had auth-wall 403/303 issues consistently and recent runs have logged the failure mode. Skipped per source-failure-rule; recall hit was modest given the bioRxiv-rich corpus.
+
+- **Tier 3 industry / chemRxiv / Psychiatric Times**: not surfaced in this run; the picks above all clear the 8-item floor with strong CNS-pharm + agentic-AI weight, so further sources weren't needed.
+
+- **Tier 4**: not activated (Tiers 1-2 yielded 10 fresh items, above floor).
+
+Full-text availability: bioRxiv `.full` blocked by Cloudflare per existing memory record — wrote from structured abstracts pulled via API. arXiv leads (TxBench-PP, Reading-between-the-Lines, Feynman-Kac tau PET) opened in full via WebFetch on abs HTML / pdf endpoints.
+
+Dedup catches this run: 2/12 initial picks (731411 propofol, 731723 AMPA alcohol) flagged via shipped.jsonl on `grep -E "{ids}"`, replaced before script finalize.
+
+Header note: lineup is bioRxiv-heavy (8 of 10) by selection rather than source-availability — the neuroscience corpus over the rolling 7d had strong CNS-pharm substance.
+=== 2026-06-18T03:50:41-07:00 done  receptor-and-reason (exit 0) ===
