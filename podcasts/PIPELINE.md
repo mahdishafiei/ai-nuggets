@@ -64,11 +64,25 @@ Read with the depth your summary requires:
 
 Fetch order by source type:
 
-- **bioRxiv**: `WebFetch` the `.full` HTML page at
-  `https://www.biorxiv.org/content/<prefix>/<id>v<n>.full` — use the
-  DOI prefix the details API returned (`10.1101/` vs. `10.64898/`;
-  see "Paper-link URLs" below). Fall back to `.full.pdf` if the HTML
-  is sparse.
+- **bioRxiv / medRxiv**: run `scripts/fetch_preprint.py <url-or-doi>`.
+  `www.biorxiv.org` is behind Cloudflare and 403s every direct fetch
+  (HTML, PDF, JATS XML) — `WebFetch` against those URLs hits the same
+  wall and was the cause of the daily run's silent failures. The
+  helper tries three Cloudflare-bypassing channels in order:
+    1. `r.jina.ai` reader proxy on the `.full` HTML page — renders
+       server-side with a real browser; returns cleaned markdown.
+    2. Europe PMC's `fullTextXML` if the preprint is in EPMC's
+       full-text corpus (lags bioRxiv by months; useful for older work).
+    3. `api.biorxiv.org` metadata + abstract — always reachable
+       (API subdomain isn't behind Cloudflare), but body-less.
+  When the helper falls through to channel 3 it prints a note to stderr
+  saying so. Treat that as "abstract-only" per the depth rules above —
+  prefer dropping the item unless it's a clearly dominant pick. A common
+  abstract-only case is a preprint posted in the last ~12–36h: bioRxiv
+  hasn't finished rendering the body HTML yet. Use the DOI prefix the
+  details API returned (`10.1101/` vs. `10.64898/`; see "Paper-link URLs"
+  below) — a wrong prefix yields "no record for this DOI" from every
+  channel.
 - **arXiv**: `WebFetch https://arxiv.org/pdf/<id>` — the PDF
   text-extracts cleanly. Use `abs/<id>` only if the PDF endpoint
   stalls.
