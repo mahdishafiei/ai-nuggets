@@ -290,3 +290,19 @@ Episode shipped: **2026-06-19 — AbCellera CD3+costim TCE platform / Jazz Pharm
 **Selection rationale**: Jazz–AbCellera is fresh (announced Tuesday, within the 1–2 day window), squarely in trispecific TCE territory (Justice's explicit interest area), platform-level rather than asset-level so it admits an opinionated deal-flow read about the field's pivot from two-arm BiTEs to costim-armed trispecifics. Beat the melanoma Treg preprint on strategy fit and the bioRxiv LRRC15 hit on the no-duplicates rule.
 === 2026-06-19T03:29:53-07:00 done  justice-biotech-brief (exit 0) ===
 === 2026-06-20T03:20:07-07:00 start justice-biotech-brief ===
+Episode shipped. Commit `43bda0d` on `main` (orchestrator will push).
+
+**Today's pick:** *PROPHET-Ab — 160-arm bispecific antibody library separates which developability liabilities inherit from the parents and which require building the bispecific.* Ginkgo Bioworks preprint posted overnight on bioRxiv. 160 bispecifics × 65 parents on a uniform knobs-into-holes CrossMab IgG1 scaffold, 10-assay developability panel, three quantified inheritance classes: hydrophobicity + surface charge inherit cleanly (ρ ≈ 0.85–0.95 — triage at parental level, avoid both arms high on HIC × HAC); self-association + polyreactivity inherit partially (ρ ≈ 0.60–0.88, Fv-Fv charge complementarity is the outlier driver — pair same-sign Fv charges); thermostability does not inherit (ρ < 0.4 — measure on the bispecific itself). Directly actionable for TCE/ADC/trispecific platform planning.
+
+**Candidate funnel:**
+- **bioRxiv** (2-day window 2026-06-19 → 2026-06-20): 223 entries paginated in full; 42 keyword hits after expanded keyword list; substantive shortlist after discarding spurious matches ("trop" → tropical/cytotrophoblast, "igg" inside unrelated text, etc.):
+  - **CHOSEN** Decoding Bispecific Antibody Developability: Design Rules and Predictive Models from a 160-Member Library — Ginkgo Bioworks — `10.64898/2026.06.15.732449` (opened full; jina .full body not yet rendered → abstract-only, kept per dominant-pick exception)
+  - The atypical IκB factor IκBδ enhances CD8 T cell accumulation and effector functions in solid tumors — Anjana Rao / Patrick Hogan groups — `10.64898/2026.06.17.732005` (opened full)
+  - Systemic viral vector vaccination induces brain resident memory TRM cells to drive anti-glioblastoma immunity — `10.64898/2026.06.18.733241` (abstract only, posted in last 24–36h)
+  - Killer-cell dominance dichotomy governs tumor immune networks and stratifies inflamed cancers — `10.64898/2026.06.15.732326` (skimmed)
+  - Cross-species chromatin accessibility pinpoints HIVEP3 as a driver of thymic epithelial maturation — `10.64898/2026.06.16.732438` (autoimmunity-adjacent, skimmed)
+- **Press / news** (Fierce Biotech, Endpoints, STAT, June 18–20): scanned homepages; Endpoints.news returned 403 from cron host (noted, not a blocker). Biogen–RayThera $1B immunology buyout dated June 17 (outside 1–2 day window and target details undisclosed). No fresh TCE/ADC/CAR-T clinical readouts in window.
+- **Policy / funders** (ARPA-H, NIH, NSF): no in-window oncology-immunotherapy announcement worth featuring.
+
+Source-side: Endpoints homepage 403 from cron IP — proceeded with remaining news sources per PIPELINE.
+=== 2026-06-20T03:29:51-07:00 done  justice-biotech-brief (exit 0) ===

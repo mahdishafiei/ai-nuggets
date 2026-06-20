@@ -1345,3 +1345,40 @@ Substantive shortlist:
 - Roche Lunsumio SC sBLA acceptance, Norwich Xofluza generic, J-Pharma nanvuranlat, Samsung Bioepis Pyzchiva, Neurizon supply deal — all dropped (incremental, below top-5 bar)
 === 2026-06-19T03:24:45-07:00 done  calibr-briefing (exit 0) ===
 === 2026-06-20T03:10:07-07:00 start calibr-briefing ===
+Commit looks good — feed got 20 lines (the two new items), scripts are 13 and 15 lines (paragraphs separated by blank lines). All four files committed. Pipeline complete.
+
+---
+
+## Run summary
+
+**Calibr Briefing — Sat June 20, 2026 — committed (commit `7aa62b4`).** Orchestrator handles the push.
+
+Two episodes shipped:
+- **Headlines** (~6:16): Utebzi first oral carbapenem FDA approval (preview), Kardigan $400M upsized IPO, cytisinicline PDUFA today, Cambrian/Amplifier ATX-304 at ADA, Amgen-Harbour BioMed patent verdict.
+- **Spotlight** (~11:23): GSK + Spero Therapeutics Utebzi (tebipenem pivoxil hydrobromide) FDA approval — mechanism, PIVOT-PO Phase 3 design and results, the 4-year arc from Spero's 2021 RTF through the GSK partnership and BARDA-backed redesign, competitive/reimbursement landscape, and read-through to Calibr's TB/antibiotic programs (TB Drug Accelerator, sanfetrinem with GSK).
+
+### Candidate funnel
+
+Sources scanned (post-Friday's news cycle on a quiet Saturday):
+
+- **Endpoints News** — homepage 403 from this IP, fell back to STAT + Fierce coverage
+- **Fierce Biotech / Fierce Pharma** — scanned, several items already absorbed by Friday's headlines
+- **BioPharma Dive** — top stories scanned, several already in Friday
+- **STAT (biotech section)** — June 16–18 stories scanned
+- **WebSearch** — multiple targeted queries (FDA actions, deals, IPO, AI-in-DD, Foresite/Calibr)
+- **BioWorld** — closed for Juneteenth, no Friday issue published
+
+Shortlist (after discarding stale items already in Friday's headlines — Moderna mFlusiva, Biogen-RayThera, cAMPfield, Capvaxive, Lilly 340B):
+
+- GSK + Spero Utebzi FDA approval (June 17) — first oral carbapenem — **CHOSEN: lead headline + spotlight**
+- Kardigan $400M upsized IPO (June 17/18) — cardio biotech — **CHOSEN**
+- Achieve Life Sciences cytisinicline PDUFA today (June 20) — first new smoking-cessation Rx in 20 years if approved — **CHOSEN**
+- Cambrian Bio / Amplifier ATX-304 at ADA Scientific Sessions (June 18 STAT) — AMPK activator — **CHOSEN**
+- Amgen ordered to pay $20.2M to Harbour BioMed (week of June 15) — patent verdict, Chinese biotech IP — **CHOSEN**
+- GSK-Nuvalent $10.6B acquisition (June 9) — too old, already in news cycle
+- Apogee-Blackstone $1.3B financing (May 27) — too old
+- Patrick Soon-Shiong/ImmunityBio investigation (June 18 STAT) — investigative piece, less news-shaped
+- Vedana Therapeutics migraine launch — quieter category, dropped for Amgen-Harbour
+
+Full text read in advance: Utebzi spotlight grounded in BioSpace press release detail (PIVOT-PO trial design, success rates, CIs, partnership terms) + FiercePharma reporting on the 2021 RTF arc + GSK milestone structure + Calibr/TB Drug Accelerator + sanfetrinem context. FiercePharma homepage 403 from this IP; Endpoints homepage 403; offset by other reachable sources.
+=== 2026-06-20T03:25:05-07:00 done  calibr-briefing (exit 0) ===
