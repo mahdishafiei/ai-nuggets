@@ -1727,3 +1727,25 @@ Request ID: req_011CcDo6xavSTSAahk3w4M1o
 === 2026-06-19T20:23:47-07:00 done  biomedical-agentic-ai (exit 0) (retry 1) ===
 === 2026-06-19T20:23:47-07:00 AUP-refusal detected for biomedical-agentic-ai; retrying in 180s ===
 === 2026-06-19T20:26:47-07:00 start biomedical-agentic-ai (retry 2, --model claude-sonnet-4-6) ===
+Committed. Here's the full production log for today's run:
+
+---
+
+**Episode: TxBench-PP — AI agents cap out at 59% on real preclinical pharmacology decisions, and the benchmark tests reasoning not memorization**
+
+**Candidate funnel:**
+
+- **bioRxiv (2026-06-18 to 2026-06-19):** 30 papers retrieved; 4 keyword hits. VaxjoGNN (ontology-grounded vaccine adjuvant recommendation) — good KG/ontology fit but v3 of a November 2025 paper, weak recency. No other substantive hits.
+- **arXiv cache (last 2 days, biomedical + AI filter):** 27 hits. Shortlist:
+  - ✅ **TxBench-PP** (2606.19245) — **CHOSEN**
+  - Dual-Agent Framework for robotic lab protocol translation (2606.20120) — strong self-driving-lab contribution; passed due to confidence questions from Korean-language PDF metadata
+  - Measuring Biological Capabilities and Risks of AI Agents (2606.19899) — policy/review paper
+  - Prompt Plan Extract: agentic LLM for lung pathology extraction (2606.19852) — solid clinical-NLP but narrow
+  - ACIE: Agentic Clinical Information Extraction with RAG (2606.19602) — strong deployment (96.5% clinician acceptance) but deployment-validation flavor
+  - PhysAssistBench (2606.18613) — clinical benchmark, third such in a short window
+- **PubMed (last 5 days):** 214 total results; 0 in-window hits on agentic biomedical research after filtering
+- **ChemRxiv:** No fresh biomedical-agentic-AI hits in 2-day window
+- **News / funder pages:** No in-window announcements (FDA agentic AI, IQVIA.ai, NVIDIA Proteina all predate the window)
+
+**Episode stats:** 1,810,434 bytes · 226s · Mistral TTS · R2 uploaded · feed updated · committed
+=== 2026-06-19T20:35:13-07:00 done  biomedical-agentic-ai (exit 0) (retry 2, --model claude-sonnet-4-6) ===
