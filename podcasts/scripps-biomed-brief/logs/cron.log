@@ -986,3 +986,30 @@ Substantive shortlist (after discarding spurious matches):
 - UbCMK, SOLiD-MaP, FALCON — already shipped in yesterday's episode; excluded.
 === 2026-06-19T03:46:34-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-20T03:40:07-07:00 start scripps-biomed-brief ===
+Episode shipped for Saturday, 2026-06-20: `2026-06-20-exact-transporter-delivery-apobec3b-cryoem-miracles-vm-imaging-ubserp-rqc` — 335 s, 2,681,043 bytes, R2 upload + git commit 7a4a63c. (Orchestrator will push.)
+
+## Candidate funnel
+
+**Sources scanned** (bioRxiv, posts dated 2026-06-18 → 2026-06-20):
+- pharmacology and toxicology: 3 items scanned, 0 substantive picks (all PK/transporter regulation in pregnancy or hepatotox – not Schultz-relevant)
+- biochemistry: 29 items scanned, 6 substantive
+- bioengineering: 30 items scanned, 4 substantive
+- synthetic biology: 0 items in window
+- immunology: 18 items scanned, 2 substantive
+- cancer biology, cell biology, molecular biology: empty windows (no posts in 06-18 → 06-20)
+
+**Substantive shortlist** (after discarding spurious matches, instrumentation noise, and methodology micro-papers):
+
+- ExACT transporter-guided brain delivery — Grutzendler, Yale: https://www.biorxiv.org/content/10.64898/2026.06.14.732141v1 ★ CHOSEN
+- Full-length APOBEC3B cryo-EM with BORF2 — Aihara/Harris, Minnesota: https://www.biorxiv.org/content/10.64898/2026.06.18.733170v1 ★ CHOSEN
+- MIRACLES label-free mid-IR Vm imaging — Pleitez/Ntziachristos, TU Munich: https://www.biorxiv.org/content/10.64898/2026.06.18.733116v1 ★ CHOSEN
+- UbSeRP ubiquitin-selective ribosome profiling — Steinmetz/Frydman/Beck/Savitski: https://www.biorxiv.org/content/10.64898/2026.06.18.733060v1 ★ CHOSEN
+- Tug-of-war riboswitches — Lucks, Northwestern: https://www.biorxiv.org/content/10.64898/2026.06.17.733018v1
+- APOE4 microglia spatial-proteomic states — Bendall/Montine, Stanford: https://www.biorxiv.org/content/10.64898/2026.06.18.733295v1
+- MC2R-MRAP native MS + HDX dynamics — Robinson, EIT/Oxford: https://www.biorxiv.org/content/10.64898/2026.06.15.731286v1
+- Pore-resolved amyloid APQ chip — Lee, Korea U: https://www.biorxiv.org/content/10.64898/2026.06.18.733064v1 (skipped — overlaps yesterday's Q-DOAS amyloid story)
+- Zero-shot dEVA bi-zinc metalloenzyme design — Huang, v2: https://www.biorxiv.org/content/10.64898/2026.04.23.720277v2 (skipped — v2 revision of older post)
+- Mga2 lipid saturation sensing via Ub amplification — Ernst, v2: https://www.biorxiv.org/content/10.1101/2025.11.05.686737v2 (skipped — v2 revision of older post)
+
+**Depth note:** all four chosen picks are v1 preprints from the last 24-48 hours where bioRxiv has not yet rendered body HTML; `fetch_preprint.py` fell through to the abstract+metadata API channel for all four, with `r.jina.ai` returning abstract-only on UbSeRP and MIRACLES and ExACT/APOBEC3B PDF endpoints 403-ing. Summaries are grounded in the (detailed) abstracts; flagged once at top of script.
+=== 2026-06-20T03:51:14-07:00 done  scripps-biomed-brief (exit 0) ===

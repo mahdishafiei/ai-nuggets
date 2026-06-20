@@ -1750,3 +1750,21 @@ Committed. Here's the full production log for today's run:
 **Episode stats:** 1,810,434 bytes · 226s · Mistral TTS · R2 uploaded · feed updated · committed
 === 2026-06-19T20:35:13-07:00 done  biomedical-agentic-ai (exit 0) (retry 2, --model claude-sonnet-4-6) ===
 === 2026-06-20T03:00:07-07:00 start biomedical-agentic-ai ===
+Shipped. Episode for 2026-06-20: **Dual-agent protocol translator — heterogeneous LLM verification turns natural-language ELISA into a real robotic Bradford assay** (arXiv:2606.20120, KIMM / Bio Forge One). Audio is 294 s (mistral / Paul Neutral, 2.35 MB), uploaded to R2, feed updated, committed (66f10c0, no push — orchestrator owns that).
+
+Candidate funnel (June 19–20, 2026):
+
+- **bioRxiv** — 220 papers paginated across 8 pages of the 2-day window; 8 agentic/LLM/KG/ontology hits with biomed signal.
+  - ContinuumCellAgent (10.64898/2026.06.15.732409) — autonomous AI-scientist running lit review → hypothesis → experiment → manuscript → peer review unattended. Strong fit but body not yet rendered (fetch_preprint fell through to channel-3 abstract-only); per PIPELINE rule, dropped in favor of a paper with a confirmed body read.
+  - OmniPath Metabo (10.64898/2026.06.18.733117) — metabolomics KG resource; not agentic.
+  - Tox21mer (10.64898/2026.06.15.732308) — 43.5 M-param transformer on Tox21 curves; foundation model, not agentic.
+- **arXiv** — cache fetched 03:00 UTC, 500 entries, latest submission 2026-06-18 17:59 UTC; arXiv has not yet announced 2026-06-19 submissions. 11 candidates after careful filtering.
+  - Dual-Agent Protocol Translator (2606.20120) — **CHOSEN**.
+  - Measuring Biological Capabilities and Risks of AI Agents (2606.19899, RAND) — methodology/policy synthesis on biosec evaluations of AI scientists; important but a survey, not empirical.
+  - Prompt, Plan, Extract (2606.19852) — zero-shot agentic lung-pathology extraction; third clinical-NLP episode in short window.
+  - MedRLM (2606.20164) — recursive multimodal clinical reasoning; narrative claims outrun empirical content.
+- **PubMed** (last 5 days) — 645 hits on broad filter, 29 on narrower agentic/multi-agent/KG filter; manual review surfaces no fresh agentic biomedical research breakthrough in the 2-day window (most are spurious — "chemical agent", e-consult studies, LLM-in-facial-plastics review).
+- **ChemRxiv** (WebSearch) — no fresh agentic-biomedical hits in window.
+- **News / product launches** — no major agentic-biomedical-AI launches on June 19 or 20.
+- **ARPA-H / NIH / NSF / HHS press** — latest ARPA-H is 2026-06-16 sleep program (off-topic); nothing fresh on agentic-AI biomedical on June 19/20.
+=== 2026-06-20T03:11:58-07:00 done  biomedical-agentic-ai (exit 0) ===

@@ -1347,3 +1347,46 @@ Dedup catches this run: 0 — all 11 picks passed the 369-entry shipped-key set 
 Header note: lineup is bioRxiv-dominant (10 of 11) by selection — the rolling 7d window had unusually strong psychedelic + neurodegeneration + agentic-genomics substance, with the psilocybin L5 dissociation being the clearest single causal experiment of the week.
 === 2026-06-19T03:46:36-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-20T03:30:07-07:00 start receptor-and-reason ===
+Episode 38 shipped — 9 items, 2,025 spoken words / 13:25 audio (mistral primary), 6.44 MB uploaded to R2, feed updated, ledger appended, committed `039085f`. Orchestrator will push.
+
+Candidate funnel:
+
+- **bioRxiv** (Tier 1 neuro/pharm + Tier 2 bioinfo + Tier 3 ADMET/AI-drug-design, 7-day window 2026-06-13 → 2026-06-20, 1,059 entries pulled via cursor pagination, 265 CNS/pharm/agentic-relevant after keyword filter + dedup against shipped.jsonl, top 24 inspected). Substantive shortlist:
+  - **PICKED (lead)** doi:10.64898/2026.06.16.732524 — B0AT2/SLC6A15 cryo-EM, S3/S4 intracellular cavities conserved across SLC6
+  - **PICKED** doi:10.1101/2025.05.20.654092 v2 — Forrest lab SERT chloride is architectural cofactor not co-transported
+  - **PICKED** doi:10.64898/2026.06.13.732066 — AmyBind de novo polymorph-specific α-syn fibril binders
+  - **PICKED** doi:10.64898/2026.06.17.732848 — TDP-43 M1 unfolding + MAPKAPK2 inhibitor repurposing for ALS
+  - **PICKED** doi:10.64898/2026.06.11.731670 — Vitamin D – CYP27A1 – VDR rheostat for HD mitochondrial rescue
+  - **PICKED** doi:10.64898/2026.06.13.732095 — Orion computer-using AI agent (CellProfiler/QuPath autonomy)
+  - **PICKED** doi:10.64898/2026.06.15.732318 — DesignMaster diffusion PROTAC linker design
+  - **PICKED** doi:10.64898/2026.06.14.732174 — Wistar Kyoto reciprocal F1 paternal oxycodone vulnerability
+  - **PICKED (closer)** doi:10.64898/2026.06.15.730877 — Quinpirole rat OCD attractor-stability test
+  - doi:10.64898/2026.06.18.732920 — SMARTPocket RNA-pocket geometric DL (held; RNA-target, off-CNS)
+  - doi:10.64898/2026.06.19.733377 — HD developing-striatum scRNAseq (held; abstract-only, paired pick on HD already)
+  - doi:10.1101/2023.03.07.530845 — Tyrosinase-induced neuromelanin LC degeneration v2 (held; 2023 base, narrow update)
+  - doi:10.1101/2025.01.28.635170 — SCN2A cortical neurogenesis v2 (held)
+  - doi:10.64898/2026.06.15.732359 — Astrocyte Kir4.1 seizures (held; ictal-mechanism, fewer drug-discovery hooks)
+  - doi:10.64898/2026.06.15.732239 — Glycyrrhiza glabra phosphoproteomics PD (held; herbal)
+  - doi:10.64898/2026.06.16.732524 — B0AT2 (chosen as lead)
+  - doi:10.64898/2026.06.12.731650 — Microglial MyD88 alcohol (held; negative result)
+  - doi:10.64898/2026.06.11.731775 — OmicOS AI omics agent (held; covered as agentic-genomics on 2026-06-19 sister)
+  - doi:10.64898/2026.06.12.731621 — Lymphatic-venous anastomosis choroid plexus AD (held; surgical/anatomy)
+
+- **arXiv** (cached `/tmp/ai-nuggets-arxiv-cache.xml`, 1.21 MB, 7-day window). 44 biomed+agentic candidates after keyword filter, none picked: 2606.18154 cardiac digital twins (held, off-CNS), 2606.19602 clinical agentic RAG, 2606.20164 MedRLM, 2606.18068 healthcare agent diagnostic-handoff — all weighted lower than the bioRxiv CNS items above. Already-shipped IDs (2606.20120, 2606.19899, etc.) excluded.
+
+- **Nature NPP / Mol Psych / Biological Psychiatry / Neuropharmacology**: same auth-wall 403/303 cron-host failure mode logged in prior 4+ runs. Skipped per source-failure rule. The one Neuropharmacology hit (NSO review, 2026-06-15) noted but not picked — review article, not prioritized over fresh primary work.
+
+- **Psychiatric Times**: one in-window meta-analysis on intranasal esketamine for MDD/TRD (2026-06-15) surfaced but full content blocked (403 from Psychiatric Times direct fetch). Held — couldn't read enough to summarize responsibly per PIPELINE.md.
+
+- **chemRxiv**: Cloudflare-gated, surveyed via `site:chemrxiv.org` web search — no compelling in-window picks.
+
+- **Industry / pharma press** (Xaira, Iambic, Recursion, Insitro, AstraZeneca ChatInvent, Genentech CLADD, Latent Labs): no in-window technical announcements surfaced via WebSearch. Skipped.
+
+- **Tier 4**: not activated (Tiers 1-3 yielded 9 fresh items, above 8-item floor).
+
+Full-text availability: 7 of 9 picks read in full via `scripts/fetch_preprint.py` (jina-full channel succeeded); 2 picks (HD developing-striatum, paternal oxycodone) abstract-only because body HTML hadn't rendered yet — both kept because they were lighter mid/tail items with self-contained abstracts. Note: HD developing-striatum ended up not making the final lineup; only paternal oxycodone (abstract-only) shipped as a tail item, abstract was substantively self-contained for a 1-minute mention.
+
+Dedup catches this run: 0 — all 9 picks cleared the ~380-entry shipped-key set on first check.
+
+Header note: lineup is bioRxiv-only (9 of 9) — the rolling 7d corpus had unusually strong CNS structural-pharmacology weight (B0AT2 + SERT-Cl⁻ in the same week is a once-a-year coincidence), so arXiv/press wasn't needed to fill the floor.
+=== 2026-06-20T03:52:17-07:00 done  receptor-and-reason (exit 0) ===
