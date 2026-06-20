@@ -68,7 +68,8 @@ run_show() {
   # If two retries on the configured default model both AUP-refuse, fall
   # back down the model ladder: 2× Sonnet 4.6, then 2× Haiku 4.5. Smaller
   # models often clear the classifier when the default keeps tripping it.
-  local attempt tag out model_arg
+  local attempt tag out model_arg today produced
+  today=$(date +%F)
   for attempt in 1 2 3 4 5 6; do
     case "$attempt" in
       1|2) model_arg="" ;;
@@ -90,6 +91,22 @@ run_show() {
       rm -f "$out"
       sleep 180
       continue
+    fi
+    # An exit-0 with no AUP-refusal text doesn't actually mean an episode
+    # shipped — Haiku at the bottom of the model ladder has been observed
+    # to clear the AUP classifier but then produce a chat-style response
+    # asking the human for write/execute permission, exit 0, and leave no
+    # script or mp3 behind. Treat "no mp3 for today" as a soft failure so
+    # the ladder keeps trying instead of silently dropping the day.
+    produced=$(compgen -G "$REPO/podcasts/$slug/episodes/$today*.mp3" 2>/dev/null | head -1 || true)
+    if [ "$attempt" -lt 6 ] && [ -z "$produced" ]; then
+      echo "=== $(date -Iseconds) no episode produced for $slug; retrying in 180s ===" | tee -a "$log"
+      rm -f "$out"
+      sleep 180
+      continue
+    fi
+    if [ -z "$produced" ]; then
+      echo "=== $(date -Iseconds) FAILED: no episode produced for $slug after all retries ===" | tee -a "$log"
     fi
     rm -f "$out"
     break
