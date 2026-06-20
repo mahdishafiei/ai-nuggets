@@ -16,7 +16,6 @@ mkdir -p "$(dirname "$log")"
 # piping their full contents on stdin; Claude reads them via tool calls,
 # which empirically don't trip AUP the way a high-keyword-density initial
 # user message does. Ladder: 2× default, 2× Sonnet 4.6, 2× Haiku 4.5.
-today=$(date +%F)
 for attempt in 1 2 3 4 5 6; do
   case "$attempt" in
     1|2) model_arg="" ;;
@@ -38,20 +37,6 @@ for attempt in 1 2 3 4 5 6; do
     rm -f "$out"
     sleep 180
     continue
-  fi
-  # Haiku has been observed to clear AUP but then produce a chat-style
-  # response asking for permission and exit 0 without writing a script
-  # or mp3 — treat "no mp3 for today" as a soft failure so the ladder
-  # keeps trying instead of declaring success on an empty run.
-  produced=$(compgen -G "podcasts/$slug/episodes/$today*.mp3" 2>/dev/null | head -1 || true)
-  if [ "$attempt" -lt 6 ] && [ -z "$produced" ]; then
-    echo "=== $(date -Iseconds) no episode produced for $slug; retrying in 180s ===" | tee -a "$log"
-    rm -f "$out"
-    sleep 180
-    continue
-  fi
-  if [ -z "$produced" ]; then
-    echo "=== $(date -Iseconds) FAILED: no episode produced for $slug after all retries ===" | tee -a "$log"
   fi
   rm -f "$out"
   break

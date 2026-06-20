@@ -1714,3 +1714,16 @@ Can you grant these permissions so I can complete the full production pipeline:
 
 Once approved, I'll complete all steps per the PIPELINE.md instructions.
 === 2026-06-19T03:20:55-07:00 done  biomedical-agentic-ai (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-06-19T20:17:52-07:00 start biomedical-agentic-ai ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcDnmq2E8qCAd3z6Df3tT
+=== 2026-06-19T20:19:27-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-19T20:19:27-07:00 AUP-refusal detected for biomedical-agentic-ai; retrying in 180s ===
+=== 2026-06-19T20:22:27-07:00 start biomedical-agentic-ai (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcDo6xavSTSAahk3w4M1o
+=== 2026-06-19T20:23:47-07:00 done  biomedical-agentic-ai (exit 0) (retry 1) ===
+=== 2026-06-19T20:23:47-07:00 AUP-refusal detected for biomedical-agentic-ai; retrying in 180s ===
+=== 2026-06-19T20:26:47-07:00 start biomedical-agentic-ai (retry 2, --model claude-sonnet-4-6) ===
