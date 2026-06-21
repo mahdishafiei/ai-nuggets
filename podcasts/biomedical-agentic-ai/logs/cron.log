@@ -1769,3 +1769,32 @@ Candidate funnel (June 19–20, 2026):
 - **ARPA-H / NIH / NSF / HHS press** — latest ARPA-H is 2026-06-16 sleep program (off-topic); nothing fresh on agentic-AI biomedical on June 19/20.
 === 2026-06-20T03:11:58-07:00 done  biomedical-agentic-ai (exit 0) ===
 === 2026-06-21T03:00:07-07:00 start biomedical-agentic-ai ===
+Episode shipped. Audio published to R2, feed updated, commit `dd6ae4c` pushed to local (orchestrator pushes at end of run).
+
+**Today's pick:** *LLM-orchestrated PET/CT agent — end-to-end DICOM-to-draft-report on 170 real-world lung-staging scans* (Choi et al., J Nucl Med, PMID 42315314, DOI 10.2967/jnumed.126.272362, published online 2026-06-18).
+
+The agent uses a 3-layer architecture (cognitive control / tool abstraction / execution) with Gemini 3 Flash Preview as orchestrator running a thought-action-observation loop over AutoPET nnU-Net (lesion seg), TotalSegmentator (organ seg), DICOM/SUV math, MIP generation, and a vision-LLM. End-to-end completion on 169/170 retrospective baseline ¹⁸F-FDG PET/CTs across 3 Siemens scanners. Primary tumor sens 100%; nodal sens 84.8% / spec 39.4% (overcalls reactive uptake); distant mets sens 70.2% / spec 65.0%; adrenal mets 2/11, brain mets 0/3. Supplementary swap of Gemini 3 Flash for Claude Sonnet 4.6 and Gemma 4 26B as orchestrator gave broadly equivalent results — the orchestration framework, not the LLM lineage, is doing the load-bearing work.
+
+**Candidate funnel — 2026-06-19 to 2026-06-21:**
+
+- **bioRxiv** (281 papers across 3 pages, full pagination):
+  - Tox21mer — `10.64898/2026.06.15.732308` (bioinformatics) — 43.5M-param transformer foundation model on Tox21 dose-response curves; foundation model, not agentic
+  - Pirfenidone implant — keyword spurious, dropped
+  - DNA methylation network clocks — not agentic
+- **medRxiv** (19 papers): 4 keyword hits, only the glaucoma cloud-LLM clinical-note extraction (`10.64898/2026.06.18.26355532`) is on-topic; clinical NLP application
+- **arXiv cache** (fetched 2026-06-21 03:00 UTC, 500 entries through 2026-06-18; 19th-20th not yet announced):
+  - MedRLM `2606.20164` (cs.CL) — recursive multimodal clinical reasoning framework; ambitious architecture but **outlines** an evaluation rather than reports empirical results; dropped as design-stage
+  - Dual-Agent Protocol Translator `2606.20120` — yesterday's pick, excluded
+  - AutoPass `2606.20373` — LLM agents for compiler tuning, not biomedical
+  - SKILL.md mining `2606.20363` — computer-using agents, not biomedical
+- **PubMed** (1163 hits last 5 days on the broad filter; 14 substantive after deduplication of clinical-NLP applications):
+  - **PMID 42315314 — LLM-orchestrated PET/CT agent (J Nucl Med, 2026-06-18) — CHOSEN** ✓
+  - AI4Doctor (`PMID 42321427`, NPJ Digit Med) — conventional clinical LLM fine-tuned on EMR
+  - Nurse-led KG-QA for community palliative care (`PMID 42321714`) — narrow clinical
+  - FetalCLIP (`PMID 42321373`) — ultrasound foundation model, not agentic
+  - AI dispatcher copilot for Tele-CPR (`PMID 42314898`) — application
+- **ChemRxiv / News / product launches:** no fresh biomedical-agentic-AI items in the 2-day window
+- **Policy:** ARPA-H most recent is 2026-06-16 sleep program (off-topic); NIH news page Cloudflare-walled from this host; no fresh agentic-AI funder/policy announcements
+
+PET/CT LLM agent wins on (a) concrete real-world end-to-end demonstration with patient-level metrics and honest discrepancy analysis, (b) methodological novelty as the first end-to-end LLM-orchestrated raw-DICOM-to-report workflow in nuclear medicine, and (c) the LLM-agnostic supplementary result that directly informs agentic-AI architecture choices.
+=== 2026-06-21T03:12:50-07:00 done  biomedical-agentic-ai (exit 0) ===

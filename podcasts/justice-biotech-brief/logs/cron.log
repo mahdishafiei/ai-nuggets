@@ -307,3 +307,24 @@ Episode shipped. Commit `43bda0d` on `main` (orchestrator will push).
 Source-side: Endpoints homepage 403 from cron IP — proceeded with remaining news sources per PIPELINE.
 === 2026-06-20T03:29:51-07:00 done  justice-biotech-brief (exit 0) ===
 === 2026-06-21T03:30:07-07:00 start justice-biotech-brief ===
+Committed. Here's the candidate funnel for today's run.
+
+---
+
+**Candidate funnel — Justice's Biotech Brief — 2026-06-21**
+
+Sources scanned (last 1–2 days):
+- **bioRxiv** — 81 entries pulled across full 3-page cursor for 2026-06-20 → 2026-06-21; 4 hits via keyword filter (VEGF, PD-1/PD-L1, T cell engager, bispecific/trispecific, CAR-T, ADC, JAK, immunotherapy, checkpoint, etc.).
+- **medRxiv** — 5 entries (server thin this date); 1 keyword hit, irrelevant (medical education).
+- **News / press feeds** — Fierce Biotech, Fierce Pharma, Endpoints, STAT, BioPharma Dive, ASCO/ESMO trackers via WebSearch + WebFetch. Fierce homepage and Fierce Pharma homepage served June 18 as their latest; Endpoints front page returned 403. Most discoverable items were ASCO 2026 follow-ups (out of recency window) or items dated June 17 or earlier (Antengene IND June 9, AbCellera/Jazz June 17 — already covered yesterday, Henlius HLX3902 NMPA June 17).
+- **Policy / funder** — ARPA-H news page: latest item June 16 (sleep program). NIH/NSF: no fresh items in 1–2 day window.
+
+Substantive shortlist (kept after pruning):
+- **Steffke et al. — Systemic ChAdOx1/MVA viral-vector vaccination induces brain CD8 TRM, controls ICB-refractory SB28 glioblastoma**, 10.64898/2026.06.18.733241, bioRxiv 2026-06-20 — **CHOSEN**
+- Distinct melanoma EV subpopulations reflect immune-/stress-induced tumor states (biomarker, weaker fit for Justice's portfolio)
+- TCR signal strength and CD25 on thymic Tregs (basic immunology, no therapeutic angle)
+
+Source-side notes: news-page web fetches mostly returned cached content stopping at June 18 (Fierce, Fierce Pharma, BioPharma Dive); Endpoints homepage 403; bioRxiv body HTML not yet rendered for the chosen preprint (posted < 24h prior) — proceeded with abstract per the dominant-pick exception in PIPELINE.md, flagged in the script.
+
+Episode shipped: `2026-06-21-chadox1-mva-glioblastoma-brain-trm.mp3` (358s, 2.86 MB) — feed updated, audio uploaded to R2, committed (no push per pipeline; orchestrator pushes).
+=== 2026-06-21T03:41:52-07:00 done  justice-biotech-brief (exit 0) ===

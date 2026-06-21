@@ -1014,3 +1014,26 @@ Episode shipped for Saturday, 2026-06-20: `2026-06-20-exact-transporter-delivery
 **Depth note:** all four chosen picks are v1 preprints from the last 24-48 hours where bioRxiv has not yet rendered body HTML; `fetch_preprint.py` fell through to the abstract+metadata API channel for all four, with `r.jina.ai` returning abstract-only on UbSeRP and MIRACLES and ExACT/APOBEC3B PDF endpoints 403-ing. Summaries are grounded in the (detailed) abstracts; flagged once at top of script.
 === 2026-06-20T03:51:14-07:00 done  scripps-biomed-brief (exit 0) ===
 === 2026-06-21T03:50:07-07:00 start scripps-biomed-brief ===
+Episode shipped. Commit `dd324bc` on `main`; orchestrator pushes at end of run.
+
+## Candidate funnel — Scripps Biomedical Brief, 2026-06-21
+
+Sources scanned: bioRxiv categories biochemistry, pharmacology and toxicology, bioengineering, immunology, genetics, neuroscience, biophysics, microbiology, molecular biology, cell biology, cancer biology, synthetic biology (last 48h). cancer biology / cell biology / synthetic biology / molecular biology returned 0 hits for the window. ~145 preprints surveyed; ~25 substantive after stripping unrelated keyword hits.
+
+Substantive shortlist (after dropping items already shipped yesterday — ExACT, APOBEC3B, MIRACLES, UbSeRP — and items picked today by sibling shows: MC2R-MRAP by Receptor and Reason; PROPHET-Ab bispecific developability by Justice Biotech Brief; ChAdOx1/MVA glioblastoma TRM by Biomedical Agentic AI):
+
+- UCB-9721 MyoA inhibitor (Snyder/Ward Vermont + Westwood St Andrews + Schaletzky Berkeley): https://www.biorxiv.org/content/10.64898/2026.06.18.733251v1  **← picked**
+- Tug-of-war transcriptional riboswitches (Bushhouse/Lucks Northwestern): https://www.biorxiv.org/content/10.64898/2026.06.17.733018v1  **← picked**
+- IκBδ as CD8 TIL accumulation + anti-exhaustion lever (Dash/Hogan/Rao La Jolla Institute): https://www.biorxiv.org/content/10.64898/2026.06.17.732005v1  **← picked**
+- Structurally encoded succinimide PTM in solute-binding protein (Clifton/Laurino OIST): https://www.biorxiv.org/content/10.64898/2026.06.18.732793v1  **← picked**
+- Generative AMP design via genomic transfer learning (Polloni): https://www.biorxiv.org/content/10.64898/2026.06.16.732639v1 — abstract-only, generic AI-for-AMP
+- Discoidins as cytosolic mycobacterial-glycan sensors (D'Amico/Soldati): https://www.biorxiv.org/content/10.64898/2026.06.18.733164v1 — abstract-only, basic biology
+- c-Maf SUMOylation IL-21-IgA axis in autoimmune-diabetes/IBD (Hsu/Sytwu): https://www.biorxiv.org/content/10.64898/2026.06.15.732285v1 — interesting but niche autoimmunity
+- Focal astrocyte Kir4.1 loss drives seizures + SDs (Codadu/Wykes): https://www.biorxiv.org/content/10.64898/2026.06.15.732359v1 — strong epilepsy story but no chemistry/modality angle
+- UCB-9721 source paper full body rendered via jina; Tug-of-war full body via jina; IκBδ full body via jina; Succinimide full body via jina — all four picks read in full.
+- AMP generative ML and discoidins were API-abstract-only (channel 3); dropped per PIPELINE.md guidance to prefer next-best over abstract-only when not dominant.
+
+Source failures: none. All bioRxiv category endpoints returned cleanly; r.jina.ai full-text fetches all succeeded for the four picks.
+
+mp3: 2,826,493 bytes, 353s. Generated via Mistral voxtral-mini-tts-2603/Paul Neutral in 3 chunks.
+=== 2026-06-21T04:04:14-07:00 done  scripps-biomed-brief (exit 0) ===

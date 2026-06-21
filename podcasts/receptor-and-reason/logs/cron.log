@@ -1391,3 +1391,32 @@ Dedup catches this run: 0 — all 9 picks cleared the ~380-entry shipped-key set
 Header note: lineup is bioRxiv-only (9 of 9) — the rolling 7d corpus had unusually strong CNS structural-pharmacology weight (B0AT2 + SERT-Cl⁻ in the same week is a once-a-year coincidence), so arXiv/press wasn't needed to fill the floor.
 === 2026-06-20T03:52:17-07:00 done  receptor-and-reason (exit 0) ===
 === 2026-06-21T03:40:07-07:00 start receptor-and-reason ===
+Episode shipped. Final summary:
+
+**Receptor & Reason 2026-06-21 — Episode 39** (576s / 9:36, 9 items)
+
+**Pipeline status:** script written → mp3 generated (Mistral Paul Neutral, 5 chunks all primary, no fallback) → R2 published → feed updated (XML validated) → dedup ledger appended → committed (`f834b58`, push deferred to orchestrator).
+
+**Candidate funnel:**
+- bioRxiv (last 7 days, 2026-06-14..2026-06-21): ~985 items scanned across all categories; 352 keyword-survivors after broad CNS/AI filter; tightened to ~30 neuropsychopharm-specific candidates after stripping receptor/GPCR false matches.
+- arXiv (shared daily cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries): 27 agentic-bio survivors after recency + biomed filter; tertiary for this audience — none beat the bioRxiv shortlist.
+- chemRxiv / industry press / journals (NPP, Mol Psychiatry, Biol Psych, Drug Discovery Today): scanned, nothing stronger than the bioRxiv leads in the window.
+- arXiv rate-limit risk: skipped a live API call entirely thanks to the cache.
+
+**Shortlist (substantive, after de-dup against shipped.jsonl):**
+- ★ APOE4 microglial state manifold in AD (Cuevas-Diaz Duran-style spatial+snMultiome) — chosen, lead
+- ★ CP2 mitochondrial complex I modulator restores AD network resilience (Trushina group) — chosen
+- ★ Prenatal THC + NAc MSN mitochondrial bioenergetics — chosen
+- ★ Oxycodone self-admin trajectories across HRDP rat strains (Bachtell lab) — chosen
+- ★ OC ethinyl estradiol + levonorgestrel GR/MR redistribution (Tronson lab) — chosen
+- ★ Hippocampal insulin signaling ↔ mood neurometabolic signature (Lerch lab; abstract-only flagged) — chosen
+- ★ MC2R-MRAP antagonist conformational dynamics (Robinson lab) — chosen
+- ★ Tox21mer transformer foundation model — chosen
+- ★ ContinuumCellAgent autonomous AI-scientist — chosen, light closer
+- Multiple motor proteins regulate ALS TDP-43 axonal transport — runner-up, dropped (TDP-43 well-covered recently)
+- APOE4-adjacent: genetic architecture of dementia risk (Hum Genomics-style) — dropped, less novel
+- Vascular+synaptic proteomes in human TLE — dropped, scope drift from neuropsychopharm core
+- Scopolamine + temporal prediction — dropped, lighter behavioral
+
+**Source failures:** none; all bioRxiv pages fetched cleanly, arXiv cache present and current. Two picks (Lerch hippocampal insulin, MC2R-MRAP) were abstract-only via bioRxiv API fallback because bodies hadn't rendered yet — Lerch flagged explicitly in the spoken script per PIPELINE.md.
+=== 2026-06-21T03:53:31-07:00 done  receptor-and-reason (exit 0) ===

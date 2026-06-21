@@ -1,1 +1,32 @@
 === 2026-06-21T03:10:07-07:00 start blackbird-brief ===
+Both episodes shipped. Commit `e3aece6` (not pushed — orchestrator owns push).
+
+**Today's picks:**
+
+- **Sourcing Radar** (319 s, 2.55 MB) — **"Hopkins drug discovery cracks DCTPP1, unlocking decitabine in prostate cancer."** Lead pick: Hauk / Liu / Nelson / Yegnasubramanian / Berger in PNAS, June 15, 2026 (DOI 10.1073/pnas.2534029123; PMID 42296362). HTS + X-ray crystallography turn DCTPP1 — the nucleotide pyrophosphatase that chews up activated decitabine and accounts for solid-tumor resistance to DNMT inhibitors — into a tractable drug-discovery target with novel submicromolar chemical scaffolds and crystallographic SAR; clean Blackbird fit on novel target, defensible chemistry, a generic-drug combination story, and the right Sidney Kimmel team. Watch-list: Dhar/Pieper/Paul PNAS June 18 (PMID 42313933) on endothelial KLF4 as a lever on age-related neuropsych phenotypes (Hopkins + Lieber co-authors).
+
+- **Portfolio Watch** (357 s, 2.86 MB) — **"Hopkins opens an $80M-a-year science fund; GSK pays $10.6B for novel-target oncology."** Top three moves: (1) JHU **Life Sciences Research Initiative** announced June 10 — $80M/yr × 2 yrs, Transformational Team Awards ($10M+ × 4 yrs, multi-PI) chaired by Ashani Weeraratna — tailwind on partner-institution deal flow; (2) **GSK / Nuvalent** $10.6B oncology M&A (June 9) — comp for novel-target oncology, competitive watch for aSKY's NSCLC framing; (3) **Neumora navacaprant** double Phase 3 failure (June 15) reshuffles the schizophrenia competitive set in favor of non-dopaminergic, all-three-domain mechanisms (i.e. our GPR52 NewCo's pitch). Plus Lilly/4E (MNK pain) and Incyte/Vega (Phase 3 VWD mAb) as macro-deal context.
+
+**Candidate funnel — Sourcing Radar (Hopkins/UMB/Lieber, June 14–21, 2026):**
+
+- **PubMed affiliation search** ("Johns Hopkins"[Affiliation] OR "Lieber Institute"[Affiliation] OR "University of Maryland, Baltimore"[Affiliation], June 14–21, drug-discovery/therapeutic/target filter): 84 hits; ~30 reviewed in detail. Substantive translational shortlist:
+  - **DCTPP1 antagonists synergize with DNMT inhibitors** (PMID 42296362, PNAS 2026-06-15, Yegnasubramanian/Nelson/Berger, Sidney Kimmel) — **CHOSEN as lead** (full text gated; abstract read in full; precursor bioRxiv 10.1101/2024.05.19.594134 read in full via fetch_preprint.py / r.jina.ai).
+  - **Endothelial KLF4 + neurovascular dysfunction** (PMID 42313933, PNAS 2026-06-18, Pieper/Case Western corresponding with Bindu Paul JHU/Lieber co-author) — **CHOSEN as watch-list secondary**.
+  - **NPAS3-regulated astrocyte bioenergetics required for cognition** (PMID 42308317, Sci Adv 2026-06-17, primary affiliation now Buffalo via Pletnikov; PMC13274620 read in full) — mechanism only, no chemical lead, dropped.
+  - **Intrathecal poly-GP delivery in C9orf72-deficient mice** (PMID 42316301, Acta Neuropathol Commun 2026-06-18, JHU Brain Science Institute) — model paper, no commercializable angle, dropped.
+  - **YAP condensates / DCTPP1 unrelated** (PMID 42126959, Mol Biol Cell) — basic biology, dropped.
+- **bioRxiv API** — pharmacology category, June 17–20: 10 papers reviewed, no Hopkins/Lieber/UMB hits with drug-discovery angle.
+- **Direct WebSearch / WebFetch** on `hub.jhu.edu`, `hopkinsmedicine.org/news`, `libd.org/news-events/`, `umaryland.edu/news/` — Hopkins newsroom and Hub were 403-walled from this host, Lieber news page reachable but newest item was March 30, 2026 (ADARB1/Down syndrome); UMB June 18 item is the Lassa-rabies dual vaccine trial — vaccine, off-thesis for a translational-IP sourcing radar.
+
+**Candidate funnel — Portfolio Watch (June 14–21, 2026):**
+
+- JHU Life Sciences Research Initiative ($80M/yr, June 10) — **CHOSEN #1, tailwind**.
+- GSK acquires Nuvalent, $10.6B, ALK/ROS1 NSCLC kinase inhibitors (June 9) — **CHOSEN #2, validation + aSKY competitive watch**.
+- Neumora navacaprant — double Phase 3 failure in MDD; ~35% layoffs; refocus on Alzheimer's agitation, schizophrenia, obesity (June 15) — **CHOSEN #3, competitive signal for GPR52 NewCo**.
+- Lilly acquires 4E Therapeutics, MNK inhibitors for non-opioid pain (June 16) — included as brief macro-M&A context.
+- Incyte acquires Vega Therapeutics, $1.25B + up to $750M, Phase 3 VWD subQ mAb (June 8) — included as brief macro-M&A context.
+- Sensorion six-month SENS-501 OTOF data — surfaced but dated March 23, 2026 (outside window); flagged for memory only.
+- Nxera Pharma GPR52 partnership process — checked for fresh June news, none in window; Dec 2025 Boehringer opt-out still the latest material event.
+
+Portfolio memory updated with the JHU Life Sciences Research Initiative entry and an aSKY/Krupnick KRAS-pathway note from AVS Bio's late-2025 collaboration disclosure.
+=== 2026-06-21T03:31:27-07:00 done  blackbird-brief (exit 0) ===
