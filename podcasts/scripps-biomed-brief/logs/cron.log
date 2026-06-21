@@ -1013,3 +1013,4 @@ Episode shipped for Saturday, 2026-06-20: `2026-06-20-exact-transporter-delivery
 
 **Depth note:** all four chosen picks are v1 preprints from the last 24-48 hours where bioRxiv has not yet rendered body HTML; `fetch_preprint.py` fell through to the abstract+metadata API channel for all four, with `r.jina.ai` returning abstract-only on UbSeRP and MIRACLES and ExACT/APOBEC3B PDF endpoints 403-ing. Summaries are grounded in the (detailed) abstracts; flagged once at top of script.
 === 2026-06-20T03:51:14-07:00 done  scripps-biomed-brief (exit 0) ===
+=== 2026-06-21T03:50:07-07:00 start scripps-biomed-brief ===
