@@ -1,0 +1,35 @@
+slug          = "blackbird-brief"
+title         = "The Blackbird Brief"
+description   = "Executive intelligence for Blackbird Labs leadership: daily sourcing radar on commercializable research from Johns Hopkins and partner institutions, plus a weekly Sunday portfolio watch."
+host          = "Nigel"
+owner         = "Matt Tremblay <matt@blackbirdlab.org>"
+podcast_slug  = "blackbird-brief"
+
+[paths]
+prompt   = "PROMPT.md"
+feed     = "feed.xml"
+episodes = "episodes"
+scripts  = "scripts"
+logs     = "logs"
+
+[rss]
+base_url = "https://github.com/andrewsu/ai-nuggets/raw/main"
+link     = "https://github.com/andrewsu/ai-nuggets"
+
+# TTS providers. Mistral primary (cheaper per char) + ElevenLabs fallback,
+# matching the other production shows. Supported providers: "mistral",
+# "elevenlabs".
+[tts.primary]
+provider = "mistral"
+model    = "voxtral-mini-tts-2603"
+voice    = "en_paul_neutral"
+
+[tts.fallback]
+provider = "elevenlabs"
+voice    = "hpp4J3VqNfWAUOO0d1Us"
+model    = "eleven_flash_v2_5"
+
+[tts.fallback.settings]
+speed            = 1.1
+stability        = 0.5
+similarity_boost = 0.75

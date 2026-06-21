@@ -3,146 +3,165 @@ You are creating a personalized podcast called "The Blackbird Brief"
 `ai-nuggets` repo. Production mechanics (TTS, R2 publish, feed updates,
 commits) are documented in `podcasts/PIPELINE.md`, prepended above.
 
-> **DRAFT — name and slug pending.** The title/slug above are placeholders.
-> Once a name is chosen, rename the directory, update this header, and set
-> the slug everywhere (Worker `ALLOWED_PODCASTS`, `show.toml`, filenames).
-
 # 1. Audience
 
 **Matt Tremblay, Ph.D.**, CEO of Blackbird Laboratories (Baltimore), and his
 leadership team — Eddie Cherok (Chief Business Officer), Hemaka Rajapakse
-(Venture Partner), Maisha Rahman (Chief of Staff), Avi Khanna (Sr. Director,
-Molecular Discovery), Bridget Duvall (Director, Lab Operations).
+(Venture Partner), Esther Park (Associate Director of Ventures), Maisha Rahman
+(Chief of Staff), Avi Khanna (Sr. Director, Molecular Discovery), Bridget
+Duvall (Director, Lab Operations).
 
 Blackbird is a next-generation life sciences accelerator launched in 2023 with
-a $100M founding grant from the Stephen and Renee Bisciotti Foundation. It runs
-a nonprofit grant-making arm (Blackbird Laboratories) that de-risks academic IP
-at partner institutions, and a for-profit venture arm (Blackbird BioVentures)
-that writes the early checks when programs spin out. Tremblay and much of the
-team came from Scripps Research / Calibr; they think like operators who turn
-academic science into companies.
+a $100M founding grant from the Stephen and Renee Bisciotti Foundation. The
+nonprofit (Blackbird Laboratories) de-risks academic IP at partner institutions
+via translational grants; the for-profit (Blackbird BioVentures) writes the
+early checks when programs spin out. Tremblay and much of the team came from
+Scripps Research / Calibr; they think like operators who turn academic science
+into companies.
+
+Full portfolio, program, and partner detail lives in
+`memory/blackbird-portfolio.md` (repo root). **Read it at the start of every
+run** — it defines what "portfolio-relevant" means and lists the people,
+targets, and institutions to track. Keep it current: when you learn something
+new and durable about a program, partner, or competitor, update that file as
+part of the run.
 
 ## What they care about
 
 This is an **executive intelligence briefing**, not a science-news show. Every
 item must answer "so what for Blackbird?" The audience wants:
 
-- **Portfolio-relevant news** — anything that moves the thesis, competitive
-  landscape, or risk profile of an existing Blackbird company or program (see
-  §Portfolio reference). Competitor readouts, new entrants, deals, M&A, FDA
-  actions, platform validation/de-risking, IP, and partnering signals in the
-  same target/modality/indication space all count.
-- **Commercializable research from partner institutions** — fresh work out of
-  **Johns Hopkins (primary focus)**, the **University of Maryland, Baltimore**,
-  and the **Lieber Institute for Brain Development** that has a credible path to
-  a startup: a novel target, a platform technology, a first-in-class modality,
-  or a translational result with clear IP and unmet-need pull. Frame these as
-  *sourcing leads* — "here's a JHU paper Blackbird should look at, and why."
-- **The Baltimore / Maryland biotech ecosystem** — funding, facilities (e.g.
-  the Blackbird BioHub at City Garage), talent, state programs, and policy that
-  affect Blackbird's operating environment.
+- **Commercializable research from partner institutions** (the daily focus) —
+  fresh work out of **Johns Hopkins (primary)**, the **University of Maryland,
+  Baltimore**, and the **Lieber Institute for Brain Development** with a
+  credible path to a startup: a novel target, a platform technology, a
+  first-in-class modality, or a translational result with clear IP and
+  unmet-need pull. Frame each as a *sourcing lead* — "here's a paper Blackbird
+  should look at, who's behind it, and why it could be a company."
+- **Portfolio-relevant news** (the weekly focus) — anything that moves the
+  thesis, competitive landscape, or risk profile of an existing Blackbird
+  company or program. Competitor readouts, new entrants, deals, M&A, FDA
+  actions, platform validation, IP, and partnering signals in the same
+  target / modality / indication space all count.
 
 ## What to avoid
 
-- Generic biotech headlines with no line to a Blackbird company, program,
-  partner institution, or the Baltimore ecosystem. Relevance beats novelty.
+- Generic biotech headlines with no line to a Blackbird company, program, or
+  partner institution. Relevance beats novelty.
 - Marketing fluff and AI hype with no data. Lead with the science and the
   commercial implication.
 - Re-explaining what Blackbird is. The audience runs it.
+- The Baltimore/Maryland ecosystem as a standalone beat — skip generic
+  ecosystem/real-estate/policy items unless they directly touch a Blackbird
+  program, partner, or facility.
 
-# 2. Search strategy
+# 2. Episodes
 
-Recency window: **past ~7 days** (this is a weekly-cadence brief; widen to
-14 days only if a week is thin). Two streams:
+Two episode types. **Every episode's title and opening line must state which
+type it is** ("Sourcing Radar" or "Portfolio Watch") so the listener always
+knows the mode.
 
-**Stream A — Portfolio & competitive news**
+## Type A — Sourcing Radar (DAILY)
+
+Runs every day. ~5–7 minutes. Focus: commercializable research from partner
+institutions (Stream B below).
+
+- **Cold open:** one sentence naming the type and the single best lead today.
+- **The radar:** 2–3 picks. For each: the science in plain terms, the
+  institution and group/PI, the IP/commercial angle (novel target? platform?
+  defensible? unmet need?), competitive context, and a candid read on whether
+  it's worth a closer look and why. Full text mandatory for the lead pick
+  (see PIPELINE.md fetch rules).
+- **Sign-off.**
+- **Script file:** `podcasts/blackbird-brief/scripts/YYYY-MM-DD-radar-<topic>.md`
+  with a `## Script` heading.
+- **Episode basename:** `YYYY-MM-DD-radar-<topic>`.
+
+If a day genuinely has no partner-institution work clearing the "would a
+translational investor take the meeting?" bar, follow PIPELINE.md: a thin day
+is a short episode or, if truly empty after surveying sources, no episode —
+do not pad with off-thesis filler.
+
+## Type B — Portfolio Watch (WEEKLY, Sundays)
+
+Runs on Sundays only. ~6–9 minutes. Focus: news bearing on existing Blackbird
+companies and programs over the past week (Stream A below).
+
+- **Cold open:** one sentence naming the type and the week's most important
+  development for the portfolio.
+- **The watch:** walk the items that touch portfolio programs. For each: what
+  happened, which Blackbird company/program it touches, and the implication —
+  tailwind, threat, validation, or watch-item. Group by program where natural.
+- **Sign-off.**
+- **Script file:** `podcasts/blackbird-brief/scripts/YYYY-MM-DD-portfolio-watch.md`
+  with a `## Script` heading.
+- **Episode basename:** `YYYY-MM-DD-portfolio-watch`.
+
+On Sundays the show produces **both** a Sourcing Radar and a Portfolio Watch
+episode (two episodes, one commit). On all other days, Sourcing Radar only.
+
+# 3. Search strategy
+
+Recency window: Sourcing Radar = past ~3–4 days (daily cadence); Portfolio
+Watch = past ~7 days. If a source fails transiently, follow PIPELINE.md (one
+short retry, then proceed with the rest — never abort the run).
+
+**Stream A — Portfolio & competitive news** (Portfolio Watch)
 
 - Industry press: Fierce Biotech, Fierce Pharma, Endpoints News, STAT News,
-  BioPharma Dive, Genetic Engineering & Biotech News, BioBuzz (strong Baltimore
-  /Maryland coverage), Technical.ly Baltimore, Maryland Daily Record.
+  BioPharma Dive, Genetic Engineering & Biotech News, BioBuzz (strong
+  Baltimore/Maryland coverage).
 - Query around each portfolio program's target / modality / indication (see
-  reference below) plus the company names themselves, Blackbird BioVentures,
-  and Blackbird Laboratories.
+  `memory/blackbird-portfolio.md`) plus the company names, Blackbird
+  BioVentures, and Blackbird Laboratories.
 
-**Stream B — Partner-institution research with commercialization potential**
+**Stream B — Partner-institution research** (Sourcing Radar)
 
-- Preprints: bioRxiv / medRxiv — filter to work with JHU, UMB, or Lieber
-  Institute author affiliations. Use `scripts/fetch_preprint.py` for full text
+- Preprints: bioRxiv / medRxiv filtered to JHU, UMB, or Lieber Institute
+  author affiliations. Use `scripts/fetch_preprint.py` for full text
   (bioRxiv 403s direct fetches).
 - Journals: Nature, Science, Cell, Nature Medicine, Nature Biotech, Nature
   Chemical Biology, Science Translational Medicine, NEJM.
-- Institutional newsrooms / tech-transfer: Johns Hopkins Hub & HopkinsMedicine
-  news, Johns Hopkins Technology Ventures (JHTV), UMB / UM Ventures, Lieber
-  Institute news.
-- Selection bar for Stream B: would a translational investor take a meeting?
-  Prioritize novel mechanism, platform-ability, defensible IP, and unmet need
-  over incremental findings.
+- Institutional newsrooms / tech-transfer: Johns Hopkins Hub & Hopkins
+  Medicine news, Johns Hopkins Technology Ventures (JHTV), UMB / UM Ventures,
+  Lieber Institute news.
+- Selection bar: would a translational investor take a meeting? Prioritize
+  novel mechanism, platform-ability, defensible IP, and unmet need over
+  incremental findings.
 
-If a source fails transiently, follow PIPELINE.md (one short retry, then
-proceed with the rest — do not abort the run).
-
-# 3. Episode format
-
-One episode per run, ~6–9 minutes, spoken by Nigel. Tone: sharp, candid,
-operator-to-operator — like a trusted analyst briefing the CEO.
+# 4. Format & audio
 
 - Real, verified URLs only — never fabricate. URLs go in show notes, not the
   spoken script (see PIPELINE.md audio rules).
 - Always connect a drug/asset to its target or mechanism, and a paper to its
   commercial angle. Every item ends on the "so what for Blackbird" beat.
-- Bring in analyst/expert commentary and competitive context where available.
-
-Structure:
-
-1. **Cold open** (1–2 sentences) — the single most important thing this week.
-2. **Portfolio watch** — items from Stream A relevant to existing companies /
-   programs. For each: what happened, who it touches in the portfolio, and the
-   implication (tailwind, threat, validation, or watch-item).
-3. **Sourcing radar** — 1–3 picks from Stream B. For each: the science in
-   plain terms, the institution and group, the IP/commercial angle, and why
-   it's worth a closer look.
-4. **Ecosystem note** (optional, brief) — Baltimore/Maryland item if material.
-5. **Sign-off.**
-
-Don't pad. A tight 6-minute brief beats a thin 9-minute one — if a section has
-no real news this week, say so in a sentence and move on.
-
-## Portfolio reference (keep current)
-
-Blackbird has backed ~18 companies and run ~20 exploratory research projects
-(4 licensed programs). Known programs/themes to track — **verify and expand
-this list over time; treat as a living reference, not ground truth:**
-
-- **Aletira Therapeutics** — first fully incubated spinout; cell-type-specific
-  gene therapy via an alternative-splicing platform licensed from JHU; based at
-  the Blackbird BioHub.
-- Novel oral therapeutic for Crohn's disease and ulcerative colitis.
-- RNA-based therapeutic platform targeting mRNA upregulation.
-- Multi-modal approach to schizophrenia (watch Lieber Institute work here).
-- Patient-facing digital platform to accelerate clinical-trial enrollment.
-
-Maintain fuller program/target detail in a workspace memory file (e.g.
-`memory/blackbird-portfolio.md`) rather than bloating this PROMPT, mirroring how
-`calibr-briefing` references `memory/calibr-pipeline.md`.
-
-# 4. TTS & distribution
-
-Voice config lives in `show.toml` (defaults: Mistral primary, ElevenLabs
-fallback — see PIPELINE.md). API keys in repo-root `.env`. Don't write your own
-TTS code — use `gen_tts.py --show blackbird-brief`.
+- Tone: sharp, candid, operator-to-operator — a trusted analyst briefing the
+  CEO. Bring in analyst/expert commentary and competitive context where
+  available. Don't pad; a tight short episode beats a thin long one.
 
 ## Audio conventions
 
-- Pronounce "JHU" as "Johns Hopkins." Say "Lieber Institute," "U-M-B" spelled
-  out as letters, and "Blackbird BioHub."
+- Pronounce "JHU" as "Johns Hopkins." Say "Lieber Institute," spell "UMB" as
+  the letters "U-M-B," and say "Blackbird BioHub."
+- Pronounce portfolio/program names naturally: "Aletira" (ah-leh-TEER-ah),
+  "aSKY" (say "a-sky"), "GPR52" as "G-P-R fifty-two," "GCPII" as
+  "G-C-P-two," "SELEXON" (seh-LEX-on).
 - Spell out dollar amounts and identifiers the way a person says them.
 
-# 5. Commit
+# 5. TTS & distribution
 
-Single commit per run.
+Voice config lives in `show.toml` (Mistral primary, ElevenLabs fallback). API
+keys in repo-root `.env`. Don't write your own TTS code — use
+`gen_tts.py --show blackbird-brief`.
+
+# 6. Commit
+
+Single commit per run (covers both episodes on Sundays).
 
 - **Commit-message prefix:** `Blackbird YYYY-MM-DD`.
-- Example: `Blackbird 2026-06-21: <portfolio lead> + <top sourcing pick>`.
+- Examples: `Blackbird 2026-06-22: Radar — <top lead>`;
+  `Blackbird 2026-06-21: Radar — <lead> + Portfolio Watch — <top item>`.
 
-Once the script is written, follow `PIPELINE.md` to generate audio, publish to
-R2, update the feed, and commit.
+Once scripts are written, follow `PIPELINE.md` to generate audio, publish to
+R2, update the feed, and commit. Stage only `podcasts/blackbird-brief/` (and
+`memory/blackbird-portfolio.md` if you updated it).
