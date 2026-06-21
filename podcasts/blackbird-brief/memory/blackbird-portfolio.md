@@ -5,9 +5,9 @@ Defines what "portfolio-relevant" means and lists the people, targets,
 institutions, and competitors to track. **Keep current** — update when a
 program advances, a competitor moves, or a new spinout/lead appears.
 
-_Last verified: 2026-06-21. Compiled from public sources (press releases,
-BioBuzz, Technical.ly, UM Ventures, company sites). Items marked ⚠ need
-confirmation._
+_Last verified: 2026-06-21 (afternoon update). Compiled from public sources
+(press releases, BioBuzz, Technical.ly, UM Ventures, company sites). Items
+marked ⚠ need confirmation._
 
 ---
 
@@ -46,6 +46,16 @@ confirmation._
   Tech-transfer: **Johns Hopkins Technology Ventures (JHTV)**, incl. the
   **FastForward** incubator. JHU Drug Discovery (Slusher lab) is a recurring
   source.
+  - **JHU Life Sciences Research Initiative** (launched 2026-06-10): $80M/yr
+    for two years of internal funding into translational/basic life sciences
+    research. Two tracks — **Transformational Science Team Awards** ($40M/yr
+    pool, awards start at $10M per project, 4 years of support, multi-PI,
+    milestone-driven) and **High-Impact Individual Awards** ($40M/yr pool).
+    Oversight committee chaired by **Ashani Weeraratna** (Bloomberg
+    Distinguished Professor, Cancer Biology). Applications opened 2026-06-15.
+    Direct tailwind for Blackbird sourcing — produces investor-ready preclinical
+    packages on 6-18 month horizon. Worth Esther/Hemaka angling for visibility
+    on the submitted-project longlist.
 - **University of Maryland, Baltimore (UMB)** — via **UM Ventures, Baltimore**
   (co-investment agreement with Blackbird; "MPower" branding).
 - **Lieber Institute for Brain Development (LIBD)** — neuropsychiatry; affiliated
@@ -87,10 +97,15 @@ competitors below. These are the "so what for Blackbird" hooks.
 - **What:** Oncology therapeutic from the lab of **Alexander "Sasha" Krupnick,
   MD** (UMB / UM School of Medicine). First project of the **UM Ventures ×
   Blackbird co-investment** agreement; UMB IP licensed to the startup.
-- **Status:** Company formed, foundational UMB IP licensed. ⚠ target/MOA detail
-  to confirm (Krupnick's work spans lung-cancer immunology / NK-cell biology).
-- **Watch:** the specific immuno-oncology mechanism once disclosed; UMB/MPower
-  spinouts; further UM Ventures × Blackbird co-investments.
+- **Status:** Founded 2022, HQ Owings Mills, MD. Foundational UMB IP licensed;
+  ~$740K raised. AVS Bio partnership disclosed for antibody engineering with a
+  KRAS frame (LinkedIn, late 2025) — ⚠ specific target/MOA still not formally
+  disclosed publicly. Krupnick's lab work spans lung-cancer NK-cell biology
+  (which led to a first-in-class retargeted cytokine effort in 2015) plus
+  KRAS-pathway regulation; the company likely sits at the intersection.
+- **Watch:** disclosed MOA once filed; aSKY's positioning vs. competing
+  NSCLC kinase entrants (e.g. GSK/Nuvalent zidesamtinib + neladalkib post-
+  June 2026 acquisition); further UM Ventures × Blackbird co-investments.
 
 ### Neuropsychiatric NewCo (schizophrenia) — Lieber Institute + Third Rock ✅
 - **What:** **GPR52 agonist** program for schizophrenia. GPR52 is a
