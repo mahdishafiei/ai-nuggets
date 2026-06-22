@@ -1062,3 +1062,34 @@ You've hit your session limit · resets 8am (America/Los_Angeles)
 === 2026-06-22T04:05:33-07:00 done  scripps-biomed-brief (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-06-22T04:05:33-07:00 FAILED: no episode produced for scripps-biomed-brief after all retries ===
 === 2026-06-22T08:59:18-07:00 start scripps-biomed-brief (manual rerun) ===
+Episode shipped for 2026-06-22. Audio uploaded to R2, feed updated, commit `1e0e0af` made (orchestrator will push).
+
+## Candidate funnel
+
+bioRxiv categories scanned (date_from=2026-06-20, date_to=2026-06-22):
+- biochemistry — 14 scanned
+- pharmacology and toxicology — 5 scanned
+- bioengineering — 9 scanned
+- synthetic biology — 0 in window
+- cancer biology — 0 in window (API returned empty)
+- immunology — 11 scanned
+- molecular biology — 0 in window
+- cell biology — 0 in window
+
+All v1s posted today have body HTML not yet rendered — fetched abstracts only (per PIPELINE.md, common case for sub-24h v1s).
+
+Substantive shortlist (post-keyword-noise filter):
+- ★ CDK4 MGD NE26394 — Daub, NEOsphere — https://www.biorxiv.org/content/10.64898/2026.06.19.733443v1 — **chosen**
+- ★ Aspergillus mannitol-2-DH + 1,4-benzoquinone — Bruning, Adelaide — https://www.biorxiv.org/content/10.64898/2026.06.15.732321v1 — **chosen**
+- ★ SG coarsening as cardiac arrhythmia inflection — Silva, WashU — https://www.biorxiv.org/content/10.64898/2026.06.19.733463v1 — **chosen**
+- ★ ChAdOx1/MVA → brain TRM vs GBM — Terabe, NCI — https://www.biorxiv.org/content/10.64898/2026.06.18.733241v1 — **chosen**
+- RXFP1 complete model + de novo mini-protein modulators — Grinter, Melbourne — https://www.biorxiv.org/content/10.64898/2026.06.19.733483v1 — strong but RXFP1 was the lead item on 2026-06-12; deferred for diversity
+- Microtubule destabilization by GTP hydrolysis (1.9–2.2 Å cryo-EM) — Steinmetz, PSI — basic structural biology, less translational handle
+- NIR turn-on probe for polyphosphates (SiX-DPA-Zn) — Lukinavicius, MPI — useful chemical probe but more niche
+- Combination epigenetic-targeted therapy in immunogenically-cold sarcomas — Ladle, JHU — overlaps with today's R&R episode topic
+- AHR PPI assays (NanoBiT + BiFC) — Prentzell, DKFZ — methodological tool paper
+- Caspase-1/RIPK3 antagonistic cytokines in cytosol-invasive bacterial infection — Miao, Duke — mechanistically rich but not target/modality story
+- AMP generation via genomic transfer learning — Frost, Imperial College — purely computational, no experimental MIC yet
+
+Source-level failures: none.
+=== 2026-06-22T09:07:53-07:00 done  scripps-biomed-brief (exit 0) ===

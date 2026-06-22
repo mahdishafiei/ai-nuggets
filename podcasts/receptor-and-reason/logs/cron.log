@@ -1444,3 +1444,30 @@ You've hit your session limit · resets 8am (America/Los_Angeles)
 You've hit your session limit · resets 8am (America/Los_Angeles)
 === 2026-06-22T03:57:49-07:00 done  receptor-and-reason (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-06-22T03:57:49-07:00 FAILED: no episode produced for receptor-and-reason after all retries ===
+=== 2026-06-22T08:38:04-07:00 start receptor-and-reason (manual rerun) ===
+Episode 40 shipped: 10 items, 15:35 spoken, mp3 published to R2, feed updated, dedup ledger appended, and committed.
+
+## Candidate funnel (2026-06-22)
+
+**bioRxiv** — 1,108 items scanned across 2026-06-15 to 2026-06-22 (full daily pagination, no sampling). After dedup-by-DOI and category filter (neuroscience, pharmacology/toxicology, bioinformatics, systems biology), 237 candidates surfaced; 31 scored positive against the show's CNS-drug-discovery + agentic-AI rubric.
+
+**arXiv** — pre-fetched shared daily cache (500 entries) filtered to 7-day window + biology-adjacent agentic/LLM/generative keywords.
+
+**Press/journals** — Psychiatric Times, ACNP/SOBP/ECNP, Nature/Neuropharm Family — no high-confidence fresh items beyond what bioRxiv already had today.
+
+Substantive shortlist (chosen marked ★):
+- ★ ADLumin-5 chemiluminescence photodegradation of misfolded proteins — 10.64898/2026.06.16.732486 (abstract-only, posted today)
+- ★ Amyloid PET tracer × SULT off-target docking/MD — 10.64898/2026.06.16.732640
+- ★ Chimeric aducanumab sex × IgG mechanism in 5xFAD (MODEL-AD/Dage) — 10.64898/2026.06.16.731973
+- ★ Rubicon Fv-HSP72 RBB012-CTB rescues NOR after blast TBI — 10.64898/2026.06.11.726712
+- ★ INPP5D/SHIP1 lysosomal microglia in AD risk — 10.1101/2025.10.27.684632 v2
+- ★ Microglial MyD88 × voluntary ethanol consumption (negative-with-twist) — 10.64898/2026.06.12.731650
+- ★ TxBench-PP AI agent benchmark for preclinical pharmacology — arxiv:2606.19245v2
+- ★ SteerAF distogram-steered AF2 alternative conformations — 10.64898/2026.06.19.733296
+- ★ SMARTPocket geometric DL for RNA ligandable pockets — 10.64898/2026.06.18.732920 (abstract-only)
+- ★ Cortisol-GR pregnancy hepatic transporter induction — 10.64898/2026.06.15.732466 (abstract-only)
+- Tyrosinase-induced neuromelanin/LC degeneration — passed over (v4 update of established work)
+- ADLumin/PET tracer candidates around oxytocin in Fmr1-KO, Galectin-3 in prion, photodegradation alternates — passed over (insufficient drug-discovery angle vs picks)
+- OmicOS, scIsoAgent, OmniPath Metabo — passed over (TxBench-PP is the stronger agentic-AI pick today)
+- VFB-MCP — excluded; shipped today by biomedical-agentic-ai
+=== 2026-06-22T08:59:18-07:00 done  receptor-and-reason (exit 0) ===
