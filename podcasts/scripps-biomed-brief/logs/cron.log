@@ -1061,3 +1061,4 @@ You've hit your session limit · resets 8am (America/Los_Angeles)
 You've hit your session limit · resets 8am (America/Los_Angeles)
 === 2026-06-22T04:05:33-07:00 done  scripps-biomed-brief (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-06-22T04:05:33-07:00 FAILED: no episode produced for scripps-biomed-brief after all retries ===
+=== 2026-06-22T08:59:18-07:00 start scripps-biomed-brief (manual rerun) ===
