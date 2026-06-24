@@ -1512,3 +1512,45 @@ Episodes published. Commit `0c398c3`. Orchestrator will push.
 
 **Picked:** AbbVie–Apogee spotlight (largest immunology bolt-on of the cycle, directly extends Spyre-LAI thesis and Calibr LAI platform read-through; deal was previewed yesterday as rumor and is now confirmed at $10.9B); six-headline roundup as listed.
 === 2026-06-23T02:36:58-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-06-24T01:20:11-07:00 start calibr-briefing ===
+All six files are in place (two scripts + two rss-item.xml stubs + two commit-msg stubs). SKIP_TTS=1 is set, so per PIPELINE.md the orchestrator will run batch TTS, publish, update feed, and commit. Final summary follows below.
+
+---
+
+**Run summary — calibr-briefing — 2026-06-24 (Wed, Day 3 of BIO 2026 San Diego)**
+
+Wrote two scripts + stubs (TTS deferred to batch via SKIP_TTS=1):
+- `2026-06-24-pharma-headlines.txt` (944 words) — six items led by Sangamo Chapter 11
+- `2026-06-24-sangamo-chapter-11-spotlight.txt` (1,379 words) — deep dive on Sangamo + Lilly $50M + Astellas $25M + gene-editing unbundling thesis + Calibr/Foresite read-through
+
+**Candidate funnel — June 23-24, 2026**
+
+Sources scanned (Fierce Biotech, Fierce Pharma, Endpoints, BioPharma Dive, STAT, BIO 2026 press, NVIDIA newsroom, Pfizer/Sangamo IR, BusinessWire). STAT topic page abstract-only (timeline ran to May 2026 — surfaced via search instead); Sangamo IR page timed out — used GeneticEngineering News + Endpoints search summary instead.
+
+Substantive shortlist (BIO Day 3 + June 23-24 news):
+- Sangamo Therapeutics Chapter 11 + Lilly $50M stalking-horse (AAV capsid + ZFN + MINT + ST-506 prion) + Astellas $25M/$50M for isaralgagene civaparvovec Fabry — **CHOSEN spotlight + headline #1**
+- Pfizer sigvotatug vedotin Phase 3 NSCLC failure (first Seagen-acquired ADC, $4.5B in write-offs already) — headline #2
+- NVIDIA BioNeMo Agent Toolkit launch at BIO (50+ partners, Anthropic + OpenAI integrating, today's Couric/Magargee/Powell keynote) — headline #3
+- Corxel CX11 oral GLP-1 Phase 2 (11.5% weight loss at Wk36, no hepatic signal) — headline #4
+- Boundless Bio reverse-merged into Serapha Bio + $230M PIPE (in-vivo base editing for AATD via YolTech China license) — headline #5
+- Osanni Bio $190M Series B led by Patient Square (ophthalmology + cardiology, Paragon-style platform-spinout model) — headline #6
+
+Discarded / not chosen:
+- Kardigan KARD $400M IPO (June 17, already 1 week old — not fresh)
+- Merck KGaA + Versant Saturnus Bio $50M build-to-buy (June 9, stale)
+- Biogen + RayThera $1B (June 17, already covered last week)
+- Eli Lilly 340B halt (worth noting but not BIO-week defining; dropped to keep headlines at 6 items)
+- AbbVie-Apogee follow-up (covered Tuesday)
+- CARsgen NMPA satri-cel (covered Tuesday)
+- HHS Operation Trial Blazer (covered Tuesday)
+
+Sources:
+- [Sangamo Chapter 11 — Endpoints](https://endpoints.news/sangamos-three-decade-run-comes-to-a-close-as-lilly-and-astellas-eye-assets/)
+- [Sangamo Ch11 — GEN](https://www.genengnews.com/topics/genome-editing/gene-editing-pioneer-sangamo-files-for-chapter-11-bankruptcy-agrees-to-sell-assets/)
+- [Pfizer sigvotatug vedotin Phase 3](https://www.pfizer.com/news/press-release/press-release-detail/pfizer-announces-topline-phase-3-results-sigvotatug-vedotin)
+- [BioPharma Dive on Pfizer/Seagen](https://www.biopharmadive.com/news/pfizer-sigvotatug-vedotin-lung-cancer-results-seagen/823501/)
+- [NVIDIA BioNeMo Agent Toolkit](https://nvidianews.nvidia.com/news/nvidia-launches-bionemo-agent-toolkit-giving-ai-agents-the-tools-to-accelerate-scientific-discovery)
+- [Corxel CX11 Phase 2 — BioSpace](https://www.biospace.com/press-releases/corxel-pharmaceuticals-reports-positive-top-line-results-from-phase-2-trial-of-cx11-in-obese-and-overweight-u-s-adults)
+- [Boundless Bio + Serapha Bio merger](https://investors.boundlessbio.com/news-releases/news-release-details/boundless-bio-and-serapha-bio-announce-merger-agreement-and-230)
+- [Osanni Bio $190M Series B](https://www.businesswire.com/news/home/20260623418949/en/Osanni-Bio-Closes-$190-Million-Series-B-Financing-Led-by-Patient-Square-Capital)
+=== 2026-06-24T01:32:59-07:00 done  calibr-briefing (exit 0) ===
