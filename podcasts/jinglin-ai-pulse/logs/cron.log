@@ -1,0 +1,35 @@
+=== 2026-06-24T01:30:11-07:00 start jinglin-ai-pulse ===
+Script + stubs are in place. SKIP_TTS=1 mode, so no audio gen, no R2 push, no feed.xml edit, no commit — the orchestrator will batch-publish after Garibaldi TTS finishes.
+
+**Files written:**
+- `podcasts/jinglin-ai-pulse/scripts/2026-06-24-world-models-converge-inference-war.md` (2,080 spoken words, ~13–14 min at 1.2× Voxtral)
+- `podcasts/jinglin-ai-pulse/scripts/2026-06-24-world-models-converge-inference-war.rss-item.xml` (with `__LENGTH__` / `__DURATION__` placeholders; validates inside the channel)
+- `podcasts/jinglin-ai-pulse/scripts/2026-06-24-world-models-converge-inference-war.commit-msg`
+
+**Episode shape** — Cold open → Twitter Pulse (world-model convergence: Qwen-AgentWorld + Jim Fan's WAMs + the Andreessen prompt sidebar) → Money Moves (Baseten $1.5B and Groq $650M on the same day, June 22) → Podcast Deep Cut (Latent Space "Red-Teaming after Mythos," June 22) → Wrap (Claude Tag rollout). Bilingual touch on 模拟环境作为预训练 per show convention.
+
+**Candidate funnel (logged to cron.log):**
+
+Twitter / X discourse (last 48 h):
+- Qwen-AgentWorld (arXiv 2606.24597, June 23 — Alibaba Qwen team) — top of Hugging Face daily papers + HN front page within 24h — **CHOSEN as Twitter Pulse lead**
+- Jim Fan "VLAs are dead, long live World Action Models" / DreamDojo (Sequoia AI Ascent 2026 talk + X) — **CHOSEN as convergence context**
+- Marc Andreessen "never hallucinate" custom-instruction prompt recirculating (Defector / Futurism / Cybernews) — **CHOSEN as minor sidebar**
+- Anthropic Claude Mythos export-control re-debate — folded into the deep-cut framing
+- GPT-5.5 / Claude Fable 5 launch-wave aftermath — dropped (not the day's freshest discourse)
+
+Funding / business (last 7 d):
+- Baseten $1.5B Series F @ ~$13B (Altimeter/Conviction/Spark, June 22) — **CHOSEN**
+- Groq $650M (Disruptive/Infinitum, June 22 confirm; TC + Bloomberg) — **CHOSEN**
+- Anthropic Claude Tag (June 23) — **CHOSEN for Wrap** (product, not a deal)
+- Elastic ↔ Deductive AI acquisition (~$85M) — dropped, smaller and not strategically novel
+- SAP / Prior Labs ($1.18B over 4y) — dropped, older window
+- Google DeepMind ↔ A24 ($75M Hollywood AI) — dropped, not Ollie's signal mix
+
+Long-form podcasts (last 14 d):
+- Latent Space "Red-Teaming after Mythos" — Kolter (OpenAI board) + Fredrikson (Gray Swan CEO), swyx, June 22 — **CHOSEN as Deep Cut**
+- Latent Space Carina Hong / Axiom Math (Lean, verified AI, June 3) — runner-up, held for a future episode
+- Dwarkesh Patel — most recent listed June 4 but archive page wouldn't render via WebFetch; skipped (recency unverifiable)
+- WhynotTV (primary per PROMPT) — most recent episode is Hu Yuanming/Meshy AI on 2026-01-17, out of the 14-day window; dropped this cycle
+
+Source-side notes: bioRxiv / arXiv / general web all reachable; arxiv.org/pdf returned HTTP 402 on one fetch but the HTML abstract + a search query carried the Qwen-AgentWorld details (confirmed 7 domains, headline numbers). @_akhaliq direct X scrape blocked (HTTP 402) — used Hugging Face daily-papers page instead, which is the proxy for the same signal.
+=== 2026-06-24T01:40:27-07:00 done  jinglin-ai-pulse (exit 0) ===

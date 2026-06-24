@@ -388,3 +388,46 @@ Selected: **Sigvotatug vedotin** — Pfizer's first-in-class integrin-beta-6 ADC
 
 Selected sigvotatug vedotin over tulisokibart because (1) the asset directly hits two of Justice's explicit interest pillars (ADC + PD-1×VEGF combo) simultaneously where tulisokibart hits one (autoimmune biologic); (2) the payload-mechanism intuition (MMAE × prior-taxane) is the more transferable lesson for ADC trial design; (3) the salvage strategy is more architecturally interesting than a clean Phase 3 win.
 === 2026-06-23T02:39:32-07:00 done  justice-biotech-brief (exit 0) ===
+=== 2026-06-24T01:40:11-07:00 start justice-biotech-brief ===
+Script and stubs written. Per SKIP_TTS protocol I skip steps 2–4 and the commit. Now the candidate funnel log per PIPELINE.
+
+## Today's pick
+
+**CD8-iTreg CAR** — Blazar (Minnesota) + Dustin (Oxford) + Kean + Cantor preprint (bioRxiv 10.64898/2026.06.18.731665, posted 2026-06-23). Human CD8+CD25− T cells differentiated into a bifunctional regulatory-cytolytic CD8-iTreg via anti-CD3-loaded aAPCs + IL-2 + TGF-β + rapamycin. CAR19-transduced CD8-iTreg outperforms conventional CAR19-CTL in Nalm-6 xenograft AND suppresses xenogeneic GVHD with lower pro-inflammatory cytokines — killing via Tsp-4+ supramolecular attack particles loaded with Granzyme-K (Dustin-lab delivery modality). Directly addresses the CRS toxicity gating clinical autoimmune CAR-T (Kyverna, Cabaletta, Cartesian).
+
+Files written:
+- `podcasts/justice-biotech-brief/scripts/2026-06-24-cd8-itreg-car-bifunctional-smap-gvhd.md`
+- `podcasts/justice-biotech-brief/scripts/2026-06-24-cd8-itreg-car-bifunctional-smap-gvhd.rss-item.xml`
+- `podcasts/justice-biotech-brief/scripts/2026-06-24-cd8-itreg-car-bifunctional-smap-gvhd.commit-msg`
+
+SKIP_TTS=1 → no audio, no R2 publish, no feed.xml edit, no commit. Orchestrator (`scripts/publish_pending.py`) will batch the TTS, publish, and commit after all shows finish writing.
+
+## Candidate funnel
+
+**bioRxiv (2026-06-22 to 2026-06-24, fully paginated):** 378 versions / 374 unique DOIs scanned; keyword filter (VEGF, PD-L1/PD-1, TCE, bispecific/trispecific, CAR-T/NK, ADC, JAK, checkpoint, CD3/CD19/CD20/CD25/CD28/CD38/CD47/BCMA/GPRC5D/LILRB, autoimmune) → 9 keyword hits. After discarding spurious matches (snake-venom "BiTE", CD3 mentioned as flow-cytometry counts in neuroscience/ECM work, BC-SELECT older bioinformatics revision), substantive shortlist:
+
+- 10.64898/2026.06.18.731665 — Human CD8-iTreg are potent GVHD suppressors and tumoricidal effectors by release of Granzyme-K+ Supramolecular Attack Particles (immunology, Blazar/Dustin/Kean/Cantor; CAR19 in vivo data) — **CHOSEN**
+- 10.64898/2026.06.21.733647 — Engineering of CAR-less lentiviral vectors via ER retention-mediated CAR blockade (bioengineering, Shenzhen Celconta; in vivo CAR-T safety) — abstract-only, body figures not rendered; passed over given chosen pick has stronger abstract-level data
+- 10.64898/2026.06.17.732853 — HTS-Oracle X: AI-guided small molecule immune checkpoint binders (bioinformatics) — methods paper, no clinical signal
+- 10.64898/2026.06.17.732787 — Spatial Orchestration of Skin Fibrosis by a CD8+ T cell-Myofibroblast Axis (immunology) — autoimmune-adjacent but mechanism description, not therapeutic
+
+**News / press releases (last 2 days):**
+- 2026-06-23 — Coherus + Zumutor ZM008 (anti-LLT1 NK checkpoint) + LOQTORZI Phase 1 first-patient-dosed clinical collaboration — novel innate-checkpoint angle but Phase 1 first-dose is thin; passed
+- 2026-06-23 — Boundless Bio + Serapha Bio reverse merger + $230M PIPE (in-vivo base editing, AATD) — not TCE/CAR-T/ADC focus; covered by Calibr Briefing today
+- 2026-06-23 — Sangamo Chapter 11 with Lilly/Astellas stalking-horse bids — covered by Calibr Briefing today as spotlight; not Justice's modality lane
+- 2026-06-23 — Osanni Bio $190M Series B (ophthalmology/cardiology) — wrong therapeutic area
+- 2026-06-23 — Merck KGaA $50M cardio biotech build — wrong therapeutic area
+- 2026-06-22 — Eledon tegoprubart American Transplant Congress Phase 2 extension — outside the 1-day press window when better Jun-23 candidates exist
+- 2026-06-21 — Antengene + K2 Therapeutics CDH6×CD3 TCE license (ATG-106, $20M upfront, $960M biobucks) — outside the 2-day window
+- Pfizer sigvotatug vedotin OS miss — covered by Justice's brief on 2026-06-23 (yesterday's pick)
+
+**Policy / funders (last 2 days):**
+- ARPA-H news 2026-06-23 — "ARPA-H selects pioneering teams to make America the safest place in the world to have a baby" — not Justice's lane
+- NIH press / NSF news — nothing therapeutic-development-adjacent in window
+
+**Source-level access issues:**
+- Endpoints homepage 301-redirects to endpoints.news; section pages return 403 against WebFetch (Cloudflare). Resolved via web search.
+- Fierce Biotech /biotech and /biotech/research return 403 to WebFetch; partial homepage scrape successful.
+- STAT News /topic/biotech homepage returned stale content (last May).
+- bioRxiv full-text body for the chosen preprint not yet rendered (posted < 36h ago) — abstract carries the load-bearing claims; quantitative effect sizes acknowledged as a gap in the script's caveats section.
+=== 2026-06-24T01:50:36-07:00 done  justice-biotech-brief (exit 0) ===

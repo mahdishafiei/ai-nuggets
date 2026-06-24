@@ -1921,3 +1921,32 @@ Files are on disk and the orchestrator's `produced` check passes. Done with my P
 
 VISTA Architect (morning) was paper-side, graph-first clinical AI. BioNeMo Agent Toolkit (this bonus) is platform-side, infrastructure for skill-layer standardization across the agent ecosystem. Both clear the bar, and they are complementary rather than duplicative — the day genuinely had two stories.
 === 2026-06-23T22:47:12-07:00 done  biomedical-agentic-ai (exit 0) ===
+=== 2026-06-24T01:00:11-07:00 start biomedical-agentic-ai ===
+Wrote the script, RSS stub, and commit-msg stub for today's episode. In SKIP_TTS mode the orchestrator handles TTS, R2 publish, feed edit, and commit.
+
+**Today's pick (2026-06-24): biomeStat — agentic AI as deterministic orchestrator, dengue phylodynamics on 1,000 Asian genomes in under a day**
+- bioRxiv 10.64898/2026.06.10.731380 (v1 posted 2026-06-23) — Advanced Molecular Works + U. Sri Jayewardenepura, Sri Lanka
+- Full PDF fetched via jina (bioRxiv `.full` HTML not yet rendered for body, but PDF channel worked)
+
+**Candidate funnel — June 23–24, 2026**
+
+bioRxiv (205 entries, full pagination, 8 keyword hits):
+- biomeStat (10.64898/2026.06.10.731380) — **CHOSEN**
+- OmniCell (10.64898/2025.12.29.696804) — foundation model, not agentic
+- HoloCell (10.64898/2026.06.07.730684) — foundation model, not agentic
+- EpiToMe Enterprise Health Twins (10.64898/2025.12.06.692733) — conceptual framework only
+
+arXiv (cache 2026-06-24 01:00 UTC, 500 entries):
+- DeepBD (2606.24779) — agentic workflow for genetic-birth-defect variant prioritization, 18,622 in-house cases, Recall@1 0.658; strong runner-up
+- SP-Mind (2606.24235) — first autonomous agent for spatial proteomics + SP-Bench (102 tasks/18 categories)
+- T2D-Bench (2606.24145) — evidence-gated LLM eval over multi-layer clinical-lifestyle KG (UMLS/DrugBank/SIDER/ADA)
+- RaDaR (2606.24510) — 32B reasoning LLM for rare-disease diagnosis, randomized assist trial +21.44pp over web search; specialized LLM not really agentic
+- ATRIA (2606.24392) — multi-agent ECG reporting with traceable evidence
+- PORTER (2606.24102), RASC+ (2606.23992) — adjacent EHR/clinical-value-set work
+
+PubMed (last 5 days, ~200 returned): closest non-arXiv hits were "Improving FAIRness of Geospatial Data using LLMs" (PMID 42336858), "MetagenomicKG" (PMID 42334937, KG but not agentic). None beat the bioRxiv pick.
+
+ChemRxiv / news / product launches / ARPA-H/NIH/NSF/HHS policy pages — nothing fresh in window.
+
+**Why biomeStat won:** cleanest deterministic-orchestrator architectural framing this show has covered, with a real-data demonstration (1,000 DENV genomes, 19.5h wall-clock, 72.5% IEDB validation of the 1,869 computational immune-escape candidates) and the right Su Lab fit on agentic AI + data integration + open-science / global-health angle.
+=== 2026-06-24T01:06:44-07:00 done  biomedical-agentic-ai (exit 0) ===

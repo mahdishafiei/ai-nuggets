@@ -110,3 +110,29 @@ Already shipped today (excluded): Morakis OBM sickle-cell vaso-occlusion (Blood 
 
 **Chosen item:** bioRxiv 10.64898/2026.06.18.733244 — Ladle/Koldobskiy/Llosa, sequential decitabine + entinostat priming of murine and human pediatric sarcoma cells drives broad CTA reactivation + 16× MHC-I, and an epigenetically-primed GVAX whole-cell vaccine + anti-PD-1/anti-CTLA-4 confers 85% complete rejection with T-cell-dependent immune memory and cross-tumor protection. JHU-led; clean alignment with the GVAX heritage (Pardoll/Jaffee/Aduro); commercializable angle on a polyclonal antigen vaccine in pediatric sarcoma where Adaptimmune's MAGE-A4 Tecelra is the live precedent.
 === 2026-06-23T22:50:05-07:00 done  blackbird-brief (exit 0) ===
+=== 2026-06-24T01:10:11-07:00 start blackbird-brief ===
+Episode drafted for `blackbird-brief` — Sourcing Radar only (Wed June 24 is not a Sunday). `SKIP_TTS=1` is set, so per PIPELINE.md I wrote the script plus the two stub files alongside it; the orchestrator (`scripts/publish_pending.py`) handles TTS, R2 publish, feed update, and commit after batch TTS on Garibaldi.
+
+## Episode
+
+**Sourcing Radar — Hopkins ag-qVOA reactivates HIV reservoirs from deep latency** (`2026-06-24-radar-hopkins-agqvoa-hiv-deep-latency`).
+
+- **Lead** — Camilo-Contreras, Simonetti (corresponding), Siliciano group at JHU SoM Infectious Diseases (bioRxiv `10.64898/2026.06.11.731680`, v2 posted 2026-06-23). Built an antigen-restricted qVOA (ag qVOA) that swaps PHA for cognate-antigen TCR stimulation. Reactivates HIV-1 proviruses sitting in pericentromeric and ZNF heterochromatin — including a ZNF721i clone that PHA cannot induce (10× higher inducibility than std. qVOA). PeriC also detected in residual plasma viremia under suppressive ART. Reframes the cure roadmap from shock-and-kill to antigen-driven (therapeutic vaccination / TCR-engagers), and the ag qVOA is itself a defensible diligence-platform asset. Pull-through: JHTV meeting with Simonetti, Siliciano advisor seat.
+- **Tool note** — Yovanno/Lau (JHU Biophysics) TEntroPy library for transfer-entropy-based directional protein allostery networks (bioRxiv `10.64898/2026.06.22.733418`, posted 2026-06-23). No IP play, but directly useful for the GPR52 SAR work with Lieber Institute — flagged for Avi.
+
+## Candidate funnel
+
+- **bioRxiv JHU channel (2026-06-22 → 2026-06-24, ~11 items):**
+  - `10.64898/2026.06.11.731680` — Siliciano ag qVOA — **CHOSEN as lead**
+  - `10.64898/2026.06.22.733418` — Lau TEntroPy allostery library — **CHOSEN as tool note**
+  - `10.64898/2026.06.20.733548` — Carranza/Krakauer/Wittenberg cervical SCS for stroke arm rehab — dropped (Reach Neuro IP per competing-interests; founders Weber/Capogrosso/Gerszten at Pitt; not a JHU/UMB licensable lead)
+  - `10.64898/2026.06.20.26356152` — Goyal/Stevens deep-learning CT stroke detection — dropped (medRxiv, Jina rendered abstract-only)
+  - `10.64898/2026.06.17.26355819` — Baughman et al. EHR-integrated GenAI VTE risk stratification — dropped (clinical-AI deployment, low Blackbird translational fit)
+  - `10.64898/2026.06.18.733036` — Danilova/Smith/Cope replicateFest TCR repertoire R package — dropped (computational, no commercial vehicle)
+  - PVDOMICS pulmonary-hypertension lipidomics, EBV synthetic-genomics clone, Rachel Green collided-ribosome stress signaling — dropped (foundational, not platformable)
+- **Out-of-window but worth scoping** — Markham/Sears (JHU SoM/Bloomberg)/Coffey (Vanderbilt, senior) early-stage CRC spatial atlas, `10.64898/2026.06.18.733268`, posted 2026-06-18: TcdB → nuclear ELF3 → β-catenin → WNT axis. Hopkins-Sears contribution worth a separate Sears-pipeline conversation, but **pulled from today's episode** because the bioRxiv details API returns "no posts found" for this DOI (Jina mirror works; sync lag) and the pre-commit hook would reject the URL.
+- **Already shipped this week** — DCTPP1/decitabine resistance (06-21), Wilmer crystal sorafenib AMD (06-22), Hopkins OBM sickle cell (06-23), Hopkins epigenetic GVAX pediatric sarcoma (06-23 bonus).
+- **UMB / Lieber bioRxiv channels** — no fresh items in window matching translational criteria.
+- **Institutional newsrooms** (Hopkins Medicine, JHTV, Lieber, UM Ventures) — no June 22-24 items beyond what's already preprinted.
+- **Press feeds** — nothing new on portfolio competitors today.
+=== 2026-06-24T01:29:43-07:00 done  blackbird-brief (exit 0) ===
