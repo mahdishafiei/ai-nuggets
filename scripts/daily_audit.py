@@ -1,0 +1,317 @@
+#!/usr/bin/env python3
+"""Daily audit: scan each podcast's cron.log for the day's run and email a summary.
+
+Designed to run from cron a few hours after run_all_shows.sh has finished —
+late enough that even worst-case retry ladders (6 attempts × ~3-min sleep +
+per-attempt Claude runs) are complete, early enough that the report lands
+before the user starts looking for episodes.
+
+For each podcast (directory under podcasts/<slug>/ containing PROMPT.md):
+  1. Parse the show's logs/cron.log for events on the audit date.
+  2. Cross-check that an mp3 was actually produced
+     (episodes/<date>*.mp3) — exit-0 is not proof of an episode, since
+     the Haiku-fallback rung of the model ladder has been seen to
+     exit 0 without writing a file.
+  3. Classify as SUCCESS / FAILED / NO_RUN / HUNG and count retries.
+
+Email goes out via AWS SES (boto3), reusing the verified-sender pattern
+from coPI: SES_FROM_EMAIL, AWS_REGION, AWS_ACCESS_KEY_ID,
+AWS_SECRET_ACCESS_KEY. If creds are absent, the summary is printed to
+stdout (dev mode) — convenient for testing.
+
+Usage:
+  daily_audit.py                 # audit today (host local date)
+  daily_audit.py --date 2026-06-22
+  daily_audit.py --dry-run       # print summary, don't send
+"""
+
+import argparse
+import datetime as dt
+import glob
+import json
+import os
+import re
+import sys
+import urllib.error
+import urllib.request
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
+PODCASTS = REPO / "podcasts"
+
+# Lines emitted by run_all_shows.sh that we scan for. Examples:
+#   === 2026-06-23T02:00:01-07:00 start receptor-and-reason ===
+#   === 2026-06-23T02:09:42-07:00 done  receptor-and-reason (exit 0) ===
+#   === 2026-06-23T02:09:42-07:00 done  receptor-and-reason (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+#   === 2026-06-22T03:42:30-07:00 no episode produced for receptor-and-reason; retrying in 180s ===
+#   === 2026-06-22T03:57:49-07:00 FAILED: no episode produced for receptor-and-reason after all retries ===
+#   === 2026-06-22T03:40:11-07:00 AUP-refusal detected for receptor-and-reason; retrying in 180s ===
+EVENT_RE = re.compile(
+    r"^===\s+(?P<ts>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2})\s+"
+    r"(?P<rest>.+?)\s+===\s*$"
+)
+
+
+def parse_ts(s: str) -> dt.datetime:
+    return dt.datetime.fromisoformat(s)
+
+
+def show_slugs() -> list[str]:
+    return sorted(
+        p.parent.name for p in PODCASTS.glob("*/PROMPT.md") if p.is_file()
+    )
+
+
+def events_for_date(log_path: Path, target_date: dt.date) -> list[tuple[dt.datetime, str]]:
+    """Return (timestamp, message) tuples whose local-date matches target_date."""
+    if not log_path.exists():
+        return []
+    out: list[tuple[dt.datetime, str]] = []
+    for line in log_path.read_text(errors="replace").splitlines():
+        m = EVENT_RE.match(line)
+        if not m:
+            continue
+        ts = parse_ts(m.group("ts"))
+        if ts.astimezone().date() != target_date:
+            continue
+        out.append((ts, m.group("rest")))
+    return out
+
+
+def classify(slug: str, target_date: dt.date) -> dict:
+    log_path = PODCASTS / slug / "logs" / "cron.log"
+    evts = events_for_date(log_path, target_date)
+    episodes_dir = PODCASTS / slug / "episodes"
+    mp3s = sorted(episodes_dir.glob(f"{target_date.isoformat()}*.mp3"))
+
+    starts = [(ts, msg) for ts, msg in evts if msg.startswith(f"start {slug}")]
+    dones = [(ts, msg) for ts, msg in evts if msg.startswith(f"done  {slug}")]
+    failed = [(ts, msg) for ts, msg in evts if msg.startswith(f"FAILED:")]
+    no_episode = [(ts, msg) for ts, msg in evts if msg.startswith(f"no episode produced for {slug}")]
+    aup = [(ts, msg) for ts, msg in evts if msg.startswith(f"AUP-refusal detected for {slug}")]
+
+    # The mp3 is the canonical artifact. If one exists for the date the day
+    # ultimately succeeded, even if cron's retry ladder gave up and the
+    # human had to manually rerun — flag that case via the retry count.
+    if mp3s:
+        status = "SUCCESS"
+    elif not starts:
+        status = "NO_RUN"
+    elif failed:
+        status = "FAILED"
+    elif starts and not dones:
+        status = "HUNG"
+    else:
+        status = "NO_EPISODE"
+
+    first_start = starts[0][0] if starts else None
+    last_event = max((ts for ts, _ in evts), default=None)
+    retries = max(0, len(starts) - 1)
+
+    return {
+        "slug": slug,
+        "status": status,
+        "first_start": first_start,
+        "last_event": last_event,
+        "retries": retries,
+        "aup_count": len(aup),
+        "no_episode_count": len(no_episode),
+        "mp3s": [p.name for p in mp3s],
+        "log_path": log_path,
+    }
+
+
+STATUS_ICON = {
+    "SUCCESS": "OK  ",
+    "FAILED": "FAIL",
+    "HUNG": "HUNG",
+    "NO_RUN": "MISS",
+    "NO_EPISODE": "NOEP",
+}
+
+
+def fmt_time(ts: dt.datetime | None) -> str:
+    if ts is None:
+        return "--:--"
+    return ts.astimezone().strftime("%H:%M")
+
+
+def render_summary(reports: list[dict], target_date: dt.date) -> tuple[str, str]:
+    bad = [r for r in reports if r["status"] != "SUCCESS"]
+    subject = f"[ai-nuggets] {target_date.isoformat()} audit: "
+    if not bad:
+        subject += f"all {len(reports)} shows OK"
+    else:
+        subject += f"{len(bad)}/{len(reports)} shows need attention"
+
+    lines = [f"Daily audit {target_date.isoformat()}", ""]
+    for r in reports:
+        icon = STATUS_ICON.get(r["status"], r["status"])
+        extras = []
+        if r["retries"]:
+            extras.append(f"{r['retries']} retr{'y' if r['retries'] == 1 else 'ies'}")
+        if r["aup_count"]:
+            extras.append(f"{r['aup_count']} AUP")
+        if r["no_episode_count"]:
+            extras.append(f"{r['no_episode_count']} no-ep")
+        extra = f" ({', '.join(extras)})" if extras else ""
+        when = fmt_time(r["last_event"])
+        lines.append(f"  {icon}  {r['slug']:30s}  {when} PT{extra}")
+
+    lines.append("")
+    if bad:
+        lines.append("Tail of cron.log for non-SUCCESS shows:")
+        lines.append("")
+        for r in bad:
+            lines.append(f"--- {r['slug']} ({r['status']}) ---")
+            try:
+                tail = r["log_path"].read_text(errors="replace").splitlines()[-40:]
+            except FileNotFoundError:
+                tail = ["(log file not found)"]
+            lines.extend(tail)
+            lines.append("")
+    body = "\n".join(lines) + "\n"
+    return subject, body
+
+
+def fetch_mistral_usage(target_date: dt.date) -> str | None:
+    """Return a short text block describing month-to-date Mistral usage, or
+    None if there's nothing to report.
+
+    Calls GET https://api.mistral.ai/api/admin/usage?month=MM&year=YYYY with
+    MISTRAL_ADMIN_API_KEY (a workspace/inference key is rejected — the
+    endpoint requires an Admin-scoped key). On any failure, returns a single
+    diagnostic line rather than raising — usage stats are nice-to-have, not
+    a reason to block the audit email.
+    """
+    key = os.environ.get("MISTRAL_ADMIN_API_KEY")
+    if not key:
+        return None  # silently omit when not configured
+
+    url = (
+        "https://api.mistral.ai/api/admin/usage"
+        f"?month={target_date.month:02d}&year={target_date.year}"
+    )
+    req = urllib.request.Request(url, headers={"Authorization": f"Bearer {key}"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            payload = json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        return f"Mistral usage: HTTP {e.code} ({e.reason})"
+    except (urllib.error.URLError, json.JSONDecodeError, TimeoutError) as e:
+        return f"Mistral usage: fetch failed ({e})"
+
+    # The schema buries cost data under sections like audio.models[model][ws]
+    # = [ { ...open-shape entry... } ]. Field names for the dollar value have
+    # varied (cost / total_cost / amount / spent) across observed payloads,
+    # so walk recursively and sum any field whose name hints at money. Same
+    # idea for token/character counters under the audio section.
+    money_keys = {"cost", "total_cost", "amount", "spent", "price_total", "total_price"}
+    token_keys = {"tokens", "total_tokens", "token_count"}
+    char_keys = {"characters", "total_characters", "audio_characters", "character_count"}
+    sec_keys = {"seconds", "audio_seconds", "total_seconds", "duration_seconds"}
+
+    def sum_keys(node, names: set[str]) -> float:
+        if isinstance(node, dict):
+            total = 0.0
+            for k, v in node.items():
+                if k in names and isinstance(v, (int, float)):
+                    total += float(v)
+                else:
+                    total += sum_keys(v, names)
+            return total
+        if isinstance(node, list):
+            return sum(sum_keys(x, names) for x in node)
+        return 0.0
+
+    sections = ("chat", "completion", "audio", "ocr", "connectors", "fine_tuning", "libraries_api")
+    sym = payload.get("currency_symbol") or payload.get("currency") or "$"
+    total_cost = sum_keys(payload, money_keys)
+    lines = [f"Mistral usage — month-to-date ({target_date.year}-{target_date.month:02d}):"]
+    lines.append(f"  Total billed: {sym}{total_cost:.2f}")
+    for s in sections:
+        if s in payload:
+            sc = sum_keys(payload[s], money_keys)
+            if sc > 0:
+                extra = ""
+                if s == "audio":
+                    chars = sum_keys(payload[s], char_keys)
+                    secs = sum_keys(payload[s], sec_keys)
+                    bits = []
+                    if chars:
+                        bits.append(f"{int(chars):,} chars")
+                    if secs:
+                        bits.append(f"{int(secs):,} s")
+                    if bits:
+                        extra = "  (" + ", ".join(bits) + ")"
+                lines.append(f"  {s:14s} {sym}{sc:.2f}{extra}")
+    vibe = payload.get("vibe_usage")
+    if isinstance(vibe, (int, float)) and vibe:
+        lines.append(f"  vibe_usage     {vibe}")
+    return "\n".join(lines)
+
+
+def send_email(subject: str, body: str) -> None:
+    sender = (
+        os.environ.get("SES_FROM_EMAIL")
+        or os.environ.get("SES_SENDER_EMAIL")
+        or "notifications@copi.science"
+    )
+    recipient = os.environ.get("AUDIT_TO_EMAIL", "asu@scripps.edu")
+    region = os.environ.get("AWS_REGION", "us-east-1")
+
+    if not (os.environ.get("AWS_ACCESS_KEY_ID") and os.environ.get("AWS_SECRET_ACCESS_KEY")):
+        print(f"[dev] no AWS creds; would email {recipient} from {sender}")
+        print(f"[dev] subject: {subject}")
+        print(body)
+        return
+
+    try:
+        import boto3
+    except ImportError:
+        print("ERROR: boto3 not installed. Run: pip install --user boto3", file=sys.stderr)
+        print(f"[dev fallback] subject: {subject}")
+        print(body)
+        sys.exit(2)
+
+    client = boto3.client("ses", region_name=region)
+    client.send_email(
+        Source=sender,
+        Destination={"ToAddresses": [recipient]},
+        Message={
+            "Subject": {"Data": subject, "Charset": "UTF-8"},
+            "Body": {"Text": {"Data": body, "Charset": "UTF-8"}},
+        },
+    )
+    print(f"sent to {recipient}: {subject}")
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--date", help="YYYY-MM-DD (default: today, host local)")
+    ap.add_argument("--dry-run", action="store_true", help="print, don't send")
+    args = ap.parse_args()
+
+    if args.date:
+        target_date = dt.date.fromisoformat(args.date)
+    else:
+        target_date = dt.datetime.now().date()
+
+    reports = [classify(slug, target_date) for slug in show_slugs()]
+    subject, body = render_summary(reports, target_date)
+
+    mistral_block = fetch_mistral_usage(target_date)
+    if mistral_block:
+        body = body + "\n" + mistral_block + "\n"
+
+    if args.dry_run:
+        print(f"subject: {subject}")
+        print(body)
+        return 0
+
+    send_email(subject, body)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
