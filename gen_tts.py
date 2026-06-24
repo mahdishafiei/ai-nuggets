@@ -24,6 +24,7 @@ CHUNK_RETRIES times. Aborts non-zero if a chunk still fails.
 """
 import argparse
 import base64
+import json
 import os
 import re
 import subprocess
@@ -112,34 +113,79 @@ def chunk_text(text, max_chars):
     return chunks
 
 
+def measure_loudness(path):
+    # First pass of two-pass loudnorm: dump integrated stats as JSON.
+    r = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", path,
+         "-af", "loudnorm=I=-16:TP=-1:LRA=11:print_format=json",
+         "-f", "null", "-"],
+        check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+    )
+    out = r.stderr.decode()
+    start = out.rfind("{")
+    end = out.rfind("}")
+    if start < 0 or end < 0:
+        raise RuntimeError(f"loudnorm measurement parse failed; tail={out[-400:]}")
+    return json.loads(out[start : end + 1])
+
+
+def normalize_chunk(in_path, out_path):
+    # Two-pass loudnorm in linear mode: uniform gain to hit -16 LUFS exactly.
+    # Linear mode avoids the dynamic gain-riding artifacts of single-pass
+    # mode, since within-chunk drift is handled by the global pass below.
+    m = measure_loudness(in_path)
+    af = (
+        "loudnorm=I=-16:TP=-1:LRA=11"
+        f":measured_I={m['input_i']}"
+        f":measured_TP={m['input_tp']}"
+        f":measured_LRA={m['input_lra']}"
+        f":measured_thresh={m['input_thresh']}"
+        f":offset={m['target_offset']}"
+        ":linear=true:print_format=summary"
+    )
+    subprocess.run(
+        ["ffmpeg", "-y", "-hide_banner", "-nostats", "-i", in_path, "-af", af,
+         "-ar", "44100", "-ac", "1", "-c:a", "pcm_s16le", out_path],
+        check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+    )
+
+
 def stitch(parts, output, speed=1.0):
-    # Voxtral and Mistral both have within-utterance loudness drift (Mistral
-    # drops 15-25 dB through a paragraph). Final ffmpeg pass: dynaudnorm
-    # smooths within-file drift, loudnorm targets EBU R128 podcast loudness
-    # (-16 LUFS integrated, -1 dBTP peak).
-    af = "dynaudnorm=f=200:g=15,loudnorm=I=-16:TP=-1:LRA=11"
-    if speed != 1.0:
-        # atempo changes tempo without pitch shift; valid range 0.5-2.0.
-        af = f"atempo={speed}," + af
+    # Volume drift in Voxtral/Mistral output has two distinct sources:
+    #   (1) inter-chunk: each chunk picks its own baseline loudness, so raw
+    #       concat leaves step-changes that no single global pass can fix.
+    #   (2) within-chunk: voice fades 8-15 dB through a ~30s passage.
+    # Fix: per-chunk two-pass loudnorm anchors every chunk to -16 LUFS
+    # integrated (kills step-changes), then a wide-window dynaudnorm flattens
+    # the within-chunk drift, then a final loudnorm locks EBU R128.
     with tempfile.TemporaryDirectory() as tmp:
-        if len(parts) == 1:
-            raw = os.path.join(tmp, "raw.mp3")
-            open(raw, "wb").write(parts[0])
-        else:
-            manifest = os.path.join(tmp, "list.txt")
-            raw = os.path.join(tmp, "raw.mp3")
-            with open(manifest, "w") as mf:
-                for j, part in enumerate(parts):
-                    pp = os.path.join(tmp, f"part{j}.mp3")
-                    open(pp, "wb").write(part)
-                    mf.write(f"file '{pp}'\n")
-            subprocess.run(
-                ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", manifest, "-c", "copy", raw],
-                check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
-            )
+        normalized = []
+        for j, part in enumerate(parts):
+            raw = os.path.join(tmp, f"raw{j}.mp3")
+            open(raw, "wb").write(part)
+            norm = os.path.join(tmp, f"norm{j}.wav")
+            normalize_chunk(raw, norm)
+            normalized.append(norm)
+
+        manifest = os.path.join(tmp, "list.txt")
+        with open(manifest, "w") as mf:
+            for p in normalized:
+                mf.write(f"file '{p}'\n")
+        joined = os.path.join(tmp, "joined.wav")
         subprocess.run(
-            ["ffmpeg", "-y", "-i", raw,
-             "-af", af,
+            ["ffmpeg", "-y", "-hide_banner", "-nostats", "-f", "concat", "-safe", "0",
+             "-i", manifest, "-c", "copy", joined],
+            check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+        )
+
+        # dynaudnorm f=500ms x g=31 ~= 15.5s gaussian window, wide enough to
+        # absorb a 30s Voxtral fade without modulating sentence-level dynamics.
+        af = "dynaudnorm=f=500:g=31,loudnorm=I=-16:TP=-1:LRA=11"
+        if speed != 1.0:
+            # atempo changes tempo without pitch shift; valid range 0.5-2.0.
+            af = f"atempo={speed}," + af
+        subprocess.run(
+            ["ffmpeg", "-y", "-hide_banner", "-nostats", "-i", joined, "-af", af,
              "-ac", "1", "-ar", "22050", "-b:a", "64k", output],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
         )
