@@ -457,3 +457,39 @@ You've hit your session limit · resets 2:50am (America/Los_Angeles)
 You've hit your session limit · resets 2:50am (America/Los_Angeles)
 === 2026-06-25T02:02:20-07:00 done  justice-biotech-brief (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-06-25T02:02:21-07:00 FAILED: no usable output for justice-biotech-brief after all retries ===
+=== 2026-06-25T07:56:30-07:00 start justice-biotech-brief (manual catch-up) ===
+Episode written and staged for batch TTS. Summary follows.
+
+---
+
+**Justice's Biotech Brief — 2026-06-25**
+
+**Selected:** Widdess et al., *Bispecific Antibody Architecture and TNFRSF Target Selection Determine CD8+ T Cell Differentiation and Anti-tumour Immunity*, bioRxiv 10.64898/2026.06.19.732642 v1 (posted June 24, 2026). Al-Shamkhani / Cragg / Beers, University of Southampton.
+
+**Why it wins:** Architecture-rules paper for the costim bispecific space. Quantifies (1) format effect — 2x2 max, 1x1 min, asymmetric 2x1 retains substantial activity, identifying costim-receptor bivalency (not tumor-antigen bivalency) as load-bearing; (2) receptor effect — 4-1BB beats other TNFRSF members, hierarchy conserved in human T cells and reproduced by cognate ligand, so receptor-intrinsic. Lands directly on the AbCellera-Jazz costim trispecific deal Justice's brief covered six days ago.
+
+**Audio-depth flag:** Abstract-only (preprint <36h old, body figures not yet rendered on bioRxiv — confirmed via fetch_preprint.py and EuropePMC). Flagged in-script per PROMPT.md guidance.
+
+**Files written (SKIP_TTS=1 batch mode):**
+- `podcasts/justice-biotech-brief/scripts/2026-06-25-b7h3-4-1bb-bispecific-architecture-tnfrsf.md`
+- `podcasts/justice-biotech-brief/scripts/2026-06-25-b7h3-4-1bb-bispecific-architecture-tnfrsf.rss-item.xml` (with `__LENGTH__` / `__DURATION__` placeholders)
+- `podcasts/justice-biotech-brief/scripts/2026-06-25-b7h3-4-1bb-bispecific-architecture-tnfrsf.commit-msg`
+
+Per PIPELINE.md SKIP_TTS rules: no `gen_tts.py`, no `publish_episode.sh`, no `feed.xml` edits, no commit — `publish_pending.py` handles all of that after batch TTS.
+
+**Candidate funnel:**
+
+bioRxiv 2026-06-24 → 2026-06-25 (full collection, 199 records pulled paginated): 5 keyword hits surfaced. medRxiv same window (102 records): 1 hit. Substantive shortlist after discarding spurious matches:
+
+- **CHOSEN** — Widdess et al. (Al-Shamkhani, Southampton). *Bispecific Antibody Architecture and TNFRSF Target Selection Determine CD8+ T Cell Differentiation and Anti-tumour Immunity.* bioRxiv 10.64898/2026.06.19.732642 v1, posted 2026-06-24. https://www.biorxiv.org/content/10.64898/2026.06.19.732642v1
+- Park et al. (Ha lab, Yonsei). *TOX enforces the immunosuppressive program of tumor-infiltrating regulatory T cells.* bioRxiv 10.64898/2026.06.19.732838 v1, posted 2026-06-24. Treg-specific TOX target nomination potentiating PD-1 blockade — strong basic immunology but a target-nomination paper, not a therapeutic asset story.
+- Kleist et al. (Rosato lab, Dartmouth). *Circulating and brain-resident memory CD8+ T cells seed distinct bystander TRM-like populations in glioblastoma.* bioRxiv 10.64898/2026.06.19.733403 v1, posted 2026-06-24. Basic tumor immunosurveillance, no immediate translational asset.
+- Gomerdinger et al. (Hammond lab, MIT). *Engineering nanoparticle surface chemistry for antigen-presenting cell targeting improves specificity and safety of TLR3 agonist cancer immunotherapy.* bioRxiv 10.64898/2026.06.23.733291 v1, posted 2026-06-25. Innate-immune nanoparticle delivery — outside Justice's stated TCE/ADC/CAR-T pillars.
+- (medRxiv) Newly diagnosed glioblastoma — Pembrolizumab + Temozolomide + HSPPC-96 vaccine Phase II results. medRxiv 10.64898/2026.06.22.26354817, posted 2026-06-24. Clinical data but GBM vaccine combination space, narrow translational read for Justice's interest set.
+
+News sources (Fierce Biotech, STAT, Fierce Pharma, BioPharma Dive): top stories in the 48h window were Otsuka ADHD Ph3b, Merck KGaA / Bio-Techne $11.3B, Ionis Tryngolza label expansion, AstraZeneca/YMCA screening, Boehringer/Immunai $15M, Eli Lilly 340B follow-through, Moderna mRNA flu panel endorsement. None directly inside Justice's TCE / VEGF×PD-L1 / JAK-ADC / trispecific pillars. J&J Talvey + Darzalex Faspro earlier-MM was real but the underlying MonumenTAL-3 readout was already covered in the June 15 episode.
+
+Funder pages: ARPA-H most recent release is 2026-06-23 (maternal-health teams selection); NIH news releases page returned HTTP 403; NSF not surveyed (no signal expected for Justice's pillars in this window). No funder-side gap drove the selection.
+
+Source-side failures noted: NIH news 403, Endpoints News 403 (Cloudflare/auth on both — proceeded with the rest per PIPELINE source-failure rule). Full text for the chosen paper was unobtainable through all three fetch_preprint channels — bioRxiv body not yet rendered, Europe PMC has metadata only, PDF blocked at jina — abstract-only flagged in the script per PROMPT.md.
+=== 2026-06-25T08:06:35-07:00 done  justice-biotech-brief (exit 0) (manual catch-up) ===
