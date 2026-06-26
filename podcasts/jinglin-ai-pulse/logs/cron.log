@@ -48,3 +48,51 @@ Files written:
 - `podcasts/jinglin-ai-pulse/scripts/2026-06-25-naturebench-vs-agentic-vc-day.rss-item.xml` (validated; parses)
 - `podcasts/jinglin-ai-pulse/scripts/2026-06-25-naturebench-vs-agentic-vc-day.commit-msg`
 === 2026-06-25T01:40:34-07:00 done  jinglin-ai-pulse (exit 0) ===
+=== 2026-06-26T01:30:09-07:00 start jinglin-ai-pulse ===
+Script and stubs written for SKIP_TTS mode. The orchestrator will handle TTS, R2 publish, feed.xml edit, and commit after batch TTS.
+
+**Episode:** Ollie's AI Pulse — Wan-Streamer collapses the pipeline, and the lab becomes the moat
+**Files written (next to siblings under `podcasts/jinglin-ai-pulse/scripts/`):**
+- `2026-06-26-pipeline-collapses-and-the-lab-is-the-moat.md` (script, ~2,000 spoken words)
+- `2026-06-26-pipeline-collapses-and-the-lab-is-the-moat.rss-item.xml` (with `__LENGTH__` / `__DURATION__` placeholders, XML validated)
+- `2026-06-26-pipeline-collapses-and-the-lab-is-the-moat.commit-msg`
+
+**Unifying take:** the model is not the unit of progress — what surrounds it is (cascade collapse, training recipe, deployment loop, physical lab).
+
+**Candidate funnel (June 24-26, 2026):**
+
+Twitter/X discourse (last 48h) — sources scanned: Hugging Face daily papers, arXiv listings cs.AI/cs.CL/cs.LG/q-bio, AK/iScienceLuvr threads, Min Choi/Jim Fan/AravSrinivas feeds via WebSearch. X.com direct page reads returned 402 (auth wall); convergence claims rest on indexed tweets + HF upvote counts + secondary coverage.
+
+- **CHOSEN:** Wan-Streamer v0.1 (arXiv 2606.25041, Alibaba Wan, posted June 23) — Min Choi viral tweet "We are cooked", HF Papers, Digg explainer
+- **CHOSEN:** iLLaDA (arXiv 2606.25331, ML-GSAI/RUC, June 24) — iScienceLuvr thread, AK papers, HF top-5
+- **CHOSEN:** How Post-Training Shapes Biological Reasoning Models (arXiv 2606.16517, Zitnik/Kakade, June 15) — slightly outside 48h but sustained week-long discussion + directly biomedical-AI relevant
+- Runner-up: The Verification Horizon (2606.26300) — overlaps with already-covered Qwen-AgentWorld
+- Runner-up: Multi-Step Tool-Use RL Collapses (2606.26027) — interesting diagnosis, small Twitter footprint
+- Runner-up: OpenBioRQ (2606.21959) — biomedical-AI agent benchmark, low HF traction
+- Runner-up: Hallucination in World Models is Predictable (2606.27326, Nicklas Hansen + Xiaolong Wang)
+- Runner-up: DanceOPD (2606.27377) — HF #1 today but image-gen domain, narrow Twitter convergence
+- Dropped: Beyond NL2Code survey (anomalous upvote burst, no name-brand push); Wan2.6/2.7 buzz (Wan-Streamer dominates the story)
+
+Funding/business (last 7d) — sources: TechCrunch, SiliconANGLE, BusinessWire, Tech Startups, Crunchbase, The Information, Axios Pro.
+
+- **CHOSEN:** Sail Research $80M Series A (Sequoia, June 25)
+- **CHOSEN:** Scaled Cognition $100M Series A (Khosla, June 25)
+- **CHOSEN:** Trase $107M seed (ARCH Venture Partners, June 24) — operator-class signal: biotech-pedigree VC writing 9 figures into pure agent infra
+- Runner-up: Patronus AI $50M Series B (Greenfield, June 25) — overlaps thematically with Sail/Scaled
+- Runner-up: Runpod $100M Series A (Summit, June 25) — conventional AI-cloud story
+- Runner-up: xCures $46M Series B — duplicative healthcare angle with Trase
+- Runner-up: Alan €480M Series G — French healthtech, mostly insurance
+- Dropped: Flourish AI / SpaceX-Cursor / Databricks-Panther / Shazeer→OpenAI (all outside 7d window)
+- Dropped: All June 22-24 rounds already covered earlier this week (Baseten/Groq/Assort/Taktile/Hang Ten/Attention/Runlayer/Coval/Seltz)
+
+Long-form podcasts (last 14d):
+
+- **CHOSEN:** Latent Space (Science pod) — "The Self-Driving Lab" with Joseph Krause (Radical AI), hosted by Brandon Anderson, June 17 — was a runner-up on yesterday's episode; promoted to lead because (a) it makes the strongest version of this week's thread and (b) ties cleanly to the Zitnik biological-reasoning paper
+- Runner-up: TWIML — Dev Rishi (Rubrik), "What happens when agents take action," June 16 — product/governance, not research-philosophy
+- Runner-up: Cognitive Revolution — Dean Ball on joining OpenAI — policy-shaped, less methodology
+- Dropped: Dwarkesh "Sample Efficiency Black Hole" (already used June 25); Latent Space "Red-Teaming after Mythos" (June 22 episode, already used); Latent Space "Why the Frontier Ecosystem must be Open" (already used)
+- Dropped: WhynotTV (no episode in 14d window — most recent is Feb 2026)
+- Dropped: Latent Space Carina Hong (June 3, outside window); MLST (no June 2026 ep surfaced); Gradient Dissent Rodriques (May 26, outside)
+
+**Source-level caveats:** X.com direct fetches returned 402 (auth wall); Axios Pro 403. Convergence claims for Wan-Streamer/iLLaDA grounded in indexed tweet snippets + HF upvote rankings + secondary press, not exhaustive reply-tree scrape. Zefan_Cai direct Chinese-language signal not surfacing via Google index — flagged as a gap, not fabricated. Three primary arXiv papers (Wan-Streamer, iLLaDA, Zitnik) verified via direct WebFetch of arXiv abstract pages; funding stories verified via direct article fetch.
+=== 2026-06-26T01:43:59-07:00 done  jinglin-ai-pulse (exit 0) ===
