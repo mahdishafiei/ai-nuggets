@@ -517,3 +517,37 @@ You've hit your session limit · resets 2:30am (America/Los_Angeles)
 You've hit your session limit · resets 2:30am (America/Los_Angeles)
 === 2026-06-26T02:00:27-07:00 done  justice-biotech-brief (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-06-26T02:00:27-07:00 FAILED: no usable output for justice-biotech-brief after all retries ===
+=== 2026-06-26T06:43:08-07:00 start justice-biotech-brief (manual catch-up) ===
+Today's episode is staged. Files written:
+- `scripts/2026-06-26-mrna-2808-trispecific-tce-myeloma-signal.md` — script (1,334 words, ~5–6 min)
+- `scripts/2026-06-26-mrna-2808-trispecific-tce-myeloma-signal.rss-item.xml` — RSS item stub with `__LENGTH__`/`__DURATION__` placeholders
+- `scripts/2026-06-26-mrna-2808-trispecific-tce-myeloma-signal.commit-msg` — commit message stub
+
+`SKIP_TTS=1` is set in the env, so per PIPELINE.md I deferred audio generation, R2 publish, feed.xml edit, and the commit to `scripts/publish_pending.py`.
+
+## Candidate funnel — 2026-06-26
+
+### bioRxiv (last 2 days, 2026-06-25 → 2026-06-26)
+- 209 items in the API window, 208 unique DOIs scanned (full pagination, cursors 0/30/60/90/120/150/180).
+- Tight word-boundary keyword filter applied to title + abstract; 12 substantive hits after discarding spurious matches (mostly "BiTE" inside "habitat", "TIL" inside "until", "ADC" matching apparent diffusion coefficient in MRS, etc.).
+
+Substantive shortlist (preprints aligned with Justice's interest pillars):
+- Engineering nanoparticle surface chemistry for APC targeting improves TLR3 agonist cancer immunotherapy — Paula T. Hammond / MIT (v1, 2026-06-25) — https://www.biorxiv.org/content/10.64898/2026.06.23.733291v1
+- A Visually Interpretable Histopathology-Based Immune Model Predicts T-effector Biology and Response to ICB in ccRCC (v1, 2026-06-25) — https://www.biorxiv.org/content/10.64898/2026.06.21.733614v1
+- Specific killing of Ewing sarcoma by TCR-T cells targeting public neogene-encoded antigens (v1, 2026-06-25) — https://www.biorxiv.org/content/10.64898/2026.06.20.733160v1
+- Nerve-targeting and pain-promoting transcriptomic signatures in early Guillain-Barré syndrome (v2 update, 2026-06-26) — https://www.biorxiv.org/content/10.1101/2025.09.24.678413v2
+
+### News / press (Fierce Biotech, Endpoints, STAT — last 1–2 days)
+- **Moderna Science Day, June 25, 2026** — first clinical signal for mRNA-2808 (mRNA-encoded multiplexed TCE for R/R multiple myeloma targeting BCMA + GPRC5D + FcRH5); mRNA-2151 ovarian TCE advancing; mRNA-6007 in vivo CAR-T for SLE/B-cell autoimmune enters Horizon 3 — https://www.modernatx.com/science-day  ← **CHOSEN**
+- BioNTech/BMS pumitamig (PD-L1×VEGF) — Phase 2 ROSETTA Lung-02 interim disclosed at ASCO in May/early June; older than the recency window for a primary pick, only relevant as comparator.
+- iBio first AI-derived obesity asset enters clinic — out of scope (Justice's pillars are oncology IO / autoimmune biologics).
+- Boehringer–Immunai $15M AI platform deal — off-asset; covered in adjacent show yesterday.
+- Otsuka centanafadine Phase 3b ADHD — off-domain.
+- BIO 2026 close-out — broad industry coverage, not a discrete asset.
+
+### Policy / funder (ARPA-H, NIH, NSF)
+- No major program launches or awards in window relevant to Justice's pillars.
+
+### Why mRNA-2808
+The preprint shortlist is all genuinely-on-topic but secondary-evidence work; Moderna Science Day is the only data-bearing disclosure in the window that lands directly on Justice's primary interest in trispecific T-cell engagers, and the architectural intuition (mRNA-encoded TCE cocktail vs. single-molecule protein trispecific) is a take with material implications for the AbCellera/Jazz, Janux, and protein-trispecific design space the show has been tracking. The encoded-in-vivo-translation modality is also the most consequential new clinical TCE format to surface this year.
+=== 2026-06-26T06:51:00-07:00 done  justice-biotech-brief (exit 0) (manual catch-up) ===
