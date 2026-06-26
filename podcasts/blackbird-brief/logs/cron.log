@@ -152,3 +152,21 @@ Script + stubs written. SKIP_TTS=1 — audio, R2 publish, feed update, and commi
 
 **Candidate funnel:** bioRxiv (162 in-window items paginated; sole JHU hit was yesterday's HIV preprint), medRxiv (Baughman VTE GenAI dropped for low translational fit), Feinberg Hub press out-of-window for the underlying paper. Sources that failed/proxied: hub.jhu.edu and hopkinsmedicine.org (Cloudflare 403, routed via r.jina.ai); bioRxiv API 503'd transiently on two pages (resolved on retry); GEN article 404 (used EurekAlert + Nature.com).
 === 2026-06-25T01:24:24-07:00 done  blackbird-brief (exit 0) ===
+=== 2026-06-26T01:10:09-07:00 start blackbird-brief ===
+Script written and stubs in place for `2026-06-26-radar-lieber-sign-tracker-d2-biomarker`. SKIP_TTS=1 in env so no TTS / R2 / feed / commit — the orchestrator will handle those after batch TTS.
+
+## Summary
+
+**Episode:** Sourcing Radar — Lieber's sign-tracker/goal-tracker fMRI biomarker stratifies D2 antipsychotic response (Friday 2026-06-26, 2-pick).
+
+**Lead:** Pergola (Lieber, corresponding), with Howes/Mehta at KCL — bioRxiv v3 2026-06-24, 10.64898/2026.05.14.724267. fMRI ST/GT clusters reproduce across 5 cohorts (N=1,251). Full D2/D3 antagonists selectively suppress ST anticipatory ventral striatum BOLD; the phenotype split recovers a real amisulpride effect that was null at the group level in Osugo et al. Clinical cohort ties D2 affinity index to negative-symptom burden. Direct Blackbird angle: a biomarker-enrichment trial-design tool for the GPR52 NewCo with Lieber + Third Rock, and the second platform-layer asset Pergola has published from Lieber inside a month.
+
+**Second:** Farber lab JHU LipoGlo whole-animal phenotypic ApoB screen — bioRxiv v4 2026-06-24, 10.1101/2024.11.14.623618. 49 unique B-lp-lowering hits from 3,000 compounds, enoxolone traced to HNF4α via clean genetic-rescue. Lead is the LipoGlo platform itself (Thierer/Mumm/Jun O. Liu) — vertebrate phenotypic screening for lipid biology, JHTV-routed read.
+
+**Files written:**
+- `podcasts/blackbird-brief/scripts/2026-06-26-radar-lieber-sign-tracker-d2-biomarker.md`
+- `…rss-item.xml` (with `__LENGTH__` / `__DURATION__` placeholders, 4-space indented, XML-validated)
+- `…commit-msg` (`Blackbird 2026-06-26: …`)
+
+**Candidate funnel:** 4 in-window bioRxiv hits at JHU/Lieber (Pergola CHOSEN; Farber CHOSEN; Salzberg EviAnn + JHU SoM replicateFest dropped as software), 3 medRxiv JHU items dropped as clinical AI / observational; institutional press 403'd on direct fetch, proxied via Jina with no fresh translational news; no UMB items in window; 6 already-shipped this week excluded.
+=== 2026-06-26T01:28:03-07:00 done  blackbird-brief (exit 0) ===
