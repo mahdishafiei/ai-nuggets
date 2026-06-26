@@ -1601,3 +1601,47 @@ Sources scanned via WebFetch + WebSearch (Endpoints/FierceBiotech/FiercePharma b
 
 **Source failures noted:** Endpoints News direct WebFetch → 403; fiercepharma.com direct WebFetch → 403; r.jina.ai proxy gave HTTP 451 for fiercebiotech and fiercepharma; statnews.com via jina was partial (paywall). All worked around via the BioSpace/BioPharma Dive aggregators which were proxy-accessible and via WebSearch summaries.
 === 2026-06-25T01:35:47-07:00 done  calibr-briefing (exit 0) ===
+=== 2026-06-26T01:20:09-07:00 start calibr-briefing ===
+XML validates. Both episodes are written: scripts, RSS-item stubs (with `__LENGTH__`/`__DURATION__` placeholders), and commit-msg stubs in `SKIP_TTS=1` mode per PIPELINE.md. The orchestrator's batch TTS run will fill in audio + lengths + durations and commit.
+
+---
+
+**Run summary — Travis' Briefing 2026-06-26**
+
+Files written:
+- `2026-06-26-pharma-headlines.txt` (~5 min, 6 items)
+- `2026-06-26-merck-kgaa-bio-techne-spotlight.txt` (~7 min, 6 threads)
+- `.rss-item.xml` and `.commit-msg` stubs for each
+
+**Candidate funnel:**
+
+Fierce Biotech (June 25-26):
+- Merck KGaA → Bio-Techne $11.3B all-cash, $73/share, 36% premium — https://www.fiercepharma.com/pharma/merck-kgaa-throws-down-113b-bio-techne-biggest-deal-2015-sigma-aldrich-buy ✅ SPOTLIGHT + headline 1
+- Otsuka centanafadine positive Ph3b in ADHD + comorbid anxiety — https://www.fiercebiotech.com/biotech/otsuka-posts-phase-3b-adhd-trial-win-ahead-looming-fda-approval-decision ✅ headline 3
+- Boehringer Ingelheim $15M discovery deal with Immunai — https://www.fiercebiotech.com/biotech/15m-discovery-deal-boehringer-becomes-latest-big-pharma-buy-immunais-ai-platform ✅ headline 4
+- Ionis $30M from Recordati for ex-US rare-disease rights — deprioritized (Tryngolza expansion is bigger Ionis story)
+- Passage Bio / Remix reverse merger — deprioritized (covered in week-prior context)
+
+Fierce Pharma:
+- Ionis Tryngolza FDA broad sHTG label expansion — https://www.fiercepharma.com/pharma/ionis-scores-landmark-fda-label-expansion-tryngolza ✅ headline 2
+- Fosun Pharma global Alzheimer's push — deprioritized (regional/strategic, not market-moving)
+- SCOTUS Bayer Roundup — deprioritized (litigation, not biopharma BD)
+- FDA Pinnacle photodynamic therapy marketing warning — deprioritized
+- BeOne $5M Blood Cancer United (June 26) — deprioritized (charity)
+
+BioPharma Dive / Endpoints (403'd on direct fetch; via search):
+- Ollin $330M Series B (Innovent OLN324 Vabysmo challenger) — https://www.biopharmadive.com/news/ollin-biosciences-financing-china-innovent-vabysmo-amd-dme/823564/ ✅ headline 5
+- BIO 2026 closing-day IPO/M&A wrap — https://www.biopharmadive.com/news/bio-2026-ipo-biotech-performance-predictions/823474/ ✅ headline 6
+- Kardigan IPO — folded into BIO close
+- Aktis IPO — folded into BIO close
+
+STAT News: BIO 2026 themes ($134B 1H deal flow, China-licensing, MFN) ✅ folded into headline 6
+Fierce Pharma & BioPharma Dive both inaccessible mid-day (403/timeouts) — used search snippets + press releases as substitutes.
+
+Sources:
+- [Merck KGaA Bio-Techne deal — Bio-Techne press release](https://investors.bio-techne.com/press-releases/detail/535/merck-kgaa-darmstadt-germany-agrees-to-acquire)
+- [Tryngolza FDA approval — BusinessWire](https://www.businesswire.com/news/home/20260624119051/en/TRYNGOLZA-olezarsen-approved-by-the-FDA-as-the-first-and-only-treatment-to-reduce-triglycerides-and-the-risk-of-acute-pancreatitis-in-patients-with-severe-hypertriglyceridemia-sHTG)
+- [Otsuka centanafadine Ph3b](https://www.otsuka-us.com/news/otsuka-announces-positive-phase-3b-results-centanafadine-adults-adhd-and-comorbid-anxiety)
+- [Boehringer-Immunai $15M](https://www.jpost.com/business-and-innovation/article-900538)
+- [Ollin Biosciences $330M Series B](https://www.businesswire.com/news/home/20260623783799/en/)
+=== 2026-06-26T01:31:01-07:00 done  calibr-briefing (exit 0) ===
