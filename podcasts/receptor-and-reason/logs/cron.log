@@ -1627,3 +1627,39 @@ You've hit your session limit · resets 2:30am (America/Los_Angeles)
 You've hit your session limit · resets 2:30am (America/Los_Angeles)
 === 2026-06-26T02:05:31-07:00 done  receptor-and-reason (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-06-26T02:05:31-07:00 FAILED: no usable output for receptor-and-reason after all retries ===
+=== 2026-06-26T06:43:10-07:00 start receptor-and-reason (manual catch-up) ===
+Episode shipped. Recording the final summary per PIPELINE.md.
+
+```
+Receptor & Reason — 2026-06-26 — Episode 44
+
+Script: podcasts/receptor-and-reason/scripts/2026-06-26-receptor-and-reason.md
+RSS stub: podcasts/receptor-and-reason/scripts/2026-06-26-receptor-and-reason.rss-item.xml
+Commit msg: podcasts/receptor-and-reason/scripts/2026-06-26-receptor-and-reason.commit-msg
+Dedup ledger: appended (now 44 entries)
+SKIP_TTS=1 — gen_tts.py, publish_episode.sh, feed.xml edit, and commit deferred to publish_pending.py.
+
+Candidate funnel:
+- bioRxiv (rolling 7d, 2026-06-20..2026-06-26): 859 total / 835 unique items pulled across all categories; 217 Tier 1 (neuro + pharm/tox + animal behavior) + 45 Tier 2 (bioinformatics agentic-AI) matched keyword filters; ~50-item curated shortlist after deduping against the 43-line shipped ledger and discarding spurious keyword hits.
+- arXiv cache (1230011-byte daily snapshot, /tmp/ai-nuggets-arxiv-cache.xml): 500 entries scanned, 51 had bio+agentic keyword co-occurrence within the 7-day window.
+- Psychiatric Times: 30 headlines scanned, most outside the 7-day window; only the 2026-06-23 Psychiatric Pharmacogenomics CME piece was in-window and it's a review/CME not a primary news item. Society press pages (ACNP/SOBP/ECNP) and Tier 3 journals (CPT:PSP, CPT, Drug Discovery Today) and chemRxiv not surveyed today — bioRxiv + arXiv yielded a full 10-item slate without dipping lower.
+
+Shortlist (top 16 considered → 10 picked, marked *):
+* doi:10.64898/2026.06.20.733541 — JNJ-42153605 mGluR2 PAM + LEV polypharmacy blocks TBI tauopathy in larval zebrafish (LEAD)
+* doi:10.64898/2026.06.19.733409 — Vitamin D3 in MK-801 SCZ mouse, direct α7nAChR potentiation
+* doi:10.64898/2026.06.16.732753 — GPR65 endosomal-trafficking-required pro-nociceptive signaling in FLS
+* doi:10.64898/2026.06.19.733392 — Schmidt-lab NAc snRNA-seq after volitional cocaine self-administration
+* doi:10.64898/2026.06.19.733408 — Fiber-photometry GRABDA2h saturation under morphine; methods caveat
+* doi:10.64898/2026.06.18.733264 — β1-integrin allosteric antibody JB1a in 6-OHDA PD
+* doi:10.64898/2025.12.15.694504 — Mouse-model-anchored TCR-repertoire deep-learning iPD diagnosis
+* doi:10.64898/2026.06.22.733874 — AD patient iPSC organoid multi-platform proteomic benchmark
+* arxiv:2606.26205 — Provenance-aware multi-agent psychiatric-drug-safety KG over Reddit + WebMD + FAERS
+* doi:10.64898/2026.05.27.728254 — iClima pH-insensitive ratiometric Cl⁻ sensor for GABAergic imaging
+  doi:10.64898/2026.06.16.732555 — Chronic pain decoding from sEEG (DMN-beta + salience-gamma) — strong runner-up
+  doi:10.64898/2026.06.16.732486 — Photodegradation of misfolded proteins (already shipped 2026-06-22, dedup)
+  doi:10.64898/2026.06.17.733013 — NEK1 autophosphorylation in ALS variants — narrower
+  doi:10.64898/2026.06.09.730863 — TDP-43 phosphorylation-induced micellization switch — narrower mech
+  arxiv:2606.25400 — BrainAgent LLM multi-agent for brain signal understanding — overlaps with arxiv:2606.26205 pick
+  arxiv:2606.26563 — scBench-Long single-cell agentic benchmark — slightly off the CNS focus
+```
+=== 2026-06-26T06:56:09-07:00 done  receptor-and-reason (exit 0) (manual catch-up) ===
