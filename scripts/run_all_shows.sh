@@ -46,7 +46,7 @@ GARIBALDI_STAGE_DIR=ai-nuggets-stage   # relative to remote $HOME
 # Cron's PATH is /usr/bin:/bin only. publish_episode.sh calls `npx wrangler`
 # which lives under nvm. Prepend the current node bin so child processes
 # (publish_pending.py → publish_episode.sh) see npx. Update on node upgrade.
-export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
+export PATH="$REPO/.venv/bin:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 
 # Capture all output to a per-run log when not running interactively (e.g.
 # under cron). The 1AM cron previously dropped Phase 2/3 logs entirely,
