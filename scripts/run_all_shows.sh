@@ -33,8 +33,8 @@
 
 set -u
 
-REPO=/home/asu/Science/ai-nuggets
-CLAUDE=/home/asu/.local/bin/claude
+REPO=/Users/mahdishafieineyestanak/Ai_Nugget
+CLAUDE=/Applications/cmux.app/Contents/Resources/bin/claude
 STAGGER_SECONDS=${STAGGER_SECONDS:-600}
 SHOWS_LIMIT=${SHOWS_LIMIT:-0}
 PHASE2_TIMEOUT_SECS=${PHASE2_TIMEOUT_SECS:-3600}
@@ -46,7 +46,7 @@ GARIBALDI_STAGE_DIR=ai-nuggets-stage   # relative to remote $HOME
 # Cron's PATH is /usr/bin:/bin only. publish_episode.sh calls `npx wrangler`
 # which lives under nvm. Prepend the current node bin so child processes
 # (publish_pending.py → publish_episode.sh) see npx. Update on node upgrade.
-export PATH="$HOME/.nvm/versions/node/v24.14.0/bin:$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 
 # Capture all output to a per-run log when not running interactively (e.g.
 # under cron). The 1AM cron previously dropped Phase 2/3 logs entirely,
@@ -76,7 +76,7 @@ ARXIV_CACHE=/tmp/ai-nuggets-arxiv-cache.xml
 if [ -z "$(find "$ARXIV_CACHE" -newermt "$(date +%F)" 2>/dev/null)" ]; then
   rm -f "$ARXIV_CACHE"
   curl -s --max-time 90 \
-    -A 'ai-nuggets/1.0 (https://github.com/andrewsu/ai-nuggets)' \
+    -A 'ai-nuggets/1.0 (https://github.com/mahdishafiei/ai-nuggets)' \
     'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.CL+OR+cat:cs.MA+OR+cat:q-bio&sortBy=submittedDate&sortOrder=descending&max_results=500' \
     -o "$ARXIV_CACHE.tmp" \
     && mv "$ARXIV_CACHE.tmp" "$ARXIV_CACHE" \

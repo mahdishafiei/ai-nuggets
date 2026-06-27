@@ -5,7 +5,8 @@ compatibility_date = "2026-05-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "podcast"
-database_id = "458dc35f-a6be-4c8d-95df-7e30229e02de"
+# Replace with the database_id printed by `npx wrangler d1 create podcast`.
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
 
 [[analytics_engine_datasets]]
 binding = "AE"
@@ -16,4 +17,4 @@ binding = "BUCKET"
 bucket_name = "ai-nuggets-episodes"
 
 [vars]
-ALLOWED_PODCASTS = "biomedical-agentic-ai,blackbird-brief,calibr-briefing,jinglin-ai-pulse,justice-biotech-brief,receptor-and-reason,scripps-biomed-brief"
+ALLOWED_PODCASTS = "affinity-matured"

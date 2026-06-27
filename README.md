@@ -7,13 +7,7 @@ is a separate feed for a separate audience.
 
 | Slug | Audience | Subscribe |
 |---|---|---|
-| [`biomedical-agentic-ai`](podcasts/biomedical-agentic-ai/) | Andrew Su (Su Lab, Scripps) — agentic AI applied to biomedical research | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/biomedical-agentic-ai/feed.xml) |
-| [`blackbird-brief`](podcasts/blackbird-brief/) | **The Blackbird Brief** — Matt Tremblay & Blackbird Labs leadership; daily Sourcing Radar on commercializable JHU/UMB/Lieber research + weekly Sunday Portfolio Watch | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/blackbird-brief/feed.xml) |
-| [`calibr-briefing`](podcasts/calibr-briefing/) | **Travis' Briefing** — Travis Young (Calibr-Skaggs, Scripps), daily biotech & pharma briefing | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/calibr-briefing/feed.xml) |
-| [`jinglin-ai-pulse`](podcasts/jinglin-ai-pulse/) | Jinglin (Ollie) Jian (Scripps) — AI Twitter discourse, investment trends, and deep podcast highlights | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/jinglin-ai-pulse/feed.xml) |
-| [`justice-biotech-brief`](podcasts/justice-biotech-brief/) | Justice Fleischmann (Rodgers Lab, Calibr at Scripps) — biotech & pharma headlines with focus on VEGF×PD-L1, JAK ADCs, and trispecific T cell engagers | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/justice-biotech-brief/feed.xml) |
-| [`receptor-and-reason`](podcasts/receptor-and-reason/) | Alan Huebschen (Scripps) — neuropsychopharmacology + computational pharmacology + agentic AI in biology | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/receptor-and-reason/feed.xml) |
-| [`scripps-biomed-brief`](podcasts/scripps-biomed-brief/) | Peter Schultz (Scripps) — new targets, modalities, and technologies for human health | [feed.xml](https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/scripps-biomed-brief/feed.xml) |
+| [`affinity-matured`](podcasts/affinity-matured/) | Mahdi Shafiei (Scripps) — antibody & protein language models and AI-driven antibody engineering, incl. influenza | [feed.xml](https://raw.githubusercontent.com/mahdishafiei/ai-nuggets/main/podcasts/affinity-matured/feed.xml) |
 
 After cloning, run `git config core.hooksPath .githooks` once to activate the
 pre-commit feed-XML validator.
