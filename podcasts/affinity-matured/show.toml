@@ -1,0 +1,35 @@
+slug          = "affinity-matured"
+title         = "Affinity Matured"
+description   = "A daily AI-curated brief on antibody language models, protein language models, and AI-driven antibody engineering."
+owner         = "Mahdi Shafiei <mshafiei@scripps.edu>"
+podcast_slug  = "affinity-matured"
+
+[paths]
+prompt   = "PROMPT.md"
+feed     = "feed.xml"
+episodes = "episodes"
+scripts  = "scripts"
+logs     = "logs"
+
+[rss]
+base_url = "https://github.com/mahdishafiei/ai-nuggets/raw/main"
+link     = "https://github.com/mahdishafiei/ai-nuggets"
+
+# TTS providers. API-only config for a deployment without the self-hosted
+# Voxtral-on-Garibaldi HPC pipeline: Mistral API primary (cheap per char),
+# ElevenLabs fallback. Run the daily pipeline with LEGACY_TTS=1 so TTS is
+# done inline via gen_tts.py instead of the 3-phase Garibaldi path.
+[tts.primary]
+provider = "mistral"
+model    = "voxtral-mini-tts-2603"
+voice    = "en_paul_neutral"
+
+[tts.fallback]
+provider = "elevenlabs"
+voice    = "hpp4J3VqNfWAUOO0d1Us"
+model    = "eleven_flash_v2_5"
+
+[tts.fallback.settings]
+speed            = 1.1
+stability        = 0.5
+similarity_boost = 0.75
