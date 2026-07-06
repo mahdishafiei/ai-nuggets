@@ -67,3 +67,33 @@ Orchestrator (`run_all_shows.sh`) is running — I will not push. That's the orc
 
 **Pipeline hiccup fixed**: `podcasts/affinity-matured/episodes/` didn't exist, so the first `gen_tts.py` run failed on the final ffmpeg mux step; created the directory and reran with `--provider mistral` (no fallback needed because ElevenLabs isn't yet a wired provider in `gen_tts.py`).
 === 2026-07-06T00:40:43-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-06T04:00:02-07:00 start affinity-matured ===
+**No second episode today.**
+
+Today's episode `2026-07-06-affinity-matured` already shipped in commit `d0a9669` (script, audio, feed entry, sync all done at 00:40). Per PIPELINE.md's re-invocation rule, I ran the same search under the same recency filter, excluding today's already-shipped items — nothing fresh remains.
+
+## Candidate funnel (re-invocation at 04:00)
+
+**bioRxiv** (2026-07-05 → 2026-07-06 window, 83 items paginated across cursors 0/30/60): substantive matches after dropping neuro/ecology/proteomics on generic keyword hits:
+- `10.64898/2026.07.02.736172` Sphingosine 1-phosphate lyase in influenza pathogenicity — host defense biology, no ML, skipped
+- `10.64898/2026.06.30.735626` Norovirus VP1 capsid H-bonding — capsid biophysics, no antibody engineering, skipped
+- `10.64898/2026.06.30.735565` 8D3 shuttle antibody mechanism — **already shipped 2026-07-05**
+- `10.64898/2026.07.01.735754` TME scRNA-seq + AI biomarker — off-topic, skipped
+- `10.64898/2026.07.01.735807` Pan-proteome DL nominates GPR35 for orphan bacterial metabolite — small-molecule receptor deorphanization, no antibody, skipped
+
+**arXiv** (cache from 00:20 still current + live q-bio.BM/QM and cs.LG antibody/protein queries for pub ≥ 2026-07-03): zero new in-scope items. Weekend arXiv is thin as usual and Fri 2026-07-03 already covered by prior run.
+
+**PubMed** (`reldate=3`, 50 IDs, filtered on antibody/protein-LM/design terms):
+- `42402023` PLM + molecular graph for drug-hormone receptors — **already funnelled and skipped by prior run** (no antibody)
+- `42399636` Immunoinformatics-designed multi-epitope influenza vaccine — reverse vaccinology + wet-lab, no ML depth, skipped
+- `42398614` Nanobody sandwich ELISA for CEACAM-5 — diagnostic assay, no engineering/ML, skipped
+- Remainder: clinical serology, ADC/AACR review, autoantibody case reports, vaccine wet-lab — all off-scope
+
+**ChemRxiv**: `r.jina.ai`-rendered search returned no substantive antibody/protein-LM item in the 2026-07-04 → 2026-07-06 window (Cloudflare-gated API otherwise; consistent with prior run's null result).
+
+**News / model releases**: no fresh (last 1–2 days) antibody/protein-LM tool, weight, or dataset release surfaced.
+
+**Source-level issues**: none — all APIs responded on the first try.
+
+**Outcome**: no fresh candidate meeting the audience bar after excluding today's already-shipped items. Per PIPELINE.md ("If after excluding today's already-shipped items there are no fresh candidates left, the right outcome is no second episode for the day"), no bonus episode is produced. No files changed; no commit made.
+=== 2026-07-06T04:03:43-07:00 done  affinity-matured (exit 0) ===
