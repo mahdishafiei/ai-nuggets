@@ -12,6 +12,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Technology"/>
     <item>
+      <title>Four-year drift in the human antibody repertoire, frustration-guided MSA subsampling for alternative conformations, TCR-HLA restriction from sequence, and a PLM-plus-graph fusion for cell-penetrating peptides</title>
+      <description>Four items today. A Briney/Burton follow-up in Scientific Reports resamples two donors from their landmark 10^15-10^18 accessible-repertoire study four years later: gross features (V/J usage, CDRH3 length) are conserved but fine features (V-J-D combinations, N/P junctional sequences) drift substantially — a challenge to the stationarity assumption embedded in repertoire-trained language models. SF-Cluster subsamples multiple sequence alignments by patterns of predicted local energetic frustration instead of sequence similarity, and improves alternative-conformation recovery by +15.5 pts on allosteric systems over AF-Cluster, with the effective MSA depth doing most of the work. TRIOPS predicts a TCR's restricting HLA allele from sequence alone using cross-reactivity-aware negative sampling by HLA pseudosequence similarity, hits 0.97 AUC on paired-chain TCRs, and recapitulates allele-specific HLA-A/B loss from bulk TCGA RNA-seq. DeepCPP is a template PLM-plus-residue-graph fusion for cell-penetrating peptide prediction — noteworthy less for the biology than for the architecture that is now default in this space.</description>
+      <pubDate>Mon, 06 Jul 2026 00:38:44 -0700</pubDate>
+      <guid isPermaLink="false">2026-07-06-affinity-matured</guid>
+      <link>http://garibaldi.scripps.edu:8420/episodes/2026-07-06-affinity-matured.mp3</link>
+      <enclosure url="http://garibaldi.scripps.edu:8420/episodes/2026-07-06-affinity-matured.mp3" length="4625388" type="audio/mpeg"/>
+      <itunes:duration>9:38</itunes:duration>
+      <itunes:summary>Longitudinal antibody-repertoire drift from Briney and Burton (Scripps): gross features conserved, fine features change over four years; SF-Cluster uses frustration patterns to subsample MSAs and beat AF-Cluster on alternative conformations; TRIOPS predicts TCR-HLA restriction from sequence with cross-reactivity-aware negative sampling and reads out HLA loss from bulk TCGA data; DeepCPP pairs ESM-2 with a multi-view residue graph for cell-penetrating peptides.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>Immune-receptor geometry, uncertainty-aware TCR specificity, a brain-shuttle antibody mechanism, and ESM3-distilled implicit solvent</title>
       <description>Four items today: TCR-FramePose introduces a local-frame descriptor set that decomposes TCR-pMHC docking into CDR3-local pose, with germline framework — not CDR3 sequence — organizing shared receptor placement. PRISM is an uncertainty-aware metric-learning framework for T-cell receptor specificity that abstains on out-of-distribution receptors and augments training with structure-guided synthetic sequences preserving interface energetics. A cryo-EM structure of the model brain-shuttle antibody 8D3 bound to mouse transferrin receptor 1 explains pH-dependent binding modes and small-scale avidity, guiding a graded panel of shuttle variants with different in-vivo brain penetration. Finally, an MIT group distills ESM3 into a GNN implicit solvent that drives stable MD and reproduces folding free-energy landscapes and IDP ensembles.</description>
       <pubDate>Sun, 05 Jul 2026 23:57:52 -0700</pubDate>

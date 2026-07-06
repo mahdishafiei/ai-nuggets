@@ -18,3 +18,4 @@ Published. Candidate funnel:
 
 Shipped: `2026-07-05-affinity-matured` — 8:53, 4,264,690 bytes, Mistral primary TTS (`en_paul_neutral`, 4 chunks, 533.0 s total synth). Feed synced to Garibaldi, committed `f1ec23a`, pushed to origin/main.
 === 2026-07-05T23:59:34-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-06T00:20:01-07:00 start affinity-matured ===
