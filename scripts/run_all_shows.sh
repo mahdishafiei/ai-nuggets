@@ -33,8 +33,8 @@
 
 set -u
 
-REPO=/Users/mahdishafieineyestanak/Ai_Nugget
-CLAUDE=/Users/mahdishafieineyestanak/.local/bin/claude
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+CLAUDE="${CLAUDE:-$(command -v claude 2>/dev/null || echo "$HOME/.local/bin/claude")}"
 STAGGER_SECONDS=${STAGGER_SECONDS:-600}
 SHOWS_LIMIT=${SHOWS_LIMIT:-0}
 PHASE2_TIMEOUT_SECS=${PHASE2_TIMEOUT_SECS:-3600}
@@ -43,10 +43,18 @@ LEGACY_TTS=${LEGACY_TTS:-1}
 GARIBALDI_HOST=garibaldi.scripps.edu
 GARIBALDI_STAGE_DIR=ai-nuggets-stage   # relative to remote $HOME
 
-# Cron's PATH is /usr/bin:/bin only. publish_episode.sh calls `npx wrangler`
-# which lives under nvm. Prepend the current node bin so child processes
-# (publish_pending.py → publish_episode.sh) see npx. Update on node upgrade.
-export PATH="$REPO/.venv/bin:/opt/homebrew/bin:$HOME/.local/bin:$PATH"
+# On Garibaldi, ffmpeg/python 3.11 come from Environment Modules, not PATH by
+# default. No-op on machines without Modules (e.g. the Mac).
+if [ -f /usr/share/Modules/init/bash ]; then
+  . /usr/share/Modules/init/bash
+  module load ffmpeg python/3.11.4 >/dev/null 2>&1 || true
+fi
+
+# Cron's PATH is minimal (/usr/bin:/bin). Prepend the repo venv (python3 +
+# requests) and wherever node/npm live (nvm on Garibaldi, homebrew on Mac) so
+# gen_tts.py and publish_episode.sh find everything they need.
+NVM_NODE_BIN="$(ls -d "$HOME"/.nvm/versions/node/*/bin 2>/dev/null | head -1)"
+export PATH="$REPO/.venv/bin:/opt/homebrew/bin:$HOME/.local/bin:${NVM_NODE_BIN}:$PATH"
 
 # Capture all output to a per-run log when not running interactively (e.g.
 # under cron). The 1AM cron previously dropped Phase 2/3 logs entirely,
