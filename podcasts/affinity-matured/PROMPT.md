@@ -51,10 +51,11 @@ The best item might come from any of them. If one source fails transiently
 
 Relevance keyword set (apply to title + abstract):
 `antibody language model`, `antibody design`, `antibody engineering`,
-`nanobody`, `VHH`, `CDR`, `paratope`, `epitope`, `affinity maturation`,
-`humanization`, `developability`, `broadly neutralizing`, `influenza`,
-`hemagglutinin`, `protein language model`, `ESM`, `inverse folding`,
-`de novo binder`, `RFdiffusion`, `AlphaFold`, `diffusion model protein`.
+`nanobody`, `VHH`, `nanobody VHH scaffold engineering`, `CDR`, `paratope`,
+`epitope`, `affinity maturation`, `humanization`, `developability`,
+`broadly neutralizing`, `influenza`, `hemagglutinin`, `protein language
+model`, `ESM`, `inverse folding`, `de novo binder`, `RFdiffusion`,
+`AlphaFold`, `diffusion model protein`.
 
 1. **bioRxiv** — recent preprints (last 2 days) in bioinformatics, synthetic
    biology, immunology, biophysics. Use the details API:
@@ -88,7 +89,9 @@ acceptable outcome; reaching back to plug an old paper is not.
 
 # 3. Format
 
-- **One episode per day, up to ~20 minutes** (target ~1,800–2,800 words).
+- **One episode per day, up to ~30 minutes** (target ~2,700–4,200 words). Let
+  length follow how much substantive material the day has — don't pad to
+  hit the ceiling, and don't trim a genuinely strong day back down to 20.
 - **Pick the 3–5 best items** of the day. If the day is thin, fewer is fine —
   do not pad. Rank by relevance to the audience above and by technical
   substance.
