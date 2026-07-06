@@ -2,8 +2,7 @@
  * Podcast analytics + serve Worker.
  *
  * Route: GET|HEAD /p/:podcast/u/:user_id/:episode_id.mp3
- *   - logs one row to D1 and one data point to Analytics Engine (both via
- *     ctx.waitUntil so they don't block the response)
+ *   - logs one row to D1 (via ctx.waitUntil so it doesn't block the response)
  *   - serves the mp3 directly from R2 (with Range support). Missing objects
  *     return 404.
  *
@@ -16,7 +15,6 @@
 
 export interface Env {
   DB: D1Database;
-  AE: AnalyticsEngineDataset;
   BUCKET: R2Bucket;
   IP_SALT: string;
   ALLOWED_PODCASTS: string;
@@ -162,15 +160,6 @@ export default {
           .run();
       } catch (err) {
         console.error("D1 insert failed", err);
-      }
-      try {
-        env.AE.writeDataPoint({
-          blobs: [podcast, userId, episodeId, method, country ?? "", colo ?? "", ua ?? "", ipHash],
-          doubles: [bot ? 1 : 0, asn ?? 0],
-          indexes: [podcast],
-        });
-      } catch (err) {
-        console.error("AE write failed", err);
       }
     })());
 

@@ -1,0 +1,20 @@
+=== 2026-07-05T23:49:13-07:00 start affinity-matured ===
+Published. Candidate funnel:
+
+## Candidate funnel (2026-07-05)
+
+- **bioRxiv** — 120 items scanned (2026-07-04 to 2026-07-05, all categories, paginated); 18 keyword hits; 4 substantive after discarding false matches:
+  - TCR-FramePose: local-frame descriptor for TCR-pMHC docking and CDR3 geometry — https://www.biorxiv.org/content/10.64898/2026.06.30.735664v1 ← **chosen**
+  - PRISM: peptide-specificity annotation of T-cell receptors with uncertainty quantification — https://www.biorxiv.org/content/10.64898/2026.06.30.735715v1 ← **chosen**
+  - Molecular mechanism of action of a blood brain barrier shuttle antibody (8D3–TfR1 cryo-EM) — https://www.biorxiv.org/content/10.64898/2026.06.30.735565v1 ← **chosen**
+  - Detailed molecular picture of protein folding during active translation — https://www.biorxiv.org/content/10.64898/2026.07.03.736445v1 (interesting biophysics; not ML-primary — dropped)
+- **arXiv** — daily cache (500 entries, last submissions 2026-06-30 → 2026-07-02) filtered for antibody/protein-LM terms; zero hits in the last 2 days. Broader `abs:antibody OR nanobody OR "protein language" OR ...` live query (200 results) also had zero items dated ≥ 2026-06-30. No arXiv item selectable within recency window.
+- **PubMed** — reldate=5, antibody+ML query, 50 hits; substantive shortlist:
+  - Knowledge Distillation of a Protein Language Model Yields a Foundational Implicit Solvent Model (JCTC, Airas & Zhang, MIT) — https://arxiv.org/abs/2601.05388 ← **chosen** (indexed 2026-07-03; noted as journal-version-of-preprint in the script)
+  - A Unified Molecular Graph and Protein Language Model Framework for Drug-Hormone Receptor Interactions (JCIM, Jul 5) — less core to antibody focus; dropped
+  - Rethinking peptide developability with sequence-only models (Chem Sci, Jul 2) — microplastic-binding peptides, not antibody; dropped
+- **ChemRxiv** — WebSearch returned no in-window antibody-LM items; skipped.
+- **News / model releases** — no new antibody/protein-LM model or weight release surfaced in the last 2 days.
+
+Shipped: `2026-07-05-affinity-matured` — 8:53, 4,264,690 bytes, Mistral primary TTS (`en_paul_neutral`, 4 chunks, 533.0 s total synth). Feed synced to Garibaldi, committed `f1ec23a`, pushed to origin/main.
+=== 2026-07-05T23:59:34-07:00 done  affinity-matured (exit 0) ===

@@ -5,12 +5,7 @@ compatibility_date = "2026-05-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "podcast"
-# Replace with the database_id printed by `npx wrangler d1 create podcast`.
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
-
-[[analytics_engine_datasets]]
-binding = "AE"
-dataset = "podcast_requests"
+database_id = "9dff998a-a064-470d-8cf0-3949f03e91e5"
 
 [[r2_buckets]]
 binding = "BUCKET"

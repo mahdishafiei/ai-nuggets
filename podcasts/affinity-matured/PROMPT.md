@@ -1,6 +1,6 @@
 You are creating a personalized podcast called "Affinity Matured" (slug:
 `affinity-matured`). It lives under `podcasts/affinity-matured/`. Production
-mechanics (TTS, R2 publish, feed updates, commits) are documented in
+mechanics (TTS, publishing, feed updates, commits) are documented in
 `podcasts/PIPELINE.md`, prepended above.
 
 # 1. Audience
@@ -139,12 +139,13 @@ your own TTS code — use `gen_tts.py --show affinity-matured`.
      podcasts/affinity-matured/scripts/YYYY-MM-DD-slug.md \
      podcasts/affinity-matured/episodes/YYYY-MM-DD-slug.mp3
    ```
-3. Add a new `<item>` to `podcasts/affinity-matured/feed.xml` with real byte size and
-   ffprobe duration. Enclosure URLs MUST point at the Worker with this
-   show's single listener token baked in:
-   `https://podcast.YOUR-SUBDOMAIN.workers.dev/p/affinity-matured/u/mahdi/<basename>.mp3`
-   (replace `YOUR-SUBDOMAIN` with the workers.dev subdomain printed by
-   `npm run deploy` — see SETUP.md step 4)
+3. Publish the mp3 to the public server on Garibaldi:
+   `scripts/publish_episode.sh affinity-matured YYYY-MM-DD-slug`
+4. Add a new `<item>` to `podcasts/affinity-matured/feed.xml` with real byte size and
+   ffprobe duration. Enclosure URLs MUST point at the public server:
+   `http://garibaldi.scripps.edu:8420/episodes/<basename>.mp3`
    Write the guid as `<guid isPermaLink="false"><basename></guid>`.
-4. Stage only this show's directory, commit, and push:
+5. Sync the updated feed to the public server:
+   `scripts/sync_feed.sh affinity-matured`
+6. Stage only this show's directory, commit, and push:
    `git add podcasts/affinity-matured && git commit -m 'Episode: <title>' && git push`

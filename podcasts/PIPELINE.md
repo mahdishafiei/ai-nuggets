@@ -174,8 +174,8 @@ files:
      * `__LENGTH__` for `<enclosure ... length="__LENGTH__" ...>`
      * `__DURATION__` for `<itunes:duration>__DURATION__</itunes:duration>`
    Everything else (title, description, guid, pubDate, link, enclosure
-   URL pointing at the Worker, itunes:summary, itunes:explicit) goes in
-   as final values. Indent the item with 4 spaces to match siblings.
+   URL pointing at the public server, itunes:summary, itunes:explicit)
+   goes in as final values. Indent the item with 4 spaces to match siblings.
 2. **`<basename>.commit-msg`** — the full commit message you would have
    used, e.g.
    `Episode: <commit-prefix>: <descriptive title>`. One line; no quoting.
@@ -197,9 +197,11 @@ line via `eval`), so the negation never fires and the loop sleeps
 forever. A 4-hour hang in May 2026 was traced to exactly this.
 
 Public RSS URL pattern: subscribers fetch
-`https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/<slug>/feed.xml`.
-Episode mp3 enclosures are served via the `podcast` Cloudflare Worker so
-downloads are logged centrally. See `worker/README.md` for setup.
+`https://raw.githubusercontent.com/andrewsu/ai-nuggets/main/podcasts/<slug>/feed.xml`
+(or, for this deployment, `http://garibaldi.scripps.edu:8420/feed.xml`).
+Episode mp3 enclosures are served directly from a persistent HTTP server on
+Garibaldi (`~/ai-nuggets-public/`, port 8420) — no Cloudflare involved. See
+`scripts/publish_episode.sh` and `scripts/sync_feed.sh`.
 
 ## Per-episode steps
 
@@ -218,23 +220,23 @@ slug; `<basename>` is the episode basename (no `.mp3`).
    If the script exits non-zero, investigate and fix the root cause — do
    NOT commit partial output.
 
-3. **Publish the audio to R2** so the Worker can serve it directly:
+3. **Publish the audio to the public server** so it's reachable directly:
    ```
    scripts/publish_episode.sh <slug> <basename>
    ```
-   (omit the `.mp3` suffix). The script wraps `wrangler r2 object put` and
-   uploads to the `ai-nuggets-episodes` bucket configured in
-   `worker/wrangler.toml`. If it fails, fix the error before committing —
-   the feed will reference a key that doesn't exist in R2 and listeners
-   will fall back to GitHub raw (only works while mp3s are still
-   committed; see footnote).
+   (omit the `.mp3` suffix). The script rsyncs the mp3 to
+   `~/ai-nuggets-public/episodes/` on Garibaldi, where the persistent
+   `http-server` process serves it at
+   `http://garibaldi.scripps.edu:8420/episodes/<basename>.mp3`. If it fails,
+   fix the error before committing — the feed would reference a URL that
+   404s.
 
 4. **Add a new `<item>`** to `podcasts/<slug>/feed.xml`, immediately after
    the opening channel metadata and before the existing items. Use the
    actual byte size of the generated mp3 for `enclosure length` and the
    rounded duration from `ffprobe` for `itunes:duration`. Keep enclosure
-   URLs pointing at the Worker
-   (`https://podcast.<sub>.workers.dev/p/<slug>/u/<user>/<basename>.mp3`).
+   URLs pointing at the public server
+   (`http://garibaldi.scripps.edu:8420/episodes/<basename>.mp3`).
    Keep the RSS feed valid XML — escape `&` → `&amp;`, `<` → `&lt;`, `>` →
    `&gt;` in every title, description, and summary. The
    `.githooks/pre-commit` hook will reject the commit if the feed doesn't
@@ -242,10 +244,18 @@ slug; `<basename>` is the episode basename (no `.mp3`).
    `<guid isPermaLink="false"><basename></guid>` — bare basenames without
    `isPermaLink="false"` violate RSS 2.0 and break strict podcast clients.
 
+5. **Sync the feed to the public server** so subscribers see the update:
+   ```
+   scripts/sync_feed.sh <slug>
+   ```
+   Run this after step 4 so the copy on Garibaldi matches what you just
+   committed.
+
 ## Commit (the orchestrator pushes)
 
-After all of today's episodes are generated, audio published to R2, and
-the feed updated, commit your show's files. Shows run concurrently in
+After all of today's episodes are generated, audio published to the public
+server, and the feed updated and synced, commit your show's files. Shows run
+concurrently in
 the same working tree, so:
 
 - **Stage only your own show's directory** — never `git add -A` or

@@ -1,4 +1,5 @@
 .env
+.DS_Store
 *.swp
 .nfs*
 __pycache__/
@@ -6,6 +7,7 @@ worker/node_modules/
 worker/.wrangler/
 docs/superpowers/specs/
 podcasts/*/episodes/*.mp3
+/logs/
 
 # Local Python virtualenv
 .venv/

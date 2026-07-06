@@ -34,11 +34,11 @@
 set -u
 
 REPO=/Users/mahdishafieineyestanak/Ai_Nugget
-CLAUDE=/Applications/cmux.app/Contents/Resources/bin/claude
+CLAUDE=/Users/mahdishafieineyestanak/.local/bin/claude
 STAGGER_SECONDS=${STAGGER_SECONDS:-600}
 SHOWS_LIMIT=${SHOWS_LIMIT:-0}
 PHASE2_TIMEOUT_SECS=${PHASE2_TIMEOUT_SECS:-3600}
-LEGACY_TTS=${LEGACY_TTS:-0}
+LEGACY_TTS=${LEGACY_TTS:-1}
 
 GARIBALDI_HOST=garibaldi.scripps.edu
 GARIBALDI_STAGE_DIR=ai-nuggets-stage   # relative to remote $HOME
