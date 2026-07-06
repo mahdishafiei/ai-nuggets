@@ -19,3 +19,51 @@ Published. Candidate funnel:
 Shipped: `2026-07-05-affinity-matured` — 8:53, 4,264,690 bytes, Mistral primary TTS (`en_paul_neutral`, 4 chunks, 533.0 s total synth). Feed synced to Garibaldi, committed `f1ec23a`, pushed to origin/main.
 === 2026-07-05T23:59:34-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-06T00:20:01-07:00 start affinity-matured ===
+Orchestrator (`run_all_shows.sh`) is running — I will not push. That's the orchestrator's job.
+
+## Run summary
+
+**Episode published:** `2026-07-06-affinity-matured` (9m38s, 4,625,388 bytes)
+
+**Commit:** `d0a9669 Episode: repertoire drift, SF-Cluster, TRIOPS, DeepCPP PLM-graph fusion`
+
+### Candidate funnel
+
+**bioRxiv** (2026-07-04 → 2026-07-06 window, `date` field): 127 items scanned; ~14 substantive relevance-filtered candidates after dropping neuro/genomics/ecology matches on generic terms:
+- `10.64898/2026.06.30.735664` TCR-FramePose — **shipped 2026-07-05**
+- `10.64898/2026.06.30.735715` PRISM — **shipped 2026-07-05**
+- `10.64898/2026.06.30.735565` 8D3 shuttle mechanism — **shipped 2026-07-05**
+- `10.64898/2026.06.30.735718` TRIOPS: TCR-MHC restriction from sequence — **CHOSEN**
+- `10.64898/2026.06.30.735584` scGPT finetuned on LINCS L1000 for perturbation-centric embeddings — skipped (single-cell, off-topic)
+- `10.64898/2026.06.30.735646` ClawBench for agentic LLMs on ACMG variant interpretation — skipped (variant calling, off-topic)
+- `10.64898/2026.06.30.735582` Quantum-inspired ADMET preprocessing — skipped (small molecules)
+- `10.64898/2026.07.01.733993` AI-driven detection of methylated peptides — skipped (proteomics MS, not antibody)
+- `10.64898/2026.07.03.736267` VirProtRAG: RAG for viral protein annotation — skipped (RAG, off-topic)
+- `10.64898/2026.07.03.736445` Protein folding during active translation — skipped (co-translational folding, biophysics)
+
+**arXiv** (cached listing + fresh q-bio.BM queries, ≥2026-06-25):
+- `2607.00180` SF-Cluster: frustration-guided MSA subsampling — **CHOSEN** (2026-06-30, ICML AI4Science oral)
+- `2606.30902` Structure-Regularized Interpretable TCR-Epitope Prediction — skipped (would have made three TCR items)
+- `2606.27942` Coevolution-aware ancestral sequence reconstruction — off-window (2026-06-26)
+- `2606.27939` Two-Stage FT for Protein Sequence Generation w/ AA Composition — off-window
+- `2606.28659` Transformer-based active learning for PRRS vaccine epitope selection — off-window
+- `2607.00879` Commutative Algebra Learning for Protein Flexibility — skipped (very small niche)
+
+**PubMed** (`reldate=5`, 100 IDs, filtered on antibody/protein ML terms):
+- `42393236` Longitudinal drift in circulating human antibody repertoire, Joyce/Nemoz/Bastidas/Briney/Burton, Sci Rep 2026-07-02 — **CHOSEN (lead)**; Nature auth wall on full text, worked from PubMed + Nature abstract via `r.jina.ai`
+- `42391080` DeepCPP: ESM-2 + multi-view residue graph for cell-penetrating peptides, IEEE JBHI 2026-07-02 — **CHOSEN**
+- `42402023` Molecular graph + ESM-2 for drug-hormone receptor interactions — skipped (hormone receptors, no antibody)
+- `42397476` TDA for ADC payload discovery — skipped (small-molecule payloads, no ML depth)
+- `42397283` Knowledge distillation of PLM → implicit solvent — **already shipped 2026-07-05**
+- `42393236`, `42391080` see above
+
+**medRxiv** (2026-07-04 → 2026-07-06): 61 items, one substantive item (community-based maternal care) — none in scope.
+
+**ChemRxiv**: no in-scope candidates surfaced.
+
+**News / model releases**: WebSearch returned no fresh (last-1–2-day) tool/model releases for antibody or protein LM.
+
+**Source-level issues**: none. All queried APIs (bioRxiv details, arXiv API, NCBI E-utils, biorxiv full-text via `fetch_preprint.py`) responded on the first try; the Nature Sci Rep full text is behind an auth wall, so the lead item was written from the PubMed abstract and the `r.jina.ai`-rendered Nature abstract only — the summary avoids any numeric claim beyond what those two sources report, and no fine-feature overlap percentage is stated.
+
+**Pipeline hiccup fixed**: `podcasts/affinity-matured/episodes/` didn't exist, so the first `gen_tts.py` run failed on the final ffmpeg mux step; created the directory and reran with `--provider mistral` (no fallback needed because ElevenLabs isn't yet a wired provider in `gen_tts.py`).
+=== 2026-07-06T00:40:43-07:00 done  affinity-matured (exit 0) ===
