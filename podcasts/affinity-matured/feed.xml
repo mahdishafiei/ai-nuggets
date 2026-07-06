@@ -11,5 +11,16 @@
     </itunes:owner>
     <itunes:explicit>false</itunes:explicit>
     <itunes:category text="Technology"/>
+    <item>
+      <title>Immune-receptor geometry, uncertainty-aware TCR specificity, a brain-shuttle antibody mechanism, and ESM3-distilled implicit solvent</title>
+      <description>Four items today: TCR-FramePose introduces a local-frame descriptor set that decomposes TCR-pMHC docking into CDR3-local pose, with germline framework — not CDR3 sequence — organizing shared receptor placement. PRISM is an uncertainty-aware metric-learning framework for T-cell receptor specificity that abstains on out-of-distribution receptors and augments training with structure-guided synthetic sequences preserving interface energetics. A cryo-EM structure of the model brain-shuttle antibody 8D3 bound to mouse transferrin receptor 1 explains pH-dependent binding modes and small-scale avidity, guiding a graded panel of shuttle variants with different in-vivo brain penetration. Finally, an MIT group distills ESM3 into a GNN implicit solvent that drives stable MD and reproduces folding free-energy landscapes and IDP ensembles.</description>
+      <pubDate>Sun, 05 Jul 2026 23:57:52 -0700</pubDate>
+      <guid isPermaLink="false">2026-07-05-affinity-matured</guid>
+      <link>http://garibaldi.scripps.edu:8420/episodes/2026-07-05-affinity-matured.mp3</link>
+      <enclosure url="http://garibaldi.scripps.edu:8420/episodes/2026-07-05-affinity-matured.mp3" length="4264690" type="audio/mpeg"/>
+      <itunes:duration>8:53</itunes:duration>
+      <itunes:summary>TCR-FramePose local-frame descriptor for TCR-pMHC docking and CDR3 pose; PRISM uncertainty-aware TCR specificity with structure-guided synthetic augmentation; cryo-EM mechanism of the 8D3 blood-brain-barrier shuttle antibody with pH-graded variants; and knowledge distillation of ESM3 into a GNN implicit solvent for molecular dynamics.</itunes:summary>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
   </channel>
 </rss>
