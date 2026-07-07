@@ -159,3 +159,27 @@ Substantive shortlist after de-duping vs. already-shipped items (CD16a-D1/Murin,
 Bonus segment `2026-07-07-affinity-matured-bonus` (~9:27, 4,536,572 bytes) with three items: the Pierce-lab AlphaFold2/3 + sampling benchmark on antibody/TCR complex modeling (lead — quotable 41% → 59% antibody-peptide near-native via model pooling), Genedata's sequence-only ESM2-650M ΔTm result (framed against this morning's ESM+MM/GBSA piece), and the Damgaard-lab 2A6 synthetic-human sdAb for M1-linked polyubiquitin with AlphaFold3 binding-mode prediction validated by saturation mutagenesis. Feed synced, committed as `70fc4ef`, pushed to `main`.
 === 2026-07-07T04:09:39-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-07T12:00:03-07:00 start affinity-matured ===
+Third episode of the day shipped in commit `e7f29e3`. Script (~4:54, 2,353,571 bytes), feed item, and public-server sync all complete. Not pushing — orchestrator handles that at end of runner cycle. `gen_tts.py` local fix remains uncommitted (out of scope for this show).
+
+## Candidate funnel (2026-07-07 second-bonus / late add, 12:00 re-invocation)
+
+**bioRxiv** — 270 preprints paginated across 2026-07-06/07 windows (cursors 0/30/60/90/120/150/180/210/240). Substantive shortlist after excluding items already shipped in today's morning (CD16a/Murin, CatESO, ESM+MM/GBSA/Rhodes, zero-shot-epistasis/Kalinina) and 04:00 bonus (Yin/Pierce AF benchmark, Genedata sequence-only ΔTm, Damgaard 2A6 M1-Ub sdAb):
+
+- ✅ **CHOSEN (lead & only item)** — Sussex/Reddy/Krause (E-T-H Zurich): *Breaking the Synthesis Barrier for AI-Designed DNA Libraries* — introduces **PGLD** (Policy Gradients for Library Design), synthesis-aware stochastic-library optimization bridging generative models and high-throughput screens; headline demo is a ~10^6-sequence library at ~$700 to explore the mutation space of a broadly neutralizing influenza antibody — `https://www.biorxiv.org/content/10.64898/2026.07.07.736931v1`. Posted 2026-07-07, body-not-yet-rendered on jina and PDF Cloudflare-blocked; qualifies for the PIPELINE "clearly dominant" exception (audience is antibody-engineering AI + flu bnAbs; Reddy+Krause pairing), so summarized from abstract with the caveat stated in the segment.
+- Considered / dropped — Wei/Eberini/Meyer: *ThermoFusion* (ESM2 + ThermoMPNN hybrid for ΔΔG mutation effects on enzymes) — `10.64898/2026.07.04.736494`. Off-scope-adjacent (enzyme, not antibody) AND thematically overlaps with the sequence-only ΔTm piece already shipped in this morning's bonus — declined to run a second-day-in-a-row stability item.
+- Considered / dropped — van der Hoeven/Rispens et al.: *FCRL5 is a fucose-sensitive IgG-Fc receptor* — `10.64898/2026.07.01.735886`. Directly Fc-engineering-relevant, but pure biochemistry with no ML/generative content — outside show remit.
+- Discarded (already funnelled in prior 2026-07-07 runs) — PEPstrMOD2, RulePep, BoltzMol-1, "distance-injection AlphaFold" framework, pan-proteome GPR35 pipeline.
+- Spurious keyword hits — mosasaur paleontology paper on "TCR" substring, aphantasia paper on "diffusion model", etc. Discarded.
+
+**arXiv** — shared daily cache `/tmp/ai-nuggets-arxiv-cache.xml` (500 entries, generated 04:00) re-scanned; only new hit for date ≥ 2026-07-03 was the SCION "agentic AI4Science" paper (`arxiv.org/abs/2607.03863`), which mentions antibody screening as a demo but is a general agentic-systems piece — off-scope.
+
+**PubMed** — reldate=3, 50 IDs. Only ML+antibody hits were the ESM+MM/GBSA paper (already shipped this morning) and BindRNAgen (RNA generation via latent diffusion, previously considered and dropped as non-antibody). No new fits.
+
+**ChemRxiv** — no in-scope items surfaced.
+
+**News / model releases** — nothing fresh in the 4–8h window since 04:00 bonus.
+
+**Source-level issues**:
+- bioRxiv full-text unavailable for PGLD (posted 2026-07-07 — HTML body not yet rendered; direct PDF and jina-PDF both Cloudflare-403). Fell through to abstract-only per PIPELINE §Read-the-source; segment explicitly says so. Semantic Scholar and OpenAlex both had no record for the DOI (freshly minted).
+- Semantic Scholar 404 on the fresh DOI is a source-side lag, not an outage — retrying would not have helped.
+=== 2026-07-07T12:09:23-07:00 done  affinity-matured (exit 0) ===
