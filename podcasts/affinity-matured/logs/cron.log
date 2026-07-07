@@ -98,3 +98,34 @@ Today's episode `2026-07-06-affinity-matured` already shipped in commit `d0a9669
 **Outcome**: no fresh candidate meeting the audience bar after excluding today's already-shipped items. Per PIPELINE.md ("If after excluding today's already-shipped items there are no fresh candidates left, the right outcome is no second episode for the day"), no bonus episode is produced. No files changed; no commit made.
 === 2026-07-06T04:03:43-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-06T20:00:06-07:00 start affinity-matured ===
+Episode shipped. Final summary follows for the cron log audit.
+
+**affinity-matured 2026-07-07 shipped in commit `d375a67`.** Script, audio (14:38, 7,023,011 bytes), feed item, sync to public server, and commit all completed. The orchestrator will push. `gen_tts.py` has an uncommitted local fix (exponential backoff on chunk retry, +5 lines) that unblocked a Mistral 429 midway through synthesis; leaving it uncommitted since it's outside the show directory — worth a separate infra commit later.
+
+## Candidate funnel
+
+**bioRxiv** (2026-07-06 → 2026-07-07 window, 111 items paginated across cursors 0/30/60/90):
+- `10.64898/2026.07.03.736431` Cid/Murin/Ward: CD16a D1 as allosteric ADCC checkpoint (cryo-EM + MINFLUX + NK-92) — **CHOSEN (lead)**
+- `10.64898/2026.07.04.736506` Gan/Zhang: CatESO differentiable enzyme sequence optimization via Kcat predictor + ESM-2/ESMFold — **CHOSEN**
+- `10.64898/2026.02.17.706292` (v2) Kolchina/Kalinina: 95 zero-shot models fail on epistasis (v2 posted 2026-07-06) — **CHOSEN**
+- `10.64898/2026.07.05.736589` Koch/Damgaard: single-domain antibody for M1-Ub chains, AlphaFold3 modelling — considered but less methodologically novel, dropped
+- `10.64898/2026.07.04.736485` BoltzMol-1 small-molecule virtual screening — off-topic (no antibody/protein-LM angle), skipped
+- `10.64898/2026.06.22.733733` PEPstrMOD2 non-natural-peptide structure prediction — peptide-only, off-scope, skipped
+- 5 spurious hits on 'tcr'/'diffusion model' inside neuroscience/paleontology titles — discarded
+
+**arXiv** (shared daily cache `/tmp/ai-nuggets-arxiv-cache.xml`): thin day — no in-scope protein/antibody preprints on 2026-07-06/07. `q-bio.BM/QM` were nearly empty; `cs.LG` matches were on `diffusion` (image/RL context) or `cdr` inside "Curriculum DRO", not immunology. No arXiv item picked.
+
+**PubMed** (`reldate=5`, 100 IDs, filtered on antibody/protein-LM/design terms):
+- `42405694` Rhodes et al., Schrödinger: ESM + MM/GBSA complementary for stability mutation triage, Protein Eng Des Sel 2026-07-06 — **CHOSEN**
+- `42393728` Li et al.: dual-modular-nanobody CAR-T FAP/CTLA-4 platform, J Hematol Oncol 2026-07-02 — nanobody engineering but very clinical/effector-cell-centric, dropped in favor of stronger picks
+- `42405461` Sen et al.: EGFR/HER2 bispecific via knob-into-hole + CrossMab, Biotechnol Bioeng 2026-07-06 — standard protein-engineering methods, no ML, dropped
+- Remaining 90-plus IDs: ADC clinical readouts, biosimilar meta-analyses, immunoinformatics vaccine designs, serology, glycan MS, checkpoint combinations — off-scope
+
+**ChemRxiv**: no in-scope antibody/protein-LM item surfaced.
+
+**News / model releases**: no fresh (last 1–2 days) antibody or protein-LM tool, weight, or dataset release.
+
+**Source-level issues**: Mistral TTS API 429ed on chunk 5/6 (and again on chunk 4/6 in the retry), because `gen_tts.py`'s per-chunk retry loop had zero backoff — three retries fired inside the rate-limit window. Fixed with a 30s → 60s exponential wait on retry (with `time` imported); re-ran with `--provider mistral` and all six chunks completed cleanly. All other sources responded first try.
+
+=== 2026-07-06T20:15:00-07:00 done affinity-matured (exit 0) ===
+=== 2026-07-06T20:15:00-07:00 done  affinity-matured (exit 0) ===
