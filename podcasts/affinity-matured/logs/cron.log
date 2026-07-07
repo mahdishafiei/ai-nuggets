@@ -130,3 +130,31 @@ Episode shipped. Final summary follows for the cron log audit.
 === 2026-07-06T20:15:00-07:00 done affinity-matured (exit 0) ===
 === 2026-07-06T20:15:00-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-07T04:00:05-07:00 start affinity-matured ===
+Bonus episode published (commit 70fc4ef, pushed to main).
+
+## Candidate funnel (2026-07-07 bonus re-invocation)
+
+**bioRxiv** — 164 unique preprints scanned across 2026-07-06/07; 28 keyword hits.
+
+Substantive shortlist after de-duping vs. already-shipped items (CD16a-D1/Murin, CatESO, ESM+MM/GBSA/Rhodes, zero-shot-epistasis/Kalinina):
+- ✅ **Chosen** — Benchmarking AlphaFold and related deep learning approaches for modeling antibody and TCR antigen recognition — Yin/Pierce, U-Maryland IBBR — https://www.biorxiv.org/content/10.64898/2026.07.04.736425v1
+- ✅ **Chosen** — Accurate ΔTm Prediction Without Protein Structure Inputs for Biomolecular Stability — Siegismund et al., Genedata — https://www.biorxiv.org/content/10.64898/2026.07.02.735991v1
+- ✅ **Chosen** — Development and Characterisation of a Versatile Single-Domain Antibody Specific for M1-linked Ubiquitin Chains — Damgaard lab, Copenhagen — https://www.biorxiv.org/content/10.64898/2026.07.05.736589v1
+- Considered / dropped — A generalisable framework to inject distance information into AlphaFold-like structure predictors — https://www.biorxiv.org/content/10.64898/2026.07.02.736010v1 (abstract-only from bioRxiv API, not clearly dominant)
+- Considered / dropped — RulePep: Interpretable ESM-Guided Neural-Symbolic Peptide Classification — https://www.biorxiv.org/content/10.64898/2026.07.03.736448v1 (peptide classification, not squarely antibody)
+- Considered / dropped — PEPstrMOD2 non-canonical peptide structure prediction (v-version of a Feb preprint; not antibody)
+- Considered / dropped — control-validated pan-proteome deep-learning pipeline (GPR35 nomination); uses ESM but target-discovery/small-molecule
+- Rest were spurious keyword matches (mosasaur fossil paper hitting "tcr" as substring, aphantasia hitting "diffusion model", etc.)
+
+**arXiv** — daily cache read (500 entries); 40 keyword hits from 2026-07-03+, but none squarely on antibody/protein-design after inspecting titles+abstracts (matches were mostly "diffusion model" on image/RL papers, "bindin" as a substring, "ppi" on non-PPI acronyms).
+
+**PubMed** — reldate=5, 50 results scanned. Notable observations:
+- ESM+MM/GBSA appeared here as PMID 42405694 (same paper already shipped in morning episode).
+- BindRNAgen (protein-binding RNA via latent diffusion, J Mol Biol) — considered / dropped (RNA generation, not antibody).
+- Others were clinical or non-ML antibody papers.
+
+**Sources with no failures this run.**
+
+### Summary of what shipped
+Bonus segment `2026-07-07-affinity-matured-bonus` (~9:27, 4,536,572 bytes) with three items: the Pierce-lab AlphaFold2/3 + sampling benchmark on antibody/TCR complex modeling (lead — quotable 41% → 59% antibody-peptide near-native via model pooling), Genedata's sequence-only ESM2-650M ΔTm result (framed against this morning's ESM+MM/GBSA piece), and the Damgaard-lab 2A6 synthetic-human sdAb for M1-linked polyubiquitin with AlphaFold3 binding-mode prediction validated by saturation mutagenesis. Feed synced, committed as `70fc4ef`, pushed to `main`.
+=== 2026-07-07T04:09:39-07:00 done  affinity-matured (exit 0) ===
