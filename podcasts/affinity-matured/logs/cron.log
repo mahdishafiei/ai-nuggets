@@ -158,3 +158,4 @@ Substantive shortlist after de-duping vs. already-shipped items (CD16a-D1/Murin,
 ### Summary of what shipped
 Bonus segment `2026-07-07-affinity-matured-bonus` (~9:27, 4,536,572 bytes) with three items: the Pierce-lab AlphaFold2/3 + sampling benchmark on antibody/TCR complex modeling (lead — quotable 41% → 59% antibody-peptide near-native via model pooling), Genedata's sequence-only ESM2-650M ΔTm result (framed against this morning's ESM+MM/GBSA piece), and the Damgaard-lab 2A6 synthetic-human sdAb for M1-linked polyubiquitin with AlphaFold3 binding-mode prediction validated by saturation mutagenesis. Feed synced, committed as `70fc4ef`, pushed to `main`.
 === 2026-07-07T04:09:39-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-07T12:00:03-07:00 start affinity-matured ===
