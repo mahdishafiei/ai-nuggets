@@ -221,3 +221,42 @@ Request ID: req_011CcpVNMz3WavukSMY2CitC
 === 2026-07-08T04:12:03-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-08T04:12:03-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-08T04:15:03-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Episode committed. Here's the candidate funnel for today's run:
+
+---
+
+**Candidate funnel — 2026-07-08**
+
+**arXiv** (cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries, July 8 snapshot)
+- Scanned 500 entries; 2 survived relevance filter
+- **AbICL: In-Context Learning for Antigen-Specific Antibody Affinity Ranking** — `arxiv.org/abs/2607.05846` ← **SELECTED**
+- Rethinking Scientific Discovery in the Agentic Era (2607.03863) — general AI agents, no antibody content, dropped
+
+**bioRxiv** (bioinformatics, immunology, biochemistry, biophysics, synthetic biology — July 6–8)
+- Scanned ~200 entries across 5 categories
+- Survived relevance filter (pre-exclusion): 12 items
+- Items already covered in July 7 episodes (4 episodes, 11 papers shipped):
+  - AlphaFold antibody/TCR benchmark (Pierce lab) — covered July 7 bonus
+  - ESM2-only ΔTm prediction — covered July 7 bonus
+  - M1-ubiquitin sdAb (2A6) — covered July 7 bonus
+  - CD16a allosteric nanobody (Ward/Zwick) — covered July 7 morning
+  - CatESO — covered July 7 morning
+  - Zero-shot epistasis benchmark — covered July 7 morning
+  - FCRL5 — covered July 7 evening
+  - ThermoFusion — covered July 7 evening
+  - Woolfson de novo PROTAC — covered July 7 evening
+  - PGLD (Reddy/Krause) — covered July 7 late add
+- Remaining fresh items:
+  - **IgG N-glycan agalactosylation reduces neutrophil inflammation** (10.64898/2026.07.02.735866, Vermeren lab) ← **SELECTED**
+  - IgD biophysics/self-tolerance (Nussenzweig lab) — could not confirm DOI due to MCP collision; skipped to avoid uncertain URL
+
+**PubMed** (last 5 days)
+- 30 results returned; none met relevance criteria (no antibody ML/design papers indexed in window)
+- Germinal (Nature Biotechnology, DOI 10.1038/s41587-026-03187-0) — published June 23, 2026; outside 5-day window
+
+**ChemRxiv** — no items within 2-day window
+
+**News/tools** — Chai-2 (June 2025), ESMFold2 (May 2026); both outside 1–2 day window
+
+**Today's episode:** 2 items, ~7 min. Thin day; previous four-episode run covered most of the July 6–7 drop.
+=== 2026-07-08T04:34:42-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
