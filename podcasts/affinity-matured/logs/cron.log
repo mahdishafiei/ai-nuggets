@@ -260,3 +260,33 @@ Episode committed. Here's the candidate funnel for today's run:
 
 **Today's episode:** 2 items, ~7 min. Thin day; previous four-episode run covered most of the July 6–7 drop.
 === 2026-07-08T04:34:42-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-08T12:00:03-07:00 start affinity-matured ===
+Episode published. Final summary for the audit log:
+
+**Episode shipped — `affinity-matured 2026-07-08 afternoon` (commit `6a555a8`, pushed to origin/main).**
+
+- **Script:** `podcasts/affinity-matured/scripts/2026-07-08-affinity-matured-afternoon.md` (~1,320 words)
+- **Audio:** `2026-07-08-affinity-matured-afternoon.mp3` — 7:55, 3,801,590 bytes, Mistral primary TTS (4 chunks, 475 s total synth). Verified reachable on public server (HTTP 200).
+- **Feed:** updated + synced to Garibaldi; XML validates.
+
+## Candidate funnel (re-invocation at 12:00 PDT, 2026-07-08)
+
+**bioRxiv** (2026-07-07 → 2026-07-08 window, 385 unique preprints paginated across 13 cursors): 28 core-keyword hits after strict antibody/protein-LM/design filter.
+
+Substantive shortlist after excluding items already shipped:
+- ✅ **CHOSEN** — Deimel/Nussenzweig (Rockefeller) + Chakraborty (MIT theory) + Blanchard (single-molecule): *Biophysical properties of IgD determine thresholds for self-tolerance and selection into germinal centers* — `10.64898/2026.07.02.735902`, posted 2026-07-07. Single-molecule dynamics + mouse genetics on IgD hinge → BCR affinity threshold. (Flagged in this morning's log as skipped due to MCP DOI collision; recovered here.)
+- ✅ **CHOSEN** — Lazar/Jewett (Northwestern) + Marks (Harvard) + Notin (ProteinGym): *Machine learning guided cell-free expression maps the biochemical landscape of carbonic anhydrase* — `10.64898/2026.07.07.736810`, posted 2026-07-08 v1. Saturation scan of 4,365 mutations at 70/90°C, benchmarks 22 zero-shot PLMs, then ProteinMPNN library filter → variant active after 95°C incubation.
+- Considered / dropped — Reddy (ETH Zurich): *Generative Drug Design in a Loop with dtSFM* — `10.64898/2026.06.10.731501`. Same shop as yesterday's PGLD; but target is small molecules (CFTR, GLP-1R), not antibodies — outside show's core scope.
+- Considered / dropped — Kranz et al.: *Determinants of Blood Group Antigen Expression and Prediction of Phenotypes by ML* — antigen prediction on 24 blood group systems; niche transfusion-medicine focus.
+- Excluded as already shipped in prior episodes: PEPstrMOD2, FCRL5, PGLD, ThermoFusion, IgG agalactosylation (today), plus the yesterday-shipped set (CD16a, CatESO, ESM+MM/GBSA, zero-shot epistasis, Pierce AF benchmark, Genedata ΔTm, Damgaard 2A6 sdAb, Woolfson TPD).
+
+**arXiv** (shared daily cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries): 9 keyword hits ≥ 2026-07-06, but only AbICL (`2607.05846`) is on-topic — already shipped this morning. Other hits are agentic-LLM/RAG papers with spurious "epitope"/"CDR"/"diffusion" matches. **No arXiv pick.**
+
+**PubMed** (`reldate=3`, 100 IDs): notable hits — PMID 42417800 *Engineering of tandem bispecific IL-7R agonist antibody TB4* (Prot Eng Des Sel) is antibody engineering but no ML content; PMID 42410059 *Benchmark of subcellular-localization predictors* (Nat Methods) is PLM-adjacent but off-antibody. Neither displaces the two bioRxiv picks.
+
+**ChemRxiv** / **News-tool-releases**: nothing fresh in the 2-day window.
+
+**Source-level issues**: bioRxiv full-text unavailable for both picks (fresh posts, body not yet rendered on `.full` HTML; jina render returned abstract-level content only) — per PIPELINE §Read-the-source, summarized from abstracts. Both papers noted as body-unrendered; specific model rankings for the 22-model benchmark called out as worth reading when the body renders. All other sources responded first-try.
+
+**Read depth**: both picks abstract-only via `fetch_preprint.py` → jina channel; abstracts were dense enough to support the summaries without body claims.
+=== 2026-07-08T12:12:00-07:00 done  affinity-matured (exit 0) ===
