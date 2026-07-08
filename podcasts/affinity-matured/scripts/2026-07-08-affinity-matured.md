@@ -1,0 +1,41 @@
+## Script
+
+Hello and welcome to Affinity Matured. Today is July 8th, 2026. Yesterday's archive drops were heavy — four episodes — so today is lighter: two items that didn't make it into yesterday's runs. First, a new arXiv preprint that applies in-context learning to antibody affinity ranking. Second, a bioRxiv paper that directly challenges the standard interpretation of I-g-G glycan agalactosylation, with consequences for how you might think about glycan engineering of antibody effector function.
+
+---
+
+**First: AbICL — in-context learning for antigen-specific antibody affinity ranking.**
+
+Accurately ranking antibody candidates by binding affinity is one of the central bottlenecks in therapeutic discovery. After an experimental campaign, you typically have a panel of affinity-matured variants and you want to prioritize them for the next round of characterization. The standard computational approach treats each candidate independently — you score it against some global model trained on mutagenesis data — and the model has no mechanism to exploit the labeled comparisons you've already generated from the same campaign. That's a significant waste of information, because the handful of ranked pairs from your own experiment encode antigen-specific structure-activity relationships that no generic model captures.
+
+A preprint posted to arXiv yesterday, called AbICL, reframes this as an in-context learning problem. The idea is borrowed directly from how large language models generalize to new tasks at test time: instead of retraining or fine-tuning, you hand the model a small set of labeled examples — called a support set — and it adapts its predictions on the fly. AbICL does this for antibody affinity ranking. At inference time, you provide a support set of antibody pairs from your specific campaign where you know which binds better, and the model uses that antigen-specific context to rank the unlabeled candidates in your query set, without any gradient updates.
+
+The architecture has two components. A pretrained structural encoder converts antibody sequences — or structures — into a representation, and a context ranking head processes the support set alongside the query to produce a ranked order. Training uses episodic meta-learning: during training, the model is exposed to many episodes, each structured to mimic the test-time scenario with a small labeled support set and an unlabeled query pool. The episodic setup is what teaches the model to use the context rather than ignoring it.
+
+Evaluated on the AbRank benchmark, AbICL consistently outperforms existing affinity ranking baselines across nearly all data splits. Importantly, the gains are largest in two regimes that are most practically relevant: distribution shift, where the test antigen differs from anything in the training set, and fine-grained discrimination, where affinity differences between candidates are small. Both of these conditions describe exactly the situation you're in during late-stage lead selection — working on a specific therapeutic target, trying to separate candidates that may differ by only a few-fold in K-D. The paper's argument is that under these conditions, anantigen-specific demonstration set is more informative than any generic model trained on diverse mutagenesis data, and in-context learning is the mechanism to exploit it.
+
+One thing worth noting about the framing: AbICL is not a generative model. It's a ranking oracle for candidate prioritization, designed to plug into a campaign where you already have some experimental data from the same antigen. That's a different bet than training large global affinity predictors on broad datasets, and it targets a gap that those models structurally can't fill — the gap between what a model has seen in training and what your specific antigen looks like.
+
+Paper link: https://arxiv.org/abs/2607.05846
+
+---
+
+**Second: Agalactosylated I-g-G doesn't drive neutrophil inflammation — and may suppress it.**
+
+The N-linked glycan on the I-g-G Fc region has been one of the most productive handles in antibody engineering for the past two decades. Remove core fucose, and you enhance binding to Fc-gamma-receptor-three-A and boost antibody-dependent cellular cytotoxicity. Add sialic acid, and you shift toward anti-inflammatory activity. Within that framework, the conventional reading of agalactosylation — loss of the terminal galactose residues on the Fc glycan — has been that it's pro-inflammatory. Elevated agalactosylated I-g-G is a consistent finding in rheumatoid arthritis, lupus, and a range of other inflammatory conditions, and the standard interpretation has been that this glycoform is a contributor to pathology rather than a consequence of it.
+
+A bioRxiv preprint posted yesterday from the Vermeren lab at the University of Edinburgh challenges that interpretation directly, at least for the neutrophil compartment. The team engineered recombinant human monoclonal I-g-G with either fully agalactosylated or fully galactosylated Fc glycans, assembled both glycoforms into immune complexes on surfaces, and then used those complexes to stimulate neutrophils drawn from healthy donors and from rheumatoid arthritis patients. The outcome measure was reactive oxygen species production — the canonical readout of neutrophil activation through Fc-gamma receptors.
+
+The result is the opposite of the conventional story. Neutrophils stimulated with agalactosylated immune complexes generated significantly less reactive oxygen species than those stimulated with galactosylated complexes, and this held for both healthy donor cells and patient-derived cells. The mechanism is mechanistically clean: agalactosylated I-g-G binds neutrophil Fc-gamma receptors more poorly than its galactosylated counterpart, and that weaker receptor engagement translates into lower activation of the downstream AKT and p38 MAP kinase pathway that drives NADPH oxidase activity, the enzyme responsible for the reactive oxygen species burst.
+
+The authors' interpretation is worth sitting with: rather than driving inflammation, the agalactosylated I-g-G that accumulates in inflammatory disease may be part of a compensatory response — a glycan change that the immune system itself is making to dial back excessive neutrophil-mediated tissue damage. The conventional view had those same glycan changes as a cause; this paper suggests they may be a consequence and a brake.
+
+What does this mean for antibody engineering? There are a few takeaways. First, if you're thinking about glycan engineering to modulate neutrophil-driven inflammation — for instance in autoimmune or inflammatory indications — agalactosylation may be a more useful tool than the conventional framing suggests. Engineering it in, rather than treating it as a manufacturing artifact to minimize, becomes a plausible design choice. Second, if you're engineering for enhanced A-D-C-C in an oncology context and your process generates some fraction of agalactosylated species, the neutrophil arm of the effector response may be less affected by that contamination than previously assumed. Third, the result adds to a growing literature that each glycan modification is read differently by different cell types and receptor systems — the afucosylation story that enhanced Fc-gamma-receptor-three-A engagement doesn't straightforwardly extend to all Fc receptor biology. Yesterday's episode covered a similar lesson from the FCRL-5 story.
+
+This is a preprint, the work uses engineered model antibodies rather than natural polyclonal I-g-G, and the in-vivo picture is almost certainly more complex than any single cell type can reveal. But the mechanistic story is clean and directly testable, and the counter-intuitive direction of the result is the kind of thing that doesn't show up in abstract-reading — it took making the engineered glycoforms and running the assays to get there.
+
+Paper link: https://www.biorxiv.org/content/10.64898/2026.07.02.735866
+
+---
+
+That's it for today. A short but focused episode — in-context learning to better use your own experimental data for antibody affinity ranking, and a challenge to the dogma on I-g-G galactosylation that has implications for how you think about glycan engineering. We'll be back tomorrow.

@@ -208,3 +208,16 @@ Episode published and pushed. Final summary follows.
 
 **Read depth:** FCRL5 read from the abstract plus rendered .full HTML body (paper is compact and biochemistry-forward; abstract already contained the E293R claim and afucosylation preference, body confirmed structural/domain details). ThermoFusion **abstract-only** — body not yet rendered on bioRxiv; flagged in the segment. Woolfson TPD paper **full text** read (68k-char jina render), quantitative claims (3 nM KD, >1000× MCL-1 selectivity, sc-apCC-2 crystal structures) drawn from body.
 === 2026-07-07T20:12:02-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-08T04:00:04-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcpUzFUWjnc6oz9cTfsPB
+=== 2026-07-08T04:07:12-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-08T04:07:12-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-08T04:10:12-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcpVNMz3WavukSMY2CitC
+=== 2026-07-08T04:12:03-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-08T04:12:03-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-08T04:15:03-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
