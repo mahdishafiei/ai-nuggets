@@ -183,3 +183,28 @@ Third episode of the day shipped in commit `e7f29e3`. Script (~4:54, 2,353,571 b
 - bioRxiv full-text unavailable for PGLD (posted 2026-07-07 — HTML body not yet rendered; direct PDF and jina-PDF both Cloudflare-403). Fell through to abstract-only per PIPELINE §Read-the-source; segment explicitly says so. Semantic Scholar and OpenAlex both had no record for the DOI (freshly minted).
 - Semantic Scholar 404 on the fresh DOI is a source-side lag, not an outage — retrying would not have helped.
 === 2026-07-07T12:09:23-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-07T20:00:02-07:00 start affinity-matured ===
+Episode published and pushed. Final summary follows.
+
+---
+
+**Episode published — affinity-matured 2026-07-07 (evening, fourth pass)**
+
+- **Script:** `podcasts/affinity-matured/scripts/2026-07-07-affinity-matured-evening.md` (2,538 words)
+- **Audio:** `podcasts/affinity-matured/episodes/2026-07-07-affinity-matured-evening.mp3` (8.08 MB, 16:50)
+- **Feed:** updated + synced; commit `38cd83a` pushed to origin/main.
+
+**Candidate funnel (re-invocation; excludes already-shipped items):**
+
+- **bioRxiv** (posted 2026-07-07, ~153 items total, paginated through full collection):
+  - Scanned = ~153; keyword-matched = ~30; substantive shortlist after excluding today's already-shipped picks:
+    - `10.64898/2026.07.01.735886` — *FCRL5 is a fucose-sensitive IgG-Fc receptor…* (Rispens, Sanquin) — **CHOSEN, lead**
+    - `10.64898/2026.07.04.736494` — *ThermoFusion: A Multimodal DL Framework for Enzyme Thermostability* (Meyer, Novartis) — **CHOSEN**
+    - `10.64898/2025.12.22.695915` — *De novo designed bifunctional proteins for targeted protein degradation* (Woolfson, Bristol) — **CHOSEN**
+    - `10.64898/2026.04.29.721096` — AI-aided peptide design with reduced amino acid alphabets — dropped (peripheral to antibody/protein-LM focus)
+    - `10.64898/2026.06.22.733733` — PEPstrMOD2 modified-peptide structure prediction — dropped (out of scope)
+- **arXiv** (2026-07-05→07 window from `/tmp/ai-nuggets-arxiv-cache.xml`): 6 keyword-superficial matches, none substantively on antibody/protein-LM engineering — no picks.
+- **PubMed / ChemRxiv / news:** not surveyed given a fourth-episode-of-the-day threshold — the three chosen bioRxiv items met the substance bar cleanly.
+
+**Read depth:** FCRL5 read from the abstract plus rendered .full HTML body (paper is compact and biochemistry-forward; abstract already contained the E293R claim and afucosylation preference, body confirmed structural/domain details). ThermoFusion **abstract-only** — body not yet rendered on bioRxiv; flagged in the segment. Woolfson TPD paper **full text** read (68k-char jina render), quantitative claims (3 nM KD, >1000× MCL-1 selectivity, sc-apCC-2 crystal structures) drawn from body.
+=== 2026-07-07T20:12:02-07:00 done  affinity-matured (exit 0) ===
