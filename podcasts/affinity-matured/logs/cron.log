@@ -303,3 +303,25 @@ Request ID: req_011CcqkFfXYDEX1Y162C7VKt
 === 2026-07-08T20:08:02-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-08T20:08:02-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-08T20:11:02-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Episode committed. Here's the candidate funnel for today's run:
+
+---
+
+**Candidate funnel — 2026-07-08 evening run**
+
+**Sources scanned:**
+
+- **bioRxiv** (2026-07-07 to 2026-07-08, bioinformatics/immunology/biochemistry/synthetic biology/biophysics categories): ~100+ items scanned. Relevant hits all date to 2026-07-07 and were already covered in today's morning/afternoon episodes (AbICL, IgG agalactosylation, IgD hinge entropy, carbonic anhydrase PLM benchmark, FCRL5, Woolfson de novo PROTACs). Zero new qualifying items for this run.
+
+- **arXiv cache** (`/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries from 2026-07-07): Only AbICL (already covered in morning episode). No additional antibody/protein-design-relevant entries.
+
+- **PubMed** (2026-07-03 to 2026-07-08, ~162 results): Substantive shortlist after filtering:
+  - ✓ **[CHOSEN]** Clark et al., "Humans and rhesus macaques share maturation pathways of HIV-1 envelope-reactive V3-glycan bnAb lineages" — Science Translational Medicine, 2026-07-08. Full text read via bioRxiv preprint (DOI 10.64898/2026.01.29.702664).
+  - ✓ **[CHOSEN]** Park et al., "Engineering of tandem bispecific IL-7 receptor agonist antibody promoting selective T cell expansion" — Protein Engineering Design & Selection, 2026-07-08. Abstract-only (behind paywall, no open-access version found).
+  - Wang et al., "Bispecific 10E8.4/iMab broadly neutralizing antibody in people with or without HIV-1: a phase 1 trial" — Nature Medicine, 2026-07-07. Dropped: pure clinical safety/PK readout, no engineering or ML content.
+  - Wang et al., "Preparation, characterization and application of feline CD3-specific single-domain antibodies" — AMB Express, 2026-07-07. Dropped: phage display generation paper for veterinary application, below bar for this show.
+
+- **ChemRxiv**: HTTP 403 (Cloudflare-blocked from this host). Skipped per source-failure rules.
+
+- **News/web search**: No qualifying new tool, model, or dataset releases found for 2026-07-08.
+=== 2026-07-08T20:23:37-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
