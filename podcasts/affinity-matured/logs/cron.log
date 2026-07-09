@@ -344,3 +344,49 @@ Request ID: req_011CcrQ69ecdHRgsZeZGEcQs
 === 2026-07-09T04:24:00-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
 === 2026-07-09T04:24:00-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-09T04:27:00-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+Episode is fully published. Here is the candidate funnel for today's run:
+
+---
+
+## 2026-07-09 affinity-matured — run summary
+
+**Commit:** `72e4a5c` — Episode: AstraZeneca ESM-2/AlphaFold self-association predictor, USP-ddG delta-delta-G with H1N1 CR6261 case study, A-Alpha Bio Atlas 450M affinity database
+
+**Script:** `podcasts/affinity-matured/scripts/2026-07-09-affinity-matured.md`
+**Audio:** `podcasts/affinity-matured/episodes/2026-07-09-affinity-matured.mp3` — 6,357,411 bytes, 13:14
+
+---
+
+## Candidate funnel (2026-07-09)
+
+### Sources scanned
+
+**bioRxiv** — 4 categories searched (bioinformatics, immunology, biochemistry, synthetic biology, biophysics, molecular biology), 2026-07-07 to 2026-07-09. ~180 items across all categories; keyword-filtered against the relevance set. 2 substantive hits:
+- Biophysical properties of IgD determine thresholds for self-tolerance and selection into GCs (Nussenzweig lab, immunology) — already covered 2026-07-08-afternoon; excluded
+- Generative Drug Design in a Loop with dtSFM (Reddy, synthetic biology) — DOI lookup returned wrong record (DNS/cache mismatch in MCP); retrieved separately; found to be small-molecule drug-target SFM, not antibody-specific — **dropped** (not relevant)
+
+**arXiv** — cache `/tmp/ai-nuggets-arxiv-cache.xml` present (270,860 entries, fetched 2026-07-09T11:00Z). 1 keyword hit:
+- AbICL: In-Context Learning for Antigen-Specific Antibody Affinity Ranking (arXiv 2607.05846) — **excluded**: already covered in 2026-07-08-affinity-matured (morning episode)
+
+**PubMed** — 5-day window (pdat 2026-07-04 to 2026-07-09), search: `(antibody AND (language model OR deep learning OR machine learning OR generative OR design)) OR (protein language model) OR (broadly neutralizing influenza)`. 157 total results; 2 substantive hits after discarding clinical trials, HCV/WNV papers, and non-ML work:
+- Predicting antibody self-association with sequence-structure fusion models (PMID 42420197, mAbs, AstraZeneca, pub. 2026-07-08) — **chosen** ← item 1
+- USP-ddG: unified structural paradigm with MoE for predicting ΔΔG on PPIs (PMID 42412784, Bioinformatics ISMB supplement, pub. ~2026-07-01, indexed 2026-07-04–09) — **chosen** ← item 2
+
+**ChemRxiv** — WebSearch site:chemrxiv.org; no relevant results within 2-day window
+
+**News/tools** — WebSearch for AI antibody/protein design tools and model releases, July 2026:
+- A-Alpha Bio Atlas launch (GlobeNewswire 2026-07-07) — 450M affinity measurements + AlphaBind + Atlas Consortium — **chosen** ← item 3
+
+### Shortlist (chosen items)
+
+- **[chosen]** Predicting antibody self-association with sequence-structure fusion models — https://doi.org/10.1080/19420862.2026.2694124
+- **[chosen]** USP-ddG: unified structural paradigm with data efficacy and MoE for predicting ΔΔG on PPIs — https://doi.org/10.1093/bioinformatics/btag249
+- **[chosen]** A-Alpha Bio Atlas launch — https://www.globenewswire.com/news-release/2026/07/07/3323508/0/en/A-Alpha-Bio-Launches-Atlas-to-Address-the-Data-Bottleneck-in-AI-Enabled-Protein-Design.html
+
+### Excluded / dropped
+
+- AbICL arXiv 2607.05846 — relevant but already covered 2026-07-08 morning
+- Biophysical properties of IgD (biorxiv 10.64898/2026.07.02.735902) — already covered 2026-07-08 afternoon
+- dtSFM generative drug design (biorxiv) — small-molecule focus, not antibody-specific
+- Linker-optimized bivalent nanobodies for LFIA (PMID 42419080, Biosensors) — nanobody engineering but no ML/AI modeling angle; diagnostic application only
+=== 2026-07-09T04:45:42-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
