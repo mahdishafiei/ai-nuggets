@@ -290,3 +290,16 @@ Substantive shortlist after excluding items already shipped:
 
 **Read depth**: both picks abstract-only via `fetch_preprint.py` → jina channel; abstracts were dense enough to support the summaries without body claims.
 === 2026-07-08T12:12:00-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-08T20:00:02-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcqjqergkrNsoGGxdUjQC
+=== 2026-07-08T20:02:24-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-08T20:02:24-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-08T20:05:24-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcqkFfXYDEX1Y162C7VKt
+=== 2026-07-08T20:08:02-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-08T20:08:02-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-08T20:11:02-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
