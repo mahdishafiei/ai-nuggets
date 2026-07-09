@@ -390,3 +390,37 @@ Episode is fully published. Here is the candidate funnel for today's run:
 - dtSFM generative drug design (biorxiv) — small-molecule focus, not antibody-specific
 - Linker-optimized bivalent nanobodies for LFIA (PMID 42419080, Biosensors) — nanobody engineering but no ML/AI modeling angle; diagnostic application only
 === 2026-07-09T04:45:42-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-09T12:00:03-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcrzsvycRL4xocj4TcH1a
+=== 2026-07-09T12:00:12-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-09T12:00:12-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-09T12:03:12-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Ccs183FHNeFymx9vaqqsQ
+=== 2026-07-09T12:03:23-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-09T12:03:23-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-09T12:06:23-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+No second episode today. Here is the candidate funnel for this re-invocation:
+
+---
+
+**Candidate funnel — 2026-07-09 re-invocation**
+
+**Sources scanned:**
+
+- **bioRxiv** (2026-07-08 / 2026-07-09): 30 items total. 6 keyword matches, all false positives (polyploidy, phytoplankton, multi-epitope vaccine for glanders, psoriatic arthritis explant, depleted uranium, neuroscience). 0 relevant.
+- **arXiv** (shared cache, 500 entries): 1 hit — AbICL (arXiv:2607.05846, July 7). Already featured in 2026-07-08-affinity-matured morning episode. **Excluded.**
+- **PubMed** (last 5 days): 20 articles retrieved. 1 relevant ML paper: LoMuS (DOI: 10.1093/bioinformatics/btag509, July 9) — LoRA + protein language model for protein stability prediction; no antibody content. Below relevance bar. 1 duplicate: self-association mAbs paper already in today's morning episode.
+- **ChemRxiv**: No fresh hits within last 2 days.
+- **News/tools**: No new antibody/protein AI model or dataset releases in the last 1–2 days found.
+
+**Shortlist after filtering:**
+
+- `AbICL` — https://arxiv.org/abs/2607.05846 — **excluded: already covered 2026-07-08**
+- `LoMuS` — https://doi.org/10.1093/bioinformatics/btag509 — **excluded: no antibody content**
+
+**Decision:** No fresh uncovered candidates remain. No second episode warranted today.
+=== 2026-07-09T12:15:58-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
