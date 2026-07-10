@@ -488,3 +488,37 @@ Request ID: req_011CctH59PAFD5czhhMThQVn
 === 2026-07-10T04:13:09-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-10T04:13:09-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-10T04:16:09-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Episode committed. Here is the candidate funnel for today's run:
+
+---
+
+**Candidate funnel — 2026-07-10**
+
+**bioRxiv** (bioinformatics, immunology, biochemistry, biophysics, synthetic biology, molecular biology, bioengineering — 2026-07-09/10):
+- Scanned ~280 items across 8 categories
+- Shortlist after relevance filter:
+  - **IgGM2: An All-Atom Foundation Model for Adaptive Immune Receptor Design** — `10.64898/2026.07.09.737510` ✓ **SELECTED**
+  - **FlexRibbon: Joint Sequence and Structure Pretraining for Protein Modeling** — `10.1101/2025.10.08.681293` v2 ✓ **SELECTED**
+  - **AlphaFold Database expands to proteome-scale quaternary structures** — `10.64898/2026.03.27.714458` v2 (resource paper, less direct antibody focus; passed over for Dayhoff Atlas)
+  - **The Dayhoff Atlas: scaling sequence diversity for improved protein generation** — `10.1101/2025.07.21.665991` v2 ✓ **SELECTED**
+  - EZSolver (bioRxiv, Arnold lab, flow matching for enzyme mechanisms) — interesting but not antibody-specific
+
+**arXiv** (from shared cache `/tmp/ai-nuggets-arxiv-cache.xml`):
+- Scanned 500 items
+- **AbICL: In-Context Learning for Antigen-Specific Antibody Affinity Ranking** — `2607.05846` — Already covered in 2026-07-08 morning episode; excluded
+
+**PubMed** (last 5 days, 189 matches):
+- `42420197` — AstraZeneca ESM-2/AlphaFold self-association (mAbs, 2026-07-08) — already covered in 2026-07-09 episode; excluded
+- Remaining: clinical trials, PK reviews, immunology — no further relevant hits
+
+**ChemRxiv** (site:chemrxiv.org search) — 403 Cloudflare block on article page; no usable content
+
+**News/tools** (last 1–2 days):
+- Chai-2 (biopharmatrend) — bioRxiv preprint dated 2025-07-05 (v1), out of recency window
+- Biohub ESMFold2/ESMC — preprint 2026-06-04, outside 1–2 day news window
+
+**Full text status:**
+- IgGM2: abstract-only (preprint too new, body not yet rendered by jina proxy); noted in script
+- FlexRibbon: full text read (74KB via jina)
+- Dayhoff Atlas: abstract-only (biorxiv API fallback); noted in episode as resource brief
+=== 2026-07-10T04:32:57-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
