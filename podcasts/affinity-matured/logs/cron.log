@@ -522,3 +522,34 @@ Episode committed. Here is the candidate funnel for today's run:
 - FlexRibbon: full text read (74KB via jina)
 - Dayhoff Atlas: abstract-only (biorxiv API fallback); noted in episode as resource brief
 === 2026-07-10T04:32:57-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-10T12:00:03-07:00 start affinity-matured ===
+Episode published and pushed. Now the required audit log summary.
+
+## Summary — 2026-07-10 afternoon bonus episode
+
+Re-invocation of a day that had already shipped the morning IgGM2 / FlexRibbon / Dayhoff-Atlas episode. Excluded those items and searched for fresh candidates in the same recency window. Published a 14-minute, 3-item bonus episode covering the PLM-conflates-fitness-with-mutation-supply paper (Glasgow, H3N2 K lineage), the AlphaFold Database quaternary expansion (Google DeepMind/EMBL-EBI, 1.8M complexes), and the Woolfson-lab all-alpha-helical rational de novo design paper (Bristol).
+
+- Script: podcasts/affinity-matured/scripts/2026-07-10-affinity-matured-afternoon.md (2,333 words)
+- Audio: podcasts/affinity-matured/episodes/2026-07-10-affinity-matured-afternoon.mp3 (7,018,831 bytes, 14:37, Mistral TTS)
+- Enclosure: http://garibaldi.scripps.edu:8420/episodes/2026-07-10-affinity-matured-afternoon.mp3
+- Commit: 19ce2ba, pushed to main
+
+### Candidate funnel
+
+Sources scanned (2-day window, 2026-07-09 → 2026-07-10):
+- **bioRxiv**: 720 unique DOIs across 25 paginated details-API pages; 77 items surviving keyword relevance filter; 16 items after discarding spurious matches (e.g., "esm" inside unrelated words, isolated "language model" mentions in genomics/plant work).
+- **arXiv**: shared daily cache at /tmp/ai-nuggets-arxiv-cache.xml (500 entries, dates 2026-07-06 to 2026-07-09); 1 relevant candidate (AbICL, 2026-07-07 — outside the 2-day recency window).
+- **PubMed / ChemRxiv / press releases**: not re-scanned for the bonus because bioRxiv already yielded a strong 3-item shortlist within the same window.
+
+Substantive shortlist (excluding today's already-shipped items IgGM2, FlexRibbon, Dayhoff Atlas):
+- PLM mutation biases on H3N2 K lineage, MacLean/Robertson, Glasgow CVR (bioRxiv 2026-07-09 v1) — **CHOSEN**
+- AlphaFold Database quaternary v2, Google DeepMind/EMBL-EBI (bioRxiv 2026-07-09 v2) — **CHOSEN**
+- Expanding all-α-helical protein space, Woolfson lab, Bristol (bioRxiv 2026-07-09 v1) — **CHOSEN**
+- Characterising AlphaFold 3's ability to predict TCR–pMHC specificity, Deane/Koohy (bioRxiv 2026-07-09 v1) — dropped (thematic overlap with morning IgGM2 item)
+- GELYTAC nanobody-based IgG depletion, AAV therapy (bioRxiv 2026-07-10 v1) — dropped (therapeutic delivery, thin ML/design content)
+- AbICL antibody affinity in-context learning (arXiv 2026-07-07) — dropped (outside 2-day recency window)
+
+### Depth
+- AFDB quaternary: full body via r.jina.ai reader proxy (64k chars).
+- PLM mutation biases and all-α-helical design: bioRxiv API abstract-only — bodies not yet rendered. Flagged in-script.
+=== 2026-07-10T12:12:57-07:00 done  affinity-matured (exit 0) ===
