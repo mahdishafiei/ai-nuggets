@@ -475,3 +475,16 @@ Here is the final candidate funnel:
 
 **Decision: No second episode today.** All fresh candidates are exhausted after excluding this morning's three items and the AbICL paper covered yesterday. Thin re-invocation day; skipping is the correct outcome per pipeline rules.
 === 2026-07-09T20:23:11-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-10T04:00:15-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CctGdzxxCchFb9oi1kuDc
+=== 2026-07-10T04:07:28-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-10T04:07:28-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-10T04:10:28-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CctH59PAFD5czhhMThQVn
+=== 2026-07-10T04:13:09-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-10T04:13:09-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-10T04:16:09-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
