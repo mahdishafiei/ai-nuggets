@@ -424,3 +424,54 @@ No second episode today. Here is the candidate funnel for this re-invocation:
 
 **Decision:** No fresh uncovered candidates remain. No second episode warranted today.
 === 2026-07-09T12:15:58-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-09T20:00:07-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcsdXLXgQgqTpAPZjx6Th
+=== 2026-07-09T20:00:46-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-09T20:00:46-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-09T20:03:46-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Ccsdnaj845MLY3eStP8qk
+=== 2026-07-09T20:04:11-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-09T20:04:11-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-09T20:07:12-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Ccse8ptDk55Jwpk8r51ti
+=== 2026-07-09T20:08:45-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-09T20:08:45-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-09T20:11:45-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+The candidate pool is empty for a meaningful second episode: AbICL (arXiv, July 7) was the only within-window match but was already featured in yesterday's morning episode. No second episode today is the right outcome.
+
+Here is the final candidate funnel:
+
+---
+
+## Candidate funnel — 2026-07-09 re-invocation
+
+**Already shipped today (excluded):**
+- AstraZeneca ESM-2/AlphaFold GNN self-association predictor (mAbs) — morning episode
+- USP-ddG unified delta-delta-G predictor (Bioinformatics/ISMB) — morning episode
+- A-Alpha Bio Atlas 450 M affinity measurements launch — morning episode
+
+**Sources scanned:**
+
+**bioRxiv** (July 7–9, 2026): 60+ items scanned across all pages; 0 matched relevance keywords. No antibody/protein LM preprints in this window.
+
+**arXiv** (cache + live q-bio.BM query):
+- 500 entries in cache; 1 relevance match: AbICL (arXiv 2607.05846, July 7, 2026) — **excluded**, already featured in 2026-07-08 morning episode.
+- Live q-bio.BM listing: UMA-Inverse (arXiv 2607.07866, July 8) — ligand-conditioned inverse folding for small-molecule pockets; fails audience filter (not antibody-relevant).
+- No other within-window matches.
+
+**PubMed** (last 5 days, 174 hits from broad query): 25 abstracts reviewed. No antibody ML/design papers; only clinical antibody trials, immunology, and vaccine papers.
+
+**ChemRxiv**: "Automation and Active Learning for Antibody Formulations" — dated ~September 2025, outside window.
+
+**News / tool releases (last 1–2 days)**: No new model, dataset, or tool releases identified.
+
+**Shortlist after spurious-match discard:** 1 item (AbICL) — already covered July 8.
+
+**Decision: No second episode today.** All fresh candidates are exhausted after excluding this morning's three items and the AbICL paper covered yesterday. Thin re-invocation day; skipping is the correct outcome per pipeline rules.
+=== 2026-07-09T20:23:11-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
