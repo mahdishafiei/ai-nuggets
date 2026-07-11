@@ -628,3 +628,39 @@ Episode published and pushed. Here's the audit trail for the run.
 
 *News/model releases:* no fresh (last 1-2 days) model or dataset releases surfaced.
 === 2026-07-11T04:22:10-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-11T12:00:02-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcvnfhZVrBtUJpTtuoxhM
+=== 2026-07-11T12:02:26-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-11T12:02:26-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-11T12:05:26-07:00 start affinity-matured (retry 1) ===
+Episode published. Per PIPELINE.md the orchestrator handles the push. Final summary for the log:
+
+## Run summary — Sat 2026-07-11 (afternoon supplement)
+
+- **Script:** `podcasts/affinity-matured/scripts/2026-07-11-affinity-matured-afternoon.md` (2,199 words)
+- **Audio:** 6,743,605 bytes / 14:03 duration
+- **Feed:** updated + synced to public server
+- **Commit:** `f8cabdb` (push deferred to orchestrator)
+
+## Candidate funnel (afternoon re-invocation)
+
+Search bar per PROMPT.md; already-shipped items excluded per re-invocation rule.
+
+- **bioRxiv (2026-07-10 to 2026-07-11, 433 records paginated in full):** 58 relevance-keyword hits, 5 after strict-keyword filter; substantive shortlist after dropping off-topic:
+  - `10.64898/2026.07.09.736951` — Hybrid quantum-classical de novo design of MHC class I-binding peptides (biochemistry, abstract-only, jina-full path fell through to 2016-char abstract; body HTML not yet rendered) — **CHOSEN as item 2 with abstract-only flag noted in script**
+  - `10.64898/2026.07.07.735601` — Single-domain antibody against α-synuclein for synucleinopathies (neuroscience) — off-axis, dropped
+  - `10.64898/2026.07.08.737356` — Serum IgG repertoire in COVID-vaccinated CF patients (immunology) — repertoire proteomics without ML angle, dropped
+  - `10.64898/2026.07.10.737673` — Variant-resistant SARS-CoV-2 N-protein epitope (microbiology) — traditional epitope mapping, dropped
+- **arXiv (fresh listing + submittedDate window query):** 0 papers in the 07-10..07-11 window (Fri/Sat, no announcements). Cached listing goes to 07-09; already-shipped items covered that window.
+- **PubMed (last 5 days, `esearch` + `esummary`, 50 IDs):** substantive shortlist:
+  - PMID 42431912 — Lykhopiy et al., Nat Commun, engineering trispecific IL-2R agonistic antibodies via geometry optimization for Treg targeting — full text obtained via Research Square PDF (v1 preprint) — **CHOSEN as item 1 (lead)**
+  - PMID 42429554 — Wang et al., Protein Cell, designed nanoparticles for multivalent HA display — paywalled, no OA route found, dropped
+  - PMID 42432495 — DEEPTHYBRID (BMC Bioinformatics) — Springer-authwalled, dropped
+  - PMID 42430862 — Curr Opin Struct Biol AIR review — already featured in morning episode
+- **ChemRxiv (WebSearch site:chemrxiv.org):** no fresh 07-10..07-11 hits.
+- **News / model releases (07-10..07-11 window):** no notable fresh releases; Aureka OpenDDE was 07-07 (out of recency).
+
+Selection: **Lykhopiy et al. (Nat Commun)** as the deep lead — real antibody engineering, VHH-based obligate trispecific with geometry-driven Treg selectivity, ex vivo + in vivo validation, full text available. **Ebadi et al. (bioRxiv quantum-classical MHC peptide GAN)** as a shorter secondary item with abstract-only flag per PIPELINE.md guidance.
+=== 2026-07-11T12:24:02-07:00 done  affinity-matured (exit 0) (retry 1) ===
