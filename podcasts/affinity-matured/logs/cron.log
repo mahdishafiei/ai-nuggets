@@ -566,3 +566,30 @@ Request ID: req_011CcuY7Y4yD8Qap9xb3Ley5
 === 2026-07-10T20:11:01-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-10T20:11:01-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-10T20:14:01-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Episode committed. Here is the candidate funnel for today's evening run:
+
+---
+
+**Candidate funnel — 2026-07-10 evening re-invocation**
+
+**Already shipped today (excluded):**
+- IgGM2 all-atom immune receptor design (bioRxiv 10.64898/2026.07.09.737510) — morning
+- FlexRibbon joint sequence-structure pretraining (bioRxiv 10.1101/2025.10.08.681293) — morning
+- Dayhoff Atlas protein LM resource (bioRxiv 10.1101/2025.07.21.665991) — morning
+- PLM pseudo-probabilities / H3N2 K lineage (bioRxiv 10.64898/2026.07.06.736753) — afternoon
+- AlphaFold Database quaternary expansion (bioRxiv 10.64898/2026.03.27.714458) — afternoon
+- Woolfson-lab all-α-helical de novo design (bioRxiv 10.64898/2026.07.03.736327) — afternoon
+
+**Sources searched:**
+- **bioRxiv** — paginated all 850 papers (2026-07-09/10); 9 matched broad antibody/protein-design keywords after excluding already-shipped items; none beyond the AlphaFold3 TCR paper met the strict specificity filter
+- **arXiv cache** (500 entries) — 1 relevant hit: AbICL (2607.05846, July 7, 2026) ✓ **selected**
+- **PubMed** (5-day window, July 5–10) — 215 results; antibody self-association mAbs paper (PMID 42420197) was most relevant but already covered in the July 9 morning episode; no other items survived the relevance filter within the window
+- **ChemRxiv** — no qualifying items in the 2-day window
+- **News/tools/releases** — Germinal (Nature Biotech) published June 23, outside the 5-day window; Protenix-v2 from April 2026, outside window; no same-day model releases found
+
+**Shortlist:**
+- AbICL: In-Context Learning for Antigen-Specific Antibody Affinity Ranking — arXiv 2607.05846, July 7, 2026 ✓ **selected**
+- Characterising AlphaFold3's ability to predict T-cell antigen specificity — bioRxiv 10.64898/2026.07.08.737208, July 8, 2026 (abstract-only) ✓ **selected**
+- Machine learning guided cell-free expression / carbonic anhydrase — already covered July 8 afternoon
+- AlphaFold3 TCR paper dropped candidates: bat influenza MHC-II (virology, not AI/antibody design); synuclein sdAb (therapeutic, not ML methods)
+=== 2026-07-10T20:33:21-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
