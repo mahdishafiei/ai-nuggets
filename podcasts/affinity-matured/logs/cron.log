@@ -600,3 +600,31 @@ Request ID: req_011CcvA7GQaVkf7DDnyfRbnU
 === 2026-07-11T04:03:00-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-11T04:03:00-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-11T04:06:00-07:00 start affinity-matured (retry 1) ===
+Episode published and pushed. Here's the audit trail for the run.
+
+**Published:** 2026-07-11 affinity-matured episode, 4 items, 3001 words, 18:10 runtime, commit `ed20f7e`.
+
+**Candidate funnel:**
+
+*bioRxiv (2026-07-10 to 2026-07-11, 413 items scanned, 38 keyword-relevant, 5 substantive after discarding spurious "progen"/"chai" matches):*
+- Benchmarking AI-Driven PTIm-mAb Across Eleven FDA-Approved Bispecific Antibodies (SANSHI Bio Solutions) — https://www.biorxiv.org/content/10.64898/2026.07.07.736933 — **CHOSEN**
+- Computational design of de novo integrated domains enables rational control of pathogen effector recognition in plant NLR immune receptors (Baker+Talbot+Banfield) — https://www.biorxiv.org/content/10.64898/2026.07.10.737686 — **CHOSEN**
+- Characterising AlphaFold 3s ability to predict T cell antigen specificity (v2) — already covered in 2026-07-10 episode
+- A single-domain antibody targets aggregation-prone region of α-synuclein — not ML-driven, skipped
+- Molecular-level analysis of serum IgG repertoires in COVID-19-vaccinated people with cystic fibrosis — repertoire but not ML methodology
+
+*arXiv (500-entry pre-fetched cache + focused queries, 3-second-throttled):*
+- UMA-Inverse: Ligand-Conditioned Protein Inverse Folding with a Distogram-Supervised Dense Pair Encoder (arXiv:2607.07866) — **CHOSEN**
+- AbICL (arXiv:2607.05846) — already covered in 2026-07-10 evening episode
+- DrugGen 2, Design-CP protein nanoparticle — not antibody/ML-antibody enough
+
+*PubMed (60 items, last 5 days):*
+- Progress in structure prediction and design of adaptive immune receptors (Cohen/Schneidman-Duhovny, Curr Opin Struct Biol 2026-07-10) — **CHOSEN** (review)
+- Engineering trispecific IL-2R agonistic antibodies through geometry optimization (argenx, Nat Commun 2026-07-10) — antibody but engineering, not ML-driven; skipped
+- Designed nanoparticles for multivalent HA display (Institute of Biophysics CAS, Protein Cell 2026-07-10) — abstract-only, Cloudflare + Europe PMC returned no body; skipped rather than misread
+- DEEPTHYBRID: T-cell antigen prediction via ProtBERT (BMC Bioinformatics 2026-07-10) — moderate relevance, dropped for space
+
+*ChemRxiv:* no fresh items in window matching the audience keyword set.
+
+*News/model releases:* no fresh (last 1-2 days) model or dataset releases surfaced.
+=== 2026-07-11T04:22:10-07:00 done  affinity-matured (exit 0) (retry 1) ===
