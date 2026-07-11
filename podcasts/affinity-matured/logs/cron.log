@@ -553,3 +553,16 @@ Substantive shortlist (excluding today's already-shipped items IgGM2, FlexRibbon
 - AFDB quaternary: full body via r.jina.ai reader proxy (64k chars).
 - PLM mutation biases and all-α-helical design: bioRxiv API abstract-only — bodies not yet rendered. Flagged in-script.
 === 2026-07-10T12:12:57-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-10T20:00:03-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcuXeWePRHkiewa3Y2jbs
+=== 2026-07-10T20:04:55-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-10T20:04:55-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-10T20:07:55-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcuY7Y4yD8Qap9xb3Ley5
+=== 2026-07-10T20:11:01-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-10T20:11:01-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-10T20:14:01-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
