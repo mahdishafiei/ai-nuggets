@@ -700,3 +700,33 @@ Committed. Now the final candidate funnel log as required by the pipeline.
 - `10.64898/2026.07.06.736667` Verma/Kim et al. — AI-informed neoantigen mRNA/LNP vaccine — dropped: T-cell focused, peripheral to antibody engineering scope
 === 2026-07-11T20:49:31-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
 === 2026-07-12T04:00:04-07:00 start affinity-matured ===
+Episode shipped. Final summary follows for the cron log.
+
+---
+
+## Episode 2026-07-12-affinity-matured — SHIPPED
+
+- **Script:** `podcasts/affinity-matured/scripts/2026-07-12-affinity-matured.md` (1,276 words, 2 items — thin day)
+- **Audio:** 3,563,354 bytes / 07:25 duration (Mistral primary voice)
+- **Publish:** mp3 rsynced to public server at `http://garibaldi.scripps.edu:8420/episodes/2026-07-12-affinity-matured.mp3`
+- **Feed:** new `<item>` prepended, XML validates, feed synced to Garibaldi
+- **Commit:** `ee2cf82` (push deferred to orchestrator per PIPELINE.md)
+
+## Candidate funnel (2026-07-12 morning first run)
+
+Recency filter applied per PROMPT.md (bioRxiv 2 days, arXiv 2 days, PubMed 5 days). Already-shipped items excluded across prior daily episodes.
+
+- **bioRxiv (2026-07-11 to 2026-07-12, 92 preprints paginated in full):** 25 keyword hits, most spurious (neuroscience "neural", small-molecule pathogen tools). Substantive shortlist after strict-keyword filter:
+  - `10.64898/2026.07.10.737860` — Ye/Wang/Brogi/Parks/Kuo/Gumbart (Georgia Tech, biophysics) — AlphaFold3/Boltz-2/Chai-1/BioEmu multi-state benchmark on Pf-MATE, LAO, SecA, β2AR — **CHOSEN as item 1 (lead)**
+  - `10.64898/2026.07.07.736993` — Azbijari/Wynne/David/Thurber (Oregon State, bioinformatics) — Nammu, 167M Mamba SSM mixed-modality foundation model beats gLM2 — **CHOSEN as item 2**
+  - `10.64898/2026.07.07.736817` — Rawat/Kyte/Greiff/Dorraji (Oslo) — NAZ-mAb FoldX computational antibody design — **DROPPED** (already featured in 2026-07-11 evening episode as fourth item; verified same DOI, same numbers)
+  - `10.64898/2026.07.07.737037` — Goel/Mishra (CMU) — AGPI genomic pathogen classifier with docking — dropped (small-molecule/docking, no antibody or protein-LM angle)
+  - `10.64898/2026.04.10.717844` — genomic foundation model variant effects (April, out of recency window)
+  - `10.1101/2025.10.22.684047` — single-cell tokenization for LLMs (October 2025, out of recency)
+- **arXiv (cached daily listing `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries, fetched 2026-07-12T11:00Z, last entries 2026-07-09):** no antibody/protein-design papers in the 2026-07-09..2026-07-12 window. No arXiv postings over the weekend (Fri PM–Sun).
+- **PubMed:** eutils.ncbi.nlm.nih.gov calls and the PubMed MCP tool were both blocked by the Claude Code auto-mode safety classifier this run (`This command requires approval` / `Permission for this action was denied by the Claude Code auto mode classifier`). One quick retry with a shorter query also blocked. Skipped per PIPELINE.md source-level failure rule; recall gap noted here.
+- **ChemRxiv (WebSearch):** blocked by the same classifier this run; skipped, gap noted.
+- **News/tools/GitHub/HuggingFace:** no notable fresh releases in the 1–2 day window relevant to the show scope.
+
+Selection: **multi-state predictor benchmark (Gumbart, Georgia Tech)** as the lead — direct, quantitative benchmark of the current-generation predictors we rely on for antibody–antigen complex prediction; pairs cleanly with the SFCluster/frustration-selected MSA piece from 2026-07-06. **Nammu (Oregon State)** as the architectural companion — Mamba state-space model as a competitive protein/nucleotide foundation-model alternative with linear-context implications for repertoire-scale antibody LMs. Two-item day accepted per PROMPT.md ("if the day is thin, fewer is fine — do not pad"). Both items read from bioRxiv API abstracts (bioRxiv full-body HTML not yet rendered for either — abstracts are self-contained on methodology and headline results, adequate depth per PIPELINE.md).
+=== 2026-07-12T04:16:48-07:00 done  affinity-matured (exit 0) ===
