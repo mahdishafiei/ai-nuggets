@@ -737,3 +737,45 @@ Request ID: req_011CcxhH93Dcmab1z7CgAPZN
 === 2026-07-12T12:12:57-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-12T12:12:57-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-12T12:15:57-07:00 start affinity-matured (retry 1) ===
+Episode shipped. Final summary for the cron log follows.
+
+---
+
+## Episode 2026-07-12-affinity-matured-evening — SHIPPED (re-invocation)
+
+- **Script:** `podcasts/affinity-matured/scripts/2026-07-12-affinity-matured-evening.md` (1,734 words, 2 items — thin weekend day)
+- **Audio:** 5,047,945 bytes / 10:31 duration (Mistral primary voice)
+- **Publish:** mp3 rsynced to Garibaldi at `http://garibaldi.scripps.edu:8420/episodes/2026-07-12-affinity-matured-evening.mp3`
+- **Feed:** new `<item>` prepended, XML validates, feed synced to public server
+- **Commit:** `a509479` (push deferred to orchestrator per PIPELINE.md)
+
+## Re-invocation state at start
+
+The 2026-07-12T12:00:03 run tripped an AUP-refusal from Claude Code (Request ID `req_011CcxhH93Dcmab1z7CgAPZN`) and left an untracked evening script and mp3 on disk. The pre-generated script's picks were audited against `Paper link:` lines in all prior `2026-07-*` episode scripts:
+- **NAZ-mAb** (`10.64898/2026.07.07.736817`) — already featured as item 4 of `2026-07-11-affinity-matured-evening`. Also explicitly dropped-with-reason by this morning's own funnel log (in `logs/cron.log`).
+- **AbICL** (`arxiv.org/abs/2607.05846`) — already featured as lead of `2026-07-10-affinity-matured-evening` and item 3 of `2026-07-11-affinity-matured-evening`.
+- **Prot-Aug** (`10.64898/2026.07.10.737545`) — genuinely fresh.
+
+Both duplicate picks violate the "do not pick an article that has already been featured in a shipped episode today" rule (interpreted correctly across the past-week window, matching the previous morning run's own behavior). Pre-generated mp3 deleted; script rewritten with fresh picks; TTS regenerated.
+
+## Candidate funnel (2026-07-12 evening re-invocation)
+
+Full re-search across all sources per PROMPT.md; already-shipped items excluded across every prior 2026-07-* episode.
+
+- **bioRxiv (2026-07-11 to 2026-07-12, full pagination across 5 cursors, 129 records):** 21 keyword hits; 5-item substantive shortlist after killing spurious matches (diffusion-MRI, LLM-for-neuroimaging-text, general ML on cells). All items:
+  - `10.64898/2026.07.10.737545` — Chen/Wang/Luo (HKUST) — ProtAug pLM-guided augmentation across 7 tasks — **CHOSEN as item 2**
+  - `10.64898/2026.07.10.737860` — Gumbart multi-state benchmark — dropped (shipped in morning)
+  - `10.64898/2026.07.07.736993` — Nammu — dropped (shipped in morning)
+  - `10.64898/2026.07.07.736817` — NAZ-mAb — dropped (shipped 07-11 evening)
+  - `10.64898/2026.04.10.717844` — Evo 2 genomic FM probe (posted 07-11) — stretch, off-axis for antibody audience, dropped
+  - `10.64898/2026.07.11.737882` — ProtPen (AF+eggNOG functional annotation) — off-scope, dropped
+  - `10.64898/2026.07.10.737679` — M6AFormer (RNA m6A) — off-scope, dropped
+- **arXiv (cached listing `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries, last submittedDate 2026-07-09):** no entries dated ≥ 2026-07-10; no live fetch attempted (rate-limit note honored). Weekend gap consistent with morning run's finding.
+- **PubMed (`esearch` + targeted `esummary`, primary 198 IDs + 69 targeted, ~97 abstracts inspected):** two direct-hit AIR/AI papers plus one clinical-format hit:
+  - PMID 42414619 (`10.1038/s41591-026-04472-w`) — Theodore/Sobieszczyk/Ho (Columbia, Aaron Diamond ARC, Nat Med) — bispecific 10E8.4/iMab HIV-1 bnAb phase 1, 54 pts, NCT03875209 — **CHOSEN as lead**
+  - PMID 42432495 — DEEPTHYBRID (ProtBERT + Inception CNN for tumor T cell antigen) — modest and off-axis for antibody audience, dropped
+  - Other PubMed hits were duplicates of already-shipped items (Lykhopiy trispecific, Cohen/Schneidman-Duhovny AIR review, Ahmed AstraZeneca CSI-BLI) or clinical/vaccine papers without engineering/AI content.
+- **ChemRxiv / news / model releases:** no notable fresh 07-11..07-12 items relevant to show scope.
+
+Selection: **10E8.4/iMab bispecific bnAb phase 1 (Nat Med)** as the lead — engineered-antibody-format clinical readout with delayed-rash signal in 3/9 PLWH worth mechanistic follow-up; broadly-neutralizing HIV-1 bnAb is on the show's keyword list. Diagnostic value for the audience is what "success" looks like at trial for an engineered bispecific bnAb, even though the molecule itself predates the current generation of AI antibody design tools (flagged in-script). **Prot-Aug (HKUST, Luo lab)** as item 2 — direct methodological transfer to antibody-LM data-scarce fine-tuning (paratope, developability, affinity, immunogenicity), with a clean framework for a CDR-vs-framework variation-level ablation on the antibody-LM side. Two-item day accepted per PROMPT.md ("if the day is thin, fewer is fine — do not pad"). Prot-Aug read via bioRxiv `.full` HTML through the Jina channel (abstract-only page rendered, but the four-question/four-finding structure is self-contained on methodology and headline results). Nat Med paper read via PubMed metadata (abstract-only; full text paywalled — flagged and used cautiously in the script).
+=== 2026-07-12T12:29:37-07:00 done  affinity-matured (exit 0) (retry 1) ===
