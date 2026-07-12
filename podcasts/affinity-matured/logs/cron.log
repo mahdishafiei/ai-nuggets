@@ -730,3 +730,10 @@ Recency filter applied per PROMPT.md (bioRxiv 2 days, arXiv 2 days, PubMed 5 day
 
 Selection: **multi-state predictor benchmark (Gumbart, Georgia Tech)** as the lead — direct, quantitative benchmark of the current-generation predictors we rely on for antibody–antigen complex prediction; pairs cleanly with the SFCluster/frustration-selected MSA piece from 2026-07-06. **Nammu (Oregon State)** as the architectural companion — Mamba state-space model as a competitive protein/nucleotide foundation-model alternative with linear-context implications for repertoire-scale antibody LMs. Two-item day accepted per PROMPT.md ("if the day is thin, fewer is fine — do not pad"). Both items read from bioRxiv API abstracts (bioRxiv full-body HTML not yet rendered for either — abstracts are self-contained on methodology and headline results, adequate depth per PIPELINE.md).
 === 2026-07-12T04:16:48-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-12T12:00:03-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcxhH93Dcmab1z7CgAPZN
+=== 2026-07-12T12:12:57-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-12T12:12:57-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-12T12:15:57-07:00 start affinity-matured (retry 1) ===
