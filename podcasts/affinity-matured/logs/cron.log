@@ -677,3 +677,25 @@ Request ID: req_011CcwT534KzaHDNXRgq3Rj2
 === 2026-07-11T20:26:02-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-11T20:26:02-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-11T20:29:02-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Committed. Now the final candidate funnel log as required by the pipeline.
+
+---
+
+**Candidate funnel — 2026-07-11 night episode**
+
+**Sources scanned:**
+
+- **bioRxiv** (Jul 10–11, 458 total preprints across all categories): searched via API with full pagination. 28 candidates matched relevance keywords; after discarding spurious matches (ESM in unrelated context, "humanized mouse model" for non-antibody work, "scaffold" in neuroscience, "affinity" in GWAS) → 7 substantive candidates evaluated.
+- **arXiv cache** (`/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries, fetched 2026-07-11T11:00Z): 4 q-bio papers found; AbICL (2607.05846) and UMA-Inverse (2607.07866) already shipped in prior episodes. No new antibody/protein-design papers in cache.
+- **PubMed** (Jul 7–11, 187 results on broad query): most relevant hit was antibody self-association ESM-2 paper (already shipped in evening episode); remaining hits are clinical trials, vaccine studies, or out-of-scope.
+- **ChemRxiv**: Cloudflare-gated from this host; web search found no July 10–11 posts.
+- **News/tools/GitHub/HuggingFace**: no new model/dataset releases in the 1–2 day window directly relevant to the show's scope.
+
+**Shortlist after filtering already-shipped items (10 items shipped in prior 3 episodes today):**
+
+- `10.64898/2026.07.05.736665` Yang/Loh/Bertozzi et al. (Stanford) — GELYTACs: AAV-encoded nanobody-IGF2 bifunctional for persistent IgG lysosomal degradation ← **selected (lead)**
+- `10.64898/2026.07.09.737552` Kumar/Huang (Wayne State) — monobody 12D4 KRAS computational redesign ← **selected (brief, abstract-only)**
+- `10.64898/2026.07.07.735601` Pragati/Congdon/Sigurdsson (NYU) — anti-α-syn sdAb 2H1 in vivo ← **selected (brief, abstract-only)**
+- `10.64898/2026.07.08.737356` Lee/Ionov/Wright et al. — IgG repertoire in CF COVID-vaccinated cohort (Ig-Seq, convergent antibodies) — dropped: no ML/AI component, clinical/repertoire characterization outside core scope
+- `10.64898/2026.07.06.736667` Verma/Kim et al. — AI-informed neoantigen mRNA/LNP vaccine — dropped: T-cell focused, peripheral to antibody engineering scope
+=== 2026-07-11T20:49:31-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
