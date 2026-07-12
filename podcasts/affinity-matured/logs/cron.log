@@ -699,3 +699,4 @@ Committed. Now the final candidate funnel log as required by the pipeline.
 - `10.64898/2026.07.08.737356` Lee/Ionov/Wright et al. — IgG repertoire in CF COVID-vaccinated cohort (Ig-Seq, convergent antibodies) — dropped: no ML/AI component, clinical/repertoire characterization outside core scope
 - `10.64898/2026.07.06.736667` Verma/Kim et al. — AI-informed neoantigen mRNA/LNP vaccine — dropped: T-cell focused, peripheral to antibody engineering scope
 === 2026-07-11T20:49:31-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-12T04:00:04-07:00 start affinity-matured ===
