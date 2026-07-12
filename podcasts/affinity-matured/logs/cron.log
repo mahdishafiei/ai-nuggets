@@ -664,3 +664,16 @@ Search bar per PROMPT.md; already-shipped items excluded per re-invocation rule.
 
 Selection: **Lykhopiy et al. (Nat Commun)** as the deep lead — real antibody engineering, VHH-based obligate trispecific with geometry-driven Treg selectivity, ex vivo + in vivo validation, full text available. **Ebadi et al. (bioRxiv quantum-classical MHC peptide GAN)** as a shorter secondary item with abstract-only flag per PIPELINE.md guidance.
 === 2026-07-11T12:24:02-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-11T20:00:03-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcwSE3jtUk1v1qQSXH1fa
+=== 2026-07-11T20:15:00-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-11T20:15:00-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-11T20:18:00-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CcwT534KzaHDNXRgq3Rj2
+=== 2026-07-11T20:26:02-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-11T20:26:02-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-11T20:29:02-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
