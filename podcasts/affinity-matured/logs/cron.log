@@ -779,3 +779,37 @@ Full re-search across all sources per PROMPT.md; already-shipped items excluded 
 
 Selection: **10E8.4/iMab bispecific bnAb phase 1 (Nat Med)** as the lead — engineered-antibody-format clinical readout with delayed-rash signal in 3/9 PLWH worth mechanistic follow-up; broadly-neutralizing HIV-1 bnAb is on the show's keyword list. Diagnostic value for the audience is what "success" looks like at trial for an engineered bispecific bnAb, even though the molecule itself predates the current generation of AI antibody design tools (flagged in-script). **Prot-Aug (HKUST, Luo lab)** as item 2 — direct methodological transfer to antibody-LM data-scarce fine-tuning (paratope, developability, affinity, immunogenicity), with a clean framework for a CDR-vs-framework variation-level ablation on the antibody-LM side. Two-item day accepted per PROMPT.md ("if the day is thin, fewer is fine — do not pad"). Prot-Aug read via bioRxiv `.full` HTML through the Jina channel (abstract-only page rendered, but the four-question/four-finding structure is self-contained on methodology and headline results). Nat Med paper read via PubMed metadata (abstract-only; full text paywalled — flagged and used cautiously in the script).
 === 2026-07-12T12:29:37-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-12T20:00:03-07:00 start affinity-matured ===
+Episode shipped. Final summary for the cron log follows.
+
+---
+
+## Episode 2026-07-12-affinity-matured-night — SHIPPED (second re-invocation)
+
+- **Script:** `podcasts/affinity-matured/scripts/2026-07-12-affinity-matured-night.md` (1,878 words, 1 item — single-item spotlight, thin Sunday night)
+- **Audio:** 5,273,434 bytes / 10:59 duration (Mistral primary voice, 5 chunks stitched)
+- **Publish:** mp3 rsynced to Garibaldi at `http://garibaldi.scripps.edu:8420/episodes/2026-07-12-affinity-matured-night.mp3` (HTTP 200 verified)
+- **Feed:** new `<item>` prepended, XML validates, feed synced to public server
+- **Commit:** `dfa95a9` (push deferred to orchestrator per PIPELINE.md)
+
+## Re-invocation state at start
+
+Third invocation of the day. Two episodes already shipped today: the 04:00 morning run (Gumbart multi-state predictor bias + Nammu Mamba SSM foundation model) and the 12:00→retry-shipped-at-12:29 evening run (10E8.4/iMab bispecific bnAb Nat Med phase 1 + ProtAug pLM-guided augmentation). All 23 `Paper link:` DOIs/URLs from all 2026-07-* episode scripts audited before selection to exclude re-picks.
+
+## Candidate funnel (2026-07-12 night re-invocation)
+
+Full re-search per PROMPT.md; already-shipped items across every prior 2026-07-* episode excluded (23 URLs).
+
+- **bioRxiv (2026-07-11 to 2026-07-12, full pagination — 5 pages × 30, 148 unique records):** 25 keyword hits; substantive shortlist after dropping already-shipped, off-scope (TCR/GVHD, RNA aptamer DB, spatial-omics, MHC-Aβ, m6A), and stale-scope items:
+  - `10.64898/2026.07.08.737319` — **Steenwyk, UC Berkeley — "A geometric atlas of how ESM3 organizes modalities across depth"** (bioRxiv, posted 2026-07-12) — **CHOSEN**. ESM3 interpretability paper directly on the show's audience keyword list (ESM family, protein language model); single-author; clean quantitative findings; PDF full-text extracted via pypdf (25 pages, main text + supplementary figure legends read).
+  - `10.64898/2026.07.10.737551` — Chen/Luo (HKUST) ProtBLIP2-SST (multimodal SaProt+Q-Former+BiomedBERT for open-ended protein captioning) — dropped: (a) already featured Luo lab this evening with ProtAug, back-to-back same-group same-day looks odd, (b) function-caption task less directly antibody-relevant than the ESM3 atlas.
+  - `10.64898/2026.07.11.737882` — ProtPen — already dropped in earlier funnels (off-scope function annotation).
+  - `10.64898/2026.07.10.737679` — M6AFormer (RNA m6A) — off-scope.
+  - `10.64898/2026.07.08.737144` — AptViralDB (nucleic acid aptamer DB) — off-scope for antibody LM/design.
+  - `10.64898/2026.07.08.737087` — Wang/Reshef (Columbia) donor TCR structural signature predicts aGVHD — well-executed and adjacent (repertoire modeling), but TCR-focused and not on the antibody-audience axis; dropped.
+- **arXiv:** cached listing (`/tmp/ai-nuggets-arxiv-cache.xml`, fetched 04:00 today) last submitDate 2026-07-09; weekend gap consistent with morning/evening funnel logs. Single antibody hit was AbICL, already shipped. Live query attempted, rate-limited (`Rate exceeded`); backed off per PIPELINE.md rather than retry-loop; used WebSearch fallback (`site:arxiv.org antibody 2607 July 2026`) — no fresh 2026-07-10..12 hits, only already-shipped AbICL.
+- **PubMed (esearch `reldate=3` datetype=pdat, 124 IDs; esummary + targeted efetch on antibody-keyword+ML-keyword titles):** no fresh antibody+ML title hits beyond already-shipped items. Trispecific IL-2R (PMID 42431912, Nat Commun) already shipped 2026-07-11 afternoon. DEEPTHYBRID PMID 42432495 already dropped in evening funnel.
+- **ChemRxiv / press / model releases:** WebSearch on "antibody design protein language model July 2026" surfaces only literature reviews and pre-2026-07 items; no fresh drops in scope.
+
+**Selection:** Steenwyk's ESM3 geometric atlas as a single-item Sunday-night spotlight. Directly on the show's keyword axis (ESM family, protein language model, mechanistic interpretability with antibody-LM implications), fresh (posted today), full text obtained cleanly via PDF extraction, and produces concrete practical guidance for anyone using ESM3 as a backbone for antibody-specific fine-tuning (which layer to extract, what happens to functional-annotation conditioning, natural antibody-specific follow-up experiment). Two-item quota would have been padding on a Sunday-night third episode; a single-item deep-dive is the shape the day warrants per PROMPT.md's "if the day is thin, fewer is fine — do not pad."
+=== 2026-07-12T20:13:28-07:00 done  affinity-matured (exit 0) ===
