@@ -839,3 +839,4 @@ Two-item day. Reason for the thin funnel: no antibody-specific new preprints (pa
 
 Published affinity-matured episode 2026-07-13 (~17:36, 8.45 MB, 2541 words). Lead item is the YTHDC1–ADAR1 inverse-design pipeline that repurposes RFdiffusion + ProteinMPNN as a proteome-search tool — including the specific methodological finding that interface-local pDockQ + Cα–Cα contact-pair filtering is required to discriminate hits in IDR-heavy complexes where global ipTM/ipSAE fail. Second item is ProtBLIP2-SST, a BLIP-2-style architecture (frozen SaProt + Q-Former + frozen Galactica-1.3B, LoRA fine-tune) for free-text protein function captioning, with the field-stratified finding that structure helps FUNCTION descriptions most and SIMILARITY the least. Committed 4b5e634 (not pushed).
 === 2026-07-13T04:18:38-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-13T12:00:28-07:00 start affinity-matured ===
