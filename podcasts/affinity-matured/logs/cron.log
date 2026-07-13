@@ -840,3 +840,28 @@ Two-item day. Reason for the thin funnel: no antibody-specific new preprints (pa
 Published affinity-matured episode 2026-07-13 (~17:36, 8.45 MB, 2541 words). Lead item is the YTHDC1–ADAR1 inverse-design pipeline that repurposes RFdiffusion + ProteinMPNN as a proteome-search tool — including the specific methodological finding that interface-local pDockQ + Cα–Cα contact-pair filtering is required to discriminate hits in IDR-heavy complexes where global ipTM/ipSAE fail. Second item is ProtBLIP2-SST, a BLIP-2-style architecture (frozen SaProt + Q-Former + frozen Galactica-1.3B, LoRA fine-tune) for free-text protein function captioning, with the field-stratified finding that structure helps FUNCTION descriptions most and SIMILARITY the least. Committed 4b5e634 (not pushed).
 === 2026-07-13T04:18:38-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-13T12:00:28-07:00 start affinity-matured ===
+Episode published: `2026-07-13-affinity-matured-afternoon` (19:27, 9.3 MB, 3,095 words, commit a839405, not pushed — orchestrator handles push).
+
+## Summary
+
+Afternoon supplement — three antibody/protein-design items today, all covered in full text. First, Tennenhouse/Fleishman (Weizmann, bioRxiv v2 posted 2026-07-13): **CADAbRe** — an end-to-end computational design pipeline for synthetic antibody repertoires. Combines all human V+J germlines with 141 experimental H3 loops, filters via CUMAb + independent A-Body-Builder-2 fold check (misfolding-prone flag when the two disagree), EpiNNet ML strategy selects freely-combinable germline+H3 sets. Golden Gate assembly gives 5×10⁸ designed Fabs at <$10⁻⁴ per variant. Panning against HEWL, SARS-CoV-2 RBD, mouse FLT3, and Lujo virus: 12 of 13 phage hits exactly match a designed sequence, EC50s 0.3–11 nM comparable to clinical benchmarks, developability suite (nanoDSF/BVP/AC-SINS/HIC) on par with 12 clinical-stage benchmark antibodies. Second, An/Cho/Kim (Yonsei + Institut Pasteur Korea, bioRxiv posted 2026-07-13): **mini-19** — de novo CD81-LEL binder via RFdiffusion + ProteinMPNN + AlphaFold2, with the specific methodological finding that truncated soluble receptor templates expose hydrophobic surfaces that fool single-ipTM filtering; multi-model backbone-convergence (≥2 of 5 AF2 models agree, ipTM>0.83) is what discriminates real hits. KD 0.5 nM, HCVcc IC50 1.2 nM, thermostable to 95°C, sibling mini-20 same scaffold 48× weaker. Third, Cao lab (Adv Sci published 2026-07-13; preprint bioRxiv 2026.03.20.713312): **HB148-M4** — four consensus SHMs (G26E/T28I/S53P/Y58F) mined by enrichment analysis of CoV-AbDab IGHV3-53 sequences with BA.1 neutralization data. Graft into germline HB148 restores ~100× KD to BA.1 RBD, neutralizes BA.1/BA.4-5 but not XBB.1.5; transferable to 3 of 4 other IGHV3-53 antibodies. Approximately additive per-position contributions imply distinct paratope-epitope contacts. Retrospective consensus-mining rather than de novo prediction, but a much more focused breadth-engineering strategy than DMS.
+
+## Candidate funnel
+
+- **bioRxiv (Jul 11–13)**: 309 unique preprints scanned across three days (fully paginated: 117+44+153 items). 13 substantive candidates matched antibody/protein-ML keywords. After excluding items already featured this week (2026.07.07.736817 NAZ-mAb, 2026.07.10.737551 ProtBLIP2-SST, 2026.07.08.737319 ESM3 atlas), the substantive shortlist:
+  - 2025.12.10.693474 v2 — CADAbRe (Fleishman lab, Weizmann) ✅ **chosen** — LEAD
+  - 2026.07.10.737702 — CD81 mini-19 (Cho/Kim, Yonsei + Institut Pasteur Korea) ✅ **chosen**
+  - 2026.07.08.737303 — Learned Immune Architectures across vaccines (Przytycki/Tomic, BU) — dropped, more systems vaccinology than antibody engineering
+  - 2026.07.08.737087 — TCR structural signature predicts GVHD — dropped, TCR-adjacent but not antibody
+  - 2026.06.21.733083 — HLA-A33 CD8 T cell epitopes from H5N1 — dropped, T-cell focused
+  - 2026.02.05.703637 — ARSENAL DNA language model — dropped, DNA not protein/antibody
+- **arXiv**: shared daily cache (/tmp/ai-nuggets-arxiv-cache.xml, 500 entries, Jul 7–10) + fresh live query (200 entries, Jul 9–10). Zero antibody-specific hits in the Jul 11–13 recency window. Live listings still trail two days behind. One tangential hit (2607.09039 Variable-Length Poisson Flow) was Jul 10 — outside the strict recency window.
+- **PubMed (5-day window)**: 189 results for `(antibody AND (language model OR deep learning OR machine learning OR generative OR design)) OR (protein language model) OR (broadly neutralizing influenza)`. Substantive shortlist after keyword filtering:
+  - PMID 42439482 (J Chem Inf Model) — Protein LM fitness estimates for resistance mutations — dropped (Wiley-adjacent, cancer resistance is off-scope)
+  - PMID 42439465 (Adv Sci) — Automation + Active Learning for Antibody Formulations — Cloudflare-gated, abstract-only; dropped as tail item
+  - PMID 42439327 (Adv Sci) — HB148 IGHV3-53 somatic evolution ✅ **chosen** — mapped to bioRxiv preprint 2026.03.20.713312 for full text
+  - PMID 42431912 (Nat Commun) — trispecific IL-2R geometry optimization — already featured 2026-07-11
+  - PMID 42438781 — Generative AI in antibody engineering review — dropped, narrative review with no primary data
+- **ChemRxiv**: no new antibody-relevant items in the last 2 days (Cloudflare-gated on this host, via WebSearch).
+- **News/model releases**: no new antibody-LM releases in the last 1–2 days.
+=== 2026-07-13T12:42:22-07:00 done  affinity-matured (exit 0) ===
