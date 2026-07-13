@@ -814,3 +814,28 @@ Full re-search per PROMPT.md; already-shipped items across every prior 2026-07-*
 **Selection:** Steenwyk's ESM3 geometric atlas as a single-item Sunday-night spotlight. Directly on the show's keyword axis (ESM family, protein language model, mechanistic interpretability with antibody-LM implications), fresh (posted today), full text obtained cleanly via PDF extraction, and produces concrete practical guidance for anyone using ESM3 as a backbone for antibody-specific fine-tuning (which layer to extract, what happens to functional-annotation conditioning, natural antibody-specific follow-up experiment). Two-item quota would have been padding on a Sunday-night third episode; a single-item deep-dive is the shape the day warrants per PROMPT.md's "if the day is thin, fewer is fine — do not pad."
 === 2026-07-12T20:13:28-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-13T04:00:08-07:00 start affinity-matured ===
+Committed 4b5e634 on main (not pushed — the orchestrator handles the single push at end of run per PIPELINE.md).
+
+## Candidate funnel (2026-07-13)
+
+Sources scanned:
+- **bioRxiv** (2026-07-12 to 2026-07-13): 73 total items paginated in full; ~11 survived keyword filter; 3 substantive AI-for-protein items after discarding spurious matches.
+- **arXiv** cached daily listing (500 recent cs.AI/cs.CL/cs.MA/q-bio items) + direct q-bio.BM pull (80 items) since cache had 0 q-bio.BM entries. Nothing fresh in-scope for antibody/protein design that wasn't already covered on 2026-07-11 (UMA-Inverse).
+- **PubMed** last 5 days: 171 hits on antibody + ML query; scanned top 40 esummary — one relevant review (In Silico Pharmacol, generative AI in antibody engineering for lung cancer) but it's a narrative review, not primary research; rest were unrelated clinical/biology items.
+- **Nature/Science** search: "Germinal" epitope-targeted antibodies (Nat Biotech, Brian Hie + SynBio Gao lab) — genuine hit but published 2026-06-23, outside the recency window.
+- **ChemRxiv**: no fresh in-scope items surfaced.
+
+Substantive shortlist:
+- **YTHDC1 poly-E docks ADAR1 Zα via inverse computational design** — https://www.biorxiv.org/content/10.64898/2026.07.08.737312v1 — Poptsova lab, HSE Moscow — **CHOSEN (lead)**
+- **ProtBLIP2-SST protein function captioning via SaProt + Q-Former + Galactica** — https://www.biorxiv.org/content/10.64898/2026.07.10.737551v1 — Luo lab, HKUST — **CHOSEN**
+- ARSENAL DNA language model v3 update — https://www.biorxiv.org/content/10.64898/2026.02.05.703637 — regulatory-DNA LM, adjacent to protein LMs but not audience-core
+- BioMetAll v2.0 metal-binding site prediction — https://www.biorxiv.org/content/10.64898/2026.07.09.737562 — incremental scoring/geometry update, weak fit
+- DrugGen 2 disease-aware LM — https://arxiv.org/abs/2607.08404 — small-molecule generation, out of scope
+- "Generative AI in antibody engineering: emerging concepts and translational bottlenecks in lung cancer" (In Silico Pharmacol PMID 42438781) — narrative review, no primary results
+
+Two-item day. Reason for the thin funnel: no antibody-specific new preprints (paired repertoire modeling, humanization, developability, broadly-neutralizing antibodies, influenza HA/NA, etc.) hit the recency window. Held the bar — did not reach back or drop into small-molecule/DNA-LM territory to fill a slot.
+
+## Summary
+
+Published affinity-matured episode 2026-07-13 (~17:36, 8.45 MB, 2541 words). Lead item is the YTHDC1–ADAR1 inverse-design pipeline that repurposes RFdiffusion + ProteinMPNN as a proteome-search tool — including the specific methodological finding that interface-local pDockQ + Cα–Cα contact-pair filtering is required to discriminate hits in IDR-heavy complexes where global ipTM/ipSAE fail. Second item is ProtBLIP2-SST, a BLIP-2-style architecture (frozen SaProt + Q-Former + frozen Galactica-1.3B, LoRA fine-tune) for free-text protein function captioning, with the field-stratified finding that structure helps FUNCTION descriptions most and SIMILARITY the least. Committed 4b5e634 (not pushed).
+=== 2026-07-13T04:18:38-07:00 done  affinity-matured (exit 0) ===
