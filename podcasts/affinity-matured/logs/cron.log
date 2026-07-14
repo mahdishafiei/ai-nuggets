@@ -883,3 +883,35 @@ Episode published: night edition committed and pushed as `120e5e9`.
 
 **Selected:** BCR-Mistral (lead — antibody language model directly on-brand), Aurora-A miniprotein (de novo protein design), Learned Immune Architectures (systems vaccinology ML) — 2,811 words, 18:45 audio.
 === 2026-07-13T20:17:16-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-14T04:00:07-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd1qVSbvSz6W6eZ2wptVS
+=== 2026-07-14T04:02:26-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-14T04:02:26-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-14T04:05:26-07:00 start affinity-matured (retry 1) ===
+Committed as `e8124d5`. Per PIPELINE.md, I don't push — the orchestrator handles the single final push. Printing the candidate funnel for the cron log.
+
+**Published: 2026-07-14-affinity-matured** — 20:07, 9,654,273 bytes, five items.
+
+Candidate funnel for 2026-07-14:
+
+Sources scanned:
+- bioRxiv 2026-07-13 → 2026-07-14: 279 items across 9 API pages; 36 keyword matches; 24 after AI-filter; 6 already covered in earlier 2026-07-13 episodes (CADAbRe v2, CD81 mini-19, HB148-M4, BCR-Mistral, Aurora-A miniprotein, Learned Immune Architectures/BTM); remaining ranked shortlist below.
+- arXiv q-bio.BM + q-bio.QM (fresh 100-item pull): no antibody/protein-design item on 2026-07-13 or 2026-07-14 that met the bar.
+- Shared cs.LG + q-bio cache (`/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries): all keyword hits were LLM/agent papers with spurious matches ("epitope"/"antibody" absent); no true positives.
+- PubMed / ChemRxiv / news feeds: not queried (bioRxiv alone yielded five publishable items within the recency window; no dominance issue).
+
+Substantive shortlist (bioRxiv):
+- **[CHOSEN]** TEDlm — domain-centric protein LM, Jones lab (UCL) — 10.64898/2026.07.09.737428
+- **[CHOSEN]** De novo selective kinase modulators — Baker lab (UW IPD) — 10.64898/2026.07.10.737808
+- **[CHOSEN]** AlphaFold3 audit — Beltrao lab (Fribourg/Lausanne) — 10.64898/2026.07.13.738147
+- **[CHOSEN]** ESM3 knotted-protein guided generation — 10.64898/2026.05.07.723606
+- **[CHOSEN]** Asymmetric structural transfer NL ↔ biology — 10.64898/2026.07.09.737502
+- HLA-A33-restricted CD8+ T cell epitopes from H5N1 (immunology, not AI/ML)
+- Structural modeling of type III effectors (structure prediction of bacterial effectors, weak fit)
+- Ensembling and feature attributions for sequence-to-activity models (regulatory genomics, out of audience)
+- Skipped: CADAbRe v2, CD81 mini-19 binder, HB148-M4, BCR-Mistral, Aurora-A miniprotein, Learned Immune Architectures — all covered in the three shipped 2026-07-13 episodes today.
+
+Source-side failures: none — all sources responded on first try.
+=== 2026-07-14T04:22:13-07:00 done  affinity-matured (exit 0) (retry 1) ===
