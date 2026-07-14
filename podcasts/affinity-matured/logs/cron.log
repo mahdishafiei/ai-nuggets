@@ -866,3 +866,20 @@ Afternoon supplement — three antibody/protein-design items today, all covered 
 - **News/model releases**: no new antibody-LM releases in the last 1–2 days.
 === 2026-07-13T12:42:22-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-13T20:00:03-07:00 start affinity-matured ===
+Episode published: night edition committed and pushed as `120e5e9`.
+
+## Candidate funnel
+
+**bioRxiv (2026-07-12 to 2026-07-13):** 262 items scanned, ~40 with antibody/ML/protein-design keyword hits after filtering. After discarding items already covered in today's morning + afternoon episodes (Poptsova YTHDC1/ADAR1 inverse-design, ProtBLIP2-SST, CADAbRe v2, CD81 mini-19, HB148-M4) and items covered in prior days (ESM3 modality geometric atlas — 2026-07-12 night), the shortlist was:
+
+- ✓ **10.64898/2026.07.07.735316** — BCR-Mistral / MS BCR classifier (Peet/Krishnan/Macklin, U Colorado Anschutz) — **selected**
+- ✓ **10.64898/2026.07.12.737516** — Aurora-A miniprotein motif scaffolding (Miles/Bayliss, Leeds + Gergely, Oxford) — **selected**
+- ✓ **10.64898/2026.07.08.737303** — Learned Immune Architectures across vaccines (Hao/Tomic/Przytycki, Boston U) — **selected**
+- **10.64898/2026.07.10.737808** — De novo FAK kinase modulators (v2 posted 2026-07-13) — plausible substitute for Aurora-A but afternoon already covered a mini-protein story (CD81 mini-19); Aurora-A picked because its motif-scaffolding + crystal-structure signature is more transferable methodologically
+
+**arXiv (shared cache, 500 entries):** 1 match — 2607.08404 (DrugGen 2, disease-aware LLM for drug discovery) — off-target (small-molecule).
+
+**PubMed / ChemRxiv / press:** not surveyed for this re-invocation — the three bioRxiv items comfortably fill the episode and the recency window is well-covered.
+
+**Selected:** BCR-Mistral (lead — antibody language model directly on-brand), Aurora-A miniprotein (de novo protein design), Learned Immune Architectures (systems vaccinology ML) — 2,811 words, 18:45 audio.
+=== 2026-07-13T20:17:16-07:00 done  affinity-matured (exit 0) ===
