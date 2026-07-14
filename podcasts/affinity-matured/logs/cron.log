@@ -915,3 +915,21 @@ Substantive shortlist (bioRxiv):
 
 Source-side failures: none — all sources responded on first try.
 === 2026-07-14T04:22:13-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-14T12:00:03-07:00 start affinity-matured ===
+Episode published and pushed. Summary of tonight's run:
+
+**Shipped:** `2026-07-14-affinity-matured-evening` — 18:05 mp3, 8.68 MB, four items.
+
+**Items chosen:**
+1. **GB-0669** (Generate Biomedicines, J Infect Dis, 2026-07-14) — first published Phase-1 of an AI-designed monoclonal antibody. Chosen — landmark clinical milestone.
+2. **Understanding LM scaling for protein fitness prediction** (Hou/Shen, Columbia, Nat Comput Sci) — mechanistic account of why bigger protein LMs stop helping fitness prediction. Chosen — direct utility for antibody-LM builders.
+3. **PeptideCLM-2** (Novo Nordisk + UT Austin, J Chem Inf Model) — SMILES-based chemical LM for therapeutic peptides. Chosen — modality-gap paper, ADC-adjacent.
+4. **MDMI** (Pardee lab, U Toronto, bioRxiv 2026-07-14) — two-stage structure-guided peptide design from tiny datasets. Chosen — transferable pattern for antibody CDR redesign.
+
+**Candidate funnel:**
+- bioRxiv 07-14: 104 scanned, 8 keyword hits; MDMI selected; others were off-topic (channel biophysics, cell biology, tATAC-see) or already-featured (ESM3 knotted proteins in this morning's episode).
+- bioRxiv 07-13: 251 scanned, 25 keyword hits; excluded because already featured — CADAbRe (afternoon 07-13), mini-19 CD81 (afternoon 07-13), Aurora-A miniprotein (night 07-13), Learned Immune Architectures / BTM (night 07-13), TEDlm/FAK/AF3 audit/asymmetric transfer (this morning). AlfaDAX/ActRIIA (10.64898/2026.07.09.737400) skipped — antibody+semaglutide combo with no ML content.
+- arXiv cache (500 entries, mostly cs.AI/CL/LG): 0 protein/antibody hits — q-bio.BM/QM absent from today's listing.
+- PubMed reldate=5: 30 results; three ML-relevant candidates surfaced (GB-0669, Hou/Shen scaling, PeptideCLM-2 — all chosen).
+- ChemRxiv, general web: not queried (four strong items already secured).
+=== 2026-07-14T12:17:15-07:00 done  affinity-matured (exit 0) ===
