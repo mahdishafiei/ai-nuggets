@@ -1011,3 +1011,28 @@ Episode published. Final summary and candidate funnel:
 - **ChemRxiv / general web / GitHub / Hugging Face**: not queried — five strong ML/antibody-engineering items already secured across bioRxiv + PubMed.
 === 2026-07-15T04:19:48-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-15T12:00:03-07:00 start affinity-matured ===
+Committed as `14ed12f`. Not pushing — orchestrator does that.
+
+## Candidate funnel (2026-07-15 afternoon re-invocation)
+
+Re-invocation rule applied: excluded items already featured in this morning's shipped episode (H3BERTa; frozen AINN-P1 ΔΔG ranker `10.64898/2026.07.13.738250`; formulation ML/GRAS closed loop; COMPASS+MATCH; α-syn oligomer binders `10.64898/2026.07.13.738012`).
+
+**Sources:**
+- **bioRxiv 2026-07-14 to 2026-07-15**: 428 dedup'd items scanned, 142 keyword-relevance shortlist, 8 substantive antibody/protein-ML candidates surviving spurious-match discard.
+- **arXiv daily cache** (`/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries): 2 keyword hits, both off-brief (TSP, SynCLIP) — none used.
+- **PubMed / ChemRxiv / news**: not queried in depth — bioRxiv alone yielded enough substantive picks to fill the bonus edition; noting the gap for auditability.
+
+**Substantive shortlist (afternoon-eligible):**
+- Bloom et al. — Near real-time human neutralizing-antibody landscape to H3N2 subclade K and H1N1 D.3.1.1 (bioRxiv v2) — https://www.biorxiv.org/content/10.64898/2026.02.18.706711v2 — **PICKED**
+- Simonich/Bloom et al. — Complete DMS of RSV F for nirsevimab/clesrovimab and biophysical Fab-vs-IgG buffering model (bioRxiv v2) — https://www.biorxiv.org/content/10.64898/2026.02.12.705519v2 — **PICKED**
+- Zhang/Cao et al. — ProBuilder physics-based generative de novo binders for serotonin, dopamine, zinc (bioRxiv) — https://www.biorxiv.org/content/10.64898/2026.07.13.738243v1 — **PICKED**
+- Marsalkova/Simecek — Topology-guided ESM3 generation of knotted proteins (bioRxiv v2) — https://www.biorxiv.org/content/10.64898/2026.05.07.723606v2 — **PICKED**
+- Koohy et al. — Characterising AlphaFold3 ability to predict T-cell antigen specificity (bioRxiv v3) — https://www.biorxiv.org/content/10.64898/2026.07.08.737208v3 — skipped (v3 minor update; morning already covered structure-prediction / representation-quality items)
+- Baker lab — Generative asymmetric β-barrel nanopore design (bioRxiv v2) — https://www.biorxiv.org/content/10.64898/2026.06.04.729630v2 — skipped (not antibody-adjacent; TMB-only)
+- Bozkurt (Orbion) — Prediction-guided FGF21 developability n=2 pair — skipped (single-pair case study; weak evidence)
+- Addepalli — PTIm-mAb benchmarking across 11 FDA bispecifics — skipped (cross-tool developability validation, morning already had a developability/formulation item)
+
+**All picks read in full from the PDF (via r.jina.ai and direct-download fallbacks) except ESM3 knots**, whose full text was retrieved directly from bioRxiv PDF after the initial jina fetch degraded to abstract-only. No source failures — no retries needed.
+
+Episode file: `podcasts/affinity-matured/episodes/2026-07-15-affinity-matured-afternoon.mp3` (9,683,948 bytes, 20:10). Script: `podcasts/affinity-matured/scripts/2026-07-15-affinity-matured-afternoon.md` (3,271 words). Feed updated + synced, commit `14ed12f`.
+=== 2026-07-15T12:17:05-07:00 done  affinity-matured (exit 0) ===
