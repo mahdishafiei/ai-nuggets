@@ -978,3 +978,35 @@ Committed. Here is the candidate funnel for this run:
 - `10.1016/j.sbi.2026.103326` — AIR structure prediction review (Schneidman-Duhovny, Curr Opin Struct Biol) — **✓ picked** (abstract-only, tail item)
 === 2026-07-14T20:25:26-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
 === 2026-07-15T04:00:06-07:00 start affinity-matured ===
+Episode published. Final summary and candidate funnel:
+
+**Committed:** `2026-07-15-affinity-matured` — 16:40 mp3, 7.63 MB, five items.
+
+**Items chosen:**
+1. **H3BERTa** (Salaris et al., ETH Zurich, Patterns 2026-07-10) — CDR-H3-only 86M-param RoBERTa antibody language model, matches AntiBERTa2 on repertoire embedding, 93% test accuracy on HIV bnAb classifier. **Lead** — directly on the antibody-LM brief.
+2. **Frozen AINN-P1 embeddings for antibody-antigen ΔΔG ranking** (Wang/Jin/Pan, Ainnocence, bioRxiv 2026-07-14) — linear probe on frozen foundation-model embeddings beats from-scratch end-to-end baseline, Spearman 0.42→0.53. Commercial COI noted.
+3. **Automation & Active Learning for antibody formulations** (Adv Sci 2026-07-13) — closed-loop DBTL pipeline over GRAS excipients, multi-objective (Tm, diffusivity, viscosity).
+4. **COMPASS + MATCH** (Kendell/Gambles, U Utah, Commun Biol 2026-07-13) — modular split-antibody T-cell-engager platform + computational framework for patient-specific multi-specific dose composition; validated on CLL PBMC and human lymphoma xenograft.
+5. **De novo alpha-synuclein oligomer-binders** (Sahtoe + Knowles labs, bioRxiv 2026-07-14) — deep-learning-based design + one round of partial diffusion, KD 1.94 nM, selective on-pathway-oligomer capture, substoichiometric fibril suppression.
+
+**Candidate funnel:**
+- **bioRxiv 2026-07-14 to 2026-07-15**: 284 unique items scanned across 9 pages (`api.biorxiv.org/details/biorxiv/2026-07-14/2026-07-15`), 49 keyword hits; after discarding false positives ("chai" matching random text, "progen" matching "progenitor", "esm" as substring, etc.), substantive shortlist:
+  - `10.64898/2026.07.13.738250` — Frozen protein foundation-model embeddings for antibody-antigen ΔΔG (Ainnocence) — **✓ picked**
+  - `10.64898/2026.07.13.738012` — De novo alpha-synuclein oligomer-binders (Sahtoe/Knowles) — **✓ picked**
+  - `10.64898/2026.07.13.738140` — Prediction-Guided Design of a More Developable FGF21 Construct (Orbion) — considered, dropped (single-pair case study, commercial platform demo, weaker than picks)
+  - `10.64898/2026.07.13.738243` — De novo design of ligand binding and sensing with a physics based generative approach — considered, dropped (small-molecule sensing, further from antibody brief)
+  - `10.64898/2026.02.18.706711` — Near real-time human neutralizing antibody landscape to influenza virus early 2026 — considered, dropped (surveillance report, not ML/engineering)
+  - `10.64898/2026.02.12.705519` — Complete definition of how RSV-prevention antibodies are affected by F mutations — considered, dropped (escape-mapping study, not ML method)
+  - Excluded as already featured in prior episodes: MDMI (evening 07-14), ESM3 knotted proteins (morning 07-14), ESM3 geometric atlas (night 07-14), ProtBLIP2-SST (12 Jul).
+- **arXiv shared cache** (500 entries, dominated by cs.AI/CL/LG, 0 protein/antibody hits); direct q-bio.BM/QM live query (100 entries): most recent q-bio.BM item was AlphaFunctor (2607.12196v1, 2026-07-13, function annotation) — considered, dropped (not antibody-focused); Vilya-1 all-atom macrocycle foundation model (2607.09998v1, 2026-07-10) — considered, dropped (macrocycle, not antibody).
+- **PubMed reldate=5**: 100 results; ML/antibody-engineering shortlist:
+  - `42453687` — H3BERTa (Patterns, 2026-07-10) — **✓ picked**
+  - `42439465` — Automation & Active Learning for antibody formulations (Adv Sci, 2026-07-13) — **✓ picked**
+  - `42443393` — Computer-guided dosing of multi-specific T-cell engagers (Commun Biol, 2026-07-13) — **✓ picked**
+  - `42439327` — Somatic Evolution of Germline IGHV3-53 Antibody (Adv Sci, 2026-07-13) — **considered and initially drafted; dropped after cross-referencing prior episodes** — same paper as HB148-M4 already covered in 2026-07-13 afternoon episode.
+  - `42438781` — Generative AI in antibody engineering (review, In Silico Pharmacology, 2026) — considered, dropped (narrative review, no new method/data).
+  - `42447009` — Language Model-Enhanced Geometric Learning for Metalloprotein Pathogenic Mutations — considered, dropped (metalloprotein-mutation focus, not antibody).
+  - `42439482` — Protein Language Model-Based Fitness Estimates for Resistance Mutations — considered, dropped (kinase-inhibitor resistance, not antibody).
+  - `42446980` — Structural basis of HIV-1 MPER bnAb membrane engagement — considered, dropped (structural biology, no ML).
+- **ChemRxiv / general web / GitHub / Hugging Face**: not queried — five strong ML/antibody-engineering items already secured across bioRxiv + PubMed.
+=== 2026-07-15T04:19:48-07:00 done  affinity-matured (exit 0) ===
