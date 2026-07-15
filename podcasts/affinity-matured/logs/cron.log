@@ -933,3 +933,47 @@ Episode published and pushed. Summary of tonight's run:
 - PubMed reldate=5: 30 results; three ML-relevant candidates surfaced (GB-0669, Hou/Shen scaling, PeptideCLM-2 — all chosen).
 - ChemRxiv, general web: not queried (four strong items already secured).
 === 2026-07-14T12:17:15-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-14T20:00:02-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd36mLmtBP8ND1Y8W2nP6
+=== 2026-07-14T20:03:19-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-14T20:03:19-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-14T20:06:19-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd37CAYAzP8KUkuVqrBeD
+=== 2026-07-14T20:09:04-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-14T20:09:04-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-14T20:12:04-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Committed. Here is the candidate funnel for this run:
+
+---
+
+**Candidate funnel — 2026-07-14 night run**
+
+**Sources scanned:**
+
+- **bioRxiv** (Jul 13–14): 30 items total (one page, full collection). Relevant after keyword filter:
+  - `10.64898/2026.06.21.733083` — H5N1 CD8+ T cell epitopes (HLA-A33-restricted) — immunology, not antibody engineering → skip
+  - `10.64898/2026.07.08.737319` — **ESM3 geometric atlas** (Steenwyk) — ✓ selected
+  - `10.64898/2026.07.10.737551` — ProtBLIP2-SST — covered in Jul 12 episode → exclude as duplicate from prior day
+  - `10.64898/2026.07.13.737974` — MDMI — covered in evening episode today → exclude
+  - `10.64898/2026.05.07.723606` — ESM3 knotted proteins — covered in morning episode today → exclude
+
+- **arXiv** (cache, 500 entries): No true positives — all keyword matches were false positives (SynCLIP matching "ESM", q-bio papers were neuroscience). Zero relevant items.
+
+- **PubMed** (last 5 days): 6 hits from targeted query:
+  - `42443550` — Bevacizumab for OA — no ML/antibody engineering → skip
+  - `42441729` — FlowXAI lymphoma classification — flow cytometry diagnostics, not engineering → skip
+  - `42430862` — **Curr Opin Struct Biol review: AIR structure prediction and design** (Schneidman-Duhovny) — ✓ selected (abstract-only, paywalled)
+  - `42430720` — AI evidence synthesis for biologics in OI — no antibody engineering → skip
+  - `42427213` — LLM for flow cytometry panel selection — clinical workflow, not design → skip
+  - `42421116` — Idursulfase beta MPS II trial — no ML content → skip
+
+- **ChemRxiv / News / GitHub**: Web searches returned no specific new tool/model releases from Jul 13–14, 2026.
+
+**Shortlist:**
+- `10.64898/2026.07.08.737319` — ESM3 geometric atlas (Steenwyk, bioRxiv) — **✓ picked** (full text via abstract, lead item)
+- `10.1016/j.sbi.2026.103326` — AIR structure prediction review (Schneidman-Duhovny, Curr Opin Struct Biol) — **✓ picked** (abstract-only, tail item)
+=== 2026-07-14T20:25:26-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
