@@ -977,3 +977,4 @@ Committed. Here is the candidate funnel for this run:
 - `10.64898/2026.07.08.737319` — ESM3 geometric atlas (Steenwyk, bioRxiv) — **✓ picked** (full text via abstract, lead item)
 - `10.1016/j.sbi.2026.103326` — AIR structure prediction review (Schneidman-Duhovny, Curr Opin Struct Biol) — **✓ picked** (abstract-only, tail item)
 === 2026-07-14T20:25:26-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-15T04:00:06-07:00 start affinity-matured ===
