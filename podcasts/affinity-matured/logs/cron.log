@@ -1130,3 +1130,39 @@ Request ID: req_011Cd6FvVyLSnK2V7QgFZaw3
 === 2026-07-16T12:05:12-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-16T12:05:12-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-16T12:08:12-07:00 start affinity-matured (retry 1) ===
+Now I'll print the final candidate funnel for the cron.log audit record.
+
+Done. The 2026-07-16 afternoon episode has shipped.
+
+**Summary**
+- **Script**: `podcasts/affinity-matured/scripts/2026-07-16-affinity-matured-afternoon.md` — two items, 2,785 words
+- **Audio**: `episodes/2026-07-16-affinity-matured-afternoon.mp3` — 8,174,488 bytes, 17:02, Mistral API en_paul_neutral (7 chunks, one 429-then-retry)
+- **Published** to Garibaldi via `publish_episode.sh`; feed.xml updated with real size + duration; feed synced
+- **Committed**: `87b2dab` via flock; not pushed (orchestrator handles push)
+
+**Candidate funnel (2026-07-16 afternoon re-invocation)**
+
+Already covered this morning (excluded):
+- Baker lab TMB nanopores v2 — `10.64898/2026.06.04.729630v2`
+- Shen lab KaMLESM v3 — `10.1101/2025.04.17.649309v3`
+
+**bioRxiv (2026-07-14 to 2026-07-16, 355 unique preprints, ML+antibody/protein filter):**
+- `10.64898/2026.07.15.738714` — Machine Learning-Guided Engineering of High-Affinity Cross-Reactive Antibodies with Minimal Mutations (Nozach group, CEA/Paris-Saclay, posted today) — **CHOSEN #1**, full PDF read
+- `10.64898/2026.07.13.738012` — Potent substoichiometric inhibition of alpha-synuclein aggregation by de novo oligomer-binding proteins (Sahtoe/Knowles, Hubrecht/Cambridge) — **CHOSEN #2**, full PDF read
+- `10.64898/2026.07.13.737974` — MDMI structure-guided peptide-protein interface design — considered, less directly antibody-adjacent, held
+- `10.64898/2026.05.07.723606v2` — ESM3 knotted protein design (Marsalkova/Simecek) — v2 of a May preprint, already covered in yesterday's afternoon episode
+- `10.64898/2026.07.09.737463` — TB multi-epitope vaccine — computational vaccine design only, not ML-antibody-relevant, dropped
+
+**arXiv (q-bio.BM, 80 recent):**
+- Nothing directly in scope for 2026-07-14/15/16 posts; closest was `2607.09998` (Vilya-1 macrocycle foundation model) from 2026-07-10 — outside 2-day recency window
+
+**PubMed:**
+- Source failure — E-utilities returned HTTP 500 ("Search Backend failed... Timeout waiting for worker") on both attempts. Skipped per PIPELINE.md source-failure rule.
+
+**ChemRxiv / news / model releases:**
+- No candidates in 2-day window.
+
+**Full text status:**
+- Nozach cross-reactive antibody paper: full PDF (48 pages) extracted via pypdf.
+- Sahtoe/Knowles alpha-synuclein binder paper: full PDF (38 pages) extracted via pypdf.
+=== 2026-07-16T12:25:41-07:00 done  affinity-matured (exit 0) (retry 1) ===
