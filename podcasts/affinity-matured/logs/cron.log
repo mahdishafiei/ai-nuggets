@@ -1075,3 +1075,16 @@ No source failures — bioRxiv API, jina proxy, PubMed E-utilities, and Nature m
 
 **Episode file**: `podcasts/affinity-matured/episodes/2026-07-15-affinity-matured-night.mp3` (6,498,890 bytes, 13:32). **Script**: `podcasts/affinity-matured/scripts/2026-07-15-affinity-matured-night.md` (2,420 words). Feed updated + synced. Commit `14af6bc`.
 === 2026-07-15T20:16:22-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-16T04:00:06-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd5dEQ1bgjSgpp1BuNbW9
+=== 2026-07-16T04:04:04-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-16T04:04:04-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-16T04:07:04-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd5dghW3MGn6gkzdk9TGV
+=== 2026-07-16T04:10:07-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-16T04:10:07-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-16T04:13:07-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
