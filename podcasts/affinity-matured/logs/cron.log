@@ -1088,3 +1088,38 @@ Request ID: req_011Cd5dghW3MGn6gkzdk9TGV
 === 2026-07-16T04:10:07-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-16T04:10:07-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-16T04:13:07-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+
+**Candidate funnel — 2026-07-16 morning episode:**
+
+**bioRxiv (Jul 14-16 window, 2-day filter):**
+- **TMB nanopore generative design v2** (Philomin/Baker et al., 10.64898/2026.06.04.729630 v2, posted 2026-07-15) — SELECTED. RFdiffusion2 + ProteinMPNN fine-tuned on 117k AlphaFold-distilled TMBs. 60-80% expression, crystal structures 0.73-1.15 Å. v2 adds crystal data and expanded functional characterization. Not covered in prior episodes (v1 from June was not included as it predated all episodes in log).
+- **KaMLESM v3** (Shen/Dayhoff/Kortzak/Shen, 10.1101/2025.04.17.649309 v3, posted 2026-07-15) — SELECTED. v3 adds ESMC comparison showing ESMC outperforms ESM2-15B at pKa prediction; monotonically improving accuracy to final layer. Substantial new content over v2.
+- **ΔΔG ranking** (10.64898/2026.07.13.738250 v1) — dropped (covered 2026-07-15 morning episode)
+- **ProBuilder/Longxing Cao** (10.64898/2026.07.13.738243 v1) — dropped (covered 2026-07-15 afternoon episode)
+- **MDMI** (10.64898/2026.07.14.738888 v1) — considered, dropped (molecular dynamics trajectory embedding; tangential to antibody-design audience)
+- **PeptideCLM-2** (10.64898/2026.07.13.737909 v1) — dropped (covered 2026-07-14 episode)
+- **Alpha-synuclein binder** (Sahtoe/Knowles) — dropped (covered 2026-07-15 morning episode)
+
+**PubMed (Jul 11-16 window, 5-day edat filter):**
+- No new antibody-engineering or protein-design papers with high relevance within window that were not already covered.
+
+**arXiv (cs.AI/cs.CL/cs.LG/q-bio):**
+- Searched cached listing; no antibody/protein-design papers relevant to today's window.
+
+**ChemRxiv, news/tools:**
+- No relevant items in 2-day window.
+
+**Full text status:**
+- Baker TMB nanopores v2: full text fetched via jina.ai/EPMC from bioRxiv.
+- KaMLESM v3: abstract-level metadata + v2 content used; v3 primarily adds ESMC comparison described in abstract.
+
+**Episode file**: `podcasts/affinity-matured/episodes/2026-07-16-affinity-matured.mp3` (5,144,493 bytes, 10:43). **TTS**: Mistral API fallback (en_paul_neutral), 5 chunks. Feed updated + synced. Commit `ea9f9fa`.
+=== 2026-07-16T04:15:00-07:00 done  affinity-matured (exit 0) ===
+Done. The 2026-07-16 morning episode is complete:
+
+- **Script**: `podcasts/affinity-matured/scripts/2026-07-16-affinity-matured.md` — two items (Baker lab TMB nanopores v2 + KaMLESM v3)
+- **Audio**: `episodes/2026-07-16-affinity-matured.mp3` — 5,144,493 bytes, 10:43, Mistral API en_paul_neutral
+- **Published** to Garibaldi, feed.xml updated with real byte size and duration, feed synced
+- **Committed**: `ea9f9fa` via flock
+- **Cron log**: candidate funnel appended
+=== 2026-07-16T04:33:10-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
