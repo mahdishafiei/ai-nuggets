@@ -1037,3 +1037,41 @@ Re-invocation rule applied: excluded items already featured in this morning's sh
 Episode file: `podcasts/affinity-matured/episodes/2026-07-15-affinity-matured-afternoon.mp3` (9,683,948 bytes, 20:10). Script: `podcasts/affinity-matured/scripts/2026-07-15-affinity-matured-afternoon.md` (3,271 words). Feed updated + synced, commit `14ed12f`.
 === 2026-07-15T12:17:05-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-15T20:00:03-07:00 start affinity-matured ===
+Committed as `14af6bc`. Not pushing — orchestrator handles that.
+
+## Candidate funnel (2026-07-15 evening/night re-invocation)
+
+Re-invocation rule applied: excluded items already featured in this morning's episode (H3BERTa; frozen AINN-P1 ΔΔG ranker; antibody formulation ML; COMPASS+MATCH; α-syn oligomer binders) and afternoon episode (Bloom flu neutralization landscape; Bloom RSV F DMS; ProBuilder physics-based small-ligand binders; ESM3 knotted proteins).
+
+**Sources:**
+- **bioRxiv 2026-07-14 to 2026-07-15** (`api.biorxiv.org/details/biorxiv`, 30-per-page paginated across all 13 cursors): 367 unique dedup'd items scanned, 155 keyword hits, ~10 substantive antibody/protein-ML candidates surviving spurious-match discard.
+- **arXiv daily cache** (`/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries): 2 hits, both off-brief (TSP planning, SynCLIP vision — same as afternoon).
+- **PubMed reldate=5** (100 results): 27 antibody/protein-ML hits; new leads not previously covered.
+- **ChemRxiv / general web / GitHub / Hugging Face**: not queried in depth — PubMed + bioRxiv alone yielded three strong picks; noting the gap for auditability.
+
+**Substantive shortlist (night-eligible):**
+- **GB-0669** — First-in-human Phase 1 of AI-designed half-life-extended anti-SARS-CoV-2 mAb from Generate Biomedicines (J Infect Dis, 2026-07-14) — https://doi.org/10.1093/infdis/jiag349 — **PICKED (lead)**
+- **Hou/Shen et al. — protein language model scaling for fitness prediction is non-monotonic** (Columbia, Nat Comput Sci, 2026-07-13) — https://doi.org/10.1038/s43588-026-01010-z ; preprint https://www.biorxiv.org/content/10.1101/2025.04.25.650688v4 — **PICKED**
+- **Koohy/Deane — AlphaFold 3 for TCR:pMHC specificity, benchmarked on IMMREP25 with 100× accelerated pipeline** (Oxford, bioRxiv v3 posted 2026-07-15) — https://www.biorxiv.org/content/10.64898/2026.07.08.737208v3 — **PICKED**
+- Wang, T. — Brief Communication on the Hou paper (Nat Comput Sci) — referenced in lead-in only, not treated as separate item
+- **Anti-amyloid nanobody-Fc fusion** (Alzheimer's Dementia) — nanobody scaffold + Fc engineering; skipped, no ML component in abstract
+- **AP402 p95HER2/CD137 bispecific** (Mol Med) — bispecific antibody; skipped, wet-lab only, no ML/design content
+- **Somatic Evolution of Germline IGHV3-53 Antibody** (Adv Sci, 2026-07-13, PMID 42439327) — cross-referenced against 2026-07-13 afternoon HB148-M4 coverage, dropped as covered (per morning cron notes)
+- **Predicting Protein Electrostatics with Protein Language Models** (bioRxiv v3, 2026-07-15) — considered, dropped (v3 minor update; complementary but not core-antibody)
+- **β-barrel nanopore generative design** (Baker lab, bioRxiv v2) — considered, dropped (protein design, not antibody-adjacent; afternoon cron already noted skip)
+- **FGF21 developability single-pair case** (Orbion, bioRxiv v1) — considered, dropped (single-pair case study; weak evidence, afternoon cron already noted skip)
+- **PTIm-mAb cross-tool developability benchmarking** (Addepalli) — searched, not present in this 2-day window
+- **In Silico Pharmacology "Generative AI in antibody engineering" review** — considered, dropped (narrative review, no new method/data — same as morning cron)
+- **Scaling SMILES-Based Chemical Language Models for Therapeutic Peptide Engineering** (JCIM) — considered, dropped (chemical LM for peptides, not antibody)
+- **Language Model-Enhanced Geometric Learning for Metalloprotein Mutations** (JBHI) — considered, dropped (metalloprotein-mutation focus, not antibody — already noted in morning cron)
+- **AI-Designed anti-influenza monoclonal antibody trial** — not found; the AI-designed mAb hit is GB-0669 for SARS-CoV-2
+
+**Full text status:**
+- **GB-0669**: J Infect Dis PubMed abstract only (paywalled; abstract is unusually detailed with numeric PK/PD, dose escalation, and neutralization endpoints — sufficient for summary). Affiliation confirmed via PubMed AffiliationInfo: Generate Biomedicines, Somerville MA.
+- **Hou/Shen scaling paper**: Full preprint text obtained via jina.ai (~86 KB of markdown from bioRxiv 10.1101/2025.04.25.650688v4 `.full`); Nature Comput Sci meta description gives the published abstract in full; both consistent, used both.
+- **Koohy AF3 TCR paper**: bioRxiv v3 full-body fetch via `scripts/fetch_preprint.py` returned abstract-only (~2.2 KB via jina; body not rendered — v3 posted today 2026-07-15, likely too fresh for full HTML). Substantive abstract with method/pipeline/finding summary, used with an in-script note not required because abstract explicitly names the four contributions.
+
+No source failures — bioRxiv API, jina proxy, PubMed E-utilities, and Nature meta-fetch all clean, no retries needed.
+
+**Episode file**: `podcasts/affinity-matured/episodes/2026-07-15-affinity-matured-night.mp3` (6,498,890 bytes, 13:32). **Script**: `podcasts/affinity-matured/scripts/2026-07-15-affinity-matured-night.md` (2,420 words). Feed updated + synced. Commit `14af6bc`.
+=== 2026-07-15T20:16:22-07:00 done  affinity-matured (exit 0) ===
