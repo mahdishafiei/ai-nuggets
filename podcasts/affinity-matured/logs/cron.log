@@ -1167,3 +1167,26 @@ Already covered this morning (excluded):
 - Sahtoe/Knowles alpha-synuclein binder paper: full PDF (38 pages) extracted via pypdf.
 === 2026-07-16T12:25:41-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-16T20:00:02-07:00 start affinity-matured ===
+Committed and pushed. Final summary follows.
+
+---
+
+**Episode:** 2026-07-16-affinity-matured-night — HELM-BERT + PeptideSGCL (peptide language models, both ACS journal papers indexed on PubMed within the last day).
+
+**Audio:** 12:54, 6.2 MB, Mistral primary (one 429 → 30s backoff on chunk 5/6, succeeded). Published to Garibaldi and synced.
+
+**Commit:** 385f8a3 pushed to `main`.
+
+**Candidate funnel:**
+
+- **bioRxiv** (2026-07-15 → 2026-07-16) — 30 items scanned, 0 substantive antibody/protein-ML matches (2 spurious keyword hits: axolotl cis-regulatory grammar, M. tuberculosis multi-epitope vaccine — both off-topic for this show)
+- **arXiv** — daily cache (14,287 lines, cs.AI/cs.LG/cs.CL heavy) scanned, 0 substantive antibody/protein-ML matches (3 spurious "esm"/"ig" substring hits — all unrelated CS papers). Live q-bio.BM query returned HTTP 503, one retry blocked by short-sleep chain — noted, proceeded per pipeline rules
+- **ChemRxiv** — WebSearch surfaced only older material (Feb 2026 nanobody quenchbody, Jan 2026 nanobody KN035, May 2024 review) — none within recency window
+- **PubMed** (last 5 days, term-filtered) — 60 items scanned. Substantive shortlist after discarding clinical trial readouts, IHC assays, and ADC PR/reviews:
+  - HELM-BERT — DeBERTa-based peptide LM on HELM notation (Kyoto U, J Chem Inf Model, indexed 2026-07-15) [CHOSEN]
+  - PeptideSGCL — ProtBERT + GNN-Transformer + dual-contrastive peptide predictor (Shandong U, ACS Synth Biol, 2026-07-15) [CHOSEN]
+  - A044500050 anti-MerTK nanobody (MAbs, 2026-07-16) — discovery paper, no ML content, dropped per "avoid: clinical/pharm readouts with no engineering or ML" rule
+- **Already covered today** (excluded from re-invocation): Baker lab TMB nanopores + Shen KaML-ESMC (morning); Nozach PD-L1 DMS+CNN + Sahtoe/Knowles α-synuclein NAC binders (afternoon)
+
+**Depth note:** HELM-BERT — arXiv PDF (2512.23175) exceeded WebFetch 10 MB limit; arXiv abstract page + WebSearch surfaced published-version numbers (R²=0.668 scaffold-split, code at github.com/clinfo/HELM-BERT, weights at HF Flansma/helm-bert). PeptideSGCL — J. Chem. Inf. Model paywalled 403; PubMed abstract carried enough architectural detail for a fair second-item treatment. Both papers noted in-script as read from abstract + peer-reviewed metadata, not full text — appropriate depth for a thin bonus day.
+=== 2026-07-16T20:16:45-07:00 done  affinity-matured (exit 0) ===
