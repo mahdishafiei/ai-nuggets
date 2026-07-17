@@ -1190,3 +1190,4 @@ Committed and pushed. Final summary follows.
 
 **Depth note:** HELM-BERT — arXiv PDF (2512.23175) exceeded WebFetch 10 MB limit; arXiv abstract page + WebSearch surfaced published-version numbers (R²=0.668 scaffold-split, code at github.com/clinfo/HELM-BERT, weights at HF Flansma/helm-bert). PeptideSGCL — J. Chem. Inf. Model paywalled 403; PubMed abstract carried enough architectural detail for a fair second-item treatment. Both papers noted in-script as read from abstract + peer-reviewed metadata, not full text — appropriate depth for a thin bonus day.
 === 2026-07-16T20:16:45-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-17T04:00:06-07:00 start affinity-matured ===
