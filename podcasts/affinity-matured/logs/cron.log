@@ -1191,3 +1191,33 @@ Committed and pushed. Final summary follows.
 **Depth note:** HELM-BERT — arXiv PDF (2512.23175) exceeded WebFetch 10 MB limit; arXiv abstract page + WebSearch surfaced published-version numbers (R²=0.668 scaffold-split, code at github.com/clinfo/HELM-BERT, weights at HF Flansma/helm-bert). PeptideSGCL — J. Chem. Inf. Model paywalled 403; PubMed abstract carried enough architectural detail for a fair second-item treatment. Both papers noted in-script as read from abstract + peer-reviewed metadata, not full text — appropriate depth for a thin bonus day.
 === 2026-07-16T20:16:45-07:00 done  affinity-matured (exit 0) ===
 === 2026-07-17T04:00:06-07:00 start affinity-matured ===
+Episode committed. Per PIPELINE.md I do not push — the orchestrator handles that.
+
+---
+
+**Episode:** 2026-07-17-affinity-matured — three items on what sequence models actually capture and where that translates to a usable tool.
+
+**Audio:** 11:22, 5.2 MB, Mistral primary (one 429 → 30s backoff on chunk 5/5, succeeded). Published to Garibaldi and synced.
+
+**Commit:** 306d63f on `main`, not pushed (orchestrator will push).
+
+**Candidate funnel:**
+
+- **bioRxiv** (2026-07-16 → 2026-07-17, 241 unique preprints paginated across full 275-total collection, ML+antibody/protein filter):
+  - `10.64898/2026.07.10.737788` — What Do Generative Models Learn About Adaptive Immune Receptor Repertoires? A Benchmark Study (Greiff/Peters/Sandve, immunology, posted 2026-07-16) — **CHOSEN #1**, abstract-only (bioRxiv body not yet rendered; noted in script)
+  - `10.64898/2026.07.14.738285` — MInt-HDX (HDX-MS + XGBoost for protein-ligand small-molecule docking) — considered, too small-molecule-centric for this show, dropped
+  - `10.64898/2026.07.15.738714` — Nozach cross-reactive PD-L1 antibody — covered in yesterday's afternoon episode, excluded
+  - Other biorxiv hits (Casanovo GUI, PSM rescoring, PIEZO1) — off-topic or false-positive keyword matches, dropped
+- **arXiv (q-bio.BM live + shared cache):** 100 q-bio.BM entries scanned + 500-entry shared cs.AI/cs.CL/cs.MA/q-bio cache; nothing in scope for 2026-07-15/16/17 posts — closest recent items (Vilya-1 macrocycles, UMA-Inverse ligand-conditioned inverse folding) outside 2-day recency window
+- **PubMed** (last 5 days, term-filtered) — 223 items, 80 titles retrieved and reviewed. Substantive shortlist after discarding clinical trial readouts, PR/reviews, and off-topic:
+  - PMID 42462410 — Leveraging protein language model (ESM3) for maturation of high-affinity peptide ligand for AAV vector purification (J Chromatogr A, 2026-07-16) [CHOSEN #2]
+  - PMID 42463657 — PeptiVerse unified therapeutic-peptide property-prediction platform (Nat Commun, 2026-07-16; PMC12773018 full text) [CHOSEN #3]
+  - PMID 42462965 — J Mol Biol AI-for-protein-studies perspective — too meta, dropped
+  - PMID 42463708 — AlphaGEM (PLMSearch + deep learning for metabolic modeling) — PLMs but for metabolism, not antibody-adjacent enough, dropped
+  - PMID 42463691 — ISS antibody repertoire analog study — antibody repertoire but no ML/design, dropped
+  - PMID 42459154 — MerTK nanobody (MAbs) — discovery paper without ML content, dropped
+  - PMID 42457163 (HELM-BERT), 42455078 (PeptideSGCL) — already covered yesterday night, excluded
+- **ChemRxiv / news / model releases:** no candidates in 2-day window
+
+**Depth note:** AIRR benchmark paper — jina reader returned abstract only because the bioRxiv body HTML has not been rendered yet for the July 16 preprint. Direct PDF fetch returned 403 (Cloudflare). Web search surfaced no external preprint copy. Script treats the item explicitly as abstract-only per PIPELINE.md. PeptiVerse — full text via PMC12773018 (specific foundation models, benchmark numbers, similarity-aware split caveats extracted). AAV/ESM3 paper — J Chromatogr A article behind Elsevier auth wall; PubMed abstract was detailed enough (initial-peptide count, Kd, MD interpretation, elution profile, serotype selectivity) for a fair treatment.
+=== 2026-07-17T04:17:25-07:00 done  affinity-matured (exit 0) ===
