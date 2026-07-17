@@ -1234,3 +1234,31 @@ Request ID: req_011Cd8AGG2ZJjcRp7WGfJwnV
 === 2026-07-17T12:12:11-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-17T12:12:11-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-17T12:15:11-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Episode committed. Here's the candidate funnel for tonight's run:
+
+---
+
+**Candidate funnel — 2026-07-17 night**
+
+**bioRxiv** (2026-07-15 to 2026-07-17 window): ~60 papers scanned across bioinformatics, immunology, biochemistry categories. Relevance filter (antibody/protein-design keywords): 3 substantive hits.
+
+- `10.64898/2026.07.16.738959` — SweetFold, glycan-aware Boltz-1x (biophysics, posted 2026-07-17) — **SELECTED**
+- `10.64898/2026.07.06.736700` — Biological CPT of 26B MoE model (bioinformatics, posted 2026-07-16) — **SELECTED**
+- `10.64898/2026.07.10.737788` — AIRR benchmark (Greiff/Peters/Sandve) — already covered in morning episode, excluded
+
+**arXiv** (cache, 500 entries): 0 relevance hits (keyword matches were false positives — "diffusion model" matched audio/video papers, "ESM" matched a coffee-shop essay)
+
+**PubMed** (5-day window, 2026-07-12 to 2026-07-17): 242 results total; 30 metadata records inspected. 1 substantive hit.
+- PMID 42446980 — Cho/Ward/Schief/Wilson et al., PNAS 2026-07-14, MPER bnAb structural study — **SELECTED** (full text accessed via Jina reader proxy from published PNAS article)
+
+**ChemRxiv** (web search): no hits within window
+
+**News/GitHub/HuggingFace**: Aureka OpenDDE release found (July 6 — outside 1-2 day news window); no other fresh releases identified
+
+**Shortlist after filter:**
+- `10.1073/pnas.2609827123` — MPER HIV-1 bnAbs structural anatomy, PNAS 2026-07-14 — **SELECTED (lead)**
+- `10.64898/2026.07.16.738959` — SweetFold — **SELECTED**
+- `10.64898/2026.07.06.736700` — Biological CPT — **SELECTED**
+- PMID 42467311 — Fragment-based diffusion for PD-L1 small molecules — dropped (small-molecule only, no antibody/protein-design angle)
+- PMID 42446980 (MPER) — same as PNAS item above
+=== 2026-07-17T12:34:24-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
