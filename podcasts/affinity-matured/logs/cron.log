@@ -1221,3 +1221,16 @@ Episode committed. Per PIPELINE.md I do not push — the orchestrator handles th
 
 **Depth note:** AIRR benchmark paper — jina reader returned abstract only because the bioRxiv body HTML has not been rendered yet for the July 16 preprint. Direct PDF fetch returned 403 (Cloudflare). Web search surfaced no external preprint copy. Script treats the item explicitly as abstract-only per PIPELINE.md. PeptiVerse — full text via PMC12773018 (specific foundation models, benchmark numbers, similarity-aware split caveats extracted). AAV/ESM3 paper — J Chromatogr A article behind Elsevier auth wall; PubMed abstract was detailed enough (initial-peptide count, Kd, MD interpretation, elution profile, serotype selectivity) for a fair treatment.
 === 2026-07-17T04:17:25-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-17T12:00:03-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd89eekHn33VJEvtdwUbs
+=== 2026-07-17T12:04:09-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-17T12:04:09-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-17T12:07:09-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd8AGG2ZJjcRp7WGfJwnV
+=== 2026-07-17T12:12:11-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-17T12:12:11-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-17T12:15:11-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
