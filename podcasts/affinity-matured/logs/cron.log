@@ -1292,3 +1292,16 @@ Episode committed on `main` (475b34c). Per PIPELINE.md I do not push — the orc
 
 **Depth note:** PeptideCLM-2 — full architecture, corpus composition, per-scale param counts, per-benchmark numbers, aggregation scaling curve, and data-leakage flags extracted via PMC full-text mirror (PMC12803269). Bayer/Broad — J Chem Inf Model article 403'd behind ACS auth wall; PubMed abstract carried all the methodological content (FEP + PLM fitness combination, ERK2/SCH772984 + EGFR-exon20 DMS validation, filtering mechanism) needed for a fair treatment. Marescal/Cheeseman — full 28-page PDF extracted from bioRxiv direct URL via pypdf (jina reader returned abstract-only because body HTML not yet rendered for a same-day preprint); recovered all R² numbers, permutation-analysis mechanics, ADAM10 experimental construct panel (VLI→RRR/DDD/AAA/TTT), and isoform-application detail.
 === 2026-07-17T20:22:52-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-18T04:00:12-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd9QzcBK4EF5B4Jt1SMej
+=== 2026-07-18T04:05:55-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-18T04:05:55-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-18T04:08:55-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011Cd9RhRYzWcSAMhBdSgjUX
+=== 2026-07-18T04:15:17-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-18T04:15:17-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-18T04:18:17-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
