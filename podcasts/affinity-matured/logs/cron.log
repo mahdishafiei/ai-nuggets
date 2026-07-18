@@ -1263,3 +1263,32 @@ Episode committed. Here's the candidate funnel for tonight's run:
 - PMID 42446980 (MPER) — same as PNAS item above
 === 2026-07-17T12:34:24-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
 === 2026-07-17T20:00:03-07:00 start affinity-matured ===
+Episode committed on `main` (475b34c). Per PIPELINE.md I do not push — the orchestrator handles that.
+
+---
+
+**Episode:** 2026-07-17-affinity-matured-evening — three sequence-based ML papers changing therapeutic development workflows.
+
+**Audio:** 19:38, 9.4 MB, Mistral primary (one 429 → 30s backoff on chunk 8/8; one duration-floor fail on chunk 3/8 recovered). Published to Garibaldi and synced.
+
+**Commit:** 475b34c on `main`, not pushed (orchestrator will push).
+
+**Candidate funnel — 2026-07-17 evening (third run of day; morning + noon-"night" already shipped):**
+
+- **bioRxiv** (2026-07-15 → 2026-07-17, 672 unique preprints paginated across 695-total collection, antibody/protein-ML filter): 48 keyword hits. Substantive shortlist after discarding items already covered today (AIRR benchmark, ESM3 AAV2 peptide, PeptiVerse, MPER bnAbs, SweetFold, Biological CPT) and previously shipped items (KaML-ESM, Baker TMB nanopores, Nozach cross-reactive Ab, Sahtoe/Knowles NAC binders, AF3 for TCR:pMHC, HELM-BERT, PeptideSGCL):
+  - `10.64898/2026.07.16.739020` — Marescal/Cheeseman, ML predicts N-terminal protein stability (Whitehead/MIT, cell biology, posted today) — **CHOSEN #3**, full-text PDF extracted via bioRxiv direct fetch + pypdf (28 pages)
+  - `10.64898/2026.07.13.738171` — Maternal vaccination clonotype transfer (BCR-Seq/Ig-Seq, immunology, no ML component — dropped)
+  - `10.64898/2026.05.25.727711` — MINA DNA-encoder linear probes (bioinformatics) — DNA-LM not directly antibody-relevant, dropped
+  - `10.64898/2026.07.15.738315` — Todor/Gross/Chen pooled-AlphaFold3 M. leprae PPI landscape — interesting AF3 application but off-theme for tonight, held
+- **arXiv** — shared cache (500 entries, cs.AI/cs.LG/cs.CL/q-bio) scanned for 2026-07-15/16/17 posts: 0 substantive antibody/protein-ML matches within the recency window
+- **PubMed** (last 5 days, term-filtered): 200 hits, 100+ ML-adjacent titles reviewed. Substantive shortlist:
+  - PMID 42443143 — Feller/Wilke/Deibler PeptideCLM-2 (J Chem Inf Model 2026-07-13) — **CHOSEN #1**, full architecture + benchmarks extracted via PMC12803269
+  - PMID 42439482 — Schwarz/Kamburov Bayer/Broad PLM+FEP resistance mutations (J Chem Inf Model 2026-07-13) — **CHOSEN #2**, abstract fully detailed on PubMed; ACS article paywalled
+  - PMID 42447009 — MetalDiagnosis (ESM Cambrian + equivariant GNN for metalloprotein pathogenic mutations, IEEE JBHI 2026-07-14) — off-theme (metalloproteins, not antibody-adjacent), held
+  - PMID 42443524 — Hou/Shen understanding PLM scaling for fitness — already covered 2026-07-15 evening, excluded
+  - PMID 42463657 (PeptiVerse), 42462410 (AAV2/ESM3), 42455078 (PeptideSGCL), 42457163 (HELM-BERT) — already covered
+- **ChemRxiv** — WebSearch surfaced older material only; no in-window candidates
+- **News/model releases** — no fresh candidates in 1–2 day window
+
+**Depth note:** PeptideCLM-2 — full architecture, corpus composition, per-scale param counts, per-benchmark numbers, aggregation scaling curve, and data-leakage flags extracted via PMC full-text mirror (PMC12803269). Bayer/Broad — J Chem Inf Model article 403'd behind ACS auth wall; PubMed abstract carried all the methodological content (FEP + PLM fitness combination, ERK2/SCH772984 + EGFR-exon20 DMS validation, filtering mechanism) needed for a fair treatment. Marescal/Cheeseman — full 28-page PDF extracted from bioRxiv direct URL via pypdf (jina reader returned abstract-only because body HTML not yet rendered for a same-day preprint); recovered all R² numbers, permutation-analysis mechanics, ADAM10 experimental construct panel (VLI→RRR/DDD/AAA/TTT), and isoform-application detail.
+=== 2026-07-17T20:22:52-07:00 done  affinity-matured (exit 0) ===
