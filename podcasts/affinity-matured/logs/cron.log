@@ -1305,3 +1305,27 @@ Request ID: req_011Cd9RhRYzWcSAMhBdSgjUX
 === 2026-07-18T04:15:17-07:00 done  affinity-matured (exit 0) (retry 1) ===
 === 2026-07-18T04:15:17-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
 === 2026-07-18T04:18:17-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Episode published. Here's the candidate funnel for today's log:
+
+---
+
+**Candidate funnel — 2026-07-18 affinity-matured**
+
+**bioRxiv (last 2 days, bioinformatics/immunology/biophysics)**
+- bioRxiv 2026-07-18: 0 results (papers not yet posted Saturday morning)
+- bioRxiv 2026-07-17: APB-Display v2 (doi:10.64898/2026.05.28.728566v2, biophysics) — **selected, lead item**
+- bioRxiv 2026-07-17: SemVac (doi:10.64898/2026.07.13.737696v1, immunology) — **selected, second item**
+- bioRxiv 2026-07-16: Marescal/Cheeseman N-terminal stability MLP — already covered 2026-07-17 evening, excluded
+- bioRxiv 2026-07-16: Dorison/Nozach anti-PD-L1 cross-reactive CNN — already covered 2026-07-16 afternoon, excluded
+- bioRxiv 2026-07-16: Zhang/Sahtoe/Knowles APB-Display alpha-synuclein binders — already covered 2026-07-16 afternoon, excluded
+
+**PubMed/journals (last 5 days)**
+- EnzGFM, Nat Commun 2026-07-17 (doi:10.1038/s41467-026-75283-3) — **selected, third item**
+- MPER PNAS 2026-07-14 — already covered 2026-07-17 night, excluded
+- PeptideCLM-2 J Chem Inf Model 2026-07-13 — already covered 2026-07-17 evening, excluded
+- Bayer/Broad PLM fitness J Chem Inf Model 2026-07-13 — already covered 2026-07-17 evening, excluded
+
+**arXiv / ChemRxiv**: no in-window candidates
+
+**Episode output**: `2026-07-18-affinity-matured.mp3` — 5,274,060 bytes, 10:59, Mistral voxtral-mini-tts-2603 en_paul_neutral
+=== 2026-07-18T04:36:37-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
