@@ -1375,3 +1375,36 @@ No second episode — fresh candidate pool exhausted; Mistral TTS 401.
 
 The fresh candidate pool for today's re-invocation is genuinely exhausted. The `cron.log` has been updated with the full candidate funnel. No script was committed.
 === 2026-07-18T12:33:28-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-18T20:00:03-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CdAg8GNfbefbGE4GoEu3A
+=== 2026-07-18T20:04:58-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-18T20:04:58-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-18T20:07:58-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CdAgZyKy5EbQ6W48YkhWT
+=== 2026-07-18T20:10:46-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-18T20:10:46-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-18T20:13:46-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+No second episode for today. Here is the candidate funnel for today's re-invocation:
+
+---
+
+**Candidate funnel — 2026-07-18 re-invocation**
+
+**Sources surveyed:**
+- **bioRxiv (July 17–18):** 30 papers scanned, 4 from today. Zero in-scope after filtering.
+- **arXiv cache (/tmp/ai-nuggets-arxiv-cache.xml):** 500 entries scanned; 0 true positives (2 false positives on "binding" and "humaniz" in unrelated contexts).
+- **PubMed (July 13–18):** 268 results from query; top 5 titles checked — nanobody/MerTK cleavage (no ML angle), celiac autoantibodies (not in scope), asthma clinical data, native MS in biopharma (no ML), MS therapy sequencing. None on-topic.
+- **ChemRxiv (WebSearch):** no fresh July 2026 results; all hits are older papers.
+- **GitHub/HuggingFace/news:** no July 18 antibody/protein-design model releases found.
+
+**Shortlist after relevance filter (non-today items in recency window):**
+- [AIRR benchmark — Sandve/Greiff/Peters, Oslo/La Jolla, bioRxiv July 16](https://www.biorxiv.org/content/10.64898/2026.07.10.737788v1) — **already covered in 2026-07-17-affinity-matured (morning)**
+- [SweetFold — Sundar/Yang, Brandeis, bioRxiv July 17](https://www.biorxiv.org/content/10.64898/2026.07.16.738959v1) — **already covered in 2026-07-17-affinity-matured-night**
+- [Biological CPT paper — Wang, HUST, bioRxiv July 16](https://www.biorxiv.org/content/10.64898/2026.07.06.736700v1) — **already covered in 2026-07-17-affinity-matured-night**
+
+**Outcome:** All candidates in the recency window relevant to this show were covered in yesterday's episodes. No items from today's morning episode (APB-Display v2, SemVac, EnzGFM) are in this shortlist. **No second episode produced.** TTS infrastructure was also unavailable (Mistral API key returning 401; ElevenLabs fallback not implemented in gen_tts.py).
+=== 2026-07-18T20:27:37-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
