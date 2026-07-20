@@ -1909,3 +1909,94 @@ The episode content itself is excellent and ready — this is purely an authenti
 The script is committed and ready; TTS is the only remaining step. Let me know how you'd like to proceed.
 === 2026-07-19T20:38:04-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-19T20:38:04-07:00 FAILED: no usable output for affinity-matured after all retries ===
+=== 2026-07-20T04:00:06-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CdDCX13paa2s7HEAS6L5b
+=== 2026-07-20T04:04:42-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-20T04:04:42-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-20T04:07:42-07:00 start affinity-matured (retry 1) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CdDD8DuhhNzRiyUZWY1vr
+=== 2026-07-20T04:12:40-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-20T04:12:40-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-20T04:15:40-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CdDDUt99nmm3DADJs3mjE
+=== 2026-07-20T04:17:21-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-20T04:17:21-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-20T04:20:21-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+Done. Three files written for today's episode:
+
+- `scripts/2026-07-20-affinity-matured.md` — script (~1,700 words, ~9 min)
+- `scripts/2026-07-20-affinity-matured.rss-item.xml` — RSS item stub with `__LENGTH__`/`__DURATION__` placeholders
+- `scripts/2026-07-20-affinity-matured.commit-msg` — commit message stub
+
+`publish_pending.py` will handle TTS, the mp3 publish, feed update, and commit once the API key is restored.
+
+---
+
+**Candidate funnel — 2026-07-20**
+
+| Source | Scanned | Survived filter |
+|---|---|---|
+| bioRxiv Jul 18–20 (all categories) | 153 | 0 |
+| bioRxiv Jul 15–17 | ~250 | 0 |
+| arXiv cache `/tmp/ai-nuggets-arxiv-cache.xml` (cs.LG, Jul 17) | 500 | 0 |
+| arXiv q-bio.BM live query | ~15 | 0 (nearest Jul 17 "neural spectroscopy of AF2", not antibody-specific) |
+| PubMed pdat Jul 15–20 | ~30 | 0 (scFv Sci Rep — already covered Jul 19) |
+| PubMed edat Jul 15–20 | ~30 | **1** |
+| ChemRxiv | ~10 | 0 |
+| News / GitHub / HuggingFace | misc | 0 (no new antibody/protein LM releases) |
+
+**Shortlist:**
+- ✅ **CHOSEN:** Yin et al. / Pierce lab — "Benchmarking AlphaFold and related deep learning approaches for modeling antibody and TCR antigen recognition" — `https://www.biorxiv.org/content/10.64898/2026.07.04.736425` — bioRxiv Jul 6, PubMed-indexed this week (edat window). Full text read via bioRxiv JATS XML.
+=== 2026-07-20T04:44:23-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-20T04:44:23-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-20T04:47:23-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+The script is complete and ready, but the MP3 hasn't been generated yet. According to the memory, the Mistral API key expired on 2026-07-06 (14 days ago), which is blocking TTS generation. Let me check the current status more clearly:
+
+**Current Status:**
+- ✅ Script written: `podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md` — covers Pierce lab's benchmark of AlphaFold2/3 vs other methods on antibody-antigen structure prediction
+- ✅ RSS stub created: `2026-07-20-affinity-matured.rss-item.xml` with placeholders for `__LENGTH__` and `__DURATION__`
+- ✅ Commit message drafted: `2026-07-20-affinity-matured.commit-msg`
+- ❌ MP3 file missing: No audio generated yet
+
+**Blocker:**
+The episode is in SKIP_TTS mode (batch processing), waiting for either:
+1. **Voxtral (primary)** — self-hosted on Garibaldi HPC (requires Phase 2 batch job submission)
+2. **Mistral API (fallback)** — blocked due to expired `MISTRAL_API_KEY` since 2026-07-06
+
+The stub files are in place and ready for `publish_pending.py` to fill in the real duration/length once TTS completes. To move forward, I need either:
+
+- A current Mistral API key to enable the fallback path in `publish_pending.py`, or
+- Confirmation that the Voxtral batch job should be submitted to Garibaldi
+
+Can you provide an updated Mistral API key, or would you like me to proceed with a different approach?
+=== 2026-07-20T04:48:27-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-20T04:48:27-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-20T04:51:27-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+Based on the logs, I can see the situation clearly now. Today's episode (2026-07-20) has already been written and is in SKIP_TTS batch mode. The script and stub files are ready. Let me verify they're correct and provide a final cron log summary:
+
+**Today's episode status:**
+
+✅ **Complete and ready for batch TTS:**
+- Script: `2026-07-20-affinity-matured.md` covers Pierce lab's AlphaFold benchmark paper on antibody/TCR structure prediction
+- RSS stub: prepared with `__LENGTH__` and `__DURATION__` placeholders
+- Commit message: ready
+
+The episode is in SKIP_TTS mode, which means the stub files are complete and waiting for the batch TTS orchestrator. According to the pipeline, `publish_pending.py` should handle TTS generation, file publishing, feed update, and commit after the stubs are in place.
+
+**Candidate funnel — 2026-07-20:**
+
+- **bioRxiv** (Jul 18–20): 153 items scanned; 0 substantive after filtering
+- **arXiv** (cache + live q-bio.BM): ~500 items; 0 in-scope
+- **PubMed** (Jul 15–20): 60 items; 1 selected
+- **ChemRxiv** / **News**: 0 relevant
+- **Selection**: Pierce lab benchmark (`10.64898/2026.07.04.736425`) — full text via bioRxiv JATS, PubMed-indexed Jul 18
+
+**Next step**: Batch TTS processing awaits action on the API key issue noted in prior runs.
+=== 2026-07-20T04:52:36-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-20T04:52:36-07:00 FAILED: no usable output for affinity-matured after all retries ===
