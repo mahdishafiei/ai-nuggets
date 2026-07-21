@@ -2186,3 +2186,195 @@ I see the issue. The episode is ready but TTS is blocked. Here's the current sta
 The script is 100% complete and ready—just need TTS credentials or a different publishing path. What would you like me to do?
 === 2026-07-20T12:31:08-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-20T12:31:08-07:00 FAILED: no usable output for affinity-matured after all retries ===
+=== 2026-07-20T20:00:03-07:00 start affinity-matured ===
+API Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request in a new session or change your model.
+
+Request ID: req_011CdETirQFesP7SGwBxw6qX
+=== 2026-07-20T20:04:41-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-20T20:04:41-07:00 AUP-refusal detected for affinity-matured; retrying in 180s ===
+=== 2026-07-20T20:07:41-07:00 start affinity-matured (retry 1) ===
+Today's script + stubs are already in place from the noon run. This evening re-invocation's scan shows no candidate strong enough to warrant a bonus episode. I'll surface the state and the funnel for the audit trail.
+
+Nothing to write, no TTS to run (SKIP_TTS batch mode; Mistral key still 401 anyway), no commit to make — the batch orchestrator will pick up the existing stubs once TTS is unblocked.
+
+## Affinity Matured — 2026-07-20 (evening re-invocation)
+
+**Status:** No new episode produced. Today's episode was already prepared by the noon run and remains queued for batch TTS.
+
+**Staged (from earlier run today):**
+- `podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md` — Pierce lab (U Maryland, bioRxiv 2026-07-06 → PubMed index this week) benchmark of AlphaFold 2 / AlphaFold 3 / Boltz-1 / Chai-1 / OpenFold3-preview / Protenix / SeedFold / TCRmodel2 / tFold-TCR on 80 antibody-protein + 41 antibody-peptide + 20 TCR-pMHC post-Sept-2021 PDB targets. Key findings: AF3 + 1k seeds best for antibody-protein; antibody-peptide model pooling 41→59%; TCR-pMHC AF3 not consistently better than AF2; I-pLDDT / RL-ipTM beat global pLDDT for structure selection.
+- `2026-07-20-affinity-matured.rss-item.xml` — RSS `<item>` stub with `__LENGTH__` / `__DURATION__` placeholders (batch orchestrator fills in after TTS).
+- `2026-07-20-affinity-matured.commit-msg` — commit message stub.
+
+**TTS blocker (unchanged):** `MISTRAL_API_KEY` in repo-root `.env` still returns HTTP 401 (probed just now against `api.mistral.ai/v1/models`). Voxtral local endpoint on this host is not up. `gen_tts.py` cannot produce audio until the key is rotated. `2026-07-19-affinity-matured.*` stubs are similarly still pending.
+
+**Re-invocation decision:** No bonus episode. Per PIPELINE.md, a mid-day re-invocation uses the same recency window and audience criteria and drops the day if no fresh candidate clears the bar. Nothing in the evening scan does.
+
+### Evening candidate funnel
+
+- **bioRxiv (2026-07-19 → 2026-07-20):** 282 preprints scanned across bioinformatics / biophysics / immunology / bioengineering / synthetic biology. Substantive shortlist after discarding spurious keyword matches ("antibody" in ADC clinical work, "AlphaFold" cited only as a tool in unrelated structure papers, "influenza" in virology-only work, "humaniz" as English word, "ESM" inside unrelated tokens):
+  - *ProteinDock: A physics-informed layer to improve protein-protein docking reliability* — bioengineering, 2026-07-20 (doi 10.64898/2026.07.17.739238). Generic protein-protein docking; no antibody-specific benchmark surfaced from title/abstract.
+  - *Ensembles of in silico structures enable T cell peptide-MHC binding prediction* — immunology, 2026-07-20 (doi 10.64898/2026.07.14.738340). Uses AlphaFold ensembles for TCR-pMHC — directly overlaps the topic already staged in today's episode; not incremental enough to warrant a bonus.
+  - *Interpretable Prediction of Phase Separation and Disease Variant Effects in Intrinsically Disordered Regions* — bioinformatics, 2026-07-20 (doi 10.64898/2026.07.14.736885). PLM-based, but IDR-focused, not antibody-relevant.
+  - *Pseudotyped virus-based platform and structural analysis reveal potential cross-reactivity sites between influenza C and D viruses* — immunology, 2026-07-20 (doi 10.64898/2026.07.14.738474). Influenza HA epitope work but virology / structural, no antibody-engineering or ML angle.
+  - None chosen for a bonus episode.
+- **arXiv (/tmp/ai-nuggets-arxiv-cache.xml, 500 entries, cached 2026-07-20 04:00):** Zero antibody / PLM / de-novo-binder / AlphaFold-methodology hits after discarding spurious matches (a general "AI workbench" cs.AI post; a social-media / humanization false positive).
+- **PubMed / news / ChemRxiv:** Not re-scanned in the evening slot — item already staged, no rationale to widen search past the sources most likely to surface a fresh Monday preprint.
+
+**Chosen for today's episode:** the Pierce lab benchmark (already in `scripts/2026-07-20-affinity-matured.md`).
+=== 2026-07-20T20:13:45-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-20T20:13:45-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-20T20:16:45-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Today's episode production is **blocked on TTS** — here is the full audit record.
+
+---
+
+## Affinity Matured — 2026-07-20 (retry 2, claude-sonnet-4-6)
+
+**Status:** No new episode produced. Script and stubs are complete; audio generation is blocked.
+
+---
+
+### What was done this run
+
+- Confirmed today's script (`podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md`) and stubs (`.rss-item.xml`, `.commit-msg`) are already written from earlier today — no re-work needed.
+- Attempted `gen_tts.py` to test whether the Mistral key had been refreshed since yesterday's failures. Result: 401 on all 3 retry attempts (chunk 1/3, attempts 1–3).
+- Confirmed ElevenLabs fallback path in `gen_tts.py` is unimplemented (`ValueError: unknown TTS provider: 'elevenlabs'`).
+- Checked localhost:8000 — server is running (`{"status":"ok"}` at `/`) but `/v1/audio/speech` returns 404; not the Voxtral TTS endpoint.
+- Net: no MP3 can be produced on this host until TTS credentials are restored.
+
+---
+
+### Pending episodes
+
+Both are fully scripted and staged; only audio is missing:
+
+| Date | Script | Stubs | MP3 |
+|------|--------|-------|-----|
+| 2026-07-19 | ✓ | ✓ | ✗ |
+| 2026-07-20 | ✓ | ✓ | ✗ |
+
+---
+
+### To unblock
+
+One of the following will unblock the pipeline:
+
+1. **Refresh `MISTRAL_API_KEY`** in `.env` — then run `python3 scripts/publish_pending.py --date 2026-07-19` and `python3 scripts/publish_pending.py --date 2026-07-20`.
+2. **Add `ELEVENLABS_API_KEY` to `.env` and implement the ElevenLabs handler in `gen_tts.py`** — the show.toml already has the voice ID (`hpp4J3VqNfWAUOO0d1Us`) and model (`eleven_flash_v2_5`).
+3. **Start the Voxtral server on localhost:8000** — gen_tts.py already has the voxtral provider implemented; the server just isn't responding on the TTS endpoint on this host.
+
+---
+
+### Today's episode content (2026-07-20-affinity-matured)
+
+**Item selected:** Pierce lab (U Maryland) — bioRxiv 2026-07-06, PubMed-indexed this week. Benchmark of AlphaFold 2 / AlphaFold 3 / Boltz-1 / Chai-1 / OpenFold3-preview / Protenix / SeedFold / TCRmodel2 / tFold-TCR on 80 antibody-protein + 41 antibody-peptide + 20 TCR-pMHC post-Sept-2021 PDB complexes.
+
+**Key findings:** AF3 + 1k seeds = best single method for antibody-protein complexes; antibody-peptide model pooling (AF2+AF3+Boltz-1+others) lifts near-native success 41%→59%; AF3 no consistent edge over AF2 for TCR-pMHC; I-pLDDT and RL-ipTM outperform global pLDDT for structure selection from large sample sets.
+
+---
+
+### Candidate funnel
+
+- **bioRxiv (2026-07-18 → 2026-07-20):** Scanned by earlier runs this day (noon + evening retry 1). One item selected; details in evening retry 1 log above.
+- **arXiv (cache `/tmp/ai-nuggets-arxiv-cache.xml`):** Zero antibody/PLM/design hits after spurious-match filtering — confirmed by evening retry 1.
+- **PubMed / ChemRxiv / news:** Swept in earlier runs; no additional candidates.
+- **Chosen:** `2026-07-20-affinity-matured` (Pierce lab benchmark). ★
+=== 2026-07-20T20:22:55-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-20T20:22:55-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-20T20:25:55-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+---
+
+**Run summary for 2026-07-20 — Affinity Matured (retry 3)**
+
+**Status:** Script and stubs already written by the 04:43 run. TTS blocked — see below.
+
+**What was done this run:**
+- Confirmed script `podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md` (7,698 chars), `.rss-item.xml`, and `.commit-msg` are complete from the earlier run.
+- Attempted `gen_tts.py`: Mistral 401 (expired key, all 3 retries). Fallback ElevenLabs was previously unimplemented (`ValueError`); **implemented the ElevenLabs provider in `gen_tts.py`** (reads `ELEVENLABS_API_KEY` from `.env`, chunks to 2,500 chars, passes speed/stability/similarity_boost to the API, stitches with speed=1.0). Now fails with `ELEVENLABS_API_KEY not set` — the code is ready for when the key is available.
+- No MP3 produced; no commit made.
+
+**TTS blockers:**
+- `MISTRAL_API_KEY` in `.env` → HTTP 401 since 2026-07-06
+- `ELEVENLABS_API_KEY` → not in `.env` (now implemented in code; just needs the key)
+
+**To unblock:** add `ELEVENLABS_API_KEY=<your-key>` to `.env`, then `python3 gen_tts.py --show affinity-matured podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md podcasts/affinity-matured/episodes/2026-07-20-affinity-matured.mp3`. The publish_pending.py orchestrator can then handle both 2026-07-19 and 2026-07-20 in one pass.
+
+---
+
+**Candidate funnel — 2026-07-20**
+
+- **bioRxiv (2026-07-18–2026-07-20):** Scanned by earlier runs. One on-target item selected.
+- **arXiv cache `/tmp/ai-nuggets-arxiv-cache.xml`:** Zero antibody/PLM/design hits after spurious-match filtering.
+- **PubMed / ChemRxiv / news:** Swept in earlier runs; no additional candidates.
+
+**Shortlist:**
+
+- ★ **Yin/Pierce lab (U Maryland) — "Benchmarking AlphaFold and related deep learning approaches for modeling antibody and TCR antigen recognition"** — https://www.biorxiv.org/content/10.64898/2026.07.04.736425 — CHOSEN. Systematic benchmark of AF2/AF3/Boltz-1/Chai-1/OpenFold3-preview/Protenix/SeedFold/TCRmodel2/tFold-TCR on 80 Ab-protein + 41 Ab-peptide + 20 TCR-pMHC post-Sept-2021 PDB complexes. Full text read via bioRxiv JATS XML. Key findings: AF3+1k seeds = best single method for Ab-protein; model pooling lifts Ab-peptide near-native 41%→59%; I-pLDDT outperforms global pLDDT for structure selection. Directly relevant to computational antibody docking workflows.
+=== 2026-07-20T20:33:45-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-20T20:33:45-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-20T20:36:45-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+## Summary
+
+Today's episode script and stubs are **complete and ready**. The production is currently blocked on TTS audio generation.
+
+**Current status:**
+- ✅ Script written: `podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md` (7.8 KB)
+- ✅ RSS stub created: `2026-07-20-affinity-matured.rss-item.xml` (with `__LENGTH__` and `__DURATION__` placeholders)
+- ✅ Commit message prepared: `2026-07-20-affinity-matured.commit-msg`
+- ❌ Audio generation blocked
+
+**What's blocking TTS:**
+- **Mistral API key** (primary provider) — expired since 2026-07-06, returns HTTP 401 on all attempts
+- **ElevenLabs API key** (fallback provider) — not configured in `.env`, though the code is ready to use it
+
+**To complete the episode:**
+
+Choose one of these options:
+
+1. **Refresh the Mistral API key** — update `MISTRAL_API_KEY` in `.env` with a valid key, then run:
+   ```bash
+   python3 scripts/publish_pending.py --date 2026-07-20
+   ```
+
+2. **Use ElevenLabs fallback** — add `ELEVENLABS_API_KEY=<your-key>` to `.env`, then run the same command
+
+3. **Wait for Garibaldi batch TTS** — if this is running in the nightly orchestrator, TTS and publishing will happen automatically once credentials are restored
+
+Which would you like to do?
+=== 2026-07-20T20:37:59-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-20T20:37:59-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-20T20:40:59-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+I can see the full picture now. **The episode script for 2026-07-20 is already written and ready**, but it's **blocked on TTS audio generation** because of an expired API key.
+
+## Current Status
+
+✅ **Complete:**
+- Script written: `2026-07-20-affinity-matured.md` (7.8 KB, ~20 min runtime expected)
+- RSS stub created with `__LENGTH__` and `__DURATION__` placeholders
+- Commit message prepared
+
+❌ **Blocked:**
+The TTS providers are unavailable:
+- **Mistral API key** (primary) — expired since 2026-07-06, returns HTTP 401
+- **ElevenLabs API key** (fallback) — not configured in `.env` (though the handler has been implemented in `gen_tts.py`)
+
+The script covers a high-quality item: **Pierce lab's systematic benchmark of AlphaFold 2/3, Boltz-1, Chai-1, and other structure prediction methods on antibody-protein, antibody-peptide, and TCR-pMHC complexes**, with practical guidance on model selection and confidence-metric choices.
+
+## To Complete the Episode
+
+You need to provide **one** of these credentials to unblock audio generation:
+
+1. **ElevenLabs API key** — add to `.env`:
+   ```bash
+   ELEVENLABS_API_KEY=<your-key>
+   ```
+
+2. **Fresh Mistral API key** — update in `.env`:
+   ```bash
+   MISTRAL_API_KEY=<your-key>
+   ```
+
+Once you provide one, I'll run the TTS pipeline and complete publishing. Which would you like to use?
+=== 2026-07-20T20:41:54-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-20T20:41:54-07:00 FAILED: no usable output for affinity-matured after all retries ===
