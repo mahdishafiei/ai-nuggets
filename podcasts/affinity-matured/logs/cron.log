@@ -1797,7 +1797,7 @@ Both TTS paths are still failing — Mistral API returns 401 (expired key) and t
 **Still missing:** mp3, feed.xml entry, Garibaldi sync.
 
 **TTS blocker (confirmed this retry):**
-- Mistral API `voxtral-mini-tts-2603` — HTTP 401 (`MISTRAL_API_KEY=***REMOVED-MISTRAL-KEY***` in `.env` returns Unauthorized; key expired ~2026-07-06)
+- Mistral API `voxtral-mini-tts-2603` — HTTP 401 (`MISTRAL_API_KEY=***REDACTED***` in `.env` returns Unauthorized; key expired ~2026-07-06)
 - Self-hosted Voxtral `http://localhost:8000` — HTTP 404 (service not running on this host)
 
 **Candidate funnel:** Not re-scanned this retry — retry 1 confirmed no new in-scope items beyond the three already featured. Re-scanning would produce the same empty result.
@@ -2499,7 +2499,7 @@ The memory is up to date. The stubs for 2026-07-21 are already listed as pending
 - `podcasts/affinity-matured/scripts/2026-07-21-affinity-matured.commit-msg` — present
 
 **TTS probe result:**
-- Mistral API (`voxtral-mini-tts-2603`, key `***REMOVED-MISTRAL-KEY***`): 401 Unauthorized on all retries — key still expired/invalid
+- Mistral API (`voxtral-mini-tts-2603`, key `***REDACTED***`): 401 Unauthorized on all retries — key still expired/invalid
 - ElevenLabs fallback: `ELEVENLABS_API_KEY not set` — no key in `.env`
 - Local Voxtral (`http://localhost:8000`): not applicable on this host
 

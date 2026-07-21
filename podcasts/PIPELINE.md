@@ -291,8 +291,17 @@ episode for the day.
 ## Final summary (logged to cron.log)
 
 The runner pipes Claude's stdout into `podcasts/<slug>/logs/cron.log`, so
-the final response is a permanent audit record of the run. Make it useful
-for retrospective review.
+the final response is a permanent audit record of the run — and it gets
+committed and pushed to a public GitHub repo. Make it useful for
+retrospective review.
+
+**Never print the value of a secret.** If you're debugging a TTS/API
+auth failure and need to reference `MISTRAL_API_KEY` (or any other
+credential in `.env`), report only whether it's set/unset and whether
+the call succeeded (e.g. "MISTRAL_API_KEY: set, returns 401
+Unauthorized") — never echo, cat, or paste the key's actual value into
+your response. A real key leaked into this log once already and had to
+be rotated and scrubbed from history.
 
 After the commit/push line, print the **candidate funnel** that fed today's
 selection:

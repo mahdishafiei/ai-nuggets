@@ -68,6 +68,18 @@ fi
 
 cd "$REPO" || exit 1
 
+# Safety net: Claude's session output is teed verbatim into cron.log and
+# that file gets committed to a public repo. PIPELINE.md tells the agent
+# never to print secret values, but a real MISTRAL_API_KEY leaked through
+# once anyway — scrub any KEY=/TOKEN=/SECRET=/PASSWORD=-shaped value out
+# of every cron.log before it's ever staged.
+redact_secrets_in_logs() {
+  for f in "$REPO"/podcasts/*/logs/cron.log; do
+    [ -f "$f" ] || continue
+    perl -pi -e 's/([A-Za-z_]*(?:KEY|TOKEN|SECRET|PASSWORD)[A-Za-z_]*\s*=\s*)\S+/$1***REDACTED***/gi' "$f" 2>/dev/null || true
+  done
+}
+
 PIPELINE="$REPO/podcasts/PIPELINE.md"
 if [ ! -f "$PIPELINE" ]; then
   echo "ERROR: $PIPELINE not found" >&2
@@ -190,6 +202,7 @@ wait
 # Phase 2 + 3 (skipped in LEGACY_TTS mode — each show already committed).
 ##############################################################################
 if [ "$LEGACY_TTS" = "1" ]; then
+  redact_secrets_in_logs
   if ! git diff --quiet -- 'podcasts/*/logs/cron.log'; then
     git add 'podcasts/*/logs/cron.log' && git commit -m 'Update cron logs'
   fi
@@ -246,6 +259,7 @@ python3 "$REPO/scripts/publish_pending.py" --date "$TODAY"
 PHASE3_RC=$?
 
 # Catch any straggling log changes (cron.log tee'd after Claude exited).
+redact_secrets_in_logs
 if ! git diff --quiet -- 'podcasts/*/logs/cron.log'; then
   git add 'podcasts/*/logs/cron.log' && git commit -m 'Update cron logs' || true
   git push || true
