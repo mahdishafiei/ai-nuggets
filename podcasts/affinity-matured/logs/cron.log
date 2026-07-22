@@ -3015,3 +3015,190 @@ The orchestrator (`scripts/publish_pending.py`) will:
 **Ready for batch TTS processing.**
 === 2026-07-21T20:28:59-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-21T20:28:59-07:00 FAILED: no usable output for affinity-matured after all retries ===
+=== 2026-07-22T04:00:17-07:00 start affinity-matured ===
+Today's episode is written and staged as stubs — TTS remains blocked by the expired `MISTRAL_API_KEY` and unset `ELEVENLABS_API_KEY`, so per the show's established gap-fill pattern I did **not** run `gen_tts.py` or commit; the orchestrator's `publish_pending.py` will pick this up once a key is refreshed.
+
+## Files written
+
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.md` (3288 words, four items)
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.rss-item.xml` (`__LENGTH__` / `__DURATION__` placeholders; RSS fragment parses OK)
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.commit-msg`
+
+## Candidate funnel
+
+**bioRxiv** — 30 preprints scanned in the 2026-07-21..2026-07-22 window; substantive shortlist:
+- **[picked, item 2]** AI-Driven Design of Nanobinders Targeting the TSLPR Heterodimer Interface — Ahn et al., Park lab, KRIBB (10.64898/2026.07.20.739581, posted 2026-07-22) — abstract-only, body not yet rendered
+- Computational design of de novo integrated domains in plant NLR immune receptors (10.64898/2026.07.10.737686) — RFdiffusion+ProteinMPNN but plant NLRs, not antibody-adjacent
+- ProtSyntax PLM for PTMs (10.64898/2026.07.18.739331) — already rejected as not antibody-adjacent in yesterday's funnel
+
+**arXiv** — 500-entry daily cache scanned, 48 hits ≥2026-07-19; only one on-topic after de-noising the keyword matches ("Chai" = chain-of-thought, "ESM" = generic acronym, "IgG" as coincidental token, "TCR" as unrelated abbrev):
+- **[picked, item 1]** ABOPD: Antibody CDR Design via On-Policy Distillation — Yang, He, Xie, Wang, Qiu, Wang, Fu, Wang (Shanghai Innovation Institute + Fudan + Southeast + Nanjing) — arXiv 2607.18835 (2026-07-21). Full PDF read.
+
+**PubMed** — reldate=5, 80 hits; substantive shortlist:
+- **[picked, item 3]** Developability engineering of scFvs enables robust CAR function under transient mRNA expression — Mangolini et al. (Lonza + academic collaborators), Sci Rep, 2026-07-19 — abstract-only (Nature paywall)
+- **[picked, item 4]** Evolutionary Profiles for Protein Fitness Prediction (EvoIF) — Jiao/Lin/Fan/Liang/Mao, Bioinformatics, 2026-07-20 — abstract-only
+- Extending Protein Language Models to a Viral Genomic Scale (Dejean et al., GigaScience 2026-07-21) — PLM but viral-genome scope, dropped in favor of EvoIF
+- Position-dependent effects of loop proline residues on Fab stability (Kawakami et al., BBRC 2026-07-18) — solid antibody biophysics but no ML angle
+- Epitope-guided detection of a molecular glue-induced ternary complex using synthetic Fabs (Kossiakoff lab, JMB 2026-07-20) — synthetic-antibody work but no ML driver
+- Incorporating AI-optimized zinc finger proteins for miniature base editors (Nat Commun 2026-07-20) — PLM-optimized ZFPs, not antibody
+
+**ChemRxiv / press / model releases** — no fresh on-topic drops in the 2026-07-21..2026-07-22 window.
+
+**Reads**: full-text PDF for ABOPD (mandatory for lead item); abstract-only for the other three, flagged in the script for the TSLPR nanobinder because bioRxiv body hasn't rendered <24h after posting.
+
+**Blocker note**: TTS again failed to run — direct probe of Mistral speech endpoint returned HTTP 401 this morning as expected. Following the established stub pattern; `publish_pending.py` should gap-fill 2026-07-19, 07-20, 07-21, and now 07-22 once `MISTRAL_API_KEY` is refreshed or `ELEVENLABS_API_KEY` is set.
+=== 2026-07-22T04:12:30-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-22T04:12:30-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-22T04:15:30-07:00 start affinity-matured (retry 1) ===
+Today's script and stubs are already in place from this morning's 04:09 cron run, and the TTS blocker is unchanged. Per my memory and the SKIP_TTS re-invocation pattern, there's nothing new to produce — retrying `gen_tts.py` would just 401 again. I confirmed this directly (401 on the Mistral endpoint, 404 on the local Voxtral port, no ELEVENLABS key).
+
+## Status: today's episode already staged, TTS still blocked
+
+**Files already on disk for 2026-07-22 (written by cron @ 04:09):**
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.md` — 23,912 bytes, four items (ABOPD, TSLPR nanobinder, scFv developability, EvoIF)
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.rss-item.xml` — final RSS `<item>` with `__LENGTH__` / `__DURATION__` placeholders
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.commit-msg` — one-line commit message
+
+**Blocker verified this session:**
+- `POST https://api.mistral.ai/v1/audio/tts` → HTTP 401 `{"detail":"Unauthorized"}` (same key as `.env` mtime 2026-07-06)
+- `POST http://localhost:8000/v1/audio/speech` → HTTP 404 (that port isn't the Voxtral TTS server on this host)
+- `ELEVENLABS_API_KEY` still not set in `.env`
+
+**Actions NOT taken (deliberately, per PIPELINE.md re-invocation rule + memory):**
+- Did **not** re-run the search — today's script already exists, and the re-invocation rule explicitly forbids shifting source mix / widening recency to "find something different."
+- Did **not** re-run `gen_tts.py` — the memory note from four prior blocked days says every retry hits the same 401. I probed the endpoint directly to confirm and got 401 again.
+- Did **not** touch `feed.xml` or commit — SKIP_TTS-mode stubs remain the correct state; `scripts/publish_pending.py` is the tool that consumes them.
+
+**Candidate funnel (from cron log — original selection at 04:09):**
+- **bioRxiv** — 30 preprints in 2026-07-21..2026-07-22 window; shortlist:
+  - **[picked, item 2]** AI-Driven Design of Nanobinders Targeting the TSLPR Heterodimer Interface — Park lab / KRIBB (10.64898/2026.07.20.739581, posted 2026-07-22) — abstract-only, body not yet rendered
+  - Computational design of de novo integrated domains in plant NLR receptors — RFdiffusion+ProteinMPNN but plant NLRs, off-scope
+  - ProtSyntax PLM for PTMs — not antibody-adjacent
+- **arXiv** — 500-entry daily cache; 48 date-window hits, only one on-topic after de-noising ("Chai"=chain-of-thought, "ESM"=generic acronym, etc.):
+  - **[picked, item 1]** ABOPD: Antibody CDR Design via On-Policy Distillation — Fu/Wang, arXiv 2607.18835 (2026-07-21) — full PDF read
+- **PubMed** — reldate=5, 80 hits; shortlist:
+  - **[picked, item 3]** Developability engineering of scFvs — Mangolini/Lonza, Sci Rep 2026-07-19 — abstract-only (Nature paywall)
+  - **[picked, item 4]** Evolutionary Profiles for Protein Fitness Prediction (EvoIF) — Jiao/Mao, Bioinformatics 2026-07-20 — abstract-only
+  - Extending PLMs to Viral Genomic Scale (GigaScience) — dropped, viral-genome scope
+  - Loop proline residues on Fab stability (BBRC) — no ML angle
+  - Epitope-guided ternary-complex Fabs (Kossiakoff, JMB) — no ML angle
+  - AI-optimized zinc finger proteins (Nat Commun) — not antibody
+- **ChemRxiv / press / model releases** — no fresh on-topic drops.
+
+**To unblock (unchanged from prior days):**
+Refresh `MISTRAL_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env` **or** add `ELEVENLABS_API_KEY=<key>`, then:
+```
+python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22
+```
+That single call will generate audio, publish MP3s, append feed items with real bytes/durations, commit, and push all four pending episodes.
+=== 2026-07-22T04:17:21-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-22T04:17:21-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-22T04:20:21-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Today's episode is already fully produced from the 04:09 cron run. Here is the final status for this invocation:
+
+---
+
+## Affinity Matured — 2026-07-22 (re-invocation, retry 2)
+
+**Episode status: script + stubs complete; TTS blocked (unchanged)**
+
+Files on disk (written by nightly cron at 04:09 PDT):
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.md` — four items, ~3,600 words
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.rss-item.xml` — RSS stub with `__LENGTH__`/`__DURATION__` placeholders
+- `podcasts/affinity-matured/scripts/2026-07-22-affinity-matured.commit-msg` — one-line commit message
+
+**TTS blocker (verified this session, unchanged):**
+- Mistral speech endpoint → HTTP 401 (key in `.env` expired since 2026-07-06)
+- Local Voxtral on port 8000 → HTTP 404 (not the TTS server on this host)
+- `ELEVENLABS_API_KEY` not set in `.env`
+
+**Actions taken:** none — re-invocation rules and memory note both say not to re-run the search or TTS when today's stubs already exist.
+
+**To unblock all four pending episodes (2026-07-19 through 2026-07-22):** refresh `MISTRAL_API_KEY` **or** add `ELEVENLABS_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env`, then run:
+```
+python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22
+```
+
+**Today's episode (for the record):** Four items — ABOPD on-policy distillation for DiffAb CDR-H3 (arXiv 2607.18835); TSLPR nanobinder TRB5.1 blocking TSLPR–IL-7Rα heterodimerization at 9.7 nM (KRIBB, bioRxiv); scFv developability engineering for mRNA-LNP CAR-T (Mangolini/Lonza, Sci Rep); EvoIF lightweight fitness predictor fusing homolog + inverse-folding profiles (Jiao/Mao, Bioinformatics).
+=== 2026-07-22T04:22:16-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-22T04:22:16-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-22T04:25:16-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+After a thorough search of all sources, I've found no fresh qualifying items for a second episode. Here is the candidate funnel for this re-invocation:
+
+---
+
+**Re-invocation search — 2026-07-22 (second run)**
+
+Excluding already-featured items: ABOPD (arXiv 2607.18835), TSLPR nanobinder (bioRxiv 10.64898/2026.07.20.739581), scFv/CAR-T developability (Sci Rep 10.1038/s41598-026-60295-2), EvoIF (Bioinformatics 10.1093/bioinformatics/btag525).
+
+**bioRxiv** (2026-07-21 – 2026-07-22): 30 papers total. Zero relevance-keyword matches — none touch antibody design, protein language models, CDRs, epitopes, affinity maturation, broadly neutralizing antibodies, inverse folding, or diffusion-based protein design. Closest was ProtSyntax (10.64898/2026.07.18.739331), a protein LLM for post-translational modification syntax — outside both the recency window and the show's antibody-design focus.
+
+**arXiv** (cache, 500 entries): Two hits on relevance keywords. (1) 2607.18835 — ABOPD, already featured. (2) 2607.18144 — "Do Language Models Dream of Binding Molecules?": benchmarks general-purpose LLMs on 3D structure-based small-molecule pocket filling; LLMs underperform specialized diffusion models; no antibody component; out of scope.
+
+**PubMed** (last 5 days, 2026-07-17 to 2026-07-22): 151 results across the relevance query. Top 23 checked by metadata. No qualifying items not already covered: results were predominantly clinical antibody trials, diagnostic immunoassay papers, virology antibody characterization without AI/ML angles, and drug-target interaction methods not antibody-specific. One borderline hit — PMID 42446980, Cho et al., PNAS, structural basis of HIV-1 MPER bnAb lipid engagement and polyreactivity (Scripps, Ward/Schief/Wilson labs) — published July 14, outside the 5-day recency window (≥ July 17 required).
+
+**ChemRxiv**: No relevant hits via web search.
+
+**News / GitHub / Hugging Face**: No new antibody or protein language model releases in the last 24–48 hours identified.
+
+**Outcome: No second episode for 2026-07-22.** The first-run episode covered all qualifying fresh material. The correct outcome per the pipeline re-invocation rules is to ship no second episode rather than reach back to out-of-window items.
+=== 2026-07-22T04:29:01-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-22T04:29:01-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-22T04:32:01-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+I need to pause here and report the current situation. The episode is **fully staged and ready**, but I've identified a critical blocker:
+
+**Current Status:**
+- ✅ Script written for 2026-07-22 with 4 high-quality items
+- ✅ RSS item stub prepared (waiting for audio metadata)  
+- ✅ Commit message ready
+- ❌ **TTS audio generation blocked** — per memory, the `MISTRAL_API_KEY` expired on 2026-07-06 and gen_tts.py has been failing with 401 errors across all shows
+
+**What needs to happen to publish:**
+According to PIPELINE.md, the episode needs:
+1. TTS audio generated via `gen_tts.py`
+2. Audio published to `http://garibaldi.scripps.edu:8420/episodes/`
+3. RSS feed updated with actual file size and duration
+4. Git commit and push
+
+**The blocker:** The Mistral API key in `.env` appears to be expired, which would cause TTS generation to fail.
+
+**Next steps:** 
+Would you like me to:
+1. **Update the API key** if you have a fresh one?
+2. **Check for alternative TTS sources** (ElevenLabs fallback is configured)?
+3. **Run the batch TTS on Garibaldi HPC** if that's where the self-hosted Voxtral server is deployed?
+
+Without resolving the TTS issue, the episode remains staged but cannot be published.
+=== 2026-07-22T04:33:56-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-22T04:33:56-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-22T04:36:56-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+I see the issue now. The script for today (2026-07-22) has been written and is ready, but **there's a critical blocker preventing publication:**
+
+## Current Status
+
+✅ **Complete:**
+- Today's script (`2026-07-22-affinity-matured.md`) is written with 4 high-quality items (~24KB, ~20 min runtime)
+- RSS stub and commit-msg stub are in place
+
+❌ **Blocked:** The `MISTRAL_API_KEY` in `.env` expired on 2026-07-06 and returns HTTP 401 errors. The ElevenLabs fallback (implemented 2026-07-20) requires `ELEVENLABS_API_KEY`, which is not set.
+
+**This blocks not just today's episode, but the entire backlog:**
+- 2026-07-19, 2026-07-20, 2026-07-21, and 2026-07-22 are all awaiting TTS
+
+## To Publish Today's Episode
+
+I need you to provide one of:
+
+1. **A valid Mistral API key** (replace the expired `p9uK42YMe5N5tm6mKKrDdl5dVnYJZJDf` in `.env`), OR
+2. **An ElevenLabs API key** (add to `.env`)
+
+Once you provide a key, I can run the batch publish pass:
+```bash
+python3 scripts/publish_pending.py --date 2026-07-22
+```
+
+This will generate audio for today's episode and publish it to the feed.
+
+Do you have a valid API key I can use?
+=== 2026-07-22T04:37:58-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-22T04:37:58-07:00 FAILED: no usable output for affinity-matured after all retries ===
