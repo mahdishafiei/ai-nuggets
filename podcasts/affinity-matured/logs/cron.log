@@ -4702,3 +4702,165 @@ I can see there are already 6 episodes produced for today (2026-07-24), and I ne
 Could you grant the necessary permissions so I can proceed with the candidate search? Or would you prefer I use a different approach?
 === 2026-07-24T20:54:38-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-24T20:54:38-07:00 FAILED: no usable output for affinity-matured after all retries ===
+=== 2026-07-25T04:00:06-07:00 start affinity-matured ===
+Ready. Summary for the cron log below.
+
+---
+
+**Published:** 2026-07-25 script + RSS-item + commit-msg stubs written to `podcasts/affinity-matured/scripts/2026-07-25-affinity-matured.{md,rss-item.xml,commit-msg}`. TTS/publish/feed/commit deferred per PIPELINE.md — see below.
+
+**TTS state:** MISTRAL_API_KEY still HTTP 401 (probed 2026-07-25 04:00 PDT; `.env` mtime unchanged since 2026-07-06). Local Voxtral endpoint connection-refused. ELEVENLABS_API_KEY still not in `.env`. Followed the SKIP_TTS pattern per PIPELINE.md: wrote `.rss-item.xml` with `__LENGTH__`/`__DURATION__` placeholders and `.commit-msg`; skipped `gen_tts.py`, `publish_episode.sh`, `feed.xml` edit, and commit. Once the key is refreshed: run `python3 scripts/publish_pending.py` (per the tts-key-blocker memory).
+
+**Candidate funnel (2026-07-25 03:55–04:15 PDT audit):**
+
+- **bioRxiv 2026-07-24 to 2026-07-25** (details API, full paginated collection, 280 papers, no source failures): 11 keyword hits; substantive shortlist after discarding spurious "antibody" matches:
+  - `10.64898/2026.07.21.739256` — AINN-Express: Leakage-Aware Sequence-Only VHH Expression Predictor on AINN-P1 (Ainnocence) — **chosen**
+  - `10.64898/2026.07.24.740633` — Prevalent phenotypic mutation impairs bnAb binding to influenza HA (Sanchez-Ruiz, Univ Granada) — **chosen**
+  - `10.64898/2026.07.21.739818` — SARS-CoV-2 PQ.16.1.1/RK.1 antibody evasion (Cao lab) — no ML/engineering angle; not chosen
+  - Other keyword hits (PDAC EV framework, RPA-TERT AlphaFold3-modeling, γδ T-cell microgel, Alzheimer's NAb epitomic profiling, tissue-resident SARS-CoV-2 antibody responses, EBV QTY analogs, chicken ISG screen against IAV) — spurious matches or no antibody-engineering/ML content.
+- **arXiv daily cache** (`/tmp/ai-nuggets-arxiv-cache.xml`, 500-entry snapshot, mtime 2026-07-25 04:00): 2 keyword hits, both already covered (ABOPD on 2026-07-24 ed. 3; graph-CO paper irrelevant).
+- **arXiv live query** (q-bio.BM OR q-bio.QM AND antibody/nanobody/paratope/VHH/CDR/protein-language/inverse-folding/de-novo-binder, 80 results, `submittedDate` desc; one 503 retry + 45s backoff): newest antibody-relevant hit is AAMFM 2026-07-22 (already covered on 2026-07-24 ed. 4). No new antibody items in the last 2 days.
+- **PubMed** (E-utilities esearch reldate=5, antibody + ML/design + protein-language-model + broadly-neutralizing-influenza + nanobody-design, 50 IDs, esummary+efetch filter): 10 title-relevant, only **SimBinder-IF** (Zhao/Jiang/Kim, UT Health Houston, Bioinformatics 2026-07-24, PMID 42498639) — ESM-IF+SimPO for antibody affinity, F045-092/pdmH1N1 case study — **chosen (lead)**. Others were ADC reviews, bispecific-antibody perspectives, mAb bioprocessing simulation review (not engineering), unrelated clinical.
+- **ChemRxiv/news** (site:chemrxiv.org + antibody-language-model release queries): nothing new in the 1–2 day window beyond items already covered in prior editions.
+
+**Chosen for 2026-07-25 episode:** SimBinder-IF (lead), AINN-Express, HA phenotypic-mutation bnAb evasion (Sanchez-Ruiz). Full-text depth: SimBinder-IF fetched via OUP advance-article page (peer-reviewed article); AINN-Express and HA phenotypic-mutation are bioRxiv body-not-yet-rendered — noted "going off the abstract" in-script for each per PIPELINE.md.
+=== 2026-07-25T04:16:21-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-25T04:16:21-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-25T04:19:21-07:00 start affinity-matured (retry 1) ===
+Today's edition for `affinity-matured` is already complete from the 04:15 PDT nightly-cron run — no new episode needed, and TTS remains blocked.
+
+**State at 04:19 PDT re-invocation:**
+- `podcasts/affinity-matured/scripts/2026-07-25-affinity-matured.{md,commit-msg,rss-item.xml}` all present (three items: SimBinder-IF, AINN-Express, Sanchez-Ruiz HA-mRNA phenotypic-mutation)
+- `.env` mtime still 2026-07-06 → `MISTRAL_API_KEY` HTTP 401 live-probe confirms
+- No mp3 for today (or for any of 2026-07-19 through 2026-07-25 — 14 pending)
+
+**Decision:** short-circuit per the "same-day retry within ~15 min of a completed candidate audit" rule (this fires 4 min after the audit). No new search, no `gen_tts.py` retry.
+
+**Candidate funnel** (from 04:15 audit, restated here for the audit log):
+- bioRxiv 2026-07-24:2026-07-25 paginated scan (all cursor pages): 2 substantive picks — Wang/Jin/Pan AINN-Express (10.64898/2026.07.21.739256, abstract-only) [chosen]; Barriga et al. Sanchez-Ruiz group, HA-mRNA phenotypic mutation (10.64898/2026.07.24.740633, abstract-only) [chosen]
+- Bioinformatics journal (published online 2026-07-24): Zhao/Jiang/Kim SimBinder-IF (DOI 10.1093/bioinformatics/btag548) [chosen — lead]
+- arXiv q-bio.BM + cs.LG last-2-days scan: no new items beyond those already covered in prior editions
+- PubMed reldate=5: nothing new-and-in-scope not already surfaced by preprint scan
+- ChemRxiv: no relevant last-2-days items
+
+**Unblock action needed** (owner: user): refresh `MISTRAL_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env` OR add `ELEVENLABS_API_KEY`, then run `python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22 --date 2026-07-23 --date 2026-07-24 --date 2026-07-25` to gap-fill and publish all 14 pending episodes in one batch.
+=== 2026-07-25T04:21:07-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-25T04:21:07-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-25T04:24:07-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+All three stub files are written. Here is the candidate funnel for the audit record:
+
+---
+
+**Run summary — affinity-matured, 2026-07-25 (second episode / re-invocation)**
+
+**Mode:** SKIP_TTS not set in environment; however, Voxtral primary (localhost:8000) not running on this host and MISTRAL_API_KEY is expired (expired 2026-07-06 per persistent memory), so TTS would fail. Stubs written consistent with SKIP_TTS pattern used by all previous runs on this host. Commit deferred to orchestrator.
+
+**Already-shipped today (first episode):** SimBinder-IF (Bioinformatics, 10.1093/bioinformatics/btag548), AINN-Express (bioRxiv 10.64898/2026.07.21.739256), phenotypic-mutation influenza HA bnAb evasion (bioRxiv 10.64898/2026.07.24.740633).
+
+**Source scan:**
+
+- **bioRxiv bioinformatics (2026-07-24–25):** 26 papers scanned; 1 already-shipped (AINN-Express). No new in-scope items beyond already-shipped.
+- **bioRxiv immunology (2026-07-24–25):** 10 papers scanned; 0 surviving relevance filter (SARS-CoV-2 antibody evasion paper — PQ.16.1.1/RK.1 — is epidemiological surveillance without design/ML angle; excluded).
+- **bioRxiv biochemistry / biophysics / synthetic biology (2026-07-24–25):** 16 papers scanned; 0 relevant.
+- **arXiv (shared daily cache):** 500 papers scanned; 1 match on relevance keywords — ABOPD (arXiv 2607.18835, Antibody CDR Design via On-Policy Distillation, July 21). Full text: PDF extracted as binary only; abs page provided abstract with full quantitative results. Treated as abstract-level.
+- **PubMed (last 5 days, 2026-07-20–25):** 206 hits; 30 retrieved. After relevance filter:
+  - PMID 42498639 (10.1093/bioinformatics/btag548): SimBinder-IF — already shipped.
+  - PMID 42482306 (10.1080/19420862.2026.2703349): glycosylation penetrance survey (mAbs, July 21) — **SELECTED**. Full text fetched via jina reader proxy; complete.
+  - PMID 42497650 (10.1016/j.ebiom.2026.106405): structure-guided anti-orthopoxvirus humanization (EBioMedicine, July 24) — **SELECTED**. Full text fetched via jina reader proxy; complete.
+  - PMID 42496057: mAb bioprocessing optimization AI review — excluded (manufacturing focus, no antibody design/ML content at sequence/structure level).
+  - PMID 42497056: GoMA-DTA drug-target affinity using ESM-2 — excluded (small-molecule drug-target focus, no antibody angle).
+  - Remaining hits: clinical, pharmacovigilance, basic immunology — all excluded.
+- **ChemRxiv:** Not searched (WebSearch not used; no WebSearch hits available for chemrxiv.org from this host this run).
+
+**Shortlist (after exclusions):**
+- ABOPD (arXiv 2607.18835, July 21): CDR-H3 on-policy distillation; RMSD 2.37→1.95 Å on RAbD — **SELECTED**
+- Structure-guided anti-orthopoxvirus humanization (EBioMedicine 2026-07-24, PMID 42497650): Foldseek + PDBePISA; full experimental validation; 100% in vivo survival combo — **SELECTED (LEAD)**
+- Glycosylation penetrance survey (mAbs 2026-07-21, PMID 42482306): 19,265 PDB structures; 7.82% vs 16.47% baseline; N-X-T 3.84× N-X-S; glutamine reclassified — **SELECTED**
+
+**Output:** `podcasts/affinity-matured/scripts/2026-07-25-affinity-matured-2.md` + `.rss-item.xml` + `.commit-msg`
+=== 2026-07-25T04:37:38-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-25T04:37:38-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-25T04:40:39-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+**Candidate funnel — 2026-07-25 third-edition audit**
+
+**Sources scanned:**
+- bioRxiv Jul 23–25: 30 papers total, 0 surviving relevance filter (no antibody/protein-design hits in this window not already covered)
+- arXiv cache (500 entries, q-bio/cs.AI/cs.CL/cs.MA): 2 relevant hits — ABOPD (already in today's ep 2) and a false positive on graph TSP pretraining
+- arXiv live query (ti:antibody+language model / design): identified AAMFM (2607.20057) — covered yesterday
+- PubMed last 5 days (171 papers): 7 antibody-relevant titles surfaced; all either clinical/pharmacological or covered in today's or yesterday's editions
+- ChemRxiv: no fresh July 2026 hits accessible
+- News/tools: no new antibody/protein-design model releases found
+
+**Shortlist after filtering:**
+
+| Paper | Status |
+|---|---|
+| AAMFM (arXiv 2607.20057, Jul 22) | ✗ Covered Jul 24, ep 4 |
+| DNA-Nanobody T-cell engager (bioRxiv 10.64898/2026.07.22.740045, Jul 22-23) | ✗ Covered Jul 24 ep 6, Jul 23 ep 2 |
+| Nanobody biparatopic SARS-CoV-2 Omicron triage (Int J Biol Macromol, Jul 23) | ✗ Covered Jul 24, ep 1 |
+
+**Decision: No third episode for July 25.** All candidates from the recency window were covered in prior-day editions. Today's two editions (6 items total) stand as complete.
+=== 2026-07-25T04:56:21-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-25T04:56:21-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-25T04:59:21-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+I can see the full situation now. **Today's episode (2026-07-25) is already produced**—in fact, there are **2 episodes written with 6 items total**:
+
+**Episode 1 (completed 04:16 PDT):**
+1. SimBinder-IF: Affinity optimization via preference-tuned ESM inverse folding (Bioinformatics)
+2. AINN-Express: VHH expression prediction with leakage-aware evaluation (bioRxiv)
+3. Phenotypic mutation in influenza HA impairing bnAb binding (Sanchez-Ruiz, bioRxiv)
+
+**Episode 2 (completed 04:37 PDT):**
+1. Structure-guided orthopoxvirus antibody humanization (EBioMedicine, lead)
+2. ABOPD: CDR-H3 design via on-policy distillation (arXiv)
+3. Glycosylation penetrance survey recalibrating risk estimates (mAbs)
+
+**The blocker:** Both episodes are stuck at the **SKIP_TTS stub stage** because `MISTRAL_API_KEY` expired on 2026-07-06. The system has written:
+- `.md` scripts ✓
+- `.rss-item.xml` with `__LENGTH__` and `__DURATION__` placeholders
+- `.commit-msg` files
+
+**14 episodes are pending** across 2026-07-19 through 2026-07-25, awaiting TTS generation.
+
+**To complete the pipeline**, you need to either:
+
+1. **Update the expired Mistral key in `.env`**, then run:
+   ```bash
+   python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 ... --date 2026-07-25
+   ```
+
+2. **Or add an ElevenLabs key** to `.env` as a fallback TTS provider
+
+Do you have an updated API key, or would you like me to investigate other options?
+=== 2026-07-25T05:00:46-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-25T05:00:46-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-25T05:03:46-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+Perfect! Both episodes for today are properly prepared and ready for batch TTS processing. Here's the status summary:
+
+## 2026-07-25 — Affinity Matured Production Status
+
+**Two complete episodes created and staged:**
+
+### Episode 1 (Morning Edition)
+- **Length**: 2,509 words (~10–12 min spoken)
+- **Items**:
+  1. **SimBinder-IF** — Zhao/Jiang/Kim (UT Health Houston, Bioinformatics): ESM inverse-folding decoder preference-tuned via SimPO for antibody affinity. +22% Spearman correlation on 7 held-out complexes, case study redesigning anti-HA antibody for pandemic H1N1. Code + weights released.
+  2. **AINN-Express** — Wang/Jin/Pan (Ainnocence, bioRxiv): Sequence-only VHH expression predictor. Frozen AINN-P1 (167M params) + gradient-boosted classifier. Leave-program-out ROC-AUC 0.81 on new programs vs ESM2-650M at 0.68. Demonstrates program-identity leakage in standard random splits.
+  3. **Phenotypic mutation in influenza HA** — Sanchez-Ruiz (U Granada, bioRxiv): Most prevalent transcription error encodes aa replacement that impairs bnAb binding (0.2–0.5% of HA mRNA). Mechanism of antibody evasion via inheritable RNA patterns.
+
+### Episode 2 (Afternoon Edition)
+- **Length**: 2,118 words (~8–10 min spoken)
+- **Items**:
+  1. **Foldseek-guided orthopoxvirus humanization** — Yang/Xue (NIPB/CAMS, EBioMedicine): Structural framework selection (Foldseek TM-score ≥0.8) + PDBePISA interface constraints. POX1.1/POX2.1: 2.2–3.5× affinity improvement, 100% survival in vivo, POX-mix cocktail achieves therapeutic Day-2 100% survival.
+  2. **ABOPD** — Yang et al. (arXiv): On-policy distillation for CDR-H3 design. Reduces CDR-H3 RMSD 2.37→1.95Å on RAbD benchmark. Addresses train-inference distribution mismatch in flexible loops.
+  3. **Glycosylation penetrance recalibration** — mAbs: Baseline 7.82% (vs 16.47% from ascertainment-biased corpora). Glutamine NOT a suppressor (refutes prior); N-X-T 3.84× higher risk than N-X-S; FR2 completely safe; FR1 position-20 extreme hotspot (90%).
+
+**All files ready for batch processing:**
+- ✅ Scripts with proper audio formatting (acronyms spelled out, no DOIs/URLs in spoken text)
+- ✅ RSS item stubs with `__LENGTH__` and `__DURATION__` placeholders
+- ✅ Commit message stubs with detailed content summaries
+- ✅ Proper XML escaping and RSS 2.0 compliance
+
+The orchestrator (`scripts/publish_pending.py`) will handle TTS generation, file size calculation, duration detection, and final feed/commit updates. Episodes are ready for the batch pipeline.
+=== 2026-07-25T05:06:12-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-25T05:06:12-07:00 FAILED: no usable output for affinity-matured after all retries ===
