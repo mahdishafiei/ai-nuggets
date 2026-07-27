@@ -5840,3 +5840,163 @@ I need permission to search bioRxiv and PubMed for content. These MCP servers re
 Alternatively, if you're running this in a non-interactive environment, I can work with pre-cached arXiv data or manually-provided article lists. Do you have the arXiv cache file at `/tmp/ai-nuggets-arxiv-cache.xml` available, or can you provide a list of recent articles to consider?
 === 2026-07-27T04:46:44-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-27T04:46:44-07:00 FAILED: no usable output for affinity-matured after all retries ===
+=== 2026-07-27T12:00:04-07:00 start affinity-matured ===
+Task done — no further steps needed. Final summary for cron.log:
+
+**2026-07-27 12:00 PDT re-invocation — 2nd-edition audit (result: no 2nd edition today)**
+
+State: `.env` mtime still 2026-07-06 (MISTRAL_API_KEY HTTP 401 confirmed live; ELEVENLABS_API_KEY absent). Ep1 stubs (Carbonara + Moody HA/NA + Taly AF-ion) written at 04:12–04:13 PDT by the nightly cron remain the only 2026-07-27 output. 7.5h since ep1 → outside the 15-min short-circuit window → fresh full-source audit ran.
+
+Candidate funnel (2026-07-27 12:00 PDT, second-edition audit):
+- **bioRxiv 2026-07-26:2026-07-27** — 203 papers, 7 cursor pages fully paginated. 31 keyword hits (mostly false-positive `fold`/`antigen`). 5 substantive antibody-adjacent items:
+  - `10.64898/2026.07.22.739677` — Bloom H5N1 HA/MHC-II (already 2026-07-23 ep1 stub)
+  - `10.64898/2026.07.20.737354` v2 — ADP1 Fc-binder (already 2026-07-23 ep1 stub; v2 revision)
+  - `10.64898/2026.07.22.740123` — Moody HA/NA subtypes (**chosen** — 2026-07-27 ep1)
+  - `10.64898/2026.07.25.740665` — Carbonara SAXS-seeded MD (**chosen** — 2026-07-27 ep1)
+  - `10.64898/2026.07.24.740587` — Taly AF-ion perspective (**chosen** — 2026-07-27 ep1)
+  - Spatium spatial-proteomics "PLM" (`10.64898/2026.07.23.740264`) — tokens are protein-marker channels, not sequence PLM, dropped
+  - 7-4G anti-HBsAg mouse mAb (`10.64898/2026.07.24.740663`) — no ML/engineering, dropped
+- **arXiv** — 04:00 cache (500 entries) only ABOPD (2607.18835, covered 2026-07-26 ep2) and AAMFM (2607.20057, covered 2026-07-26 ep3) as antibody hits. Live q-bio.BM/QM/cs.LG query (40 results) newest posted 2026-07-24 (weekend gap expected). No 2026-07-25+ antibody items.
+- **PubMed** — reldate=5 (150 IDs) + reldate=1 edat (45 IDs) sifted; only DisoPatho (protein ML but not antibody-specific), ML T-cell repertoires, GoMA-DTA (small-molecule), and an scFv library-gen paper (no ML). All antibody+ML papers this week already covered in prior editions.
+- **Web** — no antibody/nanobody/PLM GitHub/HF releases July 26–27.
+
+**Decision: no 2nd edition for 2026-07-27.** Ep1 (3 items) remains the complete Monday output. TTS still blocked (MISTRAL 401); ep1 stubs and all 20 prior stubs (2026-07-19 through 2026-07-26) await `python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22 --date 2026-07-23 --date 2026-07-24 --date 2026-07-25 --date 2026-07-26 --date 2026-07-27` once `MISTRAL_API_KEY` is refreshed or `ELEVENLABS_API_KEY` is added to `.env`. No commit or push (SKIP_TTS-style stubs are handled by the orchestrator).
+=== 2026-07-27T12:05:24-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-27T12:05:24-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-27T12:08:24-07:00 start affinity-matured (retry 1) ===
+## Candidate funnel (2026-07-27, invocation at 12:09 PDT)
+
+**No new episode produced this invocation** — short-circuited per the same-day-retry rule.
+
+Today's ep1 (Carbonara + Moody HA/NA + Taly AF-ion) was already written by the 04:00 PDT nightly cron. A full-source audit at 12:00 PDT (9 minutes before this run) confirmed no candidates for a 2nd edition:
+
+- **bioRxiv** 2026-07-26:2026-07-27 — 203 papers across 7 cursor pages; 5 antibody-adjacent hits, all already covered in ep1 or in prior-week stubs.
+- **arXiv** q-bio.BM/QM/cs.LG — cache + live queries, newest antibody item is 2026-07-24; weekend gap expected. Nothing 2026-07-25 or later.
+- **PubMed** reldate=5 — 150 IDs; the two fresh Jul 26 antibody+ML items (DisoPatho, ML T-cell repertoires) are out of scope for this show.
+- **GitHub/HF releases** — none surfaced for Jul 26-27.
+
+**Blocker unchanged.** `.env` mtime still 2026-07-06; MISTRAL_API_KEY still HTTP 401; ELEVENLABS_API_KEY still absent. Per memory guidance I did not re-run `gen_tts.py`. Pending list is 21 episodes (2026-07-19 through 2026-07-27 ep1). Once the key is refreshed or `ELEVENLABS_API_KEY` is added to `.env`, unblock with:
+
+```
+python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22 --date 2026-07-23 --date 2026-07-24 --date 2026-07-25 --date 2026-07-26 --date 2026-07-27
+```
+=== 2026-07-27T12:09:56-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-27T12:09:56-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-27T12:12:56-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Good, the URL is valid. All three files are written. Let me print the candidate funnel for the cron.log.
+
+---
+
+**Candidate funnel — 2026-07-27 afternoon re-invocation**
+
+**Already featured in morning episode (excluded):**
+- bioRxiv 10.64898/2026.07.25.740665 — Carbonara (SAXS-guided MD seeding, Degiacomi/Edinburgh)
+- bioRxiv 10.64898/2026.07.22.740123 — Influenza HA/NA subtype classifier (Moody/Duke)
+- bioRxiv 10.64898/2026.07.24.740587 — Taly perspective on AlphaFold IDR limitations
+
+**Sources scanned:**
+
+- **bioRxiv** (2026-07-25/2026-07-27): 30 papers total; 1 keyword hit after excluding morning episode items: DOI 10.64898/2026.07.24.740633 ("Prevalent phenotypic mutation impairs binding of broadly neutralizing antibodies to influenza hemagglutinin"). Abstract-only (body not rendered); not a dominant pick with full-text candidates available — held as tail item, not selected.
+- Wider bioRxiv window (2026-07-23/2026-07-27): 2 additional hits — DOI 10.64898/2026.01.30.702929 (PA-X immune evasion, July 23, influenza virology without antibody ML angle, out of scope); DOI 10.64898/2026.07.22.740045 (DNA-nanobody T-cell engagers, July 23, nanobody engineering but no AI/ML component, out of scope).
+- **arXiv** (daily cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries): 0 keyword hits. Web search revealed arXiv 2607.20057 (AAMFM, July 22, 2026) not in cache — fetched via `arxiv.org/html/2607.20057`, full text obtained. ✓
+- **PubMed** (edat 2026-07-22/2026-07-27, 242 total): filtered to 3 relevant hits:
+  - PMID 42489170 / DOI 10.1002/pro.70730 — BepiPocket/DiscoPocket (Nielsen/DTU, Protein Science August 2026); full text via PMC13393073. ✓ **Selected**
+  - PMID 42482306 / DOI 10.1080/19420862.2026.2703349 — Glycosylation penetrance mAbs (Gaughan, July 21, 2026); full text via PMC13393236. ✓ **Selected**
+  - PMID 42482445 — Subtype-specific neutralizing antibodies promote antigenic shift during influenza co-infection; virology without antibody ML angle, out of scope.
+- **ChemRxiv** — not searched (no new hits expected given bioRxiv + arXiv + PubMed coverage of the field)
+- **News/GitHub/HuggingFace** — web searches returned no fresh July 2026 model releases beyond what arXiv captured
+
+**Shortlist (4 items after filtering):**
+- arXiv 2607.20057 — AAMFM antigen-specific antibody foundation model ← **Selected**
+- DOI 10.1002/pro.70730 — BepiPocket/DiscoPocket Chai-1 improvement ← **Selected**
+- DOI 10.1080/19420862.2026.2703349 — Glycosylation penetrance recalibration ← **Selected**
+- bioRxiv 10.64898/2026.07.24.740633 — HA phenotypic mutations + BNAbs (abstract-only) — dropped
+
+**SKIP_TTS note:** Running in SKIP_TTS protocol (consistent with morning run and expired MISTRAL_API_KEY); script, RSS item stub, and commit-msg stub written to `podcasts/affinity-matured/scripts/2026-07-27-affinity-matured-2.*`. Orchestrator will handle TTS and commit after batch TTS finishes.
+
+---
+
+The afternoon episode has been written. Three files created in `podcasts/affinity-matured/scripts/`:
+
+- **`2026-07-27-affinity-matured-2.md`** — the script (three items: AAMFM foundation model, BepiPocket/DiscoPocket Chai-1 workflow, glycosylation penetrance survey)
+- **`2026-07-27-affinity-matured-2.rss-item.xml`** — RSS `<item>` stub with `__LENGTH__` and `__DURATION__` placeholders
+- **`2026-07-27-affinity-matured-2.commit-msg`** — commit message stub
+
+The arXiv URL (2607.20057) was confirmed live. Following SKIP_TTS protocol since the morning episode also used stubs and the MISTRAL API key is expired — the orchestrator will handle TTS and commit.
+=== 2026-07-27T12:24:00-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-27T12:24:00-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-27T12:27:00-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+Episode 3 is written and stubs are in place. Here is the final **candidate funnel** for today's evening run:
+
+---
+
+## Candidate Funnel — 2026-07-27 evening re-invocation
+
+**Already shipped today (excluded):**
+- ep1: Carbonara (SAXS-seeded MD), Moody HA/NA subtype classifier, Taly AlphaFold ion perspective
+- ep2: AAMFM (arXiv 2607.20057), BepiPocket/DiscoPocket (Protein Science 10.1002/pro.70730), Gaughan glycosylation penetrance (mAbs 10.1080/19420862.2026.2703349)
+
+**Sources scanned:**
+- **bioRxiv** (bioinformatics/immunology/biochemistry/biophysics, 2026-07-25:2026-07-27): ~260 papers scanned, ~25 antibody-keyword hits. After discarding out-of-scope (T-cell degranulation, aging HSCs, copy-number, single-cell perturbation, neurodegenerative disease, GPCR signaling, membrane proteins, etc.) and already-covered items:
+  - `10.64898/2026.07.22.739677` — **H5N1 MHC-II cross-reactive antibodies (Boyd/Stanford)** ✓ abstract-only, CHOSEN
+  - `10.64898/2026.07.21.739885` — **FluQRC H3N2 antigenic distance** ✓ abstract-only, CHOSEN
+  - `10.64898/2026.07.20.737354` — ADP1 Fc-binding peptide multivalent assembly — abstract-only, no ML content, skipped
+  - `10.64898/2026.07.23.740264` — Spatium spatial proteomics "PLM" — tokens are protein-marker channels not amino acids, out of scope, skipped
+- **arXiv** (cache + live): 500 entries in cache, zero relevant antibody/protein-design hits; all arXiv hits matched "diffusion" for image processing or were previously covered items
+- **PubMed** (reldate=5): 4 antibody+language-model hits:
+  - PMID 42498639 — **SimBinder-IF (Bioinformatics btag548, Jul 24)** ✓ full text, CHOSEN ★ lead item
+  - PMID 42506943 — Alzheimer's multi-omics AI review — out of scope (no antibody engineering)
+  - PMID 42504888 — angiogenesis deep learning + anti-VEGF — out of scope (no antibody ML)
+  - PMID 42489519 — EscaPRRS PRRSV immune escape — covered 2026-07-23 ep5
+- **ChemRxiv** (web search): no July 25-27 antibody/CDR/nanobody hits within recency window
+- **News/tools/model releases**: Chai-2 released June 2025 (outside window); no new July 26-27 GitHub/HF antibody or protein-design model releases found
+
+**Shortlist (3 items):**
+- ★ SimBinder-IF — Bioinformatics Jul 24 — full text — **CHOSEN** (lead)
+- H5N1 MHC-II entry + cross-reactive mAbs — bioRxiv Jul 26 — abstract-only — **CHOSEN**
+- FluQRC H3N2 antigenic distance — bioRxiv Jul 25 — abstract-only — **CHOSEN**
+
+**Outcome:** Script written to `podcasts/affinity-matured/scripts/2026-07-27-affinity-matured-3.md` (~1,380 words / ~10 min audio); SKIP_TTS stubs written (`rss-item.xml`, `commit-msg`); TTS attempted and confirmed HTTP 401 (MISTRAL_API_KEY expired, ELEVENLABS_API_KEY not set); `publish_pending.py` will handle TTS and commit when key is refreshed. Pending list: **23 episodes**.
+=== 2026-07-27T12:39:29-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-27T12:39:29-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-27T12:42:29-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+I'm encountering permission blockers that prevent me from completing this task. Let me check the current state and explain the situation:
+
+**Status:**
+- Three episodes have been produced today (2026-07-27) covering 9 items total
+- I'm in a re-invocation scenario needing fresh content
+- SKIP_TTS mode is active (evidenced by .rss-item.xml stub files already created)
+- **Blocker 1:** WebSearch permissions required to find new articles
+- **Blocker 2:** From memory: `MISTRAL_API_KEY expired since 2026-07-06` causing TTS failures across all shows
+
+**What I need to proceed:**
+1. **Permission to search the web** for new antibody/protein-design articles (bioRxiv, arXiv, PubMed)
+2. **Resolution of the TTS key blocker** - The MISTRAL_API_KEY in `.env` needs to be renewed, or the self-hosted Voxtral on Garibaldi needs to be verified as functional
+
+Since the pipeline is in SKIP_TTS mode with stub files already being created, the key blocker is finding fresh content. Can you either:
+- Grant permission to use WebSearch/web tools so I can discover today's articles?
+- Provide a list of relevant articles from today that haven't been featured yet?
+
+Once I have that, I can quickly write the script and create the appropriate stub files following the pattern already established.
+=== 2026-07-27T12:43:26-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-27T12:43:26-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-27T12:46:26-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+I've hit permission barriers. To search for today's podcast content, I need permission to:
+1. Use MCP tools (bioRxiv API access)
+2. Use WebSearch for finding recent papers
+
+**Additionally, I've confirmed the critical blocker from memory:** The MISTRAL_API_KEY expired on 2026-07-06, which would prevent TTS audio generation.
+
+**Current state:**
+- 3 episodes already created for today (07-27) with 9 items total
+- Per re-invocation rules, I need fresh content that doesn't duplicate those papers
+- I cannot proceed without either: (a) permission to use search APIs, or (b) clarification on whether to skip today or use an alternative approach
+
+**Questions:**
+1. Should I proceed with a 4th episode if you grant search permissions?
+2. Is the pipeline running in SKIP_TTS mode (creating stub files for batch TTS later)? If so, I can write the script without doing TTS immediately.
+3. Do you want to address the expired API key before I proceed?
+
+Would you like to grant the necessary permissions to continue?
+=== 2026-07-27T12:47:48-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-27T12:47:48-07:00 FAILED: no usable output for affinity-matured after all retries ===
