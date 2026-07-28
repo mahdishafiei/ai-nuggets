@@ -6190,3 +6190,156 @@ Once these are resolved, I can:
 Would you like to grant these permissions so I can proceed with today's production?
 === 2026-07-27T21:00:58-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-27T21:00:58-07:00 FAILED: no usable output for affinity-matured after all retries ===
+=== 2026-07-28T04:00:21-07:00 start affinity-matured ===
+Stubs written. Publishing/TTS blocked by expired MISTRAL_API_KEY (401 since 2026-07-06); no commit or feed edit per SKIP_TTS-mode pipeline.
+
+## 2026-07-28 candidate funnel
+
+**bioRxiv 2026-07-27:2026-07-28** — 298 papers, all 10 cursor pages paginated, ~13 antibody-keyword hits:
+- 10.64898/2026.07.01.735277 v2 — Wobble Vaccines: complex antigen pools for cross-strain breadth (no ML)
+- 10.64898/2026.06.28.735056 v2 — Novel human mAbs for lipoarabinomannan TB dx (no ML)
+- 10.64898/2026.07.27.740892 — Manganese ion inhibits IAV PA endonuclease (small molecule)
+- 10.64898/2026.07.27.740881 — STIM autoinhibition AlphaFold3-guided (not antibody)
+- 10.64898/2026.07.27.740638 — HPAI H5N1 poultry outbreak model (epidemiology)
+- 10.64898/2026.07.25.740226 — Rubisco ML-assisted directed evolution (enzyme, not antibody)
+- 10.64898/2026.07.26.738612 — Antimicrobial peptides via computational evolution (peptides, not antibody)
+- 10.64898/2026.04.16.719043 v2 — ProNA3D nucleic-acid interface analysis (RNA, not antibody)
+- Zero antibody-engineering + ML candidates in 2-day window
+
+**arXiv /tmp cache (500 entries, refreshed 04:00 today) + live q-bio.BM/QM/cs.LG antibody-abstract query:**
+- 2607.23975 Plato-Bio (2026-07-27, LLM biology-verification agent, not antibody-specific per WebFetch)
+- 2607.23518 Chamaileon (2026-07-26, already covered 2026-07-27 ep4)
+- 2607.22777 LC-SEPLM (2026-07-24, outside 2-day window)
+- 2607.20057 AAMFM (2026-07-22, already covered 2026-07-26 ep3 and 2026-07-27 ep2)
+- No papers posted 2026-07-25 or later matching audience (weekend gap)
+
+**PubMed reldate=5 antibody+ML query — 141 IDs, top 70 sifted:**
+- **PMID 42507936 — ML-CITO / PTC discovery (PNAS, Shan/Newman Caltech, epub 2026-07-27) — SELECTED**
+- PMID 42508542 — scFv veterinary "intelligent design" review (Biotechnol Adv, 2026-07-27) — dropped: review paper, ScienceDirect Cloudflare-blocked full text, audience prefers primary methodology
+- PMID 42508541 — AI-driven multifunctional peptides review (Biotechnol Adv, 2026-07-27) — peptides not antibodies
+- PMID 42509201 — C5-blocking mAb epitope mapping (Immunology, 2026-07-27) — ELISA/SPR only, no ML
+- PMID 42509127 — IgG1 mAb glycoform quantification biotech (Trends Biotech) — bioprocess, out of audience
+- PMID 42504977, 42501945, 42496576, 42496057, 42493602, 42504405 — clinical ADCs, biosimilar assays, bispecific reviews, bioprocess AI, out of scope
+
+**ChemRxiv / GitHub / HF July 27-28** — no fresh antibody or PLM model/dataset releases surfaced.
+
+## Selected
+- **2026-07-28-affinity-matured** — single-item Tuesday edition: ML-CITO from Newman lab (Caltech + UCLA chemistry + Aithyra Institute Vienna), PNAS 2026-07-27. Genome-informed data augmentation + contrastive learning on E-S-M Cambrian 600M embeddings; 14 seed phenazine-modifying enzymes → ~600 positives + ~600 matched negatives → 3-layer MLP (512/128/64) with 4-category cross-family/same-label contrastive pairing → wet-lab-validated discovery of P-T-C (phenazine-thiol conjugase, glyoxalase-type, first enzyme for a reaction long presumed spontaneous). Full text read via bioRxiv preprint 10.64898/2026.03.05.709892v1. Chosen despite being an enzyme paper because the sparse-label PLM-contrastive methodology is directly portable to novel-antigen antibody-binder-discovery campaigns where the published binder set is a handful of sequences.
+
+## State
+- `.env` mtime still 2026-07-06 00:19:02 (MISTRAL_API_KEY live probe: HTTP 401, 22 days expired); ELEVENLABS_API_KEY absent
+- No `gen_tts.py` attempt (401 confirmed)
+- Stubs written: `podcasts/affinity-matured/scripts/2026-07-28-affinity-matured.{md,rss-item.xml,commit-msg}`
+- No `publish_episode.sh` / `feed.xml` edit / `sync_feed.sh` / commit (SKIP_TTS-mode; orchestrator handles)
+- Pending list now **25 episodes** across 2026-07-19 through 2026-07-28 ep1
+
+## To publish once key refreshed
+```
+python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22 --date 2026-07-23 --date 2026-07-24 --date 2026-07-25 --date 2026-07-26 --date 2026-07-27 --date 2026-07-28
+```
+=== 2026-07-28T04:16:48-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-28T04:16:48-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-28T04:19:48-07:00 start affinity-matured (retry 1) ===
+Today's episode (ep1) was already produced by the 04:00 PDT nightly cron 5 minutes before this re-invocation. Short-circuiting per the established same-day-retry rule.
+
+**Status:**
+- **Ep1 shipped as stubs** at 04:15 PDT: ML-CITO from Newman lab, Caltech (Shan et al., PNAS 2026-07-27, DOI 10.1073/pnas.2607571123) — genome-informed data augmentation + contrastive learning on ESM Cambrian 600M embeddings for sparse-data enzyme discovery, wet-lab validation of P-T-C phenazine-thiol conjugase. Methodology directly portable to sparse-label antibody-binder discovery.
+- **MP3:** blocked. MISTRAL_API_KEY still HTTP 401 (unchanged since 2026-07-06); ELEVENLABS_API_KEY still absent from `.env`.
+- **Pending publish_pending.py backlog:** 25 episodes (2026-07-19 → 2026-07-28 ep1).
+
+**Candidate funnel (per 04:00 audit, unchanged since — no re-scan run):**
+- bioRxiv 07-27:07-28 details API, 298 papers / 10 cursor pages — 0 fresh antibody+ML hits (Wobble Vaccines v2 no-ML, TB dx mAb v2 no-ML, C5-blocking mAb ELISA/SPR no-ML, Mn++/IAV small-molecule, STIM AF3-guided not antibody, HPAI Australia epidemiology, Rubisco directed evolution enzyme)
+- arXiv /tmp cache + live q-bio.BM/QM/cs.LG — 0 fresh antibody-adjacent (Plato-Bio 2607.23975 not antibody-specific; Chamaileon 2607.23518 covered 2026-07-27 ep4)
+- PubMed reldate=5, 141 IDs — only PMID 42507936 ML-CITO/PTC (**picked, ep1**); scFv veterinary review (dropped: review not primary + Cloudflare-blocked); AI-peptides review (dropped: peptides not antibodies); rest clinical/ADC/biosimilar noise
+- ChemRxiv 07-27:07-28 — no hits
+- GitHub/HF releases — no fresh antibody/PLM launches
+
+**Decision:** no 2nd edition. 5 min after ep1 stubs, well inside the 15-min short-circuit window; nothing on any source would have flipped since 04:00. Runner will retry on the LEGACY_TTS mp3-check trap until the key is refreshed, at which point `publish_pending.py` sweeps up all 25 backlogged episodes.
+=== 2026-07-28T04:22:04-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-28T04:22:04-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-28T04:25:04-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+TTS is confirmed blocked — Mistral 401, ElevenLabs key absent. The episode content is fully prepared from the earlier SKIP_TTS run; only audio generation is blocked.
+
+**Today's episode status — Affinity Matured, 2026-07-28:**
+
+**Content:** Complete. Script, RSS stub, and commit-msg stub are written and ready at `podcasts/affinity-matured/scripts/2026-07-28-affinity-matured.*`.
+
+**Episode topic:** ML-CITO (Shan/Newman, Caltech, PNAS 2026-07-27) — genome-informed data augmentation + contrastive learning on ESM Cambrian 600M embeddings for sparse-data enzyme discovery; 14 seed sequences → ~600 labeled positives → wet-lab discovery of phenazine-thiol conjugase. Coverage angle: methodology is directly portable to sparse-label antibody binder discovery against novel antigens.
+
+**TTS:** Blocked. `MISTRAL_API_KEY` returns 401 (expired since 2026-07-06). `ELEVENLABS_API_KEY` is not set. No audio generated, no feed update, no commit.
+
+**To unblock:** Refresh `MISTRAL_API_KEY` in `.env`, then run:
+```
+python3 scripts/publish_pending.py
+```
+This will batch-generate TTS for all pending stubs (2026-07-19 through 2026-07-28), update `feed.xml`, sync to Garibaldi, and commit.
+
+---
+
+**Candidate funnel (2026-07-28 run):**
+- **bioRxiv** (2026-07-27/28, 298 papers, 10 pages): No antibody engineering + ML papers. Keyword hits were clinical mAbs, vaccine antigen pools, epitope mapping without ML, and unrelated biology.
+- **arXiv** (`/tmp` cache, 500 entries): No antibody/protein-LM papers in the 2026-07-26/27 window beyond previously covered items (Plato-Bio, Chamaileon).
+- **PubMed** (reldate=5, 141 IDs): Two candidates — **ML-CITO/PTC (PMID 42507936, PNAS 2026-07-27) ← selected**; scFv veterinary intelligent-design review (PMID 42508542, review paper, Cloudflare-blocked, dropped per audience criteria).
+- **ChemRxiv**: No antibody/binder papers in the July 27–28 window.
+- **News/GitHub/HF**: No new antibody or PLM model releases.
+
+Single-item edition. Thin Tuesday window — the right call.
+=== 2026-07-28T04:28:54-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-28T04:28:54-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-28T04:31:54-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+The audit is complete. Here is the candidate funnel for today's re-invocation:
+
+---
+
+**Affinity Matured — 2026-07-28 mid-day re-invocation — 2nd-edition audit**
+
+This is a re-invocation; ep1 (ML-CITO, Newman lab, PNAS) was produced at 04:15 PDT. Full fresh source scan performed — well outside the 15-minute short-circuit window.
+
+**Source scan:**
+
+- **bioRxiv Jul 27-28** (bioinformatics, immunology, biochemistry, biophysics, synthetic biology via MCP): ~180 papers scanned across 5 categories. Antibody-keyword hits: lipoarabinomannan mAb diagnostics (no ML), Wobble Vaccines v2 (no ML), Neuropilin-1/Chikungunya (no ML), APECED B cell compositional study (no ML), TLR4 neonatal meningitis (no ML), Gelsolin ER-stress psoriasis (no ML), HPAI H5N1 Australia epidemiology model (not antibody engineering), SAXS-seeded MD biophysics paper (already ep1 Jul 27), enzyme/synthetic-biology noise. **0 items survive to antibody+ML shortlist.**
+
+- **arXiv q-bio.BM live query** (30 most recent): Newest antibody-specific hit is AAMFM 2607.20057 (Jul 22, already covered 2026-07-26 ep3). Nothing posted Jul 25-28. arXiv cache also surfaced LC-SEPLM 2607.22777 (Jul 24, ESM2+LoRA+long-range contact supervision) — outside 2-day window, dropped. **0 new items.**
+
+- **PubMed pdat Jul 23-28** (~139 IDs): All newly-indexed PMIDs checked — clinical antibody trials (gefurulimab nanobody in MG, vedolizumab PBPK, ADC reviews, checkpoint inhibitors), biosensors and diagnostics, basic immunology, review articles. Only ML-CITO (42507936, already ep1). **0 new items.**
+
+- **PubMed edat Jul 25-28** (28 IDs): All out of scope or already covered.
+
+- **Web / GitHub / HF**: Germinal (NatBiotech, epitope-targeted nanobody design via AlphaFold-Multimer backprop + antibody PLM) surfaced — PMID ~41M suggests indexing ~3-4 months ago, well outside 5-day window. No new model/dataset releases on GitHub or HF. **0 new items.**
+
+**Shortlist after filtering:** empty.
+
+**Decision: no second edition for 2026-07-28.** Today's complete output is ep1 (ML-CITO / Shan, Newman, Caltech / PNAS Jul 27). Pending list: 25 episodes (2026-07-19 through 2026-07-28 ep1) awaiting `python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22 --date 2026-07-23 --date 2026-07-24 --date 2026-07-25 --date 2026-07-26 --date 2026-07-27 --date 2026-07-28` once MISTRAL_API_KEY is refreshed or ELEVENLABS_API_KEY is added to `.env`.
+=== 2026-07-28T04:39:00-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-28T04:39:00-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-28T04:42:00-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+I need your approval to generate the TTS audio. This will call the Mistral API (or local Voxtral) to synthesize the episode. The script for today (about sparse-data ML for enzyme discovery) is ready and complete.
+
+Shall I proceed with:
+1. **Generating audio** via gen_tts.py
+2. **Publishing the mp3** to the public server on Garibaldi
+3. **Updating feed.xml** with the new episode
+4. **Syncing the feed** to the public server
+5. **Committing** all changes
+
+This will complete today's full publishing pipeline. Should I go ahead?
+=== 2026-07-28T04:43:26-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-28T04:43:26-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-28T04:46:26-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+I can see the episode script has been written for today (July 28), along with the RSS item and commit message stubs. However, there's a critical blocker I need to alert you about.
+
+According to the memory and the RSS description, **the MISTRAL_API_KEY is expired (expired 23 days ago on 2026-07-06)**, which is preventing TTS generation. The stubs were correctly created in SKIP_TTS mode, but the next step—running `python3 scripts/publish_pending.py` to generate audio and publish—cannot proceed without a valid API key.
+
+The episode is ready to air in terms of content:
+- **Script**: Complete and excellent quality (a single-item thin-day episode on ML-CITO enzyme discovery from Caltech)
+- **RSS stub**: Prepared with all metadata except audio length and duration
+- **Commit message**: Staged and ready
+
+**To complete publication, I need you to:**
+
+1. Refresh the `MISTRAL_API_KEY` in `.env` at the repo root (or provide a replacement key)
+2. Once the key is valid, I can run the batch TTS pipeline via `python3 scripts/publish_pending.py` to generate audio for all pending episodes (including today's) and publish them
+
+Would you like to provide an updated API key so I can proceed with audio generation and publishing?
+=== 2026-07-28T04:47:32-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-28T04:47:32-07:00 FAILED: no usable output for affinity-matured after all retries ===
