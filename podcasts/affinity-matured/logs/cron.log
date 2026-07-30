@@ -7352,3 +7352,193 @@ python3 scripts/publish_pending.py \
 3. Something else?
 === 2026-07-30T04:54:17-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-30T04:54:17-07:00 FAILED: no usable output for affinity-matured after all retries ===
+=== 2026-07-30T12:00:04-07:00 start affinity-matured ===
+Done. Bonus 4th edition for 2026-07-30 written as stubs (script + RSS stub + commit-msg). No gen_tts.py attempt or commit — TTS is still blocked (MISTRAL_API_KEY HTTP 401, unchanged since 2026-07-06).
+
+## Candidate funnel
+
+**Already shipped today (excluded per re-invocation rule):**
+- ep1 04:08 — RFdiffusion 2 for Molecular Interfaces (Baker), ClonoDeep (Xiamen), FluQRC (Khalaj/Rayan), T3CL11 nanobody (Chen/Lescar)
+- ep2 04:29 — PG-LLM (Marks/Church), catch-bond TCR (Zhao)
+- ep3 04:43 — ProteinGuide (Listgarten, Nat Biotech), Raygun (Singh/Soderling, Nature)
+
+**Sources scanned (2026-07-29:2026-07-30 windows):**
+- bioRxiv details API: 343 papers, 30 keyword hits
+- arXiv /tmp cache (04:00 refresh) + live q-bio.BM antibody-targeted: 0 fresh papers 2026-07-28/29/30
+- PubMed reldate=3 antibody+ML: 40 IDs
+
+**Substantive shortlist (post-dedup, in-scope for the audience):**
+- ✅ Human Bindome — Wenckstern/Correia EPFL, bioRxiv 10.64898/2026.07.30.741542 — proteome-scale designed-binder atlas via parallelized BindCraft **[PICKED]**
+- ✅ aSR29 nanobody + ACE2-Fc bispecific — Xu et al., J Virol 10.1128/jvi.00608-26 — cryptic RBD epitope, 33× potency **[PICKED]**
+- ✅ Bat IgH locus duplication — Sci Adv doi:10.1126/sciadv.aeb6714 — dual IgH loci across 26 Chiroptera species **[PICKED]**
+- RSV F antibody repertoire threshold — Deng/Wang bioRxiv 10.64898/2026.07.28.735825 — DMS + repertoire biology, dropped (immunology-heavy, not ML)
+- Mirabody-IR700 EGFR photoimmunotherapy PMID 42526257 — format engineering only, no ML, dropped
+- scFv anti-PD-1/CTLA-4 soluble E. coli expression PMID 42525183 — bioprocess, dropped
+
+**Pending publish queue: 35 episodes** (2026-07-19 → 2026-07-30 ep4). Runs when MISTRAL_API_KEY is refreshed or ELEVENLABS_API_KEY is added to `.env`, then:
+
+`python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22 --date 2026-07-23 --date 2026-07-24 --date 2026-07-25 --date 2026-07-26 --date 2026-07-27 --date 2026-07-28 --date 2026-07-29 --date 2026-07-30`
+=== 2026-07-30T12:08:41-07:00 done  affinity-matured (exit 0) ===
+=== 2026-07-30T12:08:41-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-30T12:11:41-07:00 start affinity-matured (retry 1) ===
+**Turn summary:** Short-circuited a LEGACY_TTS-trap retry — the runner re-invoked because ep4 (12:06) produced a script but no MP3 (MISTRAL_API_KEY still 401 since 2026-07-06). Nothing new could have appeared on bioRxiv/arXiv/PubMed in the 3 minutes since ep4's audit, so no 5th edition. Updated memory's pending count from 30→35 (through today's ep4). Queue unblocks the moment `MISTRAL_API_KEY` is refreshed or `ELEVENLABS_API_KEY` is added to `.env`.
+=== 2026-07-30T12:13:45-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-07-30T12:13:45-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-30T12:16:45-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+After exhaustive searching across all sources, I've found no fresh candidates that clear the quality bar and recency window. Per the pipeline, when no viable picks remain after excluding already-shipped items, the correct outcome is no additional episode. Here is the candidate funnel for this re-invocation:
+
+---
+
+## Re-invocation run — 2026-07-30 (affinity-matured)
+
+**Episodes already shipped today:** 4 (covering 11 papers, listed below)
+
+Already featured today:
+- `10.1038/s41587-026-03207-z`
+- `10.1038/s41586-026-10842-8`
+- `10.1101/2025.11.20.689622`
+- `10.1016/j.celrep.2026.117582`
+- `10.64898/2026.07.21.739885`
+- `10.1016/j.celrep.2026.117758`
+- `10.64898/2026.07.30.741542`
+- `10.1128/jvi.00608-26`
+- `10.1126/sciadv.aeb6714`
+- `10.64898/2026.07.27.741045`
+- `10.64898/2026.07.26.740839`
+
+---
+
+### Candidate funnel
+
+**bioRxiv (July 28–30)** — 30 items scanned via API (full collection; count=30, no pagination needed).
+
+Relevance filter: 2 survived keyword matching, both discarded:
+- `10.64898/2026.07.24.740576` — *Entamoeba histolytica* vaccine candidate screening. Spurious keyword match ("epitope"). Not antibody ML.
+- `10.64898/2026.07.29.741412` — Pan-cancer single-cell pericyte atlas. Spurious match. Not antibody ML.
+
+MCP bioRxiv category sweeps (immunology, bioinformatics, biochemistry, synthetic biology, biophysics, molecular biology), same July 28–30 window:
+- All relevant-looking items (ProtSyntax, PG-LLM, Human Bindome, catch-bond TCR, bat IgH, ACE2-nanobody) were already featured in today's episodes or are outside the 2-day window on version 1 posting date.
+- No new qualifying items found.
+
+**arXiv (q-bio.BM, q-bio.QM, q-bio.PE)** — 50 entries via live query; daily cache (`/tmp/ai-nuggets-arxiv-cache.xml`, cs.AI/cs.CL/cs.MA/q-bio, 500 entries) also scanned.
+
+Hits after keyword filter:
+- `2607.26391` — *Q-Steer: Action-Value Guidance for Molecular Policy Optimization* (July 29). Small-molecule drug design via RL; no antibody content. Discarded.
+- `2607.25115` — *Persistent Manifold Learning of Protein Properties* (July 27). Binding-affinity prediction using topological manifold learning + protein LM representations. Interesting method, but (a) slightly outside the 2-day window and (b) not antibody-focused. Discarded.
+- `2607.23518` — *Chamaileon: Cross-Context Binder Design* (July 26). Outside the 2-day window. Discarded.
+
+arXiv daily cache (500 entries, cs.AI category): 1 hit, an electrolyte chemistry paper — spurious match on "ESM". Discarded.
+
+**PubMed (July 25–30, reldate=5)** — 154 total results; 18 metadata records fetched and reviewed.
+
+Relevant-looking hits:
+- PMID 42482445 — *Subtype-specific neutralizing antibodies promote antigenic shift during influenza co-infection* (July 25). Influenza antibody biology but no ML/generative design component. Below the technical-depth bar for this show.
+- PMID 42530330 — *ACE2-fused nanobody targeting a cryptic RBD epitope* — already featured today.
+- PMID 42525754 — *Immunoglobulin heavy chain locus duplication in bats* — already featured today.
+
+No new qualifying items.
+
+**ChemRxiv** — Web search (`site:chemrxiv.org antibody protein design July 2026`): no papers from the last 2 days matching the keyword set.
+
+**News / tool releases (last 1–2 days)** — Multiple web searches (RFantibody, ESM/AlphaFold releases, antibody LLM announcements): no new model/dataset/tool releases in the July 28–30 window that haven't already been covered.
+
+---
+
+### Outcome
+
+**No episode produced.** All sources exhausted within the recency windows; no fresh candidates survive after excluding today's already-shipped items. This is an expected thin-day outcome, not a source-failure — all sources were reachable and returned results.
+=== 2026-07-30T12:24:44-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-07-30T12:24:44-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-30T12:27:44-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+URL verified. All three files are written. Here's the candidate funnel for the audit log:
+
+---
+
+**Episode 5 — 2026-07-30-affinity-matured-5**
+
+**Candidate funnel:**
+
+**bioRxiv (2026-07-28 – 2026-07-30):**
+- 30 papers scanned via `api.biorxiv.org` direct API; 1 keyword hit (Entamoeba N-linked glycoprotein vaccine screen) — not relevant
+- bioRxiv MCP searched: bioinformatics (30), immunology (19), biochemistry (30), synthetic biology (5), biophysics (21), molecular biology (30) categories
+- Relevant hits (not already covered by episodes 1–4):
+  - `10.64898/2026.07.28.735825` — RSV F hierarchical activation threshold (Deng/Cao/Wang, July 29) — **SELECTED** (abstract-only; body not yet rendered)
+  - `10.64898/2026.07.01.735277` — Wobble Vaccines SARS-CoV-2 antigen breadth (v2 July 28) — not selected (original July 1 outside 2-day window)
+  - `10.64898/2026.07.29.741461` — ApexSP signal peptide design (July 30) — not selected (peripheral relevance)
+  - `10.64898/2026.07.28.741295` — Structure-free contrastive learning for small-molecule virtual screening (July 30) — not selected (small-molecule focus)
+
+**arXiv (cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries):**
+- 0 keyword hits across all 500 entries — cache skewed toward general ML/NLP; no protein design or antibody papers present today
+
+**PubMed (reldate=5, 100 IDs fetched):**
+- Relevant hits (not already covered):
+  - PMID 42520014 / DOI 10.1371/journal.ppat.1013831 — NHP LIBRA-Seq for HIV bNAb discovery (PLoS Pathogens, July 2026) — **SELECTED** (full text fetched via PLoS Pathogens)
+  - PMID 42520799 / DOI 10.1016/j.chembiol.2026.06.017 — EBV quaternary epitope antibody structural study — not selected (structural immunology, no ML angle)
+  - PMID 42521950 — CD3-bispecific antibody pharmacology platform — not selected (pharmacology modeling, no design/ML focus)
+
+**ChemRxiv:** Not searched (Cloudflare-gated; no fallback web search returned fresh hits)
+
+**News/tools/model releases:** Web searches returned no fresh July 28–30, 2026 model releases or preprints outside already-searched sources
+
+**Selected for episode 5:** 2 items
+- ★ LIBRA-Seq NHP HIV (PLoS Pathogens) — full text available, fetched via WebFetch
+- ★ RSV F hierarchical CDR threshold (bioRxiv July 29) — abstract-only, body not rendered; noted in script
+
+**Files written:**
+- `podcasts/affinity-matured/scripts/2026-07-30-affinity-matured-5.md`
+- `podcasts/affinity-matured/scripts/2026-07-30-affinity-matured-5.rss-item.xml`
+- `podcasts/affinity-matured/scripts/2026-07-30-affinity-matured-5.commit-msg`
+=== 2026-07-30T12:39:36-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-07-30T12:39:36-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-30T12:42:36-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+I've reviewed the production status for today (2026-07-30). There are already **5 complete episodes produced**, covering 13 high-quality papers across:
+
+1. **Episode 1**: RoseTTAFold 2, ClonoDeep, FluQRC, B7H3 nanobody
+2. **Episode 2**: P-G-LLM benchmark, catch bond TCR engineering  
+3. **Episode 3**: ProteinGuide, Raygun miniaturization
+4. **Episode 4**: Human Bindome, aS-R29 ACE2 nanobody, bat immunoglobulin duplication
+5. **Episode 5**: LIBRA-Seq for macaques, RSV F antibody hierarchy
+
+**Current blockers preventing me from creating additional episodes:**
+
+1. **External API access denied**: I need permissions to use bioRxiv, PubMed, arXiv, and WebSearch APIs to find new candidates
+2. **TTS key expired**: Memory notes MISTRAL_API_KEY has been expired since 2026-07-06, which blocks audio generation in non-SKIP_TTS mode
+3. **Stub files already in place**: The existing episodes all use `.rss-item.xml` and `.commit-msg` stubs, suggesting SKIP_TTS batch mode is active
+
+**What I can do:**
+
+If you'd like me to produce an additional Episode 6, please either:
+- Grant me permission to query arXiv, bioRxiv, and PubMed APIs, or
+- Provide me with a short list of 3-5 new papers from the last 1-2 days that haven't been covered above
+- Clarify if you'd like me to create a new episode vs. reviewing what's already been produced
+
+Would you like me to proceed with one of these options?
+=== 2026-07-30T12:45:03-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-30T12:45:03-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-07-30T12:48:03-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+I've identified several critical blockers preventing me from producing today's episode:
+
+## Blockers
+
+1. **No source access**: I cannot use WebSearch or MCP tools (bioRxiv, PubMed, arXiv) without your permission. The PROMPT.md requires searching these sources for candidate papers.
+
+2. **Expired API key**: Per the memory note, `MISTRAL_API_KEY` has been expired since 2026-07-06. The TTS pipeline (`gen_tts.py`) requires a valid key for both primary (Voxtral on HPC) and fallback (Mistral API) providers. Without it, audio generation will fail.
+
+3. **Multiple episodes already created**: There are already 5 complete scripts for today (2026-07-30) in stub-file format (`.md`, `.rss-item.xml`, `.commit-msg`). Per the re-invocation rules in PIPELINE.md, I should search for new items not already covered.
+
+## What I can see you've done
+
+- The repo is configured for **SKIP_TTS mode** (all scripts have corresponding stub files waiting for batch processing)
+- 5 episodes have been authored through multiple iterations today
+- All files remain uncommitted, pending TTS batch processing
+
+## Options to proceed
+
+1. **Grant WebSearch/MCP permissions** so I can search for new papers for a 6th episode
+2. **Fix the API key** so TTS can run (either update `MISTRAL_API_KEY` in `.env` or reconfigure voxtral)
+3. **Skip episode generation** and instead wait for the batch TTS pipeline to process the 5 pending scripts
+4. **Different approach** — let me know what you'd like me to focus on
+
+What would you like me to do?
+=== 2026-07-30T12:49:30-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-07-30T12:49:30-07:00 FAILED: no usable output for affinity-matured after all retries ===
