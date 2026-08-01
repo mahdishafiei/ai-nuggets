@@ -1797,7 +1797,7 @@ Both TTS paths are still failing — Mistral API returns 401 (expired key) and t
 **Still missing:** mp3, feed.xml entry, Garibaldi sync.
 
 **TTS blocker (confirmed this retry):**
-- Mistral API `voxtral-mini-tts-2603` — HTTP 401 (`MISTRAL_API_KEY=***REDACTED***` in `.env` returns Unauthorized; key expired ~2026-07-06)
+- Mistral API `voxtral-mini-tts-2603` — HTTP 401 (`MISTRAL_API_KEY=***REDACTED*** in `.env` returns Unauthorized; key expired ~2026-07-06)
 - Self-hosted Voxtral `http://localhost:8000` — HTTP 404 (service not running on this host)
 
 **Candidate funnel:** Not re-scanned this retry — retry 1 confirmed no new in-scope items beyond the three already featured. Re-scanning would produce the same empty result.
@@ -2298,7 +2298,7 @@ One of the following will unblock the pipeline:
 - `MISTRAL_API_KEY` in `.env` → HTTP 401 since 2026-07-06
 - `ELEVENLABS_API_KEY` → not in `.env` (now implemented in code; just needs the key)
 
-**To unblock:** add `ELEVENLABS_API_KEY=<your-key>` to `.env`, then `python3 gen_tts.py --show affinity-matured podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md podcasts/affinity-matured/episodes/2026-07-20-affinity-matured.mp3`. The publish_pending.py orchestrator can then handle both 2026-07-19 and 2026-07-20 in one pass.
+**To unblock:** add `ELEVENLABS_API_KEY=***REDACTED*** to `.env`, then `python3 gen_tts.py --show affinity-matured podcasts/affinity-matured/scripts/2026-07-20-affinity-matured.md podcasts/affinity-matured/episodes/2026-07-20-affinity-matured.mp3`. The publish_pending.py orchestrator can then handle both 2026-07-19 and 2026-07-20 in one pass.
 
 ---
 
@@ -2337,7 +2337,7 @@ Choose one of these options:
    python3 scripts/publish_pending.py --date 2026-07-20
    ```
 
-2. **Use ElevenLabs fallback** — add `ELEVENLABS_API_KEY=<your-key>` to `.env`, then run the same command
+2. **Use ElevenLabs fallback** — add `ELEVENLABS_API_KEY=***REDACTED*** to `.env`, then run the same command
 
 3. **Wait for Garibaldi batch TTS** — if this is running in the nightly orchestrator, TTS and publishing will happen automatically once credentials are restored
 
@@ -2367,12 +2367,12 @@ You need to provide **one** of these credentials to unblock audio generation:
 
 1. **ElevenLabs API key** — add to `.env`:
    ```bash
-   ELEVENLABS_API_KEY=<your-key>
+   ELEVENLABS_API_KEY=***REDACTED***
    ```
 
 2. **Fresh Mistral API key** — update in `.env`:
    ```bash
-   MISTRAL_API_KEY=<your-key>
+   MISTRAL_API_KEY=***REDACTED***
    ```
 
 Once you provide one, I'll run the TTS pipeline and complete publishing. Which would you like to use?
@@ -2873,12 +2873,12 @@ No MP3 was produced. Per pipeline: if `gen_tts.py` exits non-zero, do not commit
 
 Option A — refresh the Mistral key in `/gpfs/home/mshafiei/ai-nuggets/.env`:
 ```
-MISTRAL_API_KEY=<new-valid-key>
+MISTRAL_API_KEY=***REDACTED***
 ```
 
 Option B — add an ElevenLabs key:
 ```
-ELEVENLABS_API_KEY=<key>
+ELEVENLABS_API_KEY=***REDACTED***
 ```
 
 Then run the gap-fill + publish pass for the three-day backlog:
@@ -2926,12 +2926,12 @@ Memory is current and accurate. The memory already correctly documents this stat
 
 Option A — replace the expired Mistral key in `/gpfs/home/mshafiei/ai-nuggets/.env`:
 ```
-MISTRAL_API_KEY=<new-valid-key>
+MISTRAL_API_KEY=***REDACTED***
 ```
 
 Option B — add an ElevenLabs API key to `.env`:
 ```
-ELEVENLABS_API_KEY=<key>
+ELEVENLABS_API_KEY=***REDACTED***
 ```
 
 Then run the gap-fill pass for all three pending days:
@@ -2971,7 +2971,7 @@ The `MISTRAL_API_KEY` in `.env` expired on 2026-07-06 and returns HTTP 401 on al
 **To unblock and publish:**
 You need to provide one of:
 1. A fresh Mistral API key (to replace the expired one in `.env`), OR
-2. An ElevenLabs API key (add `ELEVENLABS_API_KEY=<key>` to `.env`)
+2. An ElevenLabs API key (add `ELEVENLABS_API_KEY=***REDACTED*** to `.env`)
 
 Once you update `.env`, I can run:
 ```bash
@@ -3086,7 +3086,7 @@ Today's script and stubs are already in place from this morning's 04:09 cron run
 - **ChemRxiv / press / model releases** — no fresh on-topic drops.
 
 **To unblock (unchanged from prior days):**
-Refresh `MISTRAL_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env` **or** add `ELEVENLABS_API_KEY=<key>`, then:
+Refresh `MISTRAL_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env` **or** add `ELEVENLABS_API_KEY=***REDACTED*** then:
 ```
 python3 scripts/publish_pending.py --date 2026-07-19 --date 2026-07-20 --date 2026-07-21 --date 2026-07-22
 ```
@@ -3217,7 +3217,7 @@ Do you have a valid API key I can use?
 
 **To unblock, you need to do one of these (I can't do either from here):**
 1. Refresh `MISTRAL_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env`, or
-2. Add `ELEVENLABS_API_KEY=...` to that same file.
+2. Add `ELEVENLABS_API_KEY=***REDACTED*** to that same file.
 
 **Once unblocked, one command gap-fills 4 pending episodes** (19th, 20th, 21st, 22nd — all with scripts + stubs ready):
 ```
@@ -3243,7 +3243,7 @@ Confirmed the state is unchanged: `MISTRAL_API_KEY` still 401, no `ELEVENLABS_AP
 
 **Unblock action (I can't do either from here):**
 1. Refresh `MISTRAL_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env`, or
-2. Add `ELEVENLABS_API_KEY=…` to that file.
+2. Add `ELEVENLABS_API_KEY=***REDACTED*** to that file.
 
 **Once unblocked**, four episodes gap-fill in one command:
 ```
@@ -3281,7 +3281,7 @@ The situation is unchanged from earlier runs today. Here is the full status log 
 ### To unblock
 
 1. Refresh `MISTRAL_API_KEY` in `/gpfs/home/mshafiei/ai-nuggets/.env`, **or**
-2. Add `ELEVENLABS_API_KEY=…` to that file.
+2. Add `ELEVENLABS_API_KEY=***REDACTED*** to that file.
 
 Once either key is valid, gap-fill all four pending episodes (2026-07-19 through 2026-07-22) in one command:
 
@@ -3326,8 +3326,8 @@ Script is complete at `podcasts/affinity-matured/scripts/2026-07-22-affinity-mat
 - Local Voxtral at `http://localhost:8000` → 404 on `/v1/audio/speech` (different service on that port)
 
 No mp3 can be produced until one of the following is fixed in `/gpfs/home/mshafiei/ai-nuggets/.env`:
-1. Add a valid `MISTRAL_API_KEY=…`, **or**
-2. Add `ELEVENLABS_API_KEY=…`
+1. Add a valid `MISTRAL_API_KEY=***REDACTED*** **or**
+2. Add `ELEVENLABS_API_KEY=***REDACTED***
 
 Once unblocked, run:
 ```
@@ -8311,3 +8311,48 @@ No further action is needed for today.
 === 2026-07-31T21:03:16-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
 === 2026-07-31T21:03:16-07:00 FAILED: no usable output for affinity-matured after all retries ===
 === 2026-08-01T04:00:07-07:00 start affinity-matured ===
+=== 2026-08-01T12:00:03-07:00 start affinity-matured ===
+Published successfully. Now the final summary for the cron log.
+
+## Run summary — 2026-08-01 re-invocation
+
+**Episode published:** `2026-08-01-affinity-matured-2` (15:45, 7,560,088 bytes, 7-chunk Mistral primary TTS with one 429/backoff on chunk 6)
+**Commit:** `33b2cbf Episode: affinity-matured: aSR29-ACE2-Fc cryptic-epitope nanobody bispecific (J Virol) + vespertilionid bat dual IgH loci (Sci Adv) + extended-CDR-H3 Fab developability (J Pharm Sci)`
+**Feed synced** to `~/ai-nuggets-public/feed.xml`. Pushed to origin/main.
+
+Re-invocation context: today's morning episode `2026-08-01-affinity-matured` (commit `344952f`) covered three bioRxiv items dated 2026-07-31 — Zheng lab AF3 antibody-antigen benchmark (10.64898/2026.07.30.741792), Hinge Bio tetrahedral IgG scaffold (10.1101/2022.03.23.485397v2), and Bhattacharya lab PLM twilight-zone embedding comparison (10.64898/2026.07.31.742099). Per PIPELINE.md re-invocation rule, ran the same search under the same recency filter with those three excluded.
+
+## Candidate funnel (re-invocation)
+
+**bioRxiv** (2026-07-31 → 2026-08-01, all categories, 8-cursor pagination, 221 items total on 2026-07-31 / 515 unique across the paginated window; 74 broad keyword hits; 12 with genuine ML+protein signal on `date>=2026-07-31` after dropping shipped items):
+- `10.64898/2026.07.28.741267` CLEAR-Lactyl + AttentionKla — PLM+LoRA framework for lysine lactylation prediction. abstract-only (Cloudflare-gated body); dropped per PIPELINE.md "prefer dropping unless dominant" — PLM-adjacent but not core to antibody engineering focus
+- `10.64898/2026.04.22.720174` CORAL — cross-attention RNA-protein interaction PLM. Off-target (RNA-protein not antibody)
+- `10.64898/2026.07.31.741530` Dengue N153Q + mAbs 2D22/C10 cryoEM — antibody structural biology, no ML/engineering angle
+- `10.64898/2026.07.29.740963` mRNA-LNP affinity-enhanced peptides vs influenza PA-PB1 — peptide inhibitor not antibody
+- `10.64898/2026.07.30.741861` MAPK1/STAT3/mTOR ligand design in oral SCC — small-molecule not antibody
+- Remaining 6 matches were false-positive keyword hits (ESM = astrocyte marker, generative = broad genetics, etc.)
+
+**arXiv** (shared daily cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries, newest `published` 2026-07-30T17:59Z; strict-window filter date≥2026-07-30 with antibody/protein-LM keywords):
+- `2607.28553` APO: Unsupervised Atomic Policy Optimization for 3D structure prediction — general 3D structure model, not antibody-specific; deprioritized
+- `2607.27794` Can AI Follow In Einstein's Footsteps? — philosophy of physics; keyword hit on "protein" was tangential; dropped
+
+**PubMed** (`reldate=5`, antibody+ML+protein-LM+broadly-neutralizing-influenza query, 466 count / 100 returned; 14 antibody-relevant after title filtering; substantive shortlist after full-abstract review):
+- PMID `42537752` (J Pharm Sci 2026-07-31) Svilenov lab — Physicochemical developability of long-CDR-H3 human Fabs. Abstract-only (Elsevier auth wall, no preprint located). ← **CHOSEN** (item 3)
+- PMID `42530330` (J Virol 2026-07-30) Jin lab — ACE2-fused nanobody targeting cryptic conserved RBD epitope, broadly neutralizes SARS-like viruses. Full text via `r.jina.ai` on `journals.asm.org`. ← **CHOSEN** (item 1, lead)
+- PMID `42525754` (Sci Adv 2026-07-31, epub 07-29) Boyd/Frank labs — Vespertilionid dual IgH loci, PMC13418733. Full text via `r.jina.ai` on PMC. ← **CHOSEN** (item 2)
+- PMID `42525538` (Cell Rep 2026-07-28) T3CL11 anti-B7-H3 nanobody for tumor imaging + 2.4 Å crystal — solid antibody-engineering fit but marginal vs the three above; **runner-up, not shipped** (would be the 4th item if the day were richer)
+- PMID `42538096` MS EBNA1 antibody serology — not engineering
+- PMID `42537921` Dengue vaccine follow-up — not engineering
+- PMID `42532836` Mosunetuzumab clinical update — no new engineering
+- PMID `42530885` INCAGN01876 phase 1/2 — clinical readout, no engineering
+- PMID `42528455` ADC dual-mechanism Perspective — Perspective piece, not primary
+- PMID `42521950` QSP model for CD3-bispecific in-vitro — pharmacology model, not antibody-engineering primary
+
+**ChemRxiv**: `WebSearch` fired earlier in the day returned nothing in-window; not re-queried. No antibody-ML items surfaced.
+
+**News / model releases**: no fresh (last-1–2-day) tool/model/dataset release surfaced during the survey.
+
+**Source-level issues**: NCBI E-utils `efetch` returned a 429 on one back-to-back call ("API rate limit exceeded, count 4, limit 3") — retried with a 3 s pause and the abstract came through. arXiv cache was pre-fetched by the runner at 04:00 PDT and had zero items dated ≥2026-07-31, consistent with arXiv's Friday-Saturday listing gap. `r.jina.ai` reader worked for J Virol (ASM), PMC (bat IgH) and Cell Press index page; Elsevier ScienceDirect (Fab CDR-H3 J Pharm Sci) hit Cloudflare CAPTCHA — item 3 accordingly ran off the PubMed abstract only, and the script says so explicitly per PIPELINE.md's abstract-only convention.
+
+**Depth logged**: full text opened for the two full-text-accessible picks (Jin nanobody paper, bat IgH paper — the two loaded from `r.jina.ai`); abstract-only for the Fab CDR-H3 paper (Elsevier auth wall; flagged in-script).
+=== 2026-08-01T12:15:49-07:00 done  affinity-matured (exit 0) ===
