@@ -8356,3 +8356,36 @@ Re-invocation context: today's morning episode `2026-08-01-affinity-matured` (co
 
 **Depth logged**: full text opened for the two full-text-accessible picks (Jin nanobody paper, bat IgH paper — the two loaded from `r.jina.ai`); abstract-only for the Fab CDR-H3 paper (Elsevier auth wall; flagged in-script).
 === 2026-08-01T12:15:49-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-01T20:00:03-07:00 start affinity-matured ===
+Third episode of 2026-08-01 published. Summary and candidate funnel below.
+
+**Episode shipped:**
+- Basename: `2026-08-01-affinity-matured-3`
+- Duration: 17:50 (1070.76s), size: 8,566,325 bytes
+- MP3 at `http://garibaldi.scripps.edu:8420/episodes/2026-08-01-affinity-matured-3.mp3`
+- Feed synced to public server; commit `bb45a64` pushed to `origin/main`
+- TTS: Mistral primary succeeded (one transient 429 on chunk 5, backoff-recovered)
+- 3 items: Human Bindome (Correia lab, EPFL, bioRxiv 2026-07-30), SE(3)-MeanFlow (Bai/Zhang Purdue + Kolouri Vanderbilt, arXiv 2026-07-29), speculative decoding for GFMs/PFMs (Georgakopoulos-Soares UT Austin, Bioinformatics 2026-07-31)
+
+**Candidate funnel (2026-08-01, evening re-invocation):**
+
+Recall — morning + afternoon episodes already shipped 6 items today; those excluded from selection per PIPELINE.md re-invocation rule.
+
+*Sources scanned:*
+- bioRxiv details API 2026-07-30 to 2026-08-01: 475 items pulled (full pagination), 31 keyword matches, ~5 substantive after discarding spurious matches
+- arXiv shared cache (`/tmp/ai-nuggets-arxiv-cache.xml`, cs.AI/cs.CL/cs.MA/q-bio, 500 entries): 6 recency-filtered hits, 1 substantive
+- arXiv q-bio.BM direct call: HTTP 429 rate-limit on retry, skipped (cache had coverage via broad `cat:q-bio`)
+- PubMed reldate=5 (466 total): top 50 titles reviewed, ~4 substantive
+- ChemRxiv: not queried (Cloudflare-gated on this host, per PROMPT.md)
+
+*Shortlist (after excluding today's 6 already-shipped items):*
+- The Human Bindome — bioRxiv 2026-07-30 (Correia lab, EPFL) — CHOSEN
+- SE(3)-MeanFlow: Few-Step Protein Backbone Generation on Lie Groups — arXiv 2026-07-29 (Bai/Zhang Purdue + Kolouri Vanderbilt) — CHOSEN
+- Accelerating inference in genomic and proteomic foundation models via speculative decoding — Bioinformatics 2026-07-31 (Georgakopoulos-Soares UT Austin + BSRC Fleming + MBZUAI) — CHOSEN
+- pLM representations unlock metagenomic space beyond homology — bioRxiv 2026-07-30 (Le Breton et al., abstract-only, dropped in favor of stronger picks)
+- Cross-Attention Over RNA And Protein Sequences (bioRxiv v2 2026-07-31, not a v1 — deprioritized as revision)
+- Dengue virus 2 N153Q neutralizing-antibody structural study — bioRxiv 2026-07-31 (abstract-only, dropped)
+- Molecular basis for parainfluenza HN antibody cross-protection — J Virol 2026-07-31 (Mousa lab, on-topic but item load already covered)
+- Self-interaction nanoparticle spectroscopy for IgG1 viscosity — MAbs 2026-Dec (developability; deferred)
+- htrSPRanalysis R package for SPR kinetics — PLoS Comput Biol 2026-07-31 (tool, deferred)
+=== 2026-08-01T20:20:12-07:00 done  affinity-matured (exit 0) ===
