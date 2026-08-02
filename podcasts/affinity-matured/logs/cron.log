@@ -8423,3 +8423,37 @@ Episode is live. Summary below.
 
 **Notes:** TTS primary provider Mistral worked cleanly; one transient 429 on chunk 5, self-recovered after 30s backoff. `MISTRAL_API_KEY`: set, working. No fallback needed. Yesterday's already-shipped picks (AF3 antibody benchmark, tetrahedral IgG, PLM twilight zone, aSR29 nanobody, bat IgH loci, extended CDR-H3 developability, Human Bindome, SE(3)-MeanFlow, BioSpecDec) explicitly excluded from today's selection.
 === 2026-08-02T04:16:44-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-02T12:00:03-07:00 start affinity-matured ===
+## Re-invocation outcome: no second episode
+
+Today's morning run (04:16 PDT) shipped `2026-08-02-affinity-matured` (commit `dbce100`) covering EffieDes, AF2+MM/GBSA nanobody discovery, and PS-SINS viscosity. This 12:00 PDT re-invocation applied the same search process, excluded already-shipped items, and found nothing that clears the bonus-episode bar.
+
+**Candidate funnel (re-invocation, 2026-08-02 12:00–12:15 PDT):**
+
+- **bioRxiv** — details API pulled full 81-record collection 2026-08-01 → 2026-08-02 (3 paginated pages, cursors 0/30/60). Relevance-keyword filter surfaced:
+  - **TriFlow v2** (Zhou lab, U Chicago, `10.64898/2025.11.30.691458v2`, posted 2026-08-01) — RoseTTAFold-like 3-track architecture + discrete flow-matching for structure-conditioned sequence design; trained on PDB interacting chains + AlphaFold-DB interacting domains; outperforms ProteinMPNN across diverse benchmarks; boosts BindCraft in silico success rate on 500-target large-scale benchmark; on par with BindCraft in small-set experimental validation; applied to human class I cytokine binder specificity design; software at triflow.zhoulab.io. **Body not yet rendered (v2 posted <36h ago) — abstract-only across all three fetch channels (Jina reader, Europe PMC, bioRxiv API).**
+  - TriFlow v1 was posted 2025-12-02 (outside recency window); v2 abstract text is verbatim identical to v1 and adds Jing Zhang as author — the "what changed" is invisible without body access.
+  - Cyclic-peptide MSA tool (`10.64898/2026.07.28.741376`) — peptide, not antibody; passed.
+  - CPPLocPred (`10.64898/2026.07.28.741285`) — cell-penetrating peptide subcellular localization; not antibody; passed.
+  - anti-CTLA-4/anti-CD40 immunotherapy mechanism papers (`.741325`/`.741328`) — mechanism, not engineering/ML; passed.
+- **arXiv** — daily cache read (updated 2026-08-02T11:00Z; latest indexed 2026-07-30). Two live targeted queries against q-bio.BM/QM and cs.LG/AI for "antibody design / nanobody / protein language model / inverse folding / de novo binder / diffusion protein" abstract terms — newest hit was 2026-07-28 (AMPBench-MT antimicrobial peptides — peripheral, and outside 2-day window). Nothing dated 2026-07-30 or later.
+- **PubMed** — 200 EDAT-recent hits (last 3 days), 50 esummary'd. Strong-keyword title pass: the three already-shipped morning picks appear (`42540367` Harbin nanobody in this batch); one drug-target-affinity GNN+PLM paper (`42541540` GraESM-FuseDTA, Naunyn Schmiedebergs Arch Pharmacol) — passed as small-molecule DTA outside antibody scope; remainder are clinical/case-report/vaccine biology/ADC synthesis, all off-audience.
+- **ChemRxiv** — WebSearch pass ("site:chemrxiv.org antibody design 2026") — surfaced ADC linker synthesis, pH-responsive drug-conjugate assembly, cellular target engagement — none ML/design-focused within recency window. Consistent with morning's flagged coverage gap: no antibody-ML material on ChemRxiv this cycle.
+- **General press / model releases** — WebSearch pass for August 2026 antibody model releases — nothing new; results are 2024–early-2026 landscape material and non-recent papers.
+
+**Decision:**
+
+- TriFlow is the only fresh candidate on-audience. It's abstract-only and thematically overlaps with the morning's lead (EffieDes — another ProteinMPNN challenger). Per PIPELINE.md, abstract-only picks should be dropped unless clearly dominant; TriFlow does not clear that bar with EffieDes already in today's episode.
+- No other fresh candidates cleared the relevance filter.
+- Per PIPELINE.md re-invocation rule: "If after excluding today's already-shipped items there are no fresh candidates left, the right outcome is no second episode for the day."
+
+**No bonus episode written; no feed change; no commit.**
+
+`MISTRAL_API_KEY`: set (not exercised this run — no TTS invocation). `SKIP_TTS`: unset. Working tree unchanged for `podcasts/affinity-matured/`.
+
+**Note for next re-invocation:** if TriFlow's body renders in the next 24–48h, it's worth featuring — either as a bonus tomorrow if still fresh, or as a lead in tomorrow's regular run. Explicitly track it.
+
+Sources:
+- [TriFlow bioRxiv (v2, 2026-08-01)](https://www.biorxiv.org/content/10.64898/2025.11.30.691458v2)
+- [TriFlow project page](https://triflow.zhoulab.io/)
+=== 2026-08-02T12:06:24-07:00 done  affinity-matured (exit 0) ===
