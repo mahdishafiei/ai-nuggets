@@ -8389,3 +8389,37 @@ Recall — morning + afternoon episodes already shipped 6 items today; those exc
 - Self-interaction nanoparticle spectroscopy for IgG1 viscosity — MAbs 2026-Dec (developability; deferred)
 - htrSPRanalysis R package for SPR kinetics — PLoS Comput Biol 2026-07-31 (tool, deferred)
 === 2026-08-01T20:20:12-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-02T04:00:05-07:00 start affinity-matured ===
+Episode is live. Summary below.
+
+## 2026-08-02 Affinity Matured run summary
+
+**Shipped:** `2026-08-02-affinity-matured` — 13:42, 6.58 MB
+- Live at http://garibaldi.scripps.edu:8420/episodes/2026-08-02-affinity-matured.mp3
+- Feed updated + synced
+- Commit `dbce100` pushed to `main`
+
+**Three items:**
+1. **EffieDes** (Schiex/Barbe, TBI Toulouse, Adv Sci 2026-07-30, PMID 42531048) — neuro-symbolic protein design: neural-net-predicted per-backbone Potts model + symbolic solver for joint-distribution MAP sequences; 33.0% NSR vs Rosetta 17.9%; beats ProteinMPNN/GVP/Structured Transformer; validated with orthogonal hexameric multi-state design and de novo nanomolar SARS-CoV-2 nanobody. Lead.
+2. **AF2 + ensemble docking + MM/GBSA for nanobody discovery** (Sun/Xing/Ma, Harbin Medical U, Chem Sci 2026-07-21, PMID 42540367, PubMed-indexed 2026-08-01) — HDOCK 52% Top-1 pose recovery vs ZDOCK 26% vs sequence-only AF3 18% on SAbDab; ≥70% flow-cytometry hit rate on mesothelin/PD-1/Nectin-4; SPR-confirmed nanomolar KD; single-workstation compute; code public.
+3. **PS-SINS for IgG1 viscosity** (Genentech Antibody Engineering, MAbs 2026-07-30, PMID 42533550) — 96-IgG1 panel; PEG-stabilized SINS orthogonal to charge-only signals; r=0.72/0.85 within-molecule on trastuzumab/omalizumab Fc variants; reliable on one-column Protein-A samples.
+
+**Candidate funnel:**
+
+- **bioRxiv** — 234 unique records scanned (2026-07-31 to 2026-08-02, paginated to cursor 210). Substantive shortlist after keyword filter:
+  - CORAL — Cross-Attention Over RNA And Protein (bioRxiv v2 2026-07-31) — ESM-2/DNABERT2, RNA-protein interaction; not antibody-focused, passed
+  - CLEAR-Lactyl + AttentionKla PLM (bioRxiv 2026-07-31) — PLM + LoRA, lactylation prediction; not antibody-focused, passed
+  - Affinity-enhanced peptides mRNA-LNP influenza (2026-07-31) — polymerase interface peptides, not ML; passed
+  - Dengue N153 glycosylation (2026-07-31) — cryo-EM, not ML; passed
+  - Zero records dated 2026-08-02
+- **arXiv** — daily cache read (2026-07-30 latest). Refresh queries on cat:q-bio.BM/cs.LG with antibody/protein-design abstract terms returned no relevant items dated ≥2026-07-30 in the abstract-search API pass.
+- **PubMed** — 466 EDAT-recent hits (last 5 days); strong-keyword title filter surfaced the 3 chosen picks + 1 review (Bispecific Ab Cancer Immunotherapy, passed — review) + parainfluenza HN antibody structural paper (J Virol, PMID 42536013 — passed, no ML component).
+- **ChemRxiv/press** — not surveyed today; PubMed + bioRxiv coverage was sufficient with 3 strong picks. **Flag this as a coverage gap** — a fully complete pass would add site:chemrxiv.org + Nature/Science news scans; today's picks are strong enough it didn't move the outcome, but noting for retro.
+
+**Chosen (marked in the shortlist above):**
+- ✅ EffieDes (PMID 42531048, Adv Sci)
+- ✅ AF2 nanobody discovery (PMID 42540367, Chem Sci)
+- ✅ PS-SINS IgG1 viscosity (PMID 42533550, MAbs)
+
+**Notes:** TTS primary provider Mistral worked cleanly; one transient 429 on chunk 5, self-recovered after 30s backoff. `MISTRAL_API_KEY`: set, working. No fallback needed. Yesterday's already-shipped picks (AF3 antibody benchmark, tetrahedral IgG, PLM twilight zone, aSR29 nanobody, bat IgH loci, extended CDR-H3 developability, Human Bindome, SE(3)-MeanFlow, BioSpecDec) explicitly excluded from today's selection.
+=== 2026-08-02T04:16:44-07:00 done  affinity-matured (exit 0) ===
