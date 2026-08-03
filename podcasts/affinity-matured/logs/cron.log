@@ -8493,3 +8493,26 @@ Episode published locally. Per PIPELINE.md, push is the orchestrator's job — l
 
 **Note on item selection**: initial draft included two picks (aSR29-ACE2-Fc nanobody, speculative decoding) that turned out to have been covered in the 2026-08-01 bonus episode; caught during a cross-check against prior scripts, swapped for the parainfluenza HN paper and the fold-switching benchmark, and the audio was regenerated.
 === 2026-08-03T04:23:15-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-03T12:00:16-07:00 start affinity-matured ===
+# Bonus midday episode shipped for 2026-08-03
+
+**Basename:** `2026-08-03-affinity-matured-2` — script + feed committed at `69ce192`, mp3 published to `http://garibaldi.scripps.edu:8420/episodes/2026-08-03-affinity-matured-2.mp3` (23:04, 11.07 MB). Push deferred to parent `run_all_shows.sh` orchestrator per PIPELINE.md.
+
+**Re-invocation context:** morning episode `2026-08-03-affinity-matured` already covered TriFlow, PIV3-HN antibodies, and the Orban/Pierce fold-switching benchmark. Same recency filter (bioRxiv last 2 days, arXiv cache, PubMed last 5 days), excluded already-shipped items.
+
+**Candidate funnel:**
+- **bioRxiv** (`api.biorxiv.org/details/biorxiv/2026-08-02/03`, 34 + 129 items pulled with cursor pagination; 18 relevance-filter hits after keyword pass, 6 after false-positive prune):
+  - Nesso-1 open-source coarse-grained cofolding — `10.64898/2026.08.01.742196v1`, posted 2026-08-03 — **CHOSEN item 1**
+  - HCV nanobody-guided E2 epitope mapping (Tzarum/Law/Steyaert) — `10.64898/2026.08.01.742232v1`, posted 2026-08-03 — **CHOSEN item 2**
+  - PG-LLM v2 (Arora/Marks/Church) — `10.64898/2026.07.27.741045v2`, v2 posted 2026-08-03 — **CHOSEN item 3**
+  - Benchmarking Deep Learning Predictions of Mutation-Induced Fold Switching — dropped, shipped in morning episode
+  - Elucidating enzyme-substrate specificity through co-folding foundation model — dropped (enzyme, not antibody)
+  - Intra-Protein Interfaces of De Novo Designed Repeat Protein — dropped (biophysics only)
+  - Remaining hits were keyword false-positives ("language model" in neuroscience, "esm" in enzyme kinetics)
+- **arXiv** (cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries, targeted antibody/PLM filter → 33 hits, none antibody/PLM-relevant in the ≤2-day window not yet shipped)
+- **PubMed** (`reldate=5`, antibody+ML terms, 18 results): closest fresh candidates were AlphaFold2 + ensemble docking for nanobody discovery (dropped — already featured 2026-08-02) and ProteinDock (dropped — outside 2-day window, `2026-07-20` posting)
+- **ChemRxiv / news / releases**: WebSearch on `site:huggingface.co "protein language model"` and antibody-LM releases surfaced only existing models (AbLang, p-IgGen, Sapiens); no fresh 1-2-day releases
+- **Sources with failures**: none. bioRxiv `r.jina.ai` reader proxy fell through to abstract-only for all three fresh preprints (posted <36h, body not yet rendered) — Nesso-1 was rescued via the Valence Labs technical-report PDF (`valencelabs.com/wp-content/uploads/2026/07/nesso1.pdf`) extracted with `pdf2txt.py`, HCV nanobody paper was rescued by direct bioRxiv PDF fetch + `pdf2txt.py` extraction, PG-LLM stayed abstract-only + leaderboard site (`proteingymllm.com`) + GitHub
+
+**Selection rationale:** the three chosen items are the strongest, non-duplicating, in-window bioRxiv items today; each is directly relevant to the audience (coarse-grained cofolding paradigm for future antibody-antigen affinity work; camelid-nanobody epitope mapping for structure-based vaccine design at the Scripps site; general-purpose LLM benchmark on protein variant ranking with direct implications for antibody variable regions).
+=== 2026-08-03T12:28:20-07:00 done  affinity-matured (exit 0) ===
