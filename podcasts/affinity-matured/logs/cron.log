@@ -8460,3 +8460,36 @@ Sources:
 === 2026-08-02T20:00:03-07:00 start affinity-matured ===
 You've hit your session limit · resets 11:10pm (America/Los_Angeles)
 === 2026-08-02T20:00:10-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-03T04:00:05-07:00 start affinity-matured ===
+Episode published locally. Per PIPELINE.md, push is the orchestrator's job — leaving the commit local.
+
+**2026-08-03 Affinity Matured — Run Summary**
+
+- **Script**: `podcasts/affinity-matured/scripts/2026-08-03-affinity-matured.md` (2,924 words)
+- **Audio**: 17:53, 8,588,895 bytes (Mistral primary, one 429 backoff on chunk 6, resolved on retry)
+- **Feed**: item inserted at head, XML validated, synced to `garibaldi.scripps.edu:8420`
+- **Commit**: `9b4486e` (script + feed only — mp3 gitignored; per-show stub backlog and `cron.log` deliberately left unstaged for `publish_pending.py`)
+
+**Candidate funnel**
+
+- **bioRxiv** (2026-08-01 → 2026-08-03, 119 papers scanned, keyword filter → 25 hits):
+  - Modeling the structure-conditioned sequence landscape for large-scale protein design with TriFlow — `10.64898/2025.11.30.691458v2` — **CHOSEN item 1**
+  - Benchmarking Deep Learning Predictions of Mutation-Induced Fold Switching — `10.64898/2026.08.02.742283v1` — **CHOSEN item 3**
+  - Elucidating enzyme-substrate specificity through co-folding foundation model (Boltz2ESI) — `10.64898/2026.07.30.741672` — dropped (enzyme, not antibody)
+  - Intra-Protein Interfaces Control Folding Dynamics and Mechanical Stability in a De Novo Designed Repeat Protein — `10.64898/2026.07.31.741961` — dropped (biophysics, not ML)
+  - Remaining hits were keyword false-positives ("chai"→acknowledgments, "generative"→boilerplate, "language model"→hippocampus/social-science)
+- **arXiv** (cache `/tmp/ai-nuggets-arxiv-cache.xml`, 500 entries, q-bio+ML filter → 20 hits, precise antibody/PLM → 2 hits, both spurious): no antibody/PLM-relevant items in the last 3 days
+- **PubMed** (reldate=5, 80 results scanned):
+  - ACE2-fused nanobody targeting a cryptic RBD epitope broadly neutralizes SARS-like viruses (Jin lab, USTC, J Virol) — dropped, already featured 2026-08-01 bonus
+  - Molecular basis for protection and cross-protection by human antibodies targeting the parainfluenza virus HN protein (Mousa lab, FSU, J Virol 2026-07-31) — **CHOSEN item 2**
+  - Accelerating inference in genomic and proteomic foundation models via speculative decoding (Georgakopoulos-Soares, Bioinformatics 2026-07-31) — dropped, already featured 2026-08-01 bonus
+  - A Generative Neuro-Symbolic AI for Protein Sequence Design (EffieDes) — dropped, featured 2026-08-02
+  - Self-interaction nanoparticle spectroscopy for IgG1 viscosity (PS-SINS) — dropped, featured 2026-08-02
+  - JMB2403 PD-1-dependent IL2Rβγ tri-specific — dropped (product engineering, no ML)
+  - GraESM-FuseDTA — dropped (small-molecule drug-target affinity, PLM utility only)
+  - Physicochemical developability of Fabs with extended CDR-H3s (Svilenov lab) — dropped, featured 2026-08-01 bonus
+- **ChemRxiv / general web / press feeds**: not surveyed further after bioRxiv+PubMed produced three strong on-topic picks
+- **Sources with failures**: none — bioRxiv details API, arXiv cache, PubMed all responded normally; bioRxiv full-text fetches (`r.jina.ai` reader proxy) fell through to abstract-only for the two bioRxiv picks — TriFlow was rescued via a direct fetch of the v2 PDF through the reader proxy, giving full benchmark tables; the fold-switching paper stayed abstract-only
+
+**Note on item selection**: initial draft included two picks (aSR29-ACE2-Fc nanobody, speculative decoding) that turned out to have been covered in the 2026-08-01 bonus episode; caught during a cross-check against prior scripts, swapped for the parainfluenza HN paper and the fold-switching benchmark, and the audio was regenerated.
+=== 2026-08-03T04:23:15-07:00 done  affinity-matured (exit 0) ===
