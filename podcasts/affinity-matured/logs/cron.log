@@ -8516,3 +8516,32 @@ Episode published locally. Per PIPELINE.md, push is the orchestrator's job — l
 
 **Selection rationale:** the three chosen items are the strongest, non-duplicating, in-window bioRxiv items today; each is directly relevant to the audience (coarse-grained cofolding paradigm for future antibody-antigen affinity work; camelid-nanobody epitope mapping for structure-based vaccine design at the Scripps site; general-purpose LLM benchmark on protein variant ranking with direct implications for antibody variable regions).
 === 2026-08-03T12:28:20-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-03T20:00:03-07:00 start affinity-matured ===
+Episode 3 shipped. Final summary below.
+
+---
+
+**Episode: 2026-08-03-affinity-matured-3 (evening bonus, 18:21)** — committed `b39f2c2`, pushed to `origin/main`.
+
+**Items:**
+1. **cHANA bivalent Epigraph-optimized H9N2 influenza vaccine** (Hao/Chen, Wuhan Institute of Virology, Emerg Microbes Infect, indexed 2026-08-03) — Korber-lab Epigraph algorithm applied to global H9N2 HA+NA sequences; two chimeric viruses combined into inactivated bivalent; mouse cross-reactive antibody + T-cell responses stronger than WHO AL/39; heterologous lethal H9N2 challenge protection with reduced pulmonary loads. **Abstract-only** (Taylor & Francis 403).
+2. **MDMAD Mixture Diffusion Model for Multimodal Antibody Design** (Durvasula/Sayuti/Rajapakse, NTU Singapore, Brief Bioinform, indexed 2026-08-03) — mixture density on both position and orientation updates, K=4 optimal; SAbDab AAR gains vs DiffAb (H1 83.73 vs 79.72; H2 78.73 vs 68.72; H3 42.85 vs 40.78); CDR-H3 binding improvement 32.4% vs 24.9%; no wet-lab. **Full text read.**
+3. **DH726.1 stem-directed antibodies from conventional HA immunogen in rhesus macaques** (Gu/Haynes/Moody/Harrison/Schmidt/Kepler, Duke + Harvard + Ragon + BU, bioRxiv, indexed 2026-08-01) — plain H1 trimer elicits stem antibodies broadly against H1N1 + H5N1 in every macaque; DH726.1 cryo-EM footprint on stem; mouse protection against both H1N1 and H5N1 challenge. **bioRxiv API abstract-only.**
+
+**Candidate funnel:**
+- **bioRxiv 2026-08-02/03**: 60 posts scanned, ~30 keyword hits; substantive shortlist all already featured in earlier 2026-08-03 episodes (TriFlow, PIV3-Mousa, GA/GB fold-switching, Nesso-1, HCV nanobody, PG-LLM) — no fresh bioRxiv items left.
+- **arXiv**: shared cache /tmp/ai-nuggets-arxiv-cache.xml stale through 2026-07-31 (out of 2-day window); refresh attempts returned HTTP 429 rate-limit after one backoff; skipped — noted gap.
+- **PubMed (last 5 days by entrez date)**: 261 hits scanned, 9 strict-keyword survivors. Fresh:
+  - `A bivalent inactivated influenza vaccine …H9N2` (Emerg Microbes Infect, pmid 42546126, entrez 2026-08-03) → **CHOSEN**
+  - `Mixture diffusion model for multimodal antibody design` (Brief Bioinform, pmid 42546050, entrez 2026-08-03) → **CHOSEN**
+  - `Elicitation of stem-directed antibodies in rhesus macaques by a conventional hemagglutinin immunogen` (bioRxiv/PMC, pmid 42539121, entrez 2026-08-01) → **CHOSEN**
+  - `Integrating AlphaFold2 with physics-based ensemble docking for high-efficiency nanobody discovery` (Chem Sci, pmid 42540367) — already featured 2026-08-02, skipped
+  - `Self-interaction nanoparticle spectroscopy predicts high-concentration viscosity of IgG1` (MAbs, pmid 42533550) — already featured 2026-08-02 (PEG-stabilized SINS), skipped
+  - `Physicochemical developability insights into human Fab fragments with extended hypervariable loops` (J Pharm Sci, pmid 42537752) — already featured 2026-08-02 (extended-CDR-H3), skipped
+  - `ACE2-fused nanobody targeting a cryptic RBD epitope broadly neutralizes SARS-like viruses` (J Virol, pmid 42530330) — already featured earlier, skipped
+  - `Spatium: A Protein Language Foundation Model for Spatial Proteomics` (bioRxiv, pmid 42539246) — off-audience (spatial proteomics, not antibody), passed
+  - `GraESM-FuseDTA: adaptive gated multimodal fusion…drug-target affinity` (Naunyn Schmiedebergs Arch Pharmacol, pmid 42541540) — small-molecule DTA not antibody, passed
+- **ChemRxiv / news**: no fresh antibody-ML items surfaced within window.
+
+**Publication verified:** mp3 reachable at `http://garibaldi.scripps.edu:8420/episodes/2026-08-03-affinity-matured-3.mp3` (HTTP 200); feed.xml parses, 43 items total, new item at position 1; feed synced to public server.
+=== 2026-08-03T20:18:41-07:00 done  affinity-matured (exit 0) ===
