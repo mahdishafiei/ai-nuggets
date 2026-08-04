@@ -8574,3 +8574,38 @@ Episode published. Commit `e9760f7`. Not pushing — the orchestrator pushes at 
 - **JITC** — Cloudflare-gated on the OX40 nanobody paper (HTTP 403 direct, 429 via jina reader proxy), full-text not retrievable from this host; item dropped in favor of full-text picks.
 - **Wiley (Protein Sci pro.70730 for the BepiPocket paper)** — HTTP 402 / cookies-off, but the corresponding bioRxiv preprint 10.1101/2025.09.17.676770v1 was reachable via jina reader proxy (145 KB clean markdown), sufficient for a full-text read.
 === 2026-08-04T04:24:29-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-04T12:00:04-07:00 start affinity-matured ===
+Search is complete. Nothing new has landed since the morning run at 04:24 that clears the show's AI-for-antibody-engineering bar. Per PIPELINE.md's re-invocation rule, the right outcome is no second episode today.
+
+No script written, no TTS, no feed edit, no commit. Reporting the audit funnel below.
+
+---
+
+**Affinity Matured — 2026-08-04 midday re-invocation: no bonus episode.**
+
+The 04:24 run (commit `e9760f7`) shipped the day's episode with three items — BepiPocket/DiscoPocket epitope-guided Chai-1 restraints (Clifford/Nielsen, DTU, Protein Sci indexed 2026-08-03), LF3DRoPE local-frame 3D rotary attention for antibody-specific epitope prediction (Fan/Yu/Wu/Fu, Soochow U, arXiv 2608.01092, 2026-08-02), and seed-guided RFdiffusion for extended-interface antitoxin binders (Keating lab MIT, bioRxiv 2026.08.02.742339 posted 2026-08-04). Applying the re-invocation rule (same sources, same recency filter, exclude already-shipped items):
+
+**Candidate funnel (2026-08-04 midday)**
+
+- **bioRxiv** — `api.biorxiv.org/details/biorxiv/2026-08-03/2026-08-04` (~90 items over the window; 30 items posted today 2026-08-04 with the bulk in neuroscience). Keyword-relevant matches after false-positive prune:
+  - `10.64898/2026.08.02.742339` Seed-Guided De Novo Design (Keating) — **already shipped this morning**
+  - `10.64898/2026.08.01.740538` Bexobrutideg BTK degrader — small-molecule, off-audience
+  - `10.1101/2025.09.10.674348` Reverse Engineering Cytoskeletal Dynamics — off-audience (cytoskeleton programming)
+  - `10.64898/2025.12.07.692832` modular lentiviral perturbation — off-audience (gene-perturbation systems)
+  - HaloMPNN retraining of ProteinMPNN on halophilic proteomes (posted 2026-08-04) — already surveyed in morning funnel and dropped (not antibody-specific, abstract-only)
+- **arXiv** — cache `/tmp/ai-nuggets-arxiv-cache.xml` (04:00 refresh, 500 entries) contains only the already-shipped LF3DRoPE match; live query `https://export.arxiv.org/api/query?search_query=cat:q-bio.BM+OR+cat:cs.LG+OR+cat:q-bio.QM+OR+cat:cs.AI&sortBy=submittedDate&max_results=100` returned 100 entries with zero antibody/PLM/binder relevance in the 2-day window.
+- **PubMed** — `reldate=3&datetype=pdat` esearch on the antibody+ML term-block returned 100 hits. New (post-morning-run) relevance-filtered candidates after keyword pass:
+  - `PMID 42547263` — **OX40 nanobody Nb479** (Iemura/Kitawaki, Kyoto U + COGNANO, J Immunother Cancer, epub 2026-08-03). Epitope-directed screen: differential biopanning of alpaca library vs gp34-engaged and non-engaged OX40-expressing cells, NGS, computational clone-subtraction to enrich ligand-receptor-interface binders; Nb479 trimer mimics gp34 activation; anti-serum-albumin nanobody fusion for PK, antitumor efficacy in CAR-T mouse model. Already surveyed in morning funnel; dropped there because JITC (BMJ) full text is Cloudflare-gated (retried midday — 403 direct + Cloudflare captcha via `r.jina.ai` proxy; no PMC linkout even though CC-BY-NC; no bioRxiv preprint). Abstract-only. **Not shipped** — abstract-only, and it's not a dominant AI-methods pick that overrides the morning selector's earlier drop.
+  - `PMID 42543223` — **JMB2403 tri-specific PD-1/IL2Rβγ antibody** (Gu/Xia, Shenyang Pharm U + Shanghai Jeyou, MAbs, epub 2026-08-02). Naïve alpaca library screen for weak agonistic IL-2/15Rβ and common γ-chain nanobodies, fused to anti-PD-1 IgG; cis-activation of PD-1+ CD8 T cells, xenograft + cyno efficacy, no VLS/pulmonary edema. Real antibody engineering but no ML/design-tool component (a directed-evolution nanobody format paper). Off the show's AI/ML-for-antibody-engineering axis. **Not shipped.**
+  - `PMID 42546688` — **Cell "Co-option of retrotransposons promotes antibody diversification"** (Basu lab, Columbia). Mechanism paper — LINE-1 retrotransposons upstream of V_H genes drive antisense-RNA-triggered HUSH+AID recruitment ("L1-driven SHM"). Antibody biology, not engineering or ML. **Not shipped.**
+  - Remaining PubMed hits: `42546983` inhalable mAb SFD formulation (no ML); `42547622` Nat Med ADC review; `42544919` breast-cancer ADC review; `42541540` GraESM-FuseDTA (small-molecule drug-target affinity, not antibody); `42548048` PlantPTM (plants, off-audience); older items already featured yesterday or before.
+- **ChemRxiv / news / model releases** — no fresh antibody-ML items in the 1–2-day window.
+
+**Source-level failures**
+- JITC (BMJ) Cloudflare-gated on OX40 Nb479 across all retrieval channels (direct HTTP 403, `r.jina.ai` returns Cloudflare-verification page, no PMC linkout). Same failure mode as morning.
+
+**Selection rationale**
+- Morning shipped the three dominant AI-methods items in the window (Chai-1 epitope-guided restraints, local-frame 3D RoPE, seed-guided RFdiffusion). No fresh candidate that clears the show's AI-for-antibody-engineering bar has landed since. The closest new items (Nb479 wet-lab nanobody discovery abstract-only; JMB2403 tri-specific format; Cell retrotransposon SHM biology) are adjacent but off-axis relative to the morning bar, and re-invocation rule forbids widening the recency window or shifting source mix. Right outcome per PIPELINE.md: no second episode today.
+
+=== 2026-08-04T12:04:00-07:00 done affinity-matured (no episode — no fresh in-scope candidates since 04:24 run) ===
+=== 2026-08-04T12:05:21-07:00 done  affinity-matured (exit 0) ===
