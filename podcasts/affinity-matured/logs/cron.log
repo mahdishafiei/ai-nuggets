@@ -8545,3 +8545,32 @@ Episode 3 shipped. Final summary below.
 
 **Publication verified:** mp3 reachable at `http://garibaldi.scripps.edu:8420/episodes/2026-08-03-affinity-matured-3.mp3` (HTTP 200); feed.xml parses, 43 items total, new item at position 1; feed synced to public server.
 === 2026-08-03T20:18:41-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-04T04:00:04-07:00 start affinity-matured ===
+Episode published. Commit `e9760f7`. Not pushing — the orchestrator pushes at end of run per PIPELINE.md.
+
+## Candidate funnel (2026-08-04)
+
+**bioRxiv** — 232 total posts across 2026-08-03/04 details API; 32 keyword-matched, 6 substantive after discarding spurious hits (e.g., "progen" → maternal-plasticity paper, "diffusion.*protein" → Volvariella cultivation paper):
+- **Seed-Guided De Novo Design Expands the Structural Diversity of Antitoxin Protein Binders** (Keating lab MIT, bioRxiv 2026-08-04, 10.64898/2026.08.02.742339) — **CHOSEN** (abstract-only, full-text render not yet complete)
+- HaloMPNN: retraining ProteinMPNN on halophilic proteomes (Khare lab, bioRxiv 2026-08-04) — abstract-only, not antibody-specific
+- A One-Shot Multivalent Live-Attenuated Candidate Influenza Vaccine against Divergent Zoonotic H5N1 Clades (Garcia-Sastre/Martinez-Sobrido/Webby, bioRxiv 2026-08-03) — abstract-only, no ML/engineering angle
+- pH-dependent anti-TfR1 NANOBODY delivery paper (Sanofi, bioRxiv 2026-08-03) — nanobody delivery pharma paper, less structural/engineering-methods focused
+- Nesso-1 (Valence Labs, 2026-08-03) — covered yesterday (bonus episode)
+- HCV nanobody-guided E2 epitope mapping (Tzarum/Law/Steyaert, 2026-08-03) — covered yesterday
+
+**arXiv** — cache `/tmp/ai-nuggets-arxiv-cache.xml` (14,414 lines) filtered on relevance keywords, 3-day window; 2 substantive matches:
+- **Inter-Residue Geometry Attention for Antibody-Specific Epitope Prediction (LF3DRoPE)** (Fan/Yu/Wu/Fu, Soochow U, arXiv 2608.01092, 2026-08-02) — **CHOSEN** (full PDF read)
+- TransNRank: neoantigen ranking with transformer (2026-08-03) — antigen-adjacent but neoantigen prediction, not antibody engineering
+
+**PubMed** — reldate=5, ~100 hits, 20 substantive after filtering; top candidates:
+- **Pocket restraints guided by B-cell epitope prediction improve Chai-1 antibody-antigen structure modeling** (Clifford/Nielsen, Protein Sci PMID 42489170, indexed 2026-08-03) — **CHOSEN** (full bioRxiv v1 text read via jina proxy)
+- Efficient discovery of an agonistic anti-OX40 nanobody Nb479 (J Immunother Cancer PMID 42547263, 2026-08-03) — strong candidate but JITC full-text Cloudflare-gated, only abstract available; dropped in favor of full-text picks
+- bivalent Epigraph H9N2 vaccine (Emerg Microbes Infect PMID 42546126) — covered yesterday
+- GC B Cells / Universal Vaccine Design review (Immunol Rev PMID 42528006) — review, not primary work
+
+**ChemRxiv / news / model releases** — no substantive antibody/protein-ML hits in the recency window today.
+
+## Source-level failures
+- **JITC** — Cloudflare-gated on the OX40 nanobody paper (HTTP 403 direct, 429 via jina reader proxy), full-text not retrievable from this host; item dropped in favor of full-text picks.
+- **Wiley (Protein Sci pro.70730 for the BepiPocket paper)** — HTTP 402 / cookies-off, but the corresponding bioRxiv preprint 10.1101/2025.09.17.676770v1 was reachable via jina reader proxy (145 KB clean markdown), sufficient for a full-text read.
+=== 2026-08-04T04:24:29-07:00 done  affinity-matured (exit 0) ===
