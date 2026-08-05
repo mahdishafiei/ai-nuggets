@@ -8635,3 +8635,27 @@ Bonus episode committed as `4c7644b`. Per PIPELINE.md I'm not pushing — the or
   - ValidaTe TCR-mimic (immunology) — TCR-mimic rather than antibody-side, dropped
 - Full-text depth: Kukulu (7-page PDF, full text via r.jina.ai); CKEA (22-page PDF, full text); SynCodonLM (39-page PDF, full text). All three had abstract-only bioRxiv HTML at first fetch (posted this morning); the PDF route via r.jina.ai recovered full text for all three. No auth-walled sources.
 === 2026-08-04T20:18:00-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-05T04:00:09-07:00 start affinity-matured ===
+Not logged in · Please run /login
+=== 2026-08-05T04:00:17-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-05T04:00:17-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-08-05T04:03:17-07:00 start affinity-matured (retry 1) ===
+Not logged in · Please run /login
+=== 2026-08-05T04:03:24-07:00 done  affinity-matured (exit 0) (retry 1) ===
+=== 2026-08-05T04:03:24-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-08-05T04:06:24-07:00 start affinity-matured (retry 2, --model claude-sonnet-4-6) ===
+Not logged in · Please run /login
+=== 2026-08-05T04:06:31-07:00 done  affinity-matured (exit 0) (retry 2, --model claude-sonnet-4-6) ===
+=== 2026-08-05T04:06:31-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-08-05T04:09:31-07:00 start affinity-matured (retry 3, --model claude-sonnet-4-6) ===
+Not logged in · Please run /login
+=== 2026-08-05T04:09:38-07:00 done  affinity-matured (exit 0) (retry 3, --model claude-sonnet-4-6) ===
+=== 2026-08-05T04:09:38-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-08-05T04:12:38-07:00 start affinity-matured (retry 4, --model claude-haiku-4-5-20251001) ===
+Not logged in · Please run /login
+=== 2026-08-05T04:12:40-07:00 done  affinity-matured (exit 0) (retry 4, --model claude-haiku-4-5-20251001) ===
+=== 2026-08-05T04:12:40-07:00 no usable output for affinity-matured; retrying in 180s ===
+=== 2026-08-05T04:15:40-07:00 start affinity-matured (retry 5, --model claude-haiku-4-5-20251001) ===
+Not logged in · Please run /login
+=== 2026-08-05T04:15:47-07:00 done  affinity-matured (exit 0) (retry 5, --model claude-haiku-4-5-20251001) ===
+=== 2026-08-05T04:15:47-07:00 FAILED: no usable output for affinity-matured after all retries ===
