@@ -8609,3 +8609,29 @@ The 04:24 run (commit `e9760f7`) shipped the day's episode with three items — 
 
 === 2026-08-04T12:04:00-07:00 done affinity-matured (no episode — no fresh in-scope candidates since 04:24 run) ===
 === 2026-08-04T12:05:21-07:00 done  affinity-matured (exit 0) ===
+=== 2026-08-04T20:00:04-07:00 start affinity-matured ===
+Bonus episode committed as `4c7644b`. Per PIPELINE.md I'm not pushing — the orchestrator does that.
+
+**Publish summary**
+
+- Basename: `2026-08-04-affinity-matured-2` (bonus / re-invocation; the primary `2026-08-04-affinity-matured` shipped this morning as commit e9760f7)
+- Script: 2,800 spoken words; TTS: 7 chunks via Mistral primary (one transient 429 on chunk 7, cleared after built-in 30s backoff); mp3 8,404,366 bytes, duration 17:31; rsynced to `garibaldi.scripps.edu:ai-nuggets-public/episodes/`
+- Feed: new `<item>` inserted at top of `podcasts/affinity-matured/feed.xml`, XML validated, synced to public server via `sync_feed.sh`
+- Commit: `4c7644b` — staged only my two files (feed.xml + script), left the unrelated pre-existing modifications and July stub backlog alone
+
+**Candidate funnel**
+
+- Already shipped today (excluded): BepiPocket + DiscoPocket (Chai-1 restraints, Nielsen, Protein Sci indexed 2026-08-03); LF3DRoPE (Soochow, arXiv 2026-08-02); Seed-guided RFdiffusion for RelE binders (Keating lab, bioRxiv 10.64898/2026.08.02.742339).
+- bioRxiv scanned 2026-08-03 and 2026-08-04: 473 total, 63 keyword-matched, 32 antibody/PLM/ML-specific after refining; all sources reachable, no failures.
+- arXiv daily cache (500 entries, 2026-07-31 to 2026-08-04): only LF3DRoPE (already shipped) and TransNRank (2026-08-03, neoantigen ranking transformer) were on-brief; TransNRank dropped as weaker fit than the bioRxiv picks.
+- PubMed reldate=5, 100 hits, filtered to antibody+ML: CLSS (contrastive PLM sequence+structure, PNAS 2026-08-03) was the strongest candidate but PNAS auth-walled from this host; dropped in favor of full-text-available bioRxiv picks.
+- Shortlist after excluding shipped items (all bioRxiv 2026-08-04):
+  - Kukulu — JEPA + conditional diffusion for CDR loop reconstruction (Ford, UNC Charlotte + Silico Biosciences) — 10.64898/2026.08.03.742168 **[picked]**
+  - CKEA humanized anti-PD-1 antibody generation (Batista lab, Yale) — 10.64898/2026.08.03.742579 **[picked]**
+  - SynCodonLM directed evolution in codon space (Cramer lab + Boehringer Ingelheim) — 10.64898/2026.08.03.742557 **[picked]**
+  - MAXWELL PLM stability calibration (Hong/Yu, bioinformatics) — 10.64898/2026.07.29.741631 (dropped: no wet-lab, less antibody-tight)
+  - Interpreting PLMs / HA-sites for functional regions (Altman lab, Stanford) — 10.64898/2026.07.29.741641 (dropped: methodological/interpretability, less on-brief than the three picks)
+  - Humanized anti-ADAMTS13 (Saito et al., biochemistry) — no ML content, dropped
+  - ValidaTe TCR-mimic (immunology) — TCR-mimic rather than antibody-side, dropped
+- Full-text depth: Kukulu (7-page PDF, full text via r.jina.ai); CKEA (22-page PDF, full text); SynCodonLM (39-page PDF, full text). All three had abstract-only bioRxiv HTML at first fetch (posted this morning); the PDF route via r.jina.ai recovered full text for all three. No auth-walled sources.
+=== 2026-08-04T20:18:00-07:00 done  affinity-matured (exit 0) ===
